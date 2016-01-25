@@ -89,7 +89,7 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Email address :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="email" class="mdl-textfield__input">
+                                        <input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);">
                                     </div>
                                 </div>
                             </div>
@@ -420,18 +420,18 @@
     <script type="text/javascript">
         $(document).ready(function () {
             //Hide error messages panels provided by conversion
-            $("#CenPH__lb_MSGRCD_MSGKEY.0").hide();
+            $("#CenPH__lb_MSGRCD_MSGKEY\\.0").hide();
             $("#form1").height($('body').height() - $('.copyright').height());
-            //Set date and ttime
+            //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant10]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
             //On page load reset all search fields
             $("#name,#number1,#number2,#number3,#email,#CenPH__lb_RCDDTL1__lb_1ALTX,#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_DB5NA").val('');
             //Check for errors
-            if ($("#CenPH__lb_MSGRCD_MSGKEY.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
                 var errorMsg = "";
-                if ($("#CenPH__lb_MSGRCD_MSGKEY.0").text().length > 1) {
-                    errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY.0").text() + "</br>";
+                if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+                    errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
                 }
                 if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
                     errorMsg += $("#MsgPH_DdsMessagePanel1").text();
@@ -443,32 +443,48 @@
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
             //Set name to original name text field
-            $("#name").on("keyup", function () {
+            $("#name").on("keyup change", function () {
                 $("#CenPH__lb_RCDDTL1__lb_1ALTX").val($("#name").val())
                 console.log($("#CenPH__lb_RCDDTL1__lb_1ALTX").val())
             });
             //Set phone number to original phone number text field
-            $("#number1").on("keyup", function () {
+            $("#number1").on("keyup change", function () {
                 $("#CenPH__lb_RCDDTL1__lb_PAVNB").val($("#number1").val())
                 console.log($("#CenPH__lb_RCDDTL1__lb_PAVNB").val())
             });
-            $("#number2").on("keyup", function () {
-                $("#CenPH__lb_RCDDTL1__lb_PBMNB").val($("#name").val())
+            $("#number2").on("keyup change", function () {
+                $("#CenPH__lb_RCDDTL1__lb_PBMNB").val($("#number2").val())
                 console.log($("#CenPH__lb_RCDDTL1__lb_PBMNB").val())
             });
-            $("#number3").on("keyup", function () {
-                $("#CenPH__lb_RCDDTL1__lb_PAXNB").val($("#name").val())
+            $("#number3").on("keyup change", function () {
+                $("#CenPH__lb_RCDDTL1__lb_PAXNB").val($("#number3").val())
                 console.log($("#CenPH__lb_RCDDTL1__lb_PAXNB").val())
             });
             //Set email to original email text field
-            $("#email").on("keyup", function () {
-                $("#CenPH__lb_RCDDTL1__lb_DB5NA").val($("#name").val())
+            $("#email").on("keyup change", function () {
+                $("#CenPH__lb_RCDDTL1__lb_DB5NA").val($("#email").val())
                 console.log($("#CenPH__lb_RCDDTL1__lb_DB5NA").val())
             });
-
+            //var email = $("#email");
+            //$("#email").keyup(function () {
+            //    email.valid();
+            //});
         });
     </script>
     <style>
+        .error {
+            color: #ff0000;
+            font-size: 11px;
+            width: calc(100% - 16px);
+            float: left;
+        }
+        #number1-error {
+            display: none;
+        }
+        .table-data-content-container .mdl-textfield__input_error_msg {
+            border: solid 1px #ff0000;
+        }
+
         #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1 {
             display: none;
         }
