@@ -1,0 +1,717 @@
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(//Fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+
+/* #span-content {
+    width: 1000px;
+} */
+
+#main-content {
+    width: 80%;
+    float: right;
+}
+
+#header {
+    display: none;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    line-height: normal;
+}
+
+img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+.mdl-layout__container {
+    position: static;
+}
+
+#wrapper,
+#span-content,
+#content,
+#main-content,
+#centralDiv,
+.mdl-layout__container {
+    height: 100%;
+}
+
+#wrapper,
+#span-content {
+    width: 100%;
+}
+
+.DdsConstant {
+    font-style: normal;
+}
+
+
+/* header css starts here */
+
+.mdl-layout__header {
+    background-color: #e32527;
+    box-shadow: none;
+    min-height: 45px;
+    position: fixed;
+}
+
+.mdl-layout__header-row {
+    height: 45px;
+    padding: 0 0 0 10px;
+}
+
+.mdl-layout-heading {
+    color: #fff;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 0 0 8px;
+    display: inline-block;
+}
+
+.material-icons.md-16 {
+    font-size: 19px;
+    padding-right: 5px;
+}
+
+.material-icons.md-15 {
+    font-size: 21px;
+}
+
+.material-icons.md-light {
+    color: #7f7f7f;
+}
+
+.mdl-badge[data-badge]::after {
+    background: #10b6cf;
+    height: 13px;
+    right: -10px;
+    top: -3px;
+    width: 13px;
+}
+
+.username {
+    display: inline-block;
+    color: #fff;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.black-divider {
+    background: #a61515;
+    height: 45px;
+    margin-right: 10px;
+    width: 1px;
+}
+
+.mdl-badge {
+    margin-right: 19px;
+}
+
+.mdl-menu__container.is-visible {
+    right: 5px !important;
+}
+
+.mdl-menu__item {
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+
+/* header css ends here */
+
+
+/* date & time section css starts here */
+
+.mdl-layout__content {
+    display: block;
+}
+
+.heading-h1 {
+    color: #333;
+    display: inline-block;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+.date-time-txt {
+    color: #333;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 12px;
+    left: -7px;
+    line-height: 25px;
+    padding-right: 2px;
+    position: relative;
+    vertical-align: top;
+}
+
+.pull-right {
+    text-align: right;
+}
+
+.time-date .mdl-grid {
+    border-bottom: 1px solid #adadad;
+    margin: 0 10px;
+    padding: 9px 0 0 8px;
+}
+
+.time-date .mdl-cell {
+    margin-bottom: 2px;
+    margin-top: 8px;
+}
+
+.order-summary-wrapper .mdl-cell {
+    border-right: #c6c6c6 1px solid;
+    margin: 0 15px 0 0;
+}
+
+.order-summary-wrapper .mdl-cell:first-child {
+    margin-left: 15px;
+}
+
+.order-summary-wrapper .mdl-cell:last-child {
+    border-right: none;
+    margin-right: 0;
+}
+
+
+/* date & time section css ends here */
+
+
+/* progress bar css starts here */
+
+.progress-bar .progress-bar-wrapper {
+    background: url('../Images/progressbar-bg.png') repeat-x;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    height: 55px;
+    margin: 16px 8%;
+}
+
+.progress-bar .gray-bg {
+    background: url('../Images/progress-bar-gray-bg.png') repeat-x;
+}
+
+.progress-bar .progress-bar-main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+.progress-bar .progress-bar-main li {
+    float: left;
+    height: 55px;
+}
+
+.progress-bar .step-title,
+.progress-bar .step-txt,
+.progress-bar .step-title-selected,
+.progress-bar .step-txt-selected {
+    display: block;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+}
+
+.progress-bar .step-title,
+.progress-bar .step-title-selected {
+    color: #e32527;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px 0 0 7px;
+}
+
+.progress-bar .step-title-selected {
+    color: #fff;
+}
+
+.progress-bar .step-txt,
+.progress-bar .step-txt-selected {
+    color: #79868a;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 0 0 0 8px;
+}
+
+.progress-bar .step-txt-selected {
+    color: #fff;
+}
+
+.progress-bar .step-width {
+    width: 14%;
+}
+
+
+/* progress bar css ends here */
+
+.error-msg-container .mdl-grid {
+    padding: 0 8px;
+}
+
+.error-message {
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 12px;
+    color: red;
+    line-height: 16px;
+    margin: 0 20px 0 auto;
+    text-align: right;
+}
+
+
+/* order summary section css starts here */
+
+.order-summary-wrapper {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px #7b7b7b;
+    margin: 1px 21px;
+    position: relative;
+}
+
+.order-summary-edit {
+    color: #de0000;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 1px;
+}
+
+.summary-title {
+    color: #333;
+    display: block;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 1px;
+}
+
+.summary-txt {
+    color: #333;
+    display: block;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+
+/* order summary section css starts here */
+
+
+/* add item section css starts here */
+
+.material-icons.md-11-plus {
+    cursor: pointer;
+    color: #666666;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-item-title {
+    color: #4185f2;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: super;
+}
+
+.add-item .content-grid .mdl-cell {
+    margin-bottom: -4px;
+    padding-left: 34px;
+    padding-top: 15px;
+}
+
+.add-item .add-icon {
+    cursor: pointer;
+}
+
+.add-item .mdl-grid {
+    padding: 0;
+}
+
+
+/* add item section css ends here */
+
+
+/* table data section css starts here */
+
+.table-data-wrapper {
+    padding: 3px 14px 5px 20px;
+}
+
+.table-data-maincontainer {
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 1px #7b7b7b;
+    border-right: none;
+}
+
+.table-container {
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    min-height: 140px;
+    overflow-y: auto;
+}
+
+.button-container {
+    margin-right: -17px;
+    padding: 8px 0 10px 14px;
+}
+
+.button-container.showConfirm {
+    margin-right: -2px;
+}
+
+.button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised,
+.button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+    background: url('../Images/btn_bg.png') repeat-x;
+    margin-right: 4px;
+    height: 30px;
+}
+
+.table-data-content-container .mdl-shadow--2dp {
+    box-shadow: none;
+}
+
+.table-data-content-container .mdl-data-table {
+    border: none;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 1px;
+}
+
+.table-data-content-container .mdl-data-table th {
+    border-right: 1px solid #e5e5e5;
+    color: #595959;
+    font-size: 12px;
+    height: 37px;
+    line-height: 18px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.table-data-content-container .mdl-data-table tr:nth-child(even) {
+    background: #fcfcfc;
+}
+
+.table-data-content-container .mdl-data-table td .mdl-data-table__select,
+.table-data-content-container .mdl-data-table th .mdl-data-table__select {
+    left: 15px;
+}
+
+.table-data-content-container .mdl-data-table {
+    white-space: normal;
+}
+
+.table-data-content-container .mdl-data-table td {
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    height: 28px;
+    line-height: 14px;
+    padding: 4px 5px;
+    text-align: center;
+    color: #797979;
+    word-wrap: break-word;
+}
+
+.table-data-content-container .mdl-data-table td span.numText {
+    text-align: right;
+}
+
+.table-data-content-container .mdl-textfield {
+    padding: 0 10px 0 0;
+    width: 100%;
+}
+
+.table-data-content-container .mdl-textfield__input,
+.table-data-content-container select {
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    /*width: 100%;*/ /* comment for test 19 jan 2016*/
+}
+
+.table-data-content-container .mdl-textfield__input {
+    background: #fff;
+    padding: 1px 3px 1px 5px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.table-data-content-container .mdl-textfield.is-disabled {
+    background: rgba(225, 225, 225, 0.7);
+}
+
+.table-data-content-container .mdl-data-table tbody tr {
+    height: 28px;
+}
+
+.table-data-content-container .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+    background: #e32527 url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K") repeat scroll 0 0;
+}
+
+.mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    border: 2px solid #e32527;
+}
+
+.status {
+    font-size: 12px;
+}
+
+.table-data-content-container .mdl-button {
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.table-data-content-container .button-container .mdl-grid {
+    padding: 0;
+}
+
+.table-data-content-container .button-container .mdl-cell {
+    margin: 0;
+}
+
+
+/* table data section css ends here */
+
+
+/* copyright section css starts here */
+
+.copyright-container {
+    background: #58595b;
+    color: #fff;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    font-size: 11px;
+    padding: 10px 0 12px 0;
+    text-align: center;
+}
+
+#CenPH__lb_SFLCTL,
+#CenPH__lb_CMDTXT1,
+#MsgDiv {
+    /*display: none;*/
+}
+
+
+/* Sign on page css starts here*/
+
+/* #main-content {
+    width: 100%;
+} */
+
+#content {
+    width: 100% !important;
+}
+
+.mdl-layout__content .DdsCharField,
+select {
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.mdl-layout__content .DdsCharField {
+    background: #fff;
+    padding: 1px 3px 1px 5px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.mdl-button {
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.mdl-layout__content {
+    overflow-y: hidden;
+    margin-top: 45px;
+    background: white;
+    height: 100%;
+}
+
+.box-container {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px #7b7b7b;
+    font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+    margin: 10px auto;
+    position: relative;
+    width: 400px;
+    height: 160px;
+    margin-top: 55px;
+}
+
+.login-icon {
+    background: url('../Images/login.png') right top no-repeat #fff;
+    width: 77px;
+    height: 78px;
+    float: right;
+    margin: -15px -50px 0 0;
+}
+
+.copyright {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#CenPH__RSIGNON {
+    height: 155px !important;
+}
+
+#login {
+    float: right;
+    right: 11px;
+}
+
+
+/* Sign on page css ends here*/
+
+
+/* Modal CSS starts */
+
+.simplePopup {
+    display: none;
+    position: fixed;
+    border: 4px solid #e32527;
+    background: #fff;
+    z-index: 3;
+    padding: 12px;
+    width: 35%;
+    min-width: 35%;
+    color: #e32527;
+}
+
+.simplePopupClose {
+    float: right;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-icon {
+    background: url('../Images/logo.png') no-repeat;
+    height: 39px;
+    width: 74px;
+}
+
+.simplePopupBackground {
+    display: none;
+    background: #000;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.progress-bar-divider-first {
+    background: url('../Images/gray-to-white.png') no-repeat;
+    width: 25px;
+}
+
+.progress-bar-divider {
+    background: url('../Images/white-bullet.png') no-repeat;
+    width: 25px;
+}
+
+/* Modal CSS ends */
+
+
+/* Media queries starts here */
+
+
+/*Mobile portrait (320x480)*/
+
+@media (max-width:479px) {}
+
+
+/* Smartphones (landscape) ---Mobile landscape (480x320)-------- */
+
+@media (min-width:480px) and (max-width:599px) {}
+
+
+/* iPad (portrait) (768x1024)-------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #wrapper,
+    #span-content,
+    #content,
+    #main-content {
+        width: 100% !important;
+    }
+    .time-date .mdl-cell--8-col {
+        width: calc(50% - 16px);
+    }
+    .progress-bar .step-txt,
+    .progress-bar .step-txt-selected {
+        font-size: 10px;
+    }
+    .progress-bar .step-title,
+    .progress-bar .step-title-selected {
+        font-size: 14px;
+    }
+    .progress-bar .step-width {
+        width: 13%;
+    }
+    .progress-bar .progress-bar-wrapper {
+        margin: 16px 5%;
+    }
+    .order-summary-wrapper .mdl-cell:first-child {
+        margin-left: 0;
+    }
+    .order-summary-wrapper .mdl-cell {
+        margin: 0 10px 10px 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+    #wrapper,
+    #span-content,
+    #content,
+    #main-content {
+        width: 100% !important;
+    }
+}
+
+
+/* Media queries ends here */

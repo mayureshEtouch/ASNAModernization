@@ -1,0 +1,819 @@
+﻿
+/* =Reset
+-------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.6em;
+	background: #E7E7E9;
+	color: #666666;
+	font-family: 'Cousine', sans-serif, Arial;
+    font-weight: 400;
+    font-style: normal;
+	text-align:center;
+	font-size: 14px;
+}
+
+#wrapper {
+        display: inline-block;
+	    width:77rem;
+    }   
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =Typography
+-------------------------------------------------------------- */
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+i, em {
+	font-style: italic;
+}
+blockquote {
+	font-style: italic;
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 75%;
+}
+/*
+** Prevents sub and sup affecting line-height in all browsers
+** gist.github.com/413930
+*/
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+/* =Helper
+-------------------------------------------------------------- */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+.ir br {
+	display: none;
+}
+.visuallyhidden {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+.hide {
+	display: none;
+}
+.group:before,
+.group:after {
+	content: '\0020';
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+
+/* =Global
+-------------------------------------------------------------- */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #444;
+}
+p {
+	margin-bottom: 1.5em;
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+h1 {
+	font-size: 2em; /* 32px */
+	line-height: 1.5em; /* 48px */
+}
+h2 {
+	font-size: 1.6875em; /* 27px */
+	line-height: 1.7778em; /* 48px */
+}
+h3 {
+	font-size: 1.5em; /* 24px */
+	line-height: 1.5em; /* 36px */
+}
+h4 {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.333em; /* 24px */
+}
+h5 {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.333em; /* 24px */
+}
+h6 {
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+address {
+	margin-bottom: 1.5em;
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+hr {
+    height: 1px;
+    color: #ccc;
+    background: #ccc;
+    border: none;
+}
+img {
+    max-width: 100%;
+}
+a {
+	text-decoration: none;
+	color: #006699;
+    /* http://www.ownacolour.com/#006699 */
+}
+a:visited {
+	color: #006699;
+}
+a:focus {
+	outline: 0;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+li {
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+ul,
+ol {
+	margin: 1em 0;
+	padding: 0 0 0 2.5em;
+}
+dd {
+	margin: 0 0 0 2.5em;
+}
+nav ul,
+nav ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
+label {
+	display: block;
+}
+
+
+.importantLabel {
+    color: #1E1E1E;
+    font-size: 1.3em;
+    font-family:"OpenSans",sans-serif;
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+#span-header
+{
+	text-align: left;
+	padding-left: 0;
+	float: left;
+	min-height:900px;
+    margin-left:0;
+    top:0;
+    bottom:0;
+	position:relative;
+    float:left;
+}
+
+
+.PopUp_Window #span-header {
+    min-height:300px;
+}
+
+
+#main-header, #main-header_PopUp {
+    background: #ee2e24;
+    margin-left: 0;
+    margin-top:0;
+	padding-bottom:0;
+	margin-bottom:0;
+	text-align: center;
+    /*top:120px;*/
+    bottom:0;
+    min-height:900px;
+    left:0;
+	position:absolute;
+}
+
+
+.PopUp_Window #span-content {
+    min-height:300px;
+    max-height:400px;
+}
+
+
+#main-header {
+    top: 120px;
+}
+
+#main-header_PopUp {
+    top: 0;
+}
+
+
+#branding {
+    position:absolute;
+    top: 15px;
+    background: #FFFFFF;
+    height:105px;
+    max-height:105px;
+}
+
+#span-header, #main-header, #branding, #fkeys, .DdsKey, #copyright, #copyright-container {
+   /*width:225px;*/
+   width:16rem;
+}
+
+
+#logo_img
+{
+	/*box-shadow: 0 0 200px 0 #73000D inset;*/
+	background: #FFF url('../Images/conns_home_plus_logo.png') no-repeat scroll center top;
+	width:157px;
+	height:91px;
+	/*box-shadow:-1px -1px 1px 1px #73000D inset;
+	margin-left:62px;
+	margin-right:62px;*/
+    margin: auto auto;
+}
+
+
+#headline {
+    /*width: 200px;
+    height: 78px;*/
+	display:none;
+}
+
+#tagline {
+    margin: -16px 0 6px 250px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: italic;
+    color: #000;
+}
+
+
+#fkeys {
+	display:inline-block;
+	padding-left:0;
+	padding-bottom:0;
+	margin-bottom:0;
+	text-align:left;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	min-height: 400px;
+}
+
+
+.DdsKey:hover
+{
+	text-decoration:underline;
+}
+
+
+ .DdsKey
+{
+	cursor: pointer; /*background: #ad1315;*/
+	background: #EE2E24;
+    background: linear-gradient(#e53c2d, #c5392d);
+    border-top: 2px solid #d43829;
+    border-bottom: 1px solid #FFFFFF;
+    border-left:none;
+    border-right:none;
+    color: #FFFFFF;
+    display: block;
+	margin-top:0;
+    text-decoration: none;
+	text-align:left;
+	height:34px;
+    line-height:14px;
+    font-weight: bold;
+    font-size:13px;
+    font-family: "OpenSans",sans-serif;
+}
+
+
+/* style for fkeys (the inne-most div is div id="fkeys") in the PopUp */
+/*tr.DdsInlinePopUpContent > td > div > div > div
+{
+	margin-top: 10px;
+	
+
+}*/
+
+
+#screen_title {
+    width:843px;
+    height:37px;
+    border-bottom:1px solid #cccccc;
+    position:relative;
+    margin-left:32px;
+    margin-top:20px;
+}
+
+.screen_title {
+    /*font-family:'MyriadProCondensed',Verdana !important;*/
+    font-family: "OpenSans",sans-serif !important;
+    color: #1E1E1E !important; 
+    font-size:23px !important;
+    font-weight:700;
+    line-height:23px !important;
+    top:0 !important;
+    left:0 !important;
+    font-style:normal !important;
+    text-align:left;
+}
+
+
+#diagnostics {    
+	text-align:right;
+    /*display:inline-block;*/
+    margin-top:1rem;
+    margin-right:2rem;
+    /*margin-left:auto;*/
+    /*padding-right:3rem;*/
+}
+
+
+
+.DdsFileFullBannerKey:hover {
+    background: #069;
+    color: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.DdsFileFullBannerKey:active {
+    color: #000;
+}
+.DdsFileFullBannerKey:disabled {
+    background: yellow;
+}
+.DdsFileFullBannerKey 
+{
+    margin-bottom: 3px;
+    margin-right:2px;    
+    width:45px;
+    height:25px; 
+    font-size:10pt;
+    line-height: 24px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 2px #000;
+    -webkit-box-shadow: 0 1px 2px #000;
+    box-shadow: 0 1px 2px #000;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.DdsFileFullBannerRMarginKey:hover {
+    background: #069;
+    color: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.DdsFileFullBannerRMarginKey:active {
+    color: #000;
+}
+.DdsFileFullBannerRMarginKey:disabled {
+    background: yellow;
+}
+.DdsFileFullBannerRMarginKey 
+{
+    margin-bottom: 3px;
+    margin-right: 8px;    
+    width:45px;
+    height:25px; 
+    font-size:10pt;
+    line-height: 24px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 2px #000;
+    -webkit-box-shadow: 0 1px 2px #000;
+    box-shadow: 0 1px 2px #000;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/* Virtual keys Mobile Devices */
+.DdsVKey:hover { 
+    background: #069;
+    color: #fff;
+}
+.DdsVKey:active {
+    color: #000;
+}
+.DdsVKey {
+    margin-bottom: 6px;
+    width: 35px;
+    height: 20px;
+    font-family: sans-serif, Arial;
+    font-size: 10px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+}
+.DdsVKeyW:hover {
+    background: #069;
+    color: #fff;
+}
+.DdsVKeyW:active {
+    color: #000;
+}
+.DdsVKeyW {
+    margin-bottom: 6px;
+    width: 50px;
+    height: 20px;
+    font-family: sans-serif, Arial;
+    font-size: 10px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+#span-content {
+	background-color:white;
+	/*min-height:700px;*/
+    /*min-height:50rem;*/
+	text-align:center;
+	display:inline-block;
+	padding-left: 0;
+	/*border:1px gray solid;*/
+	/*margin-top:-7px;*/
+	/*float:right;*/
+    float:none;
+}
+
+
+#content
+{
+    /*min-height:700px;*/
+    /*min-height:50rem;*/
+	background-position: center top;
+	padding: 1px 0;
+	border: none;
+	overflow:auto;
+}
+
+#main-content {
+    /*margin: 0 0 0 0;*/
+	text-align:left;
+    overflow: hidden;
+}
+
+
+#span-content, #content, #main-content {
+    /*width:875px;*/
+    width:60rem;
+}
+
+
+.PopUp_Window #content, .PopUp_Window #main-content, .PopUp_Window #span-content {
+    /*width:600px;*/
+    width:38rem;
+}
+
+
+#wrapper.PopUp_Window {
+    width:825px;
+}
+
+
+#centralDiv {
+	/*width:960px;*/
+}
+#MsgDiv {}
+
+/* =Footer
+-------------------------------------------------------------- */
+#span-footer {
+    /*border-top: 1px solid #444;*/
+    /*-moz-box-shadow: 0px -1px 3px #222;
+    -webkit-box-shadow: 0px -1px 3px #222;
+    box-shadow: 0px -1px 3px #222;*/
+	background-color: transparent;
+	/*bottom: 0;*/
+	color: #7C7C7C;
+    font-size: 12px;
+	/*float:none;
+	clear:both;*/
+    height:100px;
+    bottom:1rem;
+    position:absolute;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+}
+
+#main-footer {
+    /*margin: 0 auto 0 auto;*/
+    text-align:center;
+    bottom:0;
+    position:absolute;
+}
+
+#copyright
+{
+	font-family: "OpenSans", sans-serif;
+	color: #FFF;
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+	height:60px;
+	display:inline;
+    margin-bottom:1rem;
+    width:13rem;
+}
+
+
+.TabArea
+        {
+                    background-color: White;
+                    font-size: x-small;
+                    border-left: 1px solid black;
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;
+                    border-top:1px solid black;
+                    /*position:absolute;
+                    top:42px;*/
+                    height:300px;
+                    z-index:-25;
+        }
+.SubFileHeader
+{
+    height :20px ;
+    border : 1px solid #ccccff;
+    background-color : Gray ;
+    
+    
+    
+}   
+.SubFileHeaderFields
+{
+ border  : 0px None #ccccff;   font-weight: bold; color :White ; border-left : 1px Solid #ccccff;
+ }  
+ 
+ .SubFileDataFields
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff;
+ }
+ 
+ .SubFileDataFields_Right
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff; text-align: right;
+ }
+ 
+ .SubFileDataFields_OutputOnly
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff;
+ }
+ 
+ .SubFileDataFields_Right_OutputOnly
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff; text-align: right;
+ }
+ 
+ .SubFileRows
+{
+    border : 1px solid #ccccff;
+    
+}   
+
+
+.TabArea
+        {
+                    background-color: White;
+                    font-size: x-small;
+                    border-left: 1px solid black;
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;
+                    border-top:1px solid black;
+                    /*position:absolute;
+                    top:42px;*/
+                    height:300px;
+                    z-index:-25;
+        }
+
+.SubFileHeader
+{
+    height :20px ;
+    border : 1px solid #ccccff;
+    background-color : Gray ;
+    
+    
+    
+}   
+.SubFileHeaderFields
+{
+ border  : 0px None #ccccff;   font-weight: bold; color :White ; border-left : 1px Solid #ccccff;
+ }  
+ 
+ .SubFileDataFields
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff;
+ }
+ 
+ 
+ .SubFileRows
+{
+    border : 1px solid #ccccff;
+    
+}
+
+
+
+.page_title > .DdsDateField_OutputOnly
+{
+	font-size:14px;
+	font-weight:normal;
+	font-family: Verdana,Arial,helvetica,sans-serif;
+}
+
+
+
+@media only screen and (device-width:768px) and (device-height:1024px), /* Apple iPad */
+only screen and (device-width:800px) and (device-height:1232px) and (orientation:portrait), /* Asus Transformer Pad TF300T - Portrait */
+only screen and (device-width:1280px) and (device-height:752px) and (orientation:landscape), /* Asus Transformer Pad TF300T - Landscape */
+only screen and (device-width:1280px) and (device-height:800px), only screen and (device-width:1280px) and (device-height:736px) {
+    /* Tablet size */
+
+    body {
+	line-height: 1.6em;
+	font-size: 0.9rem;
+    }
+
+    .DdsKey {
+	  height:1.8rem;
+      line-height:0.8rem;
+      font-weight: bold;
+      font-size:0.8rem;
+    }
+
+    #span-header, #main-header, #branding, #fkeys, .DdsKey, #main-footer, #copyright, #copyright-container {
+       /*width:225px;*/
+       width:12rem;
+    }
+
+    #main-content {
+        border:1px solid purple;
+    }
+
+
+    #span-content, #content, #main-content {
+       width:60rem;
+    }
+
+
+    #main-content {
+       margin-left: -15px;
+    }
+
+    #screen_title {
+       margin-left:17px;
+    }
+
+    #diagnostics  {
+        height:0;
+        width:0;
+        visibility:hidden;
+    }
+
+   
+
+    #main-footer {
+    /*margin: 0 auto 0 auto;*/
+    bottom:2rem;
+    }
+   
+}

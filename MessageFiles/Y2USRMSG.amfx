@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Message File ASNAPOCOBJ/Y2USRMSG Migrated on 10/20/2015 at 5:23 PM by ASNA Monarch(R) Wings version 7.0.57.0 -->
+<LegacyMsgFileContents version="1.0">
+<messages>
+<MSG MSGID="YDM0001" SEVERITY="0" DATACOUNT="0" TEXT="January  February March    April    May      June     July     August   SeptemberOctober  November December ?????????" SECLVL="Note to translator: This is a list of the month names. Every name occupies 9 positions. 9 question marks are a must after the last name"                                                             />
+<MSG MSGID="YUI0000" SEVERITY="0" DATACOUNT="0" TEXT="==========&gt; Generated UIM  Run-Time messages" SECLVL=""                                                                                        />
+<MSG MSGID="YUI0001" SEVERITY="0" DATACOUNT="0" TEXT=" - Extended Help" SECLVL="Note to translators : this is appended to the Function Title Text appearing in the Extended Help panel."                />
+<MSG MSGID="YUI0002" SEVERITY="0" DATACOUNT="0" TEXT=" - Help" SECLVL="Note to translators : this is appended to the Titles appearing on the context senstive UIM Help panels."                         />
+<MSG MSGID="YUI0003" SEVERITY="0" DATACOUNT="0" TEXT="Introduction" SECLVL="Index Entry for UIM Prototypes"    />
+<MSG MSGID="YUI0004" SEVERITY="0" DATACOUNT="0" TEXT="Function keys" SECLVL="Index entry for UIM Prototypes"   />
+<MSG MSGID="YUI0005" SEVERITY="0" DATACOUNT="0" TEXT="Line commands" SECLVL="Index entry for UIM Prototypes"   />
+<MSG MSGID="YUI0006" SEVERITY="0" DATACOUNT="0" TEXT="Action Bar Actions" SECLVL="Index entry for UIM Help Prototypes"                                                                                  />
+<MSG MSGID="YUI0007" SEVERITY="0" DATACOUNT="0" TEXT="Control fields" SECLVL="Index entry for UIM prototypes"  />
+<MSG MSGID="YUI0008" SEVERITY="0" DATACOUNT="0" TEXT="Record fields" SECLVL="Index entry for UIM Help prototypes"                                                                                       />
+<MSG MSGID="YUI0009" SEVERITY="0" DATACOUNT="0" TEXT="Checks against other files" SECLVL="Index entry for UIM Help Prototypes"                                                                          />
+<MSG MSGID="YUI0010" SEVERITY="0" DATACOUNT="0" TEXT="Introduction" SECLVL="Title for UIM Introduction panel"  />
+<MSG MSGID="YUI0011" SEVERITY="0" DATACOUNT="0" TEXT="Further information" SECLVL="Used as header for Extended Help Index"                                                                              />
+<MSG MSGID="YUI0012" SEVERITY="0" DATACOUNT="0" TEXT="Updating records" SECLVL="Used in UIM Help Prototypes (via Y2USRUIM)"                                                                             />
+<MSG MSGID="YUI0013" SEVERITY="0" DATACOUNT="0" TEXT="Positioning function" SECLVL="Used as a header in UIM Prototypes Introduction"                                                                    />
+<MSG MSGID="YUI0014" SEVERITY="0" DATACOUNT="0" TEXT="Function Keys" SECLVL="Used in UIM Prototypes for Heading"                                                                                        />
+<MSG MSGID="YUI0015" SEVERITY="0" DATACOUNT="0" TEXT="Line commands" SECLVL="Used in UIM prototypes for Heading"                                                                                        />
+<MSG MSGID="YUI0016" SEVERITY="0" DATACOUNT="0" TEXT="Action Bar Actions" SECLVL="Used in UIM prototypes for heading"                                                                                   />
+<MSG MSGID="YUI0017" SEVERITY="0" DATACOUNT="0" TEXT="Control fields" SECLVL="Used in UIM Prototypes for heading"                                                                                       />
+<MSG MSGID="YUI0018" SEVERITY="0" DATACOUNT="0" TEXT="Record fields" SECLVL="Used in UIM prototypes for heading"                                                                                        />
+<MSG MSGID="YUI0019" SEVERITY="0" DATACOUNT="0" TEXT="Checks against other files" SECLVL="Used in UIM prototypes as a heading"                                                                          />
+<MSG MSGID="YUI0020" SEVERITY="0" DATACOUNT="0" TEXT="Extended help" SECLVL="Note to translators: max length 50. Used for description of hypertext link to Extended Help module within UIM generated."  />
+<MSG MSGID="YUI0021" SEVERITY="0" DATACOUNT="0" TEXT="Key screen" SECLVL="This message used by run-time UIM for heading on key screen help"                                                             />
+<MSG MSGID="YUI0022" SEVERITY="0" DATACOUNT="0" TEXT="Key screen" SECLVL="This message used by index entry on UIM panels"                                                                               />
+<MSG MSGID="YUI0023" SEVERITY="0" DATACOUNT="0" TEXT="Detail screen" SECLVL="This message used by run-time UIM for heading on detail screen help"                                                       />
+<MSG MSGID="YUI0024" SEVERITY="0" DATACOUNT="0" TEXT="Detail screen" SECLVL="This message used by index entry on UIM panels"                                                                            />
+<MSG MSGID="YUI0025" SEVERITY="0" DATACOUNT="0" TEXT="Detail screen 2" SECLVL="This message used by run-time UIM for heading on detail screen help"                                                     />
+<MSG MSGID="YUI0026" SEVERITY="0" DATACOUNT="0" TEXT="Detail screen 2" SECLVL="This message used by index entry on UIM panels"                                                                          />
+<MSG MSGID="YUI0027" SEVERITY="0" DATACOUNT="0" TEXT="Detail screen 3" SECLVL="This message used by run-time UIM for heading on detail screen help"                                                     />
+<MSG MSGID="YUI0028" SEVERITY="0" DATACOUNT="0" TEXT="Detail screen 3" SECLVL="This message used by index entry on UIM panels"                                                                          />
+<MSG MSGID="YUI0029" SEVERITY="0" DATACOUNT="0" TEXT="Function keys for Key Screen" SECLVL="This message used by index entry on UIM panels"                                                             />
+<MSG MSGID="YUI0030" SEVERITY="0" DATACOUNT="0" TEXT="Function keys for Detail Screen" SECLVL="This message used by index entry on UIM panels"                                                          />
+<MSG MSGID="YUI0031" SEVERITY="0" DATACOUNT="0" TEXT="Function keys for Detail Screen 2" SECLVL="This message used by index entry on UIM panels"                                                        />
+<MSG MSGID="YUI0032" SEVERITY="0" DATACOUNT="0" TEXT="Function keys for Detail Screen 3" SECLVL="This message used by index entry on UIM panels"                                                        />
+<MSG MSGID="YUI0033" SEVERITY="0" DATACOUNT="0" TEXT="Action Bar Actions for Key Screen" SECLVL="This message used by index entry on UIM panels"                                                        />
+<MSG MSGID="YUI0034" SEVERITY="0" DATACOUNT="0" TEXT="Action Bar Actions for Detail Screen" SECLVL="This message used by index entry on UIM panels"                                                     />
+<MSG MSGID="YUI0035" SEVERITY="0" DATACOUNT="0" TEXT="Action Bar Actions for Detail Screen 2" SECLVL="This message used by index entry on UIM panels"                                                   />
+<MSG MSGID="YUI0036" SEVERITY="0" DATACOUNT="0" TEXT="Action Bar Actions for Detail Screen 3" SECLVL="This message used by index entry on UIM panels"                                                   />
+<MSG MSGID="YUI0037" SEVERITY="0" DATACOUNT="0" TEXT="Screen fields for Key Screen" SECLVL="This message used by index entry on UIM panels"                                                             />
+<MSG MSGID="YUI0038" SEVERITY="0" DATACOUNT="0" TEXT="Screen fields for Detail Screen" SECLVL="This message used by index entry on UIM panels"                                                          />
+<MSG MSGID="YUI0039" SEVERITY="0" DATACOUNT="0" TEXT="Screen fields for Detail Screen 2" SECLVL="This message used by index entry on UIM panels"                                                        />
+<MSG MSGID="YUI0040" SEVERITY="0" DATACOUNT="0" TEXT="Screen fields for Detail Screen 3" SECLVL="This message used by index entry on UIM panels"                                                        />
+<MSG MSGID="YUI0041" SEVERITY="0" DATACOUNT="0" TEXT="OPTIONAL" SECLVL="Note to translator: This message is 8  char long including any parameters."                                                     />
+<MSG MSGID="YUI0042" SEVERITY="0" DATACOUNT="0" TEXT="Display only" SECLVL="Note to translator: This message is 67 char long including any parameters."                                                 />
+<MSG MSGID="YUI0043" SEVERITY="0" DATACOUNT="0" TEXT="REQUIRED" SECLVL="Note to translator: This message is 8  char long including any parameters."                                                     />
+<MSG MSGID="YUI0044" SEVERITY="0" DATACOUNT="0" TEXT="Menu Bar" SECLVL="Note to translator: this message is used for UIM help LINK."                                                                    />
+<MSG MSGID="YUI0045" SEVERITY="0" DATACOUNT="0" TEXT="Menu Bar for Key Screen" SECLVL="Note to translator used in UIM for heading"                                                                      />
+<MSG MSGID="YUI0046" SEVERITY="0" DATACOUNT="0" TEXT="Menu Bar for Detail Screen" SECLVL="Note to translators: this text is iused in UIM generators for heading."                                       />
+<MSG MSGID="YUI0047" SEVERITY="0" DATACOUNT="0" TEXT="Menu Bar for Detail Screen 2" SECLVL="Note to translators: this text is iused in UIM generators for heading."                                     />
+<MSG MSGID="YUI0048" SEVERITY="0" DATACOUNT="0" TEXT="Menu Bar for Detail Screen 3" SECLVL="Note to translators: this text is iused in UIM generators for heading."                                     />
+<MSG MSGID="YUI0049" SEVERITY="0" DATACOUNT="0" TEXT="Menu Bar" SECLVL="Note to translators: this text is iused in UIM generators for heading."                                                         />
+<MSG MSGID="YVL0041" SEVERITY="0" DATACOUNT="0" TEXT="       Display Allowed Values" SECLVL="Window: Y2VLLWR. Length - 36."                                                                             />
+<MSG MSGID="YVL0042" SEVERITY="0" DATACOUNT="0" TEXT="Position to" SECLVL="Window: Y2VLLWR. Length - 12."      />
+<MSG MSGID="YVL0043" SEVERITY="0" DATACOUNT="0" TEXT="1=Select" SECLVL="Window: Y2VLLWR. Length - 36."         />
+<MSG MSGID="YVL0044" SEVERITY="0" DATACOUNT="0" TEXT="Opt" SECLVL="Window: Y2VLLWR. Length - 3."               />
+<MSG MSGID="YVL0045" SEVERITY="0" DATACOUNT="0" TEXT="Value" SECLVL="Window: Y2VLLWR. Length - 20."            />
+<MSG MSGID="YVL0046" SEVERITY="0" DATACOUNT="0" TEXT="Description" SECLVL="Window: Y2VLLWR. Length - 50."      />
+<MSG MSGID="YYG0004" SEVERITY="0" DATACOUNT="0" TEXT="F1=Help  F5=Refresh  F12=Cancel  F20=Expand  CLEAR=Reposition" SECLVL="Window: Y2VLLWR. Length - any, auto format."                               />
+<MSG MSGID="YYG0012" SEVERITY="0" DATACOUNT="0" TEXT="(No data to display)" SECLVL="Window: Y2VLLWR. Length - 36."                                                                                      />
+<MSG MSGID="YYG0013" SEVERITY="0" DATACOUNT="0" TEXT="More...             Bottom" SECLVL="Window: Y2VLLWR. Length 2 * 20. When translating, keep the start positions of each 20 character portion the same."                                                                                     />
+<MSG MSGID="YYG0200" SEVERITY="0" DATACOUNT="0" TEXT="More..." SECLVL=""                                       />
+<MSG MSGID="YYG0201" SEVERITY="0" DATACOUNT="0" TEXT=" Bottom" SECLVL=""                                       />
+<MSG MSGID="Y2U0001" SEVERITY="20" DATACOUNT="0" TEXT="Value required." SECLVL=" "                             />
+<MSG MSGID="Y2U0002" SEVERITY="0" DATACOUNT="0" TEXT="Value not required." SECLVL=" "                          />
+<MSG MSGID="Y2U0003" SEVERITY="20" DATACOUNT="0" TEXT="Record already exists." SECLVL=" "                      />
+<MSG MSGID="Y2U0004" SEVERITY="20" DATACOUNT="0" TEXT="*Data operation failed (see previous messages for details)" SECLVL=" "                                                                           />
+<MSG MSGID="Y2U0005" SEVERITY="20" DATACOUNT="0" TEXT="Record not found." SECLVL=" "                           />
+<MSG MSGID="Y2U0006" SEVERITY="20" DATACOUNT="0" TEXT="Invalid date." SECLVL=" "                               />
+<MSG MSGID="Y2U0007" SEVERITY="20" DATACOUNT="0" TEXT="Update not accepted - record has been changed by another user since it was displayed." SECLVL=" "                                                />
+<MSG MSGID="Y2U0008" SEVERITY="0" DATACOUNT="0" TEXT="No data to display." SECLVL=" "                          />
+<MSG MSGID="Y2U0009" SEVERITY="20" DATACOUNT="0" TEXT="Change or delete operation could not find requested record." SECLVL=" "                                                                          />
+<MSG MSGID="Y2U0010" SEVERITY="20" DATACOUNT="0" TEXT="Field must be numeric." SECLVL="This field must contain digits 0 to 9 only or be completely blank."                                              />
+<MSG MSGID="Y2U0011" SEVERITY="0" DATACOUNT="0" TEXT="Record added." SECLVL=" "                                />
+<MSG MSGID="Y2U0012" SEVERITY="0" DATACOUNT="0" TEXT="Record changed." SECLVL=" "                              />
+<MSG MSGID="Y2U0013" SEVERITY="0" DATACOUNT="0" TEXT="Record deleted." SECLVL=" "                              />
+<MSG MSGID="Y2U0014" SEVERITY="20" DATACOUNT="0" TEXT="Value not found in list - Use '?' to determine allowed values." SECLVL=" "                                                                       />
+<MSG MSGID="Y2U0015" SEVERITY="20" DATACOUNT="0" TEXT="*Field attribute types not found." SECLVL=" "           />
+<MSG MSGID="Y2U0016" SEVERITY="20" DATACOUNT="0" TEXT="No value selected." SECLVL=" "                          />
+<MSG MSGID="Y2U0017" SEVERITY="0" DATACOUNT="0" TEXT="Scan limit reached - ROLLUP to scan further records." SECLVL=" "                                                                                  />
+<MSG MSGID="Y2U0018" SEVERITY="20" DATACOUNT="0" TEXT="*ROLLBACK required - Database updates failed in *SLAVE sub-program. Master program must ROLLBACK changes." SECLVL=" "                            />
+<MSG MSGID="Y2U0019" SEVERITY="20" DATACOUNT="0" TEXT="Invalid time." SECLVL=" "                               />
+<MSG MSGID="Y2U0020" SEVERITY="20" DATACOUNT="0" TEXT="Embedded or trailing blanks are not allowed." SECLVL=" "                                                                                         />
+<MSG MSGID="Y2U0021" SEVERITY="20" DATACOUNT="0" TEXT="*Field attribute types already exists." SECLVL=" "      />
+<MSG MSGID="Y2U0022" SEVERITY="20" DATACOUNT="1" TEXT="Value of field &amp;1 does not meet comparison requirement." SECLVL=" " TYPE1="*CHAR" LEN1="25" DEC1="0"                                         />
+<MSG MSGID="Y2U0023" SEVERITY="20" DATACOUNT="1" TEXT="Invalid value entered for field '&amp;1'. Prompt for list of valid values." SECLVL="" TYPE1="*CHAR" LEN1="25" DEC1="0"                           />
+<MSG MSGID="Y2U0024" SEVERITY="20" DATACOUNT="3" TEXT="Value of field &amp;1 must be between &amp;2 and &amp;3 inclusive." SECLVL=" " TYPE1="*CHAR" LEN1="25" DEC1="0" TYPE2="*CHAR" LEN2="25" DEC2="0" TYPE3="*CHAR" LEN3="25" DEC3="0"                                                         />
+<MSG MSGID="Y2U0025" SEVERITY="0" DATACOUNT="0" TEXT="Confirm Connect to Next RDB." SECLVL=""                  />
+<MSG MSGID="Y2U0026" SEVERITY="20" DATACOUNT="1" TEXT="Error occurred in Window API &amp;1." SECLVL="See lower level message for details." TYPE1="*CHAR" LEN1="10" DEC1="0"                             />
+<MSG MSGID="Y2U0027" SEVERITY="20" DATACOUNT="0" TEXT="Error occurred in Action Bar API." SECLVL="See lower level message for details."                                                                 />
+<MSG MSGID="Y2U0028" SEVERITY="20" DATACOUNT="1" TEXT="Action Bar &amp;1 not found." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                        />
+<MSG MSGID="Y2U0029" SEVERITY="20" DATACOUNT="1" TEXT="Accelerator key F&amp;1 not valid." SECLVL=" " TYPE1="*DEC" LEN1="2" DEC1="0"                                                                    />
+<MSG MSGID="Y2U0030" SEVERITY="20" DATACOUNT="0" TEXT="'/' not valid unless a Selector has been chosen." SECLVL=" "                                                                                     />
+<MSG MSGID="Y2U0031" SEVERITY="20" DATACOUNT="2" TEXT="RDB &amp;1 has not been defined as a RDB for Table &amp;2." SECLVL="CAUSE: You attempted to add a RDB &amp;1 to a VIEW which has not been defined for the TABLE &amp;2. You can only add RDBs to VIEWS which have been defined for the corresponding TABLE. RECOVERY: Add the RDB &amp;1 to the TABLE &amp;2, which will propogate the RDB entry to all VIEWS belonging to that TABLE." TYPE1="*CHAR" LEN1="18" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"                                                            />
+<MSG MSGID="Y2U0032" SEVERITY="20" DATACOUNT="1" TEXT="Error occured on CALL to program &amp;1." SECLVL="&amp;N &amp;N Recovery . . . :   See previous messages in job log to determine the cause of the error, correct the error and try the CALL again." TYPE1="*CHAR" LEN1="10" DEC1="0"      />
+<MSG MSGID="Y2U0033" SEVERITY="0" DATACOUNT="0" TEXT="Error occured in substring operation" SECLVL=""          />
+<MSG MSGID="Y2U0034" SEVERITY="0" DATACOUNT="0" TEXT="Arrays not found" SECLVL=""                              />
+<MSG MSGID="Y2U0035" SEVERITY="0" DATACOUNT="0" TEXT="Array already exists" SECLVL=""                          />
+<MSG MSGID="Y2U0036" SEVERITY="0" DATACOUNT="0" TEXT="Array full-cannot add..." SECLVL=""                      />
+<MSG MSGID="Y2U0037" SEVERITY="0" DATACOUNT="0" TEXT="External Data Access API not found." SECLVL=""           />
+<MSG MSGID="Y2U0038" SEVERITY="0" DATACOUNT="1" TEXT="External Data Access API already exists." SECLVL="" TYPE1="*CHAR" LEN1="18" DEC1="0"                                                              />
+<MSG MSGID="Y2U0039" SEVERITY="0" DATACOUNT="1" TEXT="Connect to RDB &amp;1 successful. Current RDB is &amp;1." SECLVL="The connection to the RDB (Relational Database) &amp;1 has completed successfully. The current connected RDB is &amp;1." TYPE1="*CHAR" LEN1="18" DEC1="0"                />
+<MSG MSGID="Y2U0040" SEVERITY="0" DATACOUNT="2" TEXT="Connect to RDB &amp;1 failed. Current RDB is &amp;2." SECLVL="The connection to the RDB (Relational Database) &amp;1 has failed. The current connected RDB is &amp;2." TYPE1="*CHAR" LEN1="18" DEC1="0" TYPE2="*CHAR" LEN2="18" DEC2="0"   />
+<MSG MSGID="Y2U0041" SEVERITY="0" DATACOUNT="0" TEXT=" " SECLVL="This message intentionally left blank. Do NOT add text to the 1st level message text."                                                 />
+<MSG MSGID="Y2U0042" SEVERITY="0" DATACOUNT="0" TEXT="No more RDBs to Connect to." SECLVL="There are no more RDBs (Relational Databases) to Connect to. You have reached either the start or the end of the Configuration Table entries for the VIEW."                                           />
+<MSG MSGID="Y2U0043" SEVERITY="0" DATACOUNT="1" TEXT="Connecting to RDB &amp;1 ..." SECLVL="" TYPE1="*CHAR" LEN1="18" DEC1="0"                                                                          />
+<MSG MSGID="Y2U0044" SEVERITY="0" DATACOUNT="0" TEXT="*Distributed File not found." SECLVL=""                  />
+<MSG MSGID="Y2U0045" SEVERITY="0" DATACOUNT="0" TEXT="*Distributed File already exists." SECLVL=""             />
+<MSG MSGID="Y2U0046" SEVERITY="0" DATACOUNT="1" TEXT="Current RDB is &amp;1." SECLVL="" TYPE1="*CHAR" LEN1="18" DEC1="0"                                                                                />
+<MSG MSGID="Y2U0047" SEVERITY="20" DATACOUNT="0" TEXT="*Configuration Table not found." SECLVL=""              />
+<MSG MSGID="Y2U0048" SEVERITY="20" DATACOUNT="0" TEXT="Configuration Table RDB entry already exists for the TABLE or VIEW.'" SECLVL="CAUSE: You attempted to add a RDB Configuration Entry for the TABLE or VIEW which already exists. RDB entries must be unique for each TABLE or VIEW. RECOVERY: Add a RDB which does not exist for the TABLE or VIEW."                                />
+<MSG MSGID="Y2U0049" SEVERITY="0" DATACOUNT="0" TEXT="Confirm Connect to Previous RDB." SECLVL=""              />
+<MSG MSGID="Y2U0050" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTPNLGRP command" SECLVL="CRTPNLGRP PNLGRP(&amp;2/&amp;1) SRCFILE(&amp;3/QPNLSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U0051" SEVERITY="20" DATACOUNT="0" TEXT="Function key not allowed" SECLVL="Cause: DELETE is not allowed in current screen mode."                                                          />
+<MSG MSGID="Y2U0052" SEVERITY="20" DATACOUNT="0" TEXT="Value not found in drop down list - Prompt for list of values" SECLVL=""                                                                         />
+<MSG MSGID="Y2U0053" SEVERITY="0" DATACOUNT="0" TEXT="Date List Header not found." SECLVL=" "                  />
+<MSG MSGID="Y2U0054" SEVERITY="0" DATACOUNT="0" TEXT="Date List Header already exists." SECLVL=" "             />
+<MSG MSGID="Y2U0055" SEVERITY="0" DATACOUNT="0" TEXT="Date List Detail not found." SECLVL=" "                  />
+<MSG MSGID="Y2U0056" SEVERITY="0" DATACOUNT="0" TEXT="Date List Detail already exists." SECLVL=" "             />
+<MSG MSGID="Y2U0057" SEVERITY="0" DATACOUNT="0" TEXT="January  February March    April    May      June     July     August   SeptemberOctober  November December ?????????" SECLVL="Note to Translator: This is a list of the month names. Every name occupies 9 positions. 9 question marks are a must after the last name."                                                            />
+<MSG MSGID="Y2U0058" SEVERITY="0" DATACOUNT="1" TEXT="Details for *Date List &amp;1 not found." SECLVL="Cause . . . . . :   The attempt to load *Date List &amp;1 into the *Date List Array failed because no details for &amp;1 were found.  This was because either the *Date List &amp;1 does not exist or the *Date List Header for &amp;1 exists but no details have been entered. &amp;N Recovery  . . . :   Create the *Date List Header and Details for &amp;1." TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                   />
+<MSG MSGID="Y2U0101" SEVERITY="20" DATACOUNT="0" TEXT="Prompt not valid for this field" SECLVL="The field on which you positioned the cursor does not have an associated prompt list"                   />
+<MSG MSGID="Y2U0150" SEVERITY="0" DATACOUNT="2" TEXT="YCHGMDLVAL ..." SECLVL="? YCHGMDLVAL ?*MDLVAL(&amp;1)" TYPE1="*CHAR" LEN1="7" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0"                           />
+<MSG MSGID="Y2U0200" SEVERITY="0" DATACOUNT="1" TEXT="&amp;1 list" SECLVL="" TYPE1="*CHAR" LEN1="25" DEC1="0"  />
+<MSG MSGID="Y2U0250" SEVERITY="0" DATACOUNT="1" TEXT="Action Bar &amp;1 not found!!!" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                        />
+<MSG MSGID="Y2U0275" SEVERITY="0" DATACOUNT="0" TEXT="More...              Bottom" SECLVL=""                   />
+<MSG MSGID="Y2U0301" SEVERITY="0" DATACOUNT="2" TEXT="&amp;1&amp;2" SECLVL="This message is used by the concatenate function. Do NOT alter it!!!!!" TYPE1="*CHAR" LEN1="131" DEC1="0" TYPE2="*CHAR" LEN2="131" DEC2="0"                                                                          />
+<MSG MSGID="Y2U0400" SEVERITY="0" DATACOUNT="0" TEXT="==&gt; Confirm prompt in window. (see second level text)" SECLVL="'Note : Message ID's Y2U0401 and Y2U0405 contain valid choices for the confirm prompt and Right Hand Side Text for those choices. These message id's are automatically updated from the model when running the 'Convert Condition Values' (YCVTCNDVAL) command.'" />
+<MSG MSGID="Y2U0401" SEVERITY="0" DATACOUNT="0" TEXT="YN" SECLVL="Note to translators : this message gives the valid values for confirm prompt choices retrieved at run time for the confirm prompt window"                                                                                      />
+<MSG MSGID="Y2U0402" SEVERITY="0" DATACOUNT="2" TEXT="Choose &amp;1 or &amp;2" SECLVL=" " TYPE1="*CHAR" LEN1="1" DEC1="0" TYPE2="*CHAR" LEN2="1" DEC2="0"                                               />
+<MSG MSGID="Y2U0403" SEVERITY="0" DATACOUNT="0" TEXT="         Confirm" SECLVL="Window : Y2CFPMR. Length 25."  />
+<MSG MSGID="Y2U0404" SEVERITY="0" DATACOUNT="0" TEXT="Confirm . ." SECLVL="Window : Y2CFPMR. Length 12"        />
+<MSG MSGID="Y2U0405" SEVERITY="0" DATACOUNT="0" TEXT="Y, N" SECLVL="Window : Y2CFPMR Length : 9"               />
+<MSG MSGID="Y2U0406" SEVERITY="0" DATACOUNT="0" TEXT="F12=Cancel" SECLVL="Length 25 max. Window Y2CFPMR"       />
+<MSG MSGID="Y2U1001" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTRPGPGM command." SECLVL="CRTRPGPGM PGM(&amp;2/&amp;1) SRCFILE(&amp;3/QRPGSRC) CVTOPT(*DATETIME)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                       />
+<MSG MSGID="Y2U1002" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTPF command (Do not specify MAINT parameter as this is provided elsewhere)." SECLVL="CRTPF FILE(&amp;2/&amp;1) SRCFILE(&amp;3/QDDSSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                          />
+<MSG MSGID="Y2U1003" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTLF command (Do not specify MAINT parameter as this is provided elswhere)." SECLVL="CRTLF FILE(&amp;2/&amp;1) SRCFILE(&amp;3/QDDSSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                           />
+<MSG MSGID="Y2U1004" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTDSPF command." SECLVL="CRTDSPF FILE(&amp;2/&amp;1) SRCFILE(&amp;3/QDDSSRC) RSTDSP(*YES)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                               />
+<MSG MSGID="Y2U1005" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTPRTF command." SECLVL="CRTPRTF FILE(&amp;2/&amp;1) SRCFILE(&amp;3/QDDSSRC) SCHEDULE(*FILEEND)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                         />
+<MSG MSGID="Y2U1006" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTCBLPGM command" SECLVL="CRTCBLPGM PGM(&amp;2/&amp;1) SRCFILE(&amp;3/QCBLSRC) CVTOPT(*DATETIME)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                         />
+<MSG MSGID="Y2U1007" SEVERITY="20" DATACOUNT="3" TEXT="Defaults for CRTSQLRPG command." SECLVL="'CRTSQLRPG PGM(&amp;2/&amp;1) SRCFILE(&amp;3/QRPGSRC) COMMIT(*NONE) DATFMT(*ISO) DATSEP('-') TIMFMT(*ISO) TIMSEP('.')'" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                />
+<MSG MSGID="Y2U1008" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTSQLCBL command" SECLVL="'CRTSQLCBL PGM(&amp;2/&amp;1) SRCFILE(&amp;3/QCBLSRC) COMMIT(*NONE) DATFMT(*ISO) DATSEP('-') TIMFMT(*ISO) TIMSEP('.')'" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                  />
+<MSG MSGID="Y2U1009" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTCB2PGM command." SECLVL="YCRTCB2PGM PGM('&amp;2'/&amp;1) SRCFILE(&amp;3/YCB2SRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1010" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTOS2HLP command" SECLVL="YCRTOS2HLP FILE('&amp;2'/&amp;1) SRCFILE(&amp;3/YIPFSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1011" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTOS2RES command" SECLVL="YCRTOS2RES FILE('&amp;2'/&amp;1) SRCFILE(&amp;3/YRCSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                        />
+<MSG MSGID="Y2U1012" SEVERITY="20" DATACOUNT="1" TEXT="Error occured in PWS API &amp;1." SECLVL="See lower level message for details" TYPE1="*CHAR" LEN1="10" DEC1="0"                                  />
+<MSG MSGID="Y2U1013" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTUNXPGM command" SECLVL="YCRTUNXPGM PGM('&amp;2'/&amp;1) SRCFILE(&amp;3/YXCBLSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1014" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTUNXSRV command" SECLVL="YCRTUNXSRV SRV('&amp;2'/&amp;1) SRCFILE(&amp;3/YXCBLSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1015" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTUNXDSP command" SECLVL="YCRTUNXDSP DSP('&amp;2'/&amp;1) SRCFILE(&amp;3/YXDSPSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1016" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTUNXPRT command" SECLVL="YCRTUNXPRT PRT('&amp;2'/&amp;1) SRCFILE(&amp;3/YXPRTSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1017" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTUNXHLP command" SECLVL="YCRTUNXHLP HLP('&amp;2'/&amp;1) SRCFILE(&amp;3/YXHLPSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1018" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for CRTUNXSQL command" SECLVL="YCRTUNXSQL UNXDIR('&amp;2') SRCFILE(&amp;3/YXSQLSRC) SRCMBR(&amp;1)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                            />
+<MSG MSGID="Y2U1019" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for YCRTWINPGM command" SECLVL="YCRTWINPGM PGM('&amp;2'/&amp;1) SRCFILE(&amp;3/YCB2SRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1020" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for YCRTWINHLP command" SECLVL="YCRTWINHLP FILE('&amp;2'/&amp;1) SRCFILE(&amp;3/YRTFSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                      />
+<MSG MSGID="Y2U1021" SEVERITY="0" DATACOUNT="3" TEXT="Defaults for YCRTWINRES command" SECLVL="YCRTWINHLP FILE('&amp;2'/&amp;1) SRCFILE(&amp;3/YRCSRC)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="63" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                       />
+<MSG MSGID="Y2U1025" SEVERITY="20" DATACOUNT="0" TEXT="*Configuration Table not found." SECLVL=" "             />
+<MSG MSGID="Y2U1031" SEVERITY="20" DATACOUNT="0" TEXT="Configuration Table RDB entry already exists for the TABLE or VIEW." SECLVL="CAUSE:You attempted to add a RDB Configuration Entry for the TABLE or VIEW which already exists. RDB entries must be unique for each TABLE or VIEW. RECOVERY: Add a RDB which does not exist for the TABLE or VIEW."                                  />
+<MSG MSGID="Y2U9999" SEVERITY="20" DATACOUNT="0" TEXT="User QUIT requested" SECLVL=" "                         />
+</messages>
+</LegacyMsgFileContents>

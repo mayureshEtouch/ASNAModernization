@@ -1,0 +1,480 @@
+﻿/* =Core
+-------------------------------------------------------------- */
+/* Master Page styles for 'Normal' DDS records */
+.CenPH {
+    
+}
+/* Master Page styles for 'WINDOW' DDS records*/
+.FKeyWinPH {
+    visibility: hidden;
+    width: 0px;
+    margin-left: -400px;
+}
+.CenWinPH { }
+.MsgWinPH { }
+
+/* Common Master Page styles */
+.DdsCharField_Link {
+    color: #336699;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.DdsSflMsgField_OutputOnly {
+    font-family: 'Segoe UI' , Arial;
+    font-weight: bold;
+    font-size: 10pt;
+    font-style: normal;
+    color: #CC3300;
+}
+.DdsSflMsgField {
+    color: #CC0000;
+    font-weight: bold;
+}
+
+/* DDS WINDOW Records */
+.DdsInlinePopUpBackground {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 50; 
+    background-color: gray; 
+    opacity: 0.70; /* Firefox, Chrome */
+    filter: alpha(opacity=70); /* IE */
+}
+.DdsInlinePopUpTable {
+    position: absolute;
+    background-color: #99CCFF;
+    overflow: hidden;
+    z-index :100;
+}
+.DdsInlinePopUpContent {
+    width: 100%;
+}
+.DdsInlinePopUpTitle {
+    width: 100%;
+    height: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: #3366CC;
+}
+.SubmitWait {
+    background-color:  LightGray;     
+    opacity: 0.70; /* Firefox, Chrome */
+    filter: alpha(opacity=70); /* IE */
+}
+
+.SubmitWait_2Seconds {
+    background-image: url('../Images/SubmitWait.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ASNA 5250 Terminal */
+#wingsTerminalCanvasDiv {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#wingsTerminalCursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: monospace;
+    vertical-align: middle;
+    background-color: #d8d8d8;
+    z-index: 200;
+}
+#wingsTerminalTextSelection {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: white; 
+    opacity: 0.5; /* Firefox, Chrome */ 
+    filter: alpha(opacity=50);  /* IE */
+}
+#wingsTerminalMenuBtnHover {
+    position: absolute;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    border-style: solid;
+    border-color: #0000ff;
+    z-index: 100;
+    background-color: #d8d8d8; 
+    opacity: 0.3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; /* Firefox, Chrome */
+    border-radius: 5px;
+    filter: alpha(opacity=30);  /* IE */  
+    overflow: hidden;
+    visibility: hidden;
+}
+#wingsTerminalErrMsg {
+    font-family: 'Segoe UI', Arial;
+    color: red;
+}
+pre { font-family: Consolas; } /* Consolas font is similar to IBMi Terminal Font */     
+    
+
+/* DDS Character Fields */
+.DdsCharField {
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI' , Arial;
+    font-weight: bold;
+    border: 1px solid #c0c0c0;
+    color: black;
+}
+.DdsCharField_Error {
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+    border: 1px solid #c0c0c0;
+    color: #FFFFFF; 
+    background-color: #CC0000;
+}
+.DdsCharField_OutputOnly {
+    height: 20px;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+    color: #666666;
+}
+
+.DdsCharField_Right {
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI' , Arial;
+    font-weight: bold;
+    border: 1px solid #c0c0c0;
+    color: black;
+    text-align: right;
+}
+.DdsCharField_Right_Error {
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+    border: 1px solid #c0c0c0;
+    color: #FFFFFF; 
+    background-color: #CC0000;
+    text-align: right;
+}
+.DdsCharField_Right_OutputOnly {
+    height: 20px;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+    color: #666666;
+    text-align: right;
+}
+
+/* DDS  Constant Fields */
+.DdsConstant  {
+    color: #4F4F4F; 
+    font-family: 'Lucida Sans Typewriter'; 
+}
+.DdsConstant_Right  {
+    color: #4F4F4F; 
+    font-family: 
+    'Lucida Sans Typewriter'; 
+    text-align: right; 
+}
+
+/* DDS Date/Decimal Date/Time Fields */
+.DdsDateField {
+    border: 1px solid #c0c0c0;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+}
+.DdsDateField_Right {
+    border: 1px solid #c0c0c0;
+    text-align: right;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+}
+.DdsDateField_Error {
+    height: 20px;
+    border: 1px solid #c0c0c0;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial; 
+    color: yellow;
+    background-color: blue;
+}
+.DdsDateField_OutputOnly {
+    height: 20px;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+}
+.DdsDecDateField {
+    border: 1px solid #c0c0c0;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+    height: 20px;
+}
+.DdsDecDateField_Right {
+    height: 20px;
+    border: 1px solid #c0c0c0;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+    text-align: right;
+}
+.DdsDecDateField_Error {
+    height: 20px;
+    border: 1px solid #c0c0c0;
+    font-weight: bold;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold; 
+    color: yellow;
+    background-color: blue;
+}
+.DdsDecDateField_OutputOnly {
+    height: 20px;
+    font-family: 'Segoe UI', Arial;
+    font-weight: bold;
+}
+.CalendarTable {
+    border-collapse: collapse;
+    font-family: 'Trebuchet MS', Arial, Tahoma, Sans-serif;
+    font-size: 8px;
+    text-align: center;
+    color: black;
+    cursor: default;
+    background-color: #99CCFF;
+}
+.CalendarCloseCell {
+    font-size: 10px;
+}
+.CalendarTitle {
+    font-size : 10px;
+    color: white;
+}
+.CalendarPrevYear {}
+.CalendarPrevMonth {}
+.CalendarNextMonth {}
+.CalendarNextYear {}
+.CalendarDateCell{
+    width: inherit;
+    font-size: 9px;
+    color: black;
+    background-color: #86AED7;
+    cursor: hand;
+}
+.CalendarSelDateCell {
+    width: inherit;
+    font-size: 9px;
+    color: #003366;
+    background-color: #FFFF66;
+    cursor: hand;
+}
+.CalendarWeekDayCell {
+    width: 20px;
+    font-size: 9px;
+    color: #FFFFFF;
+    background-color: #3366CC;
+}
+.CalendarTopRow {
+    color: white;
+}
+.CalendarNavRow {
+    color: white;
+}
+.CalendarExDateCell {
+    background-color:#CDCDCD;
+    cursor:hand;
+}
+.DdsDecField  {
+    height: 20px; 
+    font-family: 'Segoe UI', 
+    Arial; font-weight: bold; 
+    border: 1px solid #c0c0c0;  
+    text-align: right; 
+}
+.DdsDecField_Error  {
+    height: 20px; 
+    border: 1px solid #c0c0c0; 
+    font-family: 'Segoe UI', Arial; 
+    font-weight: bold; 
+    color: yellow; 
+    background-color: blue; 
+    text-align: right; 
+}
+.DdsDecField_OutputOnly  {
+    height: 20px; 
+    color: #666666; 
+    font-family: 'Segoe UI', Arial; 
+    font-weight: bold; 
+    text-align: right;
+}
+
+.DdsDecField_Left  {
+    height: 20px; 
+    border: 1px solid #c0c0c0;  
+    font-family: 'Segoe UI' , Arial; 
+    font-weight: bold; 
+    text-align: left; 
+}
+.DdsDecField_Left_Error  {
+    height: 20px; 
+    border: 1px solid #c0c0c0; 
+    color: yellow; 
+    text-align: left; 
+    font-family: 'Segoe UI', Arial; 
+    font-weight: bold;
+    font-weight: bold; 
+    background-color: blue; 
+}
+.DdsDecField_Left_OutputOnly  {
+    height: 20px; 
+    color: #666666; 
+    text-align: right; 
+    font-family: 'Segoe UI' , Arial; 
+    font-weight: bold;  
+    text-align: left; 
+}
+
+.DdsDecField_Right  {
+    height: 20px; 
+    font-family: 'Segoe UI', Arial; 
+    font-weight: bold; 
+    border: 1px solid #c0c0c0;  
+    text-align: right; 
+}
+.DdsDecField_Right_Error  {
+    height: 20px; 
+    border: 1px solid #c0c0c0; 
+    font-family: 'Segoe UI', Arial; 
+    font-weight: bold; 
+    color: yellow; 
+    background-color: blue; 
+    text-align: right; 
+}
+.DdsDecField_Right_OutputOnly  {
+    height: 20px; 
+    color: #666666; 
+    font-family: 'Segoe UI', Arial; 
+    font-weight: bold; 
+    text-align: right;
+}
+
+.DdsDecFieldInvalidLength  {
+    width: 30%; 
+    height: 20px; 
+    border-width: 1px; 
+    border-style: solid; 
+    border-color: red; 
+    color: red; 
+    text-align: center; 
+    font-size: 12px; 
+    font-family: 'Segoe UI', Arial; 
+    background: yellow; 
+    opacity: 0.75; /* Firefox, Chrome */ 
+    filter: alpha(opacity=75); /* IE */
+    cursor: default; 
+}
+.DdsTimeField {
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+}
+.DdsTimeField_Error {
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+    font-weight: bold;
+    color: yellow;
+    background-color: blue;
+}
+.DdsTimeField_OutputOnly {
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+}
+.DdsTimeField_Link { /* Hyperlink style */
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+    cursor: hand;
+    text-decoration: underline;
+}
+.DdsTimestampField { /* Timestamp field */
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+}
+.DdsTimestampField_Error { /* Timestamp field Error*/
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+    font-weight: bold;
+    color: yellow;
+    background-color: blue;
+}
+.DdsTimestampField_OutputOnly { /* Output only Timestamp field*/
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+}
+.DdsTimestampField_Link { /* Hyperlink style */
+    font-size: 9pt;
+    font-family: 'Trebuchet MS', Arial;
+    cursor: hand;
+    text-decoration: underline;
+}
+
+/* DDS Records */
+.DdsRecordName { }
+.DdsRecord {
+    width: 100% !important;
+    margin-left: 32px;
+    margin-top: 0px;
+    display: block;
+}
+
+/* DDS Subfile */
+.DdsSubfileRecord {
+    width: 100% !important;
+    margin-left: 0px;
+    margin-top: 0px;
+    display: block;
+}
+.DefaultRow {
+    background-color: #F2F2F2;
+}
+.AlternateRow {
+    background-color: #ffffff;
+}
+.DdsSubfileSBar  {
+    background-image: url(../Images/SBBK.png); 
+    background-repeat:repeat-y; 
+    cursor:pointer; 
+}
+.DdsSubfileSBarUp {
+    background-image: url(../Images/SBUp.png); 
+    background-repeat:no-repeat; 
+}
+.DdsSubfileSBarDn {
+    background-image: url(../Images/SBDn.png); 
+    background-repeat:no-repeat; 
+}
+
+
+/* DDS Subfile Cursor RRN */
+.DdsSubfileCandidateCurrentRecord  {
+    background-color: #CCFFFF !important; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+.DdsSubfileCurrentRecord  {
+    background-color: #6699CC !important; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}

@@ -1,0 +1,803 @@
+﻿/*
+Theme: IronMonger
+Fonts:
+font-family: 'LatoRegular', sans-serif;
+font-family: 'LoraRegular', serif;
+*/
+
+/* =Reset
+-------------------------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.6em;
+	background: #fff url('../Images/bodyGradient.png') repeat-x left top;
+	color: #8E8E91;
+	border-top:2px solid;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* =Typography
+-------------------------------------------------------------- */
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+i, em {
+	font-style: italic;
+}
+blockquote {
+	font-style: italic;
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 75%;
+}
+/*
+** Prevents sub and sup affecting line-height in all browsers
+** gist.github.com/413930
+*/
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+/* =Helper
+-------------------------------------------------------------- */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+.ir br {
+	display: none;
+}
+.visuallyhidden {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+.hide {
+	display: none;
+}
+.group:before,
+.group:after {
+	content: '\0020';
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+
+/* =Global
+-------------------------------------------------------------- */
+html {
+	font-size: 13px;
+	color: #111;
+	background: url('../images/metal-blue.jpg') repeat scroll center center;
+}
+body {
+    font-size: 13px;
+    font-family: 'LatoRegular', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'LoraRegular', serif;
+	color: #444;
+}
+p {
+	margin-bottom: 1.5em;
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+h1 {
+	font-size: 2em; /* 32px */
+	line-height: 1.5em; /* 48px */
+}
+h2 {
+	font-size: 1.6875em; /* 27px */
+	line-height: 1.7778em; /* 48px */
+}
+h3 {
+	font-size: 1.5em; /* 24px */
+	line-height: 1.5em; /* 36px */
+}
+h4 {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.333em; /* 24px */
+}
+h5 {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.333em; /* 24px */
+}
+h6 {
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+address {
+	margin-bottom: 1.5em;
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+hr {
+    height: 1px;
+    color: #ccc;
+    background: #ccc;
+    border: none;
+}
+img {
+    max-width: 100%;
+}
+a {
+	text-decoration: none;
+	color: #006699;
+    /* http://www.ownacolour.com/#006699 */
+}
+a:visited {
+	color: #006699;
+}
+a:focus {
+	outline: 0;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+li {
+	font-size: 1em; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+ul,
+ol {
+	margin: 1em 0;
+	padding: 0 0 0 2.5em;
+}
+dd {
+	margin: 0 0 0 2.5em;
+}
+nav ul,
+nav ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-image: none;
+}
+label {
+	display: block;
+}
+#wrapper {
+	text-align:right;
+	display:inline;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+#span-header
+{
+	text-align: left;
+	padding-left: 0;
+}
+
+#main-header {
+    margin: 0 auto;
+    width: 960px;
+	text-align: left;
+}
+#branding {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#headline {
+    width: 368px;
+    height: 78px;
+    background: url('../images/Logo_Brinkmann.png') no-repeat scroll center center;
+}
+
+#tagline {
+    margin: -16px 0 6px 250px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: italic;
+    color: #000;
+}
+
+
+#fkeys {
+	position: relative;
+    width: 952px;
+    background: url('../images/nav-redGradient.png') repeat top left;
+	display: inline-block;
+	padding-left:10px;
+	min-height:42px;
+}
+
+
+
+/* style for fkeys (the inne-most div is div id="fkeys") in the PopUp */
+tr.DdsInlinePopUpContent > td > div > div > div
+{
+	margin-top: 10px;
+	
+
+}
+
+tr.DdsInlinePopUpContent > td > div[id="wrapper"]
+{
+	background: url('../images/bg_3_small_blurry.png') no-repeat bottom right;
+	margin-bottom: 5px;
+}
+
+
+
+#diagnostics {    
+    float: right;
+    margin-top:15px;
+}
+
+
+#diagonostics2 
+{
+	right: 0;
+	width: 50px;
+	padding-right: 8px;
+	text-align:right;
+	z-index:200;
+	position:absolute;
+	margin-top:15px;
+}
+
+
+
+.DdsKey:hover
+{
+	border-bottom:2px solid white;
+	/*-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;*/
+	line-height: 40px;
+	height:40px;
+}
+
+.DdsKey
+{
+	padding-right: 22px;
+	margin-right: 11px;
+	padding-left: 11px;
+	border: none;
+	margin-top: 2px;
+	padding-top: 0;
+	border-right: 1px solid white;
+	height: 40px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 42px;
+	padding-bottom: 0px;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	cursor: pointer; /*background: #ad1315;*/
+	display: inline-block;
+	text-transform: none;
+	background-color: transparent;
+	color: #FFFFFF;
+	text-transform:uppercase;
+	font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 2px #670009;
+	text-transform: uppercase;
+	display: table-cell;
+	float: left;
+}
+
+
+
+.button_that_seems_a_link
+{
+	text-decoration: none;
+	color: #006699;
+	border: 1px solid transparent;
+	background-color: transparent;
+	min-width: 100px;
+	min-height: 20px;
+	padding-bottom: 0;
+	line-height: 20px;
+	vertical-align: bottom;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.google_map_tool_button
+{
+	background: url('../../Basic-Theme/images/Google_Maps_Marker_tool.png') no-repeat center left;
+	min-width: 28px;
+	height: 28px;
+	background-color: transparent;
+	border: 1px solid #EEEEEE;
+	cursor: pointer;
+}
+
+.spell_check_button
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 170px;
+	min-height: 24px;
+	max-height: 30px;
+	font-family: Myriad Pro, Verdana, Sans-Serif;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 28px;
+	border: none;
+	text-decoration: none;
+	text-align: left;
+	vertical-align: bottom;
+	vertical-align: text-bottom;
+	cursor: pointer; /*background: #ad1315;*/
+	height: 30px;
+	display: inline-block;
+    text-transform: none;
+	/*padding: 0 0 0 5px !important; */
+	color: #ef3333 !important;
+	padding-left: 10px;
+	background: url('../images/spell_check_bckd.png') repeat-x center left;
+}
+
+.spell_check_button:hover
+{
+	background: url('../images/spell_check_hover_bckd.png') repeat-x center left;
+}
+
+
+
+.DdsFileFullBannerKey:hover {
+    background: #069;
+    color: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.DdsFileFullBannerKey:active {
+    color: #000;
+}
+.DdsFileFullBannerKey:disabled {
+    background: yellow;
+}
+.DdsFileFullBannerKey 
+{
+    margin-bottom: 3px;
+    margin-right:2px;    
+    width:45px;
+    height:25px; 
+    font-family: 'LatoRegular', sans-serif;
+    font-size:10pt;
+    line-height: 24px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 2px #000;
+    -webkit-box-shadow: 0 1px 2px #000;
+    box-shadow: 0 1px 2px #000;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.DdsFileFullBannerRMarginKey:hover {
+    background: #069;
+    color: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.DdsFileFullBannerRMarginKey:active {
+    color: #000;
+}
+.DdsFileFullBannerRMarginKey:disabled {
+    background: yellow;
+}
+.DdsFileFullBannerRMarginKey 
+{
+    margin-bottom: 3px;
+    margin-right: 8px;    
+    width:45px;
+    height:25px; 
+    font-family: 'LatoRegular', sans-serif;
+    font-size:10pt;
+    line-height: 24px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 2px #000;
+    -webkit-box-shadow: 0 1px 2px #000;
+    box-shadow: 0 1px 2px #000;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/* Virtual keys Mobile Devices */
+.DdsVKey:hover { 
+    background: #069;
+    color: #fff;
+}
+.DdsVKey:active {
+    color: #000;
+}
+.DdsVKey {
+    margin-bottom: 6px;
+    width: 35px;
+    height: 20px;
+    font-family: 'LatoRegular', sans-serif;
+    font-size: 10px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+}
+.DdsVKeyW:hover {
+    background: #069;
+    color: #fff;
+}
+.DdsVKeyW:active {
+    color: #000;
+}
+.DdsVKeyW {
+    margin-bottom: 6px;
+    width: 50px;
+    height: 20px;
+    font-family: 'LatoRegular', sans-serif;
+    font-size: 10px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;   
+    background: #000;
+    color: #fff;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+#span-content {
+	background-color:white;
+	width:960px;
+	position: relative;
+	text-align:center;
+	display:inline-block;
+	padding-left: 0;
+	border:1px gray inset;
+	margin-top:-7px;
+	left:1px;
+}
+
+#content
+{
+	background-position: center top;
+	padding: 1px 0;
+	min-width: 960px;
+	/*-moz-box-shadow: 0 0 2px 3px #AAA;
+	-webkit-box-shadow: 0 0 2px 3px #AAA;
+	box-shadow: 0 0 5px 2px #AAA; */
+	border: none;
+}
+
+#main-content {
+    margin: 0 0 0 0;
+    overflow: hidden;
+	text-align:center;
+}
+#centralDiv {
+	
+}
+#MsgDiv {}
+
+/* =Footer
+-------------------------------------------------------------- */
+#span-footer {
+    width: 100%;
+    /*border-top: 1px solid #444;*/
+    /*-moz-box-shadow: 0px -1px 3px #222;
+    -webkit-box-shadow: 0px -1px 3px #222;
+    box-shadow: 0px -1px 3px #222;*/
+	background-color: transparent;
+	margin-bottom: 0;
+	color: #7C7C7C;
+    font-size: 12px;
+}
+#main-footer {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#copyright
+{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding-top: 30px;
+	height:60px;
+	text-align: center;
+}
+
+
+.TabArea
+        {
+                    background-color: White;
+                    font-size: x-small;
+                    border-left: 1px solid black;
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;
+                    border-top:1px solid black;
+                    /*position:absolute;
+                    top:42px;*/
+                    height:300px;
+                    z-index:-25;
+        }
+.SubFileHeader
+{
+    height :20px ;
+    border : 1px solid #ccccff;
+    background-color : Gray ;
+    
+    
+    
+}   
+.SubFileHeaderFields
+{
+ border  : 0px None #ccccff;   font-weight: bold; color :White ; border-left : 1px Solid #ccccff;
+ }  
+ 
+ .SubFileDataFields
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff;
+ }
+ 
+ .SubFileDataFields_Right
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff; text-align: right;
+ }
+ 
+ .SubFileDataFields_OutputOnly
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff;
+ }
+ 
+ .SubFileDataFields_Right_OutputOnly
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff; text-align: right;
+ }
+ 
+ .SubFileRows
+{
+    border : 1px solid #ccccff;
+    
+}   
+
+
+.TabArea
+        {
+                    background-color: White;
+                    font-size: x-small;
+                    border-left: 1px solid black;
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;
+                    border-top:1px solid black;
+                    /*position:absolute;
+                    top:42px;*/
+                    height:300px;
+                    z-index:-25;
+        }
+.SubFileHeader
+{
+    height :20px ;
+    border : 1px solid #ccccff;
+    background-color : Gray ;
+    
+    
+    
+}   
+.SubFileHeaderFields
+{
+ border  : 0px None #ccccff;   font-weight: bold; color :White ; border-left : 1px Solid #ccccff;
+ }  
+ 
+ .SubFileDataFields
+{
+ /*border-right   : 0px None #ccccff;    */
+ border: 1px Solid #ccccff;
+ }
+ 
+ 
+ .SubFileRows
+{
+    border : 1px solid #ccccff;
+    
+}
+
+
+.page_title, .page_title_OutputOnly
+{
+	color: #231F20;
+    font-family: "Trebuchet MS";
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+	height:30px;
+	background-color:#DDDDDD;
+	/*border-bottom:1px solid gray;*/
+	width:100%;
+	margin-left:0;
+	text-align:left;
+	padding-left:10px;
+	margin-left:-32px;
+	padding-top:12px;
+	position:relative;
+}
+
+.sub_options_panel
+{
+	background-color: #e0e0e0;
+	display: block;
+    float: none;
+    padding: 0 0 0 0;
+	color: #3F3F3F;
+	border-bottom:3px solid #c80516;
+	min-height:0;
+	width:200px;
+	min-width:200px;
+	max-width:200px;
+	z-index: 200;
+	position: absolute;
+	border-left:1px solid #979797;
+	border-right:1px solid #979797;
+	min-height:30px;
+	text-align:left;
+}
+
+.sub_option_key
+{
+	font-size: 12px  !important;
+    font-weight: bold  !important;
+    height: 27px  !important;
+    line-height: 27px;
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 10px !important;
+    text-align: left  !important;
+    text-shadow: none  !important;
+    text-transform: none  !important;
+	border:none !important;
+	display:table-cell !important;
+	background-color:transparent !important;
+	color:#3f3f3f !important;
+	float:none;
+	min-width:200px;
+}
+
+
+.sub_option_key:hover
+{
+	
+	background-color:#9d9d9d !important;
+	color:#FFFFFF;
+	height: 27px  !important;
+    line-height: 27px;
+	margin: 0 0 0 0 !important;
+    padding: 0 0 0 10px !important;
+}
+
+.special:hover
+{
+	border-bottom:none !important;
+}
