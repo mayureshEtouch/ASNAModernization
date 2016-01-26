@@ -214,6 +214,8 @@
 
 
             $("#CenPH_RSignon_Program").val('<%= System.Configuration.ConfigurationManager.AppSettings["program"].ToString() %>');
+			
+			$("#CenPH_RSignon_Library").val('<%= System.Configuration.ConfigurationManager.AppSettings["current_library"].ToString() %>');
 
             $("#CenPH_RSignon_System, #CenPH_RSignon_Port, #CenPH_RSignon_Program, #CenPH_RSignon_Menu, #CenPH_RSignon_Library").hide();
             $("#CenPH_RSignon_User").focus();
