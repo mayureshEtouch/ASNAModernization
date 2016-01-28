@@ -13,8 +13,8 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="login-container">
+        <%--<header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title logo-icon"></span>
@@ -23,7 +23,8 @@
                 <div class="mdl-layout-spacer"></div>
 
             </div>
-        </header>
+        </header>--%>
+
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -181,9 +182,9 @@
         </main>
     </div>
     <div id="modal" class="simplePopup"></div>
-    <section class="copyright">
+    <%--<section class="copyright">
         <div class="copyright-container">Copyright © 2015 Conn's. All rights reserved.</div>
-    </section>
+    </section>--%>
 </asp:Content>
 
 <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">

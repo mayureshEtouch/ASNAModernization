@@ -22,6 +22,406 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+	
+	<!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Customer Selection Screen</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSFMETR</span> 
+						<i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="white-to-gray-bullet">
+
+                        <li class="progress-bar-step3 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+			
+			<section class="order-summary">
+				<div class="order-summary-wrapper">
+				<%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
+				<div class="content-grid mdl-grid">
+					<div class="mdl-cell mdl-cell--3-col">
+						<span class="summary-title">Order #</span>
+						<span class="summary-txt" name ="order"></span>
+					</div>
+					<div class="mdl-cell mdl-cell--3-col">
+						<span class="summary-title">Customer name</span>
+						<span class="summary-txt" name= "username"></span>
+					</div>
+					 <div class="mdl-cell mdl-cell--3-col">
+						<span class="summary-title">Billing address</span>
+						<span id="billAddressDesc" class="summary-txt"></span>
+					</div>
+					<div class="mdl-cell mdl-cell--3-col">
+					
+						<span class="summary-title">Shipping address</span>
+						<span id="shipAddressDesc" class="summary-txt"></span>
+					</div>
+					
+					
+				</div>
+				</div>
+			</section>
+			
+			 <section class="add-item">
+				<div class="content-grid mdl-grid">
+					<div class="add-item-wrapper mdl-cell mdl-cell--7-col">
+						<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
+						<span class="add-item-title" data-code=34>ADD ORDER ITEMS</span>
+						
+						<%--<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
+						<span class="add-item-title">VIEW NEXT ORDERS</span>
+						<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
+						<span class="add-item-title">VIEW PREVIOUS ORDERS</span>--%>
+					</div>
+					<div class="mdl-cell mdl-cell--5-col error-msg-container">
+						<div class="error-message">SKU not found</div>
+					</div>
+				</div>
+			</section>   
+			
+			<section class="order-detail-table-data">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="table-container">
+                            	
+                                <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValueInsert">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 8%">Del <br />Status</th>
+                                            <th style="width: 10%">From <br />Loc</th>
+                                            <th style="width: 4%">Qty</th>
+                                            <th style="width: 11%">Model <br />Number</th>
+											 <th style="width: 12%">Model <br />Name</th>
+                                            <th style="width: 8%">Serial <br />Number</th>
+                                            <th style="width: 6%">Inst <br />Code</th>
+                                            <th style="width: 3%">Level</th>
+                                            <th style="width: 3%">Warranty</th>
+                                            <th style="width: 3%">Credit</th>
+                                            <th style="width: 9%">Actl <br />Price</th>
+                                            <th style="width: 9%">Extd <br />Price</th>
+                                            <th style="width: 5%">Inst <br />Price</th>
+                                            <th style="width: 9%">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <select TabIndex="1">
+                                                    <option></option>
+                                                    <option>TK</option>
+                                                    <option>PU</option>
+                                                    <option>DL</option>
+                                                    <option>?</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="2">
+												<i class="material-icons icon-textfield">search</i>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="3">
+                                                
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4">
+												<i class="material-icons icon-textfield model-number">search</i>
+                                              </div>
+                                            </td>
+											 <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="5">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="6">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled">
+                                              </div>
+                                            </td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td class="status">
+                                                <select TabIndex="7">
+                                                    <option>Active</option>
+                                                    <option>Cancel</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="mdl-data-table__cell--non-numeric">
+                                                <select TabIndex="8">
+                                                    <option></option>
+                                                    <option>TK</option>
+                                                    <option>PU</option>
+                                                    <option>DL</option>
+                                                    <option>?</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="9">
+												<i class="material-icons icon-textfield">search</i>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="10">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="11">
+												<i class="material-icons icon-textfield model-number">search</i>
+                                              </div>
+                                            </td>
+											 <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="12">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;"TabIndex="13">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled">
+                                              </div>
+                                            </td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td class="status">
+                                                <select TabIndex="14">
+                                                    <option>Active</option>
+                                                    <option>Cancel</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="mdl-data-table__cell--non-numeric">
+                                               <select TabIndex="15">
+                                                    <option></option>
+                                                    <option>TK</option>
+                                                    <option>PU</option>
+                                                    <option>DL</option>
+                                                    <option>?</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="16">
+												<i class="material-icons icon-textfield">search</i>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="17">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="18">
+												<i class="material-icons icon-textfield model-number">search</i>
+                                              </div>
+                                            </td>
+											 <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="19">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="20">
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled">
+                                              </div>
+                                            </td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td class="status">
+                                                <select TabIndex="21">
+                                                    <option>Active</option>
+                                                    <option>Cancel</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                                             
+                                    </tbody>
+                                </table>
+                                
+                                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValue">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 6%">Del <br />Sts</th>
+                                            <th style="width: 10%">Frm <br />Loc</th>
+                                            <th style="width: 4%">Qty</th>
+                                            <th style="width: 17%">Model <br />Number</th>
+                                            <th style="width: 9%">Model <br />Name</th>
+                                            <th style="width: 8%">Serial <br />Number</th>
+                                            <th style="width: 6%">Inst <br />Code</th>
+                                            <th style="width: 10%">Instructions</th>
+                                            <th style="width: 3%">Level</th>
+                                            <th style="width: 3%">Warranty</th>
+                                            <th style="width: 3%">Credit</th>
+                                            <th style="width: 5%">Actl <br />Price</th>
+                                            <th style="width: 5%">Extd <br />Price</th>
+                                            <th style="width: 5%">Inst <br />Price</th>
+                                            <th style="width: 6%">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td></td>
+                                        </tr>
+                                                             
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="button-container"> 
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--11-col">
+                                        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" value="Cancel Order" id="cancelOrder1" data-attr="cancelOrder" />
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</button>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col pull-right">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
+                                    </div>
+                                </div>                               
+                                
+                            </div>
+                             <div class="button-container showConfirm">
+                             <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--11-col">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancelOrder2">Cancel Order</button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col pull-right">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="confirm">Confirm</button>
+                                    </div>
+                                </div> 
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			
+			 </main>
+        <div id="modal" class="simplePopup"></div>
+        <section class="copyright">
+            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+        </section>
+    </div>
+	
+	
         <div id="Div1">
             
       <%--  OE: ETR Ent Ord Dtl       Edit transaction                                                                       --%>
@@ -1298,4 +1698,213 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	 <script type="text/javascript">
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+        
+        // Fill up default data from ASNA Hidden UI FORM
+        $("[name='username']").text($("[id$=lb_SFLCTL__lb_1ALTX]").text());
+
+        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").html()+ " "+$("[id$=_DdsConstant20]").html() +" "+$("[id$=__lb_SFLCTL__lb_1EXNB]").html());
+
+        $("[name='treminal']").text($("[id$=lb_SFLCTL__lb__lb_JOB]").text());
+
+        $("[name='date']").text($("[id$=_DdsConstant16]").text());
+        $("[name='time']").text($("[id$=__lb_SFLCTL__lb__lb_TME]").text());
+        
+        //$(".error-message").text($("#MsgPH_DdsMessagePanel1").text());
+        $(".error-message").text($("[id*='lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
+
+        if(typeof(Storage) !== "undefined") {
+            $("#billAddressDesc").html(sessionStorage.getItem("billAddress"));
+            $("#shipAddressDesc").html(sessionStorage.getItem("shipAddress"));
+        } else {
+            getCookie("billAddress");
+            getCookie("shipAddress");
+        }
+        
+        
+        // Button Triggers for New UI
+        // Enter
+        $( "#enter" ).on( "click", "_00('Enter',event);",function(){
+            if(!$("#lb_SFLRCD__lb_2A2TX.0").text()){
+                $("#datatableValueInsert").hide();
+            }
+        } );
+        // Next Page
+        $( "#nextPage" ).on( "click", function(){ $("input[accesskey='n']").click();} );
+        
+        // Exit Page
+        $( "#exitPage" ).on( "click", function(){ $("input[title='F12 : Exit.']").click();});
+        
+        // Cancel Order
+        $( "#cancelOrder1" ).on( "click", function(){ $("input[title='F3 : Exit.']").trigger('click'); });
+       
+        /* $( "#reset" ).on( "click", function(){ $("input[accesskey='b']").click();} );*/
+       
+        // Confirm Order                   
+        $("#confirm").on("click", function(){
+            $("[id$='lb_CONFIRM_V_lb_CFCD']").text("Y").val("Y");
+            var e = jQuery.Event("keydown");
+            e.which = 89; // # Some key code value
+            $("#confirm").trigger(e);
+        });
+
+        // Add Items
+        $(".add-item-title,.add-icon").on('click',function(){
+            var e =jQuery.Event("keydown");
+            e.which = 34;
+            e.ctrlKey = false;
+            e.altKey = false;
+            $(window).trigger(e);
+            ASNA.Response.PushKey(document.forms[0], "PgDn", e);
+        });
+		$(".model-number").on('click',function(){
+			var e =jQuery.Event("keydown");
+			e.which = 13;
+			var keydnIndex= $(this).parents("tr").index();
+			console.log(keydnIndex);
+			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
+			
+		});
+
+        // ASNA Hidden UI Table  index. Used for reference
+        var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+        
+		var modelName;
+		//alert(modelName);
+        // We added this function over here.
+        // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
+        $(document).keyup(function(e){
+            if(e.which== 33 || e.which== 34 ){
+                $("#datatableValueInsert tbody").find("tr").each(function(i){
+                    $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
+                    $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
+                    $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
+                    $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
+                    $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
+                    $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
+                    $(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
+                    $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
+                    $(this).find("td:eq(6) input").removeAttr("disabled");
+                    $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+                });   
+            }
+        });
+        
+        // Check if Current state of page is Review or Edit
+        if($(".DdsCharField").length > 1) {
+            // if Current state of page is Edit
+            // Hide New Confirm UI Table
+            $("#datatableValue, .showConfirm").hide();
+            // Show New Edit UI Table
+            $("#datatableValueInsert").show();
+
+            // Update any data added to New Edit UI Table to ASNA Hidden UI Table
+            $("input, select").blur(function(){
+                $("#datatableValueInsert tbody").find("tr").each(function(i){
+                    $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
+                    $("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
+                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
+                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").val($(this).find("td:eq(3) input").val());
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val()); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
+                    $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
+					//alert($("[id$='lb_SFLRCD__lb_2SEL.']").val() + "second");
+                });
+            });
+			//alert($("#datatableValueInsert").is(":visible"));
+			if($("#datatableValueInsert").is(":visible") ){
+				$("#datatableValueInsert tbody").find("tr").each(function(i){
+                    $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
+                    $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
+                    $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
+                    $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
+					$(this).find("td:eq(4)").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
+                    $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
+                    $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
+                    $(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
+                    $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
+                    $(this).find("td:eq(6) input").removeAttr("disabled");
+                    $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+                });
+			}
+            // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table
+
+            
+        } 
+        else {
+            // if Current stateof page is Review /Confirm
+            // Hide New Edit UI Table
+            $("#datatableValueInsert, .button-container").hide();
+
+            // Show New Confirm / Review UI Table 
+            $("#datatableValue, .showConfirm").show();
+            
+            // update data from ASNA Hidden UI Table to Confirm/ Review UI Table
+			
+		
+			$("#datatableValue tbody tr").each(function(i){
+				modelName = $("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text();
+				$(this).find("td:eq(0)").text($("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").text());        
+				$(this).find("td:eq(1)").text($("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").text());
+				$(this).find("td:eq(2)").text($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").text());
+				$(this).find("td:eq(3)").text($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(4)").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(5)").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(6)").text($("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").text());
+				$(this).find("td:eq(7)").text($("[id$='lb_SFLRCD__lb_RGLTX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(8)").text($("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text());
+				$(this).find("td:eq(9)").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tindex)+"']").text()=="y"? "done":"");
+				$(this).find("td:eq(10)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text()=="y"? "done":"");
+				$(this).find("td:eq(11)").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tindex)+"']").text());
+				$(this).find("td:eq(12)").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tindex)+"']").text());
+				$(this).find("td:eq(13)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text());
+				$("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").text()=="4"?  $(this).find("td:eq(14)").html("Cancelled").css("color", "#e32527"):  $(this).find("td:eq(14)").html("Active").css("color", "#00af00");
+			}); 
+
+        }    
+        $( "#reset" ).click(function() {
+           $("#datatableValue tbody").find("tr").each(function(i){
+                    $("[id$='lb_SFLRCD__lb_2AIST."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AECD."+(i)+"']").val("");
+                });
+        });
+		
+		
+    </script>   
+    <style>
+        #span-header, #screen_title, #fkeys {
+            display: none;
+        }
+		.icon-textfield {
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: bold;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		#main-content {
+			width: 100%;
+		}
+		.table-container tr td:nth-child(2) {
+			
+		} 
+    </style>
     </asp:Content>

@@ -18,7 +18,20 @@
     header += "                <\/ul><\/div>";
     header += "            <\/div>";
     header += "        <\/header>";
-    $("#main-content").prepend(header);
+
+    var loginHeader = "";
+    loginHeader += "<header class=\"mdl-layout__header is-casting-shadow\">";
+    loginHeader += "            <div class=\"mdl-layout__header-row\">";
+    loginHeader += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
+    loginHeader += "                <div class=\"mdl-layout-spacer\"><\/div>";
+    loginHeader += "            <\/div>";
+    loginHeader += "        <\/header>";
+
+    if ($("#login-container").length > 0) {
+        $("#main-content").prepend(loginHeader);
+    } else {
+        $("#main-content").prepend(header);
+    }
 
     // Add footer section
     var footer = "";
@@ -27,4 +40,9 @@
     footer += "        <\/section>";
 
     $(footer).insertAfter($("#main-content"));
+
+    //$("#form1").height($('body').height() - $('.copyright').height());
+    //$(window).resize(function () {
+    //    $("#form1").height($('body').height() - $('.copyright').height());
+    //});
 });

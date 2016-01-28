@@ -194,6 +194,11 @@ img {
     border-right: #c6c6c6 1px solid;
     margin: 0 15px 0 0;
 }
+
+.order-summary-wrapper .mdl-cell:first-child {
+    margin-left: 15px;
+}
+
 .order-summary-wrapper .mdl-cell:last-child {
     border-right: none;
     margin-right: 0;
@@ -210,7 +215,7 @@ img {
     border: 1px solid #cccccc;
     border-radius: 5px;
     height: 55px;
-    margin: 16px 20px;
+    margin: 16px 8%;
 }
 
 .progress-bar .gray-bg {
@@ -238,23 +243,25 @@ img {
     font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 }
 
-.progress-bar .step-title,.progress-bar .step-title-selected {
+.progress-bar .step-title,
+.progress-bar .step-title-selected {
     color: #e32527;
     font-size: 16px;
     font-weight: bold;
-    padding: 2px 0 0 8px;
+    padding: 2px 0 0 7px;
 }
 
 .progress-bar .step-title-selected {
     color: #fff;
 }
 
-.progress-bar .step-txt,.progress-bar .step-txt-selected {
+.progress-bar .step-txt,
+.progress-bar .step-txt-selected {
     color: #79868a;
     font-size: 11px;
     font-weight: bold;
-    line-height: 13px;
-    padding: 2px 0 0 8px;
+    line-height: 14px;
+    padding: 0 0 0 8px;
 }
 
 .progress-bar .step-txt-selected {
@@ -264,6 +271,7 @@ img {
 .progress-bar .step-width {
     flex: 1;
 }
+
 
 /* progress bar css ends here */
 
@@ -288,16 +296,10 @@ img {
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     box-shadow: 0 2px 1px #7b7b7b;
-    margin: 0px 20px;
+    margin: 1px 21px;
     position: relative;
 }
-.order-summary-wrapper .mdl-grid{
-    padding: 10px 0;
-}
-.order-summary-wrapper .mdl-cell{
-    margin: 0 0 0 15px;
-    padding: 0;
-}
+
 .order-summary-edit {
     color: #de0000;
     cursor: pointer;
@@ -310,7 +312,7 @@ img {
     color: #333;
     display: block;
     font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     padding-top: 1px;
 }
@@ -319,7 +321,7 @@ img {
     color: #333;
     display: block;
     font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     padding-top: 3px;
 }
 
@@ -343,11 +345,11 @@ img {
     font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
     font-size: 12px;
     font-weight: bold;
-    vertical-align: middle;
+    vertical-align: super;
 }
 
 .add-item .content-grid .mdl-cell {
-    margin-bottom: 5px;
+    margin-bottom: -4px;
     padding-left: 34px;
     padding-top: 15px;
 }
@@ -367,7 +369,7 @@ img {
 /* table data section css starts here */
 
 .table-data-wrapper {
-    margin: 3px 20px 5px;
+    padding: 3px 14px 5px 20px;
 }
 
 .table-data-maincontainer {
@@ -655,14 +657,13 @@ select {
     background: url('../Images/white-bullet.png') no-repeat;
     width: 25px;
 }
-.white-to-gray-bullet {
-    background: url('../Images/white-to-gray-bullet.png') no-repeat;
-    width: 25px;
-}
 /* Modal CSS ends */
 /* 19 jan 16 add classes starts here */
 .heading-h1 {
 	font-size: 20px;
+}
+.progress-bar .progress-bar-wrapper {
+    margin: 16px 14px 16px 20px;
 }
 .home-icon .material-icons {
 	margin-right: 10px;
@@ -671,7 +672,9 @@ select {
 .time-date .mdl-grid {
 	  padding: 9px 0 10px 8px;
 	}
-
+.table-data-wrapper {
+	padding: 25px 14px 5px 20px;
+}
 .time-date .mdl-cell {
 	margin-bottom: -10px;
 }
@@ -744,6 +747,9 @@ select {
 	width: 100%;
 	z-index: 1;
 }
+.table-data-wrapper {
+   padding: 0px 14px 5px 20px;
+}
 .search-inner-container {
 	margin-left: 20px;
 }
@@ -761,6 +767,13 @@ select {
 }
 .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input  {
 	font-weight: normal;
+}
+.progress-bar .step-title, .progress-bar .step-title-selected {
+	font-size: 17px;
+	padding: 0 0 0 7px;
+}
+.progress-bar .step-txt, .progress-bar .step-txt-selected {
+	 padding: 2px 0 0 8px;
 }
 .icon-container {
 	margin: 0 13px 5px 0;
@@ -823,95 +836,9 @@ select {
 	background: linear-gradient(to bottom, #ffffff 57%,#eff0f1 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eff0f1',GradientType=0 ); /* IE6-9 */
 }
-.mdl-data-table td .icon-textfield {
-   cursor: pointer;
-   font-size: 18px;
-   font-weight: bold;
-   position: absolute;
-   margin-left: -19px;
-   top: 8px;
-  }
 /* 19 jan 16 add classes ends here */
 
-/* 27 jan 16 add classes form start here */
-.form-data-wrapper{
-	background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-    box-shadow: 0 2px 1px #7b7b7b;
-    margin: 20px 20px 0;
-    position: relative;
-    padding: 10px 0;
-}
-.form-data-wrapper .mdl-grid{
-	padding: 0;
-    margin: 0;
-}
-.form-data-wrapper .mdl-cell{
-    margin: 0 0 0 15px;
-    padding: 10px 0;
-}
-.form-data-wrapper .mdl-cell:last-child {
-    border-right: none;
-    margin-right: 0;
-}
-.mdl-cell-brd{
-	border-right: #c6c6c6 1px solid;
-}
-.form-label,.form-text {
-	color: #797979;
-    display: block;
-    font-family: "Open Sans","OpenSansRegular","Arial",sans-serif;
-    font-size: 12px;
-}
-.form-label{
-	font-weight: 600;
-}
-.form-text{
-	text-align: left;
-	margin-right: 15px;
-}
-.form-data-wrapper .icon-calender {
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    position: absolute;
-    margin-left: -19px;
-    margin-top: 1px;
-    width: 18px;
-}
-.form-data-wrapper input{
-	border: 1px solid #e5e5e5;
-    border-radius: 2px;
-}
-fieldset {
-    border: 1px solid #e5e5e5;
-    display: block;
-    margin-inline-end: 2px;
-    margin-inline-start: 2px;
-    padding-block-end: 0.75em;
-    padding-block-start: 0.35em;
-    padding-inline-end: 0.625em;
-    padding-inline-start: 0.625em;
-	color: #797979;
-    display: block;
-    font-family: "Open Sans","OpenSansRegular","Arial",sans-serif;
-    font-size: 12px;
-	font-weight: 600;
-	padding: 5px 10px;
-}
-textarea{
-	width: 99%;
-	border: 1px solid #e5e5e5;
-}
-.form-data-wrapper  .full-input{
-	width: 100%;
-}
-.shipping-add input{
-	margin-bottom: 10px;
-}
-/* 27 jan 16 add classes form ends here */
-/* new classes starts here */
+/* modal classes starts here */
 .modal-dialog-container {
 	width: 70%;
 	margin: 10% auto;
@@ -925,7 +852,9 @@ textarea{
 .modal-dialog-container .table-data-content-container {
 	margin: 16px 0;
 }
-
+.modal-dialog-container .table-data-content-container  .modal-button-container {
+	margin-right: 31px;
+}
 .modal-dialog-container .close-icon .material-icons.md-15 {
 	font-size: 30px;
     font-weight: 600;
@@ -947,10 +876,15 @@ textarea{
 .modal-dialog-container .table-container-search .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .modal-dialog-container .table-container-search .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
 	background: url(../Images/btn_bg_big.png) repeat-x;
 	height: 40px;
-	margin: 0;
+	margin: 0 -47px 0 0;
+	padding: 0 25px;
+	font-size: 14px;
 }
 .modal-dialog-container .table-container-search  .mdl-grid {
-    padding: 0;
+    padding: 0 8px;
+}
+.modal-dialog-container .table-container-search .mdl-textfield__input {
+	 padding: 4px 53px 4px 5px;
 }
 .table-container-no-scroll {
 	height: auto;
@@ -959,76 +893,13 @@ textarea{
 .modal-dialog-container .order-summary-wrapper {
 	margin: 15px 14px 15px 20px;
 }
-.search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .modal-dialog-container .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
-	background: url(../Images/btn_bg_big.png) repeat-x;
-	height: 40px;
-	margin: 0;
+.modal-dialog-container .summary-title {
+	 font-size: 14px;
 }
-.white-to-gray-bullet {
-    background: url('../Images/white-to-gray-bullet.png') no-repeat;
-    width: 25px;
+.modal-dialog-container .summary-txt {
+	font-size: 12px;
 }
-.table-data-content-container .mdl-data-table td.pull-right, .table-data-content-container .mdl-data-table th.pull-right {
-	text-align: right;
-}
-.search-field-container  .mdl-grid {
-    padding: 0 0 0 8px;
-}
-
-.search-field-container .button-container {
-    padding: 0;
-}
-
-.search-field-container .summary-table-title {
-    margin: 12px 0 0 8px;
-}
-.search-field-container .icon-textfield, .table-container-search .icon-textfield {
-   cursor: pointer;
-   font-size: 18px;
-   font-weight: bold;
-   position: absolute;
-   right: 6px;
-   top: 2px;
-  }
-	.modal-dialog-container .table-container-search input, .search-field-container .input-big{
-	 padding: 4px 5px 4px 5px;
-}
-.modal-dialog-container .select-customer-screen-grid .mdl-cell, .select-customer-screen-grid .mdl-cell {
-	margin: 0 0 0 8px;
-} {
-	margin: 0 0 0 8px;
-}
-/* form class starts here */
-.table-container-form {
-	margin: 16px 0 0 0;
-	}
-	
-.input-label, .input-label-text {
-    color: #797979;
-    display: block;
-    font-family: "Open Sans","OpenSansRegular","Arial",sans-serif;
-    font-size: 12px;
-    padding-top: 12px;
-}
-.input-label {
-	font-weight: 600;
-}
-/* form class ends here */
-
-.order-summary-container .order-summary-wrapper {
-	margin-bottom: 16px;
-}
-.search-field-container .table-data-maincontainer, .modal-dialog-container .table-data-maincontainer {
-	border-bottom: 0;
-}
-.table-data-content-container .mdl-textfield-select-page {
-    margin-top: 8px;
-}
-.search-field-container .summary-table-title, .modal-dialog-container .summary-table-title {
-    margin: 10px 0 0 8px;
-}
-
-/* new classes ends here */
+/* Modal classes ends here */
 
 /* Error message CSS */
 .table-data-content-container .mdl-textfield__input.error_msg {
@@ -1071,7 +942,6 @@ textarea{
     .progress-bar .step-txt,
     .progress-bar .step-txt-selected {
         font-size: 10px;
-        line-height: 11px;
     }
     .progress-bar .step-title,
     .progress-bar .step-title-selected {
@@ -1079,6 +949,15 @@ textarea{
     }
     .progress-bar .step-width {
         width: 13%;
+    }
+    .progress-bar .progress-bar-wrapper {
+        margin: 16px 5%;
+    }
+    .order-summary-wrapper .mdl-cell:first-child {
+        margin-left: 0;
+    }
+    .order-summary-wrapper .mdl-cell {
+        margin: 0 10px 10px 0;
     }
 }
 
