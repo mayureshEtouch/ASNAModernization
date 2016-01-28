@@ -790,6 +790,7 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('body').css({ "background-color": "white" });
             if ($("#CenPH__lb_RCDDTL1").length > 0) {
                 var type = $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().html();
                 type += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().next().html();

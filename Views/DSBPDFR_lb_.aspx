@@ -602,9 +602,11 @@
         tr.selected {
             background-color: #f1f1f1;
         }
+            
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('body').css({ "background-color": "white" });
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant8]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
@@ -708,6 +710,7 @@
 
             //Display customer details
             $(".display-customer").click(function () {
+                debugger
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the customer");
                 } else {

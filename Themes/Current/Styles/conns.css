@@ -1030,6 +1030,36 @@ textarea{
 
 /* new classes ends here */
 
+/* 28 jan classes starts here */
+
+.confirmation-outer-conatiner {
+	margin: 0 auto;
+	padding: 15px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	width: 162px;
+	margin-left: -81px;
+	
+}
+.confirmation-outer-conatiner .confirmation-text {
+	color: #797979;
+    display: inline-block;
+    font-family: "Open Sans","OpenSansRegular","Arial",sans-serif;
+    font-size: 12px;
+	margin-top: 3px;
+    vertical-align: top;
+} 
+.confirmation-outer-conatiner .material-icons.md-light {
+	color: #e32527; 
+} 
+.button-container {
+	text-align: center;
+}
+/* 28 jan classes ends here */
+
 /* Error message CSS */
 .table-data-content-container .mdl-textfield__input.error_msg {
 	border: solid 1px #ff0000;
