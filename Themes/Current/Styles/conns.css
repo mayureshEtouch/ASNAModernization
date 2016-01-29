@@ -689,12 +689,6 @@ select {
 .select-customer-screen-grid .mdl-cell {
 	margin: 0 8px;
 }
-.select-customer-screen-grid .mdl-cell--3-col-desktop {
-	flex: 3;
-}
-.select-customer-screen-grid .mdl-cell--1-col {
-	flex: 1;
-}
 .summary-table-title {
 	color: #333;
 	display: block;
@@ -1055,7 +1049,7 @@ textarea{
 .confirmation-outer-conatiner .material-icons.md-light {
 	color: #e32527; 
 } 
-.button-container {
+.confirmation-outer-conatiner .button-container {
 	text-align: center;
 }
 /* 28 jan classes ends here */

@@ -15,7 +15,7 @@
             DisplayErrorMessages="False"
             SrcDdsCcsid="37" 
             PixelPerCharWidth="8" 
-            PixelPerCharHeight="24"  />
+            PixelPerCharHeight="24"   />
 
         </div>
     </asp:Content>
@@ -136,18 +136,18 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <select TabIndex="1">
+                                                <select TabIndex="1" class="del-status">
                                                     <option></option>
-                                                    <option>TK</option>
-                                                    <option>PU</option>
-                                                    <option>DL</option>
+                                                    <option value="TK">TK - Taken from store</option>
+                                                    <option value="PU">PU - Customer pickup</option>
+                                                    <option value="DL">DL - Warehouse delivery</option>
                                                     <option>?</option>
                                                 </select>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" TabIndex="2">
-												<i class="material-icons icon-textfield">search</i>
+												<i class="material-icons icon-textfield from-loc">search</i> 
                                               </div>
                                             </td>
                                             <td>
@@ -193,18 +193,18 @@
                                         
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">
-                                                <select TabIndex="8">
+                                                <select TabIndex="8" class="del-status">
                                                     <option></option>
-                                                    <option>TK</option>
-                                                    <option>PU</option>
-                                                    <option>DL</option>
+                                                    <option value="TK">TK - Taken from store</option>
+                                                    <option value="PU">PU - Customer pickup</option>
+                                                    <option value="DL">DL - Warehouse delivery</option>
                                                     <option>?</option>
                                                 </select>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" TabIndex="9">
-												<i class="material-icons icon-textfield">search</i>
+												<i class="material-icons icon-textfield from-loc">search</i>
                                               </div>
                                             </td>
                                             <td>
@@ -249,18 +249,18 @@
                                         
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">
-                                               <select TabIndex="15">
+                                               <select TabIndex="15" class="del-status">
                                                     <option></option>
-                                                    <option>TK</option>
-                                                    <option>PU</option>
-                                                    <option>DL</option>
+                                                    <option value="TK">TK - Taken from store</option>
+                                                    <option value="PU">PU - Customer pickup</option>
+                                                    <option value="DL">DL - Warehouse delivery</option>
                                                     <option>?</option>
                                                 </select>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" TabIndex="16">
-												<i class="material-icons icon-textfield">search</i>
+												<i class="material-icons icon-textfield from-loc">search</i>
                                               </div>
                                             </td>
                                             <td>
@@ -1775,12 +1775,20 @@
 			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
 			
 		});
+		
+		// From Location modal
+		$(".from-loc").on('click',function(){
+		   var e =jQuery.Event("keydown");
+		   e.which = 13;
+		   var keydnIndex= $(this).parents("tr").index();
+		   console.log(keydnIndex);
+		   $("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
+		   
+		  });
 
         // ASNA Hidden UI Table  index. Used for reference
         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
         
-		var modelName;
-		//alert(modelName);
         // We added this function over here.
         // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
         $(document).keyup(function(e){
@@ -1872,6 +1880,46 @@
 				$(this).find("td:eq(13)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text());
 				$("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").text()=="4"?  $(this).find("td:eq(14)").html("Cancelled").css("color", "#e32527"):  $(this).find("td:eq(14)").html("Active").css("color", "#00af00");
 			}); 
+			
+			$(document).keyup(function(e){
+                    if( e.which== 33){
+                        $("#datatableValueInsert, .button-container").show();
+                        $("#datatableValue, .showConfirm").hide();
+                        var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+                        $("#datatableValueInsert tbody").find("tr").each(function(i){
+                                            $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i+tableindex)+"']").val()); 
+                                            $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i+tableindex)+"']").val());
+                                            $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tableindex)+"']").val()); 
+                                            $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
+                                            $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
+                                            $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
+                                            $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
+                                            $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
+                                            $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tableindex)+"']").text()); 
+                                            $(this).find("td:eq(5) input").removeAttr("disabled");
+                                            $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i+tableindex)+"']").val());
+                                        });  
+              
+                    }
+                    if(e.which ==34){
+                     var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+                     $("#datatableValueInsert tbody").find("tr").each(function(i){
+                                        $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i+tableindex)+"']").val()); 
+                                        $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i+tableindex)+"']").val());
+                                        $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tableindex)+"']").val()); 
+                                        $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
+                                        $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
+                                        $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
+                                        $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
+                                        $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
+                                        $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tableindex)+"']").text()); 
+                                        $(this).find("td:eq(5) input").removeAttr("disabled");
+                                        $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i+tableindex)+"']").val());
+                                    });  
+           
+           
+                            }
+                });
 
         }    
         $( "#reset" ).click(function() {
