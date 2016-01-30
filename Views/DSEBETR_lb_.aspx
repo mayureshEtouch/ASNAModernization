@@ -22,6 +22,203 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+	
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Enter Order Payment</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSEBETR</span> 
+						<i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span> 
+						<i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider"></li>
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider"></li>
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider"></li>
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="white-to-gray-bullet"></li>
+
+                        <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
+                        <li class="progress-bar-divider-first"></li>
+
+                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Order #:</span>
+                            <span class="summary-txt" name ="order"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Version #:</span>
+                            <span class="summary-txt" name ="version"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-txt" name ="username"></span>
+                        </div>
+                    </div>
+            	</div>
+            </section>
+            <section class="form-data">
+                <div class="form-data-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Purchase total:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                            <span id="CenPH_CEFVA" class="form-text pull-right"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Tax amount:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                            <span id="CenPH_CBLVA" class="form-text pull-right"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Balance due:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span id="CenPH_CBNVA" class="form-text pull-right"></span>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Miscellaneous:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                            <span id="CenPH_1ANPR" class="form-text pull-right"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Order total:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                            <span id="CenPH_CAQPR" class="form-text pull-right"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Requested del date:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
+								<input type="text" id="requestdate" name="date"><i class="material-icons icon-calender" id="requestcal">today</i>
+								<span id="reqdate" class="DdsCharField_OutputOnly"></span>
+							</span>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Effective tax rate:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                           <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Payment total:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                            <span id="CenPH_CBMVA" class="form-text pull-right"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Expected del date:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-text pull-right"></span>
+                        </div>
+                    </div>
+            	</div>
+            </section>
+			<section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
+							<div class="error-message"></div>
+						</div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom:-10px;">
+                            <div class="icon-container icon-disable"><span class="icon-txt display-customer">Delete</span><i class="material-icons md-15 md-light display-customer">delete</i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			<section class="table-data-content-container spacer-container-bottom">
+				<div class="table-data-wrapper">
+					<div class="table-data-maincontainer">
+						<div class="table-container" style="overflow: auto;">
+							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="orderPayment">
+								<thead>
+									<tr>
+										<th width="10%">Pmt Mth</th>
+										<th width="20%">Amount</th>
+										<th width="40%">Reference</th>
+										<th>Approval Code</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="text" TabIndex="1"/><i class="material-icons icon-textfield" TabIndex="17">search</i></td>
+										<td><input type="text" TabIndex="2"/></td>
+										<td><input type="text" TabIndex="3"/></td>
+										<td><input type="text" TabIndex="4"/></td>
+									</tr>
+									<tr>
+										<td><input type="text" TabIndex="5"/><i class="material-icons icon-textfield" TabIndex="18">search</i></td>
+										<td><input type="text" TabIndex="6"/></td>
+										<td><input type="text" TabIndex="7"/></td>
+										<td><input type="text" TabIndex="8"/></td>
+									</tr>
+									<tr>
+										<td><input type="text" TabIndex="9"/><i class="material-icons icon-textfield" TabIndex="19">search</i></td>
+										<td><input type="text" TabIndex="10"/></td>
+										<td><input type="text" TabIndex="11"/></td>
+										<td><input type="text" TabIndex="12"/></td>
+									</tr>
+									<tr>
+										<td><input type="text" TabIndex="13"/><i class="material-icons icon-textfield" TabIndex="20">search</i></td>
+										<td><input type="text" TabIndex="14"/></td>
+										<td><input type="text" TabIndex="15"/></td>
+										<td><input type="text" TabIndex="16"/></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="button-container">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+									<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</button>
+								</div>
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+									<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+        </main>
+        <section class="copyright">
+            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+        </section>
+    </div>
+	
         <div id="Div1">
             
       <%--  OE: ETR Ent Ord Pymts     Edit transaction                                                                       --%>
@@ -1034,6 +1231,120 @@
           </mdf:DdsSubfileControl >
 
         </div>
+		<script>
+		var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
+		$("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
+		$("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
+		$("#requestdate, .icon-calender").on('keyup change', function () {
+			var date = $("#requestdate").val().split("/");
+			$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2]);
+                
+		});
+		$(".icon-textfield").on('click',function(){
+			//alert('Hi')
+			var e =jQuery.Event("keydown");
+			e.which = 115;
+			var keydnIndex= $(this).parents("tr").index();
+			console.log(keydnIndex + e.keyCode);
+			$("[id='CenPH__lb_SFLRCD__lb_RNICD."+$("[id^='CenPH__lb_SFLRCD__lb_RNICD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);	
+		});
+		
+		$(document).keyup(function(e){
+			var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
+			if(e.which== 33 || e.which== 34){
+				$("#orderPayment tbody").find("tr").each(function(i){
+					$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
+					$(this).find("td:eq(1) input").val($("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val());
+					$(this).find("td:eq(2) input").val($("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val());
+					$(this).find("td:eq(3) input").val($("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val());	
+				});
+			}
+		});
+		
+		$("input").blur(function(){
+			$("#orderPayment tbody").find("tr").each(function(i){
+				console.log("input" + tindex)
+				//$("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val($(this).find("td:eq(0) input").val());
+				$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
+                $("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val($(this).find("td:eq(1) input").val());
+                $("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val($(this).find("td:eq(2) input").val()); 
+                $("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val($(this).find("td:eq(3) input").val());                    
+			}); 
+        });
+		
+		
+		$("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html());
+		$("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html());
+		$("[name='username']").text($("[id$=CenPH__lb_SFLCTL__lb_1ALTX]").text());
+		$("#CenPH_CEFVA").text($("[id$=CenPH__lb_SFLCTL__lb_CEFVA]").text());
+		$("#CenPH_CBMVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBMVA]").text());
+		$("#CenPH_1ANPR").text($("[id$=CenPH__lb_SFLCTL__lb_1ANPR]").text());
+		$("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text());
+		$("#CenPH_V1ACPC").text($("[id$=CenPH__lb_SFLCTL_V1ACPC]").text());
+		$("#CenPH_PAMTX").text($("[id$=CenPH__lb_SFLCTL__lb_PAMTX]").text());
+		$("#CenPH_CBLVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text());
+		$("#CenPH_VCBQDT").text($("[id$=CenPH__lb_SFLCTL_VCBQDT]").text());
+		$("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text());
+		//$(".mdl-data-table td input").after('<i class="material-icons icon-textfield" data-badge="1">search</i>');
+		
+		// Next Page
+        $( "#nextPage" ).on( "click", function(){ $("input[accesskey='n']").click();} );
+        
+        // Exit Page
+        $( "#exitPage" ).on( "click", function(){ $("input[title='F12 : Exit.']").click();});
+		
+		//$(".error-message").text($("#MsgPH_DdsMessagePanel1").text());
+        $(".error-message").text($("[id*='lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
+		
+		$(document).ready(function () {
+			
+			
+			var selectOrderPayment = function (row, value) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+			//Select customer on double click
+            $('body').on('dblclick', '#orderPayment tbody tr', function () {
+                selectOrderPayment(this, "1");
+            });
+            // Set first record as default selected
+            //$("#orderPayment tbody tr:first").css("background-color", "#f1f1f1");
+            
+			
+			$(".table-data-content-container tbody  tr:visible:odd").addClass("oddrow");
+            $(".table-data-content-container tbody  tr:visible:even").addClass("evenrow");
+            $(".table-data-content-container tbody tr").click(function () {
+                $(this).closest(".table-data-content-container tbody tr").siblings().removeClass("selected-row");
+                $(this).toggleClass("selected-row");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+
+            //Display customer details
+            $(".display-customer").click(function () {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#orderPayment tbody tr.selected");
+                    selectOrderPayment(row, "4");
+                }
+            });
+		});
+		
+		</script>
+		<style>
+		#fkeys{display:none;}
+		#main-content{width:100%}
+		.add-item .content-grid .mdl-cell {
+			margin-bottom: 5px;
+			padding-left: 16px;
+			padding-top: 15px;
+		}
+		.add-item .content-grid .mdl-cell .error-message{
+			text-align: left;
+		}
+		</style>
     </asp:Content>
 
     <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">

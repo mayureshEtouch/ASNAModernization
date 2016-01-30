@@ -22,6 +22,106 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+        <!-- Modified HTML code starts here -->
+    		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+            <header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row"> 
+                            <!-- Title --> 
+                             <span class="mdl-layout-title logo-icon"></span>
+                            <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                            <div class="mdl-layout-spacer"></div>
+                            <span class="close-icon"><i class="material-icons md-15">close</i></span>
+                    </div>
+            </header>
+            <main class="mdl-layout__content">
+            <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--8-col"> 
+                                    <!-- Title --> 
+                                    <span class="heading-h1">Select Location</span> </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                                    <!-- Navigation --> 
+                                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSARSRR</span></div>
+                    </div>
+            </section>
+            
+            <section class="table-data-content-container">
+                    <div class="table-data-wrapper">
+                            <div class="table-data-maincontainer">
+                                    <div class="table-container table-container-search">
+                                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                                                    <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Filter by: Co</span></div>
+                                                    <div class="mdl-cell mdl-cell--2-col">
+                                                            <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                                                    <input type="text"  id="number1" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                                                                    
+                                                            </div>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title">Loc</span> </div>
+                                                    <div class="mdl-cell mdl-cell--2-col">
+                                                            <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                                                    <input type="text"  id="number2" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                                                                    
+                                                            </div>
+                                                    </div>
+                                                    
+                                                    <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Dist</span> </div>
+                                                    <div class="mdl-cell mdl-cell--2-col">
+                                                            <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                                                    <input type="text"  id="number3" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                                                                    
+                                                            </div>
+                                                    </div>
+                                                    
+                                                    
+    
+    
+                                                    <div class="mdl-cell mdl-cell--1-col pull-right button-container">
+                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</button>
+                                                    </div>
+    
+                                                    
+                                            </div>
+                                    </div>
+                                    
+                            </div>
+                    </div>
+            </section>
+            
+            <section class="table-data-content-container spacer-container-bottom">
+                    <div class="table-data-wrapper">
+                            <div class="table-data-maincontainer">
+                                    <div class="table-container" style="overflow: auto;">
+                                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp"  id="selectLocation">
+                                                    <thead>
+                                                            <tr>
+                                                                    <th>Co</th>
+                                                                    <th>Loc</th>
+                                                                    <th>Description</th>
+                                                                    <th>Dist</th>
+                                                            </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            
+                                                                                                            
+                                                    </tbody>
+                                            </table>
+                                    </div>
+                                    <div class="button-container">
+                                            <div class="content-grid mdl-grid">
+                                                    
+                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
+                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
+                                                    </div>
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </section>
+            
+            </main>
+    </div>
+    	<!-- Modified HTML code ends here -->
         <div id="Div1">
             
       <%--  CO: SEL Location          Select record                                                                          --%>
@@ -410,4 +510,78 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+    <script type="text/javascript">
+		var loc;
+        $(document).ready(function () {
+			
+			 $("[id='number']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val());
+			
+            /* script for table row starts here */
+            var count = 0;
+			
+            $('div#CenPH__lb_SFLRCD>div').each(function () {
+				
+                var divid = $(this);
+				//console.log(divid);
+                var selectId = $(divid.children('select')).attr('id');
+				$('div#CenPH__lb_SFLRCD>div:nth-last-of-type(2)').hide();
+								
+					var tr = "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
+					var spancount = 0;
+					var datamyval = $('div#CenPH__lb_SFLRCD>div>select');
+			  
+					var strtd = "";
+					divid.find('span').map(function (i, e) {
+						strtd = strtd + "<td>" + ($(e).text()) + "</td>";
+					});
+					var strclosetr = "</tr>";
+
+                $("#selectLocation").append(tr + strtd + strclosetr);
+
+            });
+			$('#selectLocation tr[data-selectid="undefined"]').hide();
+			
+            $(".table-data-content-container tbody  tr").attr("class", "");
+            $(".table-data-content-container tbody  tr:visible:odd").addClass("oddrow");
+            $(".table-data-content-container tbody  tr:visible:even").addClass("evenrow");
+            $(".table-data-content-container tbody tr").click(function () {
+                $(this).closest(".table-data-content-container tbody tr").siblings().removeClass("selected-row");
+                $(this).toggleClass("selected-row");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+            
+            $("#selectLocation tr").click(function () {
+                var selectId = $(this).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val("1")
+                console.log(this);
+            });
+			
+			$(".table-container-search .icon-textfield").on('click', function () {
+				$(this).siblings('input:text').closest('.mdl-textfield__input').val(''); 
+
+			});
+        });
+		
+		 $(document).keyup(function(e){
+			  e.which = 13;
+			  $("[id='CenPH__lb_SFLCTL__lb_2ABCD']").val($("[id='number1']").val());
+			  $("[id='CenPH__lb_SFLCTL__lb_2AACD']").val($("[id='number2']").val());
+			  $("[id='CenPH__lb_SFLCTL__lb_2ACCD']").val($("[id='number3']").val());
+			  
+		 });
+		  $("[id='number1']").val($("[id='CenPH__lb_SFLCTL__lb_2ABCD']").val())
+		 $("[id='number2']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val())
+		 $("[id='number3']").val($("[id='CenPH__lb_SFLCTL__lb_2ACCD']").val())
+		 //$( ".close-icon" ).on( "click", function(){ $("input[title='F12 : Exit.']")} );
+        
+</script>
+<style>
+header {
+	display: none !important;
+}
+.modal-dialog-container header {
+	display: flex !important;
+}
+</style>
     </asp:Content>

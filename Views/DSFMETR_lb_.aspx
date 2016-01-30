@@ -103,9 +103,6 @@
 						<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
 						<span class="add-item-title">VIEW PREVIOUS ORDERS</span>--%>
 					</div>
-					<div class="mdl-cell mdl-cell--5-col error-msg-container">
-						<div class="error-message">SKU not found</div>
-					</div>
 				</div>
 			</section>   
 			
@@ -1969,7 +1966,7 @@
 			font-weight: bold;
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 0 !important;
 		}
 		#main-content {
 			width: 100%;

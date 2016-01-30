@@ -70,7 +70,9 @@
                 </div>
             </section>
             <section class="add-item">
-                &nbsp;
+                <div class="mdl-cell mdl-cell--12-col error-msg-container">
+					<div class="error-message"></div>
+				</div>
             </section>
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
@@ -760,7 +762,7 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
                         if ($(wTermSelector + count).attr("value") == "" || ($(wTermSelector + count).attr("value") && $(wTermSelector + count).attr("value").length > 0)) {
-                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" value=' + $(wTermSelector + count).val() + '>';
+                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" value=' + $(wTermSelector + count).val() + '> <i class="material-icons icon-textfield warranty-term">search</i>';
                         } else {
                             termBox = $(wTermSelector + count).html();
                         }
@@ -786,10 +788,19 @@
             generateTable();
 
             //Set input term value to original term text box
-            $('body').on('change keyup', 'input.term-input', function () {
+			$(".warranty-term").on('click',function(){
+				var e =jQuery.Event("keydown");
+				e.which = 13;
+				var keydnIndex= $(this).parents("tr").index();
+				$("[id='CenPH__lb_SFLRCD__lb_RGPTX."+$("[id^='CenPH__lb_SFLRCD__lb_RGPTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
+				
+			});
+            /*$('input.term-input').on('click', function () {
+				 var e =jQuery.Event("keydown");
+				 e.which = 13;
                 var targetInputBox = $(this).data("term");
-                $(targetInputBox).val($(this).val());
-            });
+                $(targetInputBox).val($(this).val()).trigger(e);
+            });*/
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".confirmation-outer-conatiner").show();
@@ -805,5 +816,7 @@
                 $(".confirmation-outer-conatiner").show();
             });
         }); // document ready end
+		
+		$(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
     </script>
 </asp:Content>
