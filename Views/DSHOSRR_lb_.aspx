@@ -546,11 +546,6 @@
                 }
             });
 
-            //$("#salesperson tr").click(function () {
-            //    var selectId = $(this).data('selectid');
-            //    a = selectId.split(".");
-            //    $("#" + a[0] + "\\." + a[1]).val("1");
-            //});
         });
 
     </script>
