@@ -790,7 +790,6 @@
                 var targetInputBox = $(this).data("term");
                 $(targetInputBox).val($(this).val());
             });
-            debugger
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".confirmation-outer-conatiner").show();

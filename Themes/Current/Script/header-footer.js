@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     // Add header section
+    var userName = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html();
     var header = "";
     header += "<header class=\"mdl-layout__header is-casting-shadow\">";
     header += "            <div class=\"mdl-layout__header-row\">";
@@ -12,7 +13,7 @@
     header += "                <!--<i class=\"material-icons md-16\">help<\/i>-->";
     header += "                <i class=\"material-icons md-15 mdl-badge\" data-badge=\"1\">notifications<\/i> <span class=\"black-divider\"><\/span><span class=\"home-icon\"><i class=\"material-icons md-15\">home<\/i><\/span> <span class=\"black-divider\"><\/span>";
     header += "                <span class=\"user-icon\"><\/span>";
-    header += "                <span class=\"username\">sbalaji2<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\" data-upgraded=\",MaterialButton\"><i class=\"material-icons\">arrow_drop_down<\/i> <\/span>";
+    header += "                <span class=\"username\">" + userName + "<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\" data-upgraded=\",MaterialButton\"><i class=\"material-icons\">arrow_drop_down<\/i> <\/span>";
     header += "                <div class=\"mdl-menu__container is-upgraded\"><div class=\"mdl-menu__outline mdl-menu--bottom-right\"><\/div><ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events\" for=\"demo-menu-lower-right\" data-upgraded=\",MaterialMenu,MaterialRipple\">";
     header += "                    <li class=\"mdl-menu__item mdl-js-ripple-effect\" tabindex=\"-1\" data-upgraded=\",MaterialRipple\"><a href=\"..\/Monarch\/!EoJ.aspx\">Logout<\/a><span class=\"mdl-menu__item-ripple-container\"><span class=\"mdl-ripple\"><\/span><\/span><\/li>";
     header += "                <\/ul><\/div>";
@@ -41,8 +42,16 @@
 
     $(footer).insertAfter($("#main-content"));
 
-    //$("#form1").height($('body').height() - $('.copyright').height());
-    //$(window).resize(function () {
-    //    $("#form1").height($('body').height() - $('.copyright').height());
-    //});
+    // Error popup
+    if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
+        var errorMsg = "";
+        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+        }
+        if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+        }
+        $('#modal').html(errorMsg);
+        $('#modal').simplePopup();
+    }
 });

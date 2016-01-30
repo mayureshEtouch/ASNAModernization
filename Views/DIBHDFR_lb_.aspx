@@ -139,7 +139,7 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col-desktop">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByAddress">Search by Address</button>
@@ -556,7 +556,6 @@
                 var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
                 var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                        debugger
                         var divid = $(this);
                         var selectId = $(divid.children('select')).attr('id');
                         var custPhone = $(divid.find('span:eq(0)')).html();
@@ -618,7 +617,6 @@
             jQuery.tableNavigation({
                 "onRowChange": function (output) {
                     if (output) {
-                        debugger
                         var selectId = $(output.row).data('selectid');
                         if (output.r && output.keycode === "40") {
                             _00("PgDn", event);

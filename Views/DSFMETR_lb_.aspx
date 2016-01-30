@@ -385,7 +385,7 @@
                                 </table>
 
                             </div>
-                            <div class="button-container"> 
+                            <div class="button-container nextStep"> 
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col">
                                         <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" value="Cancel Order" id="cancelOrder1" data-attr="cancelOrder" />
@@ -416,6 +416,14 @@
 			
 			 </main>
         <div id="modal" class="simplePopup"></div>
+		<div id="confirmprompt" class="confirmation-outer-conatiner simplePopup"> 
+			<i class="material-icons md-15 md-light">help</i> 
+			<span class="confirmation-text">Do you want to continue</span>
+		  <div class="button-container">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+		  </div>
+		</div>
         <section class="copyright">
             <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
         </section>
@@ -1786,14 +1794,19 @@
 		   
 		  });
 
-        // ASNA Hidden UI Table  index. Used for reference
+		// ASNA Hidden UI Table  index. Used for reference
         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+       
         
         // We added this function over here.
         // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
         $(document).keyup(function(e){
+		 // ASNA Hidden UI Table  index. Used for reference
+        var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             if(e.which== 33 || e.which== 34 ){
+			
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
+				console.log("up" + e.which + $(this).parents("table").attr("id") + " " + tindex );
                     $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
                     $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
                     $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
@@ -1854,10 +1867,20 @@
         else {
             // if Current stateof page is Review /Confirm
             // Hide New Edit UI Table
-            $("#datatableValueInsert, .button-container").hide();
-
-            // Show New Confirm / Review UI Table 
-            $("#datatableValue, .showConfirm").show();
+            $("#datatableValueInsert, .nextStep").hide();
+			$('#confirmprompt').simplePopup();
+			
+			var yesbutton = $("#yes");
+            var nobutton = $("#no");
+			
+			yesbutton.click(function () {
+                   
+                   $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
+				   // Show New Confirm / Review UI Table 
+					$("#datatableValue, .showConfirm").show();
+                   $('#confirmprompt').hide();
+               });
+            
             
             // update data from ASNA Hidden UI Table to Confirm/ Review UI Table
 			
@@ -1883,7 +1906,7 @@
 			
 			$(document).keyup(function(e){
                     if( e.which== 33){
-                        $("#datatableValueInsert, .button-container").show();
+                        $("#datatableValueInsert, .nextStep").show();
                         $("#datatableValue, .showConfirm").hide();
                         var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
                         $("#datatableValueInsert tbody").find("tr").each(function(i){

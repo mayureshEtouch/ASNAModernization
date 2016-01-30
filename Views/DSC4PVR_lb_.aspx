@@ -428,17 +428,17 @@
             //On page load reset all search fields
             $("#name,#number1,#number2,#number3,#email,#CenPH__lb_RCDDTL1__lb_1ALTX,#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_DB5NA").val('');
             //Check for errors
-            if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
-                var errorMsg = "";
-                if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
-                    errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
-                }
-                if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
-                    errorMsg += $("#MsgPH_DdsMessagePanel1").text();
-                }
-                $('#modal').html(errorMsg);
-                $('#modal').simplePopup();
-            }
+            //if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            //    var errorMsg = "";
+            //    if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            //        errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+            //    }
+            //    if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            //        errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+            //    }
+            //    $('#modal').html(errorMsg);
+            //    $('#modal').simplePopup();
+            //}
             $(window).resize(function () {
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
