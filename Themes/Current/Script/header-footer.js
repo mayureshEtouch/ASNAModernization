@@ -44,6 +44,7 @@
 
     // Error popup
     if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
+        debugger
         var errorMsg = "";
         if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";

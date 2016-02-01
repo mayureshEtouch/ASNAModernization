@@ -1,4 +1,4 @@
-﻿function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn) {
+﻿function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId) {
     $("body").css({ "background-color": "#FFFFFF" });
     debugger
     $('body').on('click', '#' + tableId  + ' tbody tr', function () {
@@ -34,6 +34,11 @@
                 var strclosetr = "</tr>";
 
                 $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
+                if (direction === "top-to-bottom") {
+                    $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
+                } else {
+                    $("#" + tableId + " tbody tr:last").css("background-color", "#f1f1f1");
+                }
             }
         });
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
@@ -63,7 +68,7 @@
     $('body').on('dblclick', '#' + tableId  + ' tbody tr', function () {
         selectCusotmer(this, "1");
     });
-    $("#select-customer").click(function () {
+    $("#" + selectRowId).click(function () {
         var row = $("#" + tableId + " tbody tr.selected");
         selectCusotmer(row, "1");
     });
@@ -71,6 +76,7 @@
     $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
     jQuery.tableNavigation({
         "onRowChange": function (output) {
+            debugger
             if (output) {
                 var selectId = $(output.row).data('selectid');
                 if (output.r && output.keycode === "40") {

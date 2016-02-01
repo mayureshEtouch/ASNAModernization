@@ -632,7 +632,7 @@
             $("#number").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_2AXTX").val($("#number").val());
             });
-            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT"); // Table ID, Div ID to copy records from and ignore span
+            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "submit-button"); // Table ID, Div ID to copy records from and ignore span
         });
 
     </script>

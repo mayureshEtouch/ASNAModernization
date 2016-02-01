@@ -214,9 +214,7 @@
 				</div>
 			</section>
         </main>
-        <section class="copyright">
-            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
-        </section>
+        <div id="modal" class="simplePopup"></div>
     </div>
 	
         <div id="Div1">
