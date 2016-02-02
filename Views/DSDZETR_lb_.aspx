@@ -1178,16 +1178,8 @@
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
             $("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
             $("#requestdate").on('keyup change', function () {
-                debugger
                 var date = $("#requestdate").val().split("/");
-                if (date[0].split("0").length > 1) {
-                    date[0] = date[0].split("0")[1];
-                }
-                if (date[1].split("0").length > 1) {
-                    date[1] = date[1].split("0")[1];
-                }
-                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[1] + date[0] + date[2]);
-
+                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[1] + date[0] + date[2].substr(2, 3));
             });
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
