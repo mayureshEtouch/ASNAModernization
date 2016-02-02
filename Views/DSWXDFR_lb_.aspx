@@ -88,15 +88,15 @@
             <section class="add-item">
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col pull-right">
-                            <div class="icon-container icon-disable"><span class="icon-txt">Display inventory select</span><i class="material-icons md-15 md-light">storage</i><span class="icon-txt">Sub/ Rpl Models</span><i class="material-icons md-15 md-light">sync</i></div>
+                        <div class="mdl-cell mdl-cell--12-col pull-right" style="margin-bottom:0">
+                            <div class="icon-container icon-disable" style="margin-bottom:0"><span class="icon-txt">Display inventory select</span><i class="material-icons md-15 md-light">storage</i><span class="icon-txt">Sub/ Rpl Models</span><i class="material-icons md-15 md-light">sync</i></div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="table-data-content-container spacer-container-bottom">
-                <div class="table-data-wrapper">
+                <div class="table-data-wrapper" style="margin-top:0">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
@@ -632,7 +632,7 @@
             $("#number").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_2AXTX").val($("#number").val());
             });
-            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "submit-button"); // Table ID, Div ID to copy records from and ignore span
+            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT"); // Table ID, Div ID to copy records from and ignore span
         });
 
     </script>

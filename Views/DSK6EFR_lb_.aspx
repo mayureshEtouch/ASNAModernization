@@ -58,11 +58,15 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <span class="summary-title">Order #:</span>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Order number:</span>
                             <span class="summary-txt" id="order-number"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Version number:</span>
+                            <span class="summary-txt" id="version-number"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Customer name:</span>
                             <span class="summary-txt" id="customer-name"></span>
                         </div>
@@ -74,7 +78,7 @@
 					<div class="error-message"></div>
 				</div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom">
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top:18px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
@@ -747,7 +751,8 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Set customer name
             $("#customer-name").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
-            $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html() + "&nbsp;&nbsp;/" + $("#CenPH__lb_SFLCTL__lb_PEXNB").html());
+            $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html());
+			$("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html());
             //Generate warranty term table
             var generateTable = function () {
                 debugger
@@ -816,7 +821,6 @@
                 $(".confirmation-outer-conatiner").show();
             });
         }); // document ready end
-		
 		$(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
     </script>
 </asp:Content>
