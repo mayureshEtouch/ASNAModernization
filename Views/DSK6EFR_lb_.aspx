@@ -100,10 +100,10 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -739,7 +739,8 @@
         #main-content {
             width: 100%;
         }
-
+		.mdl-data-table td .icon-textfield{margin-left: 155px;}
+		.mdl-data-table td .term-input{width:170px;}
         .confirmation-outer-conatiner {
             z-index: 1;
         }
@@ -767,7 +768,7 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
                         if ($(wTermSelector + count).attr("value") == "" || ($(wTermSelector + count).attr("value") && $(wTermSelector + count).attr("value").length > 0)) {
-                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" value=' + $(wTermSelector + count).val() + '> <i class="material-icons icon-textfield warranty-term">search</i>';
+                            termBox = '<i class="material-icons icon-textfield warranty-term">search</i><input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" value=' + $(wTermSelector + count).val() + '>';
                         } else {
                             termBox = $(wTermSelector + count).html();
                         }

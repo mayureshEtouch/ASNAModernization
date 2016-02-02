@@ -1320,11 +1320,10 @@
                 
 		});
 		
-		$(".icon-textfield").on('click',function(){
+		$(".icon-textfield").on('click',function(){	
 			var e =jQuery.Event("keydown");
 			e.which = 115;
 			var keydnIndex= $(this).parents("tr").index();
-			
 			console.log(keydnIndex);
 			$("[id='CenPH__lb_SFLRCD__lb_RNICD."+$("[id^='CenPH__lb_SFLRCD__lb_RNICD']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
 		});
@@ -1431,7 +1430,7 @@
 		
 		</script>
 		<style>
-		#fkeys, #Div1{display:none;}
+		#fkeys,#diagnostics, #Div1{display:none;}
 		#main-content{width:100%}
 		.add-item .content-grid .mdl-cell {
 			margin-bottom: 5px;
