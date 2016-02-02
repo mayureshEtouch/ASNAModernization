@@ -1103,12 +1103,12 @@
         }
     </style>
     <script type="text/javascript">
-		 function setCookie(cname, cvalue, exdays) {
-			var d = new Date();
-			d.setTime(d.getTime() + (exdays*24*60*60*1000));
-			var expires = "expires="+d.toUTCString();
-			document.cookie = cname + "=" + cvalue + "; " + expires;
-		}
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
         $(document).ready(function () {
             //Hide all read only mode elements
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
@@ -1179,11 +1179,9 @@
             $("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
-                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2]);
-                
+                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2,3));
             });
             var setReadOnlyView = function () {
-                debugger
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
                 $("#CenPH_PB").html($("#CenPH__lb_SFLCTL__lb_PBDTX").html()); // Read only
                 $("#CenPH_CE").html($("#CenPH__lb_SFLCTL__lb_CETTX").html()); // Read only
@@ -1212,15 +1210,15 @@
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").show();
                 $('textarea').removeAttr('readonly');
             });
-			
-			// To show Billing & Shipping address in Order Detail page
-			 if(typeof(Storage) !== "undefined") {
-                        sessionStorage.setItem("shipAddress",$("[id$='lb_SFLCTL__lb_CETTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEVTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_CCXST']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEWTX']").text());
-                        sessionStorage.setItem("billAddress",$("[id$='lb_SFLCTL__lb_PANTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAQTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_PADST']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAPTX']").text());
+
+            // To show Billing & Shipping address in Order Detail page
+            if (typeof (Storage) !== "undefined") {
+                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
+                sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());
             }
-            else{
-               setCookie("shipAddress",$("[id$='lb_SFLCTL__lb_CETTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEVTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_CCXST']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEWTX']").text(),360);
-               setCookie("billAddress",$("[id$='lb_SFLCTL__lb_PANTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAQTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_PADST']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAPTX']").text(),360);
+            else {
+                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
+                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
         });
     </script>
