@@ -100,10 +100,10 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -739,7 +739,8 @@
         #main-content {
             width: 100%;
         }
-
+		.mdl-data-table td .icon-textfield{margin-left: 155px;}
+		.mdl-data-table td .term-input{width:170px;}
         .confirmation-outer-conatiner {
             z-index: 1;
         }
