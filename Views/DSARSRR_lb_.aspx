@@ -46,46 +46,34 @@
             </section>
             
             <section class="table-data-content-container">
-                    <div class="table-data-wrapper">
-                            <div class="table-data-maincontainer">
-                                    <div class="table-container table-container-search">
-                                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                                    <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Filter by: Co</span></div>
-                                                    <div class="mdl-cell mdl-cell--2-col">
-                                                            <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                                                    <input type="text"  id="number1" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-                                                                    
-                                                            </div>
-                                                    </div>
-                                                    <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title">Loc</span> </div>
-                                                    <div class="mdl-cell mdl-cell--2-col">
-                                                            <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                                                    <input type="text"  id="number2" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-                                                                    
-                                                            </div>
-                                                    </div>
-                                                    
-                                                    <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Dist</span> </div>
-                                                    <div class="mdl-cell mdl-cell--2-col">
-                                                            <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                                                    <input type="text"  id="number3" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-                                                                    
-                                                            </div>
-                                                    </div>
-                                                    
-                                                    
-    
-    
-                                                    <div class="mdl-cell mdl-cell--1-col pull-right button-container">
-                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</button>
-                                                    </div>
-    
-                                                    
-                                            </div>
-                                    </div>
-                                    
-                            </div>
-                    </div>
+				<div class="table-data-wrapper">
+					<div class="table-data-maincontainer">
+						<div class="search-field-container">
+								<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Filter by: Co</span></div>
+								<div class="mdl-cell mdl-cell--2-col">
+									<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+										<input type="text"  id="number1" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title">Loc</span> </div>
+								<div class="mdl-cell mdl-cell--2-col">
+									<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+										<input type="text"  id="number2" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Dist</span> </div>
+								<div class="mdl-cell mdl-cell--2-col">
+									<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+										<input type="text"  id="number3" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col pull-right button-container">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
             </section>
             
             <section class="table-data-content-container spacer-container-bottom">
@@ -111,7 +99,7 @@
                                             <div class="content-grid mdl-grid">
                                                     
                                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
+                                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
                                                     </div>
                                             </div>
                                     </div>
@@ -577,7 +565,7 @@
         
 </script>
 <style>
-header {
+header,#Div1 {
 	display: none !important;
 }
 .modal-dialog-container header {
