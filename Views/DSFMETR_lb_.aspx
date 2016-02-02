@@ -1820,7 +1820,7 @@
         });
         
         // Check if Current state of page is Review or Edit
-        if($(".DdsCharField").length > 1) {
+        if($(".DdsCharField").length > 1 && $("[id*='lb_SFLRCD__lb_2AIST.']").length > 1) {
             // if Current state of page is Edit
             // Hide New Confirm UI Table
             $("#datatableValue, .showConfirm").hide();
@@ -1957,7 +1957,7 @@
 		
     </script>   
     <style>
-        #span-header, #screen_title, #fkeys {
+        #span-header, #screen_title, #fkeys, #div1, #diagnostics {
             display: none;
         }
 		.icon-textfield {
@@ -1971,8 +1971,5 @@
 		#main-content {
 			width: 100%;
 		}
-		.table-container tr td:nth-child(2) {
-			
-		} 
     </style>
     </asp:Content>
