@@ -468,7 +468,6 @@
             });
             /* script for table row starts here */
             var generateTable = function (direction) {
-                debugger
                 $("#salesperson tbody").empty();
                 var count = 1;
                 var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
