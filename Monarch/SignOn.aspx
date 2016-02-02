@@ -14,17 +14,6 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="login-container">
-        <%--<header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title logo-icon"></span>
-                <!--<span class="mdl-layout-heading">StoreFront</span>-->
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-
-            </div>
-        </header>--%>
-
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -182,9 +171,6 @@
         </main>
     </div>
     <div id="modal" class="simplePopup"></div>
-    <%--<section class="copyright">
-        <div class="copyright-container">Copyright © 2015 Conn's. All rights reserved.</div>
-    </section>--%>
 </asp:Content>
 
 <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">
@@ -210,72 +196,64 @@
             color: #ff0000;
             font-size: 11px;
             width: calc(100% - 16px);
-            /*float: left;*/
         }
 
         .mdl-textfield__input_error_msg {
             border: solid 1px #ff0000;
         }
-     
-        #CenPH_RSignon_User-error,#CenPH_RSignon_Password-error {
+
+        #CenPH_RSignon_User-error, #CenPH_RSignon_Password-error {
             display: block;
             position: absolute;
-            /*margin-top: 25px;*/
             margin-left: 106px;
         }
-       #CenPH_RSignon_User-error{
-           margin-top: 20px;
-       }
-       #CenPH_RSignon_Password-error{
-           margin-top: 40px;
-       }
+
+        #CenPH_RSignon_User-error {
+            margin-top: 20px;
+        }
+
+        #CenPH_RSignon_Password-error {
+            margin-top: 40px;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-           
-
+            //Set login params
             $("#CenPH_RSignon_System").val('<%= System.Configuration.ConfigurationManager.AppSettings["system"].ToString() %>');
-
             $("#CenPH_RSignon_Port").val('<%= System.Configuration.ConfigurationManager.AppSettings["port"].ToString() %>');
-
-
             $("#CenPH_RSignon_Program").val('<%= System.Configuration.ConfigurationManager.AppSettings["program"].ToString() %>');
-
             $("#CenPH_RSignon_Library").val('<%= System.Configuration.ConfigurationManager.AppSettings["current_library"].ToString() %>');
-
+            //Hide all input boxes except username and password
             $("#CenPH_RSignon_System, #CenPH_RSignon_Port, #CenPH_RSignon_Program, #CenPH_RSignon_Menu, #CenPH_RSignon_Library").hide();
             $("#CenPH_RSignon_User").focus();
-
-
+            //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant39]").text());
             $("[name='time']").text($("[id$=CenPH_DdsConstant40]").text());
-
             $("[name='date']").attr("style", "margin-left:5px;");
             $("[name='time']").attr("style", "margin-left:5px;");
-
+            //Set styles for alignment
             $("#CenPH_RSignon_User").css({ "position": "relative", "left": "72px", "top": "20px" });
             $("#CenPH_RSignon_Password").css({ "position": "relative", "left": "40px", "top": "40px" });
             $("#CenPH_DdsConstant1").css({ "position": "relative", "left": "0px", "top": "20px" });
             $("#CenPH_DdsConstant2").css({ "position": "relative", "left": "0px", "top": "40px" });
-
+            //Display error popup for backend messages
             if ($("#CenPH_RSignon_Message").text().length > 1) {
                 $('#modal').html($("#CenPH_RSignon_Message").text());
                 $('#modal').simplePopup();
             }
+            //Set dynamic height for the form conatiner
             $("#form1").height($('body').height() - $('.copyright').height());
             $(window).resize(function () {
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
-            //Input Validation
+            //Input Validation for username and password
             $("#CenPH_RSignon_User").attr("required", true);
             $("#CenPH_RSignon_Password").attr("required", true);
-
             $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
             $('#CenPH_RSignon_Password').attr('data-msg-required', 'Password is required');
             $("#CenPH_RSignon_User,#CenPH_RSignon_Password").on('keyup blur', function () {
                 validateInput(this);
             });
-                      
         });
     </script>
 </asp:Content>
