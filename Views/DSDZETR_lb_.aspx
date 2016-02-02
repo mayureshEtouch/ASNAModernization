@@ -187,21 +187,22 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('PgDn', event);">Next</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('Enter', event);">Next</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="modal" class="simplePopup"></div>
+                
+            </section>
+        </main>
+		<div id="modal" class="simplePopup"></div>
                 <div id="confirmprompt" class="confirmation-outer-conatiner" style="display: none">
                     <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
                     <div class="button-container">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
                     </div>
                 </div>
-            </section>
-        </main>
     </div>
     <div id="Div1">
 
@@ -1200,11 +1201,11 @@
             } else {
                 $(".confirmation-outer-conatiner").hide();
             }
-            $("#yes").click(function () {
+            $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
             });
-            $("#no").click(function () {
+            $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").show();

@@ -1771,15 +1771,27 @@
             $(window).trigger(e);
             ASNA.Response.PushKey(document.forms[0], "PgDn", e);
         });
-		$(".model-number").on('click',function(){
+		/*$(".model-number").on('click',function(){
 			var e =jQuery.Event("keydown");
+			e.keyCode = 13;
 			e.which = 13;
 			var keydnIndex= $(this).parents("tr").index();
 			console.log(keydnIndex);
-			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
+			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").trigger(e);
+			$(this).prev().trigger("Submit");
+		});*/
+		$('body').on('click','.model-number', function(e) {
+		   var e =jQuery.Event("keydown");
+		   e.keyCode = 13;
+			e.which = 13;
+            e.ctrlKey = false;
+            e.altKey = false;
+			var keydnIndex= $(this).parents("tr").index();
+			console.log(e);
+			//$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
+			$(this).prev().trigger("Enter");
 			
 		});
-		
 		// From Location modal
 		$(".from-loc").on('click',function(){
 		   var e =jQuery.Event("keydown");
@@ -1969,6 +1981,11 @@
 		}
 		#main-content {
 			width: 100%;
+		}
+		.del-status {
+			width: 45px;
+			height: 18px !important;
+			white-space: nowrap;
 		}
     </style>
     </asp:Content>
