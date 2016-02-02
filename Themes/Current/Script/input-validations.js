@@ -1,18 +1,14 @@
-﻿$(document).ready(function () {
-
-});
-
-function validateInput(ele, buttonsToDisable, errorMessagePlaceholder) {
+﻿function validateInput(ele, buttonsToDisable, errorMessagePlaceholder) {
     var element = $(ele);
     if (!element.valid()) {
-        element.addClass("mdl-textfield__input_error_msg");
+        element.css({ "border": "solid 1px #ff0000" });
         if (buttonsToDisable && buttonsToDisable.length > 0) {
             for (var i = 0; i < buttonsToDisable.length; i++) {
                 $("#" + buttonsToDisable[i]).attr("disabled", "true");
             }
         }
     } else {
-        element.removeClass("mdl-textfield__input_error_msg");
+        element.css({ "border": "solid 1px #e5e5e5" });
         $("#" + errorMessagePlaceholder).hide();
         if (buttonsToDisable && buttonsToDisable.length > 0) {
             for (var i = 0; i < buttonsToDisable.length; i++) {

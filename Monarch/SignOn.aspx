@@ -205,9 +205,34 @@
         #main-content {
             width: 100%;
         }
+
+        .error {
+            color: #ff0000;
+            font-size: 11px;
+            width: calc(100% - 16px);
+            /*float: left;*/
+        }
+
+        .mdl-textfield__input_error_msg {
+            border: solid 1px #ff0000;
+        }
+     
+        #CenPH_RSignon_User-error,#CenPH_RSignon_Password-error {
+            display: block;
+            position: absolute;
+            /*margin-top: 25px;*/
+            margin-left: 106px;
+        }
+       #CenPH_RSignon_User-error{
+           margin-top: 20px;
+       }
+       #CenPH_RSignon_Password-error{
+           margin-top: 40px;
+       }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
+           
 
             $("#CenPH_RSignon_System").val('<%= System.Configuration.ConfigurationManager.AppSettings["system"].ToString() %>');
 
@@ -215,8 +240,8 @@
 
 
             $("#CenPH_RSignon_Program").val('<%= System.Configuration.ConfigurationManager.AppSettings["program"].ToString() %>');
-			
-			$("#CenPH_RSignon_Library").val('<%= System.Configuration.ConfigurationManager.AppSettings["current_library"].ToString() %>');
+
+            $("#CenPH_RSignon_Library").val('<%= System.Configuration.ConfigurationManager.AppSettings["current_library"].ToString() %>');
 
             $("#CenPH_RSignon_System, #CenPH_RSignon_Port, #CenPH_RSignon_Program, #CenPH_RSignon_Menu, #CenPH_RSignon_Library").hide();
             $("#CenPH_RSignon_User").focus();
@@ -241,6 +266,16 @@
             $(window).resize(function () {
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
+            //Input Validation
+            $("#CenPH_RSignon_User").attr("required", true);
+            $("#CenPH_RSignon_Password").attr("required", true);
+
+            $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
+            $('#CenPH_RSignon_Password').attr('data-msg-required', 'Password is required');
+            $("#CenPH_RSignon_User,#CenPH_RSignon_Password").on('keyup blur', function () {
+                validateInput(this);
+            });
+                      
         });
     </script>
 </asp:Content>
