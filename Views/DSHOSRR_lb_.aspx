@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom">
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
@@ -53,8 +53,8 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
 
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent DdsKey" id="select-customer" name="ctl00$FKeyPH$DSHOSRR_lb_Control_Enter" onclick="_00('Enter',event);" value="SUBMIT" data-attr="Submit">Submit</button>
+                                <div class="mdl-cell mdl-cell--12-col pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent DdsKey" id="select-customer" name="ctl00$FKeyPH$DSHOSRR_lb_Control_Enter" onclick="_00('Enter',event);" value="SUBMIT" data-attr="Submit" style="width: auto;">Submit</span>
                                 </div>
                             </div>
                         </div>
