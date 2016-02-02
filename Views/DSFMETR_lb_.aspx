@@ -389,7 +389,7 @@
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col pull-right">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</span>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
                                 </div>                               
                                 
                             </div>
@@ -416,8 +416,8 @@
 			<i class="material-icons md-15 md-light">help</i> 
 			<span class="confirmation-text">Do you want to continue</span>
 		  <div class="button-container">
-			<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
-			<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
 		  </div>
 		</div>
         <section class="copyright">
@@ -1956,7 +1956,7 @@
 		
     </script>   
     <style>
-        #span-header, #screen_title, #fkeys, #div1, #diagnostics {
+        #span-header, #screen_title, #fkeys, #Div1, #diagnostics {
             display: none;
         }
 		.icon-textfield {
