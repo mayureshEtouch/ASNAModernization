@@ -39,10 +39,10 @@
             <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="white-to-gray-bullet"></li>
+                        <li class="progress-bar-step2 gray-bg step-width"><span class="step-title-selected">Step 2</span> <span class="step-txt-selected">Enter Sales Order</span> </li>
                         <li class="progress-bar-divider-first"></li>
-                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                        <li class="progress-bar-divider"></li>
                         <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
                         <li class="progress-bar-divider"></li>
                         <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
@@ -68,7 +68,7 @@
                             <span id="CenPH_PALTX" class="summary-txt"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Billing address:</span>
+                            <span class="summary-title">Billing address</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="CenPH_PANTX"></span><span id="CenPH_PAQTX"></span>
                                 <br />
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-title">Phone details</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="Hphone">HOME:</span>
                                 <span id="CenPH_CHPH_lb_"></span>
@@ -177,23 +177,17 @@
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
                             <fieldset>
                                 <legend id="legen">Special Instruction:</legend>
-                                <textarea name="CenPH_2AQNA" cols="40" rows="5" id="CenPH_2AQNA" style="display: none;"></textarea>
-                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_0" class="sp-inst" tabindex="-1" style="width: 99%;margin-top: 5px;height: 15px;" maxlength="40" data-splid="0">
-                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_1" class="sp-inst" tabindex="-1" style="width: 99%;margin-top: 5px;height: 15px;" maxlength="40" data-splid="1">
-                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_2" class="sp-inst" tabindex="-1" style="width: 99%;margin-top: 5px;height: 15px;" maxlength="40" data-splid="2">
-                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_3" class="sp-inst" tabindex="-1" style="width: 99%;margin-top: 5px;height: 15px;" maxlength="40" data-splid="3">
-                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_4" class="sp-inst" tabindex="-1" style="width: 99%;margin-top: 5px;height: 15px;" maxlength="40" data-splid="4">
-                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_5" class="sp-inst" tabindex="-1" style="width: 99%;margin-top: 5px;height: 15px;" maxlength="40" data-splid="5">
+                                <textarea name="CenPH_2AQNA" cols="40" rows="5" id="CenPH_2AQNA"></textarea>
                             </fieldset>
                         </div>
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</button>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('PgDn', event);">Next</button>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('PgDn', event);">Next</span>
                             </div>
                         </div>
                     </div>
@@ -202,8 +196,8 @@
                 <div id="confirmprompt" class="confirmation-outer-conatiner" style="display: none">
                     <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
                     <div class="button-container">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
                     </div>
                 </div>
             </section>
@@ -1109,6 +1103,12 @@
         }
     </style>
     <script type="text/javascript">
+		 function setCookie(cname, cvalue, exdays) {
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			var expires = "expires="+d.toUTCString();
+			document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
         $(document).ready(function () {
             //Hide all read only mode elements
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
@@ -1179,9 +1179,11 @@
             $("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
-                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[1] + date[0] + date[2].substr(2, 3));
+                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2]);
+                
             });
             var setReadOnlyView = function () {
+                debugger
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
                 $("#CenPH_PB").html($("#CenPH__lb_SFLCTL__lb_PBDTX").html()); // Read only
                 $("#CenPH_CE").html($("#CenPH__lb_SFLCTL__lb_CETTX").html()); // Read only
@@ -1210,13 +1212,16 @@
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").show();
                 $('textarea').removeAttr('readonly');
             });
-            //Special instructions section
-            //<input id="CenPH__lb_SFLRCD__lb_2AQNA_0" class="sp-inst" tabindex="-1" style="width: 99%;" maxlength="40" data-splid="0">
-            $(".sp-inst").on("keyup change", function () {
-                debugger
-                var inpId = $(this).data("splid");
-                $("#CenPH__lb_SFLRCD__lb_2AQNA\\." + inpId).val($("#CenPH__lb_SFLRCD__lb_2AQNA_" + inpId));
-            });
+			
+			// To show Billing & Shipping address in Order Detail page
+			 if(typeof(Storage) !== "undefined") {
+                        sessionStorage.setItem("shipAddress",$("[id$='lb_SFLCTL__lb_CETTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEVTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_CCXST']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEWTX']").text());
+                        sessionStorage.setItem("billAddress",$("[id$='lb_SFLCTL__lb_PANTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAQTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_PADST']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAPTX']").text());
+            }
+            else{
+               setCookie("shipAddress",$("[id$='lb_SFLCTL__lb_CETTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEVTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_CCXST']").text() +", "+ $("[id$='lb_SFLCTL__lb_CEWTX']").text(),360);
+               setCookie("billAddress",$("[id$='lb_SFLCTL__lb_PANTX']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAQTX']").text() +", <br />"+ $("[id$='lb_SFLCTL__lb_PADST']").text() +", "+ $("[id$='lb_SFLCTL__lb_PAPTX']").text(),360);
+            }
         });
     </script>
 </asp:Content>

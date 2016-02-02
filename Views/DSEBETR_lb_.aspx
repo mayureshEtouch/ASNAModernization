@@ -199,14 +199,61 @@
 									</tr>
 								</tbody>
 							</table>
+							
+							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="orderPaymentValue">
+								<thead>
+									<tr>
+										<th width="10%">Pmt Mth</th>
+										<th width="20%">Amount</th>
+										<th width="40%">Reference</th>
+										<th>Approval Code</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+									<tr>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+									<tr>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+									<tr>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+										<td><span></span></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-						<div class="button-container">
+						<div class="button-container nextStep">
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-									<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</button>
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
 								</div>
 								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-									<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</button>
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</span>
+								</div>
+							</div>
+						</div>
+						<div class="button-container showConfirm">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
+								</div>
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="confirm">Confirm</span>
 								</div>
 							</div>
 						</div>
@@ -214,7 +261,18 @@
 				</div>
 			</section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+		<div id="modal" class="simplePopup"></div>
+		<div id="confirmprompt" class="confirmation-outer-conatiner simplePopup"> 
+			<i class="material-icons md-15 md-light">help</i> 
+			<span class="confirmation-text">Do you want to continue</span>
+			<div class="button-container">
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+			</div>
+		</div>
+        <section class="copyright">
+            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+        </section>
     </div>
 	
         <div id="Div1">
@@ -1230,46 +1288,14 @@
 
         </div>
 		<script>
-		var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
-		$("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-		$("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
-		$("#requestdate, .icon-calender").on('keyup change', function () {
-			var date = $("#requestdate").val().split("/");
-			$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2]);
-                
-		});
-		$(".icon-textfield").on('click',function(){
-			//alert('Hi')
-			var e =jQuery.Event("keydown");
-			e.which = 115;
-			var keydnIndex= $(this).parents("tr").index();
-			console.log(keydnIndex + e.keyCode);
-			$("[id='CenPH__lb_SFLRCD__lb_RNICD."+$("[id^='CenPH__lb_SFLRCD__lb_RNICD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);	
-		});
+		// Next Page
+        $( "#nextPage" ).on( "click", function(){ $("input[accesskey='n']").click();} );
+        
+        // Exit Page
+        $( "#exitPage" ).on( "click", function(){ $("input[title='F12 : Exit.']").click();});
 		
-		$(document).keyup(function(e){
-			var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
-			if(e.which== 33 || e.which== 34){
-				$("#orderPayment tbody").find("tr").each(function(i){
-					$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
-					$(this).find("td:eq(1) input").val($("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val());
-					$(this).find("td:eq(2) input").val($("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val());
-					$(this).find("td:eq(3) input").val($("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val());	
-				});
-			}
-		});
-		
-		$("input").blur(function(){
-			$("#orderPayment tbody").find("tr").each(function(i){
-				console.log("input" + tindex)
-				//$("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val($(this).find("td:eq(0) input").val());
-				$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
-                $("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val($(this).find("td:eq(1) input").val());
-                $("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val($(this).find("td:eq(2) input").val()); 
-                $("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val($(this).find("td:eq(3) input").val());                    
-			}); 
-        });
-		
+		//$(".error-message").text($("#MsgPH_DdsMessagePanel1").text());
+        $(".error-message").text($("[id*='lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
 		
 		$("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html());
 		$("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html());
@@ -1285,18 +1311,91 @@
 		$("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text());
 		//$(".mdl-data-table td input").after('<i class="material-icons icon-textfield" data-badge="1">search</i>');
 		
-		// Next Page
-        $( "#nextPage" ).on( "click", function(){ $("input[accesskey='n']").click();} );
-        
-        // Exit Page
-        $( "#exitPage" ).on( "click", function(){ $("input[title='F12 : Exit.']").click();});
+		var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
+		$("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
+		$("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
+		$("#requestdate, .icon-calender").on('keyup change', function () {
+			var date = $("#requestdate").val().split("/");
+			$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2]);
+                
+		});
 		
-		//$(".error-message").text($("#MsgPH_DdsMessagePanel1").text());
-        $(".error-message").text($("[id*='lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
+		$(".icon-textfield").on('click',function(){
+			var e =jQuery.Event("keydown");
+			e.which = 115;
+			var keydnIndex= $(this).parents("tr").index();
+			
+			console.log(keydnIndex);
+			$("[id='CenPH__lb_SFLRCD__lb_RNICD."+$("[id^='CenPH__lb_SFLRCD__lb_RNICD']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
+		});
+		
+		$(document).keyup(function(e){
+			var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
+			console.log(tindex);
+			if(e.which== 33 || e.which== 34){
+				$("#orderPayment tbody").find("tr").each(function(i){
+					$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
+					$(this).find("td:eq(1) input").val($("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val());
+					$(this).find("td:eq(2) input").val($("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val());
+					$(this).find("td:eq(3) input").val($("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val());	
+				});
+			}
+		});
+		
+		// Check if Current state of page is Review or Edit
+		if($(".DdsCharField").length > 1) {
+			// if Current state of page is Edit
+            // Hide New Confirm UI Table
+            $("#orderPaymentValue, .showConfirm").hide();
+            // Show New Edit UI Table
+            $("#orderPayment").show();
+			
+			$("input").on('blur',function(){
+				$("#orderPayment tbody").find("tr").each(function(i){
+					console.log("input" + tindex + i);
+					$("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val($(this).find("td:eq(0) input").val());
+					//$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
+					$("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val($(this).find("td:eq(1) input").val());
+					$("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val($(this).find("td:eq(2) input").val()); 
+					$("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val($(this).find("td:eq(3) input").val());                    
+				}); 
+			});
+			$("#orderPayment tbody").find("tr").each(function(i){
+				$(this).find("td:eq(0) input").val($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").val());
+				$(this).find("td:eq(1) input").val($("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").val());
+				$(this).find("td:eq(2) input").val($("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").val());
+				$(this).find("td:eq(3) input").val($("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").val());	
+			 });
+		} 
+        else {
+			// if Current stateof page is Review /Confirm
+            // Hide New Edit UI Table
+            $("#orderPayment, .nextStep").hide();
+			$('#confirmprompt').simplePopup();
+			
+			var yesbutton = $("#yes");
+            var nobutton = $("#no");
+			
+			yesbutton.click(function () {
+				$('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
+				// Show New Confirm / Review UI Table 
+				$("#orderPaymentValue, .showConfirm").show();
+				$('#confirmprompt').hide();
+			});
+			
+			$("#orderPaymentValue tbody").find("tr").each(function(i){
+				$(this).find("td:eq(0)").text($("[id^='CenPH__lb_SFLRCD__lb_RNICD."+(i + tindex)+"']").text());
+				$(this).find("td:eq(1)").text($("[id^='CenPH__lb_SFLRCD__lb_2ATVA."+(i + tindex)+"']").text());
+				$(this).find("td:eq(2)").text($("[id^='CenPH__lb_SFLRCD__lb_2A9TX."+(i + tindex)+"']").text());
+				$(this).find("td:eq(3)").text($("[id^='CenPH__lb_SFLRCD__lb_2BATX."+(i + tindex)+"']").text());	
+			 });
+		 
+		}
+		
+		 
+		
 		
 		$(document).ready(function () {
-			
-			
 			var selectOrderPayment = function (row, value) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -1332,7 +1431,7 @@
 		
 		</script>
 		<style>
-		#fkeys{display:none;}
+		#fkeys, #Div1{display:none;}
 		#main-content{width:100%}
 		.add-item .content-grid .mdl-cell {
 			margin-bottom: 5px;

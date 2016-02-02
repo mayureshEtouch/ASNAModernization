@@ -31,7 +31,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Customer Selection Screen</span>
+                        <span class="heading-h1">Enter Order Details</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -386,22 +386,21 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col">
                                         <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" value="Cancel Order" id="cancelOrder1" data-attr="cancelOrder" />
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</button>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col pull-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
-                                    </div>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</span>
                                 </div>                               
                                 
                             </div>
                              <div class="button-container showConfirm">
                              <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancelOrder2">Cancel Order</button>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancelOrder2">Cancel Order</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col pull-right">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="confirm">Confirm</button>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="confirm">Confirm</span>
                                     </div>
                                 </div> 
                                 
@@ -417,8 +416,8 @@
 			<i class="material-icons md-15 md-light">help</i> 
 			<span class="confirmation-text">Do you want to continue</span>
 		  <div class="button-container">
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+			<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+			<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
 		  </div>
 		</div>
         <section class="copyright">
