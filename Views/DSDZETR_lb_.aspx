@@ -1177,7 +1177,7 @@
                 $("#CenPH__lb_SFLCTL__lb_CCMC_lb_").val($("#pcode").val());
             });
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
+            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy' });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2,3));

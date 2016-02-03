@@ -1313,10 +1313,10 @@
 		
 		var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
 		$("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-		$("#requestdate").datepicker({ dateFormat: 'dd/mm/yy' });
+		$("#requestdate").datepicker({ dateFormat: 'mm/dd/yy' });
 		$("#requestdate, .icon-calender").on('keyup change', function () {
 			var date = $("#requestdate").val().split("/");
-			$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2]);
+			$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
                 
 		});
 		
@@ -1395,6 +1395,10 @@
 		
 		
 		$(document).ready(function () {
+		    //Set date and time
+		    $("[name='date']").text($("[id$=CenPH_DdsConstant23]").text());
+		    $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
+
 			var selectOrderPayment = function (row, value) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
