@@ -151,7 +151,6 @@
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
-							<div class="error-message"></div>
 						</div>
                         <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom:-10px;">
                             <div class="icon-container icon-disable"><span class="icon-txt display-customer">Delete</span><i class="material-icons md-15 md-light display-customer">delete</i></div>
@@ -1328,6 +1327,15 @@
 			$("[id='CenPH__lb_SFLRCD__lb_RNICD."+$("[id^='CenPH__lb_SFLRCD__lb_RNICD']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
 		});
 		
+		$(".icon-textfield").siblings('input').on('keydown',function(e){
+			if(e.which == 115){
+			var inpe =jQuery.Event("keydown");
+			inpe.which = 115;
+			var keydnIndex= $(this).parents("tr").index();
+			console.log(keydnIndex);
+			$("[id='CenPH__lb_SFLRCD__lb_RNICD."+$("[id^='CenPH__lb_SFLRCD__lb_RNICD']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(inpe);
+		}});
+		
 		$(document).keyup(function(e){
 			var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
 			console.log(tindex);
@@ -1434,7 +1442,8 @@
 		
 		</script>
 		<style>
-		#fkeys,#diagnostics, #Div1{display:none;}
+		#fkeys,#diagnostics{display:none;}
+		#Div1{height:0px;overflow:hidden}
 		#main-content{width:100%}
 		.add-item .content-grid .mdl-cell {
 			margin-bottom: 5px;
