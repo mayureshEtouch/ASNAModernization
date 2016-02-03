@@ -141,7 +141,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByAddress">Search by Address</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter',event);">Next</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -581,7 +581,7 @@
             });
             $("#customerName tbody tr:even").css("background-color", "#fff");
             $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
-            var selectCusotmer = function (row, value) {
+            var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
                 $("#" + a[0] + "\\." + a[1]).val(value);
@@ -589,8 +589,8 @@
             }
 
             //Select customer on double click
-            $('body').on('dblclick', '#customerName tbody tr', function () {
-                selectCusotmer(this, "1");
+            $('body').on('dblclick', '#customerName tbody tr', function (event) {
+                selectCusotmer(this, "1", event);
             });
 
             // Set first record as default selected
@@ -616,15 +616,19 @@
             });
 
             //Display customer details
-            $(".display-customer").click(function () {
+            $(".display-customer").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the customer");
                 } else {
                     var row = $("#customerName tbody tr.selected");
-                    selectCusotmer(row, "5");
+                    selectCusotmer(row, "5", event);
                 }
             });
-
+            //Next button click handler
+            $("#next").click(function (event) {
+                var row = $("#customerName tbody tr.selected");
+                selectCusotmer(row, "1", event);
+            });
         });
     </script>
 </asp:Content>
