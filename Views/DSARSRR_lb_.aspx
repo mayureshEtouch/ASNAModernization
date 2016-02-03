@@ -23,16 +23,8 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-    		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
-            <header class="mdl-layout__header">
-                    <div class="mdl-layout__header-row"> 
-                            <!-- Title --> 
-                             <span class="mdl-layout-title logo-icon"></span>
-                            <!--<span class="mdl-layout-heading">StoreFront</span>--> 
-                            <div class="mdl-layout-spacer"></div>
-                            <span class="close-icon"><i class="material-icons md-15">close</i></span>
-                    </div>
-            </header>
+    		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            
             <main class="mdl-layout__content">
             <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -44,38 +36,57 @@
                                     <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSARSRR</span></div>
                     </div>
             </section>
-            
-            <section class="table-data-content-container">
-				<div class="table-data-wrapper">
-					<div class="table-data-maincontainer">
-						<div class="search-field-container">
-								<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Filter by: Co</span></div>
-								<div class="mdl-cell mdl-cell--2-col">
-									<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-										<input type="text"  id="number1" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-									</div>
-								</div>
-								<div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title">Loc</span> </div>
-								<div class="mdl-cell mdl-cell--2-col">
-									<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-										<input type="text"  id="number2" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-									</div>
-								</div>
-								<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title">Dist</span> </div>
-								<div class="mdl-cell mdl-cell--2-col">
-									<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-										<input type="text"  id="number3" class="mdl-textfield__input"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-									</div>
-								</div>
-								<div class="mdl-cell mdl-cell--1-col pull-right button-container">
-									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="white-to-gray-bullet">
+
+                        <li class="progress-bar-step3 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
             </section>
-            
+						<section class="table-data-content-container search-field-container" style="margin:16px 0;">
+		<div class="table-data-wrapper">
+				<div class="table-data-maincontainer">
+						<div class="table-container table-container-search">
+										<div class="filter-by"> <span class="summary-table-title">Filter by:</span></div>
+										<div class="search-result">
+														<div> <span class="summary-table-title">Co</span></div>
+												<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+														<input type="text"  id="number1" class="mdl-textfield__input">
+														<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+												</div>
+										<div><span class="summary-table-title">Loc</span> </div>
+												<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+														<input type="text"  id="number2" class="mdl-textfield__input">
+														<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span> </div>
+										<div> <span class="summary-table-title">Dist</span> </div>
+												<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+														<input type="text"  id="number3" class="mdl-textfield__input">
+														<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span> </div>
+										</div>
+										
+										<div class="button-container">
+										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</button>
+										</div>
+						</div>
+				</div>
+		</div>
+</section>
             <section class="table-data-content-container spacer-container-bottom">
                     <div class="table-data-wrapper">
                             <div class="table-data-maincontainer">
@@ -99,7 +110,7 @@
                                             <div class="content-grid mdl-grid">
                                                     
                                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
                                                     </div>
                                             </div>
                                     </div>
@@ -565,11 +576,70 @@
         
 </script>
 <style>
-header,#Div1 {
-	display: none !important;
+#span-header, #screen_title, #fkeys, #Div1, #diagnostics, #footer {
+            display: none;
+ }
+#main-content {
+			width: 100%;
 }
-.modal-dialog-container header {
-	display: flex !important;
+/* new 2 feb 2016 class starts here */
+.search-field-container .filter-by, .search-field-container .search-result {
+	float: left;
 }
+.search-field-container .search-result div {
+	float: left;
+	margin-right: 8px;
+}
+.search-field-container .button-container {
+	float: right;
+}
+.search-field-container .button-container {
+	margin: 0;
+}
+.search-field-container .button-container .mdl-button {
+	padding: 10px!important;
+}
+.search-field-container .search-result input, .search-field-container .search-result .input-big {
+	padding: 4px 5px 4px 5px;
+}
+.search-field-container .search-result .mdl-textfield {
+	width: 142px;
+}
+.search-field-container .mdl-textfield-select-page {
+	margin-top: 7px;
+}
+.search-field-container .summary-table-title {
+	margin-top: 9px;
+}
+/* new 2 feb 2016 class ends here */
+
+/* Media queries starts here */
+ @media (min-width: 992px) and (max-width:1024px) {
+	.search-field-container .search-result .mdl-textfield {
+		width: 215px;
+}
+}
+ @media (min-width: 1024px) and (max-width: 1100px) {
+	.search-field-container .search-result .mdl-textfield {
+		width: 227px;
+}
+}
+@media only screen
+and (min-width : 1224px) {
+	.search-field-container .search-result .mdl-textfield {
+		width: 293px;
+}
+.search-field-container .button-container .mdl-button {
+	padding: 10px 20px!important;
+}
+}
+@media (min-width: 600px) and (max-width: 768px) {
+
+	.search-field-container .search-result .mdl-textfield {
+		width: 90px;
+}
+}
+/* Media queries ends here */
+
 </style>
     </asp:Content>
