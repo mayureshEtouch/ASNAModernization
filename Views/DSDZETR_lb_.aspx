@@ -196,7 +196,7 @@
             </section>
         </main>
 		<div id="modal" class="simplePopup"></div>
-                <div id="confirmprompt" class="confirmation-outer-conatiner" style="display: none">
+                <div id="confirmprompt" class="confirmation-outer-conatiner simplePopup">
                     <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
                     <div class="button-container">
                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -1197,7 +1197,7 @@
                 setReadOnlyView();
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").hide();
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").show();
-                $(".confirmation-outer-conatiner").show();
+                $(".confirmation-outer-conatiner").simplePopup();
             } else {
                 $(".confirmation-outer-conatiner").hide();
             }
