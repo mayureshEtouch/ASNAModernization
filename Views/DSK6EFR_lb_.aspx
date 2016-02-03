@@ -73,11 +73,7 @@
                     </div>
                 </div>
             </section>
-            <section class="add-item">
-                <div class="mdl-cell mdl-cell--12-col error-msg-container">
-					<div class="error-message"></div>
-				</div>
-            </section>
+           
             <section class="table-data-content-container spacer-container-bottom" style="margin-top:18px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
@@ -111,7 +107,7 @@
                 </div>
             </section>
         </main>
-        <div class="confirmation-outer-conatiner">
+        <div class="confirmation-outer-conatiner simplePopup">
             <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -741,9 +737,6 @@
         }
 		.mdl-data-table td .icon-textfield{margin-left: 155px;}
 		.mdl-data-table td .term-input{width:170px;}
-        .confirmation-outer-conatiner {
-            z-index: 1;
-        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -809,7 +802,7 @@
             });*/
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-                $(".confirmation-outer-conatiner").show();
+                $(".confirmation-outer-conatiner").simplePopup();
             } else {
                 $(".confirmation-outer-conatiner").hide();
             }
@@ -819,7 +812,7 @@
             });
             $("#no").click(function () {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-                $(".confirmation-outer-conatiner").show();
+                $(".confirmation-outer-conatiner").simplePopup();
             });
         }); // document ready end
 		$(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
