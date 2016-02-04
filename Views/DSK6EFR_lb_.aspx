@@ -73,8 +73,8 @@
                     </div>
                 </div>
             </section>
-           
-            <section class="table-data-content-container spacer-container-bottom" style="margin-top:18px;">
+
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 18px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
@@ -735,8 +735,14 @@
         #main-content {
             width: 100%;
         }
-		.mdl-data-table td .icon-textfield{margin-left: 155px;}
-		.mdl-data-table td .term-input{width:170px;}
+
+        .mdl-data-table td .icon-textfield {
+            margin-left: 155px;
+        }
+
+        .mdl-data-table td .term-input {
+            width: 170px;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -746,7 +752,7 @@
             //Set customer name
             $("#customer-name").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html());
-			$("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html());
+            $("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html());
             //Generate warranty term table
             var generateTable = function () {
                 debugger
@@ -771,7 +777,6 @@
                         row += '<td>' + $(srNumberSelector + count).html() + '</td>';
                         row += '<td>' + $(mwExpDateSelector + count).html() + '</td>';
                         row += '<td>';
-                        //row += '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" value=' + $(wTermSelector + count).val() + '>';
                         row += termBox;
                         row += '</td>';
                         row += '<td>' + $(wPriceSelector + count).html() + '</td>';
@@ -785,21 +790,15 @@
                 $("#warranty-term-list tbody tr:odd").css("background-color", "#fcfcfc");
             }
             generateTable();
-
             //Set input term value to original term text box
-			$(".warranty-term").on('click',function(){
-				var e =jQuery.Event("keydown");
-				e.which = 13;
-				var keydnIndex= $(this).parents("tr").index();
-				$("[id='CenPH__lb_SFLRCD__lb_RGPTX."+$("[id^='CenPH__lb_SFLRCD__lb_RGPTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
-				
-			});
-            /*$('input.term-input').on('click', function () {
-				 var e =jQuery.Event("keydown");
-				 e.which = 13;
+            $('body').on('change keyup', 'input.term-input', function () {
                 var targetInputBox = $(this).data("term");
-                $(targetInputBox).val($(this).val()).trigger(e);
-            });*/
+                $(targetInputBox).val($(this).val());
+            });
+            $('body').on('click', '.warranty-term', function (event) {
+                _00('Enter', event);
+            });
+
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".confirmation-outer-conatiner").simplePopup();
@@ -807,7 +806,7 @@
                 $(".confirmation-outer-conatiner").hide();
             }
             $("#yes").click(function () {
-                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
             });
             $("#no").click(function () {
@@ -815,6 +814,6 @@
                 $(".confirmation-outer-conatiner").simplePopup();
             });
         }); // document ready end
-		$(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text()); 
+        $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>
 </asp:Content>

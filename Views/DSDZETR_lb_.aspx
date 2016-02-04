@@ -177,7 +177,14 @@
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
                             <fieldset>
                                 <legend id="legen">Special Instruction:</legend>
-                                <textarea name="CenPH_2AQNA" cols="40" rows="5" id="CenPH_2AQNA"></textarea>
+                                <%--<textarea name="CenPH_2AQNA" cols="40" rows="5" id="CenPH_2AQNA"></textarea>--%>
+                                <textarea name="CenPH_2AQNA" cols="40" rows="5" id="CenPH_2AQNA" style="display: none;"></textarea>
+                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_0" class="sp-inst" tabindex="-1" style="width: 99%; margin-top: 5px; height: 15px;" maxlength="40" data-splid="0">
+                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_1" class="sp-inst" tabindex="-1" style="width: 99%; margin-top: 5px; height: 15px;" maxlength="40" data-splid="1">
+                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_2" class="sp-inst" tabindex="-1" style="width: 99%; margin-top: 5px; height: 15px;" maxlength="40" data-splid="2">
+                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_3" class="sp-inst" tabindex="-1" style="width: 99%; margin-top: 5px; height: 15px;" maxlength="40" data-splid="3">
+                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_4" class="sp-inst" tabindex="-1" style="width: 99%; margin-top: 5px; height: 15px;" maxlength="40" data-splid="4">
+                                <input id="CenPH__lb_SFLRCD__lb_2AQNA_5" class="sp-inst" tabindex="-1" style="width: 99%; margin-top: 5px; height: 15px;" maxlength="40" data-splid="5">
                             </fieldset>
                         </div>
                     </div>
@@ -192,17 +199,17 @@
                         </div>
                     </div>
                 </div>
-                
+
             </section>
         </main>
-		<div id="modal" class="simplePopup"></div>
-                <div id="confirmprompt" class="confirmation-outer-conatiner simplePopup">
-                    <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
-                    <div class="button-container">
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
-                    </div>
-                </div>
+        <div id="modal" class="simplePopup"></div>
+        <div id="confirmprompt" class="confirmation-outer-conatiner simplePopup">
+            <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
     </div>
     <div id="Div1">
 
@@ -1178,9 +1185,10 @@
             });
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
             $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
-                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2,3));
+                $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
@@ -1189,9 +1197,13 @@
                 $("#CenPH_CEU").html($("#CenPH__lb_SFLCTL__lb_CEUTX").html()); // Read only
                 $("#CenPH_CEW").html($("#CenPH__lb_SFLCTL__lb_CEWTX").html()); // Read only
                 $("#CenPH_1F").html($("#CenPH__lb_SFLCTL__lb_1FLST").html()); //Read only
-                $('textarea').attr('readonly', 'readonly');
-                $("#reqesdate").html($("#requestdate").val());
+                $("#requestdate").html($("#CenPH__lb_SFLCTL_VCBQDT").val());
             }
+            //Special instructions section
+            $(".sp-inst").on("keyup change", function () {
+                var inpId = $(this).data("splid");
+                $("#CenPH__lb_SFLRCD__lb_2AQNA\\." + inpId).val($("#CenPH__lb_SFLRCD__lb_2AQNA_" + inpId));
+            });
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 setReadOnlyView();

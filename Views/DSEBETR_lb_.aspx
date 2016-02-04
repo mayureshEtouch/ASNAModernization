@@ -1313,7 +1313,8 @@
 		var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2SEL']").eq(0).attr("id").split("L.")[1]);
 		$("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
 		$("#requestdate").datepicker({ dateFormat: 'mm/dd/yy' });
-		$("#requestdate, .icon-calender").on('keyup change', function () {
+		$("#requestcal").click(function () { $("#requestdate").datepicker("show"); })
+		$("#requestdate").on('keyup change', function () {
 			var date = $("#requestdate").val().split("/");
 			$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
                 
