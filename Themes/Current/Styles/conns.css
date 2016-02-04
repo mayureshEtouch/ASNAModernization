@@ -824,6 +824,10 @@ textarea {
 .modal-dialog-container .table-container-search .mdl-grid {
 	padding: 0;
 }
+.modal-dialog-container .table-container{
+	height: auto;
+	min-height: 150px;
+}
 .table-container-no-scroll {
 	height: auto;
 	min-height: auto;

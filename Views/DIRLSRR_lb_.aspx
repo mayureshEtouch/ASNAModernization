@@ -43,7 +43,7 @@
                     <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--8-col"> 
                                     <!-- Title --> 
-                                    <span class="heading-h1">Select Location</span> </div>
+                                    <span class="heading-h1">Select Product Warranty</span> </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right"> 
                                     <!-- Navigation --> 
                                     <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIRLSRR</span></div>
@@ -596,24 +596,34 @@
             $(".table-data-content-container tbody  tr").attr("class", "");
             $(".table-data-content-container tbody  tr:visible:odd").addClass("oddrow");
             $(".table-data-content-container tbody  tr:visible:even").addClass("evenrow");
-            $(".table-data-content-container tbody tr").click(function () {
-                $(this).closest(".table-data-content-container tbody tr").siblings().removeClass("selected-row");
-                $(this).toggleClass("selected-row");
-                $("div.icon-container").removeClass("icon-disable");
-            });
+			
             
-            $("#selectWarranty tr").click(function () {
+            $("#selectWarranty tr").on('click', function () {
                 var selectId = $(this).data('selectid');
                 a = selectId.split(".");
                 $("#" + a[0] + "\\." + a[1]).val("1")
                 console.log(this);
+				$(this).closest(".table-data-content-container tbody tr").siblings().removeClass("selected-row");
+                $(this).toggleClass("selected-row");
+                $("div.icon-container").removeClass("icon-disable");
             });
 			
 			$(".table-container-search .icon-textfield").on('click', function () {
 				$(this).siblings('input:text').closest('.mdl-textfield__input').val(''); 
 
 			});
+			//Select warranty on double click
+            $('body').on('dblclick', '#selectWarranty tbody tr', function (event) {
+				$("#submit").trigger('click');
+                //_00('Enter', event);
+            });
+			
+			$('.close-icon').click(function() {
+				$("#submit").trigger('click');
+			});
+			
         });
+		
         
 </script>
 <style>
@@ -623,8 +633,22 @@
 #__Page_PopUp {
 	width: 450px !important;
 }
+#__Page_PopUp > tr:first-child {
+	display: none;
+}
+#__Page_PopUp .DdsInlinePopUpTitle {
+	height: 0;
+}
+#selectWarranty tbody tr td:last-child {
+	display: none;
+}
 .modal-dialog-container {
 	width: 100%;
+	margin-top: 0;
+}
+.mdl-layout__content {
+	height: auto !important;
+	overflow: hidden !important;
 }
 </style>
     </asp:Content>

@@ -1771,27 +1771,23 @@
             $(window).trigger(e);
             ASNA.Response.PushKey(document.forms[0], "PgDn", e);
         });
-		/*$(".model-number").on('click',function(){
+		$(".model-number").on('click',function(){
 			var e =jQuery.Event("keydown");
-			e.keyCode = 13;
 			e.which = 13;
 			var keydnIndex= $(this).parents("tr").index();
 			console.log(keydnIndex);
 			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").trigger(e);
-			$(this).prev().trigger("Submit");
-		});*/
-		$('body').on('click','.model-number', function(e) {
+		});
+		/*$('body').on('click','.model-number', function(e) {
 		   var e =jQuery.Event("keydown");
-		   e.keyCode = 13;
 			e.which = 13;
             e.ctrlKey = false;
             e.altKey = false;
 			var keydnIndex= $(this).parents("tr").index();
 			console.log(e);
-			//$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
-			$(this).prev().trigger("Enter");
+			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
 			
-		});
+		});*/
 		// From Location modal
 		$(".from-loc").on('click',function(){
 		   var e =jQuery.Event("keydown");
@@ -1831,13 +1827,13 @@
         });
         
         // Check if Current state of page is Review or Edit
-        if($(".DdsCharField").length > 1 && $("[id*='lb_SFLRCD__lb_2AIST.']").length > 1) {
+        if($(".DdsCharField").length > 1) {
+			
             // if Current state of page is Edit
             // Hide New Confirm UI Table
             $("#datatableValue, .showConfirm").hide();
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
-
             // Update any data added to New Edit UI Table to ASNA Hidden UI Table
             $("input, select").blur(function(){
                 $("#datatableValueInsert tbody").find("tr").each(function(i){

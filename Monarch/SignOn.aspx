@@ -27,7 +27,7 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light">event_available</i>
                         <span class="date-time-txt" name="date"></span>
-                        <i class="material-icons">access_time</i>
+                        <i class="material-icons md-15 md-light">access_time</i>
                         <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
@@ -192,29 +192,6 @@
             width: 100%;
         }
 
-        .error {
-            color: #ff0000;
-            font-size: 11px;
-            width: calc(100% - 16px);
-        }
-
-        .mdl-textfield__input_error_msg {
-            border: solid 1px #ff0000;
-        }
-
-        #CenPH_RSignon_User-error, #CenPH_RSignon_Password-error {
-            display: block;
-            position: absolute;
-            margin-left: 106px;
-        }
-
-        #CenPH_RSignon_User-error {
-            margin-top: 20px;
-        }
-
-        #CenPH_RSignon_Password-error {
-            margin-top: 40px;
-        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -229,8 +206,6 @@
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant39]").text());
             $("[name='time']").text($("[id$=CenPH_DdsConstant40]").text());
-            $("[name='date']").attr("style", "margin-left:5px;");
-            $("[name='time']").attr("style", "margin-left:5px;");
             //Set styles for alignment
             $("#CenPH_RSignon_User").css({ "position": "relative", "left": "72px", "top": "20px" });
             $("#CenPH_RSignon_Password").css({ "position": "relative", "left": "40px", "top": "40px" });
