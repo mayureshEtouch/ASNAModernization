@@ -4,9 +4,6 @@
 	font-weight: 400;
 	src: local('Material Icons'), local('MaterialIcons-Regular'), url(//Fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
-/* #span-content {
-    width: 1000px;
-} */
 
 #main-content {
 	width: 80%;
@@ -15,24 +12,10 @@
 #header {
 	display: none;
 }
-.material-icons {
-	font-family: 'Material Icons';
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px;
-	line-height: 1;
-	letter-spacing: normal;
-	text-transform: none;
-	display: inline-block;
-	white-space: nowrap;
-	word-wrap: normal;
-	direction: ltr;
-	-webkit-font-feature-settings: 'liga';
-	-webkit-font-smoothing: antialiased;
-}
 html, body {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	line-height: normal;
+	color: #333;
 }
 img {
 	width: auto !important;
@@ -64,7 +47,6 @@ img {
 }
 .mdl-layout-heading {
 	color: #fff;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	padding: 0 0 0 8px;
@@ -90,7 +72,6 @@ img {
 .username {
 	display: inline-block;
 	color: #fff;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 12px;
 	padding-left: 5px;
 }
@@ -107,7 +88,6 @@ img {
 	right: 5px !important;
 }
 .mdl-menu__item {
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	height: 30px;
 	font-size: 12px;
 	line-height: 30px;
@@ -121,20 +101,16 @@ img {
 	display: block;
 }
 .heading-h1 {
-	color: #333;
 	display: inline-block;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 21px;
 	font-weight: bold;
 	padding-left: 4px;
 }
 .date-time-txt {
-	color: #333;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 12px;
-	left: -7px;
-	line-height: 25px;
-	padding-right: 2px;
+	left: 0;
+	line-height: 21px;
+	margin-right: 10px;
 	position: relative;
 	vertical-align: top;
 }
@@ -189,7 +165,6 @@ img {
 }
 .progress-bar .step-title, .progress-bar .step-txt, .progress-bar .step-title-selected, .progress-bar .step-txt-selected {
 	display: block;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 }
 .progress-bar .step-title, .progress-bar .step-title-selected {
 	color: #e32527;
@@ -202,7 +177,7 @@ img {
 }
 .progress-bar .step-txt, .progress-bar .step-txt-selected {
 	color: #79868a;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 	line-height: 13px;
 	padding: 2px 0 0 8px;
@@ -219,7 +194,6 @@ img {
 	padding: 0 8px;
 }
 .error-message {
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 12px;
 	color: red;
 	line-height: 16px;
@@ -227,6 +201,39 @@ img {
 	text-align: right;
 }
 /* order summary section css starts here */
+
+/* Signon screen CSS starts */
+.error {
+	color: #ff0000;
+	font-size: 11px;
+	width: calc(100% - 16px);
+}
+
+.mdl-textfield__input_error_msg {
+	border: solid 1px #ff0000;
+}
+
+#CenPH_RSignon_User-error, #CenPH_RSignon_Password-error {
+	display: block;
+	position: absolute;
+	margin-left: 106px;
+}
+
+#CenPH_RSignon_User-error {
+	margin-top: 21px;
+}
+
+#CenPH_RSignon_Password-error {
+	margin-top: 40px;
+}
+/*Signon screen CSS ends */
+
+/* Button CSS starts */
+.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
+	color: #fff;
+	opacity: 0.2;
+}
+/* Button CSS ends */
 
 .order-summary-wrapper {
 	background: #fff;
@@ -253,7 +260,6 @@ img {
 .summary-title {
 	color: #333;
 	display: block;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	padding-top: 1px;
@@ -261,7 +267,6 @@ img {
 .summary-txt {
 	color: #333;
 	display: block;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 13px;
 	padding-top: 3px;
 }
@@ -280,7 +285,6 @@ img {
 	color: #4185f2;
 	cursor: pointer;
 	display: inline-block;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	vertical-align: middle;
@@ -311,7 +315,6 @@ img {
 	border-right: none;
 }
 .table-container {
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	min-height: 140px;
 	overflow-y: auto;
 }
@@ -397,7 +400,6 @@ img {
 	font-size: 12px;
 }
 .order-detail-table-data .mdl-button, .table-data-content-container .mdl-button {
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	border-radius: 2px;
 	font-size: 13px;
 	font-weight: bold;
@@ -417,7 +419,6 @@ img {
 .copyright-container {
 	background: #58595b;
 	color: #fff;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 11px;
 	padding: 10px 0 12px 0;
 	text-align: center;
@@ -553,14 +554,10 @@ img {
 	cursor: pointer;
 }
 .time-date .mdl-grid {
-	padding: 9px 0 10px 8px;
+	padding: 9px 0 10px 0;
 }
 .time-date .mdl-cell {
 	margin-bottom: -10px;
-}
-.date-time-txt {
-	left: 0;
-	line-height: 21px;
 }
 .table-data-content-container .mdl-textfield-select-page {
 	margin-top: 6px;
