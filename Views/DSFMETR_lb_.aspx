@@ -385,7 +385,7 @@
                             <div class="button-container nextStep"> 
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col">
-                                        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" value="Cancel Order" id="cancelOrder1" data-attr="cancelOrder" />
+                                        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" value="Previous" id="previous" data-attr="previous" />
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col pull-right">
@@ -1747,7 +1747,7 @@
         $( "#nextPage" ).on( "click", function(){ $("input[accesskey='n']").click();} );
         
         // Exit Page
-        $( "#exitPage" ).on( "click", function(){ $("input[title='F12 : Exit.']").click();});
+        $( "#exitPage, #previous" ).on( "click", function(){ $("input[title='F12 : Exit.']").click();});
         
         // Cancel Order
         $( "#cancelOrder1" ).on( "click", function(){ $("input[title='F3 : Exit.']").trigger('click'); });

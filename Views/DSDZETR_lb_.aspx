@@ -135,14 +135,14 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 37px">
-                                            <option value="P">P </option>
-                                            <option value="N">N </option>
-                                            <option value="H">H </option>
-                                            <option value="X">X </option>
-                                            <option value="L">L </option>
+                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 37px; padding: 0 2px;">
+                                            <option value="H">H - Held Delivery</option>
+                                            <option value="L">L - Layaway</option>
+                                            <option value="N">N - Non-Partial Delivery</option>
+                                            <option value="P">P - Partial Delivery</option>
+                                            <option value="X">X - Non-Delivery</option>
                                             <option selected="selected" value=" "></option>
-                                            <option value="Y">Y </option>
+                                            <option value="Y">Y - *Yes</option>
                                             <option value="?">? </option>
                                         </select>
                                         <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
@@ -1097,7 +1097,7 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #Div1, #fkeys, #diagnostics, #footer {
+        #Div1, #fkeys, #diagnostics, #footer, #message-container {
             display: none;
         }
 
@@ -1209,7 +1209,7 @@
                 setReadOnlyView();
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").hide();
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").show();
-                $(".confirmation-outer-conatiner").simplePopup();
+                $(".confirmation-outer-conatiner").simplePopup().addClass("confirm");
             } else {
                 $(".confirmation-outer-conatiner").hide();
             }
