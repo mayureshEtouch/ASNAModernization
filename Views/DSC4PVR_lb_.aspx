@@ -80,7 +80,7 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Customer name/ partial name :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="name" class="mdl-textfield__input">
+                                        <input type="text" id="name" class="mdl-textfield__input" maxlength="30">
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col" style="margin-left: 3.6%">
@@ -89,7 +89,7 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Email address :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);">
+                                        <input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);" maxlength="50" >
                                     </div>
                                 </div>
                             </div>
@@ -97,12 +97,12 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry" onclick="_00('F7',event);">Customer id card entry</span>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry" onclick="_00('F7',event);">Customer id card entry</button>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="createCustomer" onclick="_00('F6',event);">Create Customer</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="createCustomer" onclick="_00('F6',event);">Create Customer</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -427,7 +427,18 @@
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
             //On page load reset all search fields
             $("#name,#number1,#number2,#number3,#email,#CenPH__lb_RCDDTL1__lb_1ALTX,#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_DB5NA").val('');
-
+            //Check for errors
+            //if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            //    var errorMsg = "";
+            //    if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            //        errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+            //    }
+            //    if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            //        errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+            //    }
+            //    $('#modal').html(errorMsg);
+            //    $('#modal').simplePopup();
+            //}
             $(window).resize(function () {
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
@@ -454,9 +465,10 @@
                 $("#CenPH__lb_RCDDTL1__lb_DB5NA").val($("#email").val())
                 console.log($("#CenPH__lb_RCDDTL1__lb_DB5NA").val())
             });
-			$("#previous").on("click", function () {
-				$('#modal, .simplePopup').css('display','none');
-            });
+            //var email = $("#email");
+            //$("#email").keyup(function () {
+            //    email.valid();
+            //});
         });
     </script>
     <style>
