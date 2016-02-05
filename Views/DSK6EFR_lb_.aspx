@@ -755,7 +755,6 @@
             $("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html());
             //Generate warranty term table
             var generateTable = function () {
-                debugger
                 var mNumberSelector = "#CenPH__lb_SFLRCD__lb_1AXTX\\.",
                     srNumberSelector = "#CenPH__lb_SFLRCD__lb_1A8TX\\.",
                     mwExpDateSelector = "#CenPH__lb_SFLRCD_VRBADT\\.",

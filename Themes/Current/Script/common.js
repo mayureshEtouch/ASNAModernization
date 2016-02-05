@@ -1,6 +1,5 @@
 ﻿function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId) {
     $("body").css({ "background-color": "#FFFFFF" });
-    debugger
     $('body').on('click', '#' + tableId  + ' tbody tr', function () {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
