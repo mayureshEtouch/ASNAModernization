@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 37px; padding: 0 2px;">
+                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 40px; padding: 0 2px;">
                                             <option value="H">H - Held Delivery</option>
                                             <option value="L">L - Layaway</option>
                                             <option value="N">N - Non-Partial Delivery</option>
@@ -157,6 +157,15 @@
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <input type="text" id="requestdate" name="date"><i id="reqesdate" class="material-icons icon-calender page-icons">today</i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
+                                    </span>
+                                </div>
+                            </div>
+							<div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <span class="form-label">Expected Delivery Date:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield" id="expectedDate" name="expectedDate">
                                     </span>
                                 </div>
                             </div>
@@ -1149,6 +1158,7 @@
             $("#CenPH_1AJCD").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_1AJCD").val($("#CenPH_1AJCD").val());
             });
+			$("#CenPH_1A0TX").text($("#CenPH__lb_SFLCTL__lb_1A0TX").text());
             // Set the selected customer details from original input boxes to modernized input boxes
             $("#CenPH_PBDTX").val($("#CenPH__lb_SFLCTL__lb_PBDTX").val());
 
@@ -1190,6 +1200,7 @@
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
+			$("#expectedDate").text($("#CenPH__lb_SFLCTL_V1AXDT").text());
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
                 $("#CenPH_PB").html($("#CenPH__lb_SFLCTL__lb_PBDTX").html()); // Read only
@@ -1198,6 +1209,7 @@
                 $("#CenPH_CEW").html($("#CenPH__lb_SFLCTL__lb_CEWTX").html()); // Read only
                 $("#CenPH_1F").html($("#CenPH__lb_SFLCTL__lb_1FLST").html()); //Read only
                 $("#requestdate").html($("#CenPH__lb_SFLCTL_VCBQDT").val());
+				$("#expectedDate").html($("#CenPH__lb_SFLCTL_V1AXDT").text());
             }
             //Special instructions section
             $(".sp-inst").on("keyup change", function () {

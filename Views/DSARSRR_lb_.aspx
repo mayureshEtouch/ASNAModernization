@@ -560,6 +560,10 @@
 				$(this).siblings('input:text').closest('.mdl-textfield__input').val(''); 
 
 			});
+			 $('body').on('dblclick', '#selectLocation tbody tr', function (event) {
+				$("#submit").trigger('click');
+                //_00('Enter', event);
+            });
         });
 		
 		 $(document).keyup(function(e){

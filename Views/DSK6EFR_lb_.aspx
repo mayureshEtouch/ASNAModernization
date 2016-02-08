@@ -797,7 +797,9 @@
             $('body').on('click', '.warranty-term', function (event) {
                 _00('Enter', event);
             });
-
+			$('body').on('click', '#previous', function (event) {
+                _00('F12',event);
+            });
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".confirmation-outer-conatiner").simplePopup();
