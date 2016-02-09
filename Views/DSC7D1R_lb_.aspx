@@ -121,7 +121,7 @@
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId">tax id</button>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">next</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="display-submit">next</button>
                                 </div>
                             </div>
                         </div>
