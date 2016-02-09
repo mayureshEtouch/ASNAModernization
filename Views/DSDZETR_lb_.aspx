@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD"><i class="material-icons icon-calender page-icons">search</i>
+                                        <input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD"><i class="material-icons icon-calender page-icons emp-code">search</i>
                                         <span id="CenPH_1AJ" class="DdsCharField_OutputOnly"></span>
                                         <span id="CenPH_1A0TX" class="DdsCharField_OutputOnly"></span>
                                         <input type="hidden" id="empid" name="empid">
@@ -1157,6 +1157,10 @@
             // Mimic ?(prompt) functionality
             $("#CenPH_1AJCD").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_1AJCD").val($("#CenPH_1AJCD").val());
+            });
+			$('body').on('click', '.emp-code', function (event) {
+				console.log(this);
+                _00('Enter', event);
             });
 			$("#CenPH_1A0TX").text($("#CenPH__lb_SFLCTL__lb_1A0TX").text());
             // Set the selected customer details from original input boxes to modernized input boxes

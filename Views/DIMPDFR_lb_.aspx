@@ -527,6 +527,8 @@
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant8]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
+			
+			$("#email").val($("#CenPH__lb_SFLCTL__lb_2GVXT").html());
 
             $('body').on('click', '#customerName tbody tr', function () {
                 $("#customerName tbody tr:even").css("background-color", "#fff");
@@ -628,6 +630,11 @@
             $("#next").click(function (event) {
                 var row = $("#customerName tbody tr.selected");
                 selectCusotmer(row, "1", event);
+            });
+			
+			// Previous Button click trigger 
+			$('body').on('click', '#previous', function (event) {
+                _00('F12',event);
             });
         });
     </script>

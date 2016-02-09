@@ -892,6 +892,19 @@ textarea {
 .input-label {
 	font-weight: 600;
 }
+.form-label-input{
+ margin-top: 7px;
+}
+.mdl-textfield__input-small {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    font-size: 16px;
+    margin: 0;
+    padding: 4px 0;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+}
 /* form class ends here */
 
 .order-summary-container .order-summary-wrapper {
@@ -919,7 +932,6 @@ textarea {
 	background: #fff;
 	border: 1px solid #e5e5e5;
 	width: 162px;
-	margin-left: -81px;
 }
 .confirmation-outer-conatiner .confirmation-text {
 	color: #797979;
