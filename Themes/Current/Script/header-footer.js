@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     // Add header section
     var userName = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html();
-	var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("[id$='__lb__lb_JOB']").html();
+    var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("[id$='__lb__lb_JOB']").html();
     var header = "";
     header += "<header class=\"mdl-layout__header is-casting-shadow\">";
     header += "            <div class=\"mdl-layout__header-row\">";
@@ -10,7 +10,7 @@
     header += "                <!-- Add spacer, to align navigation to the right -->";
     header += "                <div class=\"mdl-layout-spacer\"><\/div>";
     header += "                <!-- Navigation -->";
-    header += "                <span class=\"terminal\">Terminal #: " + terminal +"<\/span> <span class=\"black-divider\"><\/span>";
+    header += "                <span class=\"terminal\">Terminal #: " + terminal + "<\/span> <span class=\"black-divider\"><\/span>";
     header += "                <!--<i class=\"material-icons md-16\">help<\/i>-->";
     header += "                <i class=\"material-icons md-15 mdl-badge\" data-badge=\"1\">notifications<\/i> <span class=\"black-divider\"><\/span><span class=\"home-icon\"><i class=\"material-icons md-15\">home<\/i><\/span> <span class=\"black-divider\"><\/span>";
     header += "                <span class=\"user-icon\"><\/span>";
@@ -40,9 +40,9 @@
     footer += "        <\/section>";
 
     $(footer).insertAfter($("#main-content"));
-
     // Error popup
-    if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
+    var hideMessage = "Value not found in list - Use '?' to determine allowed values.";
+    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1 ) {
         var errorMsg = "";
         if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";

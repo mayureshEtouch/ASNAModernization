@@ -82,8 +82,8 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Customer name/ partial name :</span>
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="name" class="mdl-textfield__input">
+                                    <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                        <%--<input type="text" id="name" class="mdl-textfield__input">--%>
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col" style="margin-left: 3.6%">
@@ -602,6 +602,14 @@
         tr.selected {
             background-color: #f1f1f1;
         }
+
+        #CenPH__lb_SFLCTL__lb_2ALTX {
+            position: relative !important;
+            left: 0px !important;
+            top: 0px !important;
+            height: 14px !important;
+            width: calc(100%) !important;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -610,10 +618,13 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant8]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             // Search criteria Name input field text
-            $("#name").val($('#CenPH__lb_SFLCTL__lb_2ALTX').val());
-            $("#name").on("keyup change click", function () {
-                $("#CenPH__lb_SFLCTL__lb_2ALTX").val($("#name").val());
-            });
+            //Set name
+            $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
+            $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
+            //$("#name").val($('#CenPH__lb_SFLCTL__lb_2ALTX').val());
+            //$("#name").on("keyup change click", function () {
+            //    $("#CenPH__lb_SFLCTL__lb_2ALTX").val($("#name").val());
+            //});
 
             $('body').on('click', '#customerName tbody tr', function () {
                 $("#customerName tbody tr:even").css("background-color", "#fff");

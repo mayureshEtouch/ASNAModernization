@@ -68,10 +68,7 @@
                                 <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop">
                                     <span class="summary-label">Customer phone number :</span>
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="number1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
-                                        <input type="text" id="number2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
-                                        <input type="text" id="number3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop">
+                                    <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col" style="margin-left: 1.5%">
@@ -79,8 +76,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Customer name/ partial name :</span>
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="name" class="mdl-textfield__input" maxlength="30">
+                                    <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col" style="margin-left: 3.6%">
@@ -88,8 +84,8 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Email address :</span>
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);" maxlength="50" >
+                                    <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                        <%--<input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);" maxlength="50">--%>
                                     </div>
                                 </div>
                             </div>
@@ -427,59 +423,54 @@
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
             //On page load reset all search fields
             $("#name,#number1,#number2,#number3,#email,#CenPH__lb_RCDDTL1__lb_1ALTX,#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_DB5NA").val('');
-            //Check for errors
-            //if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) {
-            //    var errorMsg = "";
-            //    if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
-            //        errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
-            //    }
-            //    if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
-            //        errorMsg += $("#MsgPH_DdsMessagePanel1").text();
-            //    }
-            //    $('#modal').html(errorMsg);
-            //    $('#modal').simplePopup();
-            //}
             $(window).resize(function () {
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
-            //Set name to original name text field
-            $("#name").on("keyup change", function () {
-                $("#CenPH__lb_RCDDTL1__lb_1ALTX").val($("#name").val())
-                console.log($("#CenPH__lb_RCDDTL1__lb_1ALTX").val())
-            });
-            //Set phone number to original phone number text field
-            $("#number1").on("keyup change", function () {
-                $("#CenPH__lb_RCDDTL1__lb_PAVNB").val($("#number1").val())
-                console.log($("#CenPH__lb_RCDDTL1__lb_PAVNB").val())
-            });
-            $("#number2").on("keyup change", function () {
-                $("#CenPH__lb_RCDDTL1__lb_PBMNB").val($("#number2").val())
-                console.log($("#CenPH__lb_RCDDTL1__lb_PBMNB").val())
-            });
-            $("#number3").on("keyup change", function () {
-                $("#CenPH__lb_RCDDTL1__lb_PAXNB").val($("#number3").val())
-                console.log($("#CenPH__lb_RCDDTL1__lb_PAXNB").val())
-            });
+            //Set name
+            $("#CenPH__lb_RCDDTL1__lb_1ALTX").appendTo("#search-by-name");
+            $("#CenPH__lb_RCDDTL1__lb_1ALTX").addClass("mdl-textfield__input");
+            //Set phone number fields
+            $("#CenPH__lb_RCDDTL1__lb_PAVNB").appendTo("#search-by-phone");
+            $("#CenPH__lb_RCDDTL1__lb_PBMNB").appendTo("#search-by-phone");
+            $("#CenPH__lb_RCDDTL1__lb_PAXNB").appendTo("#search-by-phone");
+            $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").addClass("mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop");
             //Set email to original email text field
-            $("#email").on("keyup change", function () {
-                $("#CenPH__lb_RCDDTL1__lb_DB5NA").val($("#email").val())
-                console.log($("#CenPH__lb_RCDDTL1__lb_DB5NA").val())
-            });
-            //var email = $("#email");
-            //$("#email").keyup(function () {
-            //    email.valid();
-            //});
+            $("#CenPH__lb_RCDDTL1__lb_DB5NA").appendTo("#search-by-email");
+            $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input");
+            $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("minlength", "3");
+            $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("maxlength", "3");
+            $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
+            $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
+            //Only numbers validation
+            $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB").ForceNumericOnly();
+
         });
     </script>
     <style>
-
         #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1 {
             display: none;
         }
 
+        #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
+            position: relative !important;
+            left: 0px !important;
+            top: 0px !important;
+            height: 14px !important;
+        }
+
+        #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB {
+            width: calc(16.6666666667% - 16px) !important;
+        }
+
+        #CenPH__lb_RCDDTL1__lb_PAXNB {
+            width: calc(66.6666666667% - 16px) !important;
+        }
+
+        #CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
+            width:100% !important;
+        }
         #main-content {
             width: 100%;
         }
-
     </style>
 </asp:Content>
