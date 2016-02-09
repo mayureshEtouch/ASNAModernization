@@ -143,7 +143,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="2">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="2" maxlength="3" >
 												<i class="material-icons icon-textfield from-loc">search</i> 
                                               </div>
                                             </td>
@@ -155,18 +155,16 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4" maxlength="20" >
 												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
 											 <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="5">
-                                              </div>
+                                                <span></span>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="6">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="5" maxlength="20">
                                               </div>
                                             </td>
                                             <td>
@@ -181,7 +179,7 @@
                                             <td><span></span></td>
                                             <td><span></span></td>
                                             <td class="status">
-                                                <select TabIndex="7">
+                                                <select TabIndex="6">
                                                     <option>Active</option>
                                                     <option>Cancel</option>
                                                 </select>
@@ -190,7 +188,7 @@
                                         
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">
-                                                <select TabIndex="8" class="del-status">
+                                                <select TabIndex="7" class="del-status">
                                                     <option></option>
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
@@ -200,29 +198,27 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="9">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="8" maxlength="3">
 												<i class="material-icons icon-textfield from-loc">search</i>
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="10">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="9">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="11">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="10" maxlength="20">
 												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
 											 <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="12">
-                                              </div>
+                                                <span></span>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;"TabIndex="13">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;"TabIndex="11" maxlength="20">
                                               </div>
                                             </td>
                                             <td>
@@ -237,7 +233,7 @@
                                             <td><span></span></td>
                                             <td><span></span></td>
                                             <td class="status">
-                                                <select TabIndex="14">
+                                                <select TabIndex="12">
                                                     <option>Active</option>
                                                     <option>Cancel</option>
                                                 </select>
@@ -246,7 +242,7 @@
                                         
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">
-                                               <select TabIndex="15" class="del-status">
+                                               <select TabIndex="13" class="del-status">
                                                     <option></option>
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
@@ -256,29 +252,27 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="16">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="14" maxlength="3">
 												<i class="material-icons icon-textfield from-loc">search</i>
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="17">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="15">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="18">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="16" maxlength="20">
 												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
 											 <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="19">
-                                              </div>
+                                                <span></span>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="20">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="17" maxlength="20">
                                               </div>
                                             </td>
                                             <td>
@@ -293,7 +287,7 @@
                                             <td><span></span></td>
                                             <td><span></span></td>
                                             <td class="status">
-                                                <select TabIndex="21">
+                                                <select TabIndex="18">
                                                     <option>Active</option>
                                                     <option>Cancel</option>
                                                 </select>
@@ -1854,7 +1848,7 @@
                     $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
                     $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
                     $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
-					$(this).find("td:eq(4)").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
+					$(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
                     $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
                     $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
@@ -1918,7 +1912,7 @@
                                             $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i+tableindex)+"']").val());
                                             $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tableindex)+"']").val()); 
                                             $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
-                                            $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
+                                            $(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
                                             $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
                                             $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
                                             $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
@@ -1935,7 +1929,7 @@
                                         $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i+tableindex)+"']").val());
                                         $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tableindex)+"']").val()); 
                                         $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
-                                        $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
+                                        $(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
                                         $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
                                         $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
                                         $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
@@ -1949,16 +1943,21 @@
                 });
 
         }    
-        $( "#reset" ).click(function() {
-           $("#datatableValue tbody").find("tr").each(function(i){
-                    $("[id$='lb_SFLRCD__lb_2AIST."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AECD."+(i)+"']").val("");
-                });
+        $("#reset").click(function() {
+           $("#datatableValueInsert tbody").find("tr").each(function(i){
+				$(this).find("td:eq(0) select").val(""); 
+				$(this).find("td:eq(1) input").val("");
+				$(this).find("td:eq(2) input").val(""); 
+				$(this).find("td:eq(3) input").val("");
+				$(this).find("td:eq(4) span").text(""); 
+				$(this).find("td:eq(13) select").val("Active"); 
+				$(this).find("td:eq(8) span").text(""); 
+				$(this).find("td:eq(9) span").text(""); 
+				$(this).find("td:eq(10) span").text(""); 
+				$(this).find("td:eq(11) span").text(""); 
+				$(this).find("td:eq(5) input").removeAttr("disabled");
+				$(this).find("td:eq(5) input").val("");
+			});  
         });
 		
 		
