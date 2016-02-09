@@ -117,11 +117,11 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col-desktop">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="xref" onclick="_00('F6',event);">X-REF</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-button" onclick="_00('Enter',event);">Submit</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="xref" onclick="_00('F6',event);">X-REF</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-button" onclick="_00('Enter',event);">Submit</span>
                                 </div>
                             </div>
                         </div>
@@ -634,6 +634,15 @@
             });
             generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT"); // Table ID, Div ID to copy records from and ignore span
         });
+		$('body').on('click', '#previous', function (event) {
+			_00('F12',event);
+		});
+		/* Select Model on double click
+		$('body').on('dblclick', '#customerName tbody tr', function () {
+			console.log("dbl")
+			$("#submit-button").trigger('click');
+			//_00('Enter', event);
+		});*/
 
     </script>
 </asp:Content>

@@ -4,7 +4,11 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:10 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DIOQD1I# --%>
-
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +26,113 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+<header class="mdl-layout__header">
+                    <div class="mdl-layout__header-row"> 
+                            <!-- Title --> 
+                             <span class="mdl-layout-title logo-icon"></span>
+                            <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                            <div class="mdl-layout-spacer"></div>
+                            <span class="close-icon"><i class="material-icons md-15">close</i></span>
+                    </div>
+            </header>
+<main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Customer Detail</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIOQD1I</span>
+                    </div>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Customer ID</span>
+                            <span class="summary-txt" id="customer-id"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Customer Type</span>
+                            <span class="summary-txt" id="customer-type"></span>
+                        </div>
+                    </div>
+              </div>
+            </section>
+            <section class="form-data">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
+                          <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-label">Customer Name:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-text" id="customer-name"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-label">Mailing List Indicator</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-text" id="mailing-list-indicator"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-label">Cust Addr Type:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-text" id="cust-addr-type"></span>
+                                </div>
+                            </div>
+                          </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-label">Cust Addr Ref#:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-text" id="cust-addr-ref"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-label">Cust Addr Ver#:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-text" id="cust-addr-ver"></span>
+                                </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+          <div class="button-container" style="padding-bottom:0">
+            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right" style="padding-bottom:0">
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">ok</span>
+              </div>
+            </div>
+          </div>
+              </div>
+            </section>
+      <section class="add-item">
+      &nbsp;
+      </section>
+        </main>
+        </div>
+        
         <div id="Div1">
             
       <%--  CU: DS1 Customer Address  Display record(1 screen)                                                               --%>
@@ -717,4 +828,55 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+<style>
+#fkeys, #Div1 {
+  display: none !important;
+}
+
+#__Page_PopUp {
+  width: 650px !important;
+}
+#__Page_PopUp > tr:first-child {
+ display: none;
+}
+#__Page_PopUp .DdsInlinePopUpTitle {
+ height: 0;
+}
+.modal-dialog-container, #main-content {
+  width: 100% !important;
+}
+.modal-dialog-container {
+  margin: 0 auto;
+}
+.mdl-layout__content {
+  height: auto;
+}
+</style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*Hiding left menu*/
+                //$("#main-content").hide();
+                //$(".fkeys").hide();
+                $("#__Page_PopUp").css({"left": "23%", "height": "auto"});
+                /*Filling up text for modern screen fields*/
+                var old_fields = ['#CenPH__lb_RCDKEY__lb_1ALNB','#CenPH__lb_RCDKEY__lb_1ABST','#CenPH__lb_RCDKEY__lb_1ALTX','#CenPH__lb_RCDKEY__lb_1ACST','#CenPH__lb_RCDKEY__lb_1CGC_lb_','#CenPH__lb_RCDKEY__lb_1P5N_lb_','#CenPH__lb_RCDKEY__lb_1P6N_lb_'];
+                var new_fields = ['#customer-id','#customer-type','#customer-name','#mailing-list-indicator','#cust-addr-type','#cust-addr-ref','#cust-addr-ver'];
+                for (var i = 0; i < old_fields.length; i++) {
+                  $(new_fields[i]).text($.trim($(old_fields[i]).text()));
+                };
+
+/*                $("#customer-id").text($.trim($("#CenPH__lb_RCDKEY__lb_1ALNB").text()));
+                $("#customer-type").text($("#CenPH__lb_RCDKEY__lb_1ABST").text());
+                $("#customer-name").text($("#CenPH__lb_RCDKEY__lb_1ALTX").text());
+                $("#mailing-list-indicator").text($("#CenPH__lb_RCDKEY__lb_1ACST").text());
+                $("#cust-addr-type").text($("#CenPH__lb_RCDKEY__lb_1CGC_lb_").text());
+                $("#cust-addr-ref").text($("#CenPH__lb_RCDKEY__lb_1P5N_lb_").text());
+                $("#cust-addr-ver").text($("#CenPH__lb_RCDKEY__lb_1P6N_lb_").text());*/
+
+                $(".close-icon, .mdl-button").click(function(event) {
+                  /* Act on the event */
+                  _00('F12',event);
+                });
+            });
+        </script>
     </asp:Content>

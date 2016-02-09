@@ -2,9 +2,24 @@
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Material Icons'), local('MaterialIcons-Regular'), url(//Fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+	src: local('Material Icons'), local('MaterialIcons-Regular'), url('/../Fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2') format('woff2');
 }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
 #main-content {
 	width: 80%;
 	float: right;
@@ -493,6 +508,68 @@ img {
 	right: 11px;
 }
 /* Sign on page css ends here*/
+
+/* Search criteria css starts */
+.filter-search-container{
+ min-height: auto;
+    height: auto;
+}
+.filter-search-container .mdl-grid{
+ padding:0;
+}
+.filter-search-container .summary-table-title{
+ margin-top: 12px;
+ white-space: nowrap;
+ margin-right: 15px;
+}
+.filter-search-container .button-container{
+ width: 100%;
+ margin: 0;
+ padding: 0;
+ float: right;
+}
+.filter-search-container input{
+ background: #fff;
+ border: 1px solid #e5e5e5;
+ border-radius: 2px;
+ padding: 1px 3px 1px 5px;
+ font-size: 12px;
+ margin-right: 0;
+ margin-top: 10px;
+}
+.filter-search-container .button-container .mdl-button{
+ background: url('Images/btn_bg_big.png') repeat-x;
+ color: #fff;
+ height: auto;
+ padding: 12px 8px;
+ margin: 0;
+ width: 100%;
+ border-radius: 2px 5px 5px 2px;
+}
+.filter-search-container .mdl-cell{
+ margin: 0 8px 0;
+ padding: 0;
+}
+.filter-search-container .search-container{
+ margin: 0;
+}
+.filter-search-container .search-container .mdl-cell{
+ margin: 0;
+ position: relative;
+}
+.filter-search-container .search-container .filter-txt-cnt{
+ margin: 0 20px 0 0;
+}
+.filter-search-container .icon-textfield {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: -8px;
+    top: 10px;
+}
+/* Search criteria css ends */
+
 
 
 /* Modal CSS starts */
@@ -1050,6 +1127,10 @@ textarea {
 }
 .progress-bar .step-width {
 	width: 13%;
+}
+.filter-search-container{overflow: hidden;}
+.filter-search-container .mdl-cell{
+ margin: 0 6px 0;
 }
 }
  @media (min-width: 1024px) and (max-width: 1100px) {

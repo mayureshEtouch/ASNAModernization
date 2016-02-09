@@ -155,7 +155,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4" maxlength="20" >
+                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" >
 												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
@@ -1765,32 +1765,40 @@
             $(window).trigger(e);
             ASNA.Response.PushKey(document.forms[0], "PgDn", e);
         });
-		$(".model-number").on('click',function(){
+		// Model Number Modal screen
+		/* $(".model-number").on('click',function(){
 			var e =jQuery.Event("keydown");
 			e.which = 13;
 			var keydnIndex= $(this).parents("tr").index();
 			console.log(keydnIndex);
-			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").trigger(e);
-		});
-		/*$('body').on('click','.model-number', function(e) {
-		   var e =jQuery.Event("keydown");
-			e.which = 13;
-            e.ctrlKey = false;
-            e.altKey = false;
-			var keydnIndex= $(this).parents("tr").index();
-			console.log(e);
-			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").focus().trigger(e);
+			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
 			
 		});*/
+		$('body').on('click', '.model-number', function (event) {
+			var e =jQuery.Event("keydown");
+			e.which = 13;
+			var keydnIndex= $(this).parents("tr").index();
+			console.log(keydnIndex);
+			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
+           });
+			
+		
 		// From Location modal
-		$(".from-loc").on('click',function(){
+		/*$(".from-loc").on('click',function(){
 		   var e =jQuery.Event("keydown");
 		   e.which = 13;
 		   var keydnIndex= $(this).parents("tr").index();
 		   console.log(keydnIndex);
 		   $("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
 		   
-		  });
+		  });*/
+		  $('body').on('click', '.from-loc', function (event) {
+			var e =jQuery.Event("keydown");
+		   e.which = 13;
+		   var keydnIndex= $(this).parents("tr").index();
+		   console.log(keydnIndex);
+		   $("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
+		   });
 
 		// ASNA Hidden UI Table  index. Used for reference
         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
@@ -1944,20 +1952,15 @@
 
         }    
         $("#reset").click(function() {
-           $("#datatableValueInsert tbody").find("tr").each(function(i){
-				$(this).find("td:eq(0) select").val(""); 
-				$(this).find("td:eq(1) input").val("");
-				$(this).find("td:eq(2) input").val(""); 
-				$(this).find("td:eq(3) input").val("");
-				$(this).find("td:eq(4) span").text(""); 
-				$(this).find("td:eq(13) select").val("Active"); 
-				$(this).find("td:eq(8) span").text(""); 
-				$(this).find("td:eq(9) span").text(""); 
-				$(this).find("td:eq(10) span").text(""); 
-				$(this).find("td:eq(11) span").text(""); 
-				$(this).find("td:eq(5) input").removeAttr("disabled");
-				$(this).find("td:eq(5) input").val("");
-			});  
+              $("#datatableValue tbody").find("tr").each(function(i){
+                    $("[id$='lb_SFLRCD__lb_2AIST."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AECD."+(i)+"']").val("");
+                });
         });
 		
 		
