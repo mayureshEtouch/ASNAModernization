@@ -191,7 +191,6 @@
         #main-content {
             width: 100%;
         }
-
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -226,7 +225,10 @@
             $("#CenPH_RSignon_Password").attr("required", true);
             $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
             $('#CenPH_RSignon_Password').attr('data-msg-required', 'Password is required');
-            $("#CenPH_RSignon_User,#CenPH_RSignon_Password").on('keyup blur', function () {
+            $("#CenPH_RSignon_User,#CenPH_RSignon_Password").on('click keyup', function () {
+                $("#CenPH_RSignon_User,#CenPH_RSignon_Password").on('blur', function () {
+                    validateInput(this);
+                });
                 validateInput(this);
             });
         });
