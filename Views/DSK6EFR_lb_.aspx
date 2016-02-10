@@ -107,7 +107,14 @@
                 </div>
             </section>
         </main>
-        <div class="confirmation-outer-conatiner simplePopup">
+        <%--        <div class="confirmation-outer-conatiner simplePopup">
+            <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>--%>
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 1; display: none;">
             <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -766,7 +773,7 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
                         if ($(wTermSelector + count).attr("value") == "" || ($(wTermSelector + count).attr("value") && $(wTermSelector + count).attr("value").length > 0)) {
-                            termBox = '<i class="material-icons icon-textfield warranty-term">search</i><input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" value=' + $(wTermSelector + count).val() + '>';
+                            termBox = '<i class="material-icons icon-textfield warranty-term">search</i><input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '>';
                         } else {
                             termBox = $(wTermSelector + count).html();
                         }
@@ -797,23 +804,41 @@
             $('body').on('click', '.warranty-term', function (event) {
                 _00('Enter', event);
             });
-			$('body').on('click', '#previous', function (event) {
-                _00('F12',event);
+            $('body').on('click', '#previous', function (event) {
+                _00('F12', event);
+            });
+            $('body').on('click', '#next', function (event) {
+                _00('Enter', event);
             });
             // Handle the confirm prompt
+            // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-                $(".confirmation-outer-conatiner").simplePopup();
+                $(".confirmation-outer-conatiner").show();
             } else {
                 $(".confirmation-outer-conatiner").hide();
             }
-            $("#yes").click(function () {
+            $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
             });
-            $("#no").click(function () {
+            $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-                $(".confirmation-outer-conatiner").simplePopup();
+                _00('Enter', event);
             });
+
+            //if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+            //    $(".confirmation-outer-conatiner").simplePopup();
+            //} else {
+            //    $(".confirmation-outer-conatiner").hide();
+            //}
+            //$("#yes").click(function () {
+            //    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+            //    _00('Enter', event);
+            //});
+            //$("#no").click(function () {
+            //    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+            //    $(".confirmation-outer-conatiner").simplePopup();
+            //});
         }); // document ready end
         $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>
