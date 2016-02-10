@@ -733,6 +733,10 @@
                 var row = $("#customerName tbody tr.selected");
                 selectCusotmer(row, "1", event);
             });
+            $("#searchByAddress").click(function (event) {
+                _00('F9', event);
+            });
+            
         });
     </script>
 </asp:Content>
