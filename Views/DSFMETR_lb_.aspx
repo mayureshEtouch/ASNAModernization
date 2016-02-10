@@ -1466,7 +1466,7 @@
               Protect="79" 
               PositionCursor="34" 
               EditCode="Z" 
-              Compare="GT 0" 
+              Compare="GE 0" 
               TabIndex="4"  />
             <mdf:DdsCharField id="_lb_SFLRCD__lb_2AXTX" runat="server" style="position: absolute; left: 244px; top: 0px; width: 181px"
               CssClass="DdsCharField"
