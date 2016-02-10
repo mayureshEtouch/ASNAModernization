@@ -1122,18 +1122,6 @@
         #special-instructions span {
             display: block !important;
         }
-
-        .OverlayPopupBackground {
-            opacity: 0.7;
-            display: none;
-            background: #000;
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {

@@ -22,7 +22,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-	
+	<div class="OverlayPopupBackground"></div>
 	<!-- Modified HTML code starts here -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
@@ -378,9 +378,10 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col pull-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
-                                </div>                               
+									</div>                               
                                 
-                            </div>
+								</div>
+							 </div>
                              <div class="button-container showConfirm">
                              <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col">
@@ -399,8 +400,7 @@
                 </section>
 			
 			 </main>
-        <div id="modal" class="simplePopup"></div>
-		<div id="confirmprompt" class="confirmation-outer-conatiner simplePopup"> 
+		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;"> 
 			<i class="material-icons md-15 md-light">help</i> 
 			<span class="confirmation-text">Do you want to continue</span>
 		  <div class="button-container">
@@ -1868,7 +1868,8 @@
             // if Current stateof page is Review /Confirm
             // Hide New Edit UI Table
             $("#datatableValueInsert, .nextStep").hide();
-			$('#confirmprompt').simplePopup();
+			$(".OverlayPopupBackground").show();
+            $("#confirmprompt").show();
 			
 			var yesbutton = $("#yes");
             var nobutton = $("#no");
@@ -1878,7 +1879,8 @@
                    $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
 				   // Show New Confirm / Review UI Table 
 					$("#datatableValue, .showConfirm").show();
-                   $('#confirmprompt').hide();
+                   $(".OverlayPopupBackground").hide();
+				   $("#confirmprompt").hide();
                });
             
             
