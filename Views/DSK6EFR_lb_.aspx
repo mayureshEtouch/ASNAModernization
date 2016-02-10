@@ -773,7 +773,7 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
                         if ($(wTermSelector + count).attr("value") == "" || ($(wTermSelector + count).attr("value") && $(wTermSelector + count).attr("value").length > 0)) {
-                            termBox = '<i class="material-icons icon-textfield warranty-term">search</i><input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '>';
+                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '>';
                         } else {
                             termBox = $(wTermSelector + count).html();
                         }

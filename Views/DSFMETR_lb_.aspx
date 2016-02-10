@@ -144,7 +144,6 @@
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" TabIndex="2" maxlength="3" >
-												<i class="material-icons icon-textfield from-loc">search</i> 
                                               </div>
                                             </td>
                                             <td>
@@ -156,7 +155,6 @@
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" >
-												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
 											 <td>
@@ -199,7 +197,6 @@
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" TabIndex="8" maxlength="3">
-												<i class="material-icons icon-textfield from-loc">search</i>
                                               </div>
                                             </td>
                                             <td>
@@ -210,7 +207,6 @@
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="10" maxlength="20">
-												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
 											 <td>
@@ -253,7 +249,6 @@
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" TabIndex="14" maxlength="3">
-												<i class="material-icons icon-textfield from-loc">search</i>
                                               </div>
                                             </td>
                                             <td>
@@ -264,7 +259,6 @@
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
                                                 <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="16" maxlength="20">
-												<i class="material-icons icon-textfield model-number">search</i>
                                               </div>
                                             </td>
 											 <td>
