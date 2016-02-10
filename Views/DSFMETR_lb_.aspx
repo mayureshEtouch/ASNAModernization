@@ -115,9 +115,9 @@
                                     <thead>
                                         <tr>
                                             <th style="width: 8%">Del <br />Status</th>
-                                            <th style="width: 10%">From <br />Loc</th>
+                                            <th style="width: 7%">From <br />Loc</th>
                                             <th style="width: 4%">Qty</th>
-                                            <th style="width: 11%">Model <br />Number</th>
+                                            <th style="width: 14%">Model <br />Number</th>
 											 <th style="width: 12%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
                                             <th style="width: 6%">Inst <br />Code</th>
@@ -143,18 +143,18 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="2" maxlength="3" >
+                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="2" maxlength="3" >
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="3">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="3" maxlength="3">
                                                 
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" >
+                                                <input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" >
                                               </div>
                                             </td>
 											 <td>
@@ -196,17 +196,17 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="8" maxlength="3">
+                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="8" maxlength="3">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="9">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="9" maxlength="3">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="10" maxlength="20">
+                                                <input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="10" maxlength="20">
                                               </div>
                                             </td>
 											 <td>
@@ -248,17 +248,17 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="14" maxlength="3">
+                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="14" maxlength="3">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="15">
+                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="15" maxlength="3">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: left;" TabIndex="16" maxlength="20">
+                                                <input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="16" maxlength="20">
                                               </div>
                                             </td>
 											 <td>
@@ -1760,24 +1760,27 @@
             ASNA.Response.PushKey(document.forms[0], "PgDn", e);
         });
 		// Model Number Modal screen
-		/* $(".model-number").on('click',function(){
+		
+		$(".model-number").on("keyup change", function () {
+			var keydnIndex= $(this).parents("tr").index();
+			var el = $(".model-number")[keydnIndex];
+			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+		});
+		/* $('body').on('click', '.model-number', function (event) {
 			var e =jQuery.Event("keydown");
 			e.which = 13;
 			var keydnIndex= $(this).parents("tr").index();
 			console.log(keydnIndex);
 			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
-			
-		});*/
-		$('body').on('click', '.model-number', function (event) {
-			var e =jQuery.Event("keydown");
-			e.which = 13;
-			var keydnIndex= $(this).parents("tr").index();
-			console.log(keydnIndex);
-			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
-           });
+           });*/
 			
 		
 		// From Location modal
+		$(".from-loc").on("keyup change", function () {
+			var keydnIndex= $(this).parents("tr").index();
+			var el = $(".from-loc")[keydnIndex];
+			$("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+		});
 		/*$(".from-loc").on('click',function(){
 		   var e =jQuery.Event("keydown");
 		   e.which = 13;
@@ -1786,13 +1789,7 @@
 		   $("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
 		   
 		  });*/
-		  $('body').on('click', '.from-loc', function (event) {
-			var e =jQuery.Event("keydown");
-		   e.which = 13;
-		   var keydnIndex= $(this).parents("tr").index();
-		   console.log(keydnIndex);
-		   $("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
-		   });
+		 
 
 		// ASNA Hidden UI Table  index. Used for reference
         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
@@ -1818,6 +1815,7 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+					$(this).find("td:eq(2) input").ForceNumericOnly();
                 });   
             }
         });
@@ -1841,6 +1839,7 @@
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
                     $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
 					//alert($("[id$='lb_SFLRCD__lb_2SEL.']").val() + "second");
+					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericOnly();
                 });
             });
 			//alert($("#datatableValueInsert").is(":visible"));
@@ -1858,6 +1857,7 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+					$(this).find("td:eq(2) input").ForceNumericOnly();
                 });
 			}
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table
