@@ -1117,6 +1117,10 @@
         #main-content {
             width: 100%;
         }
+
+        #special-instructions span {
+            display: block !important;
+        }
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
@@ -1211,7 +1215,7 @@
                 $("#CenPH_CEU").html($("#CenPH__lb_SFLCTL__lb_CEUTX").html()); // Read only
                 $("#CenPH_CEW").html($("#CenPH__lb_SFLCTL__lb_CEWTX").html()); // Read only
                 $("#CenPH_1F").html($("#CenPH__lb_SFLCTL__lb_1FLST").html()); //Read only
-                $("#requestdate").html($("#CenPH__lb_SFLCTL_VCBQDT").val());
+                $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
                 $("#expectedDate").html($("#CenPH__lb_SFLCTL_V1AXDT").text());
             }
             //Special instructions section 
@@ -1220,6 +1224,7 @@
                 $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         $($(this).children()).addClass("sp-inst");
+                        //$($(this).children()).css({"display": "block !important"});
                         $($(this).children()).removeClass("DdsCharField");
                         $($(this).children()[0]).appendTo($("#special-instructions"));
                     }
