@@ -22,6 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
     <!-- Modified HTML code starts here -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
@@ -114,7 +115,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>--%>
-        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 1; display: none;">
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -750,6 +751,18 @@
         .mdl-data-table td .term-input {
             width: 170px;
         }
+
+        .OverlayPopupBackground {
+            opacity: 0.7;
+            display: none;
+            background: #000;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -813,8 +826,10 @@
             // Handle the confirm prompt
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
             } else {
+                $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
             $("#yes").click(function (event) {

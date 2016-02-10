@@ -22,6 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -189,7 +190,7 @@
             </section>
         </main>
         <div id="modal" class="simplePopup"></div>
-        <div id="confirmprompt" class="confirmation-outer-conatiner simplePopup">
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light">help</i>
             <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
@@ -1149,6 +1150,18 @@
             border: 0px !important;
             background-color: rgb(252, 252, 252) !important;
         }
+
+        .OverlayPopupBackground {
+            opacity: 0.7;
+            display: none;
+            background: #000;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -1246,8 +1259,10 @@
             }
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-                $(".confirmation-outer-conatiner").simplePopup();
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
             } else {
+                $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
             $("#yes").click(function (event) {

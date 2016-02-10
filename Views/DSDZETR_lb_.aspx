@@ -22,6 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="modernized-header-container">
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -201,7 +202,7 @@
             </section>
         </main>
         <div id="modal" class="simplePopup"></div>
-        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 1; display: none;">
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -1121,6 +1122,18 @@
         #special-instructions span {
             display: block !important;
         }
+
+        .OverlayPopupBackground {
+            opacity: 0.7;
+            display: none;
+            background: #000;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
@@ -1248,9 +1261,11 @@
                 setReadOnlyView();
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").hide();
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").show();
-                $(".confirmation-outer-conatiner").show();//simplePopup().addClass("confirm");
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
             } else {
                 $(".confirmation-outer-conatiner").hide();
+                $(".OverlayPopupBackground").hide();
             }
             $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
