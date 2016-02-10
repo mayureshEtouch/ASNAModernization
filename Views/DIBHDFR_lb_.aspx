@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DIBHDFR_lb_.aspx.cs" Inherits="conns.DIBHDFR_lb_Form" MasterPageFile="~/Themes/Current/MasterPage.master" %>
 
-<%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
     <%-- Migrated on 1/26/2016 at 1:07 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -100,7 +100,7 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--12-col pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="createCustomer" onclick="_00('F6',event);">Create Customer</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>
+                                    <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>--%>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +142,7 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByAddress">Search by Address</button>
+                                    <%--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByAddress">Search by Address</button>--%>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button>
                                 </div>
                             </div>
@@ -647,6 +647,12 @@
                 var row = $("#customerName tbody tr.selected");
                 selectCusotmer(row, "1", event);
             });
+            //Set phone number fields in read only input boxes
+            if ($("#CenPH__lb_SFLCTL__lb_2ZTNB").length > 0 && $("#CenPH__lb_SFLCTL__lb_2ZTNB").text().length > 0) {
+                $("#number1").val($("#CenPH__lb_SFLCTL__lb_2ZTNB").text().split("/")[0]);
+                $("#number2").val($("#CenPH__lb_SFLCTL__lb_2ZTNB").text().split("/")[1].split("-")[0]);
+                $("#number3").val($("#CenPH__lb_SFLCTL__lb_2ZTNB").text().split("/")[1].split("-")[1]);
+            }
         });
     </script>
 </asp:Content>
