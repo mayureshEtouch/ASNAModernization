@@ -54,30 +54,34 @@
                         <li class="progress-bar-divider">
 
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
                         <div class="clear"></div>
                     </ul>
                 </div>
             </section>
-            <section class="table-data-content-container search-field-container">
+            <section class="table-data-content-container filter-field-container">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container table-container-search">
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="summary-table-title">Filter by: Name</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col">
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="number" class="mdl-textfield__input input-big"><span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-
-                                    </div>
-                                </div>
-                                <div class="mdl-cell mdl-cell--2-col pull-right button-container">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</button>
-                                </div>
-
-
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                        			<span class="summary-table-title">Filter by:</span>
+                        		</div>
+								<div class="mdl-cell mdl-cell--10-col search-container">
+									<div class="content-grid mdl-grid">
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Name</span>
+                        				</div>
+                        				<div class="mdl-cell mdl-cell--11-col">
+                        					<input type="text" id="number" class="mdl-textfield__input">
+											<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                        				</div>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                        			<div class="button-container">
+         								<button class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</button>
+        							</div>
+                        		</div>
                             </div>
                         </div>
 
@@ -621,6 +625,86 @@
         tr.selected {
             background-color: #f1f1f1;
         }
+		
+@media (min-width: 840px){
+.filter-search-container .button-cnt-container {
+    width: calc(8% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(8% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(84% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--1-col{
+	width: calc(10% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--11-col{
+	width: calc(85% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--3-col{
+	width: calc(22% - 0px);
+}
+}
+@media (max-width: 839px) and (min-width: 768px) {
+.filter-search-container .button-cnt-container {
+    width: calc(8% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(8% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(84% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--1-col{
+	width: calc(10% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--11-col{
+	width: calc(85% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--3-col{
+	width: calc(22% - 0px);
+}
+.button-container .mdl-cell {
+    margin: 8px;
+    width: calc(47.6% - 0px);
+}
+}
+@media (max-width: 767px) and (min-width: 320px) {
+.filter-search-container .button-cnt-container {
+    width: calc(100% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(100% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(98% - 0px);
+}
+.filter-search-container .summary-table-title{
+	text-align: left;
+}
+.filter-search-container .button-container{
+	margin: 10px;
+}
+.filter-search-container .button-container .mdl-button{
+	border-radius: 2px;
+	height: auto;
+	padding: 6px 8px;
+}
+.filter-search-container .search-container .mdl-cell--1-col{
+	width: calc(20% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--11-col{
+	width: calc(78% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--3-col{
+	width: calc(78% - 0px);
+}
+.button-container .mdl-cell {
+    margin: 8px;
+    width: calc(46.6% - 0px);
+}
+}
     </style>
     <script type="text/javascript">
         $(document).ready(function () {

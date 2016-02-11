@@ -33,7 +33,10 @@
                                     <span class="heading-h1">Select Location</span> </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right"> 
                                     <!-- Navigation --> 
-                                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSARSRR</span></div>
+                                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSARSRR</span>
+									<i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span>
+									<i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+							</div>
                     </div>
             </section>
             <section class="progress-bar">
@@ -52,41 +55,53 @@
                         <li class="progress-bar-divider">
 
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
                         <div class="clear"></div>
                     </ul>
                 </div>
             </section>
-						<section class="table-data-content-container search-field-container" style="margin:16px 0;">
-		<div class="table-data-wrapper">
-				<div class="table-data-maincontainer">
-						<div class="table-container table-container-search">
-										<div class="filter-by"> <span class="summary-table-title">Filter by:</span></div>
-										<div class="search-result">
-														<div> <span class="summary-table-title">Co</span></div>
-												<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-														<input type="text"  id="number1" class="mdl-textfield__input">
-														<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
-												</div>
-										<div><span class="summary-table-title">Loc</span> </div>
-												<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-														<input type="text"  id="number2" class="mdl-textfield__input">
-														<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span> </div>
-										<div> <span class="summary-table-title">Dist</span> </div>
-												<div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-														<input type="text"  id="number3" class="mdl-textfield__input">
-														<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span> </div>
-										</div>
-										
-										<div class="button-container">
-										<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</button>
-										</div>
+			<section class="table-data-content-container filter-field-container" style="margin:16px 0;">
+				<div class="table-data-wrapper">
+					<div class="table-data-maincontainer">
+						<div class="table-container filter-search-container">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                        			<span class="summary-table-title">Filter by:</span>
+                        		</div>
+								<div class="mdl-cell mdl-cell--10-col search-container">
+									<div class="content-grid mdl-grid">
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Co</span>
+                        				</div>
+                        				<div class="mdl-cell mdl-cell--3-col">
+                        					<input type="text"  id="number1" class="mdl-textfield__input">
+											<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                        				</div>
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Loc</span>
+                        				</div>
+                        				<div class="mdl-cell mdl-cell--3-col">
+                        					<input type="text"  id="number2" class="mdl-textfield__input">
+											<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                        				</div>
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Dist</span>
+                        				</div>
+                        				<div class="mdl-cell mdl-cell--3-col">
+                        					<input type="text"  id="number3" class="mdl-textfield__input">
+											<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
+                        				</div>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                        			<div class="button-container">
+         								<button class="mdl-button mdl-button--accent" id="search">Search</button>
+        							</div>
+                        		</div>
+							</div>
 						</div>
+					</div>
 				</div>
-		</div>
-</section>
+			</section>
             <section class="table-data-content-container spacer-container-bottom">
                     <div class="table-data-wrapper">
                             <div class="table-data-maincontainer">
@@ -108,8 +123,7 @@
                                     </div>
                                     <div class="button-container">
                                             <div class="content-grid mdl-grid">
-                                                    
-                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
+                                                    <div class="mdl-cell mdl-cell--12-col-desktop pull-right modal-button-container">
                                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
                                                     </div>
                                             </div>
@@ -513,7 +527,11 @@
 		var loc;
         $(document).ready(function () {
 			
-			 $("[id='number']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val());
+			$("[id='number']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val());
+			 
+			// Set date and time
+            $("[name='date']").text($("[id$=CenPH_DdsConstant12]").text());
+            $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
 			
             /* script for table row starts here */
             var count = 0;
@@ -615,6 +633,12 @@
 .search-field-container .summary-table-title {
 	margin-top: 9px;
 }
+.order-detail-table-data .button-container .mdl-cell, .table-data-content-container .button-container .mdl-cell{
+	margin: 3px 8px;
+}
+.form-data-wrapper .button-container .mdl-cell, .button-container .mdl-cell{
+	padding: 0 0 3px;
+}
 /* new 2 feb 2016 class ends here */
 
 /* Media queries starts here */
@@ -641,6 +665,85 @@ and (min-width : 1224px) {
 
 	.search-field-container .search-result .mdl-textfield {
 		width: 90px;
+}
+}
+@media (min-width: 840px){
+.filter-search-container .button-cnt-container {
+    width: calc(8% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(8% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(84% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--1-col{
+	width: calc(8% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--11-col{
+	width: calc(70% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--3-col{
+	width: calc(22% - 0px);
+}
+}
+@media (max-width: 839px) and (min-width: 768px) {
+.filter-search-container .button-cnt-container {
+    width: calc(8% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(8% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(84% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--1-col{
+	width: calc(8% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--11-col{
+	width: calc(70% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--3-col{
+	width: calc(22% - 0px);
+}
+.button-container .mdl-cell {
+    margin: 8px;
+    width: calc(100% - 0px);
+}
+}
+@media (max-width: 767px) and (min-width: 320px) {
+.filter-search-container .button-cnt-container {
+    width: calc(100% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(100% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(98% - 0px);
+}
+.filter-search-container .summary-table-title{
+	text-align: left;
+}
+.filter-search-container .button-container{
+	margin: 10px;
+}
+.filter-search-container .button-container .mdl-button{
+	border-radius: 2px;
+	height: auto;
+	padding: 6px 8px;
+}
+.filter-search-container .search-container .mdl-cell--1-col{
+	width: calc(20% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--11-col{
+	width: calc(78% - 0px);
+}
+.filter-search-container .search-container .mdl-cell--3-col{
+	width: calc(78% - 0px);
+}
+.button-container .mdl-cell {
+    margin: 8px;
+    width: calc(100% - 0px);
 }
 }
 /* Media queries ends here */
