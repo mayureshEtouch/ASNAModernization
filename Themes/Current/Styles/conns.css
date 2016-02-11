@@ -306,7 +306,7 @@ img {
 	vertical-align: middle;
 }
 .add-item .content-grid .mdl-cell {
-	margin-bottom: 5px;
+	margin-bottom: 0;
 	padding-left: 34px;
 	padding-top: 15px;
 }
@@ -725,7 +725,7 @@ img {
 	font-weight: normal;
 }
 .icon-container {
-	margin: 0 13px 5px 0;
+	margin: 0 13px 0 0;
 }
 .spacer-container-bottom {
 	margin-bottom: 48px;
