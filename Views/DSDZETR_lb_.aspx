@@ -49,8 +49,6 @@
                         <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
                         <li class="progress-bar-divider"></li>
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider"></li>
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -90,7 +88,7 @@
                 </div>
             </section>
             <section class="form-data">
-                <div class="form-data-wrapper" style="margin-bottom: 50px;">
+                <div class="form-data-wrapper" style="margin-bottom: 50px;padding-bottom:0;">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid">
@@ -189,7 +187,7 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop" style="margin-left:9px;">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
