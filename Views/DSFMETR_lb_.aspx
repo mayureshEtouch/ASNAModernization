@@ -1970,7 +1970,7 @@
 		
     </script>   
     <style>
-        #span-header, #screen_title, #fkeys {
+        #span-header, #screen_title, #fkeys, #Div1, #diagnostics {
             display: none;
         }
 		.icon-textfield {

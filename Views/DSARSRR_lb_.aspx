@@ -123,6 +123,9 @@
                                     </div>
                                     <div class="button-container">
                                             <div class="content-grid mdl-grid">
+													 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage" onclick="_00('F12',event);">Previous</span>
+													</div>
                                                     <div class="mdl-cell mdl-cell--12-col-desktop pull-right modal-button-container">
                                                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
                                                     </div>
@@ -595,6 +598,9 @@
 		 $("[id='number2']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val())
 		 $("[id='number3']").val($("[id='CenPH__lb_SFLCTL__lb_2ACCD']").val())
 		 //$( ".close-icon" ).on( "click", function(){ $("input[title='F12 : Exit.']")} );
+		  $('body').on('click', '#exitPage', function (event) {
+                _00('F12', event);
+            });
         
 </script>
 <style>

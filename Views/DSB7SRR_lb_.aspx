@@ -30,72 +30,73 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title logo-icon"></span>
-            <!--<span class="mdl-layout-heading">StoreFront</span>-->
-            <div class="mdl-layout-spacer"></div>
-            <span class="close-icon"><i class="material-icons md-15">close</i></span>
-        </div>
-    </header>
-    <main class="mdl-layout__content">
-        <section class="time-date">
-            <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col">
-                    <!-- Title -->
-                    <span class="heading-h1">Select Installations</span>
-                </div>
-                <div class="mdl-cell mdl-cell--4-col pull-right">
-                    <!-- Navigation -->
-                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSB7SRR</span>
-                </div>
-            </div>
-        </section>
-        <section class="order-summary">
-            <div class="order-summary-wrapper">
-                <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--12-col">
-                        <span class="summary-title">Category:</span>
-                        <span class="summary-txt" id="install-category">00017 Temp. # for store 30</span>
-                    </div>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title logo-icon"></span>
+				<!--<span class="mdl-layout-heading">StoreFront</span>-->
+				<div class="mdl-layout-spacer"></div>
+				<span class="close-icon"><i class="material-icons md-15">close</i></span>
+			</div>
+		</header>
+		<main class="mdl-layout__content">
+			<section class="time-date">
+				<div class="content-grid mdl-grid">
+					<div class="mdl-cell mdl-cell--8-col">
+						<!-- Title -->
+						<span class="heading-h1">Select Installations</span>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col pull-right">
+						<!-- Navigation -->
+						<i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSB7SRR</span>
+					</div>
+				</div>
+			</section>
+			<section class="order-summary">
+				<div class="order-summary-wrapper">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col">
+							<span class="summary-title">Category:</span>
+							<span class="summary-txt" id="install-category">00017 Temp. # for store 30</span>
+						</div>
 
 
-                </div>
-            </div>
-        </section>
+					</div>
+				</div>
+			</section>
 
 
-        <section class="table-data-content-container spacer-container-bottom">
-            <div class="table-data-wrapper">
-                <div class="table-data-maincontainer">
-                    <div class="table-container" style="overflow: auto;">
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="installations">
-                            <thead>
-                                <tr>
-                                    <th>Cde</th>
-                                    <th>L</th>
-                                    <th>Description</th>
-                                    <th class="pull-right">Price.$</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="button-container">
-                        <div class="content-grid mdl-grid">
+			<section class="table-data-content-container spacer-container-bottom">
+				<div class="table-data-wrapper">
+					<div class="table-data-maincontainer">
+						<div class="table-container" style="overflow: auto;">
+							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="installations">
+								<thead>
+									<tr>
+										<th>Cde</th>
+										<th>L</th>
+										<th>Description</th>
+										<th class="pull-right">Price.$</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						<div class="button-container">
+							<div class="content-grid mdl-grid">
 
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-installation" onclick="_00('Enter',event);">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
+									<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-installation" onclick="_00('Enter',event);">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    </main>
+		</main>
     </div>
     <div id="Div1">
 
@@ -526,12 +527,41 @@
         tr.selected {
             background-color: #f1f1f1;
         }
+		#__Page_PopUp {
+            width: 450px !important;
+        }
+
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 0;
+            }
+
+        #selectWarranty tbody tr td:last-child {
+            display: none;
+        }
+
+        .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
             // Set category text
             $("#install-category").html($("#CenPH__lb_SFLCTL__lb_2AXCD").html());
             generateTableAndApplyInfiniteScroll("installations", "CenPH__lb_SFLRCD", "NONE", "submit-installation"); // Table ID, Div ID to copy records from
-        });
+			
+			$('.close-icon').click(function () {
+                $("#submit-installation").trigger('click');
+            });
+		});
     </script>
 </asp:Content>
