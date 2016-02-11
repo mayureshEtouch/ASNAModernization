@@ -425,7 +425,7 @@ img {
 	padding: 0;
 }
 .order-detail-table-data .button-container .mdl-cell, .table-data-content-container .button-container .mdl-cell {
-	margin: 8px;
+	margin: 8px 8px 3px 8px;
 }
 /* table data section css ends here */
 
@@ -684,6 +684,7 @@ img {
 	display: block;
 	border-radius: 47px;
 	text-align: center;
+	margin-top: 13px;
 }
 .circle-separator span {
 	color: #fff;
