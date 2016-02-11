@@ -338,6 +338,9 @@ img {
 	margin: 0 5px;
 	padding: 8px 0 10px;
 }
+.form-data-wrapper .button-container  .mdl-cell, .button-container .mdl-cell{
+	padding: 10px 0 3px;
+}
 .button-container.showConfirm {
 	margin-right: -2px;
 }
@@ -509,66 +512,7 @@ img {
 }
 /* Sign on page css ends here*/
 
-/* Search criteria css starts */
-.filter-search-container{
- min-height: auto;
-    height: auto;
-}
-.filter-search-container .mdl-grid{
- padding:0;
-}
-.filter-search-container .summary-table-title{
- margin-top: 12px;
- white-space: nowrap;
- margin-right: 15px;
-}
-.filter-search-container .button-container{
- width: 100%;
- margin: 0;
- padding: 0;
- float: right;
-}
-.filter-search-container input{
- background: #fff;
- border: 1px solid #e5e5e5;
- border-radius: 2px;
- padding: 1px 3px 1px 5px;
- font-size: 12px;
- margin-right: 0;
- margin-top: 10px;
-}
-.filter-search-container .button-container .mdl-button{
- background: url('Images/btn_bg_big.png') repeat-x;
- color: #fff;
- height: auto;
- padding: 12px 8px;
- margin: 0;
- width: 100%;
- border-radius: 2px 5px 5px 2px;
-}
-.filter-search-container .mdl-cell{
- margin: 0 8px 0;
- padding: 0;
-}
-.filter-search-container .search-container{
- margin: 0;
-}
-.filter-search-container .search-container .mdl-cell{
- margin: 0;
- position: relative;
-}
-.filter-search-container .search-container .filter-txt-cnt{
- margin: 0 20px 0 0;
-}
-.filter-search-container .icon-textfield {
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    position: absolute;
-    right: -8px;
-    top: 10px;
-}
-/* Search criteria css ends */
+
 
 
 
@@ -1081,6 +1025,63 @@ textarea {
 }
 /* Error message CSS ends */
 
+/* Search criteria css starts */
+.filter-field-container .filter-search-container{
+	min-height: auto;
+    height: auto;
+}
+.filter-search-container .mdl-grid{
+	padding:0;
+}
+.filter-search-container .summary-table-title{
+	white-space: nowrap;
+	margin: 12px 10px 0;
+}
+.filter-search-container .button-container{
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+.filter-search-container input{
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+	padding: 1px 3px 1px 5px;
+	font-size: 12px;
+	margin-right: 0;
+	margin-top: 10px;
+}
+.filter-search-container .button-container .mdl-button{
+	background: url(../Images/btn_bg_big.png) repeat-x;
+	color: #fff;
+	height: 40px;
+	padding: 12px 10px;
+	margin: 0;
+	border-radius: 2px 5px 5px 2px;
+}
+.filter-search-container .mdl-cell{
+	margin: 0 0 0;
+	padding: 0;
+}
+.filter-search-container .search-container{
+	margin: 0;
+}
+.filter-search-container .search-container .mdl-cell{
+	margin: 0;
+	position: relative;
+}
+.filter-search-container .search-container .filter-txt-cnt{
+	margin: 0 20px 0 0;
+}
+.filter-search-container .icon-textfield {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: -8px;
+    top: 10px;
+}
+/* Search criteria css ends */
 
 /* Datepicker CSS starts */
 .ui-widget {
@@ -1141,9 +1142,6 @@ textarea {
 	width: 13%;
 }
 .filter-search-container{overflow: hidden;}
-.filter-search-container .mdl-cell{
- margin: 0 6px 0;
-}
 }
  @media (min-width: 1024px) and (max-width: 1100px) {
 #wrapper,  #span-content,  #content,  #main-content {
