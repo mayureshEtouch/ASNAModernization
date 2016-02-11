@@ -683,9 +683,6 @@ and (min-width : 1224px) {
 .filter-search-container .search-container .mdl-cell--11-col{
 	width: calc(70% - 0px);
 }
-.filter-search-container .search-container .mdl-cell--5-col{
-	width: calc(25% - 0px);
-}
 .filter-search-container .search-container .mdl-cell--3-col{
 	width: calc(22% - 0px);
 }
