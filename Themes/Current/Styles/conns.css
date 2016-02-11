@@ -1083,6 +1083,60 @@ textarea {
 }
 /* Search criteria css ends */
 
+/* Fixed Table Head css starts */
+.fixed-table-container td {
+		border-bottom: 1px solid #e5e5e5;
+		padding: 5px 10px;
+    }
+.fixed-table-container td + td {border-left: 1px solid #e5e5e5;}
+.fixed-table-container th {padding: 0 10px;border-bottom: 1px solid #e5e5e5;}
+.header-background {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 57%, #eff0f1 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 57%, #eff0f1 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 57%, #eff0f1 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eff0f1', GradientType=0 ); /* IE6-9 */
+}
+.fixed-table-container {
+	width: 100%;
+	height: 312px;
+	margin: 0px auto 10px;
+	background-color: white; /* above is decorative or flexible */
+	position: relative; /* could be absolute or relative */
+	padding-top: 35px; /* height of header */
+}
+.fixed-table-container-inner {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+}
+.header-background {
+	background-color: #D5ECFF;
+	height: 35px; /* height of header */
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+.fixed-table-container table {
+	background-color: white;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.fixed-table-container .th-inner {
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	line-height: 35px; /* height of header */
+	text-align: left;
+	border-left: 1px solid #e5e5e5;
+	padding-left: 11px;
+	margin-left: -11px;
+}
+.fixed-table-container .first .th-inner {border-left: none;}
+/* Fixed Table Head css Ends */
+
 /* Datepicker CSS starts */
 .ui-widget {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif !important;
