@@ -55,9 +55,7 @@
                         <li class="white-to-gray-bullet"></li>
 
                         <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider-first"></li>
-
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                        
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -1237,10 +1235,16 @@
                 });
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#fcfcfc");
+				$("#orderPayment tbody tr").hover(function() {
+					$(this).addClass('DdsSubfileCandidateCurrentRecord');
+				}, function() {
+					$(this).removeClass('DdsSubfileCandidateCurrentRecord');
+				  });
+				
             }
             generateTable("top-to-bottom");
             //Handle Page Up and Page Down events
-            $('body').on('keyup', function (e) {
+            $('body').on('keyup', function (event) {
                 var keycode = event.keyCode || event.which;
                 if (keycode === 33) {
                     _00("PgUp", event);
@@ -1251,7 +1255,7 @@
                 }
                 return;
             });
-            var selectCusotmer = function (row, value) {
+            var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
                 $("#" + a[0] + "\\." + a[1]).val(value);

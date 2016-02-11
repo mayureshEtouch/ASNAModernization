@@ -50,8 +50,7 @@
                         <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 4</span> <span class="step-txt-selected">Enter Order Warranty</span> </li>
                         <li class="progress-bar-divider-first">
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider">
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                        
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -751,18 +750,6 @@
         .mdl-data-table td .term-input {
             width: 170px;
         }
-
-        .OverlayPopupBackground {
-            opacity: 0.7;
-            display: none;
-            background: #000;
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -774,7 +761,7 @@
             $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html());
             $("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html());
             //Generate warranty term table
-            var generateTable = function () {
+            var generateTable1 = function () {
                 var mNumberSelector = "#CenPH__lb_SFLRCD__lb_1AXTX\\.",
                     srNumberSelector = "#CenPH__lb_SFLRCD__lb_1A8TX\\.",
                     mwExpDateSelector = "#CenPH__lb_SFLRCD_VRBADT\\.",
@@ -808,12 +795,37 @@
                 $("#warranty-term-list tbody tr:even").css("background-color", "#fff");
                 $("#warranty-term-list tbody tr:odd").css("background-color", "#fcfcfc");
             }
-            generateTable();
+            generateTable1();
+			
             //Set input term value to original term text box
-            $('body').on('change keyup', 'input.term-input', function () {
-                var targetInputBox = $(this).data("term");
-                $(targetInputBox).val($(this).val());
+			
+
+            $('body').on('change keyup', 'input.term-input', function (e) {
+				if(e.which != 115){
+					var targetInputBox = $(this).data("term");
+					$(targetInputBox).val($(this).val());
+				}
+				
             });
+			
+			$("body").on('keydown','input.term-input',function(event){
+			var targetInputBox = $(this).data("term");
+				if(event.which == 115){
+			   setTimeout(function(){dealycode(targetInputBox);},1000);
+				return false;
+				}
+			});
+			function dealycode(targT){
+				 var inpe =jQuery.Event("keydown");
+					inpe.which = 13;
+					//var keydnIndex= $(this).parents("tr").index();
+					
+					index = targT.split(".")[1];
+					$("#CenPH__lb_SFLRCD_"+index).find("input").val("?");
+					$("#CenPH__lb_SFLRCD_"+index).find("input").trigger(inpe);
+			}
+			
+			
             $('body').on('click', '.warranty-term', function (event) {
                 _00('Enter', event);
             });

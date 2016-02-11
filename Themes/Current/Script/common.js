@@ -45,8 +45,8 @@
     }
     generateTable("top-to-bottom");
     //Handle Page Up and Page Down events
-    $('body').on('keyup', function (e) {
-        var keycode = e.keycode || e.which;
+    $('body').on('keyup', function (event) {
+        var keycode = event.keycode || event.which;
         if (keycode === 33) {
             _00("PgUp", event);
             generateTable("bottom-to-top");
@@ -56,7 +56,7 @@
         }
         return;
     });
-    var selectCusotmer = function (row, value) {
+    var selectCusotmer = function (row, value, event) {
         var selectId = $(row).data('selectid');
         a = selectId.split(".");
         $("#" + a[0] + "\\." + a[1]).val(value);

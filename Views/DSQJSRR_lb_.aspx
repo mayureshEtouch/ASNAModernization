@@ -54,9 +54,7 @@
                         <li class="white-to-gray-bullet"></li>
 
                         <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider-first"></li>
-
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                       
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -616,6 +614,12 @@
                 $("#CenPH__lb_SFLCTL__lb_2MHCD").val($("#number1").val());
             });
             generateTableAndApplyInfiniteScroll("paymentMethod", "CenPH__lb_SFLRCD", "NONE", "nextPage"); // Table ID, Div ID to copy records from, any span to skip, next/submit button id
-        });
+			
+			//Select Payment method on double click
+            $('body').on('dblclick', '#paymentMethod tbody tr', function () {
+                $("#nextPage").trigger('click');
+                //_00('Enter', event);
+            });
+		});
     </script>
 </asp:Content>

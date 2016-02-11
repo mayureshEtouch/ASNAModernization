@@ -92,7 +92,7 @@
                             <div class="content-grid mdl-grid">
 
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty-submit">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -577,12 +577,12 @@
             });
             //Select warranty on double click
             $('body').on('dblclick', '#selectWarranty tbody tr', function (event) {
-                $("#submit").trigger('click');
+                $("#warranty-submit").trigger('click');
                 //_00('Enter', event);
             });
 
             $('.close-icon').click(function () {
-                $("#submit").trigger('click');
+                $("#warranty-submit").trigger('click');
             });
 
         });

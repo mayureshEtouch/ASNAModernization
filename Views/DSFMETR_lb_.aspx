@@ -57,10 +57,8 @@
                         <li class="progress-bar-divider">
 
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
                         <div class="clear"></div>
+
                     </ul>
                 </div>
             </section>
@@ -1766,30 +1764,40 @@
 			var el = $(".model-number")[keydnIndex];
 			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
 		});
-		/* $('body').on('click', '.model-number', function (event) {
-			var e =jQuery.Event("keydown");
-			e.which = 13;
-			var keydnIndex= $(this).parents("tr").index();
-			console.log(keydnIndex);
-			$("[id='CenPH__lb_SFLRCD__lb_2AXTX."+$("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
-           });*/
 			
 		
 		// From Location modal
-		$(".from-loc").on("keyup change", function () {
-			var keydnIndex= $(this).parents("tr").index();
-			var el = $(".from-loc")[keydnIndex];
-			$("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+		$(".from-loc").on("keyup change", function (e) {
+			if(e.which != 115){
+				var keydnIndex= $(this).parents("tr").index();
+				var el = $(".from-loc")[keydnIndex];
+				$("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+			}
 		});
-		/*$(".from-loc").on('click',function(){
-		   var e =jQuery.Event("keydown");
-		   e.which = 13;
-		   var keydnIndex= $(this).parents("tr").index();
-		   console.log(keydnIndex);
-		   $("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val("?").trigger(e);
-		   
-		  });*/
-		 
+		
+		
+		$("body").on('keydown','.from-loc',function(event){
+			
+			var keydnIndex= $(this).parents("tr").index();
+			
+					
+				if(event.which == 115){
+					
+					//var el = $(".from-loc")[keydnIndex];
+				    setTimeout(function(){dealycode(keydnIndex);},1000);
+					return false;
+				}
+			});
+			
+		function dealycode(targT){
+			 var inpe =jQuery.Event("keydown");
+				inpe.which = 13;
+				//var keydnIndex= $(this).parents("tr").index();
+				//index = targT.split(".")[1];
+				$("[id='CenPH__lb_SFLRCD__lb_2AACD."+targT+"']").val("?");
+				$("[id='CenPH__lb_SFLRCD__lb_2AACD."+targT+"']").trigger(inpe);
+		}
+		
 
 		// ASNA Hidden UI Table  index. Used for reference
         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
@@ -1815,7 +1823,7 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					$(this).find("td:eq(2) input").ForceNumericOnly();
+					//$(this).find("td:eq(2) input").ForceNumericOnly();
                 });   
             }
         });
@@ -1839,7 +1847,7 @@
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
                     $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
 					//alert($("[id$='lb_SFLRCD__lb_2SEL.']").val() + "second");
-					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericOnly();
+					//$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericOnly();
                 });
             });
 			//alert($("#datatableValueInsert").is(":visible"));
@@ -1857,7 +1865,7 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					$(this).find("td:eq(2) input").ForceNumericOnly();
+					//$(this).find("td:eq(2) input").ForceNumericOnly();
                 });
 			}
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table
@@ -1962,7 +1970,7 @@
 		
     </script>   
     <style>
-        #span-header, #screen_title, #fkeys, #Div1, #diagnostics {
+        #span-header, #screen_title, #fkeys {
             display: none;
         }
 		.icon-textfield {
