@@ -397,10 +397,12 @@ img {
 	border: 1px solid #e5e5e5;
 	border-radius: 2px;/*width: 100%;*/ /* comment for test 19 jan 2016*/
 }
-.order-detail-table-data .mdl-textfield__input, .table-data-content-container .mdl-textfield__input {
+.order-detail-table-data .mdl-textfield__input, .table-data-content-container .mdl-textfield__input, .mdl-layout__content .DdsCharField {
 	background: #fff;
-	padding: 1px 3px 1px 5px;
+	color: #797979;
+	padding: 2px 3px 1px 5px;
 	font-size: 12px;
+	height: 18px;
 	margin-right: 5px;
 }
 .order-detail-table-data .mdl-textfield.is-disabled, .table-data-content-container .mdl-textfield.is-disabled {
@@ -459,12 +461,6 @@ img {
 	border-radius: 2px;
 	color: #797979;
 	width: 100%;
-}
-.mdl-layout__content .DdsCharField {
-	background: #fff;
-	padding: 1px 3px 1px 5px;
-	font-size: 12px;
-	margin-right: 5px;
 }
 .mdl-button {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
@@ -660,11 +656,6 @@ img {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 12px;
 	padding-right: 10px;
-}
-.table-data-content-container .mdl-textfield__input {
-	color: #797979;
-	font-size: 12px;
-	padding: 2px 3px 2px 5px;
 }
 .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
 	font-weight: normal;
@@ -1213,5 +1204,16 @@ textarea {
 }
 }
 
+@media (min-width: 768px) {
+.filter-search-container .button-cnt-container {
+    width: calc(8% - 0px);
+}
+.filter-search-container .filter-txt-cnt {
+    width: calc(8% - 0px);
+}
+.filter-search-container .search-container{
+	width: calc(84% - 0px);
+}
+}
 
 /* Media queries ends here */
