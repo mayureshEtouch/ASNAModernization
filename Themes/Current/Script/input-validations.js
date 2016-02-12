@@ -41,6 +41,7 @@ function () {
     return this.each(function () {
         $(this).keydown(function (e) {
             if (e.shiftKey && e.which === 191) {
+                $(this).attr("maxlength", "1");
                 return true;
             }
             else if (e.ctrlKey || e.altKey) {
