@@ -398,6 +398,7 @@
                 </section>
 			
 			 </main>
+			 <div id="modal" class="simplePopup"></div>
 		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;"> 
 			<i class="material-icons md-15 md-light">help</i> 
 			<span class="confirmation-text">Do you want to continue</span>
@@ -1767,27 +1768,21 @@
 			
 		
 		// From Location modal
-		$(".from-loc").on("keyup change", function (e) {
-			if(e.which != 115){
-				var keydnIndex= $(this).parents("tr").index();
-				var el = $(".from-loc")[keydnIndex];
-				$("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
-			}
-		});
 		
-		
-		$("body").on('keydown','.from-loc',function(event){
-			
-			var keydnIndex= $(this).parents("tr").index();
-			
+		$('body').on('change keyup keydown', '.from-loc', function (e) {
+                if (e.which != 115) {
+                    var keydnIndex= $(this).parents("tr").index();
+					var el = $(".from-loc")[keydnIndex];
+					$("[id='CenPH__lb_SFLRCD__lb_2AACD."+$("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+                } else {
+                   var keydnIndex= $(this).parents("tr").index();
 					
-				if(event.which == 115){
-					
-					//var el = $(".from-loc")[keydnIndex];
 				    setTimeout(function(){dealycode(keydnIndex);},1000);
 					return false;
-				}
-			});
+					}
+	
+            });
+		
 			
 		function dealycode(targT){
 			 var inpe =jQuery.Event("keydown");
@@ -1823,7 +1818,7 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					//$(this).find("td:eq(2) input").ForceNumericOnly();
+					$(this).find("td:eq(2) input").ForceNumericWithQuestionMarkOnly();
                 });   
             }
         });
@@ -1847,7 +1842,7 @@
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
                     $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
 					//alert($("[id$='lb_SFLRCD__lb_2SEL.']").val() + "second");
-					//$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericOnly();
+					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericWithQuestionMarkOnly();
                 });
             });
 			//alert($("#datatableValueInsert").is(":visible"));
@@ -1865,7 +1860,8 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					//$(this).find("td:eq(2) input").ForceNumericOnly();
+					$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text()); 
+					$(this).find("td:eq(2) input").ForceNumericWithQuestionMarkOnly();
                 });
 			}
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table
@@ -1930,6 +1926,7 @@
                                             $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
                                             $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tableindex)+"']").text()); 
                                             $(this).find("td:eq(5) input").removeAttr("disabled");
+											$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
                                             $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i+tableindex)+"']").val());
                                         });  
               
@@ -1943,7 +1940,8 @@
                                         $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
                                         $(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
                                         $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
-                                        $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
+                                        $(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
+										$(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
                                         $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
                                         $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tableindex)+"']").text()); 
                                         $(this).find("td:eq(5) input").removeAttr("disabled");
@@ -1956,14 +1954,40 @@
 
         }    
         $("#reset").click(function() {
-              $("#datatableValue tbody").find("tr").each(function(i){
-                    $("[id$='lb_SFLRCD__lb_2AIST."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AECD."+(i)+"']").val("");
+			var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+              
+             $("#datatableValueInsert tbody").find("tr").each(function(i){
+                $(this).find("td:eq(13) select").val("Active");
+                    $(this).find("td:eq(0) select").val("");
+                     $(this).find("td:eq(1) input").val("");
+                     $(this).find("td:eq(2) input").val("");
+                     $(this).find("td:eq(3) input").val("");
+                     $(this).find("td:eq(4) span").text("");
+                     $(this).find("td:eq(5) input").val("");
+                     $(this).find("td:eq(6) input").val("");
+                     $(this).find("td:eq(7) span").text("");
+                     $(this).find("td:eq(8) span").text("");
+                     $(this).find("td:eq(9) span").text("");
+                     $(this).find("td:eq(10) span").text("");
+                     $(this).find("td:eq(11) span").text("");
+                     
+                    
+                     
+                 });  
+
+             $("[id^='CenPH__lb_SFLRCD']").find("input").each(function(i){
+                // alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
+                    $("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AECD."+(i+ tindex)+"']").val("");
+					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text("");
+                     $("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text(" ");
+                    $("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text(" ");
+                    $("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text(" ")
                 });
         });
 		

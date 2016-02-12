@@ -67,7 +67,7 @@
     $('body').on('dblclick', '#' + tableId  + ' tbody tr', function (event) {
         selectCusotmer(this, "1", event);
     });
-    $("#" + selectRowId).click(function () {
+    $("#" + selectRowId).click(function (event) {
         var row = $("#" + tableId + " tbody tr.selected");
         selectCusotmer(row, "1", event);
     });
