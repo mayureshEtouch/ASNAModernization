@@ -645,10 +645,6 @@
 			.filter-search-container .search-container .mdl-cell--11-col{
 				width: calc(75% - 0px);
 			}
-			.button-container .mdl-cell {
-				margin: 8px;
-				width: calc(47.6% - 0px);
-			}
 			}
 			@media (max-width: 767px) and (min-width: 320px) {
 			.filter-search-container .button-cnt-container {
@@ -676,10 +672,6 @@
 			}
 			.filter-search-container .search-container .mdl-cell--11-col{
 				width: calc(73% - 0px);
-			}
-			.button-container .mdl-cell {
-				margin: 8px;
-				width: calc(46.6% - 0px);
 			}
 		}
 		
@@ -710,7 +702,7 @@
                 $("#paymentMethod tbody tr").removeClass("selected");
                 $(this).addClass("selected");
             });
-			$(".fixed-table-container-inner .th-inner").animate({width: "auto"},1);
+			$(".fixed-table-container-inner .th-inner").animate({width: "300px"},500);
 		});
     </script>
 </asp:Content>

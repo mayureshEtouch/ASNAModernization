@@ -65,7 +65,7 @@
                         <div class="table-container table-container-search">
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
                                     <span class="summary-label">Customer phone number :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                         <input type="text" id="number1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" disabled>
@@ -73,19 +73,19 @@
                                         <input type="text" id="number3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop" disabled>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col" style="margin-left: 1.5%">
+                                <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Customer name/ partial name :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                         <input type="text" id="name" class="mdl-textfield__input" disabled>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col" style="margin-left: 3.6%">
+                                <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Email address :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                         <input type="text" id="email" class="mdl-textfield__input" disabled>
@@ -531,6 +531,17 @@
         tr.selected {
             background-color: #f1f1f1;
         }
+		.table-container-search .mdl-cell--1-col{
+			width: calc(12% - 0px);
+			margin: 0;
+		}
+		.table-container-search .mdl-cell--3-col{
+			width: calc(25% - 0px);
+			margin: 0;
+		}
+		.circle-separator{
+			margin: 13px auto;
+		}
     </style>
     <script type="text/javascript">
         $(document).ready(function () {

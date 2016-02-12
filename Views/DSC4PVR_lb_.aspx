@@ -63,23 +63,23 @@
                         <div class="table-container table-container-search">
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
                                     <span class="summary-label">Customer phone number :</span>
                                     <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col" style="margin-left: 1.5%">
+                                <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Customer name/ partial name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col" style="margin-left: 3.6%">
+                                <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Email address :</span>
                                     <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                         <%--<input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);" maxlength="50">--%>
@@ -468,5 +468,16 @@
         #main-content {
             width: 100%;
         }
+		.table-container-search .mdl-cell--1-col{
+			width: calc(12% - 0px);
+			margin: 0;
+		}
+		.table-container-search .mdl-cell--3-col{
+			width: calc(25% - 0px);
+			margin: 0;
+		}
+		.circle-separator{
+			margin: 13px auto;
+		}
     </style>
 </asp:Content>

@@ -634,8 +634,8 @@ img {
 	padding-top: 13px;
 }
 .table-container {
-	height: 328px;
-	min-height: 328px;
+	/*height: 328px;
+	min-height: 328px;*/
 }
 .table-container-search {
 	min-height: auto;
@@ -774,15 +774,19 @@ img {
 	font-size: 18px;
 	font-weight: bold;
 	position: absolute;
-	margin-left: -19px;
+	margin-left: -23px;
 	margin-top: 1px;
 	width: 18px;
 }
-.form-data-wrapper input {
+.form-data-wrapper input, input {
+	background: #fff;
 	border: 1px solid #e5e5e5;
 	border-radius: 2px;
 	color: #797979;
-	padding: 0 3px 2px;
+	padding: 2px 3px 1px 5px;
+	font-size: 12px;
+	height: 15px;
+	margin-right: 5px;
 }
 fieldset {
 	border: 1px solid #e5e5e5;
@@ -1096,7 +1100,6 @@ textarea {
 }
 .fixed-table-container {
 	width: 100%;
-	height: 282px;
 	margin: 0px auto 10px;
 	background-color: white; /* above is decorative or flexible */
 	position: relative; /* could be absolute or relative */
@@ -1106,6 +1109,7 @@ textarea {
 	overflow-x: hidden;
 	overflow-y: auto;
 	height: 100%;
+	max-height: 282px;
 }
 .header-background {
 	background-color: #D5ECFF;
@@ -1128,8 +1132,8 @@ textarea {
 	line-height: 35px; /* height of header */
 	text-align: left;
 	border-left: 1px solid #e5e5e5;
-	padding-left: 11px;
-	margin-left: -11px;
+	padding-left: 10px;
+	margin-left: -10px;
 	overflow:hidden;
 }
 .fixed-table-container .th-inner span{
