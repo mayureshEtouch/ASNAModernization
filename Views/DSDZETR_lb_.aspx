@@ -96,9 +96,9 @@
                                     <span class="form-label">Employee #:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD">
-                                        <span id="CenPH_1AJ" class="DdsCharField_OutputOnly"></span>
+                                    <span class="form-text" data-upgraded=",MaterialTextfield" id="employee-info">
+                                        <%--<input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD">--%>
+                                        <%--<span id="CenPH_1AJ" class="DdsCharField_OutputOnly"></span>--%>
                                         <span id="CenPH_1A0TX" class="DdsCharField_OutputOnly"></span>
                                         <input type="hidden" id="empid" name="empid">
                                     </span>
@@ -1098,10 +1098,9 @@
             display: none;
         }
 
-        /*input[type="text"] {
-            width: 98px;
-            left: 80px;
-        }*/
+        #CenPH__lb_SFLCTL__lb_1AJCD {
+            position:static !important;
+        }
 
         .sp-inst {
             text-transform: uppercase !important;
@@ -1154,12 +1153,13 @@
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());
             $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html());
             // Set the selected salesperson id
-            $("#CenPH_1AJCD").val($("#CenPH__lb_SFLCTL__lb_1AJCD").val());
+            $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
+            //$("#CenPH_1AJCD").val($("#CenPH__lb_SFLCTL__lb_1AJCD").val());
 
             // Mimic ?(prompt) functionality
-            $("#CenPH_1AJCD").on("keyup change", function () {
-                $("#CenPH__lb_SFLCTL__lb_1AJCD").val($("#CenPH_1AJCD").val());
-            });
+            //$("#CenPH_1AJCD").on("keyup change", function () {
+            //    $("#CenPH__lb_SFLCTL__lb_1AJCD").val($("#CenPH_1AJCD").val());
+            //});
             $('body').on('click', '.emp-code', function (event) {
                 console.log(this);
                 _00('Enter', event);
@@ -1275,14 +1275,14 @@
             }
 
             //Employee field validation
-            $("#CenPH_1AJCD").keydown(function () {
+            $("#CenPH__lb_SFLCTL__lb_1AJCD").keydown(function () {
                 if ($(this).val() === "?") {
                     $(this).attr("maxlength", 1);
                 } else {
                     $(this).attr("maxlength", 5);
                 }
             });
-            $("#CenPH_1AJCD").ForceNumericWithQuestionMarkOnly();
+            $("#CenPH__lb_SFLCTL__lb_1AJCD").ForceNumericWithQuestionMarkOnly();
         });
     </script>
 </asp:Content>
