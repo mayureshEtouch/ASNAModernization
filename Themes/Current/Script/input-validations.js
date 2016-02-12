@@ -23,19 +23,37 @@ jQuery.fn.ForceNumericOnly =
 function () {
     return this.each(function () {
         $(this).keydown(function (e) {
-            var key = e.charCode || e.keyCode || 0;
-            // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
-            // home, end, period, and numpad decimal
-            return (
-                key == 8 ||
-                key == 9 ||
-                key == 13 ||
-                key == 46 ||
-                key == 110 ||
-                key == 190 ||
-                (key >= 35 && key <= 40) ||
-                (key >= 48 && key <= 57) ||
-                (key >= 96 && key <= 105));
+            if (e.shiftKey || e.ctrlKey || e.altKey) {
+                return false;
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                    return false;
+                }
+            }
+        });
+    });
+};
+
+// Numeric with question mark
+jQuery.fn.ForceNumericWithQuestionMarkOnly =
+function () {
+    return this.each(function () {
+        $(this).keydown(function (e) {
+            if (e.shiftKey && e.which === 191) {
+                $(this).attr("maxlength", "1");
+                return true;
+            }
+            else if (e.ctrlKey || e.altKey) {
+                return false;
+            } else if (e.shiftKey) {
+                return false;
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                    return false;
+                }
+            }
         });
     });
 };

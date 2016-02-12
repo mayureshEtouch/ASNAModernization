@@ -75,8 +75,8 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 173.114px; height: 173.114px; transform: translate(-50%, -50%) translate(50px, 21px);"></span></span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent DdsKey" id="select-customer" name="ctl00$FKeyPH$DSHOSRR_lb_Control_Enter" data-attr="Submit" style="width: auto;" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="select-customer">Submit</span>
                                 </div>
                             </div>
                         </div>

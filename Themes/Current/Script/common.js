@@ -64,18 +64,17 @@
     }
 
     //Select customer on double click
-    $('body').on('dblclick', '#' + tableId  + ' tbody tr', function () {
-        selectCusotmer(this, "1");
+    $('body').on('dblclick', '#' + tableId  + ' tbody tr', function (event) {
+        selectCusotmer(this, "1", event);
     });
     $("#" + selectRowId).click(function () {
         var row = $("#" + tableId + " tbody tr.selected");
-        selectCusotmer(row, "1");
+        selectCusotmer(row, "1", event);
     });
     // Set first record as default selected
     $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
     jQuery.tableNavigation({
         "onRowChange": function (output) {
-            debugger
             if (output) {
                 var selectId = $(output.row).data('selectid');
                 if (output.r && output.keycode === "40") {

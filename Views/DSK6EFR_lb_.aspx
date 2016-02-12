@@ -50,7 +50,7 @@
                         <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 4</span> <span class="step-txt-selected">Enter Order Warranty</span> </li>
                         <li class="progress-bar-divider-first">
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        
+
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -121,6 +121,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>
+        <div id="modal" class="simplePopup"></div>
     </div>
     <div id="Div1">
 
@@ -794,38 +795,36 @@
                 });
                 $("#warranty-term-list tbody tr:even").css("background-color", "#fff");
                 $("#warranty-term-list tbody tr:odd").css("background-color", "#fcfcfc");
+                $(".term-input").ForceNumericWithQuestionMarkOnly();
             }
             generateTable1();
-			
+
             //Set input term value to original term text box
-			
 
             $('body').on('change keyup', 'input.term-input', function (e) {
-				if(e.which != 115){
-					var targetInputBox = $(this).data("term");
-					$(targetInputBox).val($(this).val());
-				}
-				
+                if (e.which != 115) {
+                    var targetInputBox = $(this).data("term");
+                    $(targetInputBox).val($(this).val());
+                }
+
             });
-			
-			$("body").on('keydown','input.term-input',function(event){
-			var targetInputBox = $(this).data("term");
-				if(event.which == 115){
-			   setTimeout(function(){dealycode(targetInputBox);},1000);
-				return false;
-				}
-			});
-			function dealycode(targT){
-				 var inpe =jQuery.Event("keydown");
-					inpe.which = 13;
-					//var keydnIndex= $(this).parents("tr").index();
-					
-					index = targT.split(".")[1];
-					$("#CenPH__lb_SFLRCD_"+index).find("input").val("?");
-					$("#CenPH__lb_SFLRCD_"+index).find("input").trigger(inpe);
-			}
-			
-			
+
+            $("body").on('keydown', 'input.term-input', function (event) {
+                var targetInputBox = $(this).data("term");
+                if (event.which == 115) {
+                    setTimeout(function () { dealycode(targetInputBox); }, 1000);
+                    return false;
+                }
+            });
+            function dealycode(targT) {
+                var inpe = jQuery.Event("keydown");
+                inpe.which = 13;
+                index = targT.split(".")[1];
+                $("#CenPH__lb_SFLRCD_" + index).find("input").val("?");
+                $("#CenPH__lb_SFLRCD_" + index).find("input").trigger(inpe);
+            }
+
+
             $('body').on('click', '.warranty-term', function (event) {
                 _00('Enter', event);
             });
@@ -835,7 +834,6 @@
             $('body').on('click', '#next', function (event) {
                 _00('Enter', event);
             });
-            // Handle the confirm prompt
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".OverlayPopupBackground").show();
@@ -852,20 +850,6 @@
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 _00('Enter', event);
             });
-
-            //if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-            //    $(".confirmation-outer-conatiner").simplePopup();
-            //} else {
-            //    $(".confirmation-outer-conatiner").hide();
-            //}
-            //$("#yes").click(function () {
-            //    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-            //    _00('Enter', event);
-            //});
-            //$("#no").click(function () {
-            //    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-            //    $(".confirmation-outer-conatiner").simplePopup();
-            //});
         }); // document ready end
         $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>

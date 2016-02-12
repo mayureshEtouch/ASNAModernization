@@ -73,7 +73,6 @@
                         				</div>
                         				<div class="mdl-cell mdl-cell--11-col">
                         					<input type="text" id="number" class="mdl-textfield__input">
-											<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
                         				</div>
 									</div>
 								</div>
@@ -121,11 +120,11 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col-desktop">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="xref" onclick="_00('F6',event);">X-REF</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-button" onclick="_00('Enter',event);">Submit</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="xref">X-REF</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-button">Submit</span>
                                 </div>
                             </div>
                         </div>
@@ -716,11 +715,15 @@
             $("#number").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_2AXTX").val($("#number").val());
             });
-            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT"); // Table ID, Div ID to copy records from and ignore span
+            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "submit-button"); // Table ID, Div ID to copy records from and ignore span
         });
 		$('body').on('click', '#previous', function (event) {
 			_00('F12',event);
 		});
+		$('body').on('click', '#xref', function (event) {
+		    _00('F6', event);
+		});
+		
 		/* Select Model on double click
 		$('body').on('dblclick', '#customerName tbody tr', function () {
 			console.log("dbl")

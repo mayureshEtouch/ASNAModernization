@@ -1273,6 +1273,16 @@
                 setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
                 setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
+
+            //Employee field validation
+            $("#CenPH_1AJCD").keydown(function () {
+                if ($(this).val() === "?") {
+                    $(this).attr("maxlength", 1);
+                } else {
+                    $(this).attr("maxlength", 5);
+                }
+            });
+            $("#CenPH_1AJCD").ForceNumericWithQuestionMarkOnly();
         });
     </script>
 </asp:Content>
