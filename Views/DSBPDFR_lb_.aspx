@@ -604,7 +604,6 @@
             position: relative !important;
             left: 0px !important;
             top: 0px !important;
-            height: 14px !important;
             width: calc(100%) !important;
         }
     </style>

@@ -452,7 +452,6 @@
             position: relative !important;
             left: 0px !important;
             top: 0px !important;
-            height: 14px !important;
         }
 
         #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB {
