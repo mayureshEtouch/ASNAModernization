@@ -522,7 +522,7 @@
         $(document).ready(function () {
             window.DSBPDFR = window.DSBPDFR || {}
             //Set date and time
-            $("[name='date']").text($("[id$=CenPH_DdsConstant8]").text());
+            $("[name='date']").text($("[id$=CenPH_DdsConstant7]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
 			
 			$("#email").val($("#CenPH__lb_SFLCTL__lb_2GVXT").html());
