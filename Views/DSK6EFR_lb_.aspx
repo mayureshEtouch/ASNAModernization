@@ -796,23 +796,26 @@
                 $("#warranty-term-list tbody tr:even").css("background-color", "#fff");
                 $("#warranty-term-list tbody tr:odd").css("background-color", "#fcfcfc");
                 $(".term-input").ForceNumericWithQuestionMarkOnly();
+                $(".term-input").keydown(function () {
+                    if ($(this).val() === "?") {
+                        $(this).attr("maxlength", 1);
+                    } else {
+                        $(this).attr("maxlength", 3);
+                    }
+                });
             }
             generateTable1();
 
             //Set input term value to original term text box
-
-            $('body').on('change keyup', 'input.term-input', function (e) {
+            $('body').on('change keyup keydown', 'input.term-input', function (e) {
                 if (e.which != 115) {
                     var targetInputBox = $(this).data("term");
                     $(targetInputBox).val($(this).val());
-                }
-
-            });
-
-            $("body").on('keydown', 'input.term-input', function (event) {
-                var targetInputBox = $(this).data("term");
-                if (event.which == 115) {
-                    setTimeout(function () { dealycode(targetInputBox); }, 1000);
+                } else {
+                    var targetInputBox = $(this).data("term");
+                    setTimeout(function () {
+                        dealycode(targetInputBox);
+                    }, 1000);
                     return false;
                 }
             });
@@ -823,7 +826,6 @@
                 $("#CenPH__lb_SFLRCD_" + index).find("input").val("?");
                 $("#CenPH__lb_SFLRCD_" + index).find("input").trigger(inpe);
             }
-
 
             $('body').on('click', '.warranty-term', function (event) {
                 _00('Enter', event);
