@@ -619,5 +619,11 @@
             height: auto !important;
             overflow: hidden !important;
         }
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 800px !important;
+        }
     </style>
 </asp:Content>

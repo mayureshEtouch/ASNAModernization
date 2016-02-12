@@ -3,6 +3,8 @@
 <%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
@@ -88,7 +90,7 @@
 							<div class="content-grid mdl-grid">
 
 								<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-									<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-installation" onclick="_00('Enter',event);">Submit</button>
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-installation">Submit</span>
 								</div>
 							</div>
 						</div>
@@ -527,6 +529,9 @@
         tr.selected {
             background-color: #f1f1f1;
         }
+        #__Page_Hidden{
+            height: 800px !important;
+        }
 		#__Page_PopUp {
             width: 450px !important;
         }
@@ -551,6 +556,9 @@
         .mdl-layout__content {
             height: auto !important;
             overflow: hidden !important;
+        }
+        #form1 {
+            margin-top: -20px;
         }
     </style>
     <script type="text/javascript">

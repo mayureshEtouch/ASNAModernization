@@ -74,7 +74,6 @@
                         				</div>
                         				<div class="mdl-cell mdl-cell--11-col">
                         					<input type="text" id="number1" class="mdl-textfield__input" maxlength="2">
-											<span class="icon-textfield"><i class="material-icons md-15 md-light ">cancel</i></span>
                         				</div>
 									</div>
 								</div>
@@ -114,10 +113,10 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage" onclick="_00('F12',event);">Previous</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage"">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage" onclick="_00('Enter',event);">Next</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -696,12 +695,20 @@
             $("#number1").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_2MHCD").val($("#number1").val());
             });
-            generateTableAndApplyInfiniteScroll("paymentMethod", "CenPH__lb_SFLRCD", "NONE", "nextPage"); // Table ID, Div ID to copy records from, any span to skip, next/submit button id
+            generateTableAndApplyInfiniteScroll("paymentMethod", "CenPH__lb_SFLRCD", "NONE", "nextPage", "nextPage"); // Table ID, Div ID to copy records from, any span to skip, next/submit button id
 			
 			//Select Payment method on double click
-            $('body').on('dblclick', '#paymentMethod tbody tr', function () {
-                $("#nextPage").trigger('click');
-                //_00('Enter', event);
+            //$('body').on('dblclick', '#paymentMethod tbody tr', function () {
+            //    $("#nextPage").trigger('click');
+            //    //_00('Enter', event);
+            //});
+            $('body').on('click', '#exitPage', function (event) {
+                _00('F12', event);
+            });
+            
+            $('body').on('click', '#paymentMethod tbody tr', function () {
+                $("#paymentMethod tbody tr").removeClass("selected");
+                $(this).addClass("selected");
             });
 			$(".fixed-table-container-inner .th-inner").animate({width: "auto"},1);
 		});

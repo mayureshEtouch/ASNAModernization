@@ -55,7 +55,7 @@
                         <li class="white-to-gray-bullet"></li>
 
                         <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
-                        
+
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -1235,12 +1235,7 @@
                 });
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#fcfcfc");
-				$("#orderPayment tbody tr").hover(function() {
-					$(this).addClass('DdsSubfileCandidateCurrentRecord');
-				}, function() {
-					$(this).removeClass('DdsSubfileCandidateCurrentRecord');
-				  });
-				
+
             }
             generateTable("top-to-bottom");
             //Handle Page Up and Page Down events
