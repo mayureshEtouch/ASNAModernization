@@ -31,7 +31,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSHOSRR</span>
+                        <i class="material-icons md-15 md-light">computer</i><span class="date-time-txt">DSHOSRR</span>
+						<i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -486,6 +488,9 @@
                 $(this).css({ "background-color": "#f1f1f1" });
                 $("div.icon-container").removeClass("icon-disable");
             });
+			
+			$("[name='date']").text($("[id$=CenPH_DdsConstant7]").text());
+			$("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             /* script for table row starts here */
             var generateTable = function (direction) {
                 $("#salesperson tbody").empty();
@@ -529,7 +534,7 @@
                 }
                 return;
             });
-            var selectCusotmer = function (row, value) {
+            var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
                 $("#" + a[0] + "\\." + a[1]).val(value);
