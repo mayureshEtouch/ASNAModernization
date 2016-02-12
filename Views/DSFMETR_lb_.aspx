@@ -1953,42 +1953,39 @@
                 });
 
         }    
-        $("#reset").click(function() {
+        $("#reset").click(function(e) {
 			var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-              
-             $("#datatableValueInsert tbody").find("tr").each(function(i){
-                $(this).find("td:eq(13) select").val("Active");
-                    $(this).find("td:eq(0) select").val("");
-                     $(this).find("td:eq(1) input").val("");
-                     $(this).find("td:eq(2) input").val("");
-                     $(this).find("td:eq(3) input").val("");
-                     $(this).find("td:eq(4) span").text("");
-                     $(this).find("td:eq(5) input").val("");
-                     $(this).find("td:eq(6) input").val("");
-                     $(this).find("td:eq(7) span").text("");
-                     $(this).find("td:eq(8) span").text("");
-                     $(this).find("td:eq(9) span").text("");
-                     $(this).find("td:eq(10) span").text("");
-                     $(this).find("td:eq(11) span").text("");
-                     
-                    
-                     
-                 });  
+			$("#datatableValueInsert tbody").find("tr").each(function(i){
+					
+					$(this).find("td:eq(13) select").val("Active");
+						$(this).find("td:eq(0) select").val("");
+						 $(this).find("td:eq(1) input").val("");
+						 $(this).find("td:eq(2) input").val("");
+						 $(this).find("td:eq(3) input").val("");
+						 $(this).find("td:eq(4) span").text("");
+						 $(this).find("td:eq(5) input").val("");
+						 $(this).find("td:eq(6) input").val("");
+						 $(this).find("td:eq(7) span").text("");
+						 $(this).find("td:eq(8) span").text("");
+						 $(this).find("td:eq(9) span").text("");
+						 $(this).find("td:eq(10) span").text("");
+						 $(this).find("td:eq(11) span").text("");
+					 });  
 
-             $("[id^='CenPH__lb_SFLRCD']").find("input").each(function(i){
-                // alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
-                    $("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AECD."+(i+ tindex)+"']").val("");
-					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text("");
-                     $("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text(" ");
-                    $("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text(" ");
-                    $("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text(" ")
-                });
+				 $("[id^='CenPH__lb_SFLRCD']").find("input").each(function(i){
+					// alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
+						$("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
+						$("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
+						$("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
+						$("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val("");
+						$("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val(""); 
+						$("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val(""); 
+						$("[id$='lb_SFLRCD__lb_2AECD."+(i+ tindex)+"']").val("");
+						$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text("");
+						 $("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text(" ");
+						$("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text(" ");
+						$("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text(" ")
+					});
         });
 		
 		

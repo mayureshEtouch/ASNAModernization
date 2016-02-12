@@ -38,7 +38,7 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSLOADR_lb</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span><i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSLOADR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span><i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
                 </div>
             </div>
         </section>
@@ -50,14 +50,14 @@
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Company:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop">
                                 <span class="form-text">
-                                    <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON"></span>
+                                    <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3"></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Location:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop">
                                 <span class="form-text">
-                                    <input id="enterYourLocation" type="text" name="enterYourLocation" value="112"></span>
+                                    <input id="enterYourLocation" type="text" name="enterYourLocation" value="112" ></span>
                             </div>
                         </div>
                     </div>

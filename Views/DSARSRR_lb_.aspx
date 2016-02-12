@@ -123,7 +123,7 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right modal-button-container">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-loc">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -544,7 +544,7 @@
                 $(this).siblings('input:text').closest('.mdl-textfield__input').val('');
             });
             $('body').on('dblclick', '#selectLocation tbody tr', function (event) {
-                $("#submit").trigger('click');
+                $("#submit-loc").trigger('click');
                 //_00('Enter', event);
             });
         });
