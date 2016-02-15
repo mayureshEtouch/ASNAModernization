@@ -33,9 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSEBETR</span>
-                        <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span>
-                        <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSEBETR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -118,7 +118,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                                <input type="text" id="requestdate" name="date"><i class="material-icons icon-calender" id="requestcal">today</i>
+                                <input type="text" id="requestdate" name="date"><i class="material-icons calender-icon" id="requestcal"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>
                         </div>
@@ -151,7 +151,10 @@
                         <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
                         </div>
                         <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom: -10px;">
-                            <div class="icon-container icon-disable" id="delete-record"><span class="icon-txt display-customer">Delete</span><i class="material-icons md-15 md-light display-customer">delete</i></div>
+                            <div class="icon-container icon-disable" id="delete-record">
+								<span class="icon-txt display-customer">Delete</span>
+								<i class="material-icons md-15 md-light display-customer delete-icon-disabled"></i>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -1288,6 +1291,7 @@
                 $("#orderPayment tbody tr.selected").removeClass("selected");
                 $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");
+				$("div.icon-container i.delete-icon-disabled").addClass("delete-icon").removeClass("delete-icon-disabled");
             });
             $("#delete-record").click(function () {
                 if ($("#orderPayment tbody tr.selected").length > 0) {

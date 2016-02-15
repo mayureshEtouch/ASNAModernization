@@ -33,7 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSDZETR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span><i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSDZETR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -110,16 +112,16 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col">
                                     <div class="form-text shipping-add" data-upgraded=",MaterialTextfield">
-                                        <input type="text" class="full-input" id="CenPH_PBDTX" name="CenPH_PBDTX">
+                                        <input type="text" class="full-input" id="CenPH_PBDTX" name="CenPH_PBDTX" maxlength="25">
                                         <span id="CenPH_PB" class="DdsCharField_OutputOnly"></span>
                                         <br />
-                                        <input type="text" class="full-input" id="CenPH_CETTX" name="CenPH_CETTX">
+                                        <input type="text" class="full-input" id="CenPH_CETTX" name="CenPH_CETTX" maxlength="25">
                                         <span id="CenPH_CE" class="DdsCharField_OutputOnly"></span>
                                         <br />
-                                        <input type="text" class="full-input" id="CenPH_CEUTX" name="CenPH_CEUTX">
+                                        <input type="text" class="full-input" id="CenPH_CEUTX" name="CenPH_CEUTX" maxlength="25">
                                         <span id="CenPH_CEU" class="DdsCharField_OutputOnly"></span>
                                         <br />
-                                        <input type="text" id="CenPH_CEWTX" name="CenPH_CEWTX">
+                                        <input type="text" id="CenPH_CEWTX" name="CenPH_CEWTX" maxlength="10">
                                         <span id="CenPH_CEW" class="DdsCharField_OutputOnly"></span>
                                         <span id="CenPH_CEVTX" class="DdsCharField_OutputOnly"></span>
                                         <span id="CenPH_CCXST" class="DdsCharField_OutputOnly"></span>
@@ -142,7 +144,6 @@
                                             <option value="X">X - Non-Delivery</option>
                                             <option selected="selected" value=" "></option>
                                             <option value="Y">Y - *Yes</option>
-                                            <option value="?">? </option>
                                         </select>
                                         <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
                                     </span>
@@ -154,7 +155,8 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="requestdate" name="date"><i id="reqesdate" class="material-icons icon-calender page-icons">today</i>
+                                        <input type="text" id="requestdate" name="date">
+										<i id="reqesdate" class="material-icons calender-icon page-icons"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </span>
                                 </div>
@@ -173,7 +175,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="pcode" name="pcode">
+                                        <input type="text" id="pcode" name="pcode" maxlength="10">
                                         <span id="promocode" class="DdsCharField_OutputOnly"></span>
                                     </span>
                                 </div>
@@ -201,7 +203,7 @@
         </main>
         <div id="modal" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-            <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+            <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>

@@ -35,9 +35,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSFMETR</span> 
-						<i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span>
-						<i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSFMETR</span> 
+						<i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -136,7 +136,6 @@
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="DL">DL - Warehouse delivery</option>
-                                                    <option>?</option>
                                                 </select>
                                             </td>
                                             <td>
@@ -189,7 +188,6 @@
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="DL">DL - Warehouse delivery</option>
-                                                    <option>?</option>
                                                 </select>
                                             </td>
                                             <td>
@@ -241,7 +239,6 @@
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="DL">DL - Warehouse delivery</option>
-                                                    <option>?</option>
                                                 </select>
                                             </td>
                                             <td>
@@ -400,7 +397,7 @@
 			 </main>
 			 <div id="modal" class="simplePopup"></div>
 		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;"> 
-			<i class="material-icons md-15 md-light">help</i> 
+			<i class="material-icons md-15 md-light help-icon"></i> 
 			<span class="confirmation-text">Do you want to continue</span>
 		  <div class="button-container">
 			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -1802,7 +1799,7 @@
         // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
         $(document).keyup(function(e){
 		 // ASNA Hidden UI Table  index. Used for reference
-        var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             if(e.which== 33 || e.which== 34 ){
 			
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
@@ -1832,7 +1829,7 @@
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
             // Update any data added to New Edit UI Table to ASNA Hidden UI Table
-            $("input, select").blur(function(){
+            $("input, select").change(function(){
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
                     $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
                     $("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
@@ -1991,23 +1988,14 @@
 		
     </script>   
     <style>
-        #span-header, #screen_title, #fkeys, #Div1, #diagnostics {
+        #span-header, #screen_title, #fkeys, #Div1, #diagnostics, #footer {
             display: none;
         }
-		.icon-textfield {
-			cursor: pointer;
-			font-size: 18px;
-			font-weight: bold;
-			position: absolute;
-			right: 0;
-			top: 0 !important;
-		}
 		#main-content {
 			width: 100%;
 		}
 		.del-status {
 			width: 45px;
-			height: 18px !important;
 			white-space: nowrap;
 		}
     </style>

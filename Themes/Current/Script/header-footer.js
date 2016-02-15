@@ -12,9 +12,9 @@
     header += "                <!-- Navigation -->";
     header += "                <span class=\"terminal\">Terminal #: " + terminal + "<\/span> <span class=\"black-divider\"><\/span>";
     header += "                <!--<i class=\"material-icons md-16\">help<\/i>-->";
-    header += "                <i class=\"material-icons md-15 mdl-badge\" data-badge=\"1\">notifications<\/i> <span class=\"black-divider\"><\/span><span class=\"home-icon\"><i class=\"material-icons md-15\">home<\/i><\/span> <span class=\"black-divider\"><\/span>";
+    header += "                <i class=\"material-icons md-15 mdl-badge notifications-icon\" data-badge=\"1\"><\/i> <span class=\"black-divider\"><\/span><span class=\"home-icon\"><i class=\"material-icons md-15 home\"><\/i><\/span> <span class=\"black-divider\"><\/span>";
     header += "                <span class=\"user-icon\"><\/span>";
-    header += "                <span class=\"username\">" + userName + "<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons\">arrow_drop_down<\/i><\/span>";
+    header += "                <span class=\"username\">" + userName + "<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons arrow-down\"><\/i><\/span>";
     header += "                <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\" for=\"demo-menu-lower-right\"><li class=\"mdl-menu__item\"><a href=\"..\/Monarch/\!EoJ.aspx/\">Logout</a></li></ul>";
     header += "            <\/div>";
     header += "        <\/header>";
@@ -36,13 +36,14 @@
     // Add footer section
     var footer = "";
     footer += "<section class=\"copyright\">";
-    footer += "            <div class=\"copyright-container\">Copyright © 2015 Conn's. All rights reserved.<\/div>";
+    footer += "            <div class=\"copyright-container\">Copyright © 2016 Conn's. All rights reserved.<\/div>";
     footer += "        <\/section>";
 
     $(footer).insertAfter($("#main-content"));
     // Error popup
     var hideMessage = "Value not found in list - Use '?' to determine allowed values.";
     if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1 ) {
+		
         var errorMsg = "";
         if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";

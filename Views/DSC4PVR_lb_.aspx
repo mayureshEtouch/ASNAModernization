@@ -33,7 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSC4PVR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span><i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSC4PVR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -64,7 +66,7 @@
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
-                                    <span class="summary-label">Customer phone number :</span>
+                                    <span class="summary-label">Customer Phone Number :</span>
                                     <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                     </div>
                                 </div>
@@ -72,7 +74,7 @@
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Customer name/ partial name :</span>
+                                    <span class="summary-label">Customer Name/ Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
                                 </div>
@@ -80,7 +82,7 @@
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Email address :</span>
+                                    <span class="summary-label">Email Address :</span>
                                     <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                         <%--<input type="email" id="email" class="mdl-textfield__input" onkeyup="validateInput(this, ['previous', 'customerIdCardEntry', 'createCustomer', 'search']);" maxlength="50">--%>
                                     </div>

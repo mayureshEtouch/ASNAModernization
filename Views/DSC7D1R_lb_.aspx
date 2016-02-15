@@ -22,6 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+<div class="OverlayPopupBackground"></div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -32,9 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSC7D1R</span>
-                        <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span>
-                        <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSC7D1R</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -114,14 +115,14 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--9-col-desktop">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses">Addresses</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit">audit</button>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId">tax id</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses">Addresses</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit">audit</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId">tax id</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col-desktop pull-right">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="display-submit">next</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="display-submit">next</span>
                                 </div>
                             </div>
                         </div>
@@ -822,6 +823,12 @@
                 $("#cus_on").html(on);
                 $("#cus_email").html(emailAddress);
             }
+			$("#taxId").on('click', function(event) {
+				_00('F10',event);
+			});
+			$("#previous").on('click', function(event) {
+				_00('F12',event);
+			});
         });
     </script>
 </asp:Content>

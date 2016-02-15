@@ -38,7 +38,7 @@
                 <span class="mdl-layout-title logo-icon"></span>
                 <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
-                <span class="close-icon"><i class="material-icons md-15">close</i></span>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -50,7 +50,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIRLSRR</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIRLSRR</span>
                     </div>
                 </div>
             </section>

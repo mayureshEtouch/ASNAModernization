@@ -51,7 +51,7 @@
 					</div>
 					<div class="mdl-cell mdl-cell--4-col pull-right">
 						<!-- Navigation -->
-						<i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSB7SRR</span>
+						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSB7SRR</span>
 					</div>
 				</div>
 			</section>
@@ -534,15 +534,17 @@
         }
 		#__Page_PopUp {
             width: 450px !important;
+			left: 50% !important;
+			margin-left: -225px;
         }
 
-            #__Page_PopUp > tr:first-child {
-                display: none;
-            }
+		#__Page_PopUp > tr:first-child {
+			display: none;
+		}
 
-            #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 0;
-            }
+		#__Page_PopUp .DdsInlinePopUpTitle {
+			height: 0;
+		}
 
         #selectWarranty tbody tr td:last-child {
             display: none;

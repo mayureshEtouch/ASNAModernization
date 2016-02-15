@@ -33,9 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIBHDFR</span>
-                        <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span>
-                        <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
+						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIBHDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -555,6 +555,8 @@
                 $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
                 $(this).css({ "background-color": "#f1f1f1" });
                 $("div.icon-container").removeClass("icon-disable");
+				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
+				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
             });
 
             // Search by Customer data table record mapping
