@@ -72,16 +72,16 @@
 						<span class="summary-txt" name ="order"></span>
 					</div>
 					<div class="mdl-cell mdl-cell--3-col">
-						<span class="summary-title">Customer name</span>
+						<span class="summary-title">Customer Name</span>
 						<span class="summary-txt" name= "username"></span>
 					</div>
 					 <div class="mdl-cell mdl-cell--3-col">
-						<span class="summary-title">Billing address</span>
+						<span class="summary-title">Billing Address</span>
 						<span id="billAddressDesc" class="summary-txt"></span>
 					</div>
 					<div class="mdl-cell mdl-cell--3-col">
 					
-						<span class="summary-title">Shipping address</span>
+						<span class="summary-title">Shipping Address</span>
 						<span id="shipAddressDesc" class="summary-txt"></span>
 					</div>
 					

@@ -90,11 +90,11 @@
                         <h2 class="_title">Work with Contracts</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Calculate Credit Contract</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Calculate Credit Contract</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Enter Manual Contract</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Enter Short GE Application</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Short GE Application</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -116,17 +116,17 @@
                         <h2 class="_title">Work with Sales Order</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item" id="enter-sales-order"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Enter Sales Order</p>
+                        <li class="_item" id="enter-sales-order"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Edit Sales Order</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Edit Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Sales Order</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Work Credit Applications</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Credit Applications</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Old Sales Orders</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Old Sales Orders</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Worksheet Sales Process</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Worksheet Sales Process</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -148,15 +148,15 @@
                         <h2 class="_title">Inventory & Delivery Schedule</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Deliveries</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Delivery Zips</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Inventory By Model</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Inventory By Category</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Model Receiving Schedule</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -178,13 +178,13 @@
                         <h2 class="_title">Misc. Customer Service</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Deliveries</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Delivery Zips</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Inventory By Model</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Inventory By Category</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -206,13 +206,13 @@
                         <h2 class="_title">Incomplete Orders</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Deliveries</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Delivery Zips</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Inventory By Model</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Inventory By Category</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -234,9 +234,9 @@
                         <h2 class="_title">Other Misc. Sales Menu</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Enter Pickup Completions</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Pickup Completions</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu">crop_square</i><p>Display Incomplete Payments</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->

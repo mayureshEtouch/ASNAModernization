@@ -65,11 +65,11 @@
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Customer name </span>
+                            <span class="summary-title">Customer Name </span>
                             <span id="CenPH_PALTX" class="summary-txt"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Billing address</span>
+                            <span class="summary-title">Billing Address</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="CenPH_PANTX"></span><span id="CenPH_PAQTX"></span>
                                 <br />

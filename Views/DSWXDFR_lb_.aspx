@@ -32,9 +32,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSWXDFR</span>
-                        <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span>
-                        <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSWXDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -92,7 +92,10 @@
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right" style="margin-bottom:0">
-                            <div class="icon-container icon-disable" style="margin-bottom:0"><span class="icon-txt">Display inventory select</span><i class="material-icons md-15 md-light">storage</i><span class="icon-txt">Sub/ Rpl Models</span><i class="material-icons md-15 md-light">sync</i></div>
+                            <div class="icon-container icon-disable" style="margin-bottom:0">
+								<span class="icon-txt">Display inventory select</span><i class="material-icons md-15 md-light storage-icon-disabled"></i>
+								<span class="icon-txt">Sub/ Rpl Models</span><i class="material-icons md-15 md-light sync-icon-disabled">sync</i>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -723,6 +726,13 @@
 		$('body').on('click', '#xref', function (event) {
 		    _00('F6', event);
 		});
+		
+		$('body').on('click', '#customerName tbody tr', function () {
+			$("div.icon-container i.storage-icon-disabled").addClass("storage-icon").removeClass("storage-icon-disabled");
+			$("div.icon-container i.sync-icon-disabled").addClass("sync-icon").removeClass("sync-icon-disabled");
+		});
+		
+		
 		
 		/* Select Model on double click
 		$('body').on('dblclick', '#customerName tbody tr', function () {

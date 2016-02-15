@@ -791,7 +791,10 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('body').css({ "background-color": "white" });
+            // Set date and time
+            $("[name='date']").text($("[id$=_DdsConstant23]").text());
+            $("[name='time']").text($("[id$=RCDDTL1__lb__lb_TME]").text());
+			
             if ($("#CenPH__lb_RCDDTL1").length > 0) {
                 var type = $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().html();
                 type += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().next().html();

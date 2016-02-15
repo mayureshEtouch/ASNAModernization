@@ -1263,3 +1263,15 @@ textarea {
 .delete-icon {
 	background: url(../Images/icons/ic_delete_black_24dp_1x.png) no-repeat;
 }
+.storage-icon-disabled {
+	background: url(../Images/icons/ic_storage_black_24dp_1x-disable.png) no-repeat;
+}
+.storage-icon {
+	background: url(../Images/icons/ic_storage_black_24dp_1x.png) no-repeat;
+}
+.sync-icon-disabled {
+	background: url(../Images/icons/ic_sync_black_24dp_1x-disable.png) no-repeat;
+}
+.sync-icon {
+	background: url(../Images/icons/ic_sync_black_24dp_1x.png) no-repeat;
+}
