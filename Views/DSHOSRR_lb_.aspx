@@ -58,18 +58,21 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="salesperson">
-                                <thead>
-                                    <tr data-myval="">
-                                        <th>Code</th>
-                                        <th>Name</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
+                        <div class="fixed-table-container">
+						   <div class="header-background"> </div>
+						   <div class="fixed-table-container-inner">
+							<table cellspacing="0" cellpadding="0" border="0" id="salesperson">
+							 <thead>
+							  <tr data-myval="">
+							   <th class="first"><div class="th-inner">Code</div></th>
+							   <th><div class="th-inner">Name</div></th>
+							  </tr>
+							 </thead>
+							 <tbody>
+							 </tbody>
+							</table>
+						   </div>
+						  </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
@@ -461,31 +464,13 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-    <style>
-        #Div1, #CenPH__lb_SFLCTL__lb__lb_USR, #fkeys, #CenPH__lb_SFLCTL__lb__lb_CMP, #CenPH_DdsConstant7, #CenPH__lb_SFLCTL__lb__lb_PGM, #CenPH__lb_SFLCTL__lb__lb_JOB, #CenPH_DdsConstant6, #CenPH__lb_SFLCTL__lb__lb_TME,
-        #CenPH_DdsConstant8, #CenPH_DdsConstant1, #CenPH_DdsConstant2, #CenPH__lb_SFLRCD_End, #CenPH_DdsConstant9, #CenPH_DdsConstant10, #showDiagnostics, #CenPH_DdsConstant3, #footer, #CenPH__lb_SFLRCD, #CenPH_DdsConstant4, #CenPH_DdsConstant5 {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-
-        .table-container {
-            height: 400px;
-        }
-
-        tr.selected {
-            background-color: #f1f1f1;
-        }
-    </style>
     <script type="text/javascript">
         $(document).ready(function () {
             $("body").css({ "background-color": "#FFFFFF" });
             $('body').on('click', '#salesperson tbody tr', function () {
                 $("#salesperson tbody tr:even").css("background-color", "#fff");
-                $("#salesperson tbody tr:odd").css("background-color", "#fcfcfc");
-                $(this).css({ "background-color": "#f1f1f1" });
+                $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
                 $("div.icon-container").removeClass("icon-disable");
             });
 			
@@ -519,7 +504,7 @@
                     }
                 });
                 $("#salesperson tbody tr:even").css("background-color", "#fff");
-                $("#salesperson tbody tr:odd").css("background-color", "#fcfcfc");
+                $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
             }
             generateTable("top-to-bottom");
             //Handle Page Up and Page Down events
@@ -550,7 +535,7 @@
                 selectCusotmer(row, "1");
             });
             // Set first record as default selected
-            $("#salesperson tbody tr:first").css("background-color", "#f1f1f1");
+            $("#salesperson tbody tr:first").css("background-color", "#d8d8d8");
             jQuery.tableNavigation({
                 "onRowChange": function (output) {
                     if (output) {
@@ -563,8 +548,8 @@
                             generateTable("bottom-to-top");
                         } else {
                             $("#salesperson tbody tr:even").css("background-color", "#fff");
-                            $("#salesperson tbody tr:odd").css("background-color", "#fcfcfc");
-                            $(output.row).css({ "background-color": "#f1f1f1" });
+                            $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
+                            $(output.row).css({ "background-color": "#d8d8d8" });
                         }
                     }
                 }

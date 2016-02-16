@@ -104,18 +104,23 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="selectLocation">
-                                <thead>
-                                    <tr>
-                                        <th>Co</th>
-                                        <th>Loc</th>
-                                        <th>Description</th>
-                                        <th>Dist</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                            <div class="fixed-table-container">
+							   <div class="header-background"> </div>
+							   <div class="fixed-table-container-inner">
+								<table cellspacing="0" cellpadding="0" border="0" id="selectLocation">
+								 <thead>
+								  <tr data-myval="">
+								   <th class="first"><div class="th-inner">Company</div></th>
+								   <th><div class="th-inner">Location</div></th>
+								   <th><div class="th-inner">Description</div></th>
+								   <th><div class="th-inner">Distance</div></th>
+								  </tr>
+								 </thead>
+								 <tbody>
+								 </tbody>
+								</table>
+							   </div>
+							  </div>
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
@@ -572,89 +577,6 @@
         #CenPH__lb_SFLCTL__lb_2ABCD,#CenPH__lb_SFLCTL__lb_2AACD,#CenPH__lb_SFLCTL__lb_2ACCD {
             position:static !important;
             width: 100% !important;
-        }
-        #span-header, #screen_title, #fkeys, #Div1, #diagnostics, #footer {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-        /* new 2 feb 2016 class starts here */
-        .search-field-container .filter-by, .search-field-container .search-result {
-            float: left;
-        }
-
-            .search-field-container .search-result div {
-                float: left;
-                margin-right: 8px;
-            }
-
-        .search-field-container .button-container {
-            float: right;
-        }
-
-        .search-field-container .button-container {
-            margin: 0;
-        }
-
-            .search-field-container .button-container .mdl-button {
-                padding: 10px !important;
-            }
-
-        .search-field-container .search-result input, .search-field-container .search-result .input-big {
-            padding: 4px 5px 4px 5px;
-        }
-
-        .search-field-container .search-result .mdl-textfield {
-            width: 142px;
-        }
-
-        .search-field-container .mdl-textfield-select-page {
-            margin-top: 7px;
-        }
-
-        .search-field-container .summary-table-title {
-            margin-top: 9px;
-        }
-
-        .order-detail-table-data .button-container .mdl-cell, .table-data-content-container .button-container .mdl-cell {
-            margin: 3px 8px;
-        }
-
-        .form-data-wrapper .button-container .mdl-cell, .button-container .mdl-cell {
-            padding: 0 0 3px;
-        }
-        /* new 2 feb 2016 class ends here */
-
-        /* Media queries starts here */
-        @media (min-width: 992px) and (max-width:1024px) {
-            .search-field-container .search-result .mdl-textfield {
-                width: 215px;
-            }
-        }
-
-        @media (min-width: 1024px) and (max-width: 1100px) {
-            .search-field-container .search-result .mdl-textfield {
-                width: 227px;
-            }
-        }
-
-        @media only screen and (min-width : 1224px) {
-            .search-field-container .search-result .mdl-textfield {
-                width: 293px;
-            }
-
-            .search-field-container .button-container .mdl-button {
-                padding: 10px 20px !important;
-            }
-        }
-
-        @media (min-width: 600px) and (max-width: 768px) {
-
-            .search-field-container .search-result .mdl-textfield {
-                width: 90px;
-            }
         }
 
         @media (min-width: 840px) {

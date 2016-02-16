@@ -72,7 +72,7 @@
                             <span class="summary-txt" name="version"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-title">Customer Name:</span>
                             <span class="summary-txt" name="username"></span>
                         </div>
                     </div>
@@ -82,19 +82,19 @@
                 <div class="form-data-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Purchase total:</span>
+                            <span class="form-label">Purchase Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
                             <span id="CenPH_CEFVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Tax amount:</span>
+                            <span class="form-label">Tax Amount:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
                             <span id="CenPH_CBLVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Balance due:</span>
+                            <span class="form-label">Balance Due:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span id="CenPH_CBNVA" class="form-text pull-right"></span>
@@ -108,13 +108,13 @@
                             <span id="CenPH_1ANPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Order total:</span>
+                            <span class="form-label">Order Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
                             <span id="CenPH_CAQPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Requested del date:</span>
+                            <span class="form-label">Requested Delivery Date:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
@@ -125,19 +125,19 @@
                     </div>
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Effective tax rate:</span>
+                            <span class="form-label">Effective Tax Rate:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
                             <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Payment total:</span>
+                            <span class="form-label">Payment Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
                             <span id="CenPH_CBMVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Expected del date:</span>
+                            <span class="form-label">Expected Delivery Date:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right"></span>
@@ -150,7 +150,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom: -10px;">
+                        <div class="mdl-cell mdl-cell--6-col pull-right">
                             <div class="icon-container icon-disable" id="delete-record">
 								<span class="icon-txt display-customer">Delete</span>
 								<i class="material-icons md-15 md-light display-customer delete-icon-disabled"></i>
@@ -166,7 +166,7 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="orderPayment">
                                 <thead>
                                     <tr>
-                                        <th width="25%">Pmt Mth</th>
+                                        <th width="25%">Payment Method</th>
                                         <th width="25%">Amount</th>
                                         <th width="25%">Reference</th>
                                         <th width="25%">Approval Code</th>
@@ -1115,14 +1115,13 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #fkeys, #header, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #Div1 {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-
+        .table-data-content-container .mdl-data-table td{
+			padding: 6px 10px 6px;
+			line-height:normal;
+		}
+		.mdl-layout__content .DdsDecField {
+			font-weight: normal;
+		}
         .input-field {
             text-transform: uppercase !important;
             position: relative !important;
@@ -1152,17 +1151,6 @@
             background-color: rgb(252, 252, 252) !important;
         }
 
-        .OverlayPopupBackground {
-            opacity: 0.7;
-            display: none;
-            background: #000;
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
     </style>
     <script>
         $(document).ready(function () {
@@ -1236,8 +1224,9 @@
                         count++;
                     }
                 });
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericOnly();
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
-                $("#orderPayment tbody tr:odd").css("background-color", "#fcfcfc");
+                $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");
 
             }
             generateTable("top-to-bottom");
@@ -1286,8 +1275,8 @@
             //Handle row select functionality and delete record functionality
             $('body').on('click', '#orderPayment tbody tr', function () {
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
-                $("#orderPayment tbody tr:odd").css("background-color", "#fcfcfc");
-                $(this).css({ "background-color": "#f1f1f1" });
+                $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
                 $("#orderPayment tbody tr.selected").removeClass("selected");
                 $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");

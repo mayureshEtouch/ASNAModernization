@@ -102,23 +102,28 @@
             </section>
 
             <section class="table-data-content-container spacer-container-bottom">
-                <div class="table-data-wrapper" style="margin-top:0">
+                <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
-                                <thead>
-                                    <tr>
-                                        <th>Model Number</th>
-                                        <th>Description</th>
-                                        <th>Item Price</th>
-                                        <th>Vendor Number</th>
-                                        <th>Prd Cat</th>
-                                        <th>Sts</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                            <div class="fixed-table-container">
+							   <div class="header-background"> </div>
+							   <div class="fixed-table-container-inner">
+								<table cellspacing="0" cellpadding="0" border="0" id="customerName">
+								 <thead>
+								  <tr data-myval="">
+								   <th class="first"><div class="th-inner">Model Number</div></th>
+								   <th><div class="th-inner">Description</div></th>
+								   <th><div class="th-inner">Item Price</div></th>
+								   <th><div class="th-inner">Vendor Number</div></th>
+								   <th width="13%"><div class="th-inner">Product Category</div></th>
+								   <th><div class="th-inner">Status</div></th>
+								  </tr>
+								 </thead>
+								 <tbody>
+								 </tbody>
+								</table>
+							   </div>
+							  </div>
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">

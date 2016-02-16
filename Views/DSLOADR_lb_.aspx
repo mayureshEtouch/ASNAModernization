@@ -45,19 +45,19 @@
             </div>
         </section>
         <div class="box-container" style="margin-top: 20px; height: auto;">
-            <div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 20px 0; background: none;">
+            <div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 5px 5px; background: none;">
                 <div class="content-grid mdl-grid">
                     <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
                         <div class="content-grid mdl-grid">
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Company:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
                                 <span class="form-text">
                                     <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3"></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Location:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
                                 <span class="form-text">
                                     <input id="enterYourLocation" type="text" name="enterYourLocation" value="112" maxlength="3"></span>
                             </div>
@@ -65,7 +65,9 @@
                     </div>
                 </div>
                 <div class="button-container" style="padding: 0 0 5px 0;">
-                    <div class="mdl-cell mdl-cell--12-col pull-right"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Enter</span> </div>
+                    <div class="mdl-cell mdl-cell--12-col pull-right">
+						<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Enter</span>
+					</div>
                 </div>
             </div>
         </div>
@@ -234,7 +236,7 @@
                         <h2 class="_title">Other Misc. Sales Menu</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Pickup Completions</p>
+                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu E-icon"></i><p>Enter Pickup Completions</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
@@ -532,21 +534,24 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-    <style>
-        #Div1, #fkeys, #diagnostics, #footer {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-
-        .homepage-content .mdl-cell {
-            margin: 0px;
-        }
-    </style>
     <script type="text/javascript">
         $(document).ready(function () {
+			function getCookie(cname) {
+				var name = cname + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0; i<ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1);
+					if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+				}
+				return "";
+			}
+			
+			if(typeof(Storage) !== "undefined") {
+				$(".username").html(sessionStorage.getItem("userName"));
+			} else {
+				getCookie("userName");
+			}
             //Set date and time
             $("#form1").height($('body').height() - $('.copyright').height());
             $(window).resize(function () {
@@ -578,6 +583,7 @@
             $("#enter").on("click", function (event) {
                 _00("Enter", event);
             });
+			$("#enterYourLocation").ForceNumericOnly();
         });
     </script>
 </asp:Content>

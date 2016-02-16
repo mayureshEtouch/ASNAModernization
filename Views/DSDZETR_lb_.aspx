@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Phone details</span>
+                            <span class="summary-title">Phone Details</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="Hphone">HOME:</span>
                                 <span id="CenPH_CHPH_lb_"></span>
@@ -1096,9 +1096,6 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #Div1, #fkeys, #diagnostics, #footer, #message-container {
-            display: none;
-        }
 
         #CenPH__lb_SFLCTL__lb_1AJCD {
             position:static !important;
@@ -1113,11 +1110,6 @@
             margin-left: 0% !important;
             margin-right: 1% !important;
         }
-
-        #main-content {
-            width: 100%;
-        }
-
         #special-instructions span {
             display: block !important;
         }

@@ -112,19 +112,19 @@
                                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValueInsert">
                                     <thead>
                                         <tr>
-                                            <th style="width: 8%">Del <br />Status</th>
-                                            <th style="width: 7%">From <br />Loc</th>
-                                            <th style="width: 4%">Qty</th>
+                                            <th style="width: 8%">Delivery <br />Status</th>
+                                            <th style="width: 7%">From <br />Location</th>
+                                            <th style="width: 4%">Quantity</th>
                                             <th style="width: 14%">Model <br />Number</th>
 											 <th style="width: 12%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
-                                            <th style="width: 6%">Inst <br />Code</th>
+                                            <th style="width: 6%">Installation <br />Code</th>
                                             <th style="width: 3%">Level</th>
                                             <th style="width: 3%">Warranty</th>
                                             <th style="width: 3%">Credit</th>
-                                            <th style="width: 9%">Actl <br />Price</th>
-                                            <th style="width: 9%">Extd <br />Price</th>
-                                            <th style="width: 5%">Inst <br />Price</th>
+                                            <th style="width: 9%">Actual <br />Price</th>
+                                            <th style="width: 9%">Extended <br />Price</th>
+                                            <th style="width: 5%">Installation <br />Price</th>
                                             <th style="width: 9%">Status</th>
                                         </tr>
                                     </thead>
@@ -159,12 +159,12 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="5" maxlength="20">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="5" maxlength="20">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled">
+                                                <input class="mdl-textfield__input" type="text" disabled="disabled">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -210,12 +210,12 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;"TabIndex="11" maxlength="20">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="11" maxlength="20">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled">
+                                                <input class="mdl-textfield__input" type="text" disabled="disabled">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -261,12 +261,12 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="17" maxlength="20">
+                                                <input class="mdl-textfield__input" type="text"  TabIndex="17" maxlength="20">
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled">
+                                                <input class="mdl-textfield__input" type="text" disabled="disabled">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -289,20 +289,20 @@
                                  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValue">
                                     <thead>
                                         <tr>
-                                            <th style="width: 6%">Del <br />Sts</th>
-                                            <th style="width: 10%">Frm <br />Loc</th>
-                                            <th style="width: 4%">Qty</th>
+                                            <th style="width: 6%">Delivery <br />Status</th>
+                                            <th style="width: 10%">From <br />Location</th>
+                                            <th style="width: 4%">Quantity</th>
                                             <th style="width: 17%">Model <br />Number</th>
                                             <th style="width: 9%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
-                                            <th style="width: 6%">Inst <br />Code</th>
+                                            <th style="width: 6%">Installation <br />Code</th>
                                             <th style="width: 10%">Instructions</th>
                                             <th style="width: 3%">Level</th>
                                             <th style="width: 3%">Warranty</th>
                                             <th style="width: 3%">Credit</th>
-                                            <th style="width: 5%">Actl <br />Price</th>
-                                            <th style="width: 5%">Extd <br />Price</th>
-                                            <th style="width: 5%">Inst <br />Price</th>
+                                            <th style="width: 5%">Actual <br />Price</th>
+                                            <th style="width: 5%">Extended <br />Price</th>
+                                            <th style="width: 5%">Installation <br />Price</th>
                                             <th style="width: 6%">Status</th>
                                         </tr>
                                     </thead>
@@ -368,7 +368,7 @@
                             <div class="button-container nextStep"> 
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col">
-                                        <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" value="Previous" id="previous" data-attr="previous" />
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous" >Previous</span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col pull-right">
@@ -1792,14 +1792,14 @@
 		
 
 		// ASNA Hidden UI Table  index. Used for reference
-        var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+        var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
        
         
         // We added this function over here.
         // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
         $(document).keyup(function(e){
 		 // ASNA Hidden UI Table  index. Used for reference
-         var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+         var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             if(e.which== 33 || e.which== 34 ){
 			
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
@@ -1984,19 +1984,8 @@
 						$("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text(" ")
 					});
         });
+		 $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
+         $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
 		
-		
-    </script>   
-    <style>
-        #span-header, #screen_title, #fkeys, #Div1, #diagnostics, #footer {
-            display: none;
-        }
-		#main-content {
-			width: 100%;
-		}
-		.del-status {
-			width: 45px;
-			white-space: nowrap;
-		}
-    </style>
+    </script>  
     </asp:Content>

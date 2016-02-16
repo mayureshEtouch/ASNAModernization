@@ -80,7 +80,7 @@
                                 <thead>
                                     <tr>
                                         <th>Term</th>
-                                        <th>Typ</th>
+                                        <th>Type</th>
                                         <th>Warranty</th>
                                     </tr>
                                 </thead>
@@ -596,6 +596,8 @@
 
         #__Page_PopUp {
             width: 450px !important;
+			left: 50% !important;
+			margin-left: -225px;
         }
 
             #__Page_PopUp > tr:first-child {

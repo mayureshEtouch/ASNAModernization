@@ -76,10 +76,10 @@
 							<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="installations">
 								<thead>
 									<tr>
-										<th>Cde</th>
-										<th>L</th>
+										<th>Code</th>
+										<th>Level</th>
 										<th>Description</th>
-										<th class="pull-right">Price.$</th>
+										<th>Price.$</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -522,13 +522,6 @@
             display: none;
         }
 
-        #main-content {
-            width: 100%;
-        }
-
-        tr.selected {
-            background-color: #f1f1f1;
-        }
         #__Page_Hidden{
             height: 800px !important;
         }

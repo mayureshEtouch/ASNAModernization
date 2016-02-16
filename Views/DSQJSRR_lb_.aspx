@@ -88,7 +88,7 @@
                 </div>
             </section>
             <section class="progress-bar">
-                <div class="table-data-wrapper" style="margin: 20px 0 0;">
+                <div class="table-data-wrapper" style="margin: 20px 0 0;"></div>
             </section>
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
@@ -99,9 +99,9 @@
 								<table cellspacing="0" cellpadding="0" border="0" id="paymentMethod">
 									<thead>
 										<tr>
-											<th width="10%" class="first"><div class="th-inner">Mt</div></th>
+											<th width="12%" class="first"><div class="th-inner">Payment Method</div></th>
 											<th width="20%"><div class="th-inner">From</div></th>
-											<th width="40%"><div class="th-inner">Thru</div></th>
+											<th width="30%"><div class="th-inner">Thru</div></th>
 											<th><div class="th-inner">Description</div></th>
 										</tr>
 									</thead>

@@ -25,9 +25,9 @@
 
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">event_available</i>
+                        <i class="material-icons md-15 md-light date-icon"></i>
                         <span class="date-time-txt" name="date"></span>
-                        <i class="material-icons md-15 md-light">access_time</i>
+                        <i class="material-icons md-15 md-light time-icon"></i>
                         <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
 
                 </mdf:DdsRecord>
                 <div class="button-container" style="margin-right: 0px; margin-top: -55px;">
-                    <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" onclick="_00('Enter', event);" value="Login" id="login" data-attr="Login" />
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" onclick="_00('Enter', event);" id="login" >Login</span>
                 </div>
             </div>
         </main>
@@ -187,12 +187,22 @@
         #span-header, #screen_title, #CenPH_RSignon_Message, #CenPH_DdsConstant39, #CenPH_DdsConstant40 {
             display: none;
         }
-
-        #main-content {
-            width: 100%;
-        }
     </style>
     <script type="text/javascript">
+		function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+			console.log(cvalue);
+        }
+		// To show Billing & Shipping address in Order Detail page
+            if (typeof (Storage) !== "undefined") {
+                sessionStorage.setItem("userName", $("[id$='_RSignon_User']").val());
+            }
+            else {
+                setCookie("userName", $("[id$='_RSignon_User']").val() , 360);
+            }
         $(document).ready(function () {
             //Set login params
             $("#CenPH_RSignon_System").val('<%= System.Configuration.ConfigurationManager.AppSettings["system"].ToString() %>');

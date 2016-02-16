@@ -2,8 +2,8 @@
     $("body").css({ "background-color": "#FFFFFF" });
     $('body').on('click', '#' + tableId  + ' tbody tr', function () {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
-        $(this).css({ "background-color": "#f1f1f1" });
+        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+        $(this).css({ "background-color": "#d8d8d8" });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
@@ -34,14 +34,14 @@
 
                 $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
                 if (direction === "top-to-bottom") {
-                    $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
+                    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
                 } else {
-                    $("#" + tableId + " tbody tr:last").css("background-color", "#f1f1f1");
+                    $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
                 }
             }
         });
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
+        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
     }
     generateTable("top-to-bottom");
     //Handle Page Up and Page Down events
@@ -72,7 +72,7 @@
         selectCusotmer(row, "1", event);
     });
     // Set first record as default selected
-    $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
+    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
     jQuery.tableNavigation({
         "onRowChange": function (output) {
             if (output) {
@@ -85,8 +85,8 @@
                     generateTable("bottom-to-top");
                 } else {
                     $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                    $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
-                    $(output.row).css({ "background-color": "#f1f1f1" });
+                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                    $(output.row).css({ "background-color": "#d8d8d8" });
                 }
             }
         }
@@ -99,8 +99,8 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
     $("body").css({ "background-color": "#FFFFFF" });
     $('body').on('click', '#' + tableId  + ' tbody tr', function () {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
-        $(this).css({ "background-color": "#f1f1f1" });
+        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+        $(this).css({ "background-color": "#d8d8d8" });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
@@ -131,14 +131,14 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
 
                 $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
                 if (direction === "top-to-bottom") {
-                    $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
+                    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
                 } else {
-                    $("#" + tableId + " tbody tr:last").css("background-color", "#f1f1f1");
+                    $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
                 }
             }
         });
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
+        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
     }
     generateTable("top-to-bottom");
     //Handle Page Up and Page Down events
@@ -169,7 +169,7 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
         selectCusotmer(row, "1", event);
     });
     // Set first record as default selected
-    $("#" + tableId + " tbody tr:first").css("background-color", "#f1f1f1");
+    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
     jQuery.tableNavigation({
         "onRowChange": function (output) {
             if (output) {
@@ -182,10 +182,13 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                     generateTable("bottom-to-top");
                 } else {
                     $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                    $("#" + tableId + " tbody tr:odd").css("background-color", "#fcfcfc");
-                    $(output.row).css({ "background-color": "#f1f1f1" });
+                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                    $(output.row).css({ "background-color": "#d8d8d8" });
                 }
             }
         }
     });
+	
+	// To fixed table header
+	$(".fixed-table-container-inner .th-inner").animate({width: "300px"},500);
 }

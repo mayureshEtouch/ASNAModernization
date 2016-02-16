@@ -1,36 +1,9 @@
 ﻿@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-}
-
-@font-face {
   font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(../fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
   unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
-}
-html, body {
-	font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
-	line-height: normal;
 }
 .clear {
 	clear: both;
@@ -50,61 +23,10 @@ li{
 li a{
 	text-decoration: none;	
 }
-/* header css starts here */
-.mdl-layout__header {
-	background-color: #e32527;
-	box-shadow: none;
-	min-height: 45px;	
-}
-.mdl-layout__header-row {
-	height: 45px;
-	padding: 0 10px;
-}
-.mdl-layout-heading {
-	color: #fff;
-	font-family: "Open Sans";
-	font-size: 15px;
-	font-weight: bold;
-	padding: 0 0 0 8px;
-	display: inline-block;
-}
-.material-icons.md-16 {
-	font-size: 19px;
-	padding-right: 5px;
-}
-.material-icons.md-15 {
-	font-size: 21px;
-}
-.material-icons.md-light {
-	color: #7f7f7f;
-}
-.mdl-badge[data-badge]::after {
-	background: #10b6cf;
-	height: 13px;
-	right: -10px;
-    top: -3px;
-	width: 13px;	
-}
-.username {
-	display: inline-block;
-	color: #fff;
-	font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
-	font-size: 12px;
-	padding-left: 5px;	
-}
-.black-divider {
-	background: #a61515;
-	height: 45px;
-	margin-right: 10px;
-	width: 1px;
-}
-.mdl-badge {
-    margin-right: 19px;
-}
-/* header css ends here */
 
 
-/* copyright section css starts here */
+
+/* copyright section css starts here 
 .homepage-copyright-container {
 	background: #58595b;
 	color: #fff;
@@ -114,7 +36,7 @@ li a{
 	padding: 10px 0 12px 0;
 	text-align: center;
 }
-
+*/
 
 /* homepage CSS starts here */
 
@@ -127,6 +49,9 @@ li a{
 .homepage-content .mdl-grid {
 	padding: 0;
 }
+.homepage-content .mdl-cell {
+	margin: 0px;
+}
 .card {perspective: 1500px !important; margin: -1px;}
 
 
@@ -136,6 +61,7 @@ li a{
 	display: table;
 }
 .front-content{
+	cursor: pointer;
 	display: table-cell;
     vertical-align: middle;
 }
@@ -170,11 +96,10 @@ li a{
 	height: 71px; 
 	margin-bottom: 15px;
 }
-.block-heading{
+.mdl-layout__content .block-heading{
 	color: #fff;	
 	font-size: 25px;
 	font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
-	/*line-height: 30px;*/
 	margin: 0 10px 16px;
 	text-align: center;
 }
@@ -216,31 +141,27 @@ li a{
 	width: 41px;	
 }
 .material-icons.square-icon {
-	background:url(../Images/icons/ic_crop_square_black_18dp_1x.png) no-repeat;
-	height: 18px;
-	margin-top: 8px;
-	width: 18px;
+	border: solid 2px #e32527;
+	height: 10px;
+	margin: 10px 0 0 5px;
+	width: 10px;
 }
 ._list{
 	margin: 0 15px 15px 15px;
 }
-._title{
-	color: #333;
+.mdl-layout__content ._title{
 	font-size: 25px;
-	font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
 	line-height: 30px;	
 	margin: 15px 5px 15px 10px;
 }
 ._item{
-	border-bottom: 1px solid #e5e5e5;	
+	border-bottom: 1px solid #c5c5c5;	
 }
 ._item:last-child{
 	border-bottom: none;	
 }
-._item a p{
-	color: #666;
+._item a p {
 	display: inline-block;
-	font-size: 14px;
 	margin: 5px 0 5px 10px;
 	vertical-align: top;
 }

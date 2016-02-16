@@ -126,10 +126,10 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Home/ Work</th>
-                                        <th>Address</th>
-                                        <th>C</th>
+                                        <th style='width: 22%;'>Name</th>
+                                        <th style='width: 20%;'>Home/ Work</th>
+                                        <th style='width: 55%;'>Address</th>
+                                        <th style='width: 3%;'>C</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -591,32 +591,13 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1 {
-            display: none;
-        }
-        #main-content {
-            width: 100%;
-        }
-        tr.selected {
-            background-color: #f1f1f1;
-        }
         #CenPH__lb_SFLCTL__lb_2ALTX {
             position: relative !important;
             left: 0px !important;
             top: 0px !important;
             width: calc(100%) !important;
         }
-		.table-container-search .mdl-cell--1-col{
-			width: calc(12% - 0px);
-			margin: 0;
-		}
-		.table-container-search .mdl-cell--3-col{
-			width: calc(25% - 0px);
-			margin: 0;
-		}
-		.circle-separator{
-			margin: 13px auto;
-		}
+		
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -635,8 +616,8 @@
 
             $('body').on('click', '#customerName tbody tr', function () {
                 $("#customerName tbody tr:even").css("background-color", "#fff");
-                $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
-                $(this).css({ "background-color": "#f1f1f1" });
+                $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
                 $("div.icon-container").removeClass("icon-disable");
 				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
 				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
@@ -669,16 +650,16 @@
                             tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
                         }
                         var strtd = "";
-                        strtd = strtd + "<td style='width: 15%;'>" + custName + "</td>";
-                        strtd = strtd + "<td style='width: 15%;'>" + custPhone + "&nbsp;&nbsp;&nbsp;" + alterPhone + "</td>";
-                        strtd = strtd + "<td style='width: 65%;'>" + custAdd + "&nbsp;&nbsp;&nbsp;" + zipcode + "&nbsp;&nbsp;&nbsp;" + city + "</td>";
-                        strtd = strtd + "<td style='width: 5%;'>" + c_column + "</td>";
+                        strtd = strtd + "<td>" + custName + "</td>";
+                        strtd = strtd + "<td>" + custPhone + "&nbsp;&nbsp;&nbsp;" + alterPhone + "</td>";
+                        strtd = strtd + "<td>" + custAdd + "&nbsp;&nbsp;&nbsp;" + zipcode + "&nbsp;&nbsp;&nbsp;" + city + "</td>";
+                        strtd = strtd + "<td>" + c_column + "</td>";
                         var strclosetr = "</tr>";
                         $("#customerName tbody").append(tr + strtd + strclosetr);
                     }
                 });
                 $("#customerName tbody tr:even").css("background-color", "#fff");
-                $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
+                $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
             }
             generateTable("top-to-bottom");
             //Handle Page Up and Page Down events
@@ -707,7 +688,7 @@
             });
 
             // Set first record as default selected
-            $("#customerName tbody tr:first").css("background-color", "#f1f1f1");
+            $("#customerName tbody tr:first").css("background-color", "#d8d8d8");
             jQuery.tableNavigation({
                 "onRowChange": function (output) {
                     if (output) {
@@ -720,8 +701,8 @@
                             generateTable("bottom-to-top");
                         } else {
                             $("#customerName tbody tr:even").css("background-color", "#fff");
-                            $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
-                            $(output.row).css({ "background-color": "#f1f1f1" });
+                            $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
+                            $(output.row).css({ "background-color": "#d8d8d8" });
                         }
                     }
                 }

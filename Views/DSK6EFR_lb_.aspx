@@ -61,15 +61,15 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Order number:</span>
+                            <span class="summary-title">Order #:</span>
                             <span class="summary-txt" id="order-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Version number:</span>
+                            <span class="summary-title">Version #:</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-title">Customer Name:</span>
                             <span class="summary-txt" id="customer-name"></span>
                         </div>
                     </div>
@@ -85,10 +85,10 @@
                                     <tr>
                                         <th>Model Number</th>
                                         <th>Serial Number</th>
-                                        <th width="13%">Mfg Warr Exp Date</th>
-                                        <th width="15%">Warr Term</th>
-                                        <th width="13%">Warranty Price</th>
-                                        <th width="13%" nowrap>Ext Warr Exp Date</th>
+                                        <th>Manufacturing Warranty Expiry Date</th>
+                                        <th>Warranty Term</th>
+                                        <th>Warranty Price</th>
+                                        <th>Extended Warranty Expiry Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -737,23 +737,12 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-    <style>
-        #fkeys, #header, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #Div1 {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-
-        .mdl-data-table td .icon-textfield {
-            margin-left: 155px;
-        }
-
-        .mdl-data-table td .term-input {
-            width: 170px;
-        }
-    </style>
+	<style>
+	.table-data-content-container .mdl-data-table td {
+		padding: 6px 10px 6px;
+		line-height:normal;
+	}
+	</style>
     <script type="text/javascript">
         $(document).ready(function () {
             //Set date and time

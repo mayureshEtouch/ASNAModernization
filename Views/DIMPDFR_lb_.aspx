@@ -508,30 +508,6 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-    <style>
-        #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1 {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-
-        tr.selected {
-            background-color: #f1f1f1;
-        }
-		.table-container-search .mdl-cell--1-col{
-			width: calc(12% - 0px);
-			margin: 0;
-		}
-		.table-container-search .mdl-cell--3-col{
-			width: calc(25% - 0px);
-			margin: 0;
-		}
-		.circle-separator{
-			margin: 13px auto;
-		}
-    </style>
     <script type="text/javascript">
         $(document).ready(function () {
             window.DSBPDFR = window.DSBPDFR || {}
@@ -543,8 +519,8 @@
 
             $('body').on('click', '#customerName tbody tr', function () {
                 $("#customerName tbody tr:even").css("background-color", "#fff");
-                $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
-                $(this).css({ "background-color": "#f1f1f1" });
+                $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
                 $("div.icon-container").removeClass("icon-disable");
 				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
 				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
@@ -579,7 +555,7 @@
                     }
                 });
                 $("#customerName tbody tr:even").css("background-color", "#fff");
-                $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
+                $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
             }
             generateTable("top-to-bottom");
             //Handle Page Up and Page Down events
@@ -595,7 +571,7 @@
                 return;
             });
             $("#customerName tbody tr:even").css("background-color", "#fff");
-            $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
+            $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -609,7 +585,7 @@
             });
 
             // Set first record as default selected
-            $("#customerName tbody tr:first").css("background-color", "#f1f1f1");
+            $("#customerName tbody tr:first").css("background-color", "#d8d8d8");
             //selectCusotmer($("#customerName tbody tr:first"));
             jQuery.tableNavigation({
                 "onRowChange": function (output) {
@@ -623,8 +599,8 @@
                             generateTable("bottom-to-top");
                         } else {
                             $("#customerName tbody tr:even").css("background-color", "#fff");
-                            $("#customerName tbody tr:odd").css("background-color", "#fcfcfc");
-                            $(output.row).css({ "background-color": "#f1f1f1" });
+                            $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
+                            $(output.row).css({ "background-color": "#d8d8d8" });
                         }
                     }
                 }
