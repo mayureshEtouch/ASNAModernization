@@ -36,7 +36,7 @@
                 <span class="mdl-layout-title logo-icon"></span>
                 <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
-                <span class="close-icon" id="close-modal"><i class="material-icons md-15">close</i></span>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -48,7 +48,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">CCLVD1R</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLVD1R</span>
                     </div>
                 </div>
             </section>
@@ -931,12 +931,12 @@
             $("#slsmn").html(slsmn);
             var location = $("#CenPH__lb_RCDDTL1__lb_1ABCD").html() + "/" + $("#CenPH__lb_RCDDTL1__lb_1AACD").html();
             $("#location").html(location);
-            var notes = $("#CenPH__lb_RCDDTL1__lb_DUJTX").html();
+            var notes = $("#CenPH__lb_RCDDTL1__lb_DUJTX").html().replace(/&nbsp;/g, "");
             $("#CenPH_2AQNA").val(notes);
 
             
             //handle F12 event
-            $("#ok,#close-modal").on("click", function (event) {
+            $("#ok,.close-icon").on("click", function (event) {
                 _00('F12', event);
             });
         });

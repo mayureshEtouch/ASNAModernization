@@ -1062,7 +1062,7 @@
             DisplayFields="*True"
             DisplayRecords="*True"
             InitializeRecords="*True"
-            SubfilePage="1"
+            SubfilePage="2"
             SubfileSize="3"
             SubFileEnd="25 | !25"
             SubFileEndTextOn=""

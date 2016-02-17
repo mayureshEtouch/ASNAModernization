@@ -33,7 +33,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIQXDFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt">19:00:20</span>
+                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIQXDFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
                     </div>
                 </div>
             </section>
@@ -76,7 +76,7 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="x-ref-items">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="x-ref-items">
                                 <thead>
                                     <tr>
                                         <th>Reference</th>
