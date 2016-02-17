@@ -22,6 +22,91 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+      <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Incoming PO's</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSM1DFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="white-to-gray-bullet"></li>
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider-first">
+                                <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                                <li class="progress-bar-divider">
+                                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                                    <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary order-summary-container">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Model number</span>
+                            <span class="summary-txt" id="model-number"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Product category</span>
+                            <span class="summary-txt" id="prod-cat"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Vendor number</span>
+                            <span class="summary-txt" id="vendor-number"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container" style="overflow: auto;">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="display-incoming-pos">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Receipt</th>
+                                        <th>Company</th>
+                                        <th>Location</th>
+                                        <th>PO Number</th>
+                                        <th>Ordered</th>
+                                        <th>Received</th>
+                                        <th>Remaining Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-left modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="select-order">Submit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Modified HTML code ends here -->
         <div id="Div1">
             
       <%--  IN: DSP Incoming PO       Display file                                                                           --%>
@@ -689,4 +774,43 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+    <style>
+        #Div1, #fkeys, #showDiagnostics, #footer {
+            display: none;
+        }
+
+        #main-content {
+            width: 100%;
+        }
+
+        tr.selected {
+            background-color: #f1f1f1;
+        }
+    
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Set date and time
+            $("[name='date']").text($("[id$=CenPH_DdsConstant17]").text());
+            $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
+            //Set page display data
+            var modNumber = $("#CenPH__lb_SFLCTL__lb_2AXTX").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFJTX").html();
+            var prodCat = $("#CenPH__lb_SFLCTL__lb_2AXCD").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFATX").html();
+            var venNumber = $("#CenPH__lb_SFLCTL__lb_PBLNB").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CECTX").html();
+            $("#model-number").html(modNumber);
+            $("#prod-cat").html(prodCat);
+            $("#vendor-number").html(venNumber);
+            generateTableAndApplyInfiniteScroll("display-incoming-pos", "CenPH__lb_SFLRCD", "NONE", "select-order");
+            $('body').on('click', '#exitPage', function (event) {
+                _00('F12', event);
+            });
+            
+            $('body').on('click', '#display-incoming-pos tbody tr', function () {
+                $("#display-incoming-pos tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+            });
+
+      $(".fixed-table-container-inner .th-inner").animate({width: "300px"},500);
+    });
+    </script>
     </asp:Content>

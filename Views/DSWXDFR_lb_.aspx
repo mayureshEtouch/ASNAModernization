@@ -93,8 +93,8 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right" style="margin-bottom:0">
                             <div class="icon-container icon-disable" style="margin-bottom:0">
-								<span class="icon-txt">Display inventory select</span><i class="material-icons md-15 md-light storage-icon-disabled"></i>
-								<span class="icon-txt">Sub/ Rpl Models</span><i class="material-icons md-15 md-light sync-icon-disabled">sync</i>
+								<span class="icon-txt storage-model">Display inventory select</span><i class="storage-model material-icons md-15 md-light storage-icon-disabled"></i>
+								<span class="icon-txt sub-rpl-model">Sub/ Rpl Models</span><i class="sub-rpl-model material-icons md-15 md-light sync-icon-disabled"></i>
 							</div>
                         </div>
                     </div>
@@ -719,20 +719,27 @@
 		$('body').on('click', '#xref', function (event) {
 		    _00('F6', event);
 		});
-		
 		$('body').on('click', '#customerName tbody tr', function () {
 			$("div.icon-container i.storage-icon-disabled").addClass("storage-icon").removeClass("storage-icon-disabled");
 			$("div.icon-container i.sync-icon-disabled").addClass("sync-icon").removeClass("sync-icon-disabled");
 		});
-		
-		
-		
-		/* Select Model on double click
-		$('body').on('dblclick', '#customerName tbody tr', function () {
-			console.log("dbl")
-			$("#submit-button").trigger('click');
-			//_00('Enter', event);
-		});*/
-
+    	var selectCusotmer = function (row, value, event) {
+		    var selectId = $(row).data('selectid');
+		    a = selectId.split(".");
+		    $("#" + a[0] + "\\." + a[1]).val(value);
+		    _00('Enter', event);
+		}
+		$(".sub-rpl-model").on("click", function (event) {
+		    var row = $("#customerName tbody tr.selected");
+		    selectCusotmer(row, "7", event);
+		});
+		$(".storage-model").on("click", function (event) {
+		    var row = $("#customerName tbody tr.selected");
+		    selectCusotmer(row, "5", event);
+		});
+		$("#submit-button").on("click", function (event) {
+		    var row = $("#customerName tbody tr.selected");
+		    selectCusotmer(row, "1", event);
+		});
     </script>
 </asp:Content>

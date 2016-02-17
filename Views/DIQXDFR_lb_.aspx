@@ -22,6 +22,90 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+          <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Reference for Model</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIQXDFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="white-to-gray-bullet"></li>
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider-first">
+                                <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                                <li class="progress-bar-divider">
+                                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                                    <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="table-data-content-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container table-container-search">
+                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                                <div class="mdl-cell mdl-cell--3-col" style="margin-top: 12px;width: calc(15% - 16px);"> <span class="summary-table-title">Filter by: Referenced</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin-top: 2px;">
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" id="model-filter" data-upgraded=",MaterialTextfield">
+                                        
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col pull-right button-container">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container" style="overflow: auto;">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="x-ref-items">
+                                <thead>
+                                    <tr>
+                                        <th>Reference</th>
+                                        <th>Type</th>
+                                        <th>Model Number</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-left modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="select-x-ref">Submit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Modified HTML code ends here -->
         <div id="Div1">
             
       <%--  IN: DSP Ref Mdl to SEL    Display file                                                                           --%>
@@ -373,4 +457,106 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        #Div1, #fkeys, #showDiagnostics, #footer {
+            display: none;
+        }
+
+        #main-content {
+            width: 100%;
+        }
+
+        tr.selected {
+            background-color: #f1f1f1;
+        }
+    @media (min-width: 840px){
+      .filter-search-container .button-cnt-container {
+        width: calc(8% - 0px);
+      }
+      .filter-search-container .filter-txt-cnt {
+        width: calc(8% - 0px);
+      }
+      .filter-search-container .search-container{
+        width: calc(84% - 0px);
+      }
+      .filter-search-container .search-container .mdl-cell--1-col{
+        width: calc(20% - 0px);
+      }
+      .filter-search-container .search-container .mdl-cell--11-col{
+        width: calc(75% - 0px);
+      }
+      }
+      @media (max-width: 839px) and (min-width: 768px) {
+      .filter-search-container .button-cnt-container {
+        width: calc(8% - 0px);
+      }
+      .filter-search-container .filter-txt-cnt {
+        width: calc(8% - 0px);
+      }
+      .filter-search-container .search-container{
+        width: calc(84% - 0px);
+      }
+      .filter-search-container .search-container .mdl-cell--1-col{
+        width: calc(20% - 0px);
+      }
+      .filter-search-container .search-container .mdl-cell--11-col{
+        width: calc(75% - 0px);
+      }
+      }
+      @media (max-width: 767px) and (min-width: 320px) {
+      .filter-search-container .button-cnt-container {
+        width: calc(100% - 0px);
+      }
+      .filter-search-container .filter-txt-cnt {
+        width: calc(100% - 0px);
+      }
+      .filter-search-container .search-container{
+        width: calc(98% - 0px);
+      }
+      .filter-search-container .summary-table-title{
+        text-align: left;
+      }
+      .filter-search-container .button-container{
+        margin: 10px;
+      }
+      .filter-search-container .button-container .mdl-button{
+        border-radius: 2px;
+        height: auto;
+        padding: 6px 8px;
+      }
+      .filter-search-container .search-container .mdl-cell--1-col{
+        width: calc(25% - 0px);
+      }
+      .filter-search-container .search-container .mdl-cell--11-col{
+        width: calc(73% - 0px);
+      }
+    }
+    #CenPH__lb_SFLCTL__lb_2Q1TX {
+      position: static !important;
+      height: 14px !important;
+      width: 100% !important;
+    }
+    
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Set category text
+            //Set date and time
+            $("[name='date']").text($("[id$=CenPH_DdsConstant10]").text());
+            $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
+            $("#CenPH__lb_SFLCTL__lb_2Q1TX").appendTo($("#model-filter"));
+            // Search box
+            generateTableAndApplyInfiniteScroll("x-ref-items", "CenPH__lb_SFLRCD", "NONE", "select-x-ref"); // Table ID, Div ID to copy records from, any span to skip, next/submit button id
+
+            $('body').on('click', '#exitPage', function (event) {
+                _00('F12', event);
+            });
+            
+            $('body').on('click', '#x-ref-items tbody tr', function () {
+                $("#x-ref-items tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+            });
+      $(".fixed-table-container-inner .th-inner").animate({width: "300px"},500);
+    });
+    </script>
     </asp:Content>

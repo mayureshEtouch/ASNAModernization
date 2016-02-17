@@ -1,17 +1,17 @@
 ﻿function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId) {
     $("body").css({ "background-color": "#FFFFFF" });
-    $('body').on('click', '#' + tableId  + ' tbody tr', function () {
+    $('body').on('click', '#' + tableId + ' tbody tr', function() {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
         $(this).css({ "background-color": "#d8d8d8" });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
-    var generateTable = function (direction) {
+    var generateTable = function(direction) {
         $("#" + tableId + " tbody").empty();
         var count = 1;
         var recordCount = $('div#' + recordConatainer + '>div[id^="' + recordConatainer + '"]').length - 1;
-        $('div#' + recordConatainer + '>div[id^="' + recordConatainer + '"]').each(function () {
+        $('div#' + recordConatainer + '>div[id^="' + recordConatainer + '"]').each(function() {
             if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                 var divid = $(this);
                 var selectId = $(divid.children('select')).attr('id')
@@ -24,7 +24,7 @@
                     tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
                 }
                 var strtd = "";
-                divid.find('span').map(function (i, e) {
+                divid.find('span').map(function(i, e) {
                     var id = $(e).attr("id");
                     if (id.indexOf(ignoreSapn) === -1) {
                         strtd = strtd + "<td>" + ($(e).text()) + "</td>";
@@ -45,7 +45,7 @@
     }
     generateTable("top-to-bottom");
     //Handle Page Up and Page Down events
-    $('body').on('keyup', function (event) {
+    $('body').on('keyup', function(event) {
         var keycode = event.keycode || event.which;
         if (keycode === 33) {
             _00("PgUp", event);
@@ -56,7 +56,7 @@
         }
         return;
     });
-    var selectCusotmer = function (row, value, event) {
+    var selectCusotmer = function(row, value, event) {
         var selectId = $(row).data('selectid');
         a = selectId.split(".");
         $("#" + a[0] + "\\." + a[1]).val(value);
@@ -64,17 +64,17 @@
     }
 
     //Select customer on double click
-    $('body').on('dblclick', '#' + tableId  + ' tbody tr', function (event) {
+    $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
         selectCusotmer(this, "1", event);
     });
-    $("#" + selectRowId).click(function (event) {
+    $("#" + selectRowId).click(function(event) {
         var row = $("#" + tableId + " tbody tr.selected");
         selectCusotmer(row, "1", event);
     });
     // Set first record as default selected
     $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
     jQuery.tableNavigation({
-        "onRowChange": function (output) {
+        "onRowChange": function(output) {
             if (output) {
                 var selectId = $(output.row).data('selectid');
                 if (output.r && output.keycode === "40") {
@@ -91,24 +91,26 @@
             }
         }
     });
+    // To fixed table header
+    $(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
 }
 
 
 //Special case for select installations screen
 function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordConatainer, ignoreSapn, selectRowId) {
     $("body").css({ "background-color": "#FFFFFF" });
-    $('body').on('click', '#' + tableId  + ' tbody tr', function () {
+    $('body').on('click', '#' + tableId + ' tbody tr', function() {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
         $(this).css({ "background-color": "#d8d8d8" });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
-    var generateTable = function (direction) {
+    var generateTable = function(direction) {
         $("#" + tableId + " tbody").empty();
         var count = 1;
         var recordCount = $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]').length - 1;
-        $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD').each(function () {
+        $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD').each(function() {
             if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                 var divid = $(this);
                 var selectId = $(divid.children('select')).attr('id')
@@ -121,7 +123,7 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                     tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
                 }
                 var strtd = "";
-                divid.find('span').map(function (i, e) {
+                divid.find('span').map(function(i, e) {
                     var id = $(e).attr("id");
                     if (id.indexOf(ignoreSapn) === -1) {
                         strtd = strtd + "<td>" + ($(e).text()) + "</td>";
@@ -142,7 +144,7 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
     }
     generateTable("top-to-bottom");
     //Handle Page Up and Page Down events
-    $('body').on('keyup', function (event) {
+    $('body').on('keyup', function(event) {
         var keycode = event.keycode || event.which;
         if (keycode === 33) {
             _00("PgUp", event);
@@ -153,7 +155,7 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
         }
         return;
     });
-    var selectCusotmer = function (row, value, event) {
+    var selectCusotmer = function(row, value, event) {
         var selectId = $(row).data('selectid');
         a = selectId.split(".");
         $("#" + a[0] + "\\." + a[1]).val(value);
@@ -161,17 +163,17 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
     }
 
     //Select customer on double click
-    $('body').on('dblclick', '#' + tableId  + ' tbody tr', function (event) {
+    $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
         selectCusotmer(this, "1", event);
     });
-    $("#" + selectRowId).click(function (event) {
+    $("#" + selectRowId).click(function(event) {
         var row = $("#" + tableId + " tbody tr.selected");
         selectCusotmer(row, "1", event);
     });
     // Set first record as default selected
     $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
     jQuery.tableNavigation({
-        "onRowChange": function (output) {
+        "onRowChange": function(output) {
             if (output) {
                 var selectId = $(output.row).data('selectid');
                 if (output.r && output.keycode === "40") {
@@ -188,7 +190,39 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
             }
         }
     });
-	
-	// To fixed table header
-	$(".fixed-table-container-inner .th-inner").animate({width: "300px"},500);
+    // To fixed table header
+    $(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
+}
+
+// To fixed table header
+$(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
+//copy data to and from
+function setHandlers(copyFrom, copyTo, events) {
+    $("#" + copyFrom).on(events, function() {
+        $("#" + copyTo).val($("#" + copyFrom).val());
+    });
+}
+
+function copyData(fields, events) {
+    var dispOnlyFields = fields.displayOnlyFields;
+    var inputFields = fields.inputFields;
+    for (var ele in dispOnlyFields) {
+        var combineFromAll = ele.split("+");
+        var outvalues = "";
+        if (combineFromAll.length > 0) {
+            for (var i = 0; i < combineFromAll.length; i++) {
+                outvalues += $("#" + combineFromAll[i]).html() + "&nbsp;";
+            }
+        } else {
+            outvalues += $("#" + ele).html();
+        }
+        $("#" + dispOnlyFields[ele]).html(outvalues);
+    }
+    for (var ele in inputFields) {
+        if ($("#" + ele).length > 0) {
+            $("#" + inputFields[ele]).val($("#" + ele).val().replace(/\s/g, ""));
+            setHandlers(inputFields[ele], ele, events);
+        }
+
+    }
 }

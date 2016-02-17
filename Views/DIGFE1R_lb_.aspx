@@ -2,9 +2,16 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 1/26/2016 at 2:04 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DIGFE1R# --%>
-
+        <%-- Migrated on 1/26/2016 at 1:58 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CCLVD1R# --%>
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +29,170 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+            <!-- Modified HTML code starts here -->
+    <div class="mdl-layout__container">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container is-upgraded" data-upgraded=",MaterialLayout">
+            <header class="mdl-layout__header is-casting-shadow">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15">close</i></span> </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Edit Customer Information</span> </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIGFE1R</span> </div>
+                    </div>
+                </section>
+                <section class="order-summary">
+                    <div class="order-summary-wrapper">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Type</span> <span class="summary-txt" id="cust-type">SLS Sales</span> </div>
+                            <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Credit Customer Name</span> <span class="summary-txt" id="cust-name">RAJA TMU</span> </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="form-data">
+                    <div class="form-data-wrapper" style="padding: 0;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Address:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                        <div class="form-text shipping-add" data-upgraded=",MaterialTextfield">
+                                            <input type="text" class="full-input" id="add-one" name="add-one">
+                                            <br>
+                                            <input type="text" class="full-input" id="add-two" name="add-two" style="margin-bottom: 0;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Home Phone #:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                                                <input type="text" id="home-phone" name="home-phone">
+                                                                </span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Cell Phone #:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                                                <input type="text" id="cell-phone" name="cell-phone">
+                                                                </span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Email:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                                                <input type="text" id="cust-email" name="cust-email" class="full-input">
+                                                                </span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Extra Phone #s:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield"> Y </span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">On:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span id="last-changed-on" class="form-text" data-upgraded=",MaterialTextfield"></span> </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                                                <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code">
+                                                                &nbsp;&nbsp;Beaumont TX </span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Work Phone:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                                                <input type="text" id="work-phone" name="work-phone" class="mdl-cell--5-col">
+                                                                <span class="input-side-gutter-space form-label mdl-cell--7-col">Extension:
+                                                                <input type="text" id="extension" name="extension" class="extension">
+                                                                </span> </span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield"> 
+                                <select name="" id="mailing-list">
+                                    <option selected="selected" value="Y"> Y </option>
+                                    <option value="N"> N </option>
+                                    <option value=" ">   </option>
+                                    <option value="F"> F </option>
+                                    <option value="S"> S </option>
+                                    <option value="M"> M </option>
+                                    <option value="I"> I </option>
+                                    <option value="D"> D </option>
+                                    <option value="W"> W </option>
+                                    <option value="U"> U </option>
+                                    <option value="R"> R </option>
+                                    <option value="C"> C </option>
+                                    <option value="O"> O </option>
+                                    <option value="B"> B </option>
+                                    <option value="V"> V </option>
+                                    <option value="X"> X </option>
+                                    <option value="E"> E </option>
+                                    <option value="1"> 1 </option>
+                                    <option value="H"> H </option>
+                                    <option value="A"> A </option>
+                                    <option value="L"> L </option>
+                                    <option value="P"> P </option>
+                                    <option value="T"> T </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="0"> 0 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="$"> $ </option>
+                                    <option value="5"> 5 </option>
+                                    <option value="*"> * </option>
+                                    <option value="G"> G </option>
+                                </select>
+                             </span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span id="last-changed-by" class="form-text" data-upgraded=",MaterialTextfield"></span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">At:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span id="last-changed-at" class="form-text" data-upgraded=",MaterialTextfield"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                          <div class="content-grid mdl-grid">
+                              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitpage"">Previous</span>
+                                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses">Addresses</span>
+                                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</span>
+                                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phone">Phones</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                          </div>
+                      </div>
+                    </div>
+                </section>
+            </main>
+            <div id="modal" class="simplePopup"></div>
+            <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- Modified HTML code ends here -->
+</body>
         <div id="Div1">
             
       <%--  CR: ER1 Customer/Maint(B) Edit record(1 screen)                                                                  --%>
@@ -836,4 +1007,95 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #fkeys, #Div1 {
+                display: none !important;
+            }
+
+            #__Page_PopUp {
+                left: 13% !important;
+                min-width: 75% !important;
+                top: 50px !important;
+            }
+
+            #__Page_Hidden {
+                height: 920px !important;
+            }
+
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+
+            #__AsnaDisplayfileRestored__ {
+                margin-top: -20px !important;
+            }
+        </style>
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1ABST+CenPH__lb_RCDDTL1__lb_DDTTX": "cust-type",
+                    "CenPH__lb_RCDDTL1__lb_DDVTX+CenPH__lb_RCDDTL1__lb_DDXTX": "cust-name",
+                    "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST": "cust-zipcode",
+                    "CenPH__lb_RCDDTL1__lb_DBRST": "additional-add",
+                    "CenPH__lb_RCDDTL1__lb_DTQST": "extra-phone",
+                    "CenPH__lb_RCDDTL1__lb_1AAVN": "last-changed-by",
+                    "CenPH__lb_RCDDTL1_V1AGDT": "last-changed-on",
+                    "CenPH__lb_RCDDTL1__lb_1ABTM": "last-changed-at"
+                },
+                "inputFields": {
+                  "CenPH__lb_RCDDTL1__lb_DANTX": "add-one",
+                  "CenPH__lb_RCDDTL1__lb_DAOTX":"add-two",
+                  "CenPH__lb_RCDDTL1__lb_DAPTX": "cust-zipcode",
+                  "CenPH__lb_RCDDTL1__lb_DHPH_lb_":"home-phone",
+                  "CenPH__lb_RCDDTL1__lb_DWPH_lb_": "work-phone",
+                  "CenPH__lb_RCDDTL1__lb_DEONB": "extension",
+                  "CenPH__lb_RCDDTL1__lb_DK3N_lb_": "cell-phone",
+                  "CenPH__lb_RCDDTL1__lb_1ACST":"mailing-list",
+                  "CenPH__lb_RCDDTL1__lb_DBWNA": "cust-email"
+                }
+            }
+            $(document).ready(function() {
+                //Set page details
+                if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                  $(".confirmation-outer-conatiner").hide();
+                  copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                  $(".order-summary,.form-data,.time-date").show();
+                } else {
+                  $(".confirmation-outer-conatiner").show();
+                  $(".order-summary,.form-data,.time-date").hide();
+                }
+                
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
+
+                //Handle all button clicks
+                $('body').on('click', '#addresses', function(event) {
+                    _00('F7', event);
+                });
+                $('body').on('click', '#notes', function(event) {
+                    _00('F8', event);
+                });
+                $('body').on('click', '#phone', function(event) {
+                    _00('F9', event);
+                });                 
+                $('body').on('click', '#exitpage', function(event) {
+                    _00('F12', event);
+                });
+                $('body').on('click', '#next', function(event) {
+                    _00('Enter', event);
+                });
+            });
+        </script>
     </asp:Content>

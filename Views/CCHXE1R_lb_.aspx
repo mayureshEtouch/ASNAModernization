@@ -22,6 +22,319 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+        <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <div class="mdl-layout__container">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Edit Personal Details</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">CCHXE1R</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt">19:00:20</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider"></li>
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider"></li>
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider"></li>
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="white-to-gray-bullet"></li>
+                            <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="form-data">
+                    <div class="form-data-wrapper">
+                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                        <span class="form-label">Customer:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                        <span class="form-text">
+                                        <span id="cust-name">000/000</span>
+                                        <br>
+                                        <span id="cust-first-add">000/000</span>
+                                        <br>
+                                        <span id="cust-second-add">000/000</span>
+                                        <br>
+                                        <span id="cust-zipcode">000/000</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                        <span class="form-label">Home Phone:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                        <span class="form-text" id="home-phone">000/ 000-000</span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                        <span class="form-label">Office Phone:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                        <span class="form-text" id="office-phone">000/ 000-000</span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                        <span class="form-label form-label-input">Birthday:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                        <span class="form-text" id="cust-birth">12/12/1986</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--2-col">
+                                        <span class="form-label form-label-input">License #:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--6-col">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input-small" size="5" id="cust-lic-first">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small" size="15" id="cust-lic-second"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                        <span class="form-label form-label-input">S.S.#:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" id="cust-ssn" size="15"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-text">
+                                        <strong>Residence Type:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select class="mdl-cell--2-col" id="cust-res-type">
+                                            <option selected="selected" value="O"> O </option>
+                                            <option value="R"> R </option>
+                                            <option value="L"> L </option>
+                                            <option value=" ">   </option>
+                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <strong>For</strong>&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small" size="3" id="no-of-years">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <strong>Years with Payment of</strong>&nbsp;&nbsp;&nbsp;<input type="text" id="payment-of" class="mdl-textfield__input-small" size="15">&nbsp;&nbsp;<strong>Monthly</strong>
+                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label form-label-input">Phone Listed as:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="phone-listed-as"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label form-label-input">Marital Status:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text">
+                                        <select class="mdl-cell--12-col" id="cust-martial-status">
+                                            <option value="M"> M </option>
+                                            <option value="S"> S </option>
+                                            <option selected="selected" value=" ">   </option>
+                                        </select></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label form-label-input">Dependents:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text"><input id="cust-dependents" type="text" class="mdl-textfield__input" size="15"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">Spouse Name:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--3-col">
+                                <span class="form-text"><input type="text" id="sp-name" class="mdl-textfield__input" size="27"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col">
+                                <span class="form-label form-label-input">Birthday:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col">
+                                <span class="form-text"><input type="text" id="sp-birth" class="mdl-textfield__input" size="15"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">S.S.#:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--3-col">
+                                <span class="form-text"><input type="text" id="sp-ssn" class="mdl-textfield__input" size="15"></span>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">License #:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--3-col">
+                                <span class="form-text"><input type="text" id="sp-lic-first" class="mdl-textfield__input-small" size="5">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="sp-lic-second" class="mdl-textfield__input-small" size="15"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col">
+                                <span class="form-label form-label-input">Spouse Monthly Income:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                                <span class="form-text"><input type="text" id="sp-monthly-income" class="mdl-textfield__input" size="15"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="form-data">
+                    <div class="form-data-wrapper">
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0;">
+                                <span class="form-label form-label-input">Employed at:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col">
+                                <span class="form-text"><input type="text" id="employed-at" class="mdl-textfield__input"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">Duration:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell-brd">
+                                <span class="form-text">
+                                <input type="text" id="employed-at-duration-years" class="mdl-textfield__input-small" size="5">&nbsp;&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" id="employed-at-duration-months" class="mdl-textfield__input-small" size="5">&nbsp;&nbsp;Months
+                            </span>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0;">
+                                <span class="form-label form-label-input">Income:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0;padding:0;">
+                                        <span class="form-text"><input type="text" id="cust-income" class="mdl-textfield__input-small" size="15"></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--2-col" style="margin:0;padding:0;">
+                                        <span class="form-label form-label-input">Freq:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0;padding:0;">
+                                        <span class="form-text">
+                                            <select id="cust-frenq" class="mdl-cell--12-col">
+                                                <option value="H"> H </option>
+                                                <option value="W"> W </option>
+                                                <option value="B"> B </option>
+                                                <option value="M"> M </option>
+                                                <option value=" ">   </option>
+                                                <option selected="selected" value="A"> A </option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">Supervisor:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell-brd">
+                                <span class="form-text"><input type="text" id="cust-supervisor" class="mdl-textfield__input"></span>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--2-col" style="margin: 0 0;">
+                                <span class="form-label form-label-input">Reference Name:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col">
+                                <span class="form-text"><input type="text" id="ref-name" class="mdl-textfield__input" size="15"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">Address:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell-brd">
+                                <span class="form-text">
+                                <input type="text" id="ref-address" class="mdl-cell--12-col mdl-cell-brd mdl-textfield__input-small" size="5"></span>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--2-col" style="margin: 0 0;">
+                                <span class="form-label form-label-input">Zip Code:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col">
+                                <span class="form-text"><input type="text" id="ref-zip-code" class="mdl-textfield__input" size="15"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-label form-label-input">Phone No:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col">
+                                <span class="form-text"><input type="text" id="ref-phone" class="mdl-textfield__input" size="15"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col" style="float: right;">
+                                <span class="form-label form-label-input">Type:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <span class="form-text">
+                                    <select name="" id="ref-type" class="mdl-cell--12-col">
+                                        <option value="R"> R </option>
+                                        <option value="F"> F </option>
+                                        <option selected="selected" value=" ">   </option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="button-container" style="padding-bottom:0">
+                            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="padding-bottom:0">
+                                    <span id="exitPage" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="add-item">
+                    &nbsp;
+                </section>
+            </main>
+            <div id="modal" class="simplePopup"></div>
+            <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- Modified HTML code ends here -->
         <div id="Div1">
             
       <%--  CU: ED1 Personal Detail   Edit record(1 screen)                                                                  --%>
@@ -1279,4 +1592,89 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-    </asp:Content>
+       <style>
+        #Div1, #fkeys, #showDiagnostics, #footer,#message-container {
+            display: none;
+        }
+
+        #main-content {
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH__lb_RCDDTL1__lb_DALTX": "cust-name",
+                "CenPH__lb_RCDDTL1__lb_DBNTX": "cust-first-add",
+                "CenPH__lb_RCDDTL1__lb_DBPTX+CenPH__lb_RCDDTL1__lb_DBMTX": "cust-second-add",
+                "CenPH__lb_RCDDTL1__lb_DAPTX": "cust-zipcode",
+                "CenPH__lb_RCDDTL1__lb_DD1NB": "home-phone",
+                "CenPH__lb_RCDDTL1__lb_DD2NB": "office-phone",
+                "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD": "cust-birth"
+            },
+            "inputFields": {
+              "CenPH__lb_RCDDTL1__lb_1DRCD": "cust-lic-first",
+              "CenPH__lb_RCDDTL1__lb_DTX20":"cust-lic-second",
+              "CenPH__lb_RCDDTL1__lb_1A4NB": "cust-ssn",
+              "CenPH__lb_RCDDTL1__lb_1RTCD":"cust-res-type",
+              "CenPH__lb_RCDDTL1__lb_1REST": "no-of-years",
+              "CenPH__lb_RCDDTL1__lb_1RES_usd_": "payment-of",
+              "CenPH__lb_RCDDTL1__lb_DVZTX": "phone-listed-as",
+              "CenPH__lb_RCDDTL1__lb_1ASST":"cust-martial-status",
+              "CenPH__lb_RCDDTL1__lb_1DEP_lb_": "cust-dependents",
+              "CenPH__lb_RCDDTL1__lb_1SPNM": "sp-name",
+              "ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue": "sp-birth",
+              "CenPH__lb_RCDDTL1__lb_DDUN_lb_": "sp-ssn",
+              "CenPH__lb_RCDDTL1__lb_1SPST": "sp-lic-first",
+              "CenPH__lb_RCDDTL1__lb_DG6XT": "sp-lic-second",
+              "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "sp-monthly-income",
+              "CenPH__lb_RCDDTL1__lb_DUNTX": "employed-at",
+              "CenPH__lb_RCDDTL1__lb_DZ4NB": "employed-at-duration-years",
+              "CenPH__lb_RCDDTL1__lb_DJVN_lb_": "employed-at-duration-months",
+              "CenPH__lb_RCDDTL1__lb_DINC_usd_": "cust-income",
+              "CenPH__lb_RCDDTL1__lb_DINCF": "cust-frenq",
+              "CenPH__lb_RCDDTL1__lb_DWWTX": "cust-supervisor",
+              "CenPH__lb_RCDDTL1__lb_DNMRF": "ref-name",
+              "CenPH__lb_RCDDTL1__lb_DANTX": "ref-address",
+              "CenPH__lb_RCDDTL1__lb_DUSTX": "ref-zip-code",
+              "CenPH__lb_RCDDTL1__lb_DBXNB": "ref-phone",
+              "CenPH__lb_RCDDTL1__lb_DREFT": "ref-type"
+            }
+        }
+        $(document).ready(function() {
+            //Set date and time
+            $("[name='date']").text($("[id$=CenPH_DdsConstant42]").text());
+            $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
+            
+            $('body').on('click', '#exitPage', function(event) {
+                _00('F12', event);
+            });
+            $('body').on('click', '#next', function(event) {
+                _00('Enter', event);
+            });
+            $('body').on('click', '#update-cust', function(event) {
+                _00('F7', event);
+            });
+            if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+              $(".confirmation-outer-conatiner").hide();
+              $(".OverlayPopupBackground").hide();
+              //Set page details
+              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+              //$(".order-summary,.form-data,.time-date").show();
+            } else {
+              $(".confirmation-outer-conatiner").show();
+              $(".OverlayPopupBackground").show();
+              //$(".order-summary,.form-data,.time-date").hide();
+            }
+            
+            $("#yes").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
+            });
+            $("#no").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                _00('Enter', event);
+            });
+        });
+    </script>
+</asp:Content>
