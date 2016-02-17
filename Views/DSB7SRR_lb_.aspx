@@ -59,7 +59,7 @@
 				<div class="order-summary-wrapper">
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--12-col">
-							<span class="summary-title">Category:</span>
+							<span class="summary-title">Category</span>
 							<span class="summary-txt" id="install-category">00017 Temp. # for store 30</span>
 						</div>
 
