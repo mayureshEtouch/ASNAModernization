@@ -96,7 +96,7 @@
 						<div class="fixed-table-container">
 							<div class="header-background"> </div>
 							<div class="fixed-table-container-inner">
-								<table cellspacing="0" cellpadding="0" border="0" id="paymentMethod">
+								<table cellspacing="0" cellpadding="0" border="0" id="paymentMethod" class="navigateable">
 									<thead>
 										<tr>
 											<th width="12%" class="first"><div class="th-inner">Payment Method</div></th>
