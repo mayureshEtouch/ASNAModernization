@@ -61,15 +61,15 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Order #:</span>
+                            <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Version #:</span>
+                            <span class="summary-title">Version #</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer Name:</span>
+                            <span class="summary-title">Customer Name</span>
                             <span class="summary-txt" id="customer-name"></span>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
         </div>
         <div id="modal" class="simplePopup"></div>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  OE: EDT Ent Ord Warr      Edit file                                                                              --%>
         <%--  CRTDSPF                                                                                                          --%>

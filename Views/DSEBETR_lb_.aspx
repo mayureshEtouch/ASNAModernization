@@ -64,15 +64,15 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Order #:</span>
+                            <span class="summary-title">Order #</span>
                             <span class="summary-txt" name="order"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Version #:</span>
+                            <span class="summary-title">Version #</span>
                             <span class="summary-txt" name="version"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer Name:</span>
+                            <span class="summary-title">Customer Name</span>
                             <span class="summary-txt" name="username"></span>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
             <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
         </section>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  OE: ETR Ent Ord Pymts     Edit transaction                                                                       --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -1131,7 +1131,6 @@
             border: 1px solid #e5e5e5 !important;
             border-radius: 2px !important;
         }
-
         .even-row-read-only-data {
             text-transform: uppercase !important;
             position: relative !important;
@@ -1140,7 +1139,6 @@
             width: auto !important;
             border: 0px solid #ffffff !important;
         }
-
         .odd-row-read-only-data {
             text-transform: uppercase !important;
             position: relative !important;
@@ -1150,7 +1148,6 @@
             border: 0px !important;
             background-color: rgb(252, 252, 252) !important;
         }
-
     </style>
     <script>
         $(document).ready(function () {

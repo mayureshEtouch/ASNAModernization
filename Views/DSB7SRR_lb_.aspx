@@ -100,7 +100,7 @@
 
 		</main>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  DE: SEL Install Code/$    Select record                                                                          --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -518,10 +518,6 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #Div1, #fkeys, #showDiagnostics, #footer {
-            display: none;
-        }
-
         #__Page_Hidden{
             height: 800px !important;
         }

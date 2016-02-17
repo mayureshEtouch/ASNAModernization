@@ -126,7 +126,7 @@
         </main>
         <div id="modal" class="simplePopup"></div>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  SY: SEL Payment Method Select record                                                                             --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -601,17 +601,6 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #Div1, #fkeys, #showDiagnostics, #footer {
-            display: none;
-        }
-
-        #main-content {
-            width: 100%;
-        }
-
-        tr.selected {
-            background-color: #f1f1f1;
-        }
 		@media (min-width: 840px){
 			.filter-search-container .button-cnt-container {
 				width: calc(8% - 0px);
