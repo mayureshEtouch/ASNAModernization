@@ -64,7 +64,7 @@
 
 	    setEventHandlers: function() {
 
-		$(".simplePopupClose, .simplePopupBackground").on("click", function (event) {
+		$(".simplePopupClose").on("click", function (event) {
 		    methods.hidePopup();
 		});
 
@@ -78,7 +78,7 @@
 	    },
 
             removeEventListners: function() {
-		$(".simplePopupClose, .simplePopupBackground").off("click");                
+		$(".simplePopupClose").off("click");                
             },
 
 	    showPopup: function() {

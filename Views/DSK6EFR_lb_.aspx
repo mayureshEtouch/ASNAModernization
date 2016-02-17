@@ -750,8 +750,8 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Set customer name
             $("#customer-name").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
-            $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html());
-            $("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html());
+            $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html().replace(/&nbsp;/g, ""));
+            $("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html().replace(/&nbsp;/g, ""));
             //Generate warranty term table
             var generateTable1 = function () {
                 var mNumberSelector = "#CenPH__lb_SFLRCD__lb_1AXTX\\.",

@@ -377,19 +377,7 @@
                                 
 								</div>
 							 </div>
-                             <div class="button-container showConfirm">
-                             <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--11-col">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancelOrder2">Cancel Order</span>
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--1-col pull-right">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="confirm">Confirm</span>
-                                    </div>
-                                </div> 
-                                
-                                
-                            </div>
+                             
                         </div>
                     </div>
                 </section>
@@ -1701,7 +1689,7 @@
         // Fill up default data from ASNA Hidden UI FORM
         $("[name='username']").text($("[id$=lb_SFLCTL__lb_1ALTX]").text());
 
-        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").html()+ " "+$("[id$=_DdsConstant20]").html() +" "+$("[id$=__lb_SFLCTL__lb_1EXNB]").html());
+        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").html().replace(/&nbsp;/g, "")+ " "+$("[id$=_DdsConstant20]").html() +" "+$("[id$=__lb_SFLCTL__lb_1EXNB]").html().replace(/&nbsp;/g, ""));
 
         $("[name='treminal']").text($("[id$=lb_SFLCTL__lb__lb_JOB]").text());
 
@@ -1825,7 +1813,7 @@
 			
             // if Current state of page is Edit
             // Hide New Confirm UI Table
-            $("#datatableValue, .showConfirm").hide();
+            $("#datatableValue").hide();
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
             // Update any data added to New Edit UI Table to ASNA Hidden UI Table
@@ -1868,7 +1856,7 @@
         else {
             // if Current stateof page is Review /Confirm
             // Hide New Edit UI Table
-            $("#datatableValueInsert, .nextStep").hide();
+            $("#datatableValueInsert").hide();
 			$(".OverlayPopupBackground").show();
             $("#confirmprompt").show();
 			
@@ -1879,7 +1867,7 @@
                    
                    $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
 				   // Show New Confirm / Review UI Table 
-					$("#datatableValue, .showConfirm").show();
+					$("#datatableValue").show();
                    $(".OverlayPopupBackground").hide();
 				   $("#confirmprompt").hide();
                });
@@ -1909,8 +1897,8 @@
 			
 			$(document).keyup(function(e){
                     if( e.which== 33){S
-                        $("#datatableValueInsert, .nextStep").show();
-                        $("#datatableValue, .showConfirm").hide();
+                        $("#datatableValueInsert").show();
+                        $("#datatableValue").hide();
                         var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
                         $("#datatableValueInsert tbody").find("tr").each(function(i){
                                             $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i+tableindex)+"']").val()); 

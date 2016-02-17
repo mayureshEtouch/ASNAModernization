@@ -57,3 +57,33 @@ function () {
         });
     });
 };
+
+// Numeric for Amount
+function validateAmount(data) {
+  var regex = /^([0-9]*(|\.[0-9]{0,2}))$/;
+  if( !regex.test(data) ) {
+    return false;
+    //if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+return true;
+}
+
+//Allow only alphabets
+ function onlyAlphabets(e, t) {
+	try {
+		if (window.event) {
+			var charCode = window.event.keyCode;
+		}
+		else if (e) {
+			var charCode = e.which;
+		}
+		else { return true; }
+		if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+			return true;
+		else
+			return false;
+	}
+	catch (err) {
+		alert(err.Description);
+	}
+} 

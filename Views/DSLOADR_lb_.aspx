@@ -52,7 +52,7 @@
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Company:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
                                 <span class="form-text">
-                                    <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3"></span>
+                                    <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3" onkeypress="return onlyAlphabets(event, this)"></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
