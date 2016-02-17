@@ -410,7 +410,7 @@
     </div>
 	
 	
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  OE: ETR Ent Ord Dtl       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
