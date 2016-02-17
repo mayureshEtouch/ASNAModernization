@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:05 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CCGIDFI# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +33,91 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+            <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title logo-icon"></span>
+                <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Credit Message</span> </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCGIDFI</span> </div>
+                </div>
+            </section>
+            <section class="form-data" id="first-message">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
+                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;"><strong>Continue</strong>
+                        <select id="CenPH__lb_SFLCTL__lb_PPTST_first" tabindex="2" class="DdsCharField" name="ctl00$CenPH$_lb_SFLCTL__lb_PPTST" onfocus="_09('#PPTST','4,58','#SFLCTL');" style="color:Green;position: static; left: 523px; top: 72px; width: 50px">
+                            <option selected="selected" value=" ">   </option>
+                            <option value="N"> N </option>
+                            <option value="Y"> Y </option>
+                        </select></span> </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            <fieldset>
+                                <legend id="legend">NOTES:</legend>
+                                <p id="notice-first" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></p>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--6-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" style="margin-left: -5px;">Previous</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction">Display Transaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data" id="second-message" style="display:none;">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Please Call GE Money for Clarification</span></div>
+                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;"><strong>Continue</strong><select id="CenPH__lb_SFLCTL__lb_PPTST_second" tabindex="2" class="DdsCharField" name="ctl00$CenPH$_lb_SFLCTL__lb_PPTST" onfocus="_09('#PPTST','4,58','#SFLCTL');" style="color:Green;position: absolute; left: 523px; top: 72px; width: 50px">
+                        <option selected="selected" value=" ">   </option>
+                        <option value="N"> N </option>
+                        <option value="Y"> Y </option>
+                      </select></span> </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            <fieldset>
+                                <legend id="legend">Notes:</legend>
+                                <p id="notice-second" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></p>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--6-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" style="margin-left: -5px;">Previous</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction">Display Transaction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        </div>
+        <!-- Modified HTML code ends here -->
         <div id="Div1">
             
       <%--  CA: DFI Crd Cmp Message   Display file                                                                           --%>
@@ -560,4 +656,78 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #Div1, #fkeys, #showDiagnostics, #footer {
+                display: none;
+            }
+            #main-content {
+                width: 100%;
+            }
+            #__Page_Hidden{
+                height: 800px !important;
+            }
+              #__Page_PopUp {
+                left: 50% !important;
+                margin-left: -225px;
+            }
+
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #form1 {
+                margin-top: -20px;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var notes = "";
+                $('body').on('click', '#previous', function (event) {
+                    _00('F12', event);
+                });
+                $('body').on('click', '#displayTransaction', function (event) {
+                    _00('Enter', event);
+                });
+                $("#CenPH__lb_SFLCTL__lb_PPTST_first").on("change", function(event) {
+                  $("#CenPH__lb_SFLCTL__lb_PPTST").val($("#CenPH__lb_SFLCTL__lb_PPTST_first").val());
+                  _00("Enter", event);
+                });
+                $("#CenPH__lb_SFLCTL__lb_PPTST_second").on("change", function(event) {
+                  $("#CenPH__lb_SFLCTL__lb_PPTST").val($("#CenPH__lb_SFLCTL__lb_PPTST_second").val());
+                  _00("Enter", event);
+                });
+
+                $('div#CenPH__lb_SFLRCD>div[id^=CenPH__lb_SFLRCD]').each(function() {
+                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                        var divid = $(this);
+                        divid.find('span').map(function(i, e) {
+                            notes += $(e).html();
+                        });
+                    }
+                });
+                if(document.getElementById("CenPH__lb_SFLCTL__lb_CBANA").innerHTML.indexOf("Continue to GE Credit?") !== -1) {
+                    $("#notice-first").html(notes);
+                    $("#second-message").hide();
+                    $("#first-message").show();
+                } else {
+                    $("#notice-second").html(notes);
+                    $("#second-message").show();
+                    $("#first-message").hide();
+                }
+                
+
+            });
+        </script>
     </asp:Content>
