@@ -91,7 +91,7 @@
     </div>
     <div id="modal" class="simplePopup"></div>
 
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
 
         <%--  OE: SEL Employee rst type Select record                                         --%>
