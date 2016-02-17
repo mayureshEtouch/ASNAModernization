@@ -156,7 +156,7 @@
     </div>
 
 
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  CU: DSP Customer    Display file                                                --%>
         <%--  CRTDSPF                                                                         --%>

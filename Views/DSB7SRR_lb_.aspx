@@ -59,7 +59,7 @@
 				<div class="order-summary-wrapper">
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--12-col">
-							<span class="summary-title">Category:</span>
+							<span class="summary-title">Category</span>
 							<span class="summary-txt" id="install-category">00017 Temp. # for store 30</span>
 						</div>
 
@@ -100,7 +100,7 @@
 
 		</main>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  DE: SEL Install Code/$    Select record                                                                          --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -518,10 +518,6 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #Div1, #fkeys, #showDiagnostics, #footer {
-            display: none;
-        }
-
         #__Page_Hidden{
             height: 800px !important;
         }

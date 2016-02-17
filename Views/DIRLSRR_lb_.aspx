@@ -105,7 +105,7 @@
     </div>
     <!-- Modified HTML code ends here -->
 
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  IN: SEW Product Warr/Ins  Select record                                                                          --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -524,8 +524,6 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <script type="text/javascript">
-
-
         $(document).ready(function () {
 
             $("[name='Category']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
@@ -590,33 +588,25 @@
 
     </script>
     <style>
-        #fkeys, #Div1 {
-            display: none !important;
-        }
-
         #__Page_PopUp {
             width: 450px !important;
 			left: 50% !important;
 			margin-left: -225px;
         }
+		#__Page_PopUp > tr:first-child {
+			display: none;
+		}
 
-            #__Page_PopUp > tr:first-child {
-                display: none;
-            }
-
-            #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 0;
-            }
-
+		#__Page_PopUp .DdsInlinePopUpTitle {
+			height: 0;
+		}
         #selectWarranty tbody tr td:last-child {
             display: none;
         }
-
         .modal-dialog-container {
             width: 100%;
             margin-top: 0;
         }
-
         .mdl-layout__content {
             height: auto !important;
             overflow: hidden !important;

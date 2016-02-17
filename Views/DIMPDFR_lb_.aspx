@@ -152,7 +152,7 @@
         </main>
         <div id="modal" class="simplePopup"></div>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  CU: DSP Matching EMails   Display file                                                                           --%>
         <%--  CRTDSPF                                                                                                          --%>
