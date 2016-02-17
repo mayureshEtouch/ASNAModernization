@@ -568,7 +568,12 @@
                 $(this).toggleClass("selected-row");
                 $("div.icon-container").removeClass("icon-disable");
             });
-
+			$('#selectWarranty tr td').each(function(i){
+				oldData = $(this).html();
+				newData = oldData.replace(/&nbsp;/g,"");
+				$(this).html(newData);
+			});
+			
             $(".table-container-search .icon-textfield").on('click', function () {
                 $(this).siblings('input:text').closest('.mdl-textfield__input').val('');
 

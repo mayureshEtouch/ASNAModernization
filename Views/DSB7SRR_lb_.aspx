@@ -561,6 +561,12 @@
 			$('.close-icon').click(function () {
                 $("#submit-installation").trigger('click');
             });
+			$('#installations tr td:last-child').each(function(i){
+				oldData = $(this).html();
+				newData = oldData.replace(/&nbsp;/g,"");
+				$(this).html(newData);
+			});
+			$('#installations tr td:last-child').css("text-align", "right")
 		});
     </script>
 </asp:Content>
