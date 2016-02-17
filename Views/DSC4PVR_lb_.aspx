@@ -110,7 +110,7 @@
             <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
         </section>-->
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  CU: PMT Customer          Prompt & validate record                              --%>
         <%--  CRTDSPF                                                                         --%>
@@ -446,16 +446,11 @@
         });
     </script>
     <style>
-        #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1 {
-            display: none;
-        }
-
         #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
             position: relative !important;
             left: 0px !important;
             top: 0px !important;
         }
-
         #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB {
             width: calc(16.6666666667% - 16px) !important;
         }
@@ -467,16 +462,5 @@
         #CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
             width:100% !important;
         }
-		.table-container-search .mdl-cell--1-col{
-			width: calc(12% - 0px);
-			margin: 0;
-		}
-		.table-container-search .mdl-cell--3-col{
-			width: calc(25% - 0px);
-			margin: 0;
-		}
-		.circle-separator{
-			margin: 13px auto;
-		}
     </style>
 </asp:Content>
