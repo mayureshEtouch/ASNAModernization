@@ -1608,6 +1608,16 @@
         #main-content {
             width: 100%;
         }
+		.clm-form-label{
+			display: inline-block;
+			width: 110px;
+		}
+		.clm-form-label-add{
+			display: inline-block;
+			width: 110px;
+			float: left;
+			height: 100px;
+		}
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
