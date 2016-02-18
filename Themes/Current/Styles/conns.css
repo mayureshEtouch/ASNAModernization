@@ -1100,7 +1100,7 @@ textarea {
  padding: 1px 3px 2px;
  vertical-align: top;
 }
-.mdl-layout__content input, .mdl-layout__content textarea {
+.mdl-layout__content , .mdl-layout__content textarea {
  text-transform: uppercase;
 }
 .mdl-layout__content .DdsConstant, .mdl-layout__content  .DdsDecField, .form-label, .summary-label{
