@@ -1100,7 +1100,7 @@ textarea {
  padding: 1px 3px 2px;
  vertical-align: top;
 }
-.mdl-layout__content input, .mdl-layout__content textarea {
+.mdl-layout__content , .mdl-layout__content textarea {
  text-transform: uppercase;
 }
 .mdl-layout__content .DdsConstant, .mdl-layout__content  .DdsDecField, .form-label, .summary-label{
@@ -1270,7 +1270,7 @@ tr.selected {
 	z-index: 1;
 }
 #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #message-container, #span-header, #screen_title , #showDiagnostics{
-	display: none;
+	display: none !important;
 }
 
 .table-container-search .mdl-cell--1-col{

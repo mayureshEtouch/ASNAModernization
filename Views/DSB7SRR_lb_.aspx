@@ -522,7 +522,7 @@
             height: 800px !important;
         }
 		#__Page_PopUp {
-            width: 450px !important;
+            min-width: 450px !important;
 			left: 50% !important;
 			margin-left: -225px;
         }
@@ -534,13 +534,15 @@
 		#__Page_PopUp .DdsInlinePopUpTitle {
 			height: 0;
 		}
-
+#wrapper {
+width: 100% !important;
+}
         #selectWarranty tbody tr td:last-child {
             display: none;
         }
 
         .modal-dialog-container {
-            width: 100%;
+            width: 100% !important;
             margin-top: 0;
         }
 
@@ -558,8 +560,9 @@
             $("#install-category").html($("#CenPH__lb_SFLCTL__lb_2AXCD").html());
             generateTableAndApplyInfiniteScrollForInstallations("installations", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "submit-installation"); // Table ID, Div ID to copy records from
 			
-			$('.close-icon').click(function () {
-                $("#submit-installation").trigger('click');
+			$('.close-icon').click(function (event) {
+                _00("F12",event);
+                //$("#submit-installation").trigger('click');
             });
 			$('#installations tr td:last-child').each(function(i){
 				oldData = $(this).html();

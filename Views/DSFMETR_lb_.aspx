@@ -113,7 +113,7 @@
                                     <thead>
                                         <tr>
                                             <th style="width: 8%">Delivery <br />Status</th>
-                                            <th style="width: 7%">From <br />Location</th>
+                                            <th style="width: 7%;">From <br />Location</th>
                                             <th style="width: 4%">Quantity</th>
                                             <th style="width: 14%">Model <br />Number</th>
 											 <th style="width: 12%">Model <br />Name</th>
@@ -140,7 +140,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="2" maxlength="3" >
+                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="2" maxlength="3" style="text-align: right" >
                                               </div>
                                             </td>
                                             <td>
@@ -192,7 +192,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="8" maxlength="3">
+                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="8" maxlength="3" style="text-align: right">
                                               </div>
                                             </td>
                                             <td>
@@ -243,7 +243,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="14" maxlength="3">
+                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="14" maxlength="3" style="text-align: right">
                                               </div>
                                             </td>
                                             <td>
@@ -309,25 +309,7 @@
                                     <tbody>
                                         <tr>
                                             <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><span class="numText"></span></td>
-                                            <td><span class="numText"></span></td>
-                                            <td><span class="numText"></span></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
+                                            <td style="text-align: right"><span></span></td>
                                             <td><span></span></td>
                                             <td><span></span></td>
                                             <td><span></span></td>
@@ -345,7 +327,25 @@
                                         
                                         <tr>
                                             <td><span></span></td>
+                                            <td style="text-align: right"><span></span></td>
                                             <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><span></span></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><i class="material-icons"></i></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td><span class="numText"></span></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td><span></span></td>
+                                            <td style="text-align: right"><span></span></td>
                                             <td><span></span></td>
                                             <td><span></span></td>
                                             <td><span></span></td>
@@ -1674,6 +1674,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style>
+	#datatableValueInsert tbody tr td:nth-child(11), #datatableValueInsert tbody tr td:nth-child(12), #datatableValueInsert tbody tr td:nth-child(13) {
+		text-align: right;
+	}
+	</style>
 	 <script type="text/javascript">
         function getCookie(cname) {
             var name = cname + "=";

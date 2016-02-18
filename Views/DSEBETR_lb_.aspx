@@ -1280,10 +1280,10 @@
                 $("div.icon-container").removeClass("icon-disable");
 				$("div.icon-container i.delete-icon-disabled").addClass("delete-icon").removeClass("delete-icon-disabled");
             });
-            $("#delete-record").click(function () {
+            $("#delete-record").click(function (event) {
                 if ($("#orderPayment tbody tr.selected").length > 0) {
                     var row = $("#orderPayment tbody tr.selected");
-                    selectCusotmer(row, "4");
+                    selectCusotmer(row, "4", event);
                 } else {
                     return;
                 }
