@@ -469,6 +469,8 @@
                 $("#salesperson tbody tr:even").css("background-color", "#fff");
                 $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
                 $(this).css({ "background-color": "#d8d8d8" });
+                $("#salesperson tbody tr").removeClass("selected");
+                $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");
             });
 			
