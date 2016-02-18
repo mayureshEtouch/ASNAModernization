@@ -1221,7 +1221,7 @@
                         count++;
                     }
                 });
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericOnly();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");

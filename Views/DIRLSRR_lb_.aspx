@@ -3,15 +3,18 @@
 <%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
-    <%-- Migrated on 1/26/2016 at 1:51 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-    <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DIRLSRR# --%>
     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -76,7 +79,7 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="selectWarranty">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="selectWarranty">
                                 <thead>
                                     <tr>
                                         <th>Term</th>
@@ -92,7 +95,7 @@
                             <div class="content-grid mdl-grid">
 
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty-submit">Submit</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty-submit">Submit</span>
                                 </div>
                             </div>
                         </div>
@@ -528,68 +531,12 @@
 
             $("[name='Category']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
             $("[name='Group']").text($("[id$=CenPH__lb_SFLCTL__lb_2AWCD]").text());
-
-            /* script for table row starts here */
-            var count = 0;
-
-            $('div#CenPH__lb_SFLRCD>div').each(function () {
-
-                var divid = $(this);
-                //console.log(divid);
-                var selectId = $(divid.children('select')).attr('id');
-                //$('div#CenPH__lb_SFLRCD>div:nth-last-of-type(2)').hide();
-
-                var tr = "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                var spancount = 0;
-                var datamyval = $('div#CenPH__lb_SFLRCD>div>select');
-
-                var strtd = "";
-                divid.find('span').map(function (i, e) {
-                    strtd = strtd + "<td>" + ($(e).text()) + "</td>";
-                });
-                var strclosetr = "</tr>";
-
-                $("#selectWarranty").append(tr + strtd + strclosetr);
-
-            });
-            $('#selectWarranty tr[data-selectid="undefined"]').hide();
-
-            $(".table-data-content-container tbody  tr").attr("class", "");
-            $(".table-data-content-container tbody  tr:visible:odd").addClass("oddrow");
-            $(".table-data-content-container tbody  tr:visible:even").addClass("evenrow");
-
-
-            $("#selectWarranty tr").on('click', function () {
-                var selectId = $(this).data('selectid');
-                a = selectId.split(".");
-                $("#" + a[0] + "\\." + a[1]).val("1")
-                console.log(this);
-                $(this).closest(".table-data-content-container tbody tr").siblings().removeClass("selected-row");
-                $(this).toggleClass("selected-row");
-                $("div.icon-container").removeClass("icon-disable");
-            });
-			$('#selectWarranty tr td').each(function(i){
-				oldData = $(this).html();
-				newData = oldData.replace(/&nbsp;/g,"");
-				$(this).html(newData);
-			});
-			
-            $(".table-container-search .icon-textfield").on('click', function () {
-                $(this).siblings('input:text').closest('.mdl-textfield__input').val('');
-
-            });
-            //Select warranty on double click
-            $('body').on('dblclick', '#selectWarranty tbody tr', function (event) {
-                $("#warranty-submit").trigger('click');
-                //_00('Enter', event);
-            });
-
+            generateTableAndApplyInfiniteScrollForInstallations("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "warranty-submit");
             $('.close-icon').click(function () {
                 $("#warranty-submit").trigger('click');
             });
 
         });
-
 
     </script>
     <style>
