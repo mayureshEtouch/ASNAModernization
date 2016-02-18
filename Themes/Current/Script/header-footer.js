@@ -15,7 +15,7 @@
     header += "                <i class=\"material-icons md-15 mdl-badge notifications-icon\" data-badge=\"1\"><\/i> <span class=\"black-divider\"><\/span><span class=\"home-icon\"><i class=\"material-icons md-15 home\"><\/i><\/span> <span class=\"black-divider\"><\/span>";
     header += "                <span class=\"user-icon\"><\/span>";
     header += "                <span class=\"username\">" + userName + "<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons arrow-down\"><\/i><\/span>";
-    header += "                <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\" for=\"demo-menu-lower-right\"><li class=\"mdl-menu__item\"><a href=\"..\/Monarch/\!EoJ.aspx/\">Logout</a></li></ul>";
+    header += "                <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\" for=\"demo-menu-lower-right\"><li id=\"user-logout\" class=\"mdl-menu__item\"><a href=\"javascript:void(0);\">Logout</a></li></ul>";
     header += "            <\/div>";
     header += "        <\/header>";
 
@@ -68,4 +68,10 @@
         $('#modal').html(errorMsg);
         $('#modal').simplePopup();
     }
+
+    //Logout
+    $("#user-logout").on("click", function(event) {
+        window.location.href = "../Monarch/!EoJ.aspx/";
+    });
 });
+

@@ -532,8 +532,8 @@
             $("[name='Category']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
             $("[name='Group']").text($("[id$=CenPH__lb_SFLCTL__lb_2AWCD]").text());
             generateTableAndApplyInfiniteScrollForInstallations("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "warranty-submit");
-            $('.close-icon').click(function () {
-                $("#warranty-submit").trigger('click');
+            $('.close-icon').click(function (event) {
+                _00("F12", event);
             });
 
         });

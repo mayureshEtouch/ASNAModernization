@@ -560,8 +560,9 @@ width: 100% !important;
             $("#install-category").html($("#CenPH__lb_SFLCTL__lb_2AXCD").html());
             generateTableAndApplyInfiniteScrollForInstallations("installations", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "submit-installation"); // Table ID, Div ID to copy records from
 			
-			$('.close-icon').click(function () {
-                $("#submit-installation").trigger('click');
+			$('.close-icon').click(function (event) {
+                _00("F12",event);
+                //$("#submit-installation").trigger('click');
             });
 			$('#installations tr td:last-child').each(function(i){
 				oldData = $(this).html();
