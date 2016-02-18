@@ -26,7 +26,7 @@
     <div class="OverlayPopupBackground"></div>
     <div class="mdl-layout__container">
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
-            <main class="mdl-layout__content">
+            <main class="mdl-layout__content spacer-container-bottom ">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col">
@@ -35,7 +35,9 @@
                         </div>
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
-                            <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">CCHXE1R</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt">19:00:20</span>
+                            <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCHXE1R</span> 
+							<i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt"></span> 
+							<i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt"></span>
                         </div>
                     </div>
                 </section>
@@ -60,10 +62,8 @@
                         <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;">
                             <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                        <span class="form-label">Customer:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label clm-form-label-add">Customer:</span>
                                         <span class="form-text">
                                         <span id="cust-name">000/000</span>
                                         <br>
@@ -78,243 +78,251 @@
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                        <span class="form-label">Home Phone:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label clm-form-label">Home Phone:</span>
                                         <span class="form-text" id="home-phone">000/ 000-000</span>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                        <span class="form-label">Office Phone:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label clm-form-label">Office Phone:</span>
                                         <span class="form-text" id="office-phone">000/ 000-000</span>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                        <span class="form-label form-label-input">Birthday:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label form-label-input clm-form-label">Birthday:</span>
                                         <span class="form-text" id="cust-birth">12/12/1986</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--2-col">
-                                        <span class="form-label form-label-input">License #:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--6-col">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input-small" size="5" id="cust-lic-first">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small" size="15" id="cust-lic-second"></span>
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
+                                        <span class="form-label clm-form-label">License #:</span>
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input-small" size="5" id="cust-lic-first"><span></span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small" size="19" id="cust-lic-second"><span></span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                        <span class="form-label form-label-input">S.S.#:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" id="cust-ssn" size="15"></span>
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label clm-form-label">S.S.#:</span>
+                                        <span class="form-text"><input type="text" id="cust-ssn" size="15"><span></span></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;">
+                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;padding: 15px 0;">
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-text">
-                                        <strong>Residence Type:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <select class="mdl-cell--2-col" id="cust-res-type">
-                                            <option selected="selected" value="O"> O </option>
-                                            <option value="R"> R </option>
-                                            <option value="L"> L </option>
-                                            <option value=" ">   </option>
-                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <strong>For</strong>&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small" size="3" id="no-of-years">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <strong>Years with Payment of</strong>&nbsp;&nbsp;&nbsp;<input type="text" id="payment-of" class="mdl-textfield__input-small" size="15">&nbsp;&nbsp;<strong>Monthly</strong>
-                                    </span>
+                                        <span class="form-label">Residence Type:</span>&nbsp;&nbsp;&nbsp;
+											<select id="cust-res-type">
+												<option selected="selected" value="O"> O </option>
+												<option value="R"> R </option>
+												<option value="L"> L </option>
+												<option value=" ">   </option>
+											</select>
+											<span style="margin: 0 5px;"></span>&nbsp;&nbsp;
+											<span class="form-label">For</span>&nbsp;&nbsp;
+											<input type="text" class="mdl-textfield__input-small" size="3" id="no-of-years"><span style="margin: 0 5px;"></span>
+											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
+											<input type="text" id="payment-of" class="mdl-textfield__input-small" size="15"><span style="margin: 0 5px;"></span>
+											<span class="form-label">Monthly</span>
+										</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col" style="padding:0;margin: 0;">
+                        </div>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;padding: 15px 0 0;">
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                        <span class="form-label form-label-input">Phone Listed as:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="phone-listed-as"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col" style="padding:0;margin: 0;">
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                        <span class="form-label form-label-input">Marital Status:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-                                        <select class="mdl-cell--12-col" id="cust-martial-status">
-                                            <option value="M"> M </option>
-                                            <option value="S"> S </option>
-                                            <option selected="selected" value=" ">   </option>
-                                        </select></span>
+											<input type="text" size="30" id="phone-listed-as">
+											<span></span>
+										</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+										<span class="form-label clm-form-label">Marital Status:</span>
+										<span class="form-text">
+											<select id="cust-martial-status">
+												<option value="M"> M </option>
+												<option value="S"> S </option>
+												<option selected="selected" value=" ">   </option>
+											</select>
+											<span></span>
+										</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+										<span class="form-label clm-form-label" style="width: 100px;">Dependents:</span>
+										<span class="form-text">
+											<input id="cust-dependents" type="text" size="5">
+											<span></span>
+										</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col" style="padding:0;margin: 0;">
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                        <span class="form-label form-label-input">Dependents:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input id="cust-dependents" type="text" class="mdl-textfield__input" size="15"></span>
-                                    </div>
-                                </div>
-                            </div>
+							<div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
+								<div class="content-grid mdl-grid">
+									<div class="mdl-cell mdl-cell--5-col" style="white-space:nowrap;margin: 0;">
+										<span class="form-label clm-form-label">Spouse Name:</span>
+										<span class="form-text">
+											<input type="text" id="sp-name" size="30">
+											<span></span>
+										</span>
+									</div>
+									<div class="mdl-cell mdl-cell--4-col" style="margin:0">
+										<span class="form-label clm-form-label">Birthday:</span>
+										<span class="form-text">
+											<input type="text" id="sp-birth" size="15">
+											<span></span>
+										</span>
+									</div>
+									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
+										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
+										<span class="form-text">
+											<input type="text" id="sp-ssn" size="15">
+											<span></span>
+										</span>
+									</div>
+								</div>
+							</div>
                         </div>
-                        <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">Spouse Name:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--3-col">
-                                <span class="form-text"><input type="text" id="sp-name" class="mdl-textfield__input" size="27"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <span class="form-label form-label-input">Birthday:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <span class="form-text"><input type="text" id="sp-birth" class="mdl-textfield__input" size="15"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">S.S.#:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--3-col">
-                                <span class="form-text"><input type="text" id="sp-ssn" class="mdl-textfield__input" size="15"></span>
-                            </div>
-                        </div>
-                        <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">License #:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--3-col">
-                                <span class="form-text"><input type="text" id="sp-lic-first" class="mdl-textfield__input-small" size="5">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="sp-lic-second" class="mdl-textfield__input-small" size="15"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <span class="form-label form-label-input">Spouse Monthly Income:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
-                                <span class="form-text"><input type="text" id="sp-monthly-income" class="mdl-textfield__input" size="15"></span>
-                            </div>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
+							<div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
+								<div class="content-grid mdl-grid">
+									<div class="mdl-cell mdl-cell--5-col" style="margin:0">
+										<span class="form-label clm-form-label">License #:</span>
+										<span class="form-text">
+											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small" size="5">
+											<span></span>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small" size="19">
+											<span></span>
+										</span>
+									</div>
+									<div class="mdl-cell mdl-cell--6-col" style="margin:0">
+										<span class="form-label clm-form-label" style="width: 170px;">Spouse Monthly Income:</span>
+										<span class="form-text">
+											<input type="text" id="sp-monthly-income" size="15">
+											<span></span>
+										</span>
+									</div>
+								</div>
+							</div>
                         </div>
                     </div>
                 </section>
                 <section class="form-data">
                     <div class="form-data-wrapper">
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
-                            <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0;">
-                                <span class="form-label form-label-input">Employed at:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--5-col">
-                                <span class="form-text"><input type="text" id="employed-at" class="mdl-textfield__input"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">Duration:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell-brd">
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+                                <span class="form-label clm-form-label">Employed at:</span>
                                 <span class="form-text">
-                                <input type="text" id="employed-at-duration-years" class="mdl-textfield__input-small" size="5">&nbsp;&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="text" id="employed-at-duration-months" class="mdl-textfield__input-small" size="5">&nbsp;&nbsp;Months
+									<input type="text" id="employed-at" class="mdl-textfield__input_small" size="40">
+									<span></span>
+								</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Duration:</span>
+                                <span class="form-text">
+									<input type="text" id="employed-at-duration-years" class="mdl-textfield__input-small" size="5">
+									<span></span>
+									&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="text" id="employed-at-duration-months" class="mdl-textfield__input-small" size="5">
+									<span></span>
+									&nbsp;Months
                             </span>
                             </div>
                         </div>
-                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;">
-                            <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0;">
-                                <span class="form-label form-label-input">Income:</span>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Income:</span>
+								<span class="form-text">
+									<input type="text" id="cust-income" class="mdl-textfield__input-small" size="15">
+									<span></span>
+								</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--5-col">
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0;padding:0;">
-                                        <span class="form-text"><input type="text" id="cust-income" class="mdl-textfield__input-small" size="15"></span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--2-col" style="margin:0;padding:0;">
-                                        <span class="form-label form-label-input">Freq:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0;padding:0;">
-                                        <span class="form-text">
-                                            <select id="cust-frenq" class="mdl-cell--12-col">
-                                                <option value="H"> H </option>
-                                                <option value="W"> W </option>
-                                                <option value="B"> B </option>
-                                                <option value="M"> M </option>
-                                                <option value=" ">   </option>
-                                                <option selected="selected" value="A"> A </option>
-                                            </select>
-                                        </span>
-                                    </div>
-                                </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+								<span class="form-label clm-form-label">Supervisor:</span>
+								<span class="form-text">
+									<input type="text" id="cust-supervisor" class="mdl-cell--6-col" size="30">
+									<span></span>
+								</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">Supervisor:</span>
+                        </div>
+                        <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;padding: 0 0 10px;">
+                            <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Frequency:</span>
+								<span class="form-text">
+									<select id="cust-frenq">
+										<option value="H"> H </option>
+										<option value="W"> W </option>
+										<option value="B"> B </option>
+										<option value="M"> M </option>
+										<option value=" ">   </option>
+										<option selected="selected" value="A"> A </option>
+									</select>
+									<span></span>
+								</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell-brd">
-                                <span class="form-text"><input type="text" id="cust-supervisor" class="mdl-textfield__input"></span>
+                        </div>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;padding: 10px 0 0;">
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Reference Name:</span>
+                                <span class="form-text">
+									<input type="text" id="ref-name" class="mdl-cell--5-col" size="20">
+									<span></span>
+								</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Address:</span>
+                                <span class="form-text">
+									<input type="text" id="ref-address" class="mdl-cell--7-col" size="5">
+									<span></span>
+								</span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
-                            <div class="mdl-cell mdl-cell--2-col" style="margin: 0 0;">
-                                <span class="form-label form-label-input">Reference Name:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <span class="form-text"><input type="text" id="ref-name" class="mdl-textfield__input" size="15"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">Address:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell-brd">
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Zip Code:</span>
                                 <span class="form-text">
-                                <input type="text" id="ref-address" class="mdl-cell--12-col mdl-cell-brd mdl-textfield__input-small" size="5"></span>
+									<input type="text" id="ref-zip-code" class="mdl-textfield__input-small" size="15">
+									<span></span>
+								</span>
                             </div>
-                        </div>
-                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
-                            <div class="mdl-cell mdl-cell--2-col" style="margin: 0 0;">
-                                <span class="form-label form-label-input">Zip Code:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <span class="form-text"><input type="text" id="ref-zip-code" class="mdl-textfield__input" size="15"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--1-col">
-                                <span class="form-label form-label-input">Phone No:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <span class="form-text"><input type="text" id="ref-phone" class="mdl-textfield__input" size="15"></span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--1-col" style="float: right;">
-                                <span class="form-label form-label-input">Type:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--1-col">
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Phone No:</span>
                                 <span class="form-text">
-                                    <select name="" id="ref-type" class="mdl-cell--12-col">
+									<input type="text" id="ref-phone" class="mdl-textfield__input-small" size="20">
+									<span></span>
+								</span>
+                            </div>
+						</div>
+						<div class="content-grid mdl-grid" style="margin: 0 15px;padding: 0 0 10px;">
+                            <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
+                                <span class="form-label clm-form-label">Type:</span>
+                                <span class="form-text">
+                                    <select name="" id="ref-type">
                                         <option value="R"> R </option>
                                         <option value="F"> F </option>
                                         <option selected="selected" value=" ">   </option>
                                     </select>
+									<span></span>
                                 </span>
                             </div>
                         </div>
                         <div class="button-container" style="padding-bottom:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="padding-bottom:0">
-                                    <span id="exitPage" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-                                    </span>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:9px">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-                                    </span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer">update customer</span>
                                 </div>
                             </div>
                         </div>
