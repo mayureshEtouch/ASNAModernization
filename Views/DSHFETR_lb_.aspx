@@ -22,6 +22,128 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Edit Customer Notes</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSHFETR</span> 
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first"></li>
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="form-data">
+                    <div class="form-data-wrapper display-application-status">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col" style="margin:0">
+                                    <span class="form-label">Name:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="cus_name"></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid">
+                            <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                                <fieldset>
+                                    <legend id="legen">Notes:</legend>
+                                    <textarea id="notes" rows="5" cols="40" name="notes"></textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                        
+              <div class="button-container" style="padding-bottom:0">
+                <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:5px;">
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span>
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0;margin-left:22px;">
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter">Submit</span>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </section>
+          <section class="add-item">
+          &nbsp;
+          </section>
+            </main>
+                 <div id="modal" class="simplePopup"></div>
+                 <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+                <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+                <div class="button-container">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+                </div>
+              </div>
+        </div>
+        <style type="text/css" media="screen">
+          /* #Div1{display: block;} */
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            /*setDateTime(dateFieldId,timeFieldId)*/
+            setDateTime('CenPH_DdsConstant4','CenPH__lb_SFLCTL__lb__lb_TME');
+
+            $('#cus_name').text($('#CenPH__lb_SFLCTL__lb_1ALTX').text());
+            $('#notes').val($('#CenPH__lb_SFLRCD__lb_2ACNA\\.0').val());
+            /*Confirm dialog box*/
+            $('body').on('keyup change', '#notes', function (event) {
+              $('#CenPH__lb_SFLRCD__lb_2ACNA\\.0').val($(this).val());
+            });
+            
+            if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+              /*Pop up confirm box*/
+              $(".OverlayPopupBackground").show();
+              $(".confirmation-outer-conatiner").show();
+              
+              $("#yes").click(function (event) {
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  //_00('Enter', event);
+                  _16(event,this,1,'Enter');
+              });
+              $("#no").click(function (event) {
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                  //_00('Enter', event);
+                  _16(event,this,1,'Enter');
+              });
+
+            }
+          });
+        </script>
         <div id="Div1">
             
       <%--  CU: ETR Customer Comments Edit transaction                                                                       --%>
