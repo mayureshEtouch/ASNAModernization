@@ -33,9 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSM7DFR</span>
-                        <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span>
-                        <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSM7DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span> 
+						<i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -66,43 +66,52 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Model number</span>
+                            <span class="summary-title">Model Number</span>
                             <span class="summary-txt">UN55JS7000 55" SUHD 4K SMART TV</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Product category</span>
+                            <span class="summary-title">Product Category</span>
                             <span class="summary-txt">102 LCD/LED FLAT PANEL</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Vendor number</span>
+                            <span class="summary-title">Vendor Number</span>
                             <span class="summary-txt">0000164 SAMSUNG</span>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container search-field-container">
+			
+            <section class="table-data-content-container filter-field-container">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container table-container-search">
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--1-col"><span class="summary-table-title">Filter by: Co</span></div>
-                                <div class="mdl-cell mdl-cell--4-col">
-                                    <div id="filter-by-co" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <%--<input type="text" id="number" class="mdl-textfield__input input-big">--%>
-                                    </div>
-                                </div>
-                                <div class="mdl-cell mdl-cell--1-col"><span class="summary-table-title">Loc</span> </div>
-                                <div class="mdl-cell mdl-cell--4-col">
-                                    <div id="filter-by-loc" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <%--<input type="text" id="number" class="mdl-textfield__input input-big">--%>
-                                    </div>
-                                </div>
-                                <div class="mdl-cell mdl-cell--2-col pull-right button-container" style="height: 50px;">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="height: 35px; margin-top: 8px;" id="search">Search</button>
-                                </div>
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                        			<span class="summary-table-title">Filter by:</span>
+                        		</div>
+								<div class="mdl-cell mdl-cell--10-col search-container">
+									<div class="content-grid mdl-grid">
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Company</span>
+                        				</div>
+                        				<div id="filter-by-co" class="mdl-cell mdl-cell--5-col">
+                        					
+                        				</div>
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Location</span>
+                        				</div>
+                        				<div id="filter-by-loc" class="mdl-cell mdl-cell--5-col">
+                        					
+                        				</div>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                        			<div class="button-container">
+         								<button class="mdl-button mdl-button--accent" id="search">Search</button>
+        							</div>
+                        		</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -124,8 +133,8 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerName">
                                 <thead>
                                     <tr>
-                                        <th>Co</th>
-                                        <th>Loc</th>
+                                        <th>Company</th>
+                                        <th>Location</th>
                                         <th>Description</th>
                                         <th>Avail</th>
                                         <th>Xfers</th>
@@ -146,11 +155,10 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col-desktop">
+                                <div class="mdl-cell mdl-cell--6-col">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
-
+                                <div class="mdl-cell mdl-cell--6-col pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
@@ -718,5 +726,54 @@
             width: 100% !important;
             height: 14px !important;
         }
+		@media (min-width: 768px){
+			.filter-search-container .button-cnt-container {
+				width: calc(8% - 0px);
+			}
+			.filter-search-container .filter-txt-cnt {
+				width: calc(8% - 0px);
+			}
+			.filter-search-container .search-container{
+				width: calc(84% - 0px);
+			}
+			.filter-search-container .search-container .mdl-cell--1-col{
+				width: calc(10% - 0px);
+			}
+			.filter-search-container .search-container .mdl-cell--5-col{
+				width: calc(37% - 0px);
+			}
+		}
+		@media (max-width: 767px) and (min-width: 320px) {
+			.filter-search-container .button-cnt-container {
+				width: calc(100% - 0px);
+			}
+			.filter-search-container .filter-txt-cnt {
+				width: calc(100% - 0px);
+			}
+			.filter-search-container .search-container{
+				width: calc(98% - 0px);
+			}
+			.filter-search-container .summary-table-title{
+				text-align: left;
+			}
+			.filter-search-container .button-container{
+				margin: 10px;
+			}
+			.filter-search-container .button-container .mdl-button{
+				border-radius: 2px;
+				height: auto;
+				padding: 6px 8px;
+			}
+			.filter-search-container .search-container .mdl-cell--1-col{
+				width: calc(20% - 0px);
+			}
+			.filter-search-container .search-container .mdl-cell--5-col{
+				width: calc(78% - 0px);
+			}
+			.button-container .mdl-cell {
+				margin: 8px;
+				width: calc(46.6% - 0px);
+			}
+		}
     </style>
 </asp:Content>

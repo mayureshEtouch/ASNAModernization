@@ -1,10 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DIOQD1I_lb_.aspx.cs" Inherits="conns.DIOQD1I_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:10 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DIOQD1I# --%>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -33,7 +34,7 @@
                              <span class="mdl-layout-title logo-icon"></span>
                             <!--<span class="mdl-layout-heading">StoreFront</span>--> 
                             <div class="mdl-layout-spacer"></div>
-                            <span class="close-icon"><i class="material-icons md-15">close</i></span>
+                            <span class="close-icon" event-data="F12"><i class="material-icons close md-15"></i></span>
                     </div>
             </header>
 <main class="mdl-layout__content">
@@ -45,7 +46,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIOQD1I</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIOQD1I</span>
                     </div>
                 </div>
             </section>
@@ -120,8 +121,11 @@
                     
           <div class="button-container" style="padding-bottom:0">
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right" style="padding-bottom:0">
-                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">ok</span>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-left" style="padding-bottom:0">
+                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Return</span> -->
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="promt" event-data="F4">Prompt</span>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1" event-data="F12">Exit</span>
+                <span class="error"></span>
               </div>
             </div>
           </div>
@@ -829,16 +833,7 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
 <style>
-#fkeys, #Div1 {
-  display: none !important;
-}
 
-#__Page_PopUp {
-  width: 650px !important;
-}
-#__Page_PopUp > tr:first-child {
- display: none;
-}
 #__Page_PopUp .DdsInlinePopUpTitle {
  height: 0;
 }
@@ -855,8 +850,6 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 /*Hiding left menu*/
-                //$("#main-content").hide();
-                //$(".fkeys").hide();
                 $("#__Page_PopUp").css({"left": "23%", "height": "auto"});
                 /*Filling up text for modern screen fields*/
                 var old_fields = ['#CenPH__lb_RCDKEY__lb_1ALNB','#CenPH__lb_RCDKEY__lb_1ABST','#CenPH__lb_RCDKEY__lb_1ALTX','#CenPH__lb_RCDKEY__lb_1ACST','#CenPH__lb_RCDKEY__lb_1CGC_lb_','#CenPH__lb_RCDKEY__lb_1P5N_lb_','#CenPH__lb_RCDKEY__lb_1P6N_lb_'];
@@ -864,19 +857,10 @@
                 for (var i = 0; i < old_fields.length; i++) {
                   $(new_fields[i]).text($.trim($(old_fields[i]).text()));
                 };
-
-/*                $("#customer-id").text($.trim($("#CenPH__lb_RCDKEY__lb_1ALNB").text()));
-                $("#customer-type").text($("#CenPH__lb_RCDKEY__lb_1ABST").text());
-                $("#customer-name").text($("#CenPH__lb_RCDKEY__lb_1ALTX").text());
-                $("#mailing-list-indicator").text($("#CenPH__lb_RCDKEY__lb_1ACST").text());
-                $("#cust-addr-type").text($("#CenPH__lb_RCDKEY__lb_1CGC_lb_").text());
-                $("#cust-addr-ref").text($("#CenPH__lb_RCDKEY__lb_1P5N_lb_").text());
-                $("#cust-addr-ver").text($("#CenPH__lb_RCDKEY__lb_1P6N_lb_").text());*/
-
-                $(".close-icon, .mdl-button").click(function(event) {
-                  /* Act on the event */
-                  _00('F12',event);
-                });
+                var error_msg = $.trim($('.DdsSflMsgField_OutputOnly').text())
+                if(error_msg!=''){
+                  $('.error').text(error_msg);
+                }  
             });
         </script>
     </asp:Content>

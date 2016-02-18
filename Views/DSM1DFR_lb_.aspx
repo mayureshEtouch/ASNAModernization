@@ -33,7 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSM1DFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSM1DFR</span>
+						<i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span> 
+						<i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -42,14 +44,14 @@
                     <ul class="progress-bar-main">
                         <li class="progress-bar-step3 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
                         <li class="progress-bar-divider">
-                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                            <li class="white-to-gray-bullet"></li>
-                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
-                            <li class="progress-bar-divider-first">
-                                <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                                <li class="progress-bar-divider">
-                                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                                    <div class="clear"></div>
+						<li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+						<li class="white-to-gray-bullet"></li>
+						<li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+						<li class="progress-bar-divider-first">
+						<li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+						<li class="progress-bar-divider">
+						<li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+						<div class="clear"></div>
                     </ul>
                 </div>
             </section>
@@ -57,15 +59,15 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Model number</span>
+                            <span class="summary-title">Model Number</span>
                             <span class="summary-txt" id="model-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Product category</span>
+                            <span class="summary-title">Product Category</span>
                             <span class="summary-txt" id="prod-cat"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Vendor number</span>
+                            <span class="summary-title">Vendor Number</span>
                             <span class="summary-txt" id="vendor-number"></span>
                         </div>
                     </div>
@@ -93,10 +95,10 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-left modal-button-container">
+                                <div class="mdl-cell mdl-cell--6-col pull-left modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right modal-button-container">
+                                <div class="mdl-cell mdl-cell--6-col pull-right modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="select-order">Submit</span>
                                 </div>
                             </div>

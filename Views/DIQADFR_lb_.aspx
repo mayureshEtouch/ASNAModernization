@@ -22,6 +22,346 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+           
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Address for Customers</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIQADFR</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first"></li>
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="table-data-content-container filter-field-container">
+                  <div class="table-data-wrapper" style="margin-top: 20px;">
+                    <div class="table-data-maincontainer">
+                      <div class="table-container filter-search-container">
+                        <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                            <span class="summary-table-title">Filter by:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--10-col search-container">
+                            <div class="content-grid mdl-grid">
+                              <div class="mdl-cell mdl-cell--1-col">
+                                <span class="summary-table-title pull-right">No.</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--2-col">
+                                <input type="text"  id="fNo" class="mdl-textfield__input">
+                              </div>
+                              <div class="mdl-cell mdl-cell--1-col">
+                                <span class="summary-table-title pull-right">Address</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--2-col">
+                                <input type="text"  id="fAddress" class="mdl-textfield__input">
+                              </div>
+                              <div class="mdl-cell mdl-cell--1-col">
+                                <span class="summary-table-title pull-right">Type</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--2-col">
+                                <input type="text"  id="fType" class="mdl-textfield__input">
+                              </div>
+                              <div class="mdl-cell mdl-cell--1-col">
+                                <span class="summary-table-title pull-right">Reference</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--2-col">
+                                <input type="text"  id="fReference" class="mdl-textfield__input">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                            <div class="button-container">
+                              <button class="mdl-button mdl-button--accent" event-data='Enter' id="search">Search</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+          <section class="add-item">
+                    <div class="add-item-wrapper">
+                        <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right">
+                                <div class="icon-container icon-disable">
+                                  <span class="icon-txt display-customer">Display</span>
+                                  <i class="material-icons md-15 md-light display-customer display-icon-disabled"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+          <section class="table-data-content-container spacer-container-bottom">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container" style="overflow: auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerAddress">
+                            <thead>
+                              <tr>
+                                <th>Typ</th>
+                                <th>Reference #</th>
+                                <th>Ver</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Phone Number</th>
+                                <th>Zip Code</th>
+                                <th>Build</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="exit">exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </main>
+             <div id="modal" class="simplePopup"></div>
+             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
+        </div>
+    <style>
+         @media (min-width: 768px){
+          .filter-search-container .button-cnt-container {
+            width: calc(8% - 0px);
+          }
+          .filter-search-container .filter-txt-cnt {
+            width: calc(8% - 0px);
+          }
+          .filter-search-container .search-container{
+            width: calc(84% - 0px);
+          }
+          .filter-search-container .search-container .mdl-cell--1-col{
+            width: calc(9% - 0px);
+          }
+          .filter-search-container .search-container .mdl-cell--2-col{
+            width: calc(15% - 0px);
+          }
+        }
+        @media (max-width: 767px) and (min-width: 320px) {
+          .filter-search-container .button-cnt-container {
+            width: calc(100% - 0px);
+          }
+          .filter-search-container .filter-txt-cnt {
+            width: calc(100% - 0px);
+          }
+          .filter-search-container .search-container{
+            width: calc(98% - 0px);
+          }
+          .filter-search-container .summary-table-title{
+            text-align: left;
+          }
+          .filter-search-container .button-container{
+            margin: 10px;
+          }
+          .filter-search-container .button-container .mdl-button{
+            border-radius: 2px;
+            height: auto;
+            padding: 6px 8px;
+          }
+          .filter-search-container .search-container .mdl-cell--1-col{
+            width: calc(25% - 0px);
+          }
+          .filter-search-container .search-container .mdl-cell--2-col{
+            width: calc(73% - 0px);
+          }
+        }
+      </style>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      /*setDateTime(dateFieldId,timeFieldId)*/
+      setDateTime('CenPH_DdsConstant8','CenPH__lb_SFLCTL__lb__lb_TME');
+      /* script for table row starts here */
+      $('.error').text($('.DdsSflMsgField_OutputOnly').text());
+        var old_fields = ['#CenPH__lb_SFLCTL__lb_2J2XT','#CenPH__lb_SFLCTL__lb_2J0XT','#CenPH__lb_SFLCTL__lb_2CGC_lb_','#CenPH__lb_SFLCTL__lb_2P5N_lb_'];
+        var new_fields = ['#fNo','#fAddress','#fType','#fReference'];
+        
+          /*Filling up text for modern screen fields*/
+
+          for (var i = 0; i < old_fields.length; i++) {
+            if($(new_fields[i]) && $(new_fields[i]).is('input')){
+              $(new_fields[i]).val($.trim($(old_fields[i]).val()));
+            }
+          };
+
+          $('body').on('keyup change', 'input', function (event) {
+            var new_id = $(this).attr('id');
+            var index = new_fields.indexOf('#'+new_id);
+            var org_id = old_fields[index];
+              $(org_id).val($(this).val());
+          });
+          /*On load auto focus functionality*/
+          var focus_id = $('#__focusID__').val();
+          if(focus_id != undefined && focus_id != ''){
+            var end_id_part = focus_id.split('$').pop();
+            if(end_id_part != undefined && end_id_part != ''){
+              $.each(old_fields,function(index, el) {
+                if(el.indexOf(end_id_part)>=0){
+                  var index = old_fields.indexOf(el);
+                  var new_field_id = new_fields[index];
+                  setTimeout(function() {
+                    $(new_field_id).focus();
+                  }, 500);
+                }
+              });
+            }
+          }
+ 
+    /* Onload assigning values for #nuber1 & #number2*/
+    $('#number1').val($('#CenPH__lb_SFLCTL__lb_2CGC_lb_').val());
+    $('#number2').val($('#CenPH__lb_SFLCTL__lb_2P5N_lb_').val());
+    $('#cus_name').text($('#CenPH__lb_SFLCTL__lb_2ALTX').text());
+    /*Confirm dialog box*/
+    
+    if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+      /*Pop up confirm box*/
+      $(".OverlayPopupBackground").show();
+      $(".confirmation-outer-conatiner").show();
+      
+      $("#yes").click(function (event) {
+          $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+          //_00('Enter', event);
+          _16(event,this,1,'Enter');
+      });
+      $("#no").click(function (event) {
+          $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+          //_00('Enter', event);
+          _16(event,this,1,'Enter');
+      });
+
+    }
+    // Search by Customer data table record mapping
+
+                var generateTable = function (direction) {
+
+                    $("#customerAddress tbody").empty();
+                    var count = 1;
+                    var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
+                    var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
+                        if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                            var divid = $(this);
+                            var selectId = $(divid.children('select')).attr('id');
+                            var reference = $(divid.find('span:eq(0)')).html();
+                            var address = $(divid.find('span:eq(1)')).html();
+                            var type = $(divid.find('span:eq(2)')).html();
+                            var zip = $(divid.find('span:eq(3)')).html();
+                            var name = $(divid.find('span:eq(4)')).html();
+                            var phoneNumber = $(divid.find('span:eq(5)')).html();
+                            var build = $(divid.find('span:eq(6)')).html() + "<br>" + $(divid.find('span:eq(7)')).html();
+                            var ver = $(divid.find('span:eq(8)')).html();
+                            var tr = "";
+                            if (count === 1 && direction === "top-to-bottom") {
+                                tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                            } else if (count === recordCount && direction === "bottom-to-top") {
+                                tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                            } else {
+                                tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
+                            }
+                            var strtd = "";
+                            strtd = strtd + "<td>" + type + "</td>";
+                            strtd = strtd + "<td>" + reference + "</td>";
+                            strtd = strtd + "<td>" + ver + "</td>";
+                            strtd = strtd + "<td>" + name + "</td>";
+                            strtd = strtd + "<td>" + address + "</td>";
+                            strtd = strtd + "<td>" + phoneNumber + "</td>";
+                            strtd = strtd + "<td>" + zip + "</td>";
+                            strtd = strtd + "<td>" + build + "</td>";
+                            var strclosetr = "</tr>";
+                            $("#customerAddress tbody").append(tr + strtd + strclosetr);
+                        }
+                    });
+                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
+                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
+                }
+                generateTable("top-to-bottom");
+               /* $("#customerAddress tbody tr").click(function(){
+                  $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
+                  $(this).toggleClass("selected");
+                  $("div.icon-container").removeClass("icon-disable");
+                });*/
+                $('body').on('click', '#customerAddress tbody tr', function () {
+                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
+                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
+                    $(this).css({ "background-color": "#f1f1f1" });
+                    $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
+                    $(this).addClass("selected");
+                    $("div.icon-container").removeClass("icon-disable");
+                    $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
+                });
+                $('body').on('dblclick', '#customerAddress tbody tr', function () {
+                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
+                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
+                    $(this).css({ "background-color": "#f1f1f1" });
+                    $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
+                    $(this).addClass("selected");
+                    $("div.icon-container").removeClass("icon-disable");
+                    $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
+                    selectCusotmer(row, "1", event);
+                });
+                $(".display-customer").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select a address");
+                    } else {
+                        var row = $("#customerAddress tbody tr.selected");
+                        selectCusotmer(row, "5", event);
+                    }
+                });
+                var selectCusotmer = function (row, value, event) {
+                               var selectId = $(row).data('selectid');
+                               a = selectId.split(".");
+                               $("#" + a[0] + "\\." + a[1]).val(value);
+                               _00('Enter', event);
+                           }
+
+    });
+    </script>
         <div id="Div1">
             
       <%--  CU: DSP Addresses 4 Cust  Display file                                                                           --%>

@@ -33,7 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIQXDFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span> <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DIQXDFR</span>
+						<i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span> 
+						<i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -42,37 +44,48 @@
                     <ul class="progress-bar-main">
                         <li class="progress-bar-step3 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
                         <li class="progress-bar-divider">
-                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                            <li class="white-to-gray-bullet"></li>
-                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
-                            <li class="progress-bar-divider-first">
-                                <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                                <li class="progress-bar-divider">
-                                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                                    <div class="clear"></div>
+						<li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+						<li class="white-to-gray-bullet"></li>
+						<li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+						<li class="progress-bar-divider-first">
+						<li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+						<li class="progress-bar-divider">
+						<li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+						<div class="clear"></div>
                     </ul>
                 </div>
             </section>
-            <section class="table-data-content-container">
+			
+            <section class="table-data-content-container filter-field-container">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container table-container-search">
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin-top: 12px;width: calc(15% - 16px);"> <span class="summary-table-title">Filter by: Referenced</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin-top: 2px;">
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" id="model-filter" data-upgraded=",MaterialTextfield">
-                                        
-                                    </div>
-                                </div>
-                                <div class="mdl-cell mdl-cell--1-col pull-right button-container">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</button>
-                                </div>
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                        			<span class="summary-table-title">Filter by:</span>
+                        		</div>
+								<div class="mdl-cell mdl-cell--10-col search-container">
+									<div class="content-grid mdl-grid">
+										<div class="mdl-cell mdl-cell--1-col">
+                        					<span class="summary-table-title pull-right">Referenced</span>
+                        				</div>
+                        				<div class="mdl-cell mdl-cell--11-col" id="model-filter" data-upgraded=",MaterialTextfield">
+										
+										</div>
+									</div>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                        			<div class="button-container">
+         								<button class="mdl-button mdl-button--accent" id="search">Search</button>
+        							</div>
+                        		</div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom">
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 20px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
@@ -92,10 +105,10 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-left modal-button-container">
+                                <div class="mdl-cell mdl-cell--6-col pull-left modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right modal-button-container">
+                                <div class="mdl-cell mdl-cell--6-col pull-right modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="select-x-ref">Submit</span>
                                 </div>
                             </div>
@@ -461,76 +474,51 @@
         #Div1, #fkeys, #showDiagnostics, #footer {
             display: none;
         }
-
-        #main-content {
-            width: 100%;
-        }
-
-        tr.selected {
-            background-color: #f1f1f1;
-        }
-    @media (min-width: 840px){
-      .filter-search-container .button-cnt-container {
-        width: calc(8% - 0px);
-      }
-      .filter-search-container .filter-txt-cnt {
-        width: calc(8% - 0px);
-      }
-      .filter-search-container .search-container{
-        width: calc(84% - 0px);
-      }
-      .filter-search-container .search-container .mdl-cell--1-col{
-        width: calc(20% - 0px);
-      }
-      .filter-search-container .search-container .mdl-cell--11-col{
-        width: calc(75% - 0px);
-      }
-      }
-      @media (max-width: 839px) and (min-width: 768px) {
-      .filter-search-container .button-cnt-container {
-        width: calc(8% - 0px);
-      }
-      .filter-search-container .filter-txt-cnt {
-        width: calc(8% - 0px);
-      }
-      .filter-search-container .search-container{
-        width: calc(84% - 0px);
-      }
-      .filter-search-container .search-container .mdl-cell--1-col{
-        width: calc(20% - 0px);
-      }
-      .filter-search-container .search-container .mdl-cell--11-col{
-        width: calc(75% - 0px);
-      }
-      }
-      @media (max-width: 767px) and (min-width: 320px) {
-      .filter-search-container .button-cnt-container {
-        width: calc(100% - 0px);
-      }
-      .filter-search-container .filter-txt-cnt {
-        width: calc(100% - 0px);
-      }
-      .filter-search-container .search-container{
-        width: calc(98% - 0px);
-      }
-      .filter-search-container .summary-table-title{
-        text-align: left;
-      }
-      .filter-search-container .button-container{
-        margin: 10px;
-      }
-      .filter-search-container .button-container .mdl-button{
-        border-radius: 2px;
-        height: auto;
-        padding: 6px 8px;
-      }
-      .filter-search-container .search-container .mdl-cell--1-col{
-        width: calc(25% - 0px);
-      }
-      .filter-search-container .search-container .mdl-cell--11-col{
-        width: calc(73% - 0px);
-      }
-    }
+		@media (min-width: 768px){
+		  .filter-search-container .button-cnt-container {
+			width: calc(8% - 0px);
+		  }
+		  .filter-search-container .filter-txt-cnt {
+			width: calc(8% - 0px);
+		  }
+		  .filter-search-container .search-container{
+			width: calc(84% - 0px);
+		  }
+		  .filter-search-container .search-container .mdl-cell--1-col{
+			width: calc(15% - 0px);
+		  }
+		  .filter-search-container .search-container .mdl-cell--11-col{
+			width: calc(80% - 0px);
+		  }
+		}
+		@media (max-width: 767px) and (min-width: 320px) {
+		  .filter-search-container .button-cnt-container {
+			width: calc(100% - 0px);
+		  }
+		  .filter-search-container .filter-txt-cnt {
+			width: calc(100% - 0px);
+		  }
+		  .filter-search-container .search-container{
+			width: calc(98% - 0px);
+		  }
+		  .filter-search-container .summary-table-title{
+			text-align: left;
+		  }
+		  .filter-search-container .button-container{
+			margin: 10px;
+		  }
+		  .filter-search-container .button-container .mdl-button{
+			border-radius: 2px;
+			height: auto;
+			padding: 6px 8px;
+		  }
+		  .filter-search-container .search-container .mdl-cell--1-col{
+			width: calc(25% - 0px);
+		  }
+		  .filter-search-container .search-container .mdl-cell--11-col{
+			width: calc(73% - 0px);
+		  }
+		}
     #CenPH__lb_SFLCTL__lb_2Q1TX {
       position: static !important;
       height: 14px !important;
