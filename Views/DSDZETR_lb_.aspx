@@ -136,13 +136,13 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 40px; padding: 0 2px;">
+                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 190px; padding: 0 2px;">
+											<option selected="selected" value=" ">Please select</option>
                                             <option value="H">H - Held Delivery</option>
                                             <option value="L">L - Layaway</option>
                                             <option value="N">N - Non-Partial Delivery</option>
                                             <option value="P">P - Partial Delivery</option>
                                             <option value="X">X - Non-Delivery</option>
-                                            <option selected="selected" value=" "></option>
                                             <option value="Y">Y - *Yes</option>
                                         </select>
                                         <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
@@ -201,7 +201,7 @@
 
             </section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+        <div id="modal1" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">

@@ -51,6 +51,20 @@
         if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
             errorMsg += $("#MsgPH_DdsMessagePanel1").text();
         }
+        $('#modal1').html(errorMsg);
+        $('#modal1').simplePopup();
+    }
+	
+	
+	if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) ) {
+		
+        var errorMsg = "";
+        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+        }
+        if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+        }
         $('#modal').html(errorMsg);
         $('#modal').simplePopup();
     }

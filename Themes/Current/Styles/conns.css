@@ -113,8 +113,11 @@ img {
 	font-size: 12px;
 	line-height: 30px;
 }
-a:visited {
+a:visited, .mdl-menu__item a {
 	color: #006699;
+}
+#user-logout a {
+	display: block;
 }
 /* header css ends here */
 
@@ -1269,7 +1272,7 @@ tr.selected {
 	width: 100%;
 	z-index: 1;
 }
-#fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #message-container, #span-header, #screen_title , #showDiagnostics{
+#fkeys, #header, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #message-container, #span-header, #screen_title , #showDiagnostics{
 	display: none !important;
 }
 

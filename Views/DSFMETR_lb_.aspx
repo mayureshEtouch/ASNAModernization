@@ -132,7 +132,7 @@
                                         <tr>
                                             <td>
                                                 <select TabIndex="1" class="del-status">
-                                                    <option></option>
+                                                    <option>Please select</option>
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="DL">DL - Warehouse delivery</option>
@@ -184,7 +184,7 @@
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">
                                                 <select TabIndex="7" class="del-status">
-                                                    <option></option>
+                                                    <option>Please select</option>
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="DL">DL - Warehouse delivery</option>
@@ -235,7 +235,7 @@
                                         <tr>
                                             <td class="mdl-data-table__cell--non-numeric">
                                                <select TabIndex="13" class="del-status">
-                                                    <option></option>
+                                                    <option>Please select</option>
                                                     <option value="TK">TK - Taken from store</option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="DL">DL - Warehouse delivery</option>
