@@ -38,7 +38,7 @@
                     <span class="mdl-layout-title logo-icon"></span>
                     <!--<span class="mdl-layout-heading">StoreFront</span>-->
                     <div class="mdl-layout-spacer"></div>
-                    <span class="close-icon"><i class="material-icons md-15">close</i></span> </div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span> </div>
             </header>
             <main class="mdl-layout__content">
                 <section class="time-date">
@@ -48,7 +48,7 @@
                             <span class="heading-h1">Edit Customer Information</span> </div>
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
-                            <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIGFE1R</span> </div>
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIGFE1R</span> </div>
                     </div>
                 </section>
                 <section class="order-summary">
@@ -175,7 +175,9 @@
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phone">Phones</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                              <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+							  </div>
                           </div>
                       </div>
                     </div>
