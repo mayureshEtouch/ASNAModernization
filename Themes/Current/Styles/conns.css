@@ -1270,7 +1270,7 @@ tr.selected {
 	z-index: 1;
 }
 #fkeys, #header, #Div1, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #message-container, #span-header, #screen_title , #showDiagnostics{
-	display: none;
+	display: none !important;
 }
 
 .table-container-search .mdl-cell--1-col{

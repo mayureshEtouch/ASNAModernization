@@ -522,7 +522,7 @@
             height: 800px !important;
         }
 		#__Page_PopUp {
-            width: 450px !important;
+            min-width: 450px !important;
 			left: 50% !important;
 			margin-left: -225px;
         }
@@ -534,13 +534,15 @@
 		#__Page_PopUp .DdsInlinePopUpTitle {
 			height: 0;
 		}
-
+#wrapper {
+width: 100% !important;
+}
         #selectWarranty tbody tr td:last-child {
             display: none;
         }
 
         .modal-dialog-container {
-            width: 100%;
+            width: 100% !important;
             margin-top: 0;
         }
 

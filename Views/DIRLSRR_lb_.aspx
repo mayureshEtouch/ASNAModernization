@@ -563,6 +563,9 @@
             height: auto !important;
             overflow: hidden !important;
         }
+        #wrapper {
+width: 100% !important;
+}
         #form1 {
             margin-top: -20px;
         }
