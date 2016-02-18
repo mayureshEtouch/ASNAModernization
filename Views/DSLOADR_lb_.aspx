@@ -534,6 +534,19 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
+ <style>
+-        #Div1, #fkeys, #diagnostics, #footer {
+-            display: none;
+-        }
+-
+-        #main-content {
+-            width: 100%;
+-        }
+-
+-        .homepage-content .mdl-cell {
+-            margin: 0px;
+-        }
+-    </style>
     <script type="text/javascript">
         $(document).ready(function () {
 			function getCookie(cname) {
