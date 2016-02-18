@@ -566,7 +566,7 @@
 				newData = oldData.replace(/&nbsp;/g,"");
 				$(this).html(newData);
 			});
-			$('#installations tr td:last-child').css("text-align", "right")
+			$('#installations tr td:last-child').css("text-align", "right");
 		});
     </script>
 </asp:Content>

@@ -786,7 +786,7 @@
                 });
                 $("#warranty-term-list tbody tr:even").css("background-color", "#fff");
                 $("#warranty-term-list tbody tr:odd").css("background-color", "#fcfcfc");
-                $(".term-input").ForceNumericWithQuestionMarkOnly();
+                $(".term-input").ForceNumericWithQuestionMarkOnlyWithRegex();
                 $(".term-input").keydown(function () {
                     if ($(this).val() === "?") {
                         $(this).attr("maxlength", 1);

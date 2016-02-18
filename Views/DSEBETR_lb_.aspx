@@ -1166,8 +1166,8 @@
             });
 
             //Set payment page initial read only data
-            $("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html());
-            $("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html());
+            $("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html().replace(/&nbsp;/g, ""));
+            $("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html().replace(/&nbsp;/g, ""));
             $("[name='username']").text($("[id$=CenPH__lb_SFLCTL__lb_1ALTX]").text());
             $("#CenPH_CEFVA").text($("[id$=CenPH__lb_SFLCTL__lb_CEFVA]").text());
             $("#CenPH_CBMVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBMVA]").text());
@@ -1221,7 +1221,7 @@
                         count++;
                     }
                 });
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericOnly();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");

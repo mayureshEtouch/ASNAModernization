@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     // Add header section
     var userName = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html() || " ";
-    var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("[id$='__lb__lb_JOB']").html();
+    var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("[id$='__lb__lb_JOB']").html() || " ";
     var header = "";
     header += "<header class=\"mdl-layout__header is-casting-shadow\">";
     header += "            <div class=\"mdl-layout__header-row\">";
