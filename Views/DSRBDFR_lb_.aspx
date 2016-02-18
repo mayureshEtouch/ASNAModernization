@@ -1,10 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSRBDFR_lb_.aspx.cs" Inherits="conns.DSRBDFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:12 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSRBDFR# --%>
-
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +27,169 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+    <header class="mdl-layout__header">
+                        <div class="mdl-layout__header-row"> 
+                                <!-- Title --> 
+                                 <span class="mdl-layout-title logo-icon"></span>
+                                <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                                <div class="mdl-layout-spacer"></div>
+                                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                        </div>
+                </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Phone Number</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSRBDFR</span>
+                        </div>
+                    </div>
+                </section>
+          <section class="add-item">
+                    <div class="add-item-wrapper">
+                        <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom:-10px;padding-top:0;">
+                                <div class="icon-container icon-disable">
+                                <span class="icon-txt">Change</span>
+                                <i class="material-icons md-15 md-light change-icon-disabled"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+          <section class="table-data-content-container spacer-container-bottom">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container" style="overflow: auto;" style="width:auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerPhones">
+                            <thead>
+                              <tr>
+                                <th>Type</th>
+                                <th>Telephone</th>
+                                <th>Ext</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="add">Add</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </main>
+    </div>
+<style>
+#__Page_PopUp {
+  width: 650px !important;
+}
+#__Page_PopUp > tr:first-child {
+ display: none;
+}
+#__Page_PopUp .DdsInlinePopUpTitle {
+ height: 0;
+}
+.modal-dialog-container, #main-content {
+  width: 100% !important;
+}
+.modal-dialog-container {
+  margin: 0 auto;
+}
+.mdl-layout__content {
+  height: auto;
+}
+ /* form class ends here */
+tr.selected {
+    background-color: #f1f1f1;
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function () {
+     var generateTable = function (direction) {
+
+         $("#customerPhones tbody").empty();
+         var count = 1;
+         var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
+         var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
+             if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                 var divid = $(this);
+                 var selectId = $(divid.children('select')).attr('id');
+                 var type = $(divid.find('span:eq(0)')).html();
+                 var telephone = $(divid.find('span:eq(1)')).html();
+                 var ext = $(divid.find('span:eq(2)')).html();
+                 
+                 var tr = "";
+                 if (count === 1 && direction === "top-to-bottom") {
+                     tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                 } else if (count === recordCount && direction === "bottom-to-top") {
+                     tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                 } else {
+                     tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
+                 }
+                 var strtd = "";
+                 strtd = strtd + "<td>" + type + "</td>";
+                 strtd = strtd + "<td>" + telephone + "</td>";
+                 strtd = strtd + "<td>" + ext + "</td>";
+                 
+                 var strclosetr = "</tr>";
+                 $("#customerPhones tbody").append(tr + strtd + strclosetr);
+             }
+         });
+         $("#customerPhones tbody tr:even").css("background-color", "#fff");
+         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
+     }
+     generateTable("top-to-bottom");
+    /* $("#customerPhones tbody tr").click(function(){
+       $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
+       $(this).toggleClass("selected");
+       $("div.icon-container").removeClass("icon-disable");
+     });*/
+     $('body').on('click', '#customerPhones tbody tr', function () {
+         $("#customerPhones tbody tr:even").css("background-color", "#fff");
+         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
+         $(this).css({ "background-color": "#f1f1f1" });
+         $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
+         $(this).addClass("selected");
+         $("div.icon-container").removeClass("icon-disable");
+         $("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
+     });
+     $(".icon-container").click(function (event) {
+         if ($(".icon-container").hasClass("icon-disable")) {
+             alert("Please select a address");
+         } else {
+             var row = $("#customerPhones tbody tr.selected");
+             selectCusotmer(row, "2", event);
+         }
+     });
+     var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+      $('#add').click(function (event) {
+         _00('F9', event);
+      })
+      $(".close-icon").click(function(event) {
+        /* Act on the event */
+        _00('F12',event);
+      });
+
+  });
+</script>
         <div id="Div1">
             
       <%--  CU: DSW Phone Numbers     Display file                                                                           --%>

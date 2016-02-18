@@ -1,10 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSQ0E1R_lb_.aspx.cs" Inherits="conns.DSQ0E1R_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:13 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSQ0E1R# --%>
-
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +27,198 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+
+        <div class="OverlayPopupBackground"></div>
+        
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row"> 
+              <!-- Title --> 
+              <span class="mdl-layout-title logo-icon"></span>
+              <div class="mdl-layout-spacer"></div>
+              <span class="close-icon" event-data="F3"><i class="material-icons md-15 close"></i></span>
+            </div>
+          </header>
+          <main class="mdl-layout__content">
+            <section class="time-date">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col"> 
+                <!-- Title --> 
+                <span class="heading-h1">Enter Phone Number</span> </div>
+                <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                  <!-- Navigation --> 
+                  <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSQ0E1R</span>
+                </div>
+              </div>
+            </section>
+            <section class="form-data">
+              <div class="form-data-wrapper display-application-status">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--12-col mdl-cell" id="div-add-edit-number" style="padding:0">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--5-col pull-right">
+                        <span class="form-label" style="margin-right:10px">Phone Type:</span>
+                      </div>
+                      <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                          <span class="form-text" id="phone-type"></span>
+                      </div>
+                    </div>
+
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--5-col pull-right">
+                          <span class="form-label" style="margin-right:10px">Telephone #:</span>
+                      </div>
+                      <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                          <span class="form-text">
+                            <input type="text" id="telephone" class="mdl_textfield_input_small" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ext&nbsp;&nbsp;&nbsp;
+                            <input type="text" id="ext" class="mdl_textfield_input_small" size="5" maxlength="4" />
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" id="div-number-type" style="padding:0" style="display:none;">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--5-col pull-right">
+                          <span class="form-label" style="margin-right:10px">Phone Type:</span>
+                      </div>
+                      <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                        <span class="form-text">
+                          <input type="text" id="input-phone-type" class="mdl_textfield_input_small uppercase" size="4" maxlength="3" />&nbsp;&nbsp;&nbsp;<span id="span-phone-types"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    
+          <div class="button-container" style="padding-bottom:0">
+            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--9-col-desktop pull-left" style="padding-bottom:0">
+                <span class="error"></span>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-desktop pull-right" style="padding-bottom:0">
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="save-phone">Submit</span>
+              </div>
+            </div>
+          </div>
+              </div>
+            </section>
+    
+    </main>
+     
+        </div>
+    <!--div id="modal" class="simplePopup"></div-->
+     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
+    
+        <style>
+        #fkeys, #Div1 {
+          display: none; 
+        }
+        
+        #div-number-type, #div-add-edit-number, .modal-dialog-container1 {
+          display: none; 
+        }
+        
+        #__Page_PopUp {
+          width: 650px !important;
+          min-width: 650px !important;
+          left: 50% !important;
+          margin-left: -325px;
+        }
+        
+        #__Page_PopUp .DdsInlinePopUpTitle {
+         height: 0;
+        }
+        #main-content {
+          width: 100% !important;
+        }
+        .modal-dialog-container {
+          margin: 0;
+          width: 100%;
+        }
+        .mdl-layout__content {
+          height: auto;
+        }
+         /* form class ends here */
+        tr.selected {
+            background-color: #f1f1f1;
+        }
+        
+        .confirmation-outer-conatiner{
+            margin-left: -81px;
+        }
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function () {
+              /* if Enter Phone Number Type screen*/
+              //$('.error').text($('#CenPH__lb_MSGRCD_MSGKEY\\.0').text());
+              $('.error').text($('.DdsSflMsgField_OutputOnly').text());
+              if($('#CenPH__lb_RCDKEY__lb_1PACD').length>0){
+                console.log("$('#CenPH__lb_RCDKEY__lb_1PACD').val()"+$('#CenPH__lb_RCDKEY__lb_1PACD').val());
+                $('#input-phone-type').val($('#CenPH__lb_RCDKEY__lb_1PACD').val());
+                $('.heading-h1').html('Enter Phone Number Type');
+                $('#span-phone-types').text($('#CenPH_DdsConstant3').text());
+
+                $('#div-add-edit-number').hide();
+                $('#div-number-type').show();
+              }else if($('#CenPH__lb_RCDDTL1__lb_1ZTNB').length>0){
+                $('.heading-h1').html('Enter Phone Number');
+                $('#div-number-type').hide();
+                $('#div-add-edit-number').show();
+                $('#phone-type').text($('#CenPH__lb_RCDDTL1__lb_1PACD').text());
+                $('#telephone').val($('#CenPH__lb_RCDDTL1__lb_1ZTNB').val());
+                $('#ext').val($('#CenPH__lb_RCDDTL1__lb_1ZUNB').val());
+                var error_msg = $.trim($('#MsgPH_DdsMessagePanel1').text())
+                if(error_msg!=''){
+                  $('.error').text(error_msg);
+                }
+              }else if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length>0){
+                
+
+                $(".mdl-layout__header, .mdl-layout__content").hide();
+                $("#__Page_PopUp tr:first").hide();
+                //$(".OverlayPopupBackground").show();
+                $("#content").css('margin-top','-1px');
+                $(".modal-dialog-container").css('background-color','#808080');
+                $(".modal-dialog-container").css('opacity','.8');
+                $("#confirmprompt").show();
+                $(".modal-dialog-container1").show();
+                //$("#__Page_PopUp").css('max-width','300');
+
+
+              }
+
+
+
+              $("#yes").click(function (event) {
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  //_00('Enter', event);
+                  _16(event,this,1,'Enter');
+              });
+              $("#no").click(function (event) {
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                  //_00('Enter', event);
+                  _16(event,this,1,'Enter');
+              });
+              $("#telephone").on('keyup change',function(event) {
+                $('#CenPH__lb_RCDDTL1__lb_1ZTNB').val($('#telephone').val());
+                 
+              });
+              $("#ext").on('keyup change',function(event) {
+                $('#CenPH__lb_RCDDTL1__lb_1ZUNB').val($('#ext').val());
+              });
+
+              $("#input-phone-type").on('keyup change',function(event) {
+               
+                $('#CenPH__lb_RCDKEY__lb_1PACD').val($(this).val());
+              });
+          });
+        </script>
         <div id="Div1">
             
       <%--  CU: E1W Phone Number      Edit record(1 screen)                                                                  --%>

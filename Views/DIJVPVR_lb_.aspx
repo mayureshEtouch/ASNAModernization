@@ -4,7 +4,12 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:23 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DIJVPVR# --%>
-
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +27,108 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row"> 
+                <!-- Title --> 
+                 <span class="mdl-layout-title logo-icon"></span>
+                <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon" event-data="F12"><i class="material-icons md-15 close" event-data="F12"></i></span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col"> 
+                    <!-- Title --> 
+                    <span class="heading-h1">Swipe or Enter Number</span> </div>
+                <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                    <!-- Navigation --> 
+                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIJVPVR</span></div>
+            </div>
+        </section>
+        <section class="form-data">
+                    <div class="form-data-wrapper display-application-status">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col pull-right">
+                                    <span class="form-label" style="margin: 7px 10px 0 0">Enter:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <span class="form-text">
+                                    <input type="text" id="card_number" name="card_number" class="mdl-textfield__input-small" maxlength="10" size="11"/>
+                                    </span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col pull-right">
+                                    <span class="form-label" style="margin: 0 10px 0 0">Card Requested:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <span class="form-text">PREFERRED CUSTOMER</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+              <div class="button-container" style="padding-bottom:0">
+                <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                  <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-desktop pull-left" style="padding-bottom:0">
+                    <span class="error"></span>
+                  </div> 
+                  <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop pull-right" style="padding-bottom:0">
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter">Submit</span>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </section>
+        
+        </main>
+        <div id="modal" class="simplePopup"></div>
+    </div>
+    <style type="text/css" media="screen">
+      #Div1, #fkeys, #diagnostics, #footer, #message-container {
+          display: none;
+      }
+      #main-content {
+          width: 100%;
+          
+      }
+      .modal-dialog-container, #main-content {
+        width: 100% !important;
+      }
+      .modal-dialog-container {
+        margin: 0 auto;
+      }
+      .mdl-layout__content {
+        height: auto;
+      }
+
+     #__Page_PopUp {
+       left: 50% !important;
+       margin-left: -325px;
+       top: 25% !important;
+     }
+      #__Page_PopUp > tr:first-child {
+       display: none;
+      }
+      #__Page_PopUp .DdsInlinePopUpTitle {
+       height: 0;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.error').text($('.DdsSflMsgField_OutputOnly').text());
+        $('#card_number').val($('#CenPH__lb_RCDDTL1__lb_POVTX').val());
+        $('body').on('keyup change', '#card_number', function (event) {
+          $('#CenPH__lb_RCDDTL1__lb_POVTX').val($('#card_number').val());
+        });       
+      });
+    </script>
         <div id="Div1">
             
       <%--  SY: PMW Scan Input/07     Prompt & validate record                                                               --%>

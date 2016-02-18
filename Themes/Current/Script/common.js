@@ -226,3 +226,20 @@ function copyData(fields, events) {
 
     }
 }
+
+/*Setting up date & Time*/
+function setDateTime(dateFieldId,timeFieldId) {
+    $("[name='date']").text($("[id$="+dateFieldId+"]").text());
+    $("[name='time']").text($("[id$="+timeFieldId+"]").text());
+}
+/* Onclick button triggering function pressing F keys*/
+$(document).ready(function() {
+    $('body').on('click', '.mdl-button, .close-icon', function (event) {
+        console.log('clciking...');
+      var fkey = $(this).attr('event-data');
+      if(fkey != undefined && fkey != ''){
+        _00(fkey,event);
+      }
+    });
+});
+

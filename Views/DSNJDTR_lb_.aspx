@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSNJDTR_lb_.aspx.cs" Inherits="conns.DSNJDTR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:15 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -22,6 +22,192 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Order Header Data</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSNJDTR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="white-to-gray-bullet"></li>
+
+                        <li class="progress-bar-step2 gray-bg step-width"><span class="step-title-selected">Step 2</span> <span class="step-txt-selected">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider-first"></li>
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider"></li>
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider"></li>
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <li class="progress-bar-divider"></li>
+
+                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Order #:</span>
+                            <span class="summary-txt" id="order-id"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Employee Name:</span>
+                            <span class="summary-txt" id="employee-name"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Phone details:</span>
+                            <span class="summary-txt">Home Phone: <span id="home-phone"></span></span>
+                            <span class="summary-txt">Work Phone: <span id="work-phone"></span></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Version number:</span>
+                            <span class="summary-txt" id="version-number"></span>
+                        </div>
+                    </div>
+              </div>
+            </section>
+            <section class="form-data">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
+                          <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Employee #:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="employee-id"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Order Date:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="order-date"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Store:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="store-code"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Billing Address:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text">
+                                      <span id="billing-addr-1"></span><br/>
+                                      <span id="billing-addr-2"></span><br/>
+                                      <span id="billing-addr-3"></span>&nbsp;
+                                      <span id="billing-addr-4"></span>&nbsp;
+                                      <span id="billing-addr-5"></span>
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Date Stamp:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="date-stamp"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Delivery Code:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="delivery-code"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Expected Del Date:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="expected-del-date"></span>
+                                </div>
+                            </div>
+                              <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Shipping Address:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text">
+                                      <span id="shipping-addr-1"></span><br/>
+                                      <span id="shipping-addr-2"></span><br/>
+                                      <span id="shipping-addr-3"></span>&nbsp;
+                                      <span id="shipping-addr-4"></span>&nbsp;
+                                      <span id="shipping-addr-5"></span>
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            <fieldset>
+                                <legend id="legen">Special Instructions:</legend>
+                                <!-- <span style="min-height: 20px;" class="form-text" id="special-instructions" name="CenPH_2AQNA"></span> -->
+                               <textarea id="special-instructions" rows="5" cols="40" readonly="readonly" name="CenPH_2AQNA"></textarea>
+                            </fieldset>
+                        </div>
+                    </div>
+                    
+          <div class="button-container" style="padding-bottom:0;">
+            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:5px;">
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">previous</span>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="returnToMenu" event-data="F3">Return to menu</span>
+              </div>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0;px;">
+                <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printInvoice" event-data="F6">Reprint invoice</span>
+                <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="whseComments" event-data="F5">Whse comments</span>
+              </div>
+            </div>
+          </div>
+              </div>
+            </section>
+      <section class="add-item">
+      &nbsp;
+      </section>
+        </main>
+        <section class="copyright">
+            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+        </section>
+        <br/><br/>
+    </div>
+    <div id="modal" class="simplePopup"></div>
+    
         <div id="Div1">
             
       <%--  OE: DTR Dsp Ord Hdr       Display transactions                                                                   --%>
@@ -899,4 +1085,24 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+    <script type="text/javascript">
+      $(document).ready(function() {
+      
+          /*setDateTime(dateFieldId,timeFieldId)*/
+          setDateTime('CenPH_DdsConstant15','CenPH__lb_SFLCTL__lb__lb_TME');
+
+          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL__lb_2AACD',    '#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX'];
+          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5'];
+          for (var i = 0; i < old_fields.length; i++) {
+            $(new_fields[i]).text($.trim($(old_fields[i]).text()));
+          };
+
+
+      });
+    </script>
+    <style>
+            /* #Div1{
+                 display: block;
+            } */
+    </style>
     </asp:Content>
