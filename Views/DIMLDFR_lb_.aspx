@@ -144,7 +144,7 @@
         <div class="button-container">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data='F3' id="exit">exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data='F12' id="exit">Previous</span>
               <span class="error"></span>
             </div>
             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
