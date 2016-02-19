@@ -11,8 +11,6 @@
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
@@ -58,12 +56,8 @@
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;"><strong>Continue</strong>
-                        <select id="CenPH__lb_SFLCTL__lb_PPTST_first" tabindex="2" class="DdsCharField" name="ctl00$CenPH$_lb_SFLCTL__lb_PPTST" onfocus="_09('#PPTST','4,58','#SFLCTL');" style="color:Green;position: static; left: 523px; top: 72px; width: 50px">
-                            <option selected="selected" value=" ">   </option>
-                            <option value="N"> N </option>
-                            <option value="Y"> Y </option>
-                        </select></span> </div>
+                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue</strong>
+                        </span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
@@ -75,11 +69,14 @@
                     </div>
                     <div class="button-container" style="padding:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                            <div class="mdl-cell mdl-cell--6-col" style="padding-bottom:0">
+                            <div class="mdl-cell mdl-cell--2-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" style="margin-left: -5px;">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col pull-right" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction">Display Transaction</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction" style="margin-left: 20px;">Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next-first">Next</span>
                             </div>
                         </div>
                     </div>
@@ -89,11 +86,7 @@
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Please Call GE Money for Clarification</span></div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;"><strong>Continue</strong><select id="CenPH__lb_SFLCTL__lb_PPTST_second" tabindex="2" class="DdsCharField" name="ctl00$CenPH$_lb_SFLCTL__lb_PPTST" onfocus="_09('#PPTST','4,58','#SFLCTL');" style="color:Green;position: absolute; left: 523px; top: 72px; width: 50px">
-                        <option selected="selected" value=" ">   </option>
-                        <option value="N"> N </option>
-                        <option value="Y"> Y </option>
-                      </select></span> </div>
+                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue</strong></span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
@@ -105,20 +98,24 @@
                     </div>
                     <div class="button-container" style="padding:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                            <div class="mdl-cell mdl-cell--6-col" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" style="margin-left: -5px;">Previous</span>
+                            <div class="mdl-cell mdl-cell--2-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--6-col pull-right" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction">Display Transaction</span>
+                            <div class="mdl-cell mdl-cell--6-col pull-left" style="padding-bottom:0;">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" style="margin-left: 20px;">Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <div id="modal1" class="simplePopup" style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         </div>
         <!-- Modified HTML code ends here -->
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CA: DFI Crd Cmp Message   Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -690,25 +687,33 @@
             #form1 {
                 margin-top: -20px;
             }
+            #CenPH__lb_SFLCTL__lb_PPTST {
+              position: static !important;
+              width: 45px !important;
+            }
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
                 var notes = "";
-                $('body').on('click', '#previous', function (event) {
+                $('body').on('click', '#previous,#previous-second', function (event) {
                     _00('F12', event);
                 });
-                $('body').on('click', '#displayTransaction', function (event) {
+                $('body').on('click', '#next,#next-first', function (event) {
                     _00('Enter', event);
                 });
-                $("#CenPH__lb_SFLCTL__lb_PPTST_first").on("change", function(event) {
+                $('body').on('click', '#displayTransaction,#displayTransaction-second', function (event) {
+                    _00('F9', event);
+                });
+                /*$("#CenPH__lb_SFLCTL__lb_PPTST_first").on("change", function(event) {
                   $("#CenPH__lb_SFLCTL__lb_PPTST").val($("#CenPH__lb_SFLCTL__lb_PPTST_first").val());
                   _00("Enter", event);
                 });
                 $("#CenPH__lb_SFLCTL__lb_PPTST_second").on("change", function(event) {
                   $("#CenPH__lb_SFLCTL__lb_PPTST").val($("#CenPH__lb_SFLCTL__lb_PPTST_second").val());
                   _00("Enter", event);
-                });
-
+                });*/
+                
+                $("#CenPH__lb_SFLCTL__lb_PPTST_first").val()
                 $('div#CenPH__lb_SFLRCD>div[id^=CenPH__lb_SFLRCD]').each(function() {
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var divid = $(this);
@@ -717,17 +722,17 @@
                         });
                     }
                 });
-                if(document.getElementById("CenPH__lb_SFLCTL__lb_CBANA").innerHTML.indexOf("Continue to GE Credit?") !== -1) {
+                if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Continue to GE Credit?") !== -1) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#first");
                     $("#notice-first").html(notes);
                     $("#second-message").hide();
                     $("#first-message").show();
                 } else {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#second");
                     $("#notice-second").html(notes);
                     $("#second-message").show();
                     $("#first-message").hide();
                 }
-                
-
             });
         </script>
     </asp:Content>

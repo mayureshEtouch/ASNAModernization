@@ -1156,7 +1156,7 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Set requested delivery date
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
             $("#requestcal").click(function () {
                 $("#requestdate").datepicker("show");
             });

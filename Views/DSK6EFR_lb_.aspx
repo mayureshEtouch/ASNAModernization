@@ -123,7 +123,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>
-        <div id="modal" class="simplePopup"></div>
+        <div id="modal1" class="simplePopup"></div>
     </div>
     <div id="Div1" style="display:none;">
 
