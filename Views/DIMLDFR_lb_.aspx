@@ -56,9 +56,6 @@
           <li class="progress-bar-divider"></li>
 
           <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-          <li class="progress-bar-divider"></li>
-
-          <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
           <div class="clear"></div>
         </ul>
       </div>
