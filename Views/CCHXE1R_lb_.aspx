@@ -92,7 +92,9 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label form-label-input clm-form-label">Birthday:</span>
-                                        <span class="form-text" id="cust-birth">12/12/1986</span>
+                                        <input class="editable-data" type="text" id="cust-birth" size="15">
+                                        <i id="cust-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+                                        <span class="form-text" id="ro-cust-birth" class="ro-data">12/12/1986</span>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +102,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                         <span class="form-label clm-form-label">License #:</span>
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input-small" size="5" id="cust-lic-first"><span></span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small" size="19" id="cust-lic-second"><span></span></span>
+                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first"><span id="ro-cust-lic-first" class="ro-data">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second"><span id="ro-cust-lic-second" class="ro-data"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +110,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
-                                        <span class="form-text"><input type="text" id="cust-ssn" size="15"><span></span></span>
+                                        <span class="form-text"><input class="editable-data" type="text" id="cust-ssn" size="15"><span class="ro-data" id="ro-cust-ssn"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -119,17 +121,17 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-text">
                                         <span class="form-label">Residence Type:</span>&nbsp;&nbsp;&nbsp;
-											<select id="cust-res-type">
+											<select class="editable-data" id="cust-res-type">
 												<option selected="selected" value="O"> O </option>
 												<option value="R"> R </option>
 												<option value="L"> L </option>
 												<option value=" ">   </option>
 											</select>
-											<span style="margin: 0 5px;"></span>&nbsp;&nbsp;
+											<span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
 											<span class="form-label">For</span>&nbsp;&nbsp;
-											<input type="text" class="mdl-textfield__input-small" size="3" id="no-of-years"><span style="margin: 0 5px;"></span>
+											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
 											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
-											<input type="text" id="payment-of" class="mdl-textfield__input-small" size="15"><span style="margin: 0 5px;"></span>
+											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
 											<span class="form-label">Monthly</span>
 										</span>
                                     </div>
@@ -142,26 +144,26 @@
                                     <div class="mdl-cell mdl-cell--5-col" style="margin:0">
                                         <span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-											<input type="text" size="30" id="phone-listed-as">
-											<span></span>
+											<input class="editable-data" type="text" size="30" id="phone-listed-as">
+											<span class="ro-data" id="ro-phone-listed-as"></span>
 										</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
 										<span class="form-label clm-form-label">Marital Status:</span>
 										<span class="form-text">
-											<select id="cust-martial-status">
+											<select class="editable-data" id="cust-martial-status">
 												<option value="M"> M </option>
 												<option value="S"> S </option>
 												<option selected="selected" value=" ">   </option>
 											</select>
-											<span></span>
+											<span class="ro-data" id="ro-cust-martial-status"></span>
 										</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">Dependents:</span>
 										<span class="form-text">
-											<input id="cust-dependents" type="text" size="5">
-											<span></span>
+											<input class="editable-data" id="cust-dependents" type="text" size="5">
+											<span class="ro-data" id="ro-cust-dependents"></span>
 										</span>
                                     </div>
                                 </div>
@@ -171,22 +173,23 @@
 									<div class="mdl-cell mdl-cell--5-col" style="white-space:nowrap;margin: 0;">
 										<span class="form-label clm-form-label">Spouse Name:</span>
 										<span class="form-text">
-											<input type="text" id="sp-name" size="30">
-											<span></span>
+											<input class="editable-data" type="text" id="sp-name" size="30">
+											<span class="ro-data" id="ro-sp-name"></span>
 										</span>
 									</div>
 									<div class="mdl-cell mdl-cell--4-col" style="margin:0">
 										<span class="form-label clm-form-label">Birthday:</span>
 										<span class="form-text">
-											<input type="text" id="sp-birth" size="15">
-											<span></span>
+											<input class="editable-data" type="text" id="sp-birth" size="15">
+                                            <i id="sp-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+											<span class="ro-data" id="ro-sp-birth"></span>
 										</span>
 									</div>
 									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
 										<span class="form-text">
-											<input type="text" id="sp-ssn" size="15">
-											<span></span>
+											<input class="editable-data" type="text" id="sp-ssn" size="15">
+											<span class="ro-data" id="ro-sp-ssn"></span>
 										</span>
 									</div>
 								</div>
@@ -198,18 +201,18 @@
 									<div class="mdl-cell mdl-cell--5-col" style="margin:0">
 										<span class="form-label clm-form-label">License #:</span>
 										<span class="form-text">
-											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small" size="5">
-											<span></span>
+											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5">
+											<span class="ro-data" id="ro-sp-lic-first"></span>
 											&nbsp;&nbsp;&nbsp;&nbsp;
-											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small" size="19">
-											<span></span>
+											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19">
+											<span class="ro-data" id="ro-sp-lic-second"></span>
 										</span>
 									</div>
 									<div class="mdl-cell mdl-cell--6-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 170px;">Spouse Monthly Income:</span>
 										<span class="form-text">
-											<input type="text" id="sp-monthly-income" size="15">
-											<span></span>
+											<input class="editable-data" type="text" id="sp-monthly-income" size="15">
+											<span class="ro-data" id="ro-sp-monthly-income"></span>
 										</span>
 									</div>
 								</div>
@@ -223,18 +226,18 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Employed at:</span>
                                 <span class="form-text">
-									<input type="text" id="employed-at" class="mdl-textfield__input_small" size="40">
-									<span></span>
+									<input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" size="40">
+									<span class="ro-data" id="ro-employed-at"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Duration:</span>
                                 <span class="form-text">
-									<input type="text" id="employed-at-duration-years" class="mdl-textfield__input-small" size="5">
-									<span></span>
+									<input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5">
+									<span class="ro-data" id="ro-employed-at-duration-years"></span>
 									&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
-									<input type="text" id="employed-at-duration-months" class="mdl-textfield__input-small" size="5">
-									<span></span>
+									<input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5">
+									<span class="ro-data" id="ro-employed-at-duration-months"></span>
 									&nbsp;Months
                             </span>
                             </div>
@@ -243,15 +246,15 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Income:</span>
 								<span class="form-text">
-									<input type="text" id="cust-income" class="mdl-textfield__input-small" size="15">
-									<span></span>
+									<input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15">
+									<span class="ro-data" id="ro-cust-income"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 								<span class="form-label clm-form-label">Supervisor:</span>
 								<span class="form-text">
-									<input type="text" id="cust-supervisor" class="mdl-cell--6-col" size="30">
-									<span></span>
+									<input type="text" id="cust-supervisor" class="editable-data mdl-cell--6-col" size="30">
+									<span class="ro-data" id="ro-cust-supervisor"></span>
 								</span>
                             </div>
                         </div>
@@ -259,7 +262,7 @@
                             <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Frequency:</span>
 								<span class="form-text">
-									<select id="cust-frenq">
+									<select class="editable-data" id="cust-frenq">
 										<option value="H"> H </option>
 										<option value="W"> W </option>
 										<option value="B"> B </option>
@@ -267,7 +270,7 @@
 										<option value=" ">   </option>
 										<option selected="selected" value="A"> A </option>
 									</select>
-									<span></span>
+									<span class="ro-data" id="ro-cust-frenq"></span>
 								</span>
                             </div>
                         </div>
@@ -275,15 +278,15 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Reference Name:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-name" class="mdl-cell--5-col" size="20">
-									<span></span>
+									<input type="text" id="ref-name" class="editable-data mdl-cell--5-col" size="20">
+									<span class="ro-data" id="ro-ref-name"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Address:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-address" class="mdl-cell--7-col" size="5">
-									<span></span>
+									<input type="text" id="ref-address" class="editable-data mdl-cell--7-col" size="5">
+									<span class="ro-data" id="ro-ref-address"></span>
 								</span>
                             </div>
                         </div>
@@ -291,15 +294,15 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Zip Code:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-zip-code" class="mdl-textfield__input-small" size="15">
-									<span></span>
+									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15">
+									<span class="ro-data" id="ro-ref-zip-code"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Phone No:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-phone" class="mdl-textfield__input-small" size="20">
-									<span></span>
+									<input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20">
+									<span class="ro-data" id="ro-ref-phone"></span>
 								</span>
                             </div>
 						</div>
@@ -307,22 +310,25 @@
                             <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Type:</span>
                                 <span class="form-text">
-                                    <select name="" id="ref-type">
+                                    <select class="editable-data" name="" id="ref-type">
                                         <option value="R"> R </option>
                                         <option value="F"> F </option>
                                         <option selected="selected" value=" ">   </option>
                                     </select>
-									<span></span>
+									<span class="ro-data" id="ro-ref-type"></span>
                                 </span>
                             </div>
                         </div>
                         <div class="button-container" style="padding-bottom:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:9px">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop" style="padding-bottom:0;margin-left:9px">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer">update customer</span>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-left" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop pull-right" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>
                         </div>
@@ -332,7 +338,7 @@
                     &nbsp;
                 </section>
             </main>
-            <div id="modal" class="simplePopup"></div>
+            <div id="modal1" class="simplePopup"></div>
             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
               <div class="button-container">
@@ -343,7 +349,7 @@
         </div>
     </div>
     <!-- Modified HTML code ends here -->
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: ED1 Personal Detail   Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1618,6 +1624,9 @@
 			float: left;
 			height: 100px;
 		}
+        .class="editable-data"  {
+            display:none;
+        }
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
@@ -1628,7 +1637,34 @@
                 "CenPH__lb_RCDDTL1__lb_DAPTX": "cust-zipcode",
                 "CenPH__lb_RCDDTL1__lb_DD1NB": "home-phone",
                 "CenPH__lb_RCDDTL1__lb_DD2NB": "office-phone",
-                "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD": "cust-birth"
+                "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD": "ro-cust-birth",
+                "CenPH__lb_RCDDTL1__lb_1DRCD": "ro-cust-lic-first",
+                "CenPH__lb_RCDDTL1__lb_DTX20":"ro-cust-lic-second",
+                "CenPH__lb_RCDDTL1__lb_1A4NB": "ro-cust-ssn",
+                "CenPH__lb_RCDDTL1__lb_1RTCD":"ro-cust-res-type",
+                "CenPH__lb_RCDDTL1__lb_1REST": "ro-no-of-years",
+                "CenPH__lb_RCDDTL1__lb_1RES_usd_": "ro-payment-of",
+                "CenPH__lb_RCDDTL1__lb_DVZTX": "ro-phone-listed-as",
+                "CenPH__lb_RCDDTL1__lb_1ASST":"ro-cust-martial-status",
+                "CenPH__lb_RCDDTL1__lb_1DEP_lb_": "ro-cust-dependents",
+                "CenPH__lb_RCDDTL1__lb_1SPNM": "ro-sp-name",
+                "CenPH_DdsConstant42": "ro-sp-birth",
+                "CenPH__lb_RCDDTL1__lb_DDUN_lb_": "ro-sp-ssn",
+                "CenPH__lb_RCDDTL1__lb_1SPST": "ro-sp-lic-first",
+                "CenPH__lb_RCDDTL1__lb_DG6XT": "ro-sp-lic-second",
+                "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "ro-sp-monthly-income",
+                "CenPH__lb_RCDDTL1__lb_DUNTX": "ro-employed-at",
+                "CenPH__lb_RCDDTL1__lb_DZ4NB": "ro-employed-at-duration-years",
+                "CenPH__lb_RCDDTL1__lb_DJVN_lb_": "ro-employed-at-duration-months",
+                "CenPH__lb_RCDDTL1__lb_DINC_usd_": "ro-cust-income",
+                "CenPH__lb_RCDDTL1__lb_DINCF": "ro-cust-frenq",
+                "CenPH__lb_RCDDTL1__lb_DWWTX": "ro-cust-supervisor",
+                "CenPH__lb_RCDDTL1__lb_DNMRF": "ro-ref-name",
+                "CenPH__lb_RCDDTL1__lb_DANTX": "ro-ref-address",
+                "CenPH__lb_RCDDTL1__lb_DUSTX": "ro-ref-zip-code",
+                "CenPH__lb_RCDDTL1__lb_DBXNB": "ro-ref-phone",
+                "CenPH__lb_RCDDTL1__lb_DREFT": "ro-ref-type"
+                
             },
             "inputFields": {
               "CenPH__lb_RCDDTL1__lb_1DRCD": "cust-lic-first",
@@ -1641,7 +1677,6 @@
               "CenPH__lb_RCDDTL1__lb_1ASST":"cust-martial-status",
               "CenPH__lb_RCDDTL1__lb_1DEP_lb_": "cust-dependents",
               "CenPH__lb_RCDDTL1__lb_1SPNM": "sp-name",
-              "ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue": "sp-birth",
               "CenPH__lb_RCDDTL1__lb_DDUN_lb_": "sp-ssn",
               "CenPH__lb_RCDDTL1__lb_1SPST": "sp-lic-first",
               "CenPH__lb_RCDDTL1__lb_DG6XT": "sp-lic-second",
@@ -1660,29 +1695,33 @@
             }
         }
         $(document).ready(function() {
+            
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant42]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
             
-            $('body').on('click', '#exitPage', function(event) {
+            $('body').on('click', '#previous', function(event) {
                 _00('F12', event);
             });
             $('body').on('click', '#next', function(event) {
                 _00('Enter', event);
             });
-            $('body').on('click', '#update-cust', function(event) {
+            $('body').on('click', '#updateCustomer', function(event) {
                 _00('F7', event);
             });
             if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+              $(".editable-data").show();
+              $(".ro-data").hide();
               $(".confirmation-outer-conatiner").hide();
               $(".OverlayPopupBackground").hide();
               //Set page details
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-              //$(".order-summary,.form-data,.time-date").show();
             } else {
+              $(".editable-data").hide();
+              $(".ro-data").show();
               $(".confirmation-outer-conatiner").show();
               $(".OverlayPopupBackground").show();
-              //$(".order-summary,.form-data,.time-date").hide();
+              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
             }
             
             $("#yes").click(function (event) {
@@ -1692,6 +1731,22 @@
             $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 _00('Enter', event);
+            });
+            $("#cust-birth").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD_DateValue").val() || $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD").val());
+            $("#sp-birth").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue").val() || $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val());
+            $("#cust-birth").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#cust-reqesdate").click(function () { $("#cust-birth").datepicker("show"); });
+            $("#sp-birth").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#sp-reqesdate").click(function () { $("#sp-birth").datepicker("show"); });
+            $("#cust-birth").on('change', function () {
+                var date = $("#cust-birth").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD").val(date[2] + "-" + date[0] + "-" + date[1]);
+            });
+            $("#sp-birth").on('change', function () {
+                var date = $("#sp-birth").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val(date[2] + "-" + date[0] + "-" + date[1]);
             });
         });
     </script>

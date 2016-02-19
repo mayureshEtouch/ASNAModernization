@@ -55,7 +55,7 @@
                 </div>
             </section>
             <section class="form-data">
-                <div class="form-data-wrapper Submit-to-credit-for-review">
+                <div class="form-data-wrapper Submit-to-credit-for-review" style="margin-bottom: 45px !important;">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
                             <div class="content-grid mdl-grid">

@@ -216,7 +216,7 @@ function copyData(fields, events) {
         } else {
             outvalues += $("#" + ele).html();
         }
-        $("#" + dispOnlyFields[ele]).html(outvalues);
+        $("#" + dispOnlyFields[ele]).html(outvalues.replace(/&nbsp;/g, ""));
     }
     for (var ele in inputFields) {
         if ($("#" + ele).length > 0) {
@@ -228,18 +228,48 @@ function copyData(fields, events) {
 }
 
 /*Setting up date & Time*/
-function setDateTime(dateFieldId,timeFieldId) {
-    $("[name='date']").text($("[id$="+dateFieldId+"]").text());
-    $("[name='time']").text($("[id$="+timeFieldId+"]").text());
+function setDateTime(dateFieldId, timeFieldId) {
+    $("[name='date']").text($("[id$=" + dateFieldId + "]").text());
+    $("[name='time']").text($("[id$=" + timeFieldId + "]").text());
 }
 /* Onclick button triggering function pressing F keys*/
 $(document).ready(function() {
-    $('body').on('click', '.mdl-button, .close-icon', function (event) {
+    $('body').on('click', '.mdl-button, .close-icon', function(event) {
         console.log('clciking...');
-      var fkey = $(this).attr('event-data');
-      if(fkey != undefined && fkey != ''){
-        _00(fkey,event);
-      }
+        var fkey = $(this).attr('event-data');
+        if (fkey != undefined && fkey != '') {
+            _00(fkey, event);
+        }
     });
 });
 
+$(document).ready(function() {
+    // Error popup
+    var hideMessage = "Value not found in list - Use '?' to determine allowed values.";
+    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1) {
+
+        var errorMsg = "";
+        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+        }
+        if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+        }
+        $('#modal1').html(errorMsg);
+        $('#modal1').simplePopup();
+    }
+
+
+    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1)) {
+
+        var errorMsg = "";
+        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+        }
+        if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+            errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+        }
+        $('#modal').html(errorMsg);
+        $('#modal').simplePopup();
+    }
+})

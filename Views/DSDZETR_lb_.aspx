@@ -1194,7 +1194,7 @@
                 $("#CenPH__lb_SFLCTL__lb_CCMC_lb_").val($("#pcode").val());
             });
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
             $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");

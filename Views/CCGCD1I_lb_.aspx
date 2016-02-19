@@ -4,7 +4,16 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:06 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CCGCD1I# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +31,124 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title logo-icon"></span>
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <span class="heading-h1">CU: D1I Ext Crd Tran KEY SCREEN</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCGCD1I</span>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <span class="form-label clm-form-label" style="margin-left: 25px !important;width: auto !important;">Nbr: Customer ID:</span>
+                            <span class="form-text" id="cust-id" style="margin-left: 25px !important;width: auto !important;"></span>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <span class="form-label clm-form-label" style="margin-left: 25px !important;width: auto !important;">Cde: Crd Cmp ID:</span>
+                            <span class="form-text" id="crd-cmp-id" style="margin-left: 25px !important;width: auto !important;"></span>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <span class="form-label clm-form-label" style="margin-left: 25px !important;width: auto !important;">Nbr: ECM Acct(4):</span>
+                            <span class="form-text" id="ecm-acct" style="margin-left: 25px !important;width: auto !important;"></span>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid" style="padding: 10px 0">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <span class="form-label clm-form-label" style="margin-left: 25px !important;width: auto !important;">Sequence:</span>
+                            <span class="form-text" id="seq" style="margin-left: 25px !important;width: auto !important;"></span>
+                        </div>
+                    </div>
+                     <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--6-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" style="margin-left: -5px;">Previous</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+    </div>
+    <!-- Modified HTML code ends here -->
+        <style>
+            #Div1, #fkeys, #showDiagnostics, #footer {
+                display: none;
+            }
+            #main-content {
+                width: 100%;
+            }
+            #__Page_Hidden{
+                height: 800px !important;
+            }
+              #__Page_PopUp {
+                left: 50% !important;
+                margin-left: -225px;
+            }
+
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #form1 {
+                margin-top: -20px;
+            }
+            #CenPH__lb_SFLCTL__lb_PPTST {
+              position: static !important;
+              width: 45px !important;
+            }
+        </style>
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDKEY__lb_1ALNB": "cust-id",
+                    "CenPH__lb_RCDKEY__lb_1CCID": "crd-cmp-id",
+                    "CenPH__lb_RCDKEY__lb_1Y1NB": "ecm-acct",
+                    "CenPH__lb_RCDKEY__lb_1SEQ_lb_": "seq",
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                $('body').on('click', '.close-icon,#previous', function (event) {
+                    _00('F12', event);
+                });
+                copyData(copyToAndFrom);
+            });
+        </script>
+        <div id="Div1" style="display:none;">
             
       <%--  CUL D1I Ext Crd Tran      Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
