@@ -315,7 +315,7 @@ generateTable("top-to-bottom");
        </script>
 
 
-       <div id="Div1">
+       <div id="Div1" style="display:none;">
 
         <%--  CU: DSP Cust Addresses    Display file                                                                           --%>
         <%--  CRTDSPF                                                                                                          --%>

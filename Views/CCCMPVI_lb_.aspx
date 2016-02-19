@@ -132,7 +132,7 @@
         });
       });
     </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CA: PMT Test 4 Customer   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>

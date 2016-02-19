@@ -362,7 +362,7 @@
 
     });
     </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Addresses 4 Cust  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

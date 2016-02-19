@@ -129,7 +129,7 @@
         });       
       });
     </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  SY: PMW Scan Input/07     Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>

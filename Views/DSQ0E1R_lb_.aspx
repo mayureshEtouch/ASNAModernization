@@ -219,7 +219,7 @@
               });
           });
         </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: E1W Phone Number      Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>

@@ -320,7 +320,7 @@
 
       });
     </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: ER1 Customer          Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>

@@ -190,7 +190,7 @@ tr.selected {
 
   });
 </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DSW Phone Numbers     Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

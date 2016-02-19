@@ -137,7 +137,7 @@
         </main>
         </div>
         
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DS1 Customer Address  Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>

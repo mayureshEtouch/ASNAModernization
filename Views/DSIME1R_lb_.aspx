@@ -266,7 +266,7 @@
         </div>
     </div>
 
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: ER1 Customer/Maint    Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
