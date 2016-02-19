@@ -35,6 +35,7 @@ jQuery.fn.ForceNumericOnly =
         });
     };
 
+
 // Numeric with question mark
 jQuery.fn.ForceNumericWithQuestionMarkOnly =
     function(maxlength, minlength) {
@@ -48,7 +49,7 @@ jQuery.fn.ForceNumericWithQuestionMarkOnly =
                 } else if (e.shiftKey) {
                     return false;
                 } else {
-                    if(maxlength && $(this).val().indexOf("?") === -1) {
+                    if (maxlength && $(this).val().indexOf("?") === -1) {
                         $(this).attr("maxlength", maxlength);
                     }
                     var key = e.keyCode;
@@ -72,17 +73,30 @@ function validateAmount(data) {
 
 // Numeric with two decimal precisions
 jQuery.fn.numericWithTwoDecimalPrecisions = function() {
+        return this.each(function() {
+            $(this).on("change keyup", function(e) {
+                if (/^[0-9]+(\.[0-9]{1,2})?$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else if (/^[0-9]+(\.)?$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else {
+                    $(this).val("");
+                    return;
+                }
+
+            });
+        });
+    }
+    //Allow only Y or N
+jQuery.fn.ForceYesOrNoOnly = function() {
     return this.each(function() {
         $(this).on("change keyup", function(e) {
-            if(/^[0-9]+(\.[0-9]{1,2})?$/.test($(this).val().replace(/\s/g, ""))) {
-                return true;
-            } else if(/^[0-9]+(\.)?$/.test($(this).val().replace(/\s/g, ""))) {
+            if (/^(?:Y|y|N|n)$/.test($(this).val().replace(/\s/g, ""))) {
                 return true;
             } else {
                 $(this).val("");
-                return;
+                return false;
             }
-            
         });
     });
 }
@@ -91,15 +105,15 @@ jQuery.fn.numericWithTwoDecimalPrecisions = function() {
 jQuery.fn.ForceNumericWithQuestionMarkOnlyWithRegex = function() {
     return this.each(function() {
         $(this).on("change keyup", function(e) {
-            if(/^[0-9]{1,3}$/.test($(this).val().replace(/\s/g, ""))) {
+            if (/^[0-9]{1,3}$/.test($(this).val().replace(/\s/g, ""))) {
                 return true;
-            } else if(/(^\?){1}$/.test($(this).val().replace(/\s/g, ""))) {
+            } else if (/(^\?){1}$/.test($(this).val().replace(/\s/g, ""))) {
                 return true;
             } else {
                 $(this).val("");
                 return;
             }
-            
+
         });
     });
 }
@@ -112,7 +126,8 @@ function onlyAlphabets(e, t) {
         } else if (e) {
             var charCode = e.which;
         } else {
-            return true; }
+            return true;
+        }
         if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
             return true;
         else

@@ -71,7 +71,7 @@
                                     <span class="form-label">Employee:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-text"><input type="text" id="emp-name" class="full-input" name="employee"></span>
+                                    <span class="form-text"><input type="text" id="emp-name" class="full-input editable-data" name="employee" maxlength="5"><span class="ro-data" id="ro-emp-name"></span></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
@@ -79,7 +79,7 @@
                                     <span class="form-label">Promotion:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-text"><input type="text" id="promotion" class="full-input" name="promotion"></span>
+                                    <span class="form-text"><input type="text" id="promotion" class="full-input editable-data" name="promotion"><span class="ro-data" id="ro-promotion"></span></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
@@ -152,7 +152,7 @@
                                     <span class="form-label">Social Security:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-text"><input type="text" id="ssn" class="full-input" id="socialSecurity" name="socialSecurity"></span>
+                                    <span class="form-text"><span type="text" id="ssn" class="full-input" name="socialSecurity"></span></span>
                                 </div>
                             </div>
                         </div>
@@ -160,9 +160,9 @@
                     <div class="content-grid mdl-grid" style="padding: 10px 0">
                         <div class="mdl-cell mdl-cell--12-col">
                             <div class="total-format-text">
-                                <span class="form-label">Product</span><span class="form-text" id="cust-prod"></span><span class="form-text"></span>
+                                <span class="form-label">Product</span><span class="form-text" id="cust-prod"></span><span class="form-text">+</span>
                                 <span style="display:none;" class="form-label">Maint.</span><span class="form-text" id="cust-maint"></span><span class="form-text"></span>
-                                <span class="form-label">Addon</span><span class="form-text" id="cust-addon"></span><span class="form-text"></span>
+                                <span class="form-label" style="margin-left: -45px;">Addon</span><span class="form-text" id="cust-addon"></span><span class="form-text"></span>
                                 <span style="display:none;" class="form-label">Down</span><span class="form-text" id="cust-down"></span>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                                 <span class="form-label">Note To Grader:</span>
                             </div>
                             <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                <span class="form-text"><input type="text" id="note-to-grader" class="full-input" name="noteToGrader"></span>
+                                <span class="form-text"><input type="text" style="text-transform: lowercase;" id="note-to-grader" class="full-input editable-data" name="noteToGrader"><span id="ro-note-to-grader" class="ro-data"></span></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
@@ -188,14 +188,14 @@
                                 <span class="form-label">Continue to Invoice Entry:</span>
                             </div>
                             <div class="mdl-cell mdl-cell--1-col" style="margin:0">
-                                <span class="form-text"><input type="text" class="full-input" id="ContinueToInvoiceEntry" name="ContinueToInvoiceEntry"></span>
+                                <span class="form-text" id="invoice-here"></span>
                             </div>
                         </div>
                     </div>
                     <div class="button-container" style="padding-bottom:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
+                                <span style="margin-left: -5px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
@@ -215,7 +215,7 @@
           </div>
     </div>
     <!-- Modified HTML code ends here -->
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CA: PMT Sbmt for Apprvl   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1171,12 +1171,19 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
         <style>
-            #Div1, #fkeys, #showDiagnostics, #footer {
+            #fkeys, #showDiagnostics, #footer {
                 display: none;
             }
 
             #main-content {
                 width: 100%;
+            }
+            .ro-data  {
+                display:none;
+            }
+            #CenPH__lb_RCDDTL1__lb_DOKTP {
+                position: static !important;
+                width: 20px !important;
             }
         </style>
         <script type="text/javascript">
@@ -1193,7 +1200,11 @@
                     "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DAPTX+CenPH__lb_RCDDTL1__lb_DBLTX": "cust-add3",
                     "CenPH__lb_RCDDTL1__lb_1GFVA": "cust-prod",
                     "CenPH__lb_RCDDTL1__lb_1G1VA": "cust-addon",
-                    "CenPH__lb_RCDDTL1__lb_1G3VA": "total-amount"
+                    "CenPH__lb_RCDDTL1__lb_1G3VA": "total-amount",
+                    "CenPH__lb_RCDDTL1__lb_DBJXT": "ssn",
+                    "CenPH__lb_RCDDTL1__lb_1AJCD": "ro-emp-name",
+                    "CenPH__lb_RCDDTL1__lb_1ALCO": "ro-promotion",
+                    "CenPH__lb_RCDDTL1__lb_DUJTX": "ro-note-to-grader"
                 },
                 "inputFields": {
                     "CenPH__lb_RCDDTL1__lb_1AJCD": "emp-name",
@@ -1214,7 +1225,34 @@
                 $('body').on('click', '#next', function (event) {
                     _00('Enter', event);
                 });
+
+                //Invoice propmt
+                $("#CenPH__lb_RCDDTL1__lb_DOKTP").attr("maxlength", "1");
+                $("#CenPH__lb_RCDDTL1__lb_DOKTP").appendTo("#invoice-here")
+                //handle confirm prompt
+                if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                    $(".editable-data").show();
+                    $(".ro-data").hide();
+                    $(".confirmation-outer-conatiner").hide();
+                    $(".OverlayPopupBackground").hide();
+                } else {
+                    $(".editable-data").hide();
+                    $(".ro-data").show();
+                    $(".confirmation-outer-conatiner").show();
+                    $(".OverlayPopupBackground").show();
+                }
                 
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
+                //Validations
+                $("#emp-name").ForceNumericOnly();
+                $("#CenPH__lb_RCDDTL1__lb_DOKTP").ForceYesOrNoOnly();
             });
         </script>
     </asp:Content>

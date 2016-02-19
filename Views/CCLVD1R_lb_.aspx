@@ -82,7 +82,7 @@
                         <div style="margin-right: 15px" class="mdl-cell mdl-cell--12-col">
                             <fieldset>
                                 <legend id="legend">Notes:</legend>
-                                <textarea id="CenPH_2AQNA" rows="5" cols="40" name="CenPH_2AQNA" style="padding: 5px 0px;" readonly=""></textarea>
+                                <textarea id="CenPH_2AQNA" rows="5" cols="40" name="CenPH_2AQNA" style="text-transform: lowercase;padding: 5px 0px;" readonly=""></textarea>
                             </fieldset>
                         </div>
                     </div>

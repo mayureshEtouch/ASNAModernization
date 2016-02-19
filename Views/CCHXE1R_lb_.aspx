@@ -1624,7 +1624,7 @@
 			float: left;
 			height: 100px;
 		}
-        .class="editable-data"  {
+        .ro-data  {
             display:none;
         }
     </style>
