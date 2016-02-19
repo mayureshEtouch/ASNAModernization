@@ -37,7 +37,7 @@ jQuery.fn.ForceNumericOnly =
 
 // Numeric with question mark
 jQuery.fn.ForceNumericWithQuestionMarkOnly =
-    function() {
+    function(maxlength, minlength) {
         return this.each(function() {
             $(this).keydown(function(e) {
                 if (e.shiftKey && e.which === 191) {
@@ -48,6 +48,9 @@ jQuery.fn.ForceNumericWithQuestionMarkOnly =
                 } else if (e.shiftKey) {
                     return false;
                 } else {
+                    if(maxlength && $(this).val().indexOf("?") === -1) {
+                        $(this).attr("maxlength", maxlength);
+                    }
                     var key = e.keyCode;
                     if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
                         return false;

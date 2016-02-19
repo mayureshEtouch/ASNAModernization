@@ -136,10 +136,10 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
                             <span id="CenPH_CBMVA" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
                             <span class="form-label">Expected Delivery Date:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col" id="exp-date-val">
                             <span class="form-text pull-right"></span>
                         </div>
                     </div>
@@ -1246,11 +1246,22 @@
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
+            if($("#CenPH__lb_SFLCTL_VCBQDT").length > 0) {
+                $("#exp-date-val").html($("#CenPH__lb_SFLCTL_V1AXDT").html());
+                $("#exp-date-label,#exp-date-val").show();
+            }
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                
+                $("#requestdate,#requestcal").hide();
+                $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
+                $("#reqdate").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
             } else {
+                //$("#exp-date-label,#exp-date-val").hide();
+                $("#reqdate").hide();
+                $("#requestdate,#requestcal").show();
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }

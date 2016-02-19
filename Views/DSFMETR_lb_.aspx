@@ -164,7 +164,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" disabled="disabled">
+                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -1674,11 +1674,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-	<style>
-	#datatableValueInsert tbody tr td:nth-child(11), #datatableValueInsert tbody tr td:nth-child(12), #datatableValueInsert tbody tr td:nth-child(13) {
-		text-align: right;
-	}
-	</style>
+    <style>
+    #datatableValueInsert tbody tr td:nth-child(11), #datatableValueInsert tbody tr td:nth-child(12), #datatableValueInsert tbody tr td:nth-child(13) {
+        text-align: right;
+    }
+    </style>
 	 <script type="text/javascript">
         function getCookie(cname) {
             var name = cname + "=";
@@ -1808,7 +1808,7 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					$(this).find("td:eq(2) input").ForceNumericWithQuestionMarkOnly();
+					$(this).find("td:eq(2) input").ForceNumericOnly();
                 });   
             }
         });
@@ -1850,8 +1850,9 @@
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text()); 
-					$(this).find("td:eq(2) input").ForceNumericWithQuestionMarkOnly();
+					$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
+                    $(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly(3, 1);
+					$(this).find("td:eq(2) input").ForceNumericOnly();
                 });
 			}
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table
@@ -1976,6 +1977,8 @@
 						$("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text(" ");
 						$("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text(" ")
 					});
+
+                    
         });
 		 $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
          $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
