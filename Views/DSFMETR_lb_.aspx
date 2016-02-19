@@ -159,12 +159,12 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="5" maxlength="20">
+                                                <input class="mdl-textfield__input" type="text" TabIndex="5" maxlength="20" >
                                               </div>
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled">
+                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled" maxlength="3">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -215,7 +215,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" disabled="disabled">
+                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled" maxlength="3">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -266,7 +266,7 @@
                                             </td>
                                             <td>
                                               <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" disabled="disabled">
+                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled" maxlength="3">
                                               </div>
                                             </td>
                                             <td><span></span></td>
@@ -1678,6 +1678,10 @@
     #datatableValueInsert tbody tr td:nth-child(11), #datatableValueInsert tbody tr td:nth-child(12), #datatableValueInsert tbody tr td:nth-child(13) {
         text-align: right;
     }
+	.order-detail-table-data .mdl-data-table td span {
+		display: inline-block;
+		padding-top: 3px;
+	}
     </style>
 	 <script type="text/javascript">
         function getCookie(cname) {
@@ -1783,6 +1787,32 @@
 				$("[id='CenPH__lb_SFLRCD__lb_2AACD."+targT+"']").trigger(inpe);
 		}
 		
+		
+		// Installation code field
+		
+		$('body').on('change keyup keydown', '.installation-codes', function (e) {
+                if (e.which != 115) {
+                    var keydnIndex= $(this).parents("tr").index();
+					var el = $(".installation-codes")[keydnIndex];
+					$("[id='CenPH__lb_SFLRCD__lb_2AECD."+$("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+                } else {
+                   var keydnIndex= $(this).parents("tr").index();
+					
+				    setTimeout(function(){dealycodeInst(keydnIndex);},1000);
+					return false;
+					}
+	
+            });
+		
+			
+		function dealycodeInst(targT){
+			 var inpe =jQuery.Event("keydown");
+				inpe.which = 13;
+				//var keydnIndex= $(this).parents("tr").index();
+				//index = targT.split(".")[1];
+				$("[id='CenPH__lb_SFLRCD__lb_2AECD."+targT+"']").val("?");
+				$("[id='CenPH__lb_SFLRCD__lb_2AECD."+targT+"']").trigger(inpe);
+		}
 
 		// ASNA Hidden UI Table  index. Used for reference
         var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
@@ -1849,10 +1879,11 @@
                     $(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(6) input").removeAttr("disabled");
-                    $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+					$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 					$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
                     $(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly(3, 1);
 					$(this).find("td:eq(2) input").ForceNumericOnly();
+					
                 });
 			}
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table

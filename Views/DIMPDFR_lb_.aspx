@@ -88,7 +88,7 @@
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
                                     <span class="summary-label">Email Address :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="email" class="mdl-textfield__input" disabled>
+                                        <input type="text" id="email" class="mdl-textfield__input" disabled >
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant7]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
 			
-			$("#email").val($("#CenPH__lb_SFLCTL__lb_2GVXT").html());
+			$("#email").val($("#CenPH__lb_SFLCTL__lb_2GVXT").html()).css("text-transform", "lowercase");
 
             $('body').on('click', '#customerName tbody tr', function () {
                 $("#customerName tbody tr:even").css("background-color", "#fff");

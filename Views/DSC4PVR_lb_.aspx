@@ -435,7 +435,7 @@
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").addClass("mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop");
             //Set email to original email text field
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").appendTo("#search-by-email");
-            $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input");
+            $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input").css("text-transform", "lowercase");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("minlength", "3");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("maxlength", "3");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
