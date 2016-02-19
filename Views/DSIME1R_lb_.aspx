@@ -258,7 +258,7 @@
         </main>
         <div id="modal" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-            <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+            <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
@@ -1159,9 +1159,7 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
     <style type="text/css" media="screen">
-      #Div1, #fkeys, #diagnostics, #footer, #message-container {
-          display: none;
-      }
+      
       #main-content {
           width: 100%;
           
@@ -1169,17 +1167,12 @@
       select{
         width: 70px;
       }
-      .OverlayPopupBackground {
-          opacity: 0.7;
-          display: none;
-          background: #000;
-          position: fixed;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
-          z-index: 2;
-      }
+    #wrapper {
+        width: 100% !important;
+    }
+    #__Page_PopUp {
+        min-width: 550px !important;
+    }
     </style>    
 <script type="text/javascript">
   $(document).ready(function() {

@@ -110,9 +110,9 @@
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
-                            <div class="icon-container">
-								<span class="icon-txt">Change</span><i class="material-icons md-15 md-light change-icon"></i>
-								<span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon"></i>
+                            <div class="icon-container icon-disable">
+								<span class="icon-txt change-customer">Change</span><i class="material-icons md-15 md-light change-icon change-customer change-icon-disabled"></i>
+								<span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon-disabled"></i>
 							</div>
                         </div>
                     </div>
@@ -715,6 +715,15 @@
                 } else {
                     var row = $("#customerName tbody tr.selected");
                     selectCusotmer(row, "5", event);
+                }
+            });
+            //Change customer details
+            $(".change-customer").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#customerName tbody tr.selected");
+                    selectCusotmer(row, "2", event);
                 }
             });
 

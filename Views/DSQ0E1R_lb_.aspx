@@ -108,7 +108,7 @@
         </div>
     <!--div id="modal" class="simplePopup"></div-->
      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-        <i class="material-icons md-15 md-light">help</i> <span class="confirmation-text">Do you want to continue</span>
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
         <div class="button-container">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
@@ -116,8 +116,8 @@
     </div>
     
         <style>
-        #fkeys, #Div1 {
-          display: none; 
+        #wrapper {
+            width: 100% !important;
         }
         
         #div-number-type, #div-add-edit-number, .modal-dialog-container1 {

@@ -116,10 +116,10 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--9-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses">Addresses</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit">audit</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId">tax id</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7">Addresses</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8">Notes</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit"  event-data="F9">audit</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId"  event-data="F10">tax id</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="display-submit">next</span>
@@ -826,9 +826,9 @@
                 $("#cus_on").html(on);
                 $("#cus_email").html(emailAddress);
             }
-			$("#taxId").on('click', function(event) {
+			/*$("#taxId").on('click', function(event) {
 				_00('F10',event);
-			});
+			});*/
 			$("#previous").on('click', function(event) {
 				_00('F12',event);
 			});
