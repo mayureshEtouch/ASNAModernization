@@ -119,7 +119,7 @@
         </main>
     </div>
     <!-- Modified HTML code ends here -->
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  IN: DSP Ref Mdl to SEL    Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

@@ -8,8 +8,7 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
@@ -88,7 +87,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Email:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="cust-email" name="cust-email" class="full-input">
+                                                                <input type="text" id="cust-email" style="text-transform: lowercase;" name="cust-email" class="full-input">
                                                                 </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
@@ -104,7 +103,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code">
+                                                                <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="5">
                                                                 &nbsp;&nbsp;Beaumont TX </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
@@ -112,7 +111,7 @@
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="work-phone" name="work-phone" class="mdl-cell--5-col">
                                                                 <span class="input-side-gutter-space form-label mdl-cell--7-col">Extension:
-                                                                <input type="text" id="extension" name="extension" class="extension">
+                                                                <input type="text" id="extension" name="extension" class="extension" maxlength="4">
                                                                 </span> </span>
                                     </div>
                                 </div>
@@ -195,7 +194,7 @@
     </div>
     <!-- Modified HTML code ends here -->
 </body>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CR: ER1 Customer/Maint(B) Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1098,6 +1097,8 @@
                 $('body').on('click', '#next', function(event) {
                     _00('Enter', event);
                 });
+                //Validations
+                $("#cust-zipcode,#extension").ForceNumericOnly();
             });
         </script>
     </asp:Content>

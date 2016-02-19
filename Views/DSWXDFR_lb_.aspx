@@ -92,9 +92,9 @@
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right" style="margin-bottom:0">
-                            <div class="icon-container icon-disable" style="margin-bottom:0">
-								<span class="icon-txt storage-model">Display inventory select</span><i class="storage-model material-icons md-15 md-light storage-icon-disabled"></i>
-								<span class="icon-txt sub-rpl-model">Sub/ Rpl Models</span><i class="sub-rpl-model material-icons md-15 md-light sync-icon-disabled"></i>
+                            <div class="icon-container" style="margin-bottom:0">
+								<span class="icon-txt storage-model">Display inventory select</span><i class="storage-model material-icons md-15 md-light storage-icon"></i>
+								<span class="icon-txt sub-rpl-model">Sub/ Rpl Models</span><i class="sub-rpl-model material-icons md-15 md-light sync-icon"></i>
 							</div>
                         </div>
                     </div>
