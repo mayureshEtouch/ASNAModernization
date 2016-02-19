@@ -1839,6 +1839,16 @@
                     $(this).find("td:eq(6) input").removeAttr("disabled");
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 					$(this).find("td:eq(2) input").ForceNumericOnly();
+					if($(this).find("td:eq(0) select").val()=="DL"){
+						$(this).find("td:eq(6) input").prop('disabled', false);
+						$(this).find("td:eq(6) div").removeClass("is-disabled");
+						$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				     }else 
+					 {       
+						$(this).find("td:eq(6) input").val("");  
+						$(this).find("td:eq(6) input").prop('disabled', true);
+						$(this).find("td:eq(6) div").addClass("is-disabled");
+					 }
                 });   
             }
         });
@@ -1860,7 +1870,18 @@
                     $("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").val($(this).find("td:eq(3) input").val());
                     $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val()); 
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
-                    $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
+                   // $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
+				   if($(this).find("td:eq(0) select").val()=="DL"){
+						$(this).find("td:eq(6) input").prop('disabled', false);
+						$(this).find("td:eq(6) div").removeClass("is-disabled");
+						$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				     }else 
+					 {       
+						$(this).find("td:eq(6) input").val("");  
+						$(this).find("td:eq(6) input").prop('disabled', true);
+						$(this).find("td:eq(6) div").addClass("is-disabled");
+					 }
+                    
 					//alert($("[id$='lb_SFLRCD__lb_2SEL.']").val() + "second");
 					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericWithQuestionMarkOnly();
                 });
@@ -1878,11 +1899,21 @@
                     $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
                     $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
-                    $(this).find("td:eq(6) input").removeAttr("disabled");
-					$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+                    
 					$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
                     $(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly(3, 1);
 					$(this).find("td:eq(2) input").ForceNumericOnly();
+					if($(this).find("td:eq(0) select").val()=="DL"){
+						$(this).find("td:eq(6) input").prop('disabled', false);
+						$(this).find("td:eq(6) div").removeClass("is-disabled");
+						$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				     }else 
+					 {       
+						$(this).find("td:eq(6) input").val("");  
+						$(this).find("td:eq(6) input").prop('disabled', true);
+						$(this).find("td:eq(6) div").addClass("is-disabled");
+					 }
+                    
 					
                 });
 			}
