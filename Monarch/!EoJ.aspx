@@ -2,7 +2,7 @@
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="HeaderPH">
     <style>
-        body { background-color: #006699; }
+        body { background-color: #fff; }
 
         #product-image      { margin-top: 25px; }
         #product-image img  { border: 1px solid white; display:block; margin:auto; }
@@ -10,11 +10,14 @@
         #instructions       { color: white; text-align:center; font-size: .5em; font-family: verdana; padding-bottom: 12px; }
         .links              { color: white;  font-size:0.8em; }
     </style>
+	<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
 </asp:Content>
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="AppBody">
-
-    <div style="text-align:center;">
+	<div style="text-align: center; margin-top: 15%;">
+		<img src="../../Themes/Current/Images/loading.gif" alt="" />
+	</div>
+    <div style="text-align:center; display: none;">
         <div id="product-image">
             <img src="../themes/current/images/Wings-152x152.png" alt="" />	
             <div id="thank-you">
@@ -37,6 +40,14 @@
             For production work you can either replace the contents of this display with your own text and images or you can redirect the user back to a main menu.
         </div>
     </div>
+	<script type="text/javascript">
+		function Redirect() {
+		   window.location="../SignOn.aspx/";
+		}
+		$( window ).load(function() {
+			setTimeout("Redirect();", 1000);
+		});
+      </script>
 </asp:Content>
     
     
