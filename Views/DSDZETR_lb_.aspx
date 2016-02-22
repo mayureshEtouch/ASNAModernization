@@ -181,6 +181,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <span class="form-label">Email:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--9-col">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield" id="employee-info">
+                                        <span id="span_email" class="DdsCharField_OutputOnly"></span>
+                                        <input type="hidden" id="emaiil" name="emaiil">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">

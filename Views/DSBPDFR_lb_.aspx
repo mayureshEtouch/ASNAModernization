@@ -618,6 +618,7 @@
                 $("#customerName tbody tr:even").css("background-color", "#fff");
                 $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
                 $(this).css({ "background-color": "#d8d8d8" });
+                $(this).addClass('clicked');
                 $("div.icon-container").removeClass("icon-disable");
 				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
 				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
@@ -727,6 +728,18 @@
                 }
             });
 
+            //Enter event
+            /*$("document").keypress(function(event){
+                console.log('event fired!!!');
+                event.preventDefault();
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13'){
+                    var row = $("#customerName tbody tr.clicked");
+                    if(row.length>0){
+                        selectCusotmer(row, "1", event);    
+                    }
+                }
+            });*/
             //Next button click handler
             $("#next").click(function (event) {
                 var row = $("#customerName tbody tr.selected");

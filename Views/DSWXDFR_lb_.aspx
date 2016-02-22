@@ -700,6 +700,8 @@
 				width: calc(46.6% - 0px);
 			}
 		}
+        table tbody tr td:nth-child(3) { text-align: right; }
+        
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -712,6 +714,7 @@
                 $("#CenPH__lb_SFLCTL__lb_2AXTX").val($("#number").val());
             });
             generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "submit-button"); // Table ID, Div ID to copy records from and ignore span
+
         });
 		$('body').on('click', '#previous', function (event) {
 			_00('F12',event);
