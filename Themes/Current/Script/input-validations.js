@@ -177,11 +177,11 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
             } else if (beforePrecisonWithPeriodRx.test($(this).val().replace(/\s/g, ""))) {
                 return true;
             } else if (regex.test($(this).val().replace(/\s/g, ""))) {
-                 return true;
+                return true;
             } else {
                 var inpValue = $(this).val();
                 var splitByPeriod = inpValue.split(".");
-                if(splitByPeriod[0].length > 5 || !(/^([0-9])$/.test(splitByPeriod[0]))) {
+                if (splitByPeriod[0].length > beforePrecision || !(/^([0-9])$/.test(splitByPeriod[0]))) {
                     splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
                     $(this).val(splitByPeriod.join("."));
                 } else {
@@ -190,6 +190,23 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
                 return;
             }
 
+        });
+    });
+}
+
+// Numeric with two decimal precisions
+jQuery.fn.validatePhone = function() {
+    return this.each(function() {
+        $(this).on("change keyup", function(e) {
+            var inpValue = $(this).val();
+            $(this).val(inpValue.replace(/([^0-9])/g, ""));
+            inpValue = $(this).val();
+            if (inpValue.length === 10) {
+                var p1 = inpValue.substr(0, 3);
+                var p2 = inpValue.substr(3, 3);
+                var p3 = inpValue.substr(6,4);
+                $(this).val(p1+"/"+p2+"-"+p3);
+            }
         });
     });
 }
