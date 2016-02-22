@@ -185,10 +185,8 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
                     splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
                     $(this).val(splitByPeriod.join("."));
                 } else {
-                    $(this).val($(this).val().substr(0, $(this).val().length - 1));
+                    $(this).val(inpValue.substr(0, inpValue.length - 1));
                 }
-                
-                //
                 return;
             }
 
