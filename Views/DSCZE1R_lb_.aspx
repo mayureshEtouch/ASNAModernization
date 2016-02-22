@@ -63,36 +63,36 @@
             <section class="form-data" style="margin-bottom:5px;">
                 <div class="form-data-wrapper" style="padding-bottom:0;">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                        <div class="mdl-cell mdl-cell--12-col">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--5-col">
                                     <span class="form-label" style="">Customer name:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--7-col">
                                     <span class="form-text" id="cust-name">SST, SANTOSH G</span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                    <span class="form-label" style="margin: 7px 10px 0 0">Tax ID:</span>
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label" >Tax ID:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--7-col">
                                     <span class="form-text" id="tax-id"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--5-col" >
                                     <span class="form-label">Last changed by user:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--7-col" >
                                     <span class="form-text" id="last-changed-by"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--5-col" >
                                     <span class="form-label">Date last changed:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--7-col">
                                     <span class="form-text" id="last-changed-date"></span>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop pull-left" style="margin-left: 9px;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop pull-left" >
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                 </span>
                             </div>

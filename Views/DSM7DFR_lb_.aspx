@@ -33,9 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSM7DFR</span>
-                        <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span> 
-						<i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSM7DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span> 
+						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -120,7 +120,14 @@
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
-                            <div class="icon-container"><span class="icon-txt model-reverse">Reserve</span><i class="material-icons md-15 md-light model-reverse">assignment_turned_in</i><span class="icon-txt model-transfer">Transfers</span><i class="material-icons md-15 md-light  model-transfer">local_shipping</i><span class="icon-txt model-orders">Orders</span><i class="material-icons md-15 md-light model-orders">shopping_cart</i></div>
+                            <div class="icon-container">
+								<span class="icon-txt model-reverse">Reserve</span>
+								<i class="material-icons md-15 md-light model-reverse reserve-icon"></i>
+								<span class="icon-txt model-transfer">Transfers</span>
+								<i class="material-icons md-15 md-light  model-transfer transfers-icon"></i>
+								<span class="icon-txt model-orders">Orders</span>
+								<i class="material-icons md-15 md-light model-orders orders-icon"></i>
+							</div>
                         </div>
                     </div>
                 </div>

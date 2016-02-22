@@ -1070,6 +1070,7 @@ textarea {
 }
 .close {
 	background: url(../Images/icons/ic_close_white_24dp_1x.png) no-repeat;
+	margin-right: 8px;
 }
 .delete-icon-disabled {
 	background: url(../Images/icons/ic_delete_black_24dp_1x-disable.png) no-repeat;
@@ -1089,8 +1090,24 @@ textarea {
 .sync-icon {
 	background: url(../Images/icons/ic_sync_black_24dp_1x.png) no-repeat;
 }
-
-
+.reserve-icon {
+	background: url(../Images/icons/ic_assignment_turned_in_black_24dp_1x.png) no-repeat;
+}
+.reserve-icon-disabled {
+	background: url(../Images/icons/ic_assignment_turned_in_black_24dp_1x-disable.png) no-repeat;
+}
+.transfers-icon {
+	background: url(../Images/icons/ic_local_shipping_black_24dp_1x.png) no-repeat;
+}
+.transfers-icon-disabled {
+	background: url(../Images/icons/ic_local_shipping_black_24dp_1x-disable.png) no-repeat;
+}
+.orders-icon {
+	background: url(../Images/icons/ic_shopping_cart_black_24dp_1x.png) no-repeat;
+}
+.orders-icon-disabled {
+	background: url(../Images/icons/ic_shopping_cart_black_24dp_1x-disable.png) no-repeat;
+}
 
 
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
