@@ -1749,7 +1749,7 @@
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val(date[2] + "-" + date[0] + "-" + date[1]);
             });
             //Add validation rules
-            $("#cust-ssn,#sp-ssn").validateSSN();//123-45-6789
+            //$("#cust-ssn,#sp-ssn").validateSSN();//123-45-6789
             $("#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code").ForceNumericOnly();
             $("#payment-of").numericWithCustomDecimalPrecisions(5,2);//123.45, 12345.00, 1.32
             $("#no-of-years,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32

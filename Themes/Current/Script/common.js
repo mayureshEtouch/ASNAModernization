@@ -211,12 +211,19 @@ function copyData(fields, events) {
         var outvalues = "";
         if (combineFromAll.length > 1) {
             for (var i = 0; i < combineFromAll.length; i++) {
-                outvalues += $("#" + combineFromAll[i]).html() + "&nbsp;";
+                outvalues += $("#" + combineFromAll[i]).html().replace(/&nbsp;/g, "") + "&nbsp;";
             }
         } else {
-            outvalues += $("#" + ele).html();
+            if(ele.indexOf("&nbsp;") !== -1) {
+                var id = ele.replace(/&nbsp;/g, "");
+                outvalues += $("#" + id).html().replace(/&nbsp;/g, "");
+                outvalues += "&nbsp;";
+            } else {
+                outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+            }
+            
         }
-        $("#" + dispOnlyFields[ele]).html(outvalues.replace(/&nbsp;/g, ""));
+        $("#" + dispOnlyFields[ele]).html(outvalues);
     }
     for (var ele in inputFields) {
         if ($("#" + ele).length > 0) {
