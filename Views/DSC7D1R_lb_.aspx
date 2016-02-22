@@ -134,7 +134,7 @@
         </main>
         <div id="modal" class="simplePopup"></div>
     </div>
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  CU: DR1 Customer          Display record(1 screen)                                                               --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -826,12 +826,22 @@
                 $("#cus_on").html(on);
                 $("#cus_email").html(emailAddress);
             }
-			/*$("#taxId").on('click', function(event) {
-				_00('F10',event);
-			});*/
-			$("#previous").on('click', function(event) {
-				_00('F12',event);
+            $("#addresses").on('click', function(event) {
+                _00('F7',event);
+            });
+			$("#notes").on('click', function(event) {
+				_00('F8',event);
 			});
+			$("#audit").on('click', function(event) {
+				_00('F9',event);
+			});
+            
+            $("#taxId").on('click', function(event) {
+                _00('F10',event);
+            });
+            $("#previous").on('click', function(event) {
+                _00('F12',event);
+            });
         });
     </script>
 </asp:Content>
