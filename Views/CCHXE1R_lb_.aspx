@@ -102,7 +102,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                         <span class="form-label clm-form-label">License #:</span>
-                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first"><span id="ro-cust-lic-first" class="ro-data">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second"><span id="ro-cust-lic-second" class="ro-data"></span></span>
+                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2"><span id="ro-cust-lic-first" class="ro-data">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="20"><span id="ro-cust-lic-second" class="ro-data"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
-                                        <span class="form-text"><input class="editable-data" type="text" id="cust-ssn" size="15"><span class="ro-data" id="ro-cust-ssn"></span></span>
+                                        <span class="form-text"><input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="11"><span class="ro-data" id="ro-cust-ssn" ></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
 											<span class="form-label">For</span>&nbsp;&nbsp;
 											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
 											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
-											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
+											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="10"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
 											<span class="form-label">Monthly</span>
 										</span>
                                     </div>
@@ -162,7 +162,7 @@
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">Dependents:</span>
 										<span class="form-text">
-											<input class="editable-data" id="cust-dependents" type="text" size="5">
+											<input class="editable-data" id="cust-dependents" type="text" size="5" maxlength="2">
 											<span class="ro-data" id="ro-cust-dependents"></span>
 										</span>
                                     </div>
@@ -1748,6 +1748,10 @@
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val(date[2] + "-" + date[0] + "-" + date[1]);
             });
+            //Add validation rules
+            $("#cust-ssn").validateSSN();
+            $("#cust-dependents").ForceNumericOnly();
+            $("#payment-of").numericWithCustomDecimalPrecisions(5,2);
         });
     </script>
 </asp:Content>

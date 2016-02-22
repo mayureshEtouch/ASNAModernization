@@ -1,14 +1,18 @@
 ﻿function validateInput(ele, buttonsToDisable, errorMessagePlaceholder) {
     var element = $(ele);
     if (!element.valid()) {
-        element.css({ "border": "solid 1px #ff0000" });
+        element.css({
+            "border": "solid 1px #ff0000"
+        });
         if (buttonsToDisable && buttonsToDisable.length > 0) {
             for (var i = 0; i < buttonsToDisable.length; i++) {
                 $("#" + buttonsToDisable[i]).attr("disabled", "true");
             }
         }
     } else {
-        element.css({ "border": "solid 1px #e5e5e5" });
+        element.css({
+            "border": "solid 1px #e5e5e5"
+        });
         $("#" + errorMessagePlaceholder).hide();
         if (buttonsToDisable && buttonsToDisable.length > 0) {
             for (var i = 0; i < buttonsToDisable.length; i++) {
@@ -60,16 +64,6 @@ jQuery.fn.ForceNumericWithQuestionMarkOnly =
             });
         });
     };
-
-// Numeric for Amount
-function validateAmount(data) {
-    var regex = /^([0-9]*(|\.[0-9]{0,2}))$/;
-    if (!regex.test(data)) {
-        return false;
-        //if(theEvent.preventDefault) theEvent.preventDefault();
-    }
-    return true;
-}
 
 // Numeric with two decimal precisions
 jQuery.fn.numericWithTwoDecimalPrecisions = function() {
@@ -135,4 +129,69 @@ function onlyAlphabets(e, t) {
     } catch (err) {
         alert(err.Description);
     }
+}
+
+
+//SSN validation
+jQuery.fn.validateSSN = function() {
+    return this.each(function() {
+        $(this).on("change keyup", function(e) {
+            var keyCode = e.which || e.keycode;
+            if ((e.ctrlKey || e.metaKey) && keyCode === 86) {
+                if (/^(([0-9]{3})(\-[0-9]{2})(\-[0-9]{1,4}))$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else {
+                    $(this).val("");
+                    return false;
+                }
+            }
+
+            if (/^([0-9]{1,3})$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (/^(([0-9]{3})(\-))$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (/^(([0-9]{3})(\-[0-9]{1,2}))$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (/^(([0-9]{3})(\-[0-9]{2})(\-))$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (/^(([0-9]{3})(\-[0-9]{2})(\-[0-9]{1,4}))$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else {
+                $(this).val($(this).val().substr(0, $(this).val().length - 1));
+                return;
+            }
+
+        });
+    });
+}
+
+// Numeric with two decimal precisions
+jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPrecision) {
+    var beforePrecisonRx = new RegExp("^([0-9]{1," + beforePrecision + "})$");
+    var beforePrecisonWithPeriodRx = new RegExp("^([0-9]{1," + beforePrecision + "})(\\.)?$");
+    var regex = new RegExp("^([0-9]{1," + beforePrecision + "})(\\.[0-9]{1," + afterPrecision + "})?$");
+    return this.each(function() {
+        $(this).on("change keyup", function(e) {
+            if (beforePrecisonRx.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (beforePrecisonWithPeriodRx.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (regex.test($(this).val().replace(/\s/g, ""))) {
+                 return true;
+            } else {
+                var inpValue = $(this).val();
+                var splitByPeriod = inpValue.split(".");
+                if(splitByPeriod[0].length > 5 || !(/^([0-9])$/.test(splitByPeriod[0]))) {
+                    splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
+                    $(this).val(splitByPeriod.join("."));
+                } else {
+                    $(this).val($(this).val().substr(0, $(this).val().length - 1));
+                }
+                
+                //
+                return;
+            }
+
+        });
+    });
 }
