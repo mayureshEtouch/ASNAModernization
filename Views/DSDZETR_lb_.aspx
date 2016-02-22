@@ -17,7 +17,7 @@
             PixelPerCharWidth="8"
             PixelPerCharHeight="24" />
 
-    </div>
+        </div>
 </asp:Content>
 
 
@@ -33,9 +33,9 @@
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSDZETR</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSDZETR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
-						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -137,7 +137,7 @@
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 190px; padding: 0 2px;">
-											<option selected="selected" value=" ">Please select</option>
+                                            <option selected="selected" value=" ">Please select</option>
                                             <option value="H">H - Held Delivery</option>
                                             <option value="L">L - Layaway</option>
                                             <option value="N">N - Non-Partial Delivery</option>
@@ -156,7 +156,7 @@
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <input type="text" id="requestdate" name="date">
-										<i id="reqesdate" class="material-icons calender-icon page-icons"></i>
+                                        <i id="reqesdate" class="material-icons calender-icon page-icons"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </span>
                                 </div>
@@ -1124,18 +1124,6 @@
         $(document).ready(function () {
             //Hide all read only mode elements
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
-            // Add dynamic height to form
-            //$("#form1").height($('body').height() + $('.copyright').height());
-            //$(window).resize(function () {
-            //    $("#form1").height($('body').height() + $('.copyright').height());
-            //});
-            // Set date and time
-            $("[name='date']").text($("[id$=CenPH_DdsConstant16]").text());
-            $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
-            // Set order and version number
-            var orderNo = $('#CenPH__lb_SFLCTL__lb_1BANB').html().replace("&nbsp;&nbsp;&nbsp;", "") +
-                            "&nbsp;/&nbsp;" + $("#CenPH__lb_SFLCTL__lb_1EXNB").html().replace("&nbsp;&nbsp;", "");
-            $('#CenPH_1BANB').html(orderNo);
             // Set customer name
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             //Set billing address
@@ -1148,14 +1136,7 @@
             $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html());
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
-            //$("#CenPH_1AJCD").val($("#CenPH__lb_SFLCTL__lb_1AJCD").val());
-
-            // Mimic ?(prompt) functionality
-            //$("#CenPH_1AJCD").on("keyup change", function () {
-            //    $("#CenPH__lb_SFLCTL__lb_1AJCD").val($("#CenPH_1AJCD").val());
-            //});
             $('body').on('click', '.emp-code', function (event) {
-                console.log(this);
                 _00('Enter', event);
             });
             $("#CenPH_1A0TX").text($("#CenPH__lb_SFLCTL__lb_1A0TX").text());
@@ -1211,41 +1192,60 @@
                 $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
                 $("#expectedDate").html($("#CenPH__lb_SFLCTL_V1AXDT").text());
             }
-            //Special instructions section 
+            //Special instructions section
+            
             function generateSpecialInstructionsSection() {
+                //Create copyToAndFrom JSON object for special instructions
+                var copyToAndFrom = {
+                    "displayOnlyFields": {},
+                    "inputFields": {}
+                }
                 $("#special-instructions").empty();
-                $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                        $($(this).children()).addClass("sp-inst");
-                        //$($(this).children()).css({"display": "block !important"});
-                        $($(this).children()).removeClass("DdsCharField");
-                        $($(this).children()[0]).appendTo($("#special-instructions"));
+                var allInputFields = ($('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input').length ?
+                    $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input') : 
+                    $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span:not(:last)'));
+                for(var i = 0; i < allInputFields.length; i++) {
+                    var splInsNewField = '<input type="text" id="special-instructions' + i + '" class="sp-inst editable-data">';
+                    var splInsRONewField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style="display:none;"></span>';
+                    var oldInpId = $(allInputFields[i]).attr("id");
+                    var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];
+                    if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                        $("#special-instructions").append(splInsRONewField);
+                    } else {
+                        $("#special-instructions").append(splInsNewField);
                     }
-                });
+                    
+                    
+                    copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
+                    copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
+                }
+                copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                 $("#special-instructions").prepend('<legend id="legen">Special Instruction:</legend>');
             }
-            generateSpecialInstructionsSection();
+            
             $('body').on('keyup', function (event) {
                 var keycode = event.keyCode || event.which;
                 if (keycode === 33) {
                     _00("PgUp", event);
-                    generateSpecialInstructionsSection();
+                    setTimeout(generateSpecialInstructionsSection, 1000);
                 } else if (keycode === 34) {
                     _00("PgDn", event);
-                    generateSpecialInstructionsSection();
+                    setTimeout(generateSpecialInstructionsSection, 1000);
                 }
                 return;
             });
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 setReadOnlyView();
-                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").hide();
-                $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").show();
+                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").hide();
+                $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode,.ro-data").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+                generateSpecialInstructionsSection();
             } else {
                 $(".confirmation-outer-conatiner").hide();
                 $(".OverlayPopupBackground").hide();
+                generateSpecialInstructionsSection();
             }
             $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
@@ -1253,8 +1253,8 @@
             });
             $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-                $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
-                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons").show();
+                $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode,.ro-data").hide();
+                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").show();
                 _00('Enter', event);
             });
 

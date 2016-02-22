@@ -256,7 +256,7 @@
                 </div>
             </section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+        <div id="modal1" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">

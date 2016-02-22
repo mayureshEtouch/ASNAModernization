@@ -22,7 +22,116 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+      <div class="OverlayPopupBackground"></div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Edit Tax Exempt ID</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSCZE1R</span>
+                        <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="form-data" style="margin-bottom:5px;">
+                <div class="form-data-wrapper" style="padding-bottom:0;">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <span class="form-label" style="">Customer name:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <span class="form-text" id="cust-name">SST, SANTOSH G</span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <span class="form-label" style="margin: 7px 10px 0 0">Tax ID:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <span class="form-text" id="tax-id"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <span class="form-label">Last changed by user:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <span class="form-text" id="last-changed-by"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <span class="form-label">Date last changed:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <span class="form-text" id="last-changed-date"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop pull-left" style="margin-left: 9px;">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-desktop pull-left">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit To Menu<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-desktop pull-left" style="margin-left: 9px;">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="delete" data-upgraded=",MaterialButton,MaterialRipple" style="margin-left: -72px;">Delete<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell--8-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
+          <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+          <div class="button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+          </div>
+      </div>
+    </div>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CU: ER1 Tax Exempt        Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -566,4 +675,68 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+        #fkeys, #showDiagnostics, #footer,#message-container {
+            display: none;
+        }
+
+        #main-content {
+            width: 100%;
+        }
+        #CenPH__lb_RCDDTL1__lb_1AMTX {
+          position:static !important;
+        }
+    </style>
+    <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH__lb_RCDDTL1__lb_1ALTX": "cust-name",
+                "CenPH__lb_RCDDTL1__lb_1AAVN": "last-changed-by",
+                "CenPH__lb_RCDDTL1_V1AGDT": "last-changed-date"
+            },
+            "inputFields": {
+            }
+        }
+        $(document).ready(function() {
+            
+            //Set date and time
+            $("[name='date']").text($("[id$=CenPH_DdsConstant11]").text());
+            $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
+            
+            $('body').on('click', '#previous', function(event) {
+                _00('F12', event);
+            });
+            $('body').on('click', '#exit', function(event) {
+                _00('F3', event);
+            });
+            $('body').on('click', '#delete', function(event) {
+                _00('F11', event);
+            });
+            $('body').on('click', '#next', function(event) {
+                _00('Enter', event);
+            });
+            
+            copyData(copyToAndFrom, "");
+            $("#CenPH__lb_RCDDTL1__lb_1AMTX").css("text-transform", "lowercase");
+            $("#CenPH__lb_RCDDTL1__lb_1AMTX").appendTo("#tax-id");
+            if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+              $(".confirmation-outer-conatiner").hide();
+              $(".OverlayPopupBackground").hide();
+              //Set page details
+            } else {
+              $(".confirmation-outer-conatiner").show();
+              $(".OverlayPopupBackground").show();
+            }
+            
+            $("#yes").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
+            });
+            $("#no").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                _00('Enter', event);
+            });
+        });
+    </script>
+
     </asp:Content>

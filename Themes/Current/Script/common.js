@@ -209,7 +209,7 @@ function copyData(fields, events) {
     for (var ele in dispOnlyFields) {
         var combineFromAll = ele.split("+");
         var outvalues = "";
-        if (combineFromAll.length > 0) {
+        if (combineFromAll.length > 1) {
             for (var i = 0; i < combineFromAll.length; i++) {
                 outvalues += $("#" + combineFromAll[i]).html() + "&nbsp;";
             }
