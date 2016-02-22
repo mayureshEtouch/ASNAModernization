@@ -98,11 +98,9 @@
                     </div>
                     <div class="button-container" style="padding:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                            <div class="mdl-cell mdl-cell--2-col" style="padding-bottom:0">
+                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--6-col pull-left" style="padding-bottom:0;">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" style="margin-left: 20px;">Display Transaction</span>
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
@@ -112,7 +110,7 @@
                 </div>
             </section>
         </main>
-        <div id="modal1" class="simplePopup" style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
+        <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         </div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
@@ -673,7 +671,8 @@
             }
 
             #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 0;
+                height: 0 !important;
+				width: 0 !important;
             }
             .modal-dialog-container {
                 width: 100%;

@@ -54,14 +54,14 @@
             <section class="form-data">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0;margin:0;">
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" >
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin:0;">
+                                <div class="mdl-cell mdl-cell--6-col">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--5-col" >
                                             <span class="form-label">Customer:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--7-col">
                                             <span class="form-text">
                                                 <span id="cust-name">SST, SANTOSH G</span>
                                             <br/>
@@ -72,20 +72,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col" style="padding:0">
+                                <div class="mdl-cell mdl-cell--6-col">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--6-col">
                                             <span class="form-label">Home Phone:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--6-col" >
                                             <span class="form-text" id="cust-home-phone1">652/332-5623</span>
                                         </div>
                                     </div>
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--6-col">
                                             <span class="form-label">Office Phone:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--6-col">
                                             <span class="form-text" id="cust-office-phone1">652/332-5623</span>
                                         </div>
                                     </div>
@@ -102,14 +102,14 @@
                         </div>
                     </div>
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0;margin:0;">
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell-brd">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin:0;">
+                                <div class="mdl-cell mdl-cell--6-col" >
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--5-col" >
                                             <span class="form-label">Customer:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--7-col">
                                             <span class="form-text">
                                                 <span id="cust-name-12">SST, SANTOSH G</span>
                                             <br/>
@@ -120,20 +120,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col" style="padding:0">
+                                <div class="mdl-cell mdl-cell--6-col" >
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--6-col" >
                                             <span class="form-label">Home Phone:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--4-col" >
                                             <span class="form-text" id="cust-home-phone2">652/332-5623</span>
                                         </div>
                                     </div>
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--6-col">
                                             <span class="form-label">Office Phone:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--4-col" >
                                             <span class="form-text" id="cust-office-phone2">652/332-5623</span>
                                         </div>
                                     </div>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="button-container" style="padding-bottom:0;">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:5px;">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop" >
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">previous</span>
                             </div>
                         </div>
@@ -848,16 +848,16 @@
                 "displayOnlyFields": {
                     "CenPH__lb_RCDDTL1__lb_1ALTX": "cust-name",
                     "CenPH__lb_RCDDTL1__lb_DBNTX": "cust-add1",
-                    "CenPH__lb_RCDDTL1__lb_DAPTX": "cust-zip",
-                    "CenPH__lb_RCDDTL1__lb_DBPTX": "cust-add2",
-                    "CenPH__lb_RCDDTL1__lb_DBMTX": "cust-add3",
+                    "CenPH__lb_RCDDTL1__lb_DAPTX&nbsp;": "cust-zip",
+                    "CenPH__lb_RCDDTL1__lb_DBPTX&nbsp;": "cust-add2",
+                    "CenPH__lb_RCDDTL1__lb_DBMTX&nbsp;": "cust-add3",
                     "CenPH__lb_RCDDTL1__lb_DD1NB": "cust-home-phone1",
                     "CenPH__lb_RCDDTL1__lb_DD2NB": "cust-office-phone1",
                     "CenPH__lb_RCDDTL1__lb_DWZTX": "cust-name-12",
                     "CenPH__lb_RCDDTL1__lb_DANTX": "cust-add12",
-                    "CenPH__lb_RCDDTL1__lb_DC0XT": "cust-zip2",
-                    "CenPH__lb_RCDDTL1__lb_DAQTX": "cust-add22",
-                    "CenPH__lb_RCDDTL1__lb_DW6TX": "cust-add32",
+                    "CenPH__lb_RCDDTL1__lb_DC0XT&nbsp;": "cust-zip2",
+                    "CenPH__lb_RCDDTL1__lb_DAQTX&nbsp;": "cust-add22",
+                    "CenPH__lb_RCDDTL1__lb_DW6TX&nbsp;": "cust-add32",
                     "CenPH__lb_RCDDTL1__lb_DPPNB": "cust-home-phone2",
                     "CenPH__lb_RCDDTL1__lb_DPQNB": "cust-office-phone2",
                 },
