@@ -1236,17 +1236,21 @@
                     copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
                     copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
                 }
+                console.log('copyToAndFrom is ');
+                console.log(copyToAndFrom);
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                 $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
             }
             
-            $('body').on('keyup', function (event) {
+            $('body').on('keydown', function (event) {
                 var keycode = event.keyCode || event.which;
                 if (keycode === 33) {
-                    _00("PgUp", event);
+                    /* Please note that the same event is being invoked in common.js hence have to comment it out*/
+                    //_00("PgUp", event);
                     setTimeout(generateSpecialInstructionsSection, 1000);
                 } else if (keycode === 34) {
-                    _00("PgDn", event);
+                    /* Please note that the same event is being invoked in common.js hence have to comment it out*/
+                    //_00("PgDn", event);
                     setTimeout(generateSpecialInstructionsSection, 1000);
                 }
                 return;
