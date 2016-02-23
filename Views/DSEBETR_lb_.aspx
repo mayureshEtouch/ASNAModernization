@@ -192,7 +192,7 @@
         </main>
         <div id="modal1" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-            <i class="material-icons md-15 md-light">help</i>
+            <i class="material-icons md-15 md-light help-icon"></i>
             <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
@@ -1169,7 +1169,7 @@
             $("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html().replace(/&nbsp;/g, ""));
             $("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html().replace(/&nbsp;/g, ""));
             $("[name='username']").text($("[id$=CenPH__lb_SFLCTL__lb_1ALTX]").text());
-            $("#CenPH_CEFVA").text($("[id$=CenPH__lb_SFLCTL__lb_CEFVA]").text());
+            $("#CenPH_CEFVA").text($("[id$=CenPH__lb_SFLCTL__lb_CEFVA]").text().replace(/&nbsp;/g, ""));
             $("#CenPH_CBMVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBMVA]").text());
             $("#CenPH_1ANPR").text($("[id$=CenPH__lb_SFLCTL__lb_1ANPR]").text());
             $("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text());
@@ -1221,7 +1221,9 @@
                         count++;
                     }
                 });
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
+				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly(); 
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");
