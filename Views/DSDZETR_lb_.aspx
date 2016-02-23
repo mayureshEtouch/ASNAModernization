@@ -155,7 +155,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="requestdate" name="date">
+                                        <input type="text" id="requestdate" name="date" readonly="true">
                                         <i id="reqesdate" class="material-icons calender-icon page-icons"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </span>
@@ -1137,8 +1137,12 @@
         $(document).ready(function () {
             //Hide all read only mode elements
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
+            //set date and time
+            setDateTime("CenPH_DdsConstant16", "CenPH__lb_SFLCTL__lb__lb_TME");
             // Set customer name
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
+            // Set order number
+            $("#CenPH_1BANB").html($("#CenPH__lb_SFLCTL__lb_1BANB").html().replace(/&nbsp;/g, ""));
             //Set billing address
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
             $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html());
@@ -1233,7 +1237,7 @@
                     copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
                 }
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-                $("#special-instructions").prepend('<legend id="legen">Special Instruction:</legend>');
+                $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
             }
             
             $('body').on('keyup', function (event) {
@@ -1290,6 +1294,7 @@
                 }
             });
             $("#CenPH__lb_SFLCTL__lb_1AJCD").ForceNumericWithQuestionMarkOnly();
+            $("#CenPH_PANTX").append("&nbsp;");
         });
     </script>
 </asp:Content>
