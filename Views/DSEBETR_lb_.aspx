@@ -1174,7 +1174,8 @@
             $("#CenPH_1ANPR").text($("[id$=CenPH__lb_SFLCTL__lb_1ANPR]").text());
             $("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text());
             $("#CenPH_V1ACPC").text($("[id$=CenPH__lb_SFLCTL_V1ACPC]").text());
-            $("#CenPH_CBLVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text());
+            //$("#CenPH_CBLVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text());
+			$("#CenPH_CBLVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text() == .00 ? "0.00" : $("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text());
             $("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text());
 
             //Generate table
