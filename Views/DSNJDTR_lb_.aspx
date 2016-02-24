@@ -198,10 +198,10 @@
       &nbsp;
       </section>
         </main>
-        <section class="copyright">
-            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
-        </section>
-        <br/><br/>
+<!--         <section class="copyright">
+    <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+</section>
+<br/><br/> -->
     </div>
     <div id="modal" class="simplePopup"></div>
     
