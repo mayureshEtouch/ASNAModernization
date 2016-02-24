@@ -136,7 +136,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 190px; padding: 0 2px;">
+                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 174px; padding: 0 2px;">
                                             <option selected="selected" value=" ">Please select</option>
                                             <option value="H">H - Held Delivery</option>
                                             <option value="L">L - Layaway</option>

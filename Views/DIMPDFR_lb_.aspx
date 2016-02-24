@@ -508,6 +508,11 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
+	<style>
+		#customerName tbody > tr:hover {
+			cursor: pointer;
+		}
+	</style>
     <script type="text/javascript">
         $(document).ready(function () {
             window.DSBPDFR = window.DSBPDFR || {}
