@@ -622,6 +622,12 @@
                 $("div.icon-container").removeClass("icon-disable");
 				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
 				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
+                /*Setting selected row which will be useful while hitting enter button*/
+                var row = $("#customerName tbody tr.clicked");
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(1);
+                /*Setting selected row*/
             });
 
             // Search by Customer data table record mapping

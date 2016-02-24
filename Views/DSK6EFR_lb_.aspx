@@ -812,7 +812,7 @@
             });
             function dealycode(targT) {
                 var inpe = jQuery.Event("keydown");
-                inpe.which = 13;
+                inpe.which = 115;
                 index = targT.split(".")[1];
                 $("#CenPH__lb_SFLRCD_" + index).find("input").val("?");
                 $("#CenPH__lb_SFLRCD_" + index).find("input").trigger(inpe);
@@ -831,18 +831,18 @@
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
             } else {
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
-            $("#yes").click(function (event) {
-                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-                _00('Enter', event);
-            });
-            $("#no").click(function (event) {
-                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-                _00('Enter', event);
-            });
         }); // document ready end
         $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>
