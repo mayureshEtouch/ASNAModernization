@@ -1697,10 +1697,11 @@
         
         // Fill up default data from ASNA Hidden UI FORM
         $("[name='username']").text($("[id$=lb_SFLCTL__lb_1ALTX]").text());
-        var order_part_2 = $("[id$=__lb_SFLCTL__lb_1EXNB]").html() || "";
-        order_part_2 = order_part_2.replace(/&nbsp;/g, "");
-        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").html().replace(/&nbsp;/g, "")+ " "+$("[id$=_DdsConstant20]").html() +" "+order_part_2);
-
+		
+         $("[name='order']").html("");     
+          if($("[id$=__lb_SFLCTL__lb_1EXNB]").html()!=undefined){
+        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").html()+ " "+$("[id$=_DdsConstant20]").html() +" "+$("[id$=__lb_SFLCTL__lb_1EXNB]").html());
+        }
         $("[name='treminal']").text($("[id$=lb_SFLCTL__lb__lb_JOB]").text());
 
         $("[name='date']").text($("[id$=_DdsConstant16]").text());
@@ -1816,24 +1817,22 @@
 		}
 
 		// ASNA Hidden UI Table  index. Used for reference
-        var tindexDiv = $("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id") || "";
-        var tindex = parseInt(tindexDiv.split("T.")[1]);
-        
+       // var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+       	 var tindex=0;
+   if($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id")!=undefined){
+         tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+   }
         
         // We added this function over here.
         // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
         $(document).keyup(function(e){
 		 // ASNA Hidden UI Table  index. Used for reference
-         //var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-         var tindexDiv = $("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id") || "";
-         var tindex = parseInt(tindexDiv.split("T.")[1]);
+        tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+	
             if(e.which== 33 || e.which== 34 ){
 			
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
-				//console.log("up" + e.which + $(this).parents("table").attr("id") + " " + tindex );
-
-                //console.log($("#lb_SFLRCD__lb_2AIST."+(i + tindex)).val());
-                console.log($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val());
+				console.log("up" + e.which + $(this).parents("table").attr("id") + " " + tindex );
                     $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
                     $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
                     $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
@@ -1871,17 +1870,7 @@
             $("#datatableValueInsert").show();
             // Update any data added to New Edit UI Table to ASNA Hidden UI Table
             $("input, select").change(function(){
-                
-                if($(this).is('select')){
-                    var mytindexDiv = $("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id") || "";
-                    var mytindex = parseInt(mytindexDiv.split("T.")[1]);
-                    //var mytindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-                    var rowIndex = ($(this).parent("td").parent("tr").index());
-                    var value = $(this).val();
-                    $("[id$='CenPH__lb_SFLRCD__lb_2AIST."+(rowIndex+mytindex)+"']").val(value);
-                }
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
-               
                     $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
                     $("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
                     $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
@@ -1940,7 +1929,7 @@
 
             
         } 
-        else if ($(".DdsSflMsgField_OutputOnly").length == 0) {
+        else {
             // if Current stateof page is Review /Confirm
             // Hide New Edit UI Table
             $("#datatableValueInsert").hide();
@@ -1983,7 +1972,7 @@
 			}); 
 			
 			$(document).keyup(function(e){
-                    if( e.which== 33){
+                    if( e.which== 33){S
                         $("#datatableValueInsert").show();
                         $("#datatableValue").hide();
                         var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
@@ -2063,16 +2052,6 @@
         });
 		 $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
          $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
-		//$(".del-status").change(function(el){
-            /*var keydnIndex= $(this).parents("tr").index();*/
-            /*var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-            console.log(tindex);
-                var value = $(this).val();
-                $(this).find('option').each(function( i, opt ) {
-                    if( opt.value === value ) 
-                        $(opt).attr('selected', 'selected');
-                });
-            
-        })*/
+		
     </script>  
     </asp:Content>

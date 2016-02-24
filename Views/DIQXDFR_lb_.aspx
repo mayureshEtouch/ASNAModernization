@@ -88,7 +88,7 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 20px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container" style="overflow: auto;">
+                        <div class="fixed-table-container-inner">
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="x-ref-items">
                                 <thead>
                                     <tr>
