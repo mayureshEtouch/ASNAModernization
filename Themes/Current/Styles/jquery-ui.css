@@ -936,15 +936,16 @@ body .ui-tooltip {
 .ui-widget-header .ui-icon {
 	background-image: url(images/ui-icons_ffffff_256x240.png);
 }
-.ui-state-default .ui-icon {
-	background-image: url(images/ui-icons_ef8c08_256x240.png);
-}
+
 .ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon {
-	background-image: url(images/ui-icons_ef8c08_256x240.png);
+.ui-state-focus .ui-icon,
+.ui-state-active .ui-icon,
+.ui-state-default .ui-icon {
+	background-image: url(images/ui-icons_ef8c08_256x240.png) !important;
 }
-.ui-state-active .ui-icon {
-	background-image: url(images/ui-icons_ef8c08_256x240.png);
+.ui-datepicker-prev-hover  .ui-icon-circle-triangle-w,
+.ui-datepicker-next-hover  .ui-icon-circle-triangle-e {
+	background-image: url(images/cal-hover-icon.png) !important;
 }
 .ui-state-highlight .ui-icon {
 	background-image: url(images/ui-icons_228ef1_256x240.png);
@@ -955,6 +956,8 @@ body .ui-tooltip {
 }
 
 /* positioning */
+.ui-datepicker-prev-hover  .ui-icon-circle-triangle-w{background-position: -13px 2px;}
+.ui-datepicker-next-hover  .ui-icon-circle-triangle-e{background-position: 2px 2px;}
 .ui-icon-blank { background-position: 16px 16px; }
 .ui-icon-carat-1-n { background-position: 0 0; }
 .ui-icon-carat-1-ne { background-position: -16px 0; }

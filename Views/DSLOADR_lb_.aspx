@@ -237,6 +237,7 @@
                     </div>
                     <ul class="_list">
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p>Enter Pickup Completions</p>
+
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
