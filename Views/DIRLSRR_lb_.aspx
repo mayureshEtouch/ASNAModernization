@@ -541,6 +541,7 @@
     </script>
     <style>
         #__Page_PopUp {
+            min-width: 450px !important;
             width: 450px !important;
 			left: 50% !important;
 			margin-left: -225px;
