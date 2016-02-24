@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                     <span class="form-text">
-                                    <input type="text" id="card_number" name="card_number" class="mdl-textfield__input-small" maxlength="10" size="11"/>
+                                    <input type="text" id="card_number" name="card_number" class="mdl-textfield__input-small" maxlength="7" size="11"/>
                                     </span>
                                 </div>
                             </div>

@@ -75,13 +75,13 @@
                                 <span class="summary-table-title pull-right">No.</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fNo" class="mdl-textfield__input">
+                                <input type="text"  id="fNo" class="mdl-textfield__input" maxlength="10">
                               </div>
                               <div class="mdl-cell mdl-cell--1-col">
                                 <span class="summary-table-title pull-right">Address</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fAddress" class="mdl-textfield__input">
+                                <input type="text"  id="fAddress" class="mdl-textfield__input" maxlength="30">
                               </div>
                               <div class="mdl-cell mdl-cell--1-col">
                                 <span class="summary-table-title pull-right">Type</span>
@@ -93,7 +93,7 @@
                                 <span class="summary-table-title pull-right">Reference</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fReference" class="mdl-textfield__input">
+                                <input type="text"  id="fReference" class="mdl-textfield__input" maxlength="3">
                               </div>
                             </div>
                           </div>
