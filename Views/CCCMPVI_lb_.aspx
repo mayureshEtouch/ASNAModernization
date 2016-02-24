@@ -6,6 +6,7 @@
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CCCMPVI# --%>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -83,7 +84,7 @@
           </div>
         </section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+        <!--div id="modal" class="simplePopup"></div-->
     </div>
     <style type="text/css" media="screen">
       #main-content {
@@ -95,6 +96,7 @@
       }
       .modal-dialog-container {
         margin: 0 auto;
+        margin-bottom: 45px;
       }
       .mdl-layout__content {
         height: auto;

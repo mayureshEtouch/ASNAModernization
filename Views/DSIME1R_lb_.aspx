@@ -75,11 +75,12 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Middle Initial:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="middleInitial" name="middleInitial" style="width: 50px;" value="">
+                                        <input maxlength="1" type="text" id="middleInitial" name="middleInitial" style="width: 50px;" value="">
                                         <span style="float:right">
                                         <span class="input-side-gutter-space form-label">Last Name:</span>
                                         <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
-                                        <input type="text" id="lastName" name="lastName" class="full-input" value="">
+                                        <span id="lastName"></span>
+                                        <!-- <input maxlength="15" type="text" id="lastName" name="lastName" class="full-input" value=""> -->
                                     </span>
                                     </span> </span>
                                 </div>
@@ -88,7 +89,8 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Business Name:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" class="full-input" id="businessName" name="businessName">
+                                        <span id="businessName"></span>
+                                        <!-- <input type="text" class="full-input" id="businessName" name="businessName"> -->
                                     </span>
                                 </div>
                             </div>
@@ -96,7 +98,7 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0"> 
                                   <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="zcode" name="zcode" class="zip-code" value="">
+                                    <input maxlength="10" type="text" id="zcode" name="zcode" class="zip-code" value="">
                                   </span> 
                                 </div>
                             </div>
@@ -148,8 +150,10 @@
                                     </span>
                                 </div>
                             </div>
-                           <br><br> 
-                        <!-- <span class="error"></span> -->
+                           <br>
+                            <div class="content-grid mdl-grid"><span class="error"></span></div>
+                           <br> 
+                        
 
                         </div>
                         <div class="mdl-cell mdl-cell--6-col">
@@ -157,7 +161,8 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">First Name:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="firstName" name="firstName" class="zip-code full-input" value="">
+                                    <span id="firstName"></span>
+                                    <!-- <input maxlength="10" type="text" id="firstName" name="firstName" class="zip-code full-input" value=""> -->
                                     </span>
                                 </div>
                             </div>
@@ -166,17 +171,18 @@
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <span style="width: 200px; display: inline-block;"></span>
                                     <span class="input-side-gutter-space form-label" style="float:right">Suffix:
+                                    <span id="suffix"></span>
                                     <!-- <input type="text" id="suffix" name="suffix" class="extension"> -->
-                                    <select name="suffix" id="suffix"></select>
+                                    <!-- <select name="suffix" id="suffix"></select> -->
                                     </span> </span> </div>
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Address:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="address1" name="address1" class="zip-code full-input" value="">
+                                    <input maxlength="25" type="text" id="address1" name="address1" class="zip-code full-input" value="">
                                     <br />
-                                    <input type="text" style="margin-top: 2px;" id="address2" name="address2" class="zip-code full-input" value="">
+                                    <input maxlength="25" type="text" style="margin-top: 2px;" id="address2" name="address2" class="zip-code full-input" value="">
                                     </span>
                                 </div>
                             </div>
@@ -194,7 +200,7 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Cell Phone Number:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="cphone" name="cphone" class="zip-code full-input" value="">
+                                    <input maxlength="10" type="text" id="cphone" name="cphone" class="zip-code full-input" value="">
                                     </span>
                                 </div>
                             </div>
@@ -202,7 +208,7 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Email Address:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="emailAddress" name="emailAddress" class="zip-code full-input" value="">
+                                    <input style="text-transform: none;" type="text" id="emailAddress" name="emailAddress" class="zip-code full-input" value="">
                                     </span>
                                 </div>
                             </div>
@@ -249,8 +255,8 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7">Addresses</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8">Notes</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phones" event-data="F9">phones</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId" event-data="F10">tax id</span> </div>
-                            <div class="mdl-cell mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return" event-data="F12">Return</span> </div>
+                            <div class="mdl-cell mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F12">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7">Addresses</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8">Notes</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phones" event-data="F9">phones</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId" event-data="F10">tax id</span> </div>
+                            <div class="mdl-cell mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return" event-data="Enter">Next</span> </div>
                         </div>
                     </div>
                 </div>
@@ -1176,7 +1182,7 @@
     </style>    
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.error').text($('.DdsSflMsgField_OutputOnly').text());
+    $('.error').text($('#MsgPH_DdsMessagePanel1').text());
     /*setDateTime(dateFieldId,timeFieldId)*/
     setDateTime('CenPH_DdsConstant33','CenPH__lb_RCDDTL1__lb__lb_TME');
       var old_fields = ['#CenPH__lb_RCDDTL1__lb_DDTTX','#CenPH__lb_RCDDTL1__lb_DDVTX','#CenPH__lb_RCDDTL1__lb_DDWTX','#CenPH__lb_RCDDTL1__lb_DDXTX','#CenPH__lb_RCDDTL1__lb_DDUTX','#CenPH__lb_RCDDTL1__lb_PANTX','#CenPH__lb_RCDDTL1__lb_PAOTX','#CenPH__lb_RCDDTL1__lb_PAPTX','#CenPH__lb_RCDDTL1__lb_DEONB','#CenPH__lb_RCDDTL1__lb_DELNB','#CenPH__lb_RCDDTL1__lb_DEMNB','#CenPH__lb_RCDDTL1__lb_DENNB','#CenPH__lb_RCDDTL1__lb_DCGNB','#CenPH__lb_RCDDTL1__lb_DCHNB','#CenPH__lb_RCDDTL1__lb_DCINB','#CenPH__lb_RCDDTL1__lb_DK3N_lb_','#CenPH__lb_RCDDTL1__lb_DBWNA','#CenPH__lb_RCDDTL1__lb_DBRST','#CenPH__lb_RCDDTL1__lb_DBQST','#CenPH__lb_RCDDTL1__lb_DTQST','#CenPH__lb_RCDDTL1__lb_DCPST','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM','#CenPH__lb_RCDDTL1__lb_1ABST','#CenPH__lb_RCDDTL1__lb_DOAA_usd_','#CenPH__lb_RCDDTL1__lb_1ACST'];
