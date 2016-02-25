@@ -87,7 +87,7 @@
                                         <th>Serial Number</th>
                                         <th>Manufacturing Warranty Expiry Date</th>
                                         <th>Warranty Term</th>
-                                        <th>Warranty Price</th>
+                                        <th>Warranty Price ($)</th>
                                         <th>Extended Warranty Expiry Date</th>
                                     </tr>
                                 </thead>

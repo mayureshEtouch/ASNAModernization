@@ -113,7 +113,7 @@
 								  <tr data-myval="">
 								   <th class="first"><div class="th-inner">Model Number</div></th>
 								   <th><div class="th-inner">Description</div></th>
-								   <th><div class="th-inner">Item Price</div></th>
+								   <th><div class="th-inner">Item Price ($)</div></th>
 								   <th><div class="th-inner">Vendor Number</div></th>
 								   <th width="13%"><div class="th-inner">Product Category</div></th>
 								   <th><div class="th-inner">Status</div></th>

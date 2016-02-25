@@ -79,7 +79,7 @@
 										<th>Code</th>
 										<th>Level</th>
 										<th>Description</th>
-										<th>Price.$</th>
+										<th>Price ($)</th>
 									</tr>
 								</thead>
 								<tbody>

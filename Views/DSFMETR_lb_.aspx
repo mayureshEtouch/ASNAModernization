@@ -122,9 +122,9 @@
                                             <th style="width: 3%">Level</th>
                                             <th style="width: 3%">Warranty</th>
                                             <th style="width: 3%">Credit</th>
-                                            <th style="width: 9%">Actual <br />Price</th>
-                                            <th style="width: 9%">Extended <br />Price</th>
-                                            <th style="width: 5%">Installation <br />Price</th>
+                                            <th style="width: 9%">Actual <br />Price ($)</th>
+                                            <th style="width: 9%">Extended <br />Price ($)</th>
+                                            <th style="width: 5%">Installation <br />Price ($)</th>
                                             <th style="width: 9%">Status</th>
                                         </tr>
                                     </thead>
@@ -1869,7 +1869,7 @@
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
             // Update any data added to New Edit UI Table to ASNA Hidden UI Table
-            $("input, select").change(function(){
+            $("input, select").on('change blur keydown',function(){
                 $("#datatableValueInsert tbody").find("tr").each(function(i){
                     $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
                     $("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());

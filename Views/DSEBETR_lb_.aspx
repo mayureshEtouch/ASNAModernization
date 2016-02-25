@@ -118,7 +118,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                                <input type="text" id="requestdate" name="date"><i class="material-icons calender-icon" id="requestcal"></i>
+                                <input type="text" id="requestdate" name="date" style="width: 164px;"><i class="material-icons calender-icon" id="requestcal"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>
                         </div>
@@ -167,7 +167,7 @@
                                 <thead>
                                     <tr>
                                         <th width="25%">Payment Method</th>
-                                        <th width="25%">Amount</th>
+                                        <th width="25%">Amount ($)</th>
                                         <th width="25%">Reference</th>
                                         <th width="25%">Approval Code</th>
                                     </tr>
@@ -1128,7 +1128,7 @@
             left: 0px !important;
             top: 0px !important;
             width: auto !important;
-            border: 1px solid #e5e5e5 !important;
+            border: 1px solid #c5c5c5 !important;
             border-radius: 2px !important;
         }
         .even-row-read-only-data {
