@@ -8,6 +8,7 @@
     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+	<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -36,7 +37,7 @@
                 <span class="mdl-layout-title logo-icon"></span>
                 <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
-                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                <span class="close-icon"  event-data="F12"><i class="material-icons md-15 close"></i></span>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -111,6 +112,12 @@
                     <div class="content-grid mdl-grid" style="padding: 10px 0">
                         <div class="mdl-cell mdl-cell--12-col">
                             <span class="form-text clr-blue" id="reqApprvlFor"></span>
+                        </div>
+                    </div>
+					
+					<div class="content-grid mdl-grid" style="padding: 10px 0">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <span class="form-text clr-blue" id="ConstantMsg"></span>
                         </div>
                     </div>
 
@@ -895,7 +902,7 @@
             $("#cust_location").html(location);
             var employee = $("#CenPH__lb_RCDDTL1__lb_1AJCD").html() + "&nbsp;" + $("#CenPH__lb_RCDDTL1__lb_DA0TX").html();
             $("#employee").html(employee);
-            var infoMessage = $("#CenPH_DdsConstant2").html();
+            //var infoMessage = $("#CenPH_DdsConstant2").html();
             var customerName = $("#CenPH__lb_RCDDTL1__lb_DALTX").html();
             var customerAdd = $("#CenPH__lb_RCDDTL1__lb_DBNTX").html() + "&nbsp;";
             customerAdd += $("#CenPH__lb_RCDDTL1__lb_DBPTX").html() + "&nbsp;" + $("#CenPH__lb_RCDDTL1__lb_DBMTX").html();
@@ -903,6 +910,8 @@
             $("#cust_name").html(customerName + "</br>" + customerAdd + "</br>" + zipCode + "</br>");
             var reqApprvlFor = $("#CenPH__lb_RCDDTL1__lb_1GFVA").html().replace("&nbsp;", "");
             $("#reqApprvlFor").html("<strong>Requesting Approval for:</strong>&nbsp;" + reqApprvlFor);
+			$("#ConstantMsg").html($("#CenPH_DdsConstant2").html());
+			
             var homePhone = $("#CenPH__lb_RCDDTL1__lb_DD1NB").html();
             $("#homePhone").html(homePhone);
             var offcPhone = $("#CenPH__lb_RCDDTL1__lb_DD2NB").html();
@@ -929,6 +938,9 @@
             min-width: 75% !important;
         }
 
+		#__Page_PopUp tbody td:first-child {
+			height: 0px !important;
+		}
         .modal-dialog-container {
             width: 100%;
             margin-top: 0;

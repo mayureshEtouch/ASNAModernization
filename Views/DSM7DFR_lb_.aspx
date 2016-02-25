@@ -67,15 +67,15 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Model Number</span>
-                            <span class="summary-txt">UN55JS7000 55" SUHD 4K SMART TV</span>
+                            <span class="summary-txt" id = "model-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Product Category</span>
-                            <span class="summary-txt">102 LCD/LED FLAT PANEL</span>
+                            <span class="summary-txt" id ="product-category"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Vendor Number</span>
-                            <span class="summary-txt">0000164 SAMSUNG</span>
+                            <span class="summary-txt" id ="vendor-number"></span>
                         </div>
                     </div>
                 </div>
@@ -686,7 +686,8 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant16]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").html().replace(/&nbsp;/g, ""));
             //Set model data
-            $("#model-number").html($("#CenPH__lb_SFLCTL__lb_PAXTX").html());
+			
+            $("#model-number").html($("#CenPH__lb_SFLCTL__lb_PAXTX").html()+ "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_PA2TX").html() );
             $("#product-category").html($("#CenPH__lb_SFLCTL__lb_PAXCD").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFATX").html());
             $("#vendor-number").html($("#CenPH__lb_SFLCTL__lb_PBLNB").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CECTX").html());
             $("#CenPH__lb_SFLCTL__lb_2ABCD").addClass("mdl-textfield__input input-big");
@@ -716,6 +717,11 @@
             $(".model-orders").on("click", function (event) {
                 var row = $("#customerName tbody tr.selected");
                 doAction(row, "7", event);
+            });
+			
+			$("#next").click(function (event) {
+				console.log("ss");
+                _00('Enter',event);
             });
         });
     </script>
