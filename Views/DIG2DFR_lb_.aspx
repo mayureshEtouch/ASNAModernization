@@ -47,7 +47,7 @@
                 </div>
             </div>
         </section>
-        <section class="table-data-content-container spacer-container-bottom">
+        <section class="table-data-content-container spacer-container-bottom" style="margin-top: 15px;">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container" style="height: auto; min-height: auto;">

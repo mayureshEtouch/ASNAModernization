@@ -85,25 +85,27 @@
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 20px;">
-                <div class="table-data-wrapper">
-                    <div class="table-data-maincontainer">
-                        <div class="fixed-table-container-inner">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="x-ref-items">
-                                <thead>
-                                    <tr>
-                                        <th>Reference</th>
-                                        <th>Type</th>
-                                        <th>Model Number</th>
-                                        <th>Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="button-container">
+                        <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                            <div class="table-data-wrapper">
+                                <div class="table-data-maincontainer">
+                                    <div class="fixed-table-container">
+                                       <div class="header-background"> </div>
+                                       <div class="fixed-table-container-inner">
+                                      <table cellspacing="0" cellpadding="0" border="0" id="x-ref-items">
+                                       <thead>
+                                        <tr data-myval="">
+                                         <th class="first"><div class="th-inner">Reference</div></th>
+                                         <th><div class="th-inner">Type</div></th>
+                                         <th><div class="th-inner">Model Number</div></th>
+                                         <th><div class="th-inner">Description</div></th>
+                                        </tr>
+                                       </thead>
+                                       <tbody>
+                                       </tbody>
+                                      </table>
+                                       </div>
+                                      </div>
+                                    <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col pull-left modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
@@ -113,9 +115,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                                </div>
+                            </div>
+                        </section>
+            
         </main>
     </div>
     <!-- Modified HTML code ends here -->
@@ -472,7 +475,7 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
       <style>
         #Div1, #fkeys, #showDiagnostics, #footer {
-            display: none;
+        /*     display: none; */
         }
 		@media (min-width: 768px){
 		  .filter-search-container .button-cnt-container {
