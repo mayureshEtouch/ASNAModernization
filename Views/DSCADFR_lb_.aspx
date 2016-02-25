@@ -63,7 +63,7 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-title">Customer Name:</span>
                             <span class="summary-txt" id="cust-name"></span>
                         </div>
                     </div>

@@ -89,11 +89,7 @@
         <!--div id="modal" class="simplePopup"></div-->
     </div>
     <style type="text/css" media="screen">
-      #main-content {
-          width: 100%;
-          
-      }
-      .modal-dialog-container, #main-content {
+      .modal-dialog-container, #main-content, #wrapper {
         width: 100% !important;
       }
       .modal-dialog-container {
@@ -126,6 +122,22 @@
       #__Page_PopUp .DdsInlinePopUpTitle {
        height: 0;
       }
+	   #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
+            position: relative !important;
+            left: 0px !important;
+            top: 0px !important;
+        }
+        #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB {
+            width: calc(16.6666666667% - 16px) !important;
+        }
+
+        #CenPH__lb_RCDDTL1__lb_PAXNB {
+            width: calc(66.6666666667% - 16px) !important;
+        }
+
+        #CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
+            width:100% !important;
+        }
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
