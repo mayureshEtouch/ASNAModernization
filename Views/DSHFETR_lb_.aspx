@@ -78,10 +78,10 @@
                         </div>
                         <div class="content-grid mdl-grid">
                             <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
-                                <fieldset>
-                                    <legend id="legen">Notes:</legend>
+                                <fieldset id="special-instructions"></fieldset>
+                                    <!-- <legend id="legen">Notes:</legend>
                                     <textarea id="notes" rows="5" cols="40" name="notes"></textarea>
-                                </fieldset>
+                                                                    </fieldset> -->
                             </div>
                         </div>
                         
@@ -111,7 +111,19 @@
               </div>
         </div>
         <style type="text/css" media="screen">
-          /* #Div1{display: block;} */
+          .sp-inst {
+              text-transform: uppercase !important;
+              position: relative !important;
+              left: 0px !important;
+              margin-top: 4px !important;
+              width: 99% !important;
+              margin-left: 0% !important;
+              margin-right: 1% !important;
+              
+          }
+          #special-instructions span {
+              display: block !important;
+          }
         </style>
         <script type="text/javascript">
           $(document).ready(function() {
@@ -142,9 +154,54 @@
               });
 
             }
+
+            function generateSpecialInstructionsSection() {
+                //Create copyToAndFrom JSON object for special instructions
+                var copyToAndFrom = {
+                    "displayOnlyFields": {},
+                    "inputFields": {}
+                }
+                $("#special-instructions").empty();
+                var allInputFields = ($('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input').length ?
+                    $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input') : 
+                    $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span:not(:last)'));
+                for(var i = 0; i < allInputFields.length; i++) {
+                    var splInsNewField = '<input type="text" maxlength="60" id="special-instructions' + i + '" class="sp-inst editable-data">';
+                    var splInsRONewField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style="display:none;"></span>';
+                    var oldInpId = $(allInputFields[i]).attr("id");
+                    var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];
+                    if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                        $("#special-instructions").append(splInsRONewField);
+                    } else {
+                        $("#special-instructions").append(splInsNewField);
+                    }
+                    
+                    
+                    copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
+                    copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
+                }
+                console.log('copyToAndFrom is ');
+                console.log(copyToAndFrom);
+                copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                $("#special-instructions").prepend('<legend id="legen">Notes:</legend>');
+            }
+            generateSpecialInstructionsSection();
+            $('body').on('keydown', function (event) {
+                var keycode = event.keyCode || event.which;
+                if (keycode === 33) {
+                    /* Please note that the same event is being invoked in common.js hence have to comment it out*/
+                    //_00("PgUp", event);
+                    setTimeout(generateSpecialInstructionsSection, 1000);
+                } else if (keycode === 34) {
+                    /* Please note that the same event is being invoked in common.js hence have to comment it out*/
+                    //_00("PgDn", event);
+                    setTimeout(generateSpecialInstructionsSection, 1000);
+                }
+                return;
+            });
           });
         </script>
-        <div id="Div1">
+        <div id="Div1" style="display: none;">
             
       <%--  CU: ETR Customer Comments Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>

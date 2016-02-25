@@ -524,7 +524,7 @@
 		}
     #CenPH__lb_SFLCTL__lb_2Q1TX {
       position: static !important;
-      height: 14px !important;
+      height: auto;
       width: 100% !important;
     }
     

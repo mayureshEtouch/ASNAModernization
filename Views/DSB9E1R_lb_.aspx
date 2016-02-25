@@ -126,7 +126,7 @@
                                   </span>
                                 </div>
                             </div> -->
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid" id="div-extra-div">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Extra Phone #s ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -284,7 +284,9 @@
                 $(new_fields[i]).append($options);
               }
             };
-
+            if($("#CenPH__lb_RCDDTL1__lb_DTQST").val() == undefined){
+                $("#div-extra-div").hide();
+            }
             $('body').on('keyup change', 'input, select', function (event) {
               var new_id = $(this).attr('id');
               var index = new_fields.indexOf('#'+new_id);
