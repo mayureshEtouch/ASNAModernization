@@ -1146,7 +1146,7 @@
             top: 0px !important;
             width: auto !important;
             border: 0px !important;
-            background-color: rgb(252, 252, 252) !important;
+            background-color: rgb(249, 249, 249) !important;
         }
     </style>
     <script>

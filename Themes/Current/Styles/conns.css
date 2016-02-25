@@ -1031,7 +1031,6 @@ textarea {
 
 /* Font icons images */
 .material-icons {
-	cursor: pointer;
 	display: inline-block;
 	height: 24px;
 	width: 24px;
@@ -1070,6 +1069,7 @@ textarea {
 }
 .calender-icon {
 	background: url(../Images/icons/calender.png) no-repeat;
+	cursor: pointer;
 	position: relative;
     right: 26px;
     top: 4px;
