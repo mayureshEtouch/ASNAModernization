@@ -107,7 +107,7 @@
                                 <div class="mdl-cell mdl-cell--6-col" >
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--5-col" >
-                                            <span class="form-label">Customer:</span>
+                                            <span class="form-label">Existing:</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--7-col">
                                             <span class="form-text">

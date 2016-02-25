@@ -1,25 +1,6 @@
 ﻿function validateInput(ele, buttonsToDisable, errorMessagePlaceholder) {
     var element = $(ele);
-    if (!element.valid()) {
-        element.css({
-            "border": "solid 1px #ff0000"
-        });
-        if (buttonsToDisable && buttonsToDisable.length > 0) {
-            for (var i = 0; i < buttonsToDisable.length; i++) {
-                $("#" + buttonsToDisable[i]).attr("disabled", "true");
-            }
-        }
-    } else {
-        element.css({
-            "border": "solid 1px #e5e5e5"
-        });
-        $("#" + errorMessagePlaceholder).hide();
-        if (buttonsToDisable && buttonsToDisable.length > 0) {
-            for (var i = 0; i < buttonsToDisable.length; i++) {
-                $("#" + buttonsToDisable[i]).removeAttr("disabled");
-            }
-        }
-    }
+    return (element.valid());
 }
 
 // Numeric only control handler
@@ -133,7 +114,7 @@ function onlyAlphabets(e, t) {
 
 
 //SSN validation
-jQuery.fn.validateSSN = function() {
+/*jQuery.fn.validateSSN = function() {
     return this.each(function() {
         $(this).on("change keyup", function(e) {
             var keyCode = e.which || e.keycode;
@@ -163,7 +144,30 @@ jQuery.fn.validateSSN = function() {
 
         });
     });
-}
+}*/
+
+//validate SSN
+/*jQuery.fn.validateAndConvertToSSN = function() {
+        return this.each(function() {
+            $(this).on("change keyup", function(e) {
+                var inpValue = $(this).val();
+                $(this).val(inpValue.replace(/([^0-9])/g, ""));
+                inpValue = $(this).val();
+                if (inpValue.length === 9) {
+                    var p1 = inpValue.substr(0, 3);
+                    var p2 = inpValue.substr(3, 3);
+                    var p3 = inpValue.substr(6, 3);
+                    $(this).val(p1 + "-" + p2 + "-" + p3);
+                }
+            });
+        });
+    }*/
+
+//Validate SSN using plugin
+jQuery.validator.addMethod("validateSSN", function(value, element) {
+    // allow any non-whitespace characters as the host part
+    return /^(([0-9]{3})(\-[0-9]{2})(\-[0-9]{4}))$/.test(value);
+}, 'Please enter valid SSN');
 
 // Numeric with two decimal precisions
 jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPrecision) {
@@ -204,25 +208,22 @@ jQuery.fn.validatePhone = function() {
             if (inpValue.length === 10) {
                 var p1 = inpValue.substr(0, 3);
                 var p2 = inpValue.substr(3, 3);
-                var p3 = inpValue.substr(6,4);
-                $(this).val(p1+"/"+p2+"-"+p3);
+                var p3 = inpValue.substr(6, 4);
+                $(this).val(p1 + "/" + p2 + "-" + p3);
             }
         });
     });
 }
 
 // Force Amount value only
-jQuery.fn.ForceAmountOnly = function()
-{
-    return this.each(function()
-    {
-        $(this).keydown(function(e)
-        {
+jQuery.fn.ForceAmountOnly = function() {
+    return this.each(function() {
+        $(this).keydown(function(e) {
             var key = e.charCode || e.keyCode || 0;
             // allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
             // home, end, period, and numpad decimal
             return (
-                key == 8 || 
+                key == 8 ||
                 key == 9 ||
                 key == 13 ||
                 key == 46 ||
@@ -236,16 +237,13 @@ jQuery.fn.ForceAmountOnly = function()
 };
 
 // Force 2 decimal points
-jQuery.fn.ForceTwoDecimalPoints = function()
-{
-    return this.each(function()
-    {
-		 $(this).on("blur", function(e) 
-        {
-          
-			if($(this).val() != ''){
-				$(this).val( parseFloat($(this).val()).toFixed(2));
-			}
+jQuery.fn.ForceTwoDecimalPoints = function() {
+    return this.each(function() {
+        $(this).on("blur", function(e) {
+
+            if ($(this).val() != '') {
+                $(this).val(parseFloat($(this).val()).toFixed(2));
+            }
         });
     });
 };

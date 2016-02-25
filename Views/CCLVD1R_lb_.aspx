@@ -82,7 +82,7 @@
                         <div style="margin-right: 15px" class="mdl-cell mdl-cell--12-col">
                             <fieldset>
                                 <legend id="legend">Notes:</legend>
-                                <textarea id="CenPH_2AQNA" rows="5" cols="40" name="CenPH_2AQNA" style="text-transform: lowercase;padding: 5px 0px;" readonly=""></textarea>
+                                <textarea id="CenPH_2AQNA" rows="5" cols="40" name="CenPH_2AQNA" style="text-transform: none;padding: 5px 0px;" readonly=""></textarea>
                             </fieldset>
                         </div>
                     </div>
@@ -949,7 +949,7 @@
         }
 
         #__Page_PopUp {
-            left: 13% !important;
+            left: 25% !important;
             min-width: 50% !important;
             top: 50px !important;
         }
@@ -970,6 +970,9 @@
 
         #__AsnaDisplayfileRestored__ {
             margin-top: -20px !important;
+        }
+        .DdsInlinePopUpTitle {
+            height: 0px !important;
         }
     </style>
 </asp:Content>

@@ -110,7 +110,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
-                                        <span class="form-text"><input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="11"><span class="ro-data" id="ro-cust-ssn" ></span></span>
+                                        <span class="form-text"><input class="editable-data required validateSSN" type="text" id="cust-ssn" size="15" maxlength="11" onkeyup="validateInput(this)" placeholder="111-11-1111"><span class="ro-data" id="ro-cust-ssn" ></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +188,7 @@
 									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-ssn" size="15">
+											<input class="editable-data required validateSSN" type="text" id="sp-ssn" size="15" maxlength="11" onkeyup="validateInput(this)" placeholder="111-11-1111">
 											<span class="ro-data" id="ro-sp-ssn"></span>
 										</span>
 									</div>
@@ -233,7 +233,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Duration:</span>
                                 <span class="form-text">
-									<input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="2">
+									<input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3">
 									<span class="ro-data" id="ro-employed-at-duration-years"></span>
 									&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
 									<input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2">
@@ -1627,6 +1627,17 @@
         .ro-data  {
             display:none;
         }
+        .error {
+            color: #ff0000;
+            font-size: 11px;
+            width: auto !important;
+        }
+        label.error {
+            margin-left: 114px;
+        }
+        .sp-ssn-error {
+            margin-left: 104px;
+        }
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
@@ -1734,9 +1745,9 @@
             });
             $("#cust-birth").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD_DateValue").val() || $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD").val());
             $("#sp-birth").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue").val() || $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val());
-            $("#cust-birth").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#cust-birth").datepicker({ dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(2007, 6, 12) });
             $("#cust-reqesdate").click(function () { $("#cust-birth").datepicker("show"); });
-            $("#sp-birth").datepicker({ dateFormat: 'mm/dd/yy' });
+            $("#sp-birth").datepicker({ dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(2007, 6, 12) });
             $("#sp-reqesdate").click(function () { $("#sp-birth").datepicker("show"); });
             $("#cust-birth").on('change', function () {
                 var date = $("#cust-birth").val().split("/");
@@ -1749,7 +1760,7 @@
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val(date[2] + "-" + date[0] + "-" + date[1]);
             });
             //Add validation rules
-            //$("#cust-ssn,#sp-ssn").validateSSN();//123-45-6789
+            //$("#cust-ssn,#sp-ssn").validateAndConvertToSSN();//123-45-6789
             $("#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code").ForceNumericOnly();
             $("#payment-of").numericWithCustomDecimalPrecisions(5,2);//123.45, 12345.00, 1.32
             $("#no-of-years,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32

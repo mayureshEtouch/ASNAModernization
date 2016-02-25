@@ -65,7 +65,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+                                <div class="mdl-cell mdl-cell--2-col">
                                     <span class="form-label" style="">Customer name:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col">
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+                                <div class="mdl-cell mdl-cell--2-col">
                                     <span class="form-label" >Tax ID:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col">
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col" >
+                                <div class="mdl-cell mdl-cell--2-col" >
                                     <span class="form-label">Last changed by user:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col" >
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col" >
+                                <div class="mdl-cell mdl-cell--2-col" >
                                     <span class="form-label">Date last changed:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col">
@@ -112,7 +112,7 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="delete" data-upgraded=",MaterialButton,MaterialRipple" style="margin-left: -72px;">Delete<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                 </span>
                             </div>
-                            <div class="mdl-cell mdl-cell--2-col mdl-cell--8-col-desktop pull-right">
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop pull-left">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                 </span>
                             </div>
