@@ -243,7 +243,7 @@ $('.error').text($('#MsgPH_DdsMessagePanel1').text());
 /*setDateTime(dateFieldId,timeFieldId)*/
 setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
 // Search by Customer data table record mapping
-var generateTable = function (direction) {
+var generateTableAddressess = function (direction) {
 
   $("#customerAddress tbody").empty();
   var count = 1;
@@ -284,7 +284,7 @@ var generateTable = function (direction) {
   $("#customerAddress tbody tr:even").css("background-color", "#fff");
   $("#customerAddress tbody tr:odd").css("background-color", "#f9f9f9");
 }
-generateTable("top-to-bottom");
+generateTableAddressess("top-to-bottom");
             $('body').on('click', '#customerAddress tbody tr', function () {
               $("#customerAddress tbody tr:even").css("background-color", "#fff");
               $("#customerAddress tbody tr:odd").css("background-color", "#f9f9f9");
@@ -308,6 +308,19 @@ generateTable("top-to-bottom");
              $("#" + a[0] + "\\." + a[1]).val(value);
              _00('Enter', event);
            }
+          //Handle Page Up and Page Down events
+          $('body').on('keyup', function(event) {
+            console.log('clicking a key!!!');
+              var keycode = event.keycode || event.which;
+              if (keycode === 33) {
+                  //_00("PgUp", event);
+                  generateTableAddressess("bottom-to-top");
+              } else if (keycode === 34) {
+                  //_00("PgDn", event);
+                  generateTableAddressess("top-to-bottom");
+              }
+              return;
+          });
          });
        </script>
 

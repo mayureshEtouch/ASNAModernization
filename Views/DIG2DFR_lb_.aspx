@@ -31,7 +31,7 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIG2DFR</span>
+                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIG2DFR</span>
                 </div>
             </div>
         </section>--%>
@@ -54,13 +54,16 @@
                         <table id="customerName" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp is-upgraded" data-upgraded=",MaterialDataTable">
                             <thead>
                                 <tr>
-                                    <th colspan="2">Out-of-Stock-Model</th>
+                                    <th>Out-of-Stock-Model</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td id="model-id"></td>
-                                    <td id="model-name">Air Conditioner</td>
+                                    <td> 
+                                    <span id="model-id"></span>:&nbsp;
+                                    <span id="model-name"></span>
+                                    </td>
+                                    
                                 </tr>
                             </tbody>
                         </table>

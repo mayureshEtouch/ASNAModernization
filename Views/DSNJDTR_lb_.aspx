@@ -184,7 +184,7 @@
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
               <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:5px;">
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">previous</span>
-                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="returnToMenu" event-data="F3">Return to menu</span>
+                <!--span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="returnToMenu" event-data="F3">Return to menu</span-->
               </div>
               <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0;px;">
                 <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printInvoice" event-data="F6">Reprint invoice</span>
@@ -198,10 +198,10 @@
       &nbsp;
       </section>
         </main>
-        <section class="copyright">
-            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
-        </section>
-        <br/><br/>
+<!--         <section class="copyright">
+    <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+</section>
+<br/><br/> -->
     </div>
     <div id="modal" class="simplePopup"></div>
     

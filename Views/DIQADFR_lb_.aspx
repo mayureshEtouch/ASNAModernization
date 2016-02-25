@@ -291,10 +291,10 @@
                         if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                             var divid = $(this);
                             var selectId = $(divid.children('select')).attr('id');
-                            var reference = $(divid.find('span:eq(0)')).html();
+                            var zip = $(divid.find('span:eq(0)')).html();
                             var address = $(divid.find('span:eq(1)')).html();
                             var type = $(divid.find('span:eq(2)')).html();
-                            var zip = $(divid.find('span:eq(3)')).html();
+                            var reference = $(divid.find('span:eq(3)')).html();
                             var name = $(divid.find('span:eq(4)')).html();
                             var phoneNumber = $(divid.find('span:eq(5)')).html();
                             var build = $(divid.find('span:eq(6)')).html() + "<br>" + $(divid.find('span:eq(7)')).html();

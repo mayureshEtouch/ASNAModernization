@@ -597,7 +597,9 @@
             top: 0px !important;
             width: calc(100%) !important;
         }
-		
+		#customerName tbody > tr:hover {
+			cursor: pointer;
+		}
     </style>
     <script type="text/javascript">
         $(document).ready(function () {

@@ -39,7 +39,7 @@
                 <span class="mdl-layout-title logo-icon"></span>
                 <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
-                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                <span class="close-icon"  event-data="F12"><i class="material-icons md-15 close"></i></span>
         </header>
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -56,14 +56,14 @@
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue</strong>
+                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue&nbsp;?</strong>
                         </span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
                             <fieldset>
                                 <legend id="legend">NOTES:</legend>
-                                <p id="notice-first" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></p>
+                                <ul id="notice-first" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></ul>
                             </fieldset>
                         </div>
                     </div>
@@ -85,14 +85,14 @@
             <section class="form-data" id="second-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Please Call GE Money for Clarification</span></div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue</strong></span> </div>
+                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Account for Cust not on GE Money System</span></div>
+                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue&nbsp;?</strong></span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
                             <fieldset>
                                 <legend id="legend">Notes:</legend>
-                                <p id="notice-second" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></p>
+                                <ul id="notice-second" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></ul>
                             </fieldset>
                         </div>
                     </div>
@@ -666,7 +666,8 @@
                 margin-left: -225px;
             }
 
-            #__Page_PopUp > tr:first-child {
+            #__Page_PopUp tbody tr:first-child {
+				 height: 0px !important;
                 display: none;
             }
 
@@ -690,6 +691,12 @@
               position: static !important;
               width: 45px !important;
             }
+			#notice-first li {
+				list-style: none;
+			}
+			#notice-second li {
+				list-style: none;
+			}
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -717,10 +724,13 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var divid = $(this);
                         divid.find('span').map(function(i, e) {
-                            notes += $(e).html();
-                        });
+						 notes += "<li>"+$(e).html() +"</li>";
+	                   });
                     }
                 });
+				
+				$("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
+				
                 if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Continue to GE Credit?") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#first");
                     $("#notice-first").html(notes);
