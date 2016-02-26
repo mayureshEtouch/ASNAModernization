@@ -112,14 +112,14 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--9-col-desktop">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="previous">Previous</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7">Addresses</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8">Notes</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit"  event-data="F9">audit</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId"  event-data="F10">tax id</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col-desktop pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="display-submit">next</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="display-submit">next</span>
                                 </div>
                             </div>
                         </div>
@@ -823,7 +823,7 @@
                 $("#cus_on").html(on);
                 $("#cus_email").html(emailAddress);
             }
-            $("#addresses").on('click', function(event) {
+            /*$("#addresses").on('click', function(event) {
                 _00('F7',event);
             });
 			$("#notes").on('click', function(event) {
@@ -838,7 +838,7 @@
             });
             $("#previous").on('click', function(event) {
                 _00('F12',event);
-            });
+            });*/
         });
     </script>
 </asp:Content>

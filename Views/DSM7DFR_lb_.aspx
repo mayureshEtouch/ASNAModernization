@@ -137,7 +137,7 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerName">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
                                 <thead>
                                     <tr>
                                         <th>Company</th>
@@ -178,7 +178,7 @@
         <div id="modal" class="simplePopup"></div>
     </div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1">
+    <div id="Div1" style="display:none;">
 
         <%--  IN: DSP for Reserve       Display file                                                                           --%>
         <%--  CRTDSPF                                                                                                          --%>
