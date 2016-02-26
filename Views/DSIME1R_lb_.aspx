@@ -262,7 +262,7 @@
                 </div>
             </section>
         </main>
-        <div id="modal1" class="simplePopup"></div>
+        <div id="modal" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
@@ -1182,7 +1182,7 @@
     </style>    
 <script type="text/javascript">
   $(document).ready(function() {
-    $('.error').text($('#MsgPH_DdsMessagePanel1').text());
+    // $('.error').text($('#MsgPH_DdsMessagePanel1').text());
     /*setDateTime(dateFieldId,timeFieldId)*/
     setDateTime('CenPH_DdsConstant33','CenPH__lb_RCDDTL1__lb__lb_TME');
       var old_fields = ['#CenPH__lb_RCDDTL1__lb_DDTTX','#CenPH__lb_RCDDTL1__lb_DDVTX','#CenPH__lb_RCDDTL1__lb_DDWTX','#CenPH__lb_RCDDTL1__lb_DDXTX','#CenPH__lb_RCDDTL1__lb_DDUTX','#CenPH__lb_RCDDTL1__lb_PANTX','#CenPH__lb_RCDDTL1__lb_PAOTX','#CenPH__lb_RCDDTL1__lb_PAPTX','#CenPH__lb_RCDDTL1__lb_DEONB','#CenPH__lb_RCDDTL1__lb_DELNB','#CenPH__lb_RCDDTL1__lb_DEMNB','#CenPH__lb_RCDDTL1__lb_DENNB','#CenPH__lb_RCDDTL1__lb_DCGNB','#CenPH__lb_RCDDTL1__lb_DCHNB','#CenPH__lb_RCDDTL1__lb_DCINB','#CenPH__lb_RCDDTL1__lb_DK3N_lb_','#CenPH__lb_RCDDTL1__lb_DBWNA','#CenPH__lb_RCDDTL1__lb_DBRST','#CenPH__lb_RCDDTL1__lb_DBQST','#CenPH__lb_RCDDTL1__lb_DTQST','#CenPH__lb_RCDDTL1__lb_DCPST','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM','#CenPH__lb_RCDDTL1__lb_1ABST','#CenPH__lb_RCDDTL1__lb_DOAA_usd_','#CenPH__lb_RCDDTL1__lb_1ACST'];
