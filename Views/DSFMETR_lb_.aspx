@@ -128,162 +128,7 @@
                                             <th style="width: 9%">Status</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <select TabIndex="1" class="del-status">
-                                                    <option>Please select</option>
-                                                    <option value="TK">TK - Taken from store</option>
-                                                    <option value="PU">PU - Customer pickup</option>
-                                                    <option value="DL">DL - Warehouse delivery</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="2" maxlength="3" style="text-align: right" >
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="3" maxlength="3">
-                                                
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" >
-                                              </div>
-                                            </td>
-											 <td>
-                                                <span></span>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="5" maxlength="20" >
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled" maxlength="3">
-                                              </div>
-                                            </td>
-                                            <td><span></span></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td class="status">
-                                                <select TabIndex="6">
-                                                    <option>Active</option>
-                                                    <option>Cancel</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td class="mdl-data-table__cell--non-numeric">
-                                                <select TabIndex="7" class="del-status">
-                                                    <option>Please select</option>
-                                                    <option value="TK">TK - Taken from store</option>
-                                                    <option value="PU">PU - Customer pickup</option>
-                                                    <option value="DL">DL - Warehouse delivery</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="8" maxlength="3" style="text-align: right">
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="9" maxlength="3">
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="10" maxlength="20">
-                                              </div>
-                                            </td>
-											 <td>
-                                                <span></span>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" TabIndex="11" maxlength="20">
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled" maxlength="3">
-                                              </div>
-                                            </td>
-                                            <td><span></span></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td class="status">
-                                                <select TabIndex="12">
-                                                    <option>Active</option>
-                                                    <option>Cancel</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td class="mdl-data-table__cell--non-numeric">
-                                               <select TabIndex="13" class="del-status">
-                                                    <option>Please select</option>
-                                                    <option value="TK">TK - Taken from store</option>
-                                                    <option value="PU">PU - Customer pickup</option>
-                                                    <option value="DL">DL - Warehouse delivery</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input from-loc" type="text" TabIndex="14" maxlength="3" style="text-align: right">
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="15" maxlength="3">
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="16" maxlength="20">
-                                              </div>
-                                            </td>
-											 <td>
-                                                <span></span>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input" type="text"  TabIndex="17" maxlength="20">
-                                              </div>
-                                            </td>
-                                            <td>
-                                              <div class="mdl-textfield mdl-js-textfield">
-                                                <input class="mdl-textfield__input installation-codes" type="text" disabled="disabled" maxlength="3">
-                                              </div>
-                                            </td>
-                                            <td><span></span></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><i class="material-icons"></i></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td><span></span></td>
-                                            <td class="status">
-                                                <select TabIndex="18">
-                                                    <option>Active</option>
-                                                    <option>Cancel</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                                             
-                                    </tbody>
+                                    
                                 </table>
                                 
                                  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValue">
@@ -1816,104 +1661,118 @@
 				$("[id='CenPH__lb_SFLRCD__lb_2AECD."+targT+"']").trigger(inpe);
 		}
 
+		
+		// Table code starts here
+		$(document).ready(function(e) {
+			if($("#datatableValueInsert").find("tbody").children().length==0)
+			{
+				//console.log("creating new table");
+				createNewBody();
+			}
+			copyData();
+        });
+		
+		 function showTableBody(){
+			 $("#datatableValueInsert tbody").remove();
+			 createNewBody();
+		 }
+		 
+		 function createNewBody() {
+			var body = $('<tbody></tbody>').attr({
+				id: tindex
+			}).appendTo($("#datatableValueInsert"));
+			for (var i = 0; i < 3; i++) {
+				var row = $('<tr></tr>').appendTo($("#datatableValueInsert tbody"));
+
+
+				$('<td><select TabIndex="1" class="del-status"><option></option><option value="TK">TK - Taken from store</option><option value="PU">PU - Customer pickup</option><option value="DL">DL - Warehouse delivery</option><option>?</option></select></td>').appendTo(row);
+
+				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input from-loc" type="text" TabIndex="2" maxlength="3" style="text-align: right" > </div></td>').appendTo(row);
+				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="3" maxlength="3"></div></td>').appendTo(row);
+				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" ></div></td>').appendTo(row);
+				$(' <td><span></span></td>').appendTo(row);
+				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" TabIndex="5" maxlength="20"></div></td>').appendTo(row);
+
+				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
+
+				$('<td><span></span></td>').appendTo(row);
+				$('<td><i class="material-icons"></i></td>').appendTo(row);
+				$('<td><i class="material-icons"></i></td>').appendTo(row);
+				$('<td><span></span></td>').appendTo(row);
+				$('<td><span></span></td>').appendTo(row);
+				$('<td><span></span></td>').appendTo(row);
+				$('<td class="status"> <select TabIndex="6"> <option>Active</option><option>Cancel</option> </select></td>').appendTo(row);
+			}
+		}
+		
+		
+		function copyData(){
+			tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+					
+		    $("#datatableValueInsert tbody").find("tr").each(function(i){
+				$(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
+				$(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
+				$(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
+				$(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
+				$(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
+				$("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
+				$(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				$(this).find("td:eq(2) input").ForceNumericOnly();
+				if($(this).find("td:eq(0) select").val()=="DL"){
+					$(this).find("td:eq(6) input").prop('disabled', false);
+					$(this).find("td:eq(6) div").removeClass("is-disabled");
+					$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				}
+				else 
+				{       
+					$(this).find("td:eq(6) input").val("");  
+					$(this).find("td:eq(6) input").prop('disabled', true);
+					$(this).find("td:eq(6) div").addClass("is-disabled");
+				}
+			});  
+		}        
+		
 		// ASNA Hidden UI Table  index. Used for reference
-       // var tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-       	 var tindex=0;
-   if($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id")!=undefined){
-         tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-   }
+       	var tindex=0;
+		   if($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id")!=undefined){
+				 tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+		   }
         
         // We added this function over here.
         // On Page UP or Page DOWN Button Triggers update data from ASNA Hidden UI Table to New Edit UI Table OR Confirm/Review UI Table
         $(document).keyup(function(e){
 		 // ASNA Hidden UI Table  index. Used for reference
-        tindex = parseInt($("[id^='CenPH__lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-	
             if(e.which== 33 || e.which== 34 ){
-			
-                $("#datatableValueInsert tbody").find("tr").each(function(i){
-				console.log("up" + e.which + $(this).parents("table").attr("id") + " " + tindex );
-                    $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
-                    $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
-                    $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
-                    $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
-                    $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
-                    $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
-                    $(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
-                    $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
-                    //$(this).find("td:eq(6) input").removeAttr("disabled");
-                    $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					$(this).find("td:eq(2) input").ForceNumericOnly();
-					if($(this).find("td:eq(0) select").val()=="DL"){
-						$(this).find("td:eq(6) input").prop('disabled', false);
-						$(this).find("td:eq(6) div").removeClass("is-disabled");
-						$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-				     }else 
-					 {       
-						$(this).find("td:eq(6) input").val("");  
-						$(this).find("td:eq(6) input").prop('disabled', true);
-						$(this).find("td:eq(6) div").addClass("is-disabled");
-					 }
-                    
-                });   
+                showTableBody();
+				copyData();
             }
         });
         
         // Check if Current state of page is Review or Edit
-        if($(".DdsCharField").length > 1) {
-			
+         if($(".DdsCharField").length > 1) {
             // if Current state of page is Edit
             // Hide New Confirm UI Table
             $("#datatableValue").hide();
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
-            // Update any data added to New Edit UI Table to ASNA Hidden UI Table
-            $("input, select").on('change blur keydown',function(){
-                $("#datatableValueInsert tbody").find("tr").each(function(i){
+			  console.log("data insertifdsfng...");
+			$('body').on("change blur keydown", $("input, select"),function(){
+  			 $("#datatableValueInsert tbody").find("tr").each(function(i){
+					console.log("data inserting...");
                     $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
-                    $("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
-                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
+					$("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
+					 $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
                     $("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").val($(this).find("td:eq(3) input").val());
+					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val($(this).find("td:eq(4) span").val());
                     $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val()); 
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
-                   // $("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
-				   if($(this).find("td:eq(0) select").val()=="DL"){
-						$(this).find("td:eq(6) input").prop('disabled', false);
-						$(this).find("td:eq(6) div").removeClass("is-disabled");
-						
-				     }else 
-					 {       
-						$(this).find("td:eq(6) input").val("");  
-						$(this).find("td:eq(6) input").prop('disabled', true);
-						$(this).find("td:eq(6) div").addClass("is-disabled");
-					 }
-                    $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					//alert($("[id$='lb_SFLRCD__lb_2SEL.']").val() + "second");
-					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericWithQuestionMarkOnly();
-                });
-            });
-			//alert($("#datatableValueInsert").is(":visible"));
-			if($("#datatableValueInsert").is(":visible") ){
-				$("#datatableValueInsert tbody").find("tr").each(function(i){
-                    $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
-                    $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
-                    $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
-                    $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
-					$(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
-                    $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
-                    $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
-                    $(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
-                    $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
-                    
-					$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
-                    $(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly(3, 1);
-					$(this).find("td:eq(2) input").ForceNumericOnly();
 					if($(this).find("td:eq(0) select").val()=="DL"){
 						$(this).find("td:eq(6) input").prop('disabled', false);
 						$(this).find("td:eq(6) div").removeClass("is-disabled");
-						$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 				     }else 
 					 {       
 						$(this).find("td:eq(6) input").val("");  
@@ -1921,13 +1780,14 @@
 						$(this).find("td:eq(6) div").addClass("is-disabled");
 					 }
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-                    
-					
+					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericWithQuestionMarkOnly();
+					console.log("data inserting...end");
                 });
+			});
+			if($("#datatableValueInsert").is(":visible") ){
+				copyData();
 			}
-            // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Table
-
-            
+            // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Tabl
         } 
         else {
             // if Current stateof page is Review /Confirm
@@ -1940,17 +1800,14 @@
             var nobutton = $("#no");
 			
 			yesbutton.click(function () {
-                   
-                   $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
-				   // Show New Confirm / Review UI Table 
+                    $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
+				    // Show New Confirm / Review UI Table 
 					$("#datatableValue").show();
-                   $(".OverlayPopupBackground").hide();
-				   $("#confirmprompt").hide();
+                    $(".OverlayPopupBackground").hide();
+				    $("#confirmprompt").hide();
                });
             
-            
             // update data from ASNA Hidden UI Table to Confirm/ Review UI Table
-			
 		
 			$("#datatableValue tbody tr").each(function(i){
 				modelName = $("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text();
@@ -1971,84 +1828,40 @@
 				$("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").text()=="4"?  $(this).find("td:eq(14)").html("Cancelled").css("color", "#e32527"):  $(this).find("td:eq(14)").html("Active").css("color", "#00af00");
 			}); 
 			
-			$(document).keyup(function(e){
-                    if( e.which== 33){S
-                        $("#datatableValueInsert").show();
-                        $("#datatableValue").hide();
-                        var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-                        $("#datatableValueInsert tbody").find("tr").each(function(i){
-                                            $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i+tableindex)+"']").val()); 
-                                            $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i+tableindex)+"']").val());
-                                            $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tableindex)+"']").val()); 
-                                            $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
-                                            $(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
-                                            $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
-                                            $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
-                                            $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
-                                            $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tableindex)+"']").text()); 
-                                            $(this).find("td:eq(5) input").removeAttr("disabled");
-											$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
-                                            $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i+tableindex)+"']").val());
-                                        });  
-              
-                    }
-                    if(e.which ==34){
-                     var tableindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-                     $("#datatableValueInsert tbody").find("tr").each(function(i){
-                                        $(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i+tableindex)+"']").val()); 
-                                        $(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i+tableindex)+"']").val());
-                                        $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tableindex)+"']").val()); 
-                                        $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tableindex)+"']").val());
-                                        $(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tableindex)+"']").val()); 
-                                        $("[id$='lb_SFLRCD__lb_2SEL."+(i+tableindex)+"']").val()=="4"?$(this).find("td:eq(11) select").val("Cancel"):$(this).find("td:eq(11) select").val("Active"); 
-                                        $(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
-										$(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tableindex)+"']").text()); 
-                                        $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tableindex)+"']").text()); 
-                                        $(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tableindex)+"']").text()); 
-                                        $(this).find("td:eq(5) input").removeAttr("disabled");
-                                        $(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i+tableindex)+"']").val());
-                                    });  
-           
-           
-                            }
-                });
-
         }    
         $("#reset").click(function(e) {
-			var tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-			$("#datatableValueInsert tbody").find("tr").each(function(i){
-					
-					$(this).find("td:eq(13) select").val("Active");
-						$(this).find("td:eq(0) select").val("");
-						 $(this).find("td:eq(1) input").val("");
-						 $(this).find("td:eq(2) input").val("");
-						 $(this).find("td:eq(3) input").val("");
-						 $(this).find("td:eq(4) span").text("");
-						 $(this).find("td:eq(5) input").val("");
-						 $(this).find("td:eq(6) input").val("");
-						 $(this).find("td:eq(7) span").text("");
-						 $(this).find("td:eq(8) span").text("");
-						 $(this).find("td:eq(9) span").text("");
-						 $(this).find("td:eq(10) span").text("");
-						 $(this).find("td:eq(11) span").text("");
-					 });  
-
-				 $("[id^='CenPH__lb_SFLRCD']").find("input").each(function(i){
-					// alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
-						$("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
-						$("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
-						$("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
-						$("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val("");
-						$("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val(""); 
-						$("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val(""); 
-						$("[id$='lb_SFLRCD__lb_2AECD."+(i+ tindex)+"']").val("");
-						$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text("");
-						 $("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text(" ");
-						$("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text(" ");
-						$("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text(" ")
-					});
-
-                    
+			$("[id^='CenPH__lb_SFLRCD']").find("input,select").each(function(i){
+				// alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
+                    $("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val("");
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val(""); 
+                    $("[id$='lb_SFLRCD__lb_2AECD."+(i+ tindex)+"']").val("");
+					 $("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val("");
+					 $("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").val(" ");
+					$("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").val(" ");
+					$("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").val(" ")
+                });
+				 
+			 $("#datatableValueInsert tbody").find("tr").each(function(i){
+				$(this).find("td:eq(13) select").val("Active");
+					$(this).find("td:eq(0) select").val("");
+					 $(this).find("td:eq(1) input").val("");
+					 $(this).find("td:eq(2) input").val("");
+					 $(this).find("td:eq(3) input").val("");
+					 $(this).find("td:eq(4) span").text("");
+					 $(this).find("td:eq(5) input").val("");
+					 $(this).find("td:eq(6) input").val("");
+					 $(this).find("td:eq(7) span").text("");
+					 $(this).find("td:eq(8) span").text("");
+					 $(this).find("td:eq(9) span").text("");
+					 $(this).find("td:eq(10) span").text("");
+					 $(this).find("td:eq(11) span").text("");
+		           		
+					 
+			 });   
         });
 		 $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
          $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");

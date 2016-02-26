@@ -106,7 +106,6 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
 <section class="add-item">
   <div class="add-item-wrapper">
