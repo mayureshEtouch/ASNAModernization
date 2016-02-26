@@ -112,6 +112,7 @@
 }
 .mdl-layout__content {
   height: auto;
+  margin-bottom: 15px;
 }
  /* form class ends here */
 tr.selected {
