@@ -87,7 +87,7 @@
                                         <th>Expected Arrival</th>
                                         <th>Quantity</th>
                                         <th>Type</th>
-                                        <th>Serail Number (Exception Items)</th>
+                                        <th>Serial Number (Exception Items)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -100,7 +100,7 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col pull-right modal-button-container">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -108,10 +108,11 @@
                 </div>
             </section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+        
     </div>
+    <div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  IN: DSP Incoming Transfer Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
