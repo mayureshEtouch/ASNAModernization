@@ -109,7 +109,8 @@
     </main>
      
         </div>
-    <!--div id="modal" class="simplePopup"></div-->
+    <!-- <div id="modal" class="simplePopup"></div> -->
+
      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
         <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
         <div class="button-container">
@@ -119,6 +120,10 @@
     </div>
     
         <style>
+        body{
+          font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif !important;
+          font-size: 13px;
+        }
         #wrapper {
             width: 100% !important;
         }
