@@ -8,7 +8,10 @@ jQuery.fn.ForceNumericOnly =
     function() {
         return this.each(function() {
             $(this).keydown(function(e) {
-                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                if(e.shiftKey && e.keyCode === 9) {
+                    return true;
+                }
+                else if (e.shiftKey || e.ctrlKey || e.altKey) {
                     return false;
                 } else {
                     var key = e.keyCode;
