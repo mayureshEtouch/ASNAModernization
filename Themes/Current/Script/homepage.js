@@ -3,7 +3,7 @@ var setHomePage = function() {
         var mdlColumnHeight;
 
         function columnHeight() {
-            mdlColumnHeight = ($(window).height() - ($('header').height() + $('.copyright').height())) / 2;
+            mdlColumnHeight = ($(window).height() - ($('.copyright').height())) / 2;
             $('.homepage-content .mdl-cell').css("height", mdlColumnHeight);
         }
         $(window).resize(function() {
