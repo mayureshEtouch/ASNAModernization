@@ -946,6 +946,7 @@ body .ui-tooltip {
 .ui-datepicker-prev-hover  .ui-icon-circle-triangle-w,
 .ui-datepicker-next-hover  .ui-icon-circle-triangle-e {
 	background-image: url(images/cal-hover-icon.png) !important;
+	cursor: pointer;
 }
 .ui-state-highlight .ui-icon {
 	background-image: url(images/ui-icons_228ef1_256x240.png);
@@ -956,8 +957,8 @@ body .ui-tooltip {
 }
 
 /* positioning */
-.ui-datepicker-prev-hover  .ui-icon-circle-triangle-w{background-position: -13px 2px;}
-.ui-datepicker-next-hover  .ui-icon-circle-triangle-e{background-position: 2px 2px;}
+.ui-datepicker-prev-hover  .ui-icon-circle-triangle-w{background-position: -12px 3px;}
+.ui-datepicker-next-hover  .ui-icon-circle-triangle-e{background-position: 1px 3px;}
 .ui-icon-blank { background-position: 16px 16px; }
 .ui-icon-carat-1-n { background-position: 0 0; }
 .ui-icon-carat-1-ne { background-position: -16px 0; }

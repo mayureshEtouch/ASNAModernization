@@ -44,7 +44,7 @@
             <section class="time-date">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
-                        <span class="heading-h1">Display Completed Order Header</span>
+                        <span class="heading-h1">Display Customer Matched Detail</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CAB6D1R</span>
