@@ -1,9 +1,13 @@
 ﻿function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId) {
-    $("body").css({ "background-color": "#FFFFFF" });
+    $("body").css({
+        "background-color": "#FFFFFF"
+    });
     $('body').on('click', '#' + tableId + ' tbody tr', function() {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-        $(this).css({ "background-color": "#d8d8d8" });
+        $(this).css({
+            "background-color": "#d8d8d8"
+        });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
@@ -12,273 +16,316 @@
         var count = 1;
         var recordCount = $('div#' + recordConatainer + '>div[id^="' + recordConatainer + '"]').length - 1;
         $('div#' + recordConatainer + '>div[id^="' + recordConatainer + '"]').each(function() {
-            if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                var divid = $(this);
-                var selectId = $(divid.children('select')).attr('id')
-                var tr = "";
-                if (count === 1 && direction === "top-to-bottom") {
-                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                } else if (count === recordCount && direction === "bottom-to-top") {
-                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                } else {
-                    tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                }
-                var strtd = "";
-                divid.find('span').map(function(i, e) {
-                    var id = $(e).attr("id");
-                    if (id.indexOf(ignoreSapn) === -1) {
-                        strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" :$(e).text()) + "</td>";
+                if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                    var divid = $(this);
+                    var selectId = $(divid.children('select')).attr('id')
+                    var tr = "";
+                    if (count === 1 && direction === "top-to-bottom") {
+                        tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    } else if (count === recordCount && direction === "bottom-to-top") {
+                        tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    } else {
+                        tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
                     }
-                });
-                var strclosetr = "</tr>";
+                    var strtd = "";
+                    divid.find('span').map(function(i, e) {
+                            var id = $(e).attr("id");
+                            if (id.indexOf(ignoreSapn) === -1) {
+                                strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" : $(e).text()) + "</td>";
+                                var ignoreFlag = 1;
+                                //Check list of spans to ignore
+                                if (Array.isArray(ignoreSapn)) {
+                                    for (var ig = 0; ig < ignoreSapn.length; ig++) {
+                                        if (id.indexOf(ignoreSapn[ig]) === -1) {
+                                            ignoreFlag = 0;
+                                        } else {
+                                            ignoreFlag = 1;
+                                            break;
+                                        }
+                                    }
+                                } else {
+                                    if (id.indexOf(ignoreSapn) === -1) {
+                                        ignoreFlag = 0;
+                                    }
+                                }
+                                if (!ignoreFlag) {
+                                    strtd = strtd + "<td>" + ($(e).text()) + "</td>";
+                                }
+                                //strtd = strtd + "<td>" + ($(e).text()) + "</td>";
+                            });
+                        var strclosetr = "</tr>";
 
-                $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
-                if (direction === "top-to-bottom") {
-                    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
-                } else {
-                    $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
-                }
-            }
-        });
-        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-    }
-    generateTable("top-to-bottom");
-    //Handle Page Up and Page Down events
-    $('body').on('keyup', function(event) {
-        var keycode = event.keycode || event.which;
-        if (keycode === 33) {
-            _00("PgUp", event);
-            generateTable("bottom-to-top");
-        } else if (keycode === 34) {
-            _00("PgDn", event);
-            generateTable("top-to-bottom");
-        }
-        return;
-    });
-    var selectCusotmer = function(row, value, event) {
-        var selectId = $(row).data('selectid');
-        a = selectId.split(".");
-        $("#" + a[0] + "\\." + a[1]).val(value);
-        _00('Enter', event);
-    }
-
-    //Select customer on double click
-    $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
-        selectCusotmer(this, "1", event);
-    });
-    $("#" + selectRowId).click(function(event) {
-        var row = $("#" + tableId + " tbody tr.selected");
-        selectCusotmer(row, "1", event);
-    });
-    // Set first record as default selected
-    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
-    jQuery.tableNavigation({
-        "onRowChange": function(output) {
-            if (output) {
-                var selectId = $(output.row).data('selectid');
-                if (output.r && output.keycode === "40") {
-                    _00("PgDn", event);
-                    generateTable("top-to-bottom");
-                } else if (output.r && output.keycode === "38" && !selectId) {
-                    _00("PgUp", event);
-                    generateTable("bottom-to-top");
-                } else {
-                    $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                    $(output.row).css({ "background-color": "#d8d8d8" });
-                }
-            }
-        }
-    });
-    // To fixed table header
-    $(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
-}
-
-
-//Special case for select installations screen
-function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordConatainer, ignoreSapn, selectRowId) {
-    $("body").css({ "background-color": "#FFFFFF" });
-    $('body').on('click', '#' + tableId + ' tbody tr', function() {
-        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-        $(this).css({ "background-color": "#d8d8d8" });
-        $("div.icon-container").removeClass("icon-disable");
-    });
-    /* script for table row starts here */
-    var generateTable = function(direction) {
-        $("#" + tableId + " tbody").empty();
-        var count = 1;
-        var recordCount = $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]').length - 1;
-        $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD').each(function() {
-            if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                var divid = $(this);
-                var selectId = $(divid.children('select')).attr('id')
-                var tr = "";
-                if (count === 1 && direction === "top-to-bottom") {
-                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                } else if (count === recordCount && direction === "bottom-to-top") {
-                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                } else {
-                    tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                }
-                var strtd = "";
-                divid.find('span').map(function(i, e) {
-                    var id = $(e).attr("id");
-					
-                    if (id.indexOf(ignoreSapn) === -1) {
-                        strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" :$(e).text()) + "</td>";
-						
+                        $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
+                        if (direction === "top-to-bottom") {
+                            $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+                        } else {
+                            $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
+                        }
                     }
-                });
-                var strclosetr = "</tr>";
-
-                $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
-                if (direction === "top-to-bottom") {
-                    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
-                } else {
-                    $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
-                }
+                }); $("#" + tableId + " tbody tr:even").css("background-color", "#fff"); $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+        }
+        generateTable("top-to-bottom");
+        //Handle Page Up and Page Down events
+        $('body').on('keyup', function(event) {
+            var keycode = event.keycode || event.which;
+            if (keycode === 33) {
+                _00("PgUp", event);
+                generateTable("bottom-to-top");
+            } else if (keycode === 34) {
+                _00("PgDn", event);
+                generateTable("top-to-bottom");
             }
+            return;
         });
-        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-    }
-    generateTable("top-to-bottom");
-    //Handle Page Up and Page Down events
-    $('body').on('keyup', function(event) {
-        var keycode = event.keycode || event.which;
-        if (keycode === 33) {
-            _00("PgUp", event);
-            generateTable("bottom-to-top");
-        } else if (keycode === 34) {
-            _00("PgDn", event);
-            generateTable("top-to-bottom");
-        }
-        return;
-    });
-    var selectCusotmer = function(row, value, event) {
-        var selectId = $(row).data('selectid');
-        a = selectId.split(".");
-        $("#" + a[0] + "\\." + a[1]).val(value);
-        _00('Enter', event);
-    }
-
-    //Select customer on double click
-    $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
-        selectCusotmer(this, "1", event);
-    });
-    $("#" + selectRowId).click(function(event) {
-        var row = $("#" + tableId + " tbody tr.selected");
-        selectCusotmer(row, "1", event);
-    });
-    // Set first record as default selected
-    $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
-    jQuery.tableNavigation({
-        "onRowChange": function(output) {
-            if (output) {
-                var selectId = $(output.row).data('selectid');
-                if (output.r && output.keycode === "40") {
-                    _00("PgDn", event);
-                    generateTable("top-to-bottom");
-                } else if (output.r && output.keycode === "38" && !selectId) {
-                    _00("PgUp", event);
-                    generateTable("bottom-to-top");
-                } else {
-                    $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                    $(output.row).css({ "background-color": "#d8d8d8" });
-                }
-            }
-        }
-    });
-    // To fixed table header
-    $(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
-}
-
-// To fixed table header
-$(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
-//copy data to and from
-function setHandlers(copyFrom, copyTo, events) {
-    $("#" + copyFrom).on(events, function() {
-        $("#" + copyTo).val($("#" + copyFrom).val());
-    });
-}
-
-function copyData(fields, events) {
-    var dispOnlyFields = fields.displayOnlyFields;
-    var inputFields = fields.inputFields;
-    for (var ele in dispOnlyFields) {
-        var combineFromAll = ele.split("+");
-        var outvalues = "";
-        if (combineFromAll.length > 1) {
-            for (var i = 0; i < combineFromAll.length; i++) {
-                outvalues += $("#" + combineFromAll[i]).html().replace(/&nbsp;/g, "") + "&nbsp;";
-            }
-        } else {
-            if(ele.indexOf("&nbsp;") !== -1) {
-                var id = ele.replace(/&nbsp;/g, "");
-                outvalues += $("#" + id).html().replace(/&nbsp;/g, "");
-                outvalues += "&nbsp;";
+        var selectCusotmer = function(row, value, event) {
+            var selectId = $(row).data('selectid');
+            if (selectid) {
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
             } else {
-                outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+                return;
             }
-            
-        }
-        $("#" + dispOnlyFields[ele]).html(outvalues);
-    }
-    for (var ele in inputFields) {
-        if ($("#" + ele).length > 0) {
-            $("#" + inputFields[ele]).val($("#" + ele).val().replace(/\s/g, ""));
-            setHandlers(inputFields[ele], ele, events);
+
         }
 
+        //Select customer on double click
+        $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
+            selectCusotmer(this, "1", event);
+        });
+        $("#" + selectRowId).click(function(event) {
+            var row = $("#" + tableId + " tbody tr.selected");
+            selectCusotmer(row, "1", event);
+        });
+        // Set first record as default selected
+        $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+        jQuery.tableNavigation({
+            "onRowChange": function(output) {
+                if (output) {
+                    var selectId = $(output.row).data('selectid');
+                    if (output.r && output.keycode === "40") {
+                        _00("PgDn", event);
+                        generateTable("top-to-bottom");
+                    } else if (output.r && output.keycode === "38" && !selectId) {
+                        _00("PgUp", event);
+                        generateTable("bottom-to-top");
+                    } else {
+                        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                        $(output.row).css({
+                            "background-color": "#d8d8d8"
+                        });
+                    }
+                }
+            }
+        });
+        // To fixed table header
+        $(".fixed-table-container-inner .th-inner").animate({
+            width: "300px"
+        }, 500);
     }
-}
 
-/*Setting up date & Time*/
-function setDateTime(dateFieldId, timeFieldId) {
-    $("[name='date']").text($("[id$=" + dateFieldId + "]").text());
-    $("[name='time']").text($("[id$=" + timeFieldId + "]").text());
-}
-/* Onclick button triggering function pressing F keys*/
-$(document).ready(function() {
-    $('body').on('click', '.mdl-button, .close-icon', function(event) {
-        console.log('clciking...');
-        var fkey = $(this).attr('event-data');
-        if (fkey != undefined && fkey != '') {
-            _00(fkey, event);
+
+    //Special case for select installations screen
+    function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordConatainer, ignoreSapn, selectRowId) {
+        $("body").css({
+            "background-color": "#FFFFFF"
+        });
+        $('body').on('click', '#' + tableId + ' tbody tr', function() {
+            $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+            $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+            $(this).css({
+                "background-color": "#d8d8d8"
+            });
+            $("div.icon-container").removeClass("icon-disable");
+        });
+        /* script for table row starts here */
+        var generateTable = function(direction) {
+            $("#" + tableId + " tbody").empty();
+            var count = 1;
+            var recordCount = $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]').length - 1;
+            $('table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD').each(function() {
+                if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                    var divid = $(this);
+                    var selectId = $(divid.children('select')).attr('id')
+                    var tr = "";
+                    if (count === 1 && direction === "top-to-bottom") {
+                        tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    } else if (count === recordCount && direction === "bottom-to-top") {
+                        tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    } else {
+                        tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
+                    }
+                    var strtd = "";
+                    divid.find('span').map(function(i, e) {
+                        var id = $(e).attr("id");
+
+                        if (id.indexOf(ignoreSapn) === -1) {
+                            strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" : $(e).text()) + "</td>";
+
+                        }
+                    });
+                    var strclosetr = "</tr>";
+
+                    $("#" + tableId + " tbody").append(tr + strtd + strclosetr);
+                    if (direction === "top-to-bottom") {
+                        $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+                    } else {
+                        $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
+                    }
+                }
+            });
+            $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+            $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
         }
+        generateTable("top-to-bottom");
+        //Handle Page Up and Page Down events
+        $('body').on('keyup', function(event) {
+            var keycode = event.keycode || event.which;
+            if (keycode === 33) {
+                _00("PgUp", event);
+                generateTable("bottom-to-top");
+            } else if (keycode === 34) {
+                _00("PgDn", event);
+                generateTable("top-to-bottom");
+            }
+            return;
+        });
+        var selectCusotmer = function(row, value, event) {
+            var selectId = $(row).data('selectid');
+            a = selectId.split(".");
+            $("#" + a[0] + "\\." + a[1]).val(value);
+            _00('Enter', event);
+        }
+
+        //Select customer on double click
+        $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
+            selectCusotmer(this, "1", event);
+        });
+        $("#" + selectRowId).click(function(event) {
+            var row = $("#" + tableId + " tbody tr.selected");
+            selectCusotmer(row, "1", event);
+        });
+        // Set first record as default selected
+        $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+        jQuery.tableNavigation({
+            "onRowChange": function(output) {
+                if (output) {
+                    var selectId = $(output.row).data('selectid');
+                    if (output.r && output.keycode === "40") {
+                        _00("PgDn", event);
+                        generateTable("top-to-bottom");
+                    } else if (output.r && output.keycode === "38" && !selectId) {
+                        _00("PgUp", event);
+                        generateTable("bottom-to-top");
+                    } else {
+                        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                        $(output.row).css({
+                            "background-color": "#d8d8d8"
+                        });
+                    }
+                }
+            }
+        });
+        // To fixed table header
+        $(".fixed-table-container-inner .th-inner").animate({
+            width: "300px"
+        }, 500);
+    }
+
+    // To fixed table header
+    $(".fixed-table-container-inner .th-inner").animate({
+        width: "300px"
+    }, 500);
+    //copy data to and from
+    function setHandlers(copyFrom, copyTo, events) {
+        $("#" + copyFrom).on(events, function() {
+            $("#" + copyTo).val($("#" + copyFrom).val());
+        });
+    }
+
+    function copyData(fields, events) {
+        var dispOnlyFields = fields.displayOnlyFields;
+        var inputFields = fields.inputFields;
+        for (var ele in dispOnlyFields) {
+            var combineFromAll = ele.split("+");
+            var outvalues = "";
+            if (combineFromAll.length > 1) {
+                for (var i = 0; i < combineFromAll.length; i++) {
+                    outvalues += $("#" + combineFromAll[i]).html().replace(/&nbsp;/g, "") + "&nbsp;";
+                }
+            } else {
+                if (ele.indexOf("&nbsp;") !== -1) {
+                    var id = ele.replace(/&nbsp;/g, "");
+                    outvalues += $("#" + id).html().replace(/&nbsp;/g, "");
+                    outvalues += "&nbsp;";
+                } else {
+                    outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+                }
+
+            }
+            $("#" + dispOnlyFields[ele]).html(outvalues);
+        }
+        for (var ele in inputFields) {
+            if ($("#" + ele).length > 0) {
+                $("#" + inputFields[ele]).val($("#" + ele).val().replace(/\s/g, ""));
+                setHandlers(inputFields[ele], ele, events);
+            }
+
+        }
+    }
+
+    /*Setting up date & Time*/
+    function setDateTime(dateFieldId, timeFieldId) {
+        $("[name='date']").text($("[id$=" + dateFieldId + "]").text());
+        $("[name='time']").text($("[id$=" + timeFieldId + "]").text());
+    }
+    /* Onclick button triggering function pressing F keys*/
+    $(document).ready(function() {
+        $('body').on('click', '.mdl-button, .close-icon', function(event) {
+            console.log('clciking...');
+            var fkey = $(this).attr('event-data');
+            if (fkey != undefined && fkey != '') {
+                _00(fkey, event);
+            }
+        });
     });
-});
 
-$(document).ready(function() {
-    // Error popup
-    var hideMessage = "Value not found in list - Use '?' to determine allowed values.";
-    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1) {
+    $(document).ready(function() {
+        // Error popup
+        var hideMessage = "Value not found in list - Use '?' to determine allowed values.";
+        if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1) {
 
-        var errorMsg = "";
-        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
-            errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+            var errorMsg = "";
+            if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+                errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+            }
+            if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+                errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+            }
+            $('#modal1').html(errorMsg);
+            $('#modal1').simplePopup();
         }
-        if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
-            errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+
+
+        if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1)) {
+
+            var errorMsg = "";
+            if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+                errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+            }
+            if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
+                errorMsg += $("#MsgPH_DdsMessagePanel1").text();
+            }
+            $('#modal').html(errorMsg);
+            $('#modal').simplePopup();
         }
-        $('#modal1').html(errorMsg);
-        $('#modal1').simplePopup();
+    })
+
+    var doAction = function(row, value, event) {
+        var selectId = $(row).data('selectid');
+        a = selectId.split(".");
+        $("#" + a[0] + "\\." + a[1]).val(value);
+        _00('Enter', event);
     }
-
-
-    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1)) {
-
-        var errorMsg = "";
-        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
-            errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
-        }
-        if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
-            errorMsg += $("#MsgPH_DdsMessagePanel1").text();
-        }
-        $('#modal').html(errorMsg);
-        $('#modal').simplePopup();
-    }
-})

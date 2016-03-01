@@ -22,7 +22,185 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+            <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Order Payment Data</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSN1DTR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider">
+
+                                <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                                <li class="progress-bar-divider">
+
+                                    <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                                    <li class="progress-bar-divider">
+
+                                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <span id="custom_slash" style="display:none;">/</span>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-txt" id="cust-name"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Order #:</span>
+                            <span class="summary-txt" id="order-number"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Version #:</span>
+                            <span class="summary-txt" id="version-number"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data">
+                <div class="form-data-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Purchased amount:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="pur-total"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Miscellaneous:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="misc"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Tax rate:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="tax-rate"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Tax amount:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="tax-amount"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Order total:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="order-total"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Payment total:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="payment-total"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Balance due:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="bal-due"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Total receivables:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="total-rec"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="fixed-table-container">
+                            <div class="header-background"></div>
+                            <div class="fixed-table-container-inner">
+                                <table cellspacing="0" cellpadding="0" border="0" id="order-payment-data" class="navigateable">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 20%">
+                                                <div class="th-inner">Pmt Mth</div>
+                                            </th>
+                                            <th style="width: 20%">
+                                                <div class="th-inner">Amount</div>
+                                            </th>
+                                            <th style="width: 20%">
+                                                <div class="th-inner">Reference</div>
+                                            </th>
+                                            <th style="width: 20%">
+                                                <div class="th-inner">Approval Code</div>
+                                            </th>
+                                            <th style="width:20%">
+                                                <div class="th-inner">Version Number</div>
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                        id="taxDetails">Tax Details</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Modified HTML code ends here -->
+    <div id="modal" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  OE: DTR Dsp Ord Pymts     Display transactions                                                                   --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -925,4 +1103,142 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #fkeys, #showDiagnostics, #footer {
+                display: none;
+            }
+            #main-content {
+                width: 100%;
+            }
+            .fixed-table-container td {
+                font-size: 12px;
+            }
+        
+          .fixed-table-container th {
+              font-size: 13px;
+          }
+          
+          td {
+              border-bottom: 1px solid #e5e5e5;
+              padding: 5px 10px;
+          }
+          
+          td + td {
+              border-left: 1px solid #e5e5e5;
+          }
+          
+          th {
+              padding: 0 10px;
+          }
+          
+        .header-background {
+            background: #ffffff;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #ffffff 57%, #eff0f1 99%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #ffffff 57%, #eff0f1 99%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #ffffff 57%, #eff0f1 99%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eff0f1', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        .fixed-table-container {
+            width: 100%;
+            height: 200px;
+            margin: 0px auto 10px;
+            background-color: white;
+            /* above is decorative or flexible */
+            position: relative;
+            /* could be absolute or relative */
+            padding-top: 30px;
+            /* height of header */
+        }
+        
+        .fixed-table-container-inner {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+        }
+        
+        .header-background {
+            background-color: #D5ECFF;
+            height: 30px;
+            /* height of header */
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        table {
+            background-color: white;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+        .fixed-table-container .th-inner {
+            position: absolute;
+            top: 0;
+            line-height: 30px;
+            /* height of header */
+            text-align: left;
+            /**/
+            border-left: 1px solid #e5e5e5;
+            padding-left: 10px;
+            margin-left: -10px;
+        }
+        
+        .first .th-inner {
+            border-left: none;
+        }
+        /* classes required for this page starts here */
+        
+        .fixed-table-container {
+            padding-top: 60px;
+        }
+        
+        .header-background {
+            height: 60px;
+        }
+        /* classes required for this page ends here */
+        </style>
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant22": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2ALTX": "cust-name",
+                    "CenPH__lb_SFLCTL__lb_2BANB": "order-number",
+                    "CenPH__lb_SFLCTL__lb_2EXNB": "version-number",
+                    "CenPH__lb_SFLCTL__lb_CEFVA": "pur-total",
+                    "CenPH__lb_SFLCTL__lb_2ANPR": "misc",
+                    "CenPH__lb_SFLCTL_V2ACPC": "tax-rate",
+                    "CenPH__lb_SFLCTL__lb_CB8VA": "tax-amount",
+                    "CenPH__lb_SFLCTL__lb_CAQPR": "order-total",
+                    "CenPH__lb_SFLCTL__lb_CBMVA": "payment-total",
+                    "CenPH__lb_SFLCTL__lb_CBNVA": "bal-due",
+                    "CenPH__lb_SFLCTL__lb_CHRVA": "total-rec"
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                $('body').on('click', '#previous', function (event) {
+                    _00('F12', event);
+                });
+                $('body').on('click', '#next', function (event) {
+                    _00('Enter', event);
+                });
+                $('body').on('click', '#taxDetails', function (event) {
+                    _00('F6', event);
+                });
+                copyData(copyToAndFrom, "");
+                $("#time").prepend("&nbsp;");
+                generateTableAndApplyInfiniteScroll("order-payment-data", "CenPH__lb_SFLRCD", "NONE", "NONE");
+
+            });
+        </script>
     </asp:Content>
