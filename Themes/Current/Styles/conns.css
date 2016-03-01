@@ -1330,3 +1330,7 @@ tr.selected {
 .filter-field-container .summary-table-title {
 	font-size: 13px;
 }
+
+body div, body span, body textarea {
+    outline: none !important;
+}
