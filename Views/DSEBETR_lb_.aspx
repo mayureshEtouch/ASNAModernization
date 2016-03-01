@@ -84,19 +84,19 @@
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Purchase Total:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CEFVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Tax Amount:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CBLVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Balance Due:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col amount-text">
                             <span id="CenPH_CBNVA" class="form-text pull-right"></span>
                         </div>
                     </div>
@@ -104,13 +104,13 @@
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Miscellaneous:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_1ANPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Order Total:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CAQPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
@@ -118,7 +118,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                                <input type="text" id="requestdate" name="date" style="width: 164px;"><i class="material-icons calender-icon" id="requestcal"></i>
+                                <input type="text" id="requestdate" name="date" style="width: 148px;"><i class="material-icons calender-icon" id="requestcal"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>
                         </div>
@@ -127,13 +127,13 @@
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Effective Tax Rate:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col ">
                             <span class="form-label">Payment Total:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CBMVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
