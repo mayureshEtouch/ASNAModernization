@@ -634,6 +634,10 @@ textarea {
 .form-data-wrapper .full-input {
 	width: 100%;
 }
+.form-data-wrapper .amount-text{
+	padding-right: 4%;
+	text-align: right;
+}
 .shipping-add input {
 	margin-bottom: 4px;
 }
