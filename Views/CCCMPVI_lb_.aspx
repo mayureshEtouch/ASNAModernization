@@ -9,6 +9,9 @@
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -65,7 +68,11 @@
                               </div>
                               <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                   <span class="form-text">
-                                  <input id="ssn" name="ssn" type="text" class="mdl-textfield__input" size="15"/></span>
+                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" />
+                                  <span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                                  </span>
+                                  <input type="hidden" id="dummy-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
+                                  <!-- <span></span> -->
                               </div>
                           </div>
                             </div>
@@ -79,7 +86,7 @@
                   <span class="error"></span>
                 </div> 
                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop pull-right" style="padding-bottom:0">
-                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter">Submit</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
                 </div>
               </div>
             </div>
@@ -138,14 +145,38 @@
         #CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
             width:100% !important;
         }
+        .error {
+            color: #ff0000;
+            font-size: 11px;
+            width: auto !important;
+        }
+        label.error {
+            margin-left: 0px;
+        }
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
+        $("#ssn-show").on("mousedown", function() {
+            var dummyValue = $("#ssn").val();
+            $("#ssn").val($("#dummy-ssn").val());
+            $("#dummy-ssn").val(dummyValue);
+        });
+        $("#ssn-show").on("mouseup", function() {
+            var orgValue = $("#ssn").val();
+            $("#ssn").val($("#dummy-ssn").val());
+            $("#dummy-ssn").val(orgValue);
+        });
         $('.error').text($('#MsgPH_DdsMessagePanel1').text());
         $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_1A4NB').val());
         $('body').on('keyup change', '#ssn', function (event) {
           $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($('#ssn').val());
         });
+
+        $('body').on('click', '#next', function (event) {
+            $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($("#dummy-ssn").val());
+            _00("Enter", event);
+        });
+
       });
     </script>
         <div id="Div1" style="display:none;">

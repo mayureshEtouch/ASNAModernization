@@ -5,8 +5,6 @@
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
     <%-- Migrated on 1/26/2016 at 1:42 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
     <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSLOADR# --%>
-    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/homepage.js")%>"></script>
     <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/Themes/Current/Styles/homepage.css")%>" />
 </asp:Content>

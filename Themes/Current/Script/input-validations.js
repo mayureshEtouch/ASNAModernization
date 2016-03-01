@@ -172,6 +172,23 @@ jQuery.validator.addMethod("validateSSN", function(value, element) {
     return /^(([0-9]{3})(\-[0-9]{2})(\-[0-9]{4}))$/.test(value);
 }, 'Please enter valid SSN');
 
+//Validate SSN using plugin
+jQuery.validator.addMethod("validateSSNLength", function(value, element) {
+    var eleId = $(element).attr("id");
+    if(/^(([0-9]{9}))$/.test(value)) {
+        $("#dummy-" + eleId).val($(element).val());
+        setTimeout(function() {
+            var val = $(element).val();
+            $(element).val("*****"+val.substr(5,4));
+        }, 10);
+        return true;
+    } else {
+        $("#dummy-" + eleId).val("");
+        return false;
+    }
+}, '');
+
+
 // Numeric with two decimal precisions
 jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPrecision) {
     var beforePrecisonRx = new RegExp("^([0-9]{1," + beforePrecision + "})$");
