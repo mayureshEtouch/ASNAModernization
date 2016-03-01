@@ -40,7 +40,7 @@
                 <span class="mdl-layout-title logo-icon"></span>
                 <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
-                <span class="close-icon"><i class="material-icons md-15"></i></span>
+                <span class="close-icon" event-data="F12"><i class="material-icons close md-15"></i></span>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -72,7 +72,7 @@
                     <div class="button-container" style="padding-bottom:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter">Submit</span>
                             </div>
                         </div>
                     </div>
@@ -369,6 +369,7 @@
               #__Page_PopUp {
                 left: 35% !important;
                 min-width: 450px !important;
+                top: 25% !important;
             }
 
             #__Page_PopUp > tr:first-child {
@@ -377,6 +378,7 @@
 
             #__Page_PopUp .DdsInlinePopUpTitle {
                 height: 1px !important;
+                
             }
             .modal-dialog-container {
                 width: 100%;
@@ -420,12 +422,12 @@
                     _00('Enter', event);
                 });
 
-                $('body').on('click', '.close-icon', function (event) {
+                /*$('body').on('click', '.close-icon', function (event) {
                     _00('F12', event);
                 });
                 $('body').on('click', '#next', function (event) {
                     _00('Enter', event);
-                });
+                });*/
                 $("#CenPH__lb_RCDDTL1__lb_1AJCD").appendTo("#emp-id");
             });
         </script>
