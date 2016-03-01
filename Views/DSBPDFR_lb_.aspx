@@ -611,11 +611,6 @@
             //Set name
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
             $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
-            //$("#name").val($('#CenPH__lb_SFLCTL__lb_2ALTX').val());
-            //$("#name").on("keyup change click", function () {
-            //    $("#CenPH__lb_SFLCTL__lb_2ALTX").val($("#name").val());
-            //});
-
             $('body').on('click', '#customerName tbody tr', function () {
                 $("#customerName tbody tr:even").css("background-color", "#fff");
                 $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
@@ -625,10 +620,10 @@
 				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
 				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
                 /*Setting selected row which will be useful while hitting enter button*/
-                var row = $("#customerName tbody tr.clicked");
-                var selectId = $(row).data('selectid');
-                a = selectId.split(".");
-                $("#" + a[0] + "\\." + a[1]).val(1);
+                //var row = $("#customerName tbody tr.clicked");
+                //var selectId = $(row).data('selectid');
+                //a = selectId.split(".");
+                //$("#" + a[0] + "\\." + a[1]).val(1);
                 /*Setting selected row*/
             });
 
@@ -736,18 +731,6 @@
                 }
             });
 
-            //Enter event
-            /*$("document").keypress(function(event){
-                console.log('event fired!!!');
-                event.preventDefault();
-                var keycode = (event.keyCode ? event.keyCode : event.which);
-                if(keycode == '13'){
-                    var row = $("#customerName tbody tr.clicked");
-                    if(row.length>0){
-                        selectCusotmer(row, "1", event);    
-                    }
-                }
-            });*/
             //Next button click handler
             $("#next").click(function (event) {
                 var row = $("#customerName tbody tr.selected");

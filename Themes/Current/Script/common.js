@@ -221,7 +221,11 @@ function copyData(fields, events) {
                 outvalues += $("#" + id).html().replace(/&nbsp;/g, "");
                 outvalues += "&nbsp;";
             } else {
-                outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+                if($("#" + ele).length > 0) {
+                    outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+                } else {
+                    outvalues = "";
+                }
             }
             
         }

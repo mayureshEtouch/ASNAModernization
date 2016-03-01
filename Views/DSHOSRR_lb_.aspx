@@ -59,7 +59,7 @@
                         <div class="fixed-table-container">
 						   <div class="header-background"> </div>
 						   <div class="fixed-table-container-inner">
-							<table cellspacing="0" cellpadding="0" border="0" id="salesperson">
+							<table cellspacing="0" cellpadding="0" border="0" id="salesperson" class="navigateable">
 							 <thead>
 							  <tr data-myval="">
 							   <th class="first"><div class="th-inner">Code</div></th>
