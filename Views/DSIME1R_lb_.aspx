@@ -1256,6 +1256,7 @@
         */
         if($("#suffix >  option").length > 1){
             $("#suffix").removeClass('hide');
+            $("#suffix option[value=' ']").insertBefore("#suffix option:eq(0)");
         }
         /*
         End Hiding suffix dropdown if no value found
