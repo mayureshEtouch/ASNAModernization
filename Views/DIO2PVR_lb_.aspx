@@ -39,7 +39,7 @@
                 <span class="mdl-layout-title logo-icon"></span>
                 <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
-                <span class="close-icon"><i class="material-icons md-15"></i></span>
+                <span class="close-icon" event-data="F12"><i class="material-icons close md-15"></i></span>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -57,12 +57,12 @@
                 <div class="form-data-wrapper" style="padding-bottom:0;">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col">
-                            <span class="form-label" style="margin: 0;" id="header-text">Address was confirmed, Only primary, Secondary missing E</span>
+                            <span class="form-label" style="margin: 0;" id="header-text"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                    <span class="form-label" style="margin: 7px 10px 0 0">OK to Update . . . .</span>
+                                    <span class="form-label" id="ok-to-update" style="margin: 7px 10px 0 0"></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                     <span class="form-text" id="select-value"></span>
@@ -73,7 +73,7 @@
                     <div class="button-container" style="padding-bottom: 5px;">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -312,6 +312,8 @@
             }
               #__Page_PopUp {
                 left: 35% !important;
+                min-width: 450px !important;
+                top: 25% !important;
             }
 
             #__Page_PopUp > tr:first-child {
@@ -319,7 +321,8 @@
             }
 
             #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 0;
+                height: 0px !important;
+                display: none;
             }
             .modal-dialog-container {
                 width: 100%;
@@ -341,18 +344,20 @@
         <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
-                    "CenPH__lb_RCDDTL1__lb_DBGNA": "header-text"
+                    //"CenPH__lb_RCDDTL1__lb_DBGNA": "header-text",
+                    "CenPH_DdsConstant1": "ok-to-update"
                 },
                 "inputFields": {
                 }
             }
             $(document).ready(function () {
-                $('body').on('click', '.close-icon', function (event) {
+              $("#header-text").text($("#CenPH__lb_RCDDTL1__lb_DBGNA").text());
+               /* $('body').on('click', '.close-icon', function (event) {
                     _00('F12', event);
-                });
-                $('body').on('click', '#next', function (event) {
+                });*/
+                /*$('body').on('click', '#next', function (event) {
                     _00('Enter', event);
-                });
+                });*/
                 copyData(copyToAndFrom);
                 $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
             });

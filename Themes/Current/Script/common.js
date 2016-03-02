@@ -221,7 +221,11 @@ function copyData(fields, events) {
                 outvalues += $("#" + id).html().replace(/&nbsp;/g, "");
                 outvalues += "&nbsp;";
             } else {
-                outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+                if($("#" + ele).length > 0) {
+                    outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
+                } else {
+                    outvalues = "";
+                }
             }
             
         }
@@ -282,3 +286,14 @@ $(document).ready(function() {
         $('#modal').simplePopup();
     }
 })
+
+function makeSelectDescriptive(selectId,values,descriptions){
+    if(values && descriptions && values.length > 0 && descriptions.length>0){
+        $("#"+selectId+" > option").map(function(index){
+            if(values.indexOf($(this).val().trim()) != -1){
+                $(this).text(values[index]+" - "+descriptions[index]);
+            }
+            return this;
+        })
+    }
+}

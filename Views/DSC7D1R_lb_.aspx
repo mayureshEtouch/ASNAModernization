@@ -70,7 +70,6 @@
                             <span class="summary-title">Name</span>
                             <span id="cus_name" class="summary-txt"></span>
                         </div>
-
                     </div>
                 </div>
             </section>

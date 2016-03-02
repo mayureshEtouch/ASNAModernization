@@ -68,7 +68,7 @@
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <select name="type" id="type"></select>
                                         <!-- <input type="text" id="type" name="type" style="width: 50px;" value=""> -->
-                                        <span class="input-side-gutter-space" id="typeText"></span> </span>
+                                        <span class="input-side-gutter-space" id="typeText"  style="display: none;"></span> </span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
@@ -1198,13 +1198,32 @@
             $(new_fields[i]).text($.trim($(old_fields[i]).text()));
           }else if($(new_fields[i]) && $(new_fields[i]).is('select')){
             if($(old_fields[i]).is('select')){
-              var $options = $(old_fields[i]+" > option").clone();
+                //var $options = $(old_fields[i]+" > option").clone();
+                var $options = $(old_fields[i]+" > option").clone().map(function(index){
+                  if($(this).val()=='?' && new_fields[i]=='#mailingList'){
+                    return this;
+                  }else if($(this).val()!='?'){
+                      if($(this).val().trim() ==""){
+                          $(this).val(" ").text("Please Choose");
+                      }
+                      return this;
+                  }
+                });
             }else{
               var $options = '<option value="'+$.trim($(old_fields[i]).text())+'">'+$.trim($(old_fields[i]).text())+'</option>';
             }
             $(new_fields[i]).append($options);
           }
         };
+        /*
+        Selecting select box descriptive
+        */
+        var values = ['SLS','CML','BLD'];
+        var descriptions = ['Sales','Commercial','Builder'];
+        makeSelectDescriptive("type",values,descriptions);
+        /*
+        End Selecting select box descriptive
+        */
 
         $('body').on('keyup change', 'input, select', function (event) {
           var new_id = $(this).attr('id');

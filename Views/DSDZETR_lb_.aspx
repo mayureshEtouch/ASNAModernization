@@ -61,7 +61,7 @@
                         <div class="mdl-cell mdl-cell--3-col">
                             <span class="summary-title">Order # </span>
                             <div class="summary-txt">
-                                <span id="CenPH_1BANB"></span>
+                                <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
@@ -181,7 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <!-- <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col">
                                     <span class="form-label">Email:</span>
@@ -193,7 +193,7 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
@@ -1143,6 +1143,7 @@
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             // Set order number
             $("#CenPH_1BANB").html($("#CenPH__lb_SFLCTL__lb_1BANB").html().replace(/&nbsp;/g, ""));
+            $("#verssion-number").html($("#CenPH__lb_SFLCTL__lb_1EXNB").html().replace(/&nbsp;/g, ""));
             //Set billing address
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
             $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html());
@@ -1223,7 +1224,7 @@
                     $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input') : 
                     $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span:not(:last)'));
                 for(var i = 0; i < allInputFields.length; i++) {
-                    var splInsNewField = '<input type="text" id="special-instructions' + i + '" class="sp-inst editable-data">';
+                    var splInsNewField = '<input maxlength="60" type="text" id="special-instructions' + i + '" class="sp-inst editable-data">';
                     var splInsRONewField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style="display:none;"></span>';
                     var oldInpId = $(allInputFields[i]).attr("id");
                     var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];

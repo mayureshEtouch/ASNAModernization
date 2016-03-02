@@ -177,6 +177,8 @@
             _00("Enter", event);
         });
 
+        $("#ssn").ForceNumericOnly();
+
       });
     </script>
         <div id="Div1" style="display:none;">
