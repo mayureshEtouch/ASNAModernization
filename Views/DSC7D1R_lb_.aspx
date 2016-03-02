@@ -62,11 +62,11 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Type</span>
                             <span id="cus_type" class="summary-txt"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Name</span>
                             <span id="cus_name" class="summary-txt"></span>
                         </div>
@@ -79,46 +79,46 @@
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">
                             <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Address:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_address" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Zip Code:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_zipcode" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Address:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_address" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Zip Code:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_zipcode" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Home Phone Number:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_homenumber" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Work Phone Number:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_worknumber" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Home Phone Number:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_homenumber" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Work Phone Number:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_worknumber" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Cell Phone Number:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_cellnumber" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Mailing List ?:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_mailinglist" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Cell Phone Number:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_cellnumber" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Mailing List ?:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_mailinglist" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Additional Address ?:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_additionaladdress" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Last Changed by User:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_changedby" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Additional Address ?:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Last Changed by User:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_changedby" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">On:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_on" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Email Address:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span id="cus_email" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">On:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_on" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Email Address:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_email" class="input-label-text"></span></div>
                             </div>
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--9-col-desktop">
+                                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="previous">Previous</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7">Addresses</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8">Notes</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit"  event-data="F9">audit</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId"  event-data="F10">tax id</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col-desktop pull-right">
+                                <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="display-submit">next</span>
                                 </div>
                             </div>
