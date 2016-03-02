@@ -91,7 +91,7 @@
                                     <div class="fixed-table-container">
                                        <div class="header-background"> </div>
                                        <div class="fixed-table-container-inner">
-                                      <table cellspacing="0" cellpadding="0" border="0" id="x-ref-items">
+                                      <table cellspacing="0" cellpadding="0" border="0" id="x-ref-items" class="navigateable">
                                        <thead>
                                         <tr data-myval="">
                                          <th class="first"><div class="th-inner">Reference</div></th>
