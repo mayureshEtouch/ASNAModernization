@@ -74,7 +74,7 @@
                               <tr>
                                 <th>Type</th>
                                 <th>Telephone</th>
-                                <th>Ext</th>
+                                <th>Extension</th>
                               </tr>
                             </thead>
                             <tbody></tbody>
@@ -152,7 +152,7 @@ tr.selected {
              }
          });
          $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
+         $("#customerPhones tbody tr:odd").css("background-color", "#f9f9f9");
      }
      generateTable("top-to-bottom");
     /* $("#customerPhones tbody tr").click(function(){
@@ -162,8 +162,8 @@ tr.selected {
      });*/
      $('body').on('click', '#customerPhones tbody tr', function () {
          $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
-         $(this).css({ "background-color": "#f1f1f1" });
+         $("#customerPhones tbody tr:odd").css("background-color", "#f9f9f9");
+         $(this).css({ "background-color": "#d8d8d8" });
          $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
          $(this).addClass("selected");
          $("div.icon-container").removeClass("icon-disable");

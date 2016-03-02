@@ -62,13 +62,17 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Order #</span>
-                            <span class="summary-txt" id="order-version">123090190 / 1</span>
+                            <span class="summary-txt" id="order-num"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <span class="summary-title">Customer name</span>
-                            <span class="summary-txt" id="cust-name">SST, SANTHOSH G</span>
+						<div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Version #</span>
+                            <span class="summary-txt" id="version-num"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Customer Name</span>
+                            <span class="summary-txt" id="cust-name"></span>
                         </div>
 
                     </div>
@@ -92,7 +96,11 @@
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Billing Address:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="name1">SST, Santhosh G</span><span class="input-label-text" style="padding-top:0px;" id="city1">Texas</span><span class="input-label-text" style="padding-top:0px;" id="add1">77703 Beaumont TX</span></span></div>
+                                <div class="mdl-cell mdl-cell--4-col">
+									<span class="input-label-text" id="name1"></span>
+									<span class="input-label-text" style="padding-top:0px;" id="city1"></span>
+									<span class="input-label-text" style="padding-top:0px;" id="add1"></span>
+								</div>
                                 <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Home Phone:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="home-phone">111/111-1111</span></div>
                             </div>
@@ -105,7 +113,11 @@
 
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Shipping Address:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="name2">SST, Santhosh G</span><span class="input-label-text" style="padding-top:0px;" id="city2">Texas</span><span class="input-label-text" style="padding-top:0px;" id="add2">77703 Beaumont TX</span></span></div>
+                                <div class="mdl-cell mdl-cell--4-col">
+									<span class="input-label-text" id="name2"></span>
+									<span class="input-label-text" style="padding-top:0px;" id="city2"></span>
+									<span class="input-label-text" style="padding-top:0px;" id="add2"></span>
+								</div>
                                 <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Delivery Code:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="del-code">001</span></div>
                             </div>
@@ -835,7 +847,8 @@
                 "displayOnlyFields": {
                     "CenPH_DdsConstant13": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
-                    "CenPH__lb_SFLCTL__lb_2BANB+custom_slash+CenPH__lb_SFLCTL__lb_2EXNB": "order-version",
+                    "CenPH__lb_SFLCTL__lb_2BANB": "order-num",
+					"CenPH__lb_SFLCTL__lb_2EXNB":"version-num",
                     "CenPH__lb_SFLCTL_V2AIDT": "date-ordered",
                     "CenPH__lb_SFLCTL_V2AYDT": "date-del",
                     "CenPH__lb_SFLCTL__lb_2ABCD+custom_slash+CenPH__lb_SFLCTL__lb_2AACD": "location-comp",
@@ -850,7 +863,7 @@
                     "CenPH__lb_SFLCTL__lb_CKJTX": "name2",
                     "CenPH__lb_SFLCTL__lb_CKLTX": "city2",
                     "CenPH__lb_SFLCTL__lb_CKPTX+CenPH__lb_SFLCTL__lb_CJXST+CenPH__lb_SFLCTL__lb_CFHTX": "add2",
-                    "CenPH__lb_SFLCTL__lb_PALTX": "cust-name"
+                    "name1": "cust-name"
                 },
                 "inputFields": {
                 }

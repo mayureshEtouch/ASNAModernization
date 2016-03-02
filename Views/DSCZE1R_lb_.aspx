@@ -100,20 +100,14 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop pull-left" >
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                            <div class="mdl-cell mdl-cell--12-col" >
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous
                                 </span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-desktop pull-left">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit To Menu<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit To Menu
                                 </span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-desktop pull-left" style="margin-left: 9px;">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="delete" data-upgraded=",MaterialButton,MaterialRipple" style="margin-left: -72px;">Delete<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="delete" data-upgraded=",MaterialButton,MaterialRipple">Delete
                                 </span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop pull-left">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit
                                 </span>
                             </div>
                         </div>
