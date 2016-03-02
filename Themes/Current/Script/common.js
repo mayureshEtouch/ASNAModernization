@@ -259,24 +259,31 @@ $(document).ready(function() {
 $(document).ready(function() {
     // Error popup
     var hideMessage = "Value not found in list - Use '?' to determine allowed values.";
-    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1) {
+    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#MsgPH_DdsMessagePanel1").text()) !== -1) {
 
         var errorMsg = "";
         if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
         }
+		if ($("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
+        }
         if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
             errorMsg += $("#MsgPH_DdsMessagePanel1").text();
         }
+		
         $('#modal1').html(errorMsg);
         $('#modal1').simplePopup();
     }
 
 
-    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1)) {
+    if (($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1 || $("#MsgPH_DdsMessagePanel1").text().length > 1)) {
 
         var errorMsg = "";
-        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+        if ($("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
+        }
+		if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
         }
         if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {

@@ -7,10 +7,15 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+		 
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+	    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+	    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
-        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+		
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -66,22 +71,22 @@
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Address:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0">
                                         <div class="form-text shipping-add" data-upgraded=",MaterialTextfield">
-                                            <input type="text" class="full-input" id="add-one" name="add-one">
+                                            <input type="text" class="full-input" id="add-one" name="add-one" maxlength="25">
                                             <br>
-                                            <input type="text" class="full-input" id="add-two" name="add-two" style="margin-bottom: 0;">
+                                            <input type="text" class="full-input" id="add-two" name="add-two" maxlength="25" style="margin-bottom: 0;">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Home Phone #:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="home-phone" name="home-phone">
+                                                                <input type="text" id="home-phone" name="home-phone" maxlength="10">
                                                                 </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Cell Phone #:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="cell-phone" name="cell-phone">
+                                                                <input type="text" id="cell-phone" name="cell-phone" maxlength="10">
                                                                 </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
@@ -103,13 +108,16 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="5">
-                                                                &nbsp;&nbsp;Beaumont TX </span> </div>
+                                    <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="5">
+                                                                &nbsp;</span> 
+									<span id="state" class="form-text" data-upgraded=",MaterialTextfield"></span>&nbsp;&nbsp;
+									<span id="city" class="form-text" data-upgraded=",MaterialTextfield"></span>							
+								</div>
                                 </div>
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Work Phone:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="work-phone" name="work-phone" class="mdl-cell--5-col">
+                                                                <input type="text" id="work-phone" name="work-phone" maxlength="10" class="mdl-cell--5-col">
                                                                 <span class="input-side-gutter-space form-label mdl-cell--7-col">Extension:
                                                                 <input type="text" id="extension" name="extension" class="extension" maxlength="4">
                                                                 </span> </span>
@@ -179,10 +187,12 @@
 							  </div>
                           </div>
                       </div>
+					  
+					     
                     </div>
                 </section>
             </main>
-            <div id="modal" class="simplePopup"></div>
+             <div id="modal" class="simplePopup" ></div>
             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
               <div class="button-container">
@@ -1041,6 +1051,13 @@
             #__AsnaDisplayfileRestored__ {
                 margin-top: -20px !important;
             }
+			#__Page_PopUp tbody tr:first-child {
+				display: none;
+			}
+			.confirmation-outer-conatiner {
+                top: 30% !important;
+                left: 40% !important;
+            }
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {
@@ -1067,6 +1084,8 @@
                 }
             }
             $(document).ready(function() {
+				$(".simplePopup").css({"left": "323px", "height": "30px;"});
+				
                 //Set page details
                 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                   $(".confirmation-outer-conatiner").hide();
@@ -1074,9 +1093,12 @@
                   $(".order-summary,.form-data,.time-date").show();
                 } else {
                   $(".confirmation-outer-conatiner").show();
+				  $(".close-icon").hide();
                   $(".order-summary,.form-data,.time-date").hide();
                 }
                 
+				$("#state").text($("[id$=CenPH__lb_RCDDTL1__lb_DAQTX]").text());
+				$("#city").text($("[id$=CenPH__lb_RCDDTL1__lb_DADST]").text());
                 $("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     _00('Enter', event);
@@ -1104,6 +1126,7 @@
                 });
                 //Validations
                 $("#cust-zipcode,#extension").ForceNumericOnly();
+				
             });
         </script>
     </asp:Content>

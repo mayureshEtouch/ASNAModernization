@@ -63,17 +63,17 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                            <span class="summary-title">Type</span>
-                            <span id="cus_type" class="summary-txt"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Name</span>
                             <span id="cus_name" class="summary-txt"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Type</span>
+                            <span id="cus_type" class="summary-txt"></span>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container table-container-form">
+            <section class="table-data-content-container table-container-form spacer-container-bottom ">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">
@@ -99,11 +99,13 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Additional Address ?:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Last Changed by User:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_changedby" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+									<span id="cus_changedby" class="input-label-text" style="display:inline-block"></span>
+									<span class="input-label" style="display:inline-block;margin:0 10px 0 20px;">On:</span>
+									<span id="cus_on" class="input-label-text" style="display:inline-block"></span>
+								</div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">On:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_on" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Email Address:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_email" class="input-label-text"></span></div>
                             </div>

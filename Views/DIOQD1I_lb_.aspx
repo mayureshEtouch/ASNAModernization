@@ -56,11 +56,15 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Customer ID</span>
                             <span class="summary-txt" id="customer-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Customer Name</span>
+                            <span class="summary-txt" id="customer-name"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Customer Type</span>
                             <span class="summary-txt" id="customer-type"></span>
                         </div>
@@ -73,14 +77,7 @@
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                           <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
-                              <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-label">Customer Name:</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                    <span class="form-text" id="customer-name"></span>
-                                </div>
-                            </div>
+                              
                               <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                     <span class="form-label">Mailing List Indicator</span>

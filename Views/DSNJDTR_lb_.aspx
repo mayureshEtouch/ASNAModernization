@@ -62,41 +62,36 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order #:</span>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-id"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Employee Name:</span>
+                            <span class="summary-title">Employee Name</span>
                             <span class="summary-txt" id="employee-name"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Phone details:</span>
-                            <span class="summary-txt">Home Phone: <span id="home-phone"></span></span>
-                            <span class="summary-txt">Work Phone: <span id="work-phone"></span></span>
+                            <span class="summary-title">Employee ID</span>
+                            <span class="summary-txt" id="employee-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Version number:</span>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Store</span>
+                            <span class="summary-txt" id="store-code"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Version numbe</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
                     </div>
               </div>
             </section>
-            <section class="form-data">
+            <section class="form-data spacer-container-bottom">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                           <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
-                              <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                    <span class="form-label">Employee #:</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" id="employee-id"></span>
-                                </div>
-                            </div>
-                              <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                     <span class="form-label">Order Date:</span>
                                 </div>
@@ -104,15 +99,23 @@
                                     <span class="form-text" id="order-date"></span>
                                 </div>
                             </div>
-                              <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                    <span class="form-label">Store:</span>
+                                    <span class="form-label">Home Phone:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" id="store-code"></span>
+                                    <span class="form-text" id="home-phone"></span>
                                 </div>
-                            </div>
-                              <div class="content-grid mdl-grid">
+							</div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Work Phone:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="work-phone"></span>
+                                </div>
+							</div>
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                     <span class="form-label">Billing Address:</span>
                                 </div>
