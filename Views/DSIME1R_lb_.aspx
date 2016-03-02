@@ -62,7 +62,7 @@
                 <div class="form-data-wrapper" style="padding: 0;">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Type:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -71,49 +71,48 @@
                                         <span class="input-side-gutter-space" id="typeText"  style="display: none;"></span> </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Middle Initial:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input maxlength="1" type="text" id="middleInitial" name="middleInitial" style="width: 50px;" value="">
-                                        <span style="">
-                                        <span class="input-side-gutter-space form-label">Last Name:</span>
-                                        <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
-                                        <span id="lastName"></span>
-                                        <!-- <input maxlength="15" type="text" id="lastName" name="lastName" class="full-input" value=""> -->
+                                        <span id="middleInitial-span" class="hide"></span>
+                                        <input maxlength="1" type="text" id="middleInitial" name="middleInitial" size="1" value="" class="hide">
+
                                     </span>
-                                    </span> </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Name:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <span id="lastName-span" class="hide"></span>
+                                    <input size="22" maxlength="15" type="text" id="lastName" name="lastName" class="hide" value="">
+                                    <span class="input-side-gutter-space form-label" style="float:right">Suffix:
+                                    <!-- <span id="suffix"></span> -->
+                                    <!-- <input type="text" id="suffix" name="suffix" class="extension"> -->
+                                    <select name="suffix" id="suffix" class="hide"></select>
+                                    </span> </span> </div>
+                            </div>
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Business Name:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <span id="businessName"></span>
-                                        <!-- <input type="text" class="full-input" id="businessName" name="businessName"> -->
+                                        <span id="businessName-span" class="hide"></span>
+                                        <input type="text" class="hide full-input" id="businessName" name="businessName" maxlength="30">
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> 
-                                  <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input maxlength="10" type="text" id="zcode" name="zcode" class="zip-code" value="">
-                                  </span> 
-                                </div>
-                            </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Business Phone:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="bphone1" name="bphone1" value="" size="2" maxlength="3">
-                                    <input type="text" id="bphone2" name="bphone2" value="" size="2" maxlength="3">
-                                    <input type="text" id="bphone3" name="bphone3" value="" size="3" maxlength="4">
-                                    <span class="input-side-gutter-space form-label" style="float:right">Extension:
-                                    <input type="text" id="extn" name="extn" class="extension" maxlength="4">
+                                    <input type="text" id="bphone1" name="bphone1" value="" size="1" maxlength="3">
+                                    <input type="text" id="bphone2" name="bphone2" value="" size="1" maxlength="3">
+                                    <input type="text" id="bphone3" name="bphone3" value="" size="2" maxlength="4">
+                                    <span class="input-side-gutter-space form-label">Ext:
+                                    <input type="text" id="extn" name="extn" size="2" maxlength="4">
                                     </span> </span> </div>
                             </div>
                             
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -122,7 +121,7 @@
                                   </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -131,7 +130,7 @@
                                   </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Extra Phone #s ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -141,13 +140,22 @@
                                 </div>
                             </div>
                             
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                       <span id="lastChangedByUser"></span>
                                         <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
                                     </span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Notes ?:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <span id="notes"></span>
+                                        <!-- <input type="text" id="notes" name="notes" style="width: 50px;" value="N"> -->
+                                  </span>
                                 </div>
                             </div>
                            <br>
@@ -157,46 +165,53 @@
 
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">First Name:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <span id="firstName"></span>
-                                    <!-- <input maxlength="10" type="text" id="firstName" name="firstName" class="zip-code full-input" value=""> -->
+                                    <span id="firstName-span" class="hide"></span>
+                                    <input maxlength="10" type="text" id="firstName" name="firstName" class="zip-code full-input hide" value="">
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Credit Customer:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <span style="width: 200px; display: inline-block;"></span>
-                                    <span class="input-side-gutter-space form-label" style="float:right">Suffix:
-                                    <span id="suffix"></span>
-                                    <!-- <input type="text" id="suffix" name="suffix" class="extension"> -->
-                                    <!-- <select name="suffix" id="suffix"></select> -->
-                                    </span> </span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> 
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <span style="width: 200px; display: inline-block;"></span>
+                                    </span> 
+                                </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-add-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Address:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <input maxlength="25" type="text" id="address1" name="address1" class="zip-code full-input" value="">
                                     <br />
-                                    <input maxlength="25" type="text" style="margin-top: 2px;" id="address2" name="address2" class="zip-code full-input" value="">
+                                    <input maxlength="25" type="text" style="margin-top: 20px;" id="address2" name="address2" class="zip-code full-input" value="">
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> 
+                                  <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <input maxlength="5" type="text" id="zcode" name="zcode" class="zip-code" value="">
+                                    <span id="place"></span>, <span id="state"></span>
+                                  </span> 
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Home Phone:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="hphone1" name="hphone1" class="" value="" size="2" maxlength="3">
-                                    <input type="text" id="hphone2" name="hphone2" class="" value="" size="2" maxlength="3">
-                                    <input type="text" id="hphone3" name="hphone3" class="" value="" size="3" maxlength="4">
+                                    <input type="text" id="hphone1" name="hphone1" class="" value="" size="1" maxlength="3">
+                                    <input type="text" id="hphone2" name="hphone2" class="" value="" size="1" maxlength="3">
+                                    <input type="text" id="hphone3" name="hphone3" class="" value="" size="2" maxlength="4">
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Cell Phone Number:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -204,7 +219,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Email Address:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -212,16 +227,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Notes ?:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <span id="notes"></span>
-                                        <!-- <input type="text" id="notes" name="notes" style="width: 50px;" value="N"> -->
-                                  </span>
-                                </div>
-                            </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Tax Exempt ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -230,7 +236,7 @@
                                   </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -262,7 +268,7 @@
                 </div>
             </section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+        <div id="modal1" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
@@ -1170,14 +1176,17 @@
           width: 100%;
           
       }
-      select{
+      /*select{
         width: 70px;
-      }
+      }*/
     #wrapper {
         width: 100% !important;
     }
     #__Page_PopUp {
         min-width: 550px !important;
+    }
+    .hide{
+        display: none;
     }
     </style>    
 <script type="text/javascript">
@@ -1185,9 +1194,8 @@
     // $('.error').text($('#MsgPH_DdsMessagePanel1').text());
     /*setDateTime(dateFieldId,timeFieldId)*/
     setDateTime('CenPH_DdsConstant33','CenPH__lb_RCDDTL1__lb__lb_TME');
-      var old_fields = ['#CenPH__lb_RCDDTL1__lb_DDTTX','#CenPH__lb_RCDDTL1__lb_DDVTX','#CenPH__lb_RCDDTL1__lb_DDWTX','#CenPH__lb_RCDDTL1__lb_DDXTX','#CenPH__lb_RCDDTL1__lb_DDUTX','#CenPH__lb_RCDDTL1__lb_PANTX','#CenPH__lb_RCDDTL1__lb_PAOTX','#CenPH__lb_RCDDTL1__lb_PAPTX','#CenPH__lb_RCDDTL1__lb_DEONB','#CenPH__lb_RCDDTL1__lb_DELNB','#CenPH__lb_RCDDTL1__lb_DEMNB','#CenPH__lb_RCDDTL1__lb_DENNB','#CenPH__lb_RCDDTL1__lb_DCGNB','#CenPH__lb_RCDDTL1__lb_DCHNB','#CenPH__lb_RCDDTL1__lb_DCINB','#CenPH__lb_RCDDTL1__lb_DK3N_lb_','#CenPH__lb_RCDDTL1__lb_DBWNA','#CenPH__lb_RCDDTL1__lb_DBRST','#CenPH__lb_RCDDTL1__lb_DBQST','#CenPH__lb_RCDDTL1__lb_DTQST','#CenPH__lb_RCDDTL1__lb_DCPST','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM','#CenPH__lb_RCDDTL1__lb_1ABST','#CenPH__lb_RCDDTL1__lb_DOAA_usd_','#CenPH__lb_RCDDTL1__lb_1ACST'];
-      var new_fields = ['#typeText','#firstName','#middleInitial','#lastName','#businessName','#address1','#address2','#zcode','#extn','#hphone1','#hphone2','#hphone3','#bphone1','#bphone2','#bphone3','#cphone','#emailAddress','#additionalAddress','#notes','#extraPhone','#taxExempt','#lastChangedByUser','#changedDate','#changedTime','#type','#suffix','#mailingList'];
-      
+      var old_fields = ['#CenPH__lb_RCDDTL1__lb_DDTTX','#CenPH__lb_RCDDTL1__lb_PANTX','#CenPH__lb_RCDDTL1__lb_PAOTX','#CenPH__lb_RCDDTL1__lb_PAPTX','#CenPH__lb_RCDDTL1__lb_PAQTX','#CenPH__lb_RCDDTL1__lb_PADST','#CenPH__lb_RCDDTL1__lb_DEONB','#CenPH__lb_RCDDTL1__lb_DELNB','#CenPH__lb_RCDDTL1__lb_DEMNB','#CenPH__lb_RCDDTL1__lb_DENNB','#CenPH__lb_RCDDTL1__lb_DCGNB','#CenPH__lb_RCDDTL1__lb_DCHNB','#CenPH__lb_RCDDTL1__lb_DCINB','#CenPH__lb_RCDDTL1__lb_DK3N_lb_','#CenPH__lb_RCDDTL1__lb_DBWNA','#CenPH__lb_RCDDTL1__lb_DBRST','#CenPH__lb_RCDDTL1__lb_DBQST','#CenPH__lb_RCDDTL1__lb_DTQST','#CenPH__lb_RCDDTL1__lb_DCPST','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM','#CenPH__lb_RCDDTL1__lb_1ABST','#CenPH__lb_RCDDTL1__lb_DOAA_usd_','#CenPH__lb_RCDDTL1__lb_1ACST'];
+      var new_fields = ['#typeText','#address1','#address2','#zcode','#place','#state','#extn','#hphone1','#hphone2','#hphone3','#bphone1','#bphone2','#bphone3','#cphone','#emailAddress','#additionalAddress','#notes','#extraPhone','#taxExempt','#lastChangedByUser','#changedDate','#changedTime','#type','#suffix','#mailingList']; 
         /*Filling up text for modern screen fields*/
 
         for (var i = 0; i < old_fields.length; i++) {
@@ -1200,9 +1208,7 @@
             if($(old_fields[i]).is('select')){
                 //var $options = $(old_fields[i]+" > option").clone();
                 var $options = $(old_fields[i]+" > option").clone().map(function(index){
-                  if($(this).val()=='?' && new_fields[i]=='#mailingList'){
-                    return this;
-                  }else if($(this).val()!='?'){
+                  if($(this).val()!='?'){
                       if($(this).val().trim() ==""){
                           $(this).val(" ").text("Please Choose");
                       }
@@ -1215,14 +1221,45 @@
             $(new_fields[i]).append($options);
           }
         };
+        /* Names fields may be in text or input field*/
+        var old_names_fields = ['#CenPH__lb_RCDDTL1__lb_DDVTX','#CenPH__lb_RCDDTL1__lb_DDWTX','#CenPH__lb_RCDDTL1__lb_DDXTX','#CenPH__lb_RCDDTL1__lb_DDUTX']
+        var new_names_fields = ['#firstName','#middleInitial','#lastName','#businessName'];
+        for (var i = 0; i < old_names_fields.length; i++) {
+          if($(old_names_fields[i]) && $(old_names_fields[i]).is('input')){
+            $(new_names_fields[i]).removeClass('hide');
+            $(new_names_fields[i]).val($.trim($(old_names_fields[i]).val()));
+          }else{
+            $(new_names_fields[i]+"-span").removeClass('hide');
+            $(new_names_fields[i]+"-span").text($.trim($(old_names_fields[i]).text()));
+          }
+        }
         /*
         Selecting select box descriptive
         */
         var values = ['SLS','CML','BLD'];
         var descriptions = ['Sales','Commercial','Builder'];
         makeSelectDescriptive("type",values,descriptions);
+        makeSelectDescriptive("mailingList",['Y','N','F','S','M','I','D','W','U','R','C','O','B','V','X','E','1','H','A','L','P','T','3','2','0','4','$','5','*','G','?'],['YES','NO','FiSERV','Sales','Minimum','Individual','Decreased','WHS','Un-Validated','Reserved','Canceled','Over Limit','Both','Vendor','Other','Extended','18 Mth COP Approval','Held','Already Used','Location','Purchase Limit','Both Costs','36 Mth COP Approval','24 Mth COP Approval','12 Mth COP Approval','48 Mth COP Approval','Cash Value','60 Mth COP Approval','Astrick','Customer Thank You Card','?']);
+        
+        makeSelectDescriptive("suffix",['JR.','SR.','JR','SR','II','III','IV','V'],['JR','SR','Junior','Senior','Second','Third','Fourth','Fifth']);
+        $("#bphone1,#bphone2,#bphone3,#hphone1,#hphone2,#hphone3,#extn,#zcode").on('keypress',function(event){
+            var keycode = event.keycode || event.which;
+            if(keycode != 8 && isNaN(String.fromCharCode(keycode))){
+                event.preventDefault();
+            } 
+        })
         /*
         End Selecting select box descriptive
+        */
+        /*
+        Hiding suffix dropdown if no value found
+        */
+        if($("#suffix >  option").length > 1){
+            $("#suffix").removeClass('hide');
+            $("#suffix option[value=' ']").insertBefore("#suffix option:eq(0)");
+        }
+        /*
+        End Hiding suffix dropdown if no value found
         */
 
         $('body').on('keyup change', 'input, select', function (event) {

@@ -7,11 +7,11 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -57,9 +57,9 @@
                         <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
                             <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom:-10px;padding-top:0;">
-                                <div class="icon-container icon-disable">
+                                <div class="icon-container">
                                 <span class="icon-txt">Change</span>
-                                <i class="material-icons md-15 md-light change-icon-disabled"></i>
+                                <i class="material-icons md-15 md-light change-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -69,12 +69,12 @@
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container" style="overflow: auto;" style="width:auto;">
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerPhones">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerPhones">
                             <thead>
                               <tr>
                                 <th>Type</th>
                                 <th>Telephone</th>
-                                <th>Ext</th>
+                                <th>Extension</th>
                               </tr>
                             </thead>
                             <tbody></tbody>
@@ -94,6 +94,7 @@
         </section>
             </main>
     </div>
+
 <style>
 #__Page_PopUp {
   width: 650px !important;
@@ -152,7 +153,7 @@ tr.selected {
              }
          });
          $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
+         $("#customerPhones tbody tr:odd").css("background-color", "#f9f9f9");
      }
      generateTable("top-to-bottom");
     /* $("#customerPhones tbody tr").click(function(){
@@ -162,8 +163,8 @@ tr.selected {
      });*/
      $('body').on('click', '#customerPhones tbody tr', function () {
          $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
-         $(this).css({ "background-color": "#f1f1f1" });
+         $("#customerPhones tbody tr:odd").css("background-color", "#f9f9f9");
+         $(this).css({ "background-color": "#d8d8d8" });
          $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
          $(this).addClass("selected");
          $("div.icon-container").removeClass("icon-disable");
@@ -178,21 +179,21 @@ tr.selected {
          }
      });
      var selectCusotmer = function (row, value, event) {
+
                     var selectId = $(row).data('selectid');
                     a = selectId.split(".");
                     $("#" + a[0] + "\\." + a[1]).val(value);
                     _00('Enter', event);
                 }
-      $('#add').click(function (event) {
-         _00('F9', event);
-      })
-      $(".close-icon").click(function(event) {
-        /* Act on the event */
-        _00('F12',event);
-      });
-
-  });
-</script>
+                $('#add').click(function (event) {
+                   _00('F9', event);
+                })
+                $(".close-icon").click(function(event) {
+                  /* Act on the event */
+                  _00('F12',event);
+                });
+          });
+        </script>
         <div id="Div1" style="display:none;">
             
       <%--  CU: DSW Phone Numbers     Display file                                                                           --%>
