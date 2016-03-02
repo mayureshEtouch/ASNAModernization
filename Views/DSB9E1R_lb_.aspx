@@ -318,7 +318,13 @@
             makeSelectDescriptive("type",values,descriptions);
             makeSelectDescriptive("mailingList",['Y','N','F','S','M','I','D','W','U','R','C','O','B','V','X','E','1','H','A','L','P','T','3','2','0','4','$','5','*','G','?'],['YES','NO','FiSERV','Sales','Minimum','Individual','Decreased','WHS','Un-Validated','Reserved','Canceled','Over Limit','Both','Vendor','Other','Extended','18 Mth COP Approval','Held','Already Used','Location','Purchase Limit','Both Costs','36 Mth COP Approval','24 Mth COP Approval','12 Mth COP Approval','48 Mth COP Approval','Cash Value','60 Mth COP Approval','Astrick','Customer Thank You Card','?']);
         
-        makeSelectDescriptive("suffix",['JR.','SR.','JR','SR','II','III','IV','V'],['JR','SR','Junior','Senior','Second','Third','Fourth','Fifth']);
+            makeSelectDescriptive("suffix",['JR.','SR.','JR','SR','II','III','IV','V'],['JR','SR','Junior','Senior','Second','Third','Fourth','Fifth']);
+            $("#bphone1,#bphone2,#bphone3,#hphone1,#hphone2,#hphone3,#extn,#zcode").on('keypress',function(event){
+                var keycode = event.keycode || event.which;
+                if(keycode != 8 && isNaN(String.fromCharCode(keycode))){
+                    event.preventDefault();
+                } 
+            })
             /*
             Hiding suffix dropdown if no value found
             */
