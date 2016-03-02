@@ -147,8 +147,11 @@ jQuery.tableNavigation = function (settings) {
         jQuery.extendedNavigation.tables = jQuery(jQuery.extendedNavigation.settings.table_selector);
         bindInternalEventHandlers();
         $('body').keyup(function (event) {
-            var row = navigateTable(event);
-            jQuery.extendedNavigation.settings.onRowChange(row);
+            if(!event.target.hasAttribute("type")) {
+                var row = navigateTable(event);
+                jQuery.extendedNavigation.settings.onRowChange(row);
+            }
+            
         });
     });
 
