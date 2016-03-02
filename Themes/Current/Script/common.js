@@ -289,8 +289,9 @@ $(document).ready(function() {
 
 function makeSelectDescriptive(selectId,values,descriptions){
     if(values && descriptions && values.length > 0 && descriptions.length>0){
-        $("#"+selectId+" > option").map(function(index){
-            if(values.indexOf($(this).val().trim()) != -1){
+        $("#"+selectId+" > option").map(function(){
+            var index = values.indexOf($(this).val().trim());
+            if(index != -1){
                 $(this).text(values[index]+" - "+descriptions[index]);
             }
             return this;
