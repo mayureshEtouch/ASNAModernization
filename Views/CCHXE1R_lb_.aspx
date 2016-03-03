@@ -63,16 +63,10 @@
                             <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
-                                        <span class="form-label clm-form-label-add">Customer:</span>
+                                        <span class="form-label clm-form-label-add">Customer Name:</span>
                                         <span class="form-text">
                                         <span id="cust-name">000/000</span>
-                                        <br>
-                                        <span id="cust-first-add">000/000</span>
-                                        <br>
-                                        <span id="cust-second-add">000/000</span>
-                                        <br>
-                                        <span id="cust-zipcode">000/000</span>
-                                        </span>
+										</span>
                                     </div>
                                 </div>
                             </div>
@@ -83,6 +77,22 @@
                                         <span class="form-text" id="home-phone">000/ 000-000</span>
                                     </div>
                                 </div>
+							</div>
+							<div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label clm-form-label" style="vertical-align: top;">Customer Address:</span>
+                                         <div style="display: inline-block; ">
+										<span id="cust-first-add">000/000</span>
+                                        <br>
+                                        <span id="cust-second-add">000/000</span>
+                                        <br>
+                                        <span id="cust-zipcode">000/000</span>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+							<div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">Office Phone:</span>
@@ -1618,13 +1628,12 @@
         }
 		.clm-form-label{
 			display: inline-block;
-			width: 110px;
+			width: 125px;
 		}
 		.clm-form-label-add{
 			display: inline-block;
-			width: 110px;
+			width: 125px;
 			float: left;
-			height: 100px;
 		}
         .ro-data  {
             display:none;
