@@ -40,12 +40,12 @@
                             <span class="close-icon" event-data="F12"><i class="material-icons close md-15"></i></span>
                     </div>
             </header>
-<main class="mdl-layout__content">
+<main class="mdl-layout__content" id="customer-address-key-screen" style="display: none;">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Display Customer Detail</span>
+                        <span class="heading-h1">CU: DS1 Customer Address</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -135,6 +135,130 @@
       &nbsp;
       </section>
         </main>
+
+        <main class="mdl-layout__content" id="customer-address-detail" style="display: none;">
+                    <section class="time-date">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--8-col">
+                                <!-- Title -->
+                                <span class="heading-h1">Customer Address Detail</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right">
+                                <!-- Navigation -->
+                                <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIOQD1I</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="order-summary">
+                        <div class="order-summary-wrapper">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <span class="summary-title">Customer ID:</span>
+                                    <span class="summary-txt" id="a-customer-id"></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <span class="summary-title">Addr Type:</span>
+                                    <span class="summary-txt" id="a-customer-type"></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <span class="summary-title">Addr Ref#:</span>
+                                    <span class="summary-txt" id="a-cust-addr-ref"></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <span class="summary-title">Addr Ver#:</span>
+                                    <span class="summary-txt" id="a-cust-addr-ver"></span>
+                                </div>
+                            </div>
+                      </div>
+                    </section>
+                    <section class="form-data">
+                        <div class="form-data-wrapper display-application-status">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
+                                  <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
+                                      <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                            <span class="form-label">Name:</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                            <span class="form-text" id="a-customer-name"></span>
+                                        </div>
+                                    </div>
+                                      <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                            <span class="form-label">Addr:</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                            <span class="form-text" id="a-address"></span>
+                                        </div>
+                                    </div>
+                                      <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                            <span class="form-label" id="">City:</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                            <span class="form-text" id="a-city"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                                      <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                            <span class="form-label">Phone:</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                            <span class="form-text" id="a-phone"></span>
+                                        </div>
+                                    </div>
+                                      <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                            <span class="form-label">State:</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                            <span class="form-text" id="a-state"></span>
+                                        </div>
+                                    </div>
+                                      <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                            <span class="form-label">Zip:</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                            <span class="form-text" id="a-zip"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid">
+                                <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                                    <fieldset>
+                                        <legend id="legen">Notes:</legend>
+                                        <textarea readonly="readonly" id="CenPH_2AQNA" rows="5" cols="40" name="CenPH_2AQNA"></textarea>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid" style="padding: 10px 0">
+                              <div class="mdl-cell mdl-cell--12-col">
+                                <span class="form-text"><strong>Last:</strong> <span id="last">DISTEST</span> <strong>at:</strong> <span id="at">QPADEV0006</span> <strong>on:</strong> <span id="on">11/23/15</span>&nbsp;&nbsp;<span id="time">2:04:04</span></span>
+                              </div>
+                            </div>
+                            
+                  <div class="button-container" style="padding-bottom:0">
+                    <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                      <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right" style="padding-bottom:0">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12">ok</span>
+                      </div>
+                    </div>
+                  </div>
+                      </div>
+                    </section>
+              <section class="add-item">
+              &nbsp;
+              </section>
+                </main>
+
         </div>
         
         <div id="Div1" style="display:none;">
@@ -852,8 +976,19 @@
                 /*Hiding left menu*/
                 $("#__Page_PopUp").css({"left": "23%", "height": "auto"});
                 /*Filling up text for modern screen fields*/
-                var old_fields = ['#CenPH__lb_RCDKEY__lb_1ALNB','#CenPH__lb_RCDKEY__lb_1ABST','#CenPH__lb_RCDKEY__lb_1ALTX','#CenPH__lb_RCDKEY__lb_1ACST','#CenPH__lb_RCDKEY__lb_1CGC_lb_','#CenPH__lb_RCDKEY__lb_1P5N_lb_','#CenPH__lb_RCDKEY__lb_1P6N_lb_'];
-                var new_fields = ['#customer-id','#customer-type','#customer-name','#mailing-list-indicator','#cust-addr-type','#cust-addr-ref','#cust-addr-ver'];
+                /*
+                if: Customer Address Detail
+                else: CU: DS1 Customer Address KEY SCREEN
+                 */
+                if($("#CenPH__lb_RCDKEY__lb_1ALNB").length > 0){
+                  $("#customer-address-key-screen").show();
+                  var old_fields = ['#CenPH__lb_RCDKEY__lb_1ALNB','#CenPH__lb_RCDKEY__lb_1ABST','#CenPH__lb_RCDKEY__lb_1ALTX','#CenPH__lb_RCDKEY__lb_1ACST','#CenPH__lb_RCDKEY__lb_1CGC_lb_','#CenPH__lb_RCDKEY__lb_1P5N_lb_','#CenPH__lb_RCDKEY__lb_1P6N_lb_'];
+                  var new_fields = ['#customer-id','#customer-type','#customer-name','#mailing-list-indicator','#cust-addr-type','#cust-addr-ref','#cust-addr-ver'];
+                }else{
+                  $("#customer-address-detail").show();
+                  var old_fields = ['#CenPH__lb_RCDDTL1__lb_1ALNB','#CenPH__lb_RCDDTL1__lb_1CGC_lb_','#CenPH__lb_RCDDTL1__lb_1P5N_lb_','#CenPH__lb_RCDDTL1__lb_1P6N_lb_','#CenPH__lb_RCDDTL1__lb_1JZXT','#CenPH__lb_RCDDTL1__lb_1J0XT','#CenPH__lb_RCDDTL1__lb_DAQTX','#CenPH__lb_RCDDTL1__lb_1P3N_lb_','#CenPH__lb_RCDDTL1__lb_DADST','#CenPH__lb_RCDDTL1__lb_1J2XT','#CenPH__lb_RCDDTL1__lb_1C4NA','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1__lb_1ABVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM'];
+                  var new_fields = ['#a-customer-id','#a-customer-type','#a-cust-addr-ref','#a-cust-addr-ver','#a-customer-name','#a-address','#a-city','#a-phone','#a-state','#a-zip','#CenPH_2AQNA','#last','#at','#on','#time'];
+                }
                 for (var i = 0; i < old_fields.length; i++) {
                   $(new_fields[i]).text($.trim($(old_fields[i]).text()));
                 };

@@ -1256,8 +1256,14 @@
         */
         if($("#suffix >  option").length > 1){
             $("#suffix").removeClass('hide');
-            $("#suffix option[value=' ']").insertBefore("#suffix option:eq(0)");
+            //$("#suffix option[value=' ']").insertBefore("#suffix option:eq(0)");
         }
+        $("select").each(function(){
+            var selectId = $(this).attr('id');
+            if(selectId){
+                $("#"+selectId+" option[value=' ']").insertBefore("#"+selectId+" option:eq(0)");
+            }
+        });
         /*
         End Hiding suffix dropdown if no value found
         */
