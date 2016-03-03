@@ -69,7 +69,7 @@
                               <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                   <span class="form-text">
                                   <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" />
-                                  <!--<span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>-->
+                                  <span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
                                   </span>
                                   <input type="hidden" id="dummy-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
                                   <!-- <span></span> -->
@@ -156,7 +156,7 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
-       /* $("#ssn-show").on("mousedown", function() {
+       $("#ssn-show").on("mousedown", function() {
             var dummyValue = $("#ssn").val();
             $("#ssn").val($("#dummy-ssn").val());
             $("#dummy-ssn").val(dummyValue);
@@ -165,7 +165,7 @@
             var orgValue = $("#ssn").val();
             $("#ssn").val($("#dummy-ssn").val());
             $("#dummy-ssn").val(orgValue);
-        });*/
+        });
         $('.error').text($('#MsgPH_DdsMessagePanel1').text());
         $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_1A4NB').val());
         $('body').on('keyup change', '#ssn', function (event) {
