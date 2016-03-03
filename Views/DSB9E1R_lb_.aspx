@@ -342,8 +342,14 @@
             $('body').on('keyup change', 'input, select', function (event) {
               var new_id = $(this).attr('id');
               var index = new_fields.indexOf('#'+new_id);
-              var org_id = old_fields[index];
-                $(org_id).val($(this).val());
+              if(index >=0){
+                  var org_id = old_fields[index];
+                    $(org_id).val($(this).val());
+                }else{
+                    index = new_names_fields.indexOf('#'+new_id);
+                    var org_id = old_names_fields[index];
+                      $(org_id).val($(this).val());
+                }
             });
             /*On load auto focus functionality*/
             var focus_id = $('#__focusID__').val();
