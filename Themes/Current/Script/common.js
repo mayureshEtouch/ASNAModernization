@@ -27,7 +27,7 @@
                 divid.find('span').map(function(i, e) {
                     var id = $(e).attr("id");
                     if (id.indexOf(ignoreSapn) === -1) {
-                        strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" :$(e).text()) + "</td>";
+                        strtd = strtd + "<td>" + ($(e).text()) + "</td>";
                     }
                 });
                 var strclosetr = "</tr>";
