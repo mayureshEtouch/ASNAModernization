@@ -94,92 +94,43 @@
         </section>
             </main>
     </div>
-
-<style>
-#__Page_PopUp {
-  width: 650px !important;
-}
-#__Page_PopUp > tr:first-child {
- display: none;
-}
-#__Page_PopUp .DdsInlinePopUpTitle {
- height: 0;
-}
-.modal-dialog-container, #main-content {
-  width: 100% !important;
-}
-.modal-dialog-container {
-  margin: 0 auto;
-}
-.mdl-layout__content {
-  height: auto;
-  margin-bottom: 15px;
-}
- /* form class ends here */
-tr.selected {
-    background-color: #f1f1f1;
-}
-</style>
-<script type="text/javascript">
-  $(document).ready(function () {
-     var generateTable = function (direction) {
-
-         $("#customerPhones tbody").empty();
-         var count = 1;
-         var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
-         var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-             if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                 var divid = $(this);
-                 var selectId = $(divid.children('select')).attr('id');
-                 var type = $(divid.find('span:eq(0)')).html();
-                 var telephone = $(divid.find('span:eq(1)')).html();
-                 var ext = $(divid.find('span:eq(2)')).html();
-                 
-                 var tr = "";
-                 if (count === 1 && direction === "top-to-bottom") {
-                     tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                 } else if (count === recordCount && direction === "bottom-to-top") {
-                     tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                 } else {
-                     tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                 }
-                 var strtd = "";
-                 strtd = strtd + "<td>" + type + "</td>";
-                 strtd = strtd + "<td>" + telephone + "</td>";
-                 strtd = strtd + "<td>" + ext + "</td>";
-                 
-                 var strclosetr = "</tr>";
-                 $("#customerPhones tbody").append(tr + strtd + strclosetr);
-             }
-         });
-         $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#f9f9f9");
-     }
-     generateTable("top-to-bottom");
-    /* $("#customerPhones tbody tr").click(function(){
-       $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
-       $(this).toggleClass("selected");
-       $("div.icon-container").removeClass("icon-disable");
-     });*/
-     $('body').on('click', '#customerPhones tbody tr', function () {
-         $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#f9f9f9");
-         $(this).css({ "background-color": "#d8d8d8" });
-         $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
-         $(this).addClass("selected");
-         $("div.icon-container").removeClass("icon-disable");
-         $("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
-     });
-     $(".icon-container").click(function (event) {
-         if ($(".icon-container").hasClass("icon-disable")) {
-             alert("Please select a address");
-         } else {
-             var row = $("#customerPhones tbody tr.selected");
-             selectCusotmer(row, "2", event);
-         }
-     });
-     var selectCusotmer = function (row, value, event) {
-
+        <style>
+        #__Page_Hidden{
+            height: 800px !important;
+        }
+        #__Page_PopUp {
+          width: 650px !important;
+        }
+        #__Page_PopUp > tr:first-child {
+         display: none;
+        }
+        #__Page_PopUp .DdsInlinePopUpTitle {
+         height: 0;
+        }
+        .modal-dialog-container, #main-content {
+          width: 100% !important;
+        }
+        .modal-dialog-container {
+          margin: 0 auto;
+        }
+        .mdl-layout__content {
+          height: auto;
+          margin-bottom: 15px;
+        }
+         /* form class ends here */
+        tr.selected {
+            background-color: #f1f1f1;
+        }
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function () {
+               // generate phone numbers
+               generateTableAndApplyInfiniteScroll("customerPhones", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+               $(".icon-container").click(function (event) {
+                   var row = $("#customerPhones tbody tr.selected");
+                   selectCusotmer(row, "2", event);
+               });
+               var selectCusotmer = function (row, value, event) {
                     var selectId = $(row).data('selectid');
                     a = selectId.split(".");
                     $("#" + a[0] + "\\." + a[1]).val(value);

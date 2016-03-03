@@ -22,64 +22,79 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <main class="mdl-layout__content">
-        <%--        <section class="time-date">
-            <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col">
-                    <!-- Title -->
-                    <span class="heading-h1">Display Substitute / Replacement Models</span>
-                </div>
-                <div class="mdl-cell mdl-cell--4-col pull-right">
-                    <!-- Navigation -->
-                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIG2DFR</span>
-                </div>
-            </div>
-        </section>--%>
-        <section class="time-date">
-            <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col">
-                    <!-- Title -->
-                    <span class="heading-h1">Display Substitute / Replacement Models</span>
-                </div>
-                <div class="mdl-cell mdl-cell--4-col pull-right">
-                    <!-- Navigation -->
-                    <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DIG2DFR</span> <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date"></span><i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time"></span>
-                </div>
-            </div>
-        </section>
-        <section class="table-data-content-container spacer-container-bottom" style="margin-top: 15px;">
-            <div class="table-data-wrapper">
-                <div class="table-data-maincontainer">
-                    <div class="table-container" style="height: auto; min-height: auto;">
-                        <table id="customerName" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp is-upgraded" data-upgraded=",MaterialDataTable">
-                            <thead>
-                                <tr>
-                                    <th>Out-of-Stock-Model</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 
-                                    <span id="model-id"></span>:&nbsp;
-                                    <span id="model-name"></span>
-                                    </td>
-                                    
-                                </tr>
-                            </tbody>
-                        </table>
+    <div class="mdl-layout__container"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Substitute/Replacement Models</span>
                     </div>
-                    <div class="button-container">
-                        <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--12-col">
-                                <span id="previous" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
-                            </div>
-
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIG2DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date">3/3/2016</span> 
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time">5:32:33</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+                        </li><li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="white-to-gray-bullet"></li>
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider-first">
+                        </li><li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+                        </li><li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary order-summary-container">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Out-of-Stock Model</span>
+                            <span class="summary-txt"><span>Model Number:</span><span id="model-number"></span></span>
+                            <span class="summary-txt"><span>Model Description:</span><span id="model-desc"></span></span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+            <section style="margin-left: 21px;"><span style="display: block;" class="summary-title">Replacement Models</span></section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container" style="overflow: auto;">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="subrep" data-upgraded=",MaterialDataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Model Number</th>
+                                        <th>Model Number Description</th>   
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <div id="modal" class="simplePopup" style="position: absolute; top: 197px; left: 438.5px; display: none;"><div class="simplePopupClose">X</div>No data to display.<br></div>
+    </div></div>
     <div id="Div1" style="display:none;">
 
         <%--  IN: DSP Sub/Rpl Models    Display file                                                                           --%>
@@ -426,8 +441,9 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant3]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").html().replace(/&nbsp;/g, ""));
             //Set model data
-            $("#model-id").html($("#CenPH__lb_SFLCTL__lb_2BLTX").html());
-            $("#model-name").html($("#CenPH__lb_SFLCTL__lb_2CYTX").html());
+            $("#model-number").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_2BLTX").html().replace(/&nbsp;/g, ""));
+            $("#model-desc").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_2CYTX").html().replace(/&nbsp;/g, ""));
+            generateTableAndApplyInfiniteScroll("subrep", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
             //handle F12 event
             $("#previous").on("click", function (event) {
                 _00('F12', event);

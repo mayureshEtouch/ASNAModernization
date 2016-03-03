@@ -1129,8 +1129,8 @@
                     _00('Enter', event);
                 });
                 //Validations
-                $("#cust-zipcode,#extension").ForceNumericOnly();
-				
+                $("#home-phone,#cell-phone,#extension").ForceNumericOnly();
+				$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
             });
         </script>
     </asp:Content>
