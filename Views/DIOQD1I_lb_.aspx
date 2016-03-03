@@ -241,7 +241,7 @@
                             </div>
                             <div class="content-grid mdl-grid" style="padding: 10px 0">
                               <div class="mdl-cell mdl-cell--12-col">
-                                <span class="form-text"><strong>Last:</strong> <span id="last">DISTEST</span> <strong>at:</strong> <span id="at">QPADEV0006</span> <strong>on:</strong> <span id="on">11/23/15</span>&nbsp;&nbsp;<span id="time">2:04:04</span></span>
+                                <span class="form-text"><strong>Last:</strong> <span id="last"></span> <strong>at:</strong> <span id="at"></span> <strong>on:</strong> <span id="on"></span>&nbsp;&nbsp;<span id="time"></span></span>
                               </div>
                             </div>
                             
