@@ -73,7 +73,7 @@
                     <div class="content-grid mdl-grid" style="padding: 10px 0">
                         <div class="mdl-cell mdl-cell--12-col">
                             <span class="form-label clm-form-label" style="margin-left: 25px !important;width: auto !important;">Sequence:</span>
-                            <span class="form-text" id="seq" style="margin-left: 25px !important;width: auto !important;"></span>
+                            <span class="form-text" id="seq" style="margin-left: 69px !important;width: auto !important;"></span>
                         </div>
                     </div>
                      <div class="button-container" style="padding:0">
@@ -128,6 +128,9 @@
               position: static !important;
               width: 45px !important;
             }
+			#__Page_PopUp tbody tr:first-child{
+				display:none;
+			}
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {

@@ -1019,6 +1019,10 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
         <style>
+			body {
+				font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+				font-size: 13px;
+			}
             #fkeys, #Div1 {
                 display: none !important;
             }
