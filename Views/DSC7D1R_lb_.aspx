@@ -798,9 +798,9 @@
                 type += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().next().html();
                 var name = $("#CenPH__lb_RCDDTL1").find("span:contains('Name')").next().html();
                 var address = $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().html();
+				 address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
+                address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
                 var zipcode = $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().html();
-                zipcode += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
-                zipcode += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
                 var homePhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Home Phone Number')").next().html();
                 var workPhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Work Phone Number')").next().html();
                 var cellPhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Cell Phone Number')").next().html();

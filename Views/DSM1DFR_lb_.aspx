@@ -58,17 +58,20 @@
             <section class="order-summary order-summary-container">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Model Number</span>
-                            <span class="summary-txt" id="model-number"></span>
+                         <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Model</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="model-number"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="model-name"></span></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Product Category</span>
-                            <span class="summary-txt" id="prod-cat"></span>
+                            <span class="summary-title">Product</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Category:</span><span id="product-category"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Type:</span><span id="product-type"></span></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Vendor Number</span>
-                            <span class="summary-txt" id="vendor-number"></span>
+                            <span class="summary-title">Vendor</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="vendor-number"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="vendor-name"></span></span>
                         </div>
                     </div>
                 </div>
@@ -788,7 +791,9 @@
         tr.selected {
             background-color: #f1f1f1;
         }
-    
+		.mdl-data-table td:nth-child(3),.mdl-data-table td:nth-child(4), .mdl-data-table td:nth-child(5), .mdl-data-table td:nth-child(6), .mdl-data-table td:nth-child(7){
+			text-align: right;
+		}
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -796,12 +801,14 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant17]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Set page display data
-            var modNumber = $("#CenPH__lb_SFLCTL__lb_2AXTX").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFJTX").html();
-            var prodCat = $("#CenPH__lb_SFLCTL__lb_2AXCD").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFATX").html();
-            var venNumber = $("#CenPH__lb_SFLCTL__lb_PBLNB").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CECTX").html();
-            $("#model-number").html(modNumber);
-            $("#prod-cat").html(prodCat);
-            $("#vendor-number").html(venNumber);
+			
+			$("#model-number").text($("[id$=lb_SFLCTL__lb_2AXTX]").text());
+			$("#model-name").text($("[id$=lb_SFLCTL__lb_CFJTX]").text());
+			$("#product-category").text($("[id$=lb_SFLCTL__lb_2AXCD]").text());
+			$("#product-type").text($("[id$=lb_SFLCTL__lb_CFATX]").text());
+			$("#vendor-number").text($("[id$=lb_SFLCTL__lb_PBLNB]").text());
+			$("#vendor-name").text($("[id$=lb_SFLCTL__lb_CECTX]").text());
+			
             generateTableAndApplyInfiniteScroll("display-incoming-pos", "CenPH__lb_SFLRCD", "NONE", "select-order");
             $('body').on('click', '#exitPage', function (event) {
                 _00('F12', event);
