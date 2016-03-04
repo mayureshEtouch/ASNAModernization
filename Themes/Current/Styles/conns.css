@@ -1340,3 +1340,35 @@ body div, body span, body textarea {
 .content-row-add-height{
     height: 90px;
 }
+
+/* Tooltip */
+.ui-tooltip.ui-widget-content {
+	box-shadow: 0 0 5px #fddfdc;
+	border: 1px solid #E6DB55;
+	background: #FFFFE0 !important;
+	font-size: 12px;
+	color: #444444;
+}
+.ui-tooltip:after, .ui-tooltip:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.ui-tooltip:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #FFFFE0;
+	border-width: 6px;
+	margin-left: -6px;
+}
+.ui-tooltip:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #E6DB55;
+	border-width: 8px;
+	margin-left: -8px;
+}
