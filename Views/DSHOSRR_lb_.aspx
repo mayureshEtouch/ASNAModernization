@@ -501,6 +501,9 @@
                         var strclosetr = "</tr>";
 
                         $("#salesperson tbody").append(tr + strtd + strclosetr);
+                    } else if($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+                        var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+                        $("#salesperson tbody").append(tr);
                     }
                 });
                 $("#salesperson tbody tr:even").css("background-color", "#fff");
