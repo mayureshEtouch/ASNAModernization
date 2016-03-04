@@ -147,8 +147,8 @@
             </section>
 
         </main>
-        <div id="modal" class="simplePopup"></div>
     </div>
+    <div id="modal" class="simplePopup"></div>
         <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Customer/No Maint Display file                                                                           --%>

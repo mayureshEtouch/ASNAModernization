@@ -9,6 +9,12 @@ $(document).ready(function() {
         },
         "DSBPDFR": {
         	"CenPH__lb_SFLCTL__lb_2ALTX": "Enter name to search by"
+        },
+        "DSGQPVI": {
+            "p1": "Only numeric",
+            "p2": "Only numeric",
+            "p3": "Only numeric",
+            "name": "Enter name to search by"
         }
     }
     var currentScreen = window.location.href.split("/")[(window.location.href.split("/").length - 1)].split("_")[0];
