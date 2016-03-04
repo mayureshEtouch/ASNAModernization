@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
+	
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -67,6 +69,7 @@
                                 </div>
                             </div>
                         </div>
+						<span class="error" style="margin-left:210px"></span>
                     </div>
 
                     <div class="button-container" style="padding-bottom:0">
@@ -403,7 +406,7 @@
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
-
+			$('.error').text($('.DdsSflMsgField_OutputOnly').text());
                 //Set page details
                 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                   $(".confirmation-outer-conatiner").hide();
@@ -429,6 +432,17 @@
                     _00('Enter', event);
                 });*/
                 $("#CenPH__lb_RCDDTL1__lb_1AJCD").appendTo("#emp-id");
+				
+				  //Employee field validation
+				$("#CenPH__lb_RCDDTL1__lb_1AJCD").keydown(function () {
+					if ($(this).val() === "?") {
+						$(this).attr("maxlength", 1);
+					} else {
+						$(this).attr("maxlength", 5);
+					}
+				});
+				console.log("@ "+$("#CenPH__lb_RCDDTL1__lb_1AJCD"));
+				$("#CenPH__lb_RCDDTL1__lb_1AJCD").ForceNumericWithQuestionMarkOnly();
             });
         </script>
     </asp:Content>

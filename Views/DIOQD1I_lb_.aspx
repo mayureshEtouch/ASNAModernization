@@ -161,11 +161,11 @@
                                     <span class="summary-txt" id="a-customer-type"></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col">
-                                    <span class="summary-title">Addr Ref#:</span>
+                                    <span class="summary-title">Ref#:</span>
                                     <span class="summary-txt" id="a-cust-addr-ref"></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col">
-                                    <span class="summary-title">Addr Ver#:</span>
+                                    <span class="summary-title">Ver#:</span>
                                     <span class="summary-txt" id="a-cust-addr-ver"></span>
                                 </div>
                             </div>
@@ -187,7 +187,7 @@
                                     </div>
                                       <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                            <span class="form-label">Addr:</span>
+                                            <span class="form-label">Address:</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                             <span class="form-text" id="a-address"></span>
@@ -971,7 +971,7 @@
   height: auto;
 }
 #__Page_PopUp {
-top: 28% !important;
+top: 14% !important;
 left: 27% !important;
 }
 body {
