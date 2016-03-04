@@ -211,7 +211,7 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Email Address:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="emailAddress" name="emailAddress" class="zip-code full-input" value="" style="text-transform: none;">
+                                    <input type="text" id="emailAddress" name="emailAddress" class="zip-code full-input" value="" style="text-transform: none;" maxlength="60">
                                     </span>
                                 </div>
                             </div>
