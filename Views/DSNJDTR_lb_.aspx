@@ -79,7 +79,7 @@
                             <span class="summary-txt" id="store-code"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="summary-title">Version numbe</span>
+                            <span class="summary-title">Version Number</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
                     </div>
@@ -1155,5 +1155,8 @@
         #special-instructions span {
             display: block !important;
         }
+		#printInvoice {
+		  display: none;
+		 }
     </style>
     </asp:Content>
