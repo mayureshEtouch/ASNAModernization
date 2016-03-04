@@ -107,7 +107,7 @@
                             <div class="fixed-table-container">
 							   <div class="header-background"> </div>
 							   <div class="fixed-table-container-inner">
-								<table cellspacing="0" cellpadding="0" border="0" id="selectLocation">
+								<table cellspacing="0" cellpadding="0" border="0" id="selectLocation" class="navigateable">
 								 <thead>
 								  <tr data-myval="">
 								   <th class="first"><div class="th-inner">Company</div></th>
@@ -497,83 +497,24 @@
     <script type="text/javascript">
         var loc;
         $(document).ready(function () {
-
             $("[id='number']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val());
-
             // Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant12]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
-
-            /* script for table row starts here */
-            var count = 0;
-
-            $('div#CenPH__lb_SFLRCD>div').each(function () {
-
-                var divid = $(this);
-                //console.log(divid);
-                var selectId = $(divid.children('select')).attr('id');
-                $('div#CenPH__lb_SFLRCD>div:nth-last-of-type(2)').hide();
-
-                var tr = "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                var spancount = 0;
-                var datamyval = $('div#CenPH__lb_SFLRCD>div>select');
-
-                var strtd = "";
-                divid.find('span').map(function (i, e) {
-                    strtd = strtd + "<td>" + ($(e).text()) + "</td>";
-                });
-                var strclosetr = "</tr>";
-
-                $("#selectLocation").append(tr + strtd + strclosetr);
-
-            });
-            $('#selectLocation tr[data-selectid="undefined"]').hide();
-
-            $(".table-data-content-container tbody  tr").attr("class", "");
-            $(".table-data-content-container tbody  tr:visible:odd").addClass("oddrow");
-            $(".table-data-content-container tbody  tr:visible:even").addClass("evenrow");
-            $(".table-data-content-container tbody tr").click(function () {
-                $(this).closest(".table-data-content-container tbody tr").siblings().removeClass("selected-row");
-                $(this).toggleClass("selected-row");
-                $("div.icon-container").removeClass("icon-disable");
-            });
-
-            $("#selectLocation tr").click(function () {
-                var selectId = $(this).data('selectid');
-                a = selectId.split(".");
-                $("#" + a[0] + "\\." + a[1]).val("1")
-                console.log(this);
-            });
-
-            $(".table-container-search .icon-textfield").on('click', function () {
-                $(this).siblings('input:text').closest('.mdl-textfield__input').val('');
-            });
-            $('body').on('dblclick', '#selectLocation tbody tr', function (event) {
-                $("#submit-loc").trigger('click');
-                //_00('Enter', event);
+            generateTableAndApplyInfiniteScroll("selectLocation", "CenPH__lb_SFLRCD", "NONE", "submit-loc");
+            $("#CenPH__lb_SFLCTL__lb_2ABCD").appendTo($("#filter-by-co"));
+            $("#CenPH__lb_SFLCTL__lb_2AACD").appendTo($("#filter-by-loc"));
+            $("#CenPH__lb_SFLCTL__lb_2ACCD").appendTo($("#filter-by-dist"));
+            $("#CenPH__lb_SFLCTL__lb_2ABCD,#CenPH__lb_SFLCTL__lb_2AACD,#CenPH__lb_SFLCTL__lb_2ACCD").addClass("mdl-textfield__input");
+            $('body').on('click', '#exitPage', function (event) {
+                _00('F12', event);
             });
         });
-
-        //$(document).keyup(function (e) {
-        //    e.which = 13;
-        //    $("[id='CenPH__lb_SFLCTL__lb_2ABCD']").val($("[id='number1']").val());
-        //    $("[id='CenPH__lb_SFLCTL__lb_2AACD']").val($("[id='number2']").val());
-        //    $("[id='CenPH__lb_SFLCTL__lb_2ACCD']").val($("[id='number3']").val());
-        //});
-        //$("[id='number1']").val($("[id='CenPH__lb_SFLCTL__lb_2ABCD']").val())
-        //$("[id='number2']").val($("[id='CenPH__lb_SFLCTL__lb_2AACD']").val())
-        //$("[id='number3']").val($("[id='CenPH__lb_SFLCTL__lb_2ACCD']").val())
-        //$( ".close-icon" ).on( "click", function(){ $("input[title='F12 : Exit.']")} );
-        $("#CenPH__lb_SFLCTL__lb_2ABCD").appendTo($("#filter-by-co"));
-        $("#CenPH__lb_SFLCTL__lb_2AACD").appendTo($("#filter-by-loc"));
-        $("#CenPH__lb_SFLCTL__lb_2ACCD").appendTo($("#filter-by-dist"));
-        $("#CenPH__lb_SFLCTL__lb_2ABCD,#CenPH__lb_SFLCTL__lb_2AACD,#CenPH__lb_SFLCTL__lb_2ACCD").addClass("mdl-textfield__input");
-        $('body').on('click', '#exitPage', function (event) {
-            _00('F12', event);
-        });
-
     </script>
     <style>
+        .th-inner {
+            width: auto !important;
+        }
         #CenPH__lb_SFLCTL__lb_2ABCD,#CenPH__lb_SFLCTL__lb_2AACD,#CenPH__lb_SFLCTL__lb_2ACCD {
             position:static !important;
             width: 100% !important;

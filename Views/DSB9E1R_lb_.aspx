@@ -59,12 +59,12 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Type:</span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">First Name:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select name="type" id="type"></select>
-                                        <!-- <input type="text" id="type" name="type" style="width: 50px;" value=""> -->
-                                        <span class="input-side-gutter-space" id="typeText" style="display: none;"></span> </span>
+                                <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <span id="firstName-span" class="hide"></span>
+                                    <input type="text" maxlength="10" id="firstName" name="firstName" class="hide zip-code full-input" value="">
+                                    </span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-height">
@@ -73,14 +73,19 @@
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <span id="middleInitial-span" class="hide"></span>
                                         <input class="hide" type="text" id="middleInitial" name="middleInitial" size="1" value="" maxlength="1">
-                                        <span style="float:right">
-                                        <span class="input-side-gutter-space form-label">Last Name:</span>
-                                        <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
-                                        <span id="lastName-span" class="hide"></span>
-                                        <input type="text" maxlength="15" id="lastName" name="lastName" class="hide full-input" value="">
-                                    </span>
-                                    </span> </span>
+                                        </span>
                                 </div>
+                            </div>
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Name:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <span id="lastName-span" class="hide"></span>
+                                    <input size="22" maxlength="15" type="text" id="lastName" name="lastName" class="hide" value="">
+                                    <span class="input-side-gutter-space form-label" style="float:right">Suffix:
+                                    <!-- <span id="suffix"></span> -->
+                                    <!-- <input type="text" id="suffix" name="suffix" class="extension"> -->
+                                    <select name="suffix" id="suffix" class="hide"></select>
+                                    </span> </span> </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Business Name:</span> </div>
@@ -119,15 +124,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select name="mailingList" id="mailingList"></select>
-                                        <!-- <input type="text" id="mailingList" name="mailingList" style="width: 50px;" value="Y"> -->
-                                  </span>
-                                </div>
-                            </div>
+                            
                             <!-- <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
@@ -140,11 +137,30 @@
                             
                             <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--2-col" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                       <span id="lastChangedByUser"></span>
                                         <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
                                     </span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col" style="margin:0"> <span class="form-label">On:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <span style="position:relative">
+                                        <span id="changedDate"></span>
+                                        <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
+                                        <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
+                                        <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
+                                        </span>
+                                    </span>
+                                        <span>
+                                        <span class="input-side-gutter-space form-label">At:</span>
+                                        <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
+                                          <span id="changedTime"></span>
+                                        <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
+                                    </span>
+                                    </span> </span>
+                                    
                                 </div>
                             </div>
                            <br><br> 
@@ -152,29 +168,15 @@
 
                         </div>
                         <div class="mdl-cell mdl-cell--6-col">
+                            
                             <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">First Name:</span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Type:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <span id="firstName-span" class="hide"></span>
-                                    <input type="text" maxlength="10" id="firstName" name="firstName" class="hide zip-code full-input" value="">
-                                    </span>
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <select name="type" id="type"></select>
+                                        <!-- <input type="text" id="type" name="type" style="width: 50px;" value=""> -->
+                                        <span class="input-side-gutter-space" id="typeText" style="display: none;"></span> </span>
                                 </div>
-                            </div>
-                            <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> 
-                                    <!-- <span class="form-label">Credit Customer:</span> --> 
-                                    <span class="form-label">Suffix:</span> 
-                                </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0"> 
-                                <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <!-- <input type="text" maxlength="3" id="suffix" name="suffix" class="" size="3"> --> 
-                                    <select name="suffix" class="hide" id="suffix"></select> 
-                                    <!--<span class="input-side-gutter-space form-label" style="float:right">Suffix:
-                                     
-                                    </span> -->
-                                    </span> 
-                                    </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-add-height">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Address:</span> </div>
@@ -214,24 +216,12 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">On:</span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <span style="position:relative">
-                                        <span id="changedDate"></span>
-                                        <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
-                                        <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
-                                        <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
-                                        </span>
-                                    </span>
-                                        <span>
-                                        <span class="input-side-gutter-space form-label">At:</span>
-                                        <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
-                                          <span id="changedTime"></span>
-                                        <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
-                                    </span>
-                                    </span> </span>
-                                    
+                                        <select name="mailingList" id="mailingList"></select>
+                                        <!-- <input type="text" id="mailingList" name="mailingList" style="width: 50px;" value="Y"> -->
+                                  </span>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +309,7 @@
             makeSelectDescriptive("mailingList",['Y','N','F','S','M','I','D','W','U','R','C','O','B','V','X','E','1','H','A','L','P','T','3','2','0','4','$','5','*','G','?'],['YES','NO','FiSERV','Sales','Minimum','Individual','Decreased','WHS','Un-Validated','Reserved','Canceled','Over Limit','Both','Vendor','Other','Extended','18 Mth COP Approval','Held','Already Used','Location','Purchase Limit','Both Costs','36 Mth COP Approval','24 Mth COP Approval','12 Mth COP Approval','48 Mth COP Approval','Cash Value','60 Mth COP Approval','Astrick','Customer Thank You Card','?']);
         
             makeSelectDescriptive("suffix",['JR.','SR.','JR','SR','II','III','IV','V'],['JR','SR','Junior','Senior','Second','Third','Fourth','Fifth']);
-            $("#bphone1,#bphone2,#bphone3,#hphone1,#hphone2,#hphone3,#extn,#zcode").on('keypress',function(event){
+            $("#bphone1,#bphone2,#bphone3,#hphone1,#hphone2,#hphone3,#extn,#zcode,#cphone").on('keypress',function(event){
                 var keycode = event.keycode || event.which;
                 if(keycode != 8 && isNaN(String.fromCharCode(keycode))){
                     event.preventDefault();

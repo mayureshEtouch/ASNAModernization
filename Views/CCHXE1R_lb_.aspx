@@ -120,7 +120,11 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
-                                        <span class="form-text"><input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="9"><span class="ro-data" id="ro-cust-ssn" ></span></span>
+                                        <span class="form-text">
+                                        <input class="editable-data validateSSNLength" onkeyup="validateInput(this)" type="text" id="cust-ssn" size="15" maxlength="9">
+                                        <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                                        <input type="hidden" id="dummy-cust-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9">
+                                        <span class="ro-data" id="ro-cust-ssn" ></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +204,9 @@
 									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-ssn" size="15" maxlength="9">
+											<input class="editable-data validateSSNLength" onkeyup="validateInput(this)" type="text" id="sp-ssn" size="15" maxlength="9">
+                                        <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                                        <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
 											<span class="ro-data" id="ro-sp-ssn"></span>
 										</span>
 									</div>
@@ -1659,6 +1665,10 @@
             width: 40% !important;
             border-radius: 3px;
         }
+        #cust-ssn-error, #sp-ssn-error{
+            display: none;
+            float: left;
+        }
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
@@ -1702,6 +1712,7 @@
               "CenPH__lb_RCDDTL1__lb_1DRCD": "cust-lic-first",
               "CenPH__lb_RCDDTL1__lb_DTX20":"cust-lic-second",
               "CenPH__lb_RCDDTL1__lb_1A4NB": "cust-ssn",
+              "cust-ssn": "dummy-cust-ssn",
               "CenPH__lb_RCDDTL1__lb_1RTCD":"cust-res-type",
               "CenPH__lb_RCDDTL1__lb_1REST": "no-of-years",
               "CenPH__lb_RCDDTL1__lb_1RES_usd_": "payment-of",
@@ -1710,6 +1721,7 @@
               "CenPH__lb_RCDDTL1__lb_1DEP_lb_": "cust-dependents",
               "CenPH__lb_RCDDTL1__lb_1SPNM": "sp-name",
               "CenPH__lb_RCDDTL1__lb_DDUN_lb_": "sp-ssn",
+              "sp-ssn": "dummy-sp-ssn",
               "CenPH__lb_RCDDTL1__lb_1SPST": "sp-lic-first",
               "CenPH__lb_RCDDTL1__lb_DG6XT": "sp-lic-second",
               "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "sp-monthly-income",
@@ -1736,6 +1748,8 @@
                 _00('F12', event);
             });
             $('body').on('click', '#next', function(event) {
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
                 _00('Enter', event);
             });
             $('body').on('click', '#updateCustomer', function(event) {
@@ -1786,6 +1800,51 @@
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#no-of-years").numericWithCustomDecimalPrecisions(5,2);
             $("#ref-phone").validatePhone();*///123/456-7890
+
+            $(".ssn-show").on("mousedown", function() {
+                var input = $(this).siblings('input[type=text]');
+                if(input){
+                    var ssnId = $(input).attr('id');
+                    if(ssnId){
+                       setTimeout(function(){
+                           var ssnValue = $("#"+ssnId).val();
+                           var dummyValue = $("#dummy-"+ssnId).val();
+                           $("#"+ssnId).val($("#dummy-"+ssnId).val());
+                           $("#dummy-"+ssnId).val(ssnValue);
+                       },10);
+                   }
+               }
+             });
+             $(".ssn-show").on("mouseup", function() {
+               var input = $(this).siblings('input[type=text]');
+               if(input){
+                   var ssnId = $(input).attr('id');
+                    if(ssnId){
+                         var ssnValue = $("#"+ssnId).val();
+                         var dummyValue = $("#dummy-"+ssnId).val();
+                         $("#"+ssnId).val($("#dummy-"+ssnId).val());
+                         $("#dummy-"+ssnId).val(ssnValue);
+                    }
+                }
+             });
+             /*$("#cust-ssn").keypress(function(){
+                if($(this).val().indexOf('*') >= 0){
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($(this).val())
+                }else{
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                }
+                console.log($("#CenPH__lb_RCDDTL1__lb_1A4NB").val());
+                console.log('--------');
+             })
+             $("#sp-ssn").keypress(function(){
+                if($(this).val().indexOf('*') >= 0){
+                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($(this).val())
+                }else{
+                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                }
+                console.log($("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val());
+                console.log('--------');
+             })*/
         });
     </script>
 </asp:Content>
