@@ -9,7 +9,6 @@
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
-        <!-- <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script> -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -74,10 +73,11 @@
                       </div>
                       <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                           <span class="form-text">
-                            <input type="text" maxlength="10" id="telephone" class="only-numeric mdl_textfield_input_small" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ext&nbsp;&nbsp;&nbsp;
+                            <input type="text" maxlength="10" id="telephone" class="only-numeric mdl_textfield_input_small" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extension&nbsp;&nbsp;&nbsp;
                             <input type="text" id="ext" class="only-numeric mdl_textfield_input_small" size="5" maxlength="4" />
                           </span>
                       </div>
+					  <span class="error" style="margin-left:254px"></span>
                     </div>
                   </div>
                   <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" id="div-number-type" style="padding:0" style="display:none;">
@@ -96,14 +96,13 @@
                     
           <div class="button-container" style="padding-bottom:0">
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-desktop pull-left" style="padding-bottom:0">
-                <span class="error"></span>
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--9-col-desktop pull-left" style="padding-bottom:0">
+                <!--<span class="error"></span>-->
               </div>
               <div class="mdl-cell mdl-cell--8-col mdl-cell--1-col-desktop pull-right" style="padding-bottom:0">
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hide" event-data="F9" id="f9-action-text"></span>
               </div>
               <div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-desktop pull-right" style="padding-bottom:0">
-                
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="save-phone">Submit</span>
               </div>
             </div>
@@ -186,7 +185,6 @@
                 }else if($( ".DdsConstant:contains('F9=Change')" ).length > 0){
                   $("#f9-action-text").text("Change");
                 }
-
                 $('#div-add-edit-number').hide();
                 $('#div-number-type').show();
               }else if($('#CenPH__lb_RCDDTL1__lb_1ZTNB').length>0){
@@ -235,6 +233,7 @@
               $("#ext").on('keyup change',function(event) {
                 $('#CenPH__lb_RCDDTL1__lb_1ZUNB').val($('#ext').val());
               });
+
               $("#input-phone-type").on('keyup change',function(event) {
                
                 $('#CenPH__lb_RCDKEY__lb_1PACD').val($(this).val());

@@ -359,7 +359,17 @@
                     _00('Enter', event);
                 });*/
                 copyData(copyToAndFrom);
-                $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
+		 
+				$('#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option').each(function(){
+					
+					if($(this).val().trim() == ""){
+					  $(this).val(" ").text("Please Choose");
+					    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
+					}
+                      return this;
+				});
+				
+			    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
             });
         </script>
     </asp:Content>
