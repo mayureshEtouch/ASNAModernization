@@ -139,7 +139,15 @@
                                   </span>
                                 </div>
                             </div>
-                            
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Notes ?:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <span id="notes"></span>
+                                        <!-- <input type="text" id="notes" name="notes" style="width: 50px;" value="N"> -->
+                                  </span>
+                                </div>
+                            </div>
                             <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
@@ -168,15 +176,7 @@
                                     
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Notes ?:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <span id="notes"></span>
-                                        <!-- <input type="text" id="notes" name="notes" style="width: 50px;" value="N"> -->
-                                  </span>
-                                </div>
-                            </div>
+                           
                            <br>
                             <div class="content-grid mdl-grid"><span class="error"></span></div>
                            <br> 
