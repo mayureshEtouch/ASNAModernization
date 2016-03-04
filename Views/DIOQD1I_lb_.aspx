@@ -970,6 +970,14 @@
 .mdl-layout__content {
   height: auto;
 }
+#__Page_PopUp {
+top: 28% !important;
+left: 27% !important;
+}
+body {
+	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+	font-size: 13px;
+}
 </style>
         <script type="text/javascript">
             $(document).ready(function () {
