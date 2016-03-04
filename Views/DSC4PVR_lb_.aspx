@@ -426,7 +426,6 @@
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
             //Set name
-            /*$("#CenPH__lb_RCDDTL1__lb_1ALTX,#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_DB5NA").removeAttr("tabindex");*/
             $("#CenPH__lb_RCDDTL1__lb_1ALTX").appendTo("#search-by-name");
             $("#CenPH__lb_RCDDTL1__lb_1ALTX").addClass("mdl-textfield__input");
             //Set phone number fields
@@ -437,18 +436,10 @@
             //Set email to original email text field
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").appendTo("#search-by-email");
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input").css("text-transform", "lowercase");
-            $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("minlength", "3");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("maxlength", "3");
-            $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
             //Only numbers validation
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB").ForceNumericOnly();
-            //Set tabindex
-            /*$("#CenPH__lb_RCDDTL1__lb_PAVNB").attr("tabindex", "1");
-            $("#CenPH__lb_RCDDTL1__lb_PBMNB").attr("tabindex", "2");
-            $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("tabindex", "3");
-            $("#CenPH__lb_RCDDTL1__lb_1ALTX").attr("tabindex", "4");
-            $("#CenPH__lb_RCDDTL1__lb_DB5NA").attr("tabindex", "5");*/
         });
     </script>
     <style>
