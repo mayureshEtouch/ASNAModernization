@@ -68,13 +68,13 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop">
                                     <span class="summary-label">Customer phone number :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="p1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" maxlength="3">
-                                        <input type="text" id="p2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" maxlength="3">
-                                        <input type="text" id="p3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--5-col-desktop" maxlength="4">
+                                        <input type="text" id="p1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                        <input type="text" id="p2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                        <input type="text" id="p3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--5-col-desktop">
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col" style="margin-left: 1.5%">
-                                    <span class="circle-separator"><span>OR</span></span>
+                                <div class="mdl-cell mdl-cell--2-col" style="margin-right: 1%;">
+                                    <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop" style="margin: 0">
                                     <span class="summary-label">Customer name/ partial name :</span>
@@ -87,9 +87,9 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--9-col-desktop">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span></div>                        
                                 <div class="mdl-cell mdl-cell--3-col pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search Extra Phone</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" data-upgraded=",MaterialButton,MaterialRipple">Search Extra Phone<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>
                         </div>
