@@ -1,9 +1,13 @@
 ﻿function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId) {
-    $("body").css({ "background-color": "#FFFFFF" });
+    $("body").css({
+        "background-color": "#FFFFFF"
+    });
     $('body').on('click', '#' + tableId + ' tbody tr', function() {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-        $(this).css({ "background-color": "#d8d8d8" });
+        $(this).css({
+            "background-color": "#d8d8d8"
+        });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
@@ -38,6 +42,9 @@
                 } else {
                     $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
                 }
+            } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+                var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+                $("#" + tableId + " tbody").append(tr);
             }
         });
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
@@ -86,23 +93,31 @@
                 } else {
                     $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
                     $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                    $(output.row).css({ "background-color": "#d8d8d8" });
+                    $(output.row).css({
+                        "background-color": "#d8d8d8"
+                    });
                 }
             }
         }
     });
     // To fixed table header
-    $(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
+    $(".fixed-table-container-inner .th-inner").animate({
+        width: "300px"
+    }, 500);
 }
 
 
 //Special case for select installations screen
 function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordConatainer, ignoreSapn, selectRowId) {
-    $("body").css({ "background-color": "#FFFFFF" });
+    $("body").css({
+        "background-color": "#FFFFFF"
+    });
     $('body').on('click', '#' + tableId + ' tbody tr', function() {
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-        $(this).css({ "background-color": "#d8d8d8" });
+        $(this).css({
+            "background-color": "#d8d8d8"
+        });
         $("div.icon-container").removeClass("icon-disable");
     });
     /* script for table row starts here */
@@ -125,10 +140,10 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                 var strtd = "";
                 divid.find('span').map(function(i, e) {
                     var id = $(e).attr("id");
-					
+
                     if (id.indexOf(ignoreSapn) === -1) {
-                        strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" :$(e).text()) + "</td>";
-						
+                        strtd = strtd + "<td>" + ($(e).text() == .00 ? "0.00" : $(e).text()) + "</td>";
+
                     }
                 });
                 var strclosetr = "</tr>";
@@ -139,6 +154,9 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                 } else {
                     $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
                 }
+            } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+                var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+                $("#" + tableId + " tbody").append(tr);
             }
         });
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
@@ -187,17 +205,23 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                 } else {
                     $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
                     $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                    $(output.row).css({ "background-color": "#d8d8d8" });
+                    $(output.row).css({
+                        "background-color": "#d8d8d8"
+                    });
                 }
             }
         }
     });
     // To fixed table header
-    $(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
+    $(".fixed-table-container-inner .th-inner").animate({
+        width: "300px"
+    }, 500);
 }
 
 // To fixed table header
-$(".fixed-table-container-inner .th-inner").animate({ width: "300px" }, 500);
+$(".fixed-table-container-inner .th-inner").animate({
+    width: "300px"
+}, 500);
 //copy data to and from
 function setHandlers(copyFrom, copyTo, events) {
     $("#" + copyFrom).on(events, function() {
@@ -216,18 +240,18 @@ function copyData(fields, events) {
                 outvalues += $("#" + combineFromAll[i]).html().replace(/&nbsp;/g, "") + "&nbsp;";
             }
         } else {
-            if(ele.indexOf("&nbsp;") !== -1) {
+            if (ele.indexOf("&nbsp;") !== -1) {
                 var id = ele.replace(/&nbsp;/g, "");
                 outvalues += $("#" + id).html().replace(/&nbsp;/g, "");
                 outvalues += "&nbsp;";
             } else {
-                if($("#" + ele).length > 0) {
+                if ($("#" + ele).length > 0) {
                     outvalues += $("#" + ele).html().replace(/&nbsp;/g, "");
                 } else {
                     outvalues = "";
                 }
             }
-            
+
         }
         $("#" + dispOnlyFields[ele]).html(outvalues);
     }
@@ -265,13 +289,13 @@ $(document).ready(function() {
         if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
         }
-		if ($("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
+        if ($("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
         }
         if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
             errorMsg += $("#MsgPH_DdsMessagePanel1").text();
         }
-		
+
         $('#modal1').html(errorMsg);
         $('#modal1').simplePopup();
     }
@@ -283,7 +307,7 @@ $(document).ready(function() {
         if ($("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
         }
-		if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+        if ($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
             errorMsg += $("#CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
         }
         if ($("#MsgPH_DdsMessagePanel1").text().length > 1) {
@@ -294,12 +318,12 @@ $(document).ready(function() {
     }
 })
 
-function makeSelectDescriptive(selectId,values,descriptions){
-    if(values && descriptions && values.length > 0 && descriptions.length>0){
-        $("#"+selectId+" > option").map(function(){
+function makeSelectDescriptive(selectId, values, descriptions) {
+    if (values && descriptions && values.length > 0 && descriptions.length > 0) {
+        $("#" + selectId + " > option").map(function() {
             var index = values.indexOf($(this).val().trim());
-            if(index != -1){
-                $(this).text(values[index]+" - "+descriptions[index]);
+            if (index != -1) {
+                $(this).text(values[index] + " - " + descriptions[index]);
             }
             return this;
         })
