@@ -316,7 +316,7 @@ $(document).ready(function() {
         $('#modal').html(errorMsg);
         $('#modal').simplePopup();
     }
-})
+});
 
 function makeSelectDescriptive(selectId, values, descriptions) {
     if (values && descriptions && values.length > 0 && descriptions.length > 0) {
