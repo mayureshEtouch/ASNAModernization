@@ -168,22 +168,22 @@ li a{
 /* css for background images*/
 
 .contracts-bg{
-	background:url(../Images/work-with-contracts-bg.png) no-repeat;
+	background:url(../Images/444_r1_c1.png) no-repeat;
 }
 .sales-order-bg{
-	background:url(../Images/work-with-sales-order-bg.png) no-repeat;
+	background:url(../Images/444_r1_c2.png) no-repeat;
 }
 .inv-delv-sch-bg{
-	background: url(../Images/inv-delv-sch-bg.png) no-repeat;
+	background: url(../Images/444_r1_c3.png) no-repeat;
 }
 .misc-cust-serv-bg{
-	background: url(../Images/misc-cust-serv-bg.png) no-repeat;	
+	background: url(../Images/444_r2_c1.png) no-repeat;	
 }
 .incomplete-orders-bg{
-	background: url(../Images/incomplete-orders-bg.png) no-repeat;	
+	background: url(../Images/444_r2_c2.png) no-repeat;	
 }
 .othr-misc-sales-menu-bg{
-	background: url(../Images/othr-misc-sales-menu-bg.png) no-repeat;	
+	background: url(../Images/444_r2_c3.png) no-repeat;	
 }
 .contracts-bg,.sales-order-bg,.inv-delv-sch-bg,.misc-cust-serv-bg,.incomplete-orders-bg,.othr-misc-sales-menu-bg{
 	background-position: center center;

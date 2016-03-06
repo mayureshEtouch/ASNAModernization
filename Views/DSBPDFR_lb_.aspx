@@ -600,6 +600,10 @@
 		#customerName tbody > tr:hover {
 			cursor: pointer;
 		}
+        tr.selected {
+            background-color: #d8d8d8 !important;
+        }
+
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -612,19 +616,15 @@
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
             $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
             $('body').on('click', '#customerName tbody tr', function () {
-                $("#customerName tbody tr:even").css("background-color", "#fff");
-                $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
-                $(this).css({ "background-color": "#d8d8d8" });
-                $(this).addClass('clicked');
-                $("div.icon-container").removeClass("icon-disable");
-				$("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
-				$("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
-                /*Setting selected row which will be useful while hitting enter button*/
-                //var row = $("#customerName tbody tr.clicked");
-                //var selectId = $(row).data('selectid');
-                //a = selectId.split(".");
-                //$("#" + a[0] + "\\." + a[1]).val(1);
-                /*Setting selected row*/
+                if($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+                    $("#customerName tbody tr:even").css("background-color", "#fff");
+                    $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
+                    $(this).css({ "background-color": "#d8d8d8" });
+                    $(this).addClass('clicked');
+                    $("div.icon-container").removeClass("icon-disable");
+                    $("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
+                    $("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
+                }
             });
 
             // Search by Customer data table record mapping
@@ -661,7 +661,7 @@
                         var strclosetr = "</tr>";
                         $("#customerName tbody").append(tr + strtd + strclosetr);
                     } else if($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
-                        var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+                        var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
                         $("#customerName tbody").append(tr);
                     }
                 });

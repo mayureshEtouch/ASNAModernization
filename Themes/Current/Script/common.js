@@ -43,7 +43,7 @@
                     $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
                 }
             } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
-                var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+                var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
                 $("#" + tableId + " tbody").append(tr);
             }
         });
@@ -106,7 +106,6 @@
     }, 500);
 }
 
-
 //Special case for select installations screen
 function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordConatainer, ignoreSapn, selectRowId) {
     $("body").css({
@@ -131,9 +130,9 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                 var selectId = $(divid.children('select')).attr('id')
                 var tr = "";
                 if (count === 1 && direction === "top-to-bottom") {
-                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    tr += "<tr style='background-color: #d8d8d8 !important;' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
                 } else if (count === recordCount && direction === "bottom-to-top") {
-                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    tr += "<tr style='background-color: #d8d8d8 !important;' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
                 } else {
                     tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
                 }
@@ -272,7 +271,6 @@ function setDateTime(dateFieldId, timeFieldId) {
 /* Onclick button triggering function pressing F keys*/
 $(document).ready(function() {
     $('body').on('click', '.mdl-button, .close-icon', function(event) {
-        console.log('clciking...');
         var fkey = $(this).attr('event-data');
         if (fkey != undefined && fkey != '') {
             _00(fkey, event);
