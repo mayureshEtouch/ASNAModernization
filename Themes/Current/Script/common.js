@@ -130,9 +130,9 @@ function generateTableAndApplyInfiniteScrollForInstallations(tableId, recordCona
                 var selectId = $(divid.children('select')).attr('id')
                 var tr = "";
                 if (count === 1 && direction === "top-to-bottom") {
-                    tr += "<tr style='background-color: #d8d8d8 !important;' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
                 } else if (count === recordCount && direction === "bottom-to-top") {
-                    tr += "<tr style='background-color: #d8d8d8 !important;' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                    tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
                 } else {
                     tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
                 }
