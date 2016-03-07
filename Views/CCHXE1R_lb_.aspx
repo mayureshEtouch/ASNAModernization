@@ -1669,6 +1669,11 @@
             display: none;
             float: left;
         }
+		#cust-ssn-error {
+			margin-left: 0;
+			float: none;
+			display: inline-block !important;
+		}
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
