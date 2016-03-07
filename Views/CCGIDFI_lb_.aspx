@@ -100,6 +100,30 @@
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data" id="third-message" style="display:none;">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="nocopp"></span></div>
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text">No Cash Option Product on Invoice</span></div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
@@ -736,6 +760,14 @@
                     $("#notice-first").html(notes);
                     $("#second-message").hide();
                     $("#first-message").show();
+                } else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("No Cash Option Product on Invoice") !== -1) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#third");
+                    $("#nocopp").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+                    $("#third-message").show();
+                    $("#first-message").hide();
+                    $("#second-message").hide();
+                    $("#modal1").css('left','32%');
+                    $("#__Page_PopUp").css('height','380px');
                 } else {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#second");
                     $("#notice-second").html(notes);
