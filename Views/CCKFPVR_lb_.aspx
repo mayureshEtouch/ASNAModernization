@@ -905,9 +905,9 @@
             //var infoMessage = $("#CenPH_DdsConstant2").html();
             var customerName = $("#CenPH__lb_RCDDTL1__lb_DALTX").html();
             var customerAdd = $("#CenPH__lb_RCDDTL1__lb_DBNTX").html() + "&nbsp;";
-            customerAdd += "</br>" + $("#CenPH__lb_RCDDTL1__lb_DBPTX").html() + "&nbsp;, " + $("#CenPH__lb_RCDDTL1__lb_DBMTX").html();
+            customerAdd += "</br>" + $("#CenPH__lb_RCDDTL1__lb_DBPTX").html() + ",&nbsp;" + $("#CenPH__lb_RCDDTL1__lb_DBMTX").html();
             var zipCode = $("#CenPH__lb_RCDDTL1__lb_DUSTX").html();
-            $("#cust_name").html(customerName + "</br>" + customerAdd + "&nbsp;, " + zipCode + "</br>");
+            $("#cust_name").html(customerName + "</br>" + customerAdd + ",&nbsp;" + zipCode + "</br>");
             var reqApprvlFor = $("#CenPH__lb_RCDDTL1__lb_1GFVA").html().replace("&nbsp;", "");
             $("#reqApprvlFor").html("<strong>Requesting Approval for:</strong>&nbsp;" + reqApprvlFor);
 			$("#ConstantMsg").html($("#CenPH_DdsConstant2").html());
