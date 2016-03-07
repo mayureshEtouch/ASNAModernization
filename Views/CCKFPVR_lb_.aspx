@@ -954,5 +954,8 @@
         #__AsnaDisplayfileRestored__ {
             margin-top: -20px !important;
         }
+		#content {
+			height: auto !important;
+		}
     </style>
 </asp:Content>

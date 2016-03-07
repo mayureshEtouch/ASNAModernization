@@ -701,7 +701,9 @@
 			}
 		}
         table tbody tr td:nth-child(3) { text-align: right; }
-        
+        #customerName tbody > tr:hover {
+			cursor: pointer;
+		}
     </style>
     <script type="text/javascript">
         $(document).ready(function () {

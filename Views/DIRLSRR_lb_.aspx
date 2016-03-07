@@ -84,7 +84,7 @@
                                     <tr>
                                         <th>Term</th>
                                         <th>Type</th>
-                                        <th>Warranty</th>
+                                        <th>Warranty ($)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
