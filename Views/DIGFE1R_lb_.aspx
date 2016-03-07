@@ -67,54 +67,78 @@
                     <div class="form-data-wrapper" style="padding: 0;">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col">
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-add-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Address:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0">
                                         <div class="form-text shipping-add" data-upgraded=",MaterialTextfield">
                                             <input type="text" class="full-input" id="add-one" name="add-one" maxlength="25">
                                             <br>
-                                            <input type="text" class="full-input" id="add-two" name="add-two" maxlength="25" style="margin-bottom: 0;">
+                                            <input type="text" class="full-input" id="add-two" name="add-two" maxlength="25" style="margin-top: 20px;">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Home Phone #:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="home-phone" name="home-phone" maxlength="10">
                                                                 </span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Cell Phone #:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="cell-phone" name="cell-phone" maxlength="10">
                                                                 </span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Email:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="cust-email" style="text-transform: lowercase;" name="cust-email" class="full-input">
                                                                 </span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Extra Phone #s:</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield"> Y </span> </div>
+                                <div class="content-grid mdl-grid content-row-height">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
+                                        <span class="form-text" data-upgraded=",MaterialTextfield">
+                                          <span id="last-changed-by"></span>
+                                            <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
+                                        </span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
+                                        <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <span style="position:relative">
+                                            <span id="last-changed-on"></span>
+                                            <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
+                                            <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
+                                            <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
+                                            </span>
+                                        </span>
+                                            <span>
+                                            <span class="input-side-gutter-space form-label">At:</span>
+                                            <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
+                                              <span id="last-changed-at"></span>
+                                            <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
+                                        </span>
+                                        </span> </span>
+                                        
+                                    </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <!-- <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">On:</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span id="last-changed-on" class="form-text" data-upgraded=",MaterialTextfield"></span> </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="mdl-cell mdl-cell--6-col">
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="5">
                                                                 &nbsp;</span> 
-									<span id="state" class="form-text" data-upgraded=",MaterialTextfield"></span>&nbsp;&nbsp;
+									<span id="state" class="form-text" data-upgraded=",MaterialTextfield"></span>,&nbsp;
 									<span id="city" class="form-text" data-upgraded=",MaterialTextfield"></span>							
 								</div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Work Phone:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="work-phone" name="work-phone" maxlength="10" class="mdl-cell--5-col">
@@ -123,56 +147,55 @@
                                                                 </span> </span>
                                     </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield"> 
                                 <select name="" id="mailing-list">
                                     <option selected="selected" value="Y"> Y </option>
-                                    <option value="N"> N </option>
-                                    <option value=" ">   </option>
-                                    <option value="F"> F </option>
-                                    <option value="S"> S </option>
-                                    <option value="M"> M </option>
-                                    <option value="I"> I </option>
-                                    <option value="D"> D </option>
-                                    <option value="W"> W </option>
-                                    <option value="U"> U </option>
-                                    <option value="R"> R </option>
-                                    <option value="C"> C </option>
-                                    <option value="O"> O </option>
-                                    <option value="B"> B </option>
-                                    <option value="V"> V </option>
-                                    <option value="X"> X </option>
-                                    <option value="E"> E </option>
-                                    <option value="1"> 1 </option>
-                                    <option value="H"> H </option>
-                                    <option value="A"> A </option>
-                                    <option value="L"> L </option>
-                                    <option value="P"> P </option>
-                                    <option value="T"> T </option>
-                                    <option value="3"> 3 </option>
-                                    <option value="2"> 2 </option>
-                                    <option value="0"> 0 </option>
-                                    <option value="4"> 4 </option>
-                                    <option value="$"> $ </option>
-                                    <option value="5"> 5 </option>
-                                    <option value="*"> * </option>
-                                    <option value="G"> G </option>
+                                    <option value=" "> Please Choose </option>
+                                    <option value="Y"> Y - Yes </option>
+                                    <option value="0"> 0 - 12 Months COP Ap </option>
+                                    <option value="1"> 1 - 18 Months COP Ap </option>
+                                    <option value="2"> 2 - 24 Months COP Ap </option>
+                                    <option value="3"> 3 - 36 Months COP Ap </option>
+                                    <option value="4"> 4 - 48 Months COP Ap </option>
+                                    <option value="5"> 5 - 60 Months COP Ap </option>
+                                    <option value="$"> $ - Cash Value </option>
+                                    <option value="*"> * - Astrick </option>
+                                    <option value="A"> A - Already Use </option>
+                                    <option value="B"> B - Both </option>
+                                    <option value="C"> C - Canceled </option>
+                                    <option value="D"> D - Decreased </option>
+                                    <option value="E"> E - Extended </option>
+                                    <option value="F"> F - FiSERV </option>
+                                    <option value="G"> G - Customer Than </option>
+                                    <option value="H"> H - Held </option>
+                                    <option value="I"> I - Individual </option>
+                                    <option value="L"> L - Location </option>
+                                    <option value="M"> M - Minimum </option>
+                                    <option value="N"> N - No </option>
+                                    <option value="O"> O - Over Limit </option>
+                                    <option value="P"> P - Purchase Order </option>
+                                    <option value="R"> R - Reserved </option>
+                                    <option value="S"> S - Sales </option>
+                                    <option value="T"> T - Both Costs </option>
+                                    <option value="U"> U - Unvalidated </option>
+                                    <option value="V"> V - Vendor </option>
+                                    <option value="W"> W - WHS </option>
+                                    <option value="X"> X - Other </option>
                                 </select>
                              </span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span id="last-changed-by" class="form-text" data-upgraded=",MaterialTextfield"></span> </div>
+                                <div class="content-grid mdl-grid content-row-height">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Extra Phone #s:</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield"> Y </span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">At:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span id="last-changed-at" class="form-text" data-upgraded=",MaterialTextfield"></span> </div>
-                                </div>
+                                
+                                
                             </div>
                         </div>
                         <div class="button-container">
@@ -1090,11 +1113,13 @@
             $(document).ready(function() {
 				$(".simplePopup").css({"left": "323px", "height": "30px;"});
 				
+
                 //Set page details
                 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                   $(".confirmation-outer-conatiner").hide();
                   copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                   $(".order-summary,.form-data,.time-date").show();
+                  $("#add-one").val($("#CenPH__lb_RCDDTL1__lb_DANTX").val());
                 } else {
                   $(".confirmation-outer-conatiner").show();
 				  $(".close-icon").hide();
@@ -1129,8 +1154,8 @@
                     _00('Enter', event);
                 });
                 //Validations
-                $("#home-phone,#cell-phone,#extension").ForceNumericOnly();
-				$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
+                $("#home-phone,#cell-phone,#extension, #work-phone").ForceNumericOnly();
+				//$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
             });
         </script>
     </asp:Content>
