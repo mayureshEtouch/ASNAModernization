@@ -112,13 +112,11 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
             tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
         }
         var recordCount = $(tableSelector).length - 1;
-        debugger
         if(spanIndices) {
             generateTableWithSpanIndex(recordCount, tableId, direction, tableSelector, spanIndices);
         } else {
             generateTableWithoutSpanIndex(recordCount, tableId, direction, ignoreSapn, tableSelector);
         }
-        
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
     }
