@@ -123,7 +123,7 @@
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
               <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-left" style="padding-bottom:0">
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Return</span> -->
-                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="promt" event-data="F4">Prompt</span>
+                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="promt" event-data="F4">Prompt</span> -->
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1" event-data="F12">Previous</span>
                 <span class="error"></span>
               </div>

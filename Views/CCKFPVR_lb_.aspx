@@ -66,33 +66,33 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding: 0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0">
-                                    <span class="form-label">Location:</span>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
+                                    <span class="form-label">Company/Location:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
                                     <span class="form-text" id="cust_location">000/ 000</span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
                                     <span class="form-label">Customer:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
                                     <span class="form-text" id="cust_name"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding: 0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
                                     <span class="form-label">Employee:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
                                     <span class="form-text" id="employee"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
                                     <span class="form-label">Home Phone:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin: 0">
@@ -100,10 +100,10 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
                                     <span class="form-label">Office Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
                                     <span class="form-text" id="officePhone"></span>
                                 </div>
                             </div>
@@ -905,9 +905,9 @@
             //var infoMessage = $("#CenPH_DdsConstant2").html();
             var customerName = $("#CenPH__lb_RCDDTL1__lb_DALTX").html();
             var customerAdd = $("#CenPH__lb_RCDDTL1__lb_DBNTX").html() + "&nbsp;";
-            customerAdd += "</br>" + $("#CenPH__lb_RCDDTL1__lb_DBPTX").html() + "&nbsp;" + $("#CenPH__lb_RCDDTL1__lb_DBMTX").html();
+            customerAdd += "</br>" + $("#CenPH__lb_RCDDTL1__lb_DBPTX").html() + ",&nbsp;" + $("#CenPH__lb_RCDDTL1__lb_DBMTX").html();
             var zipCode = $("#CenPH__lb_RCDDTL1__lb_DUSTX").html();
-            $("#cust_name").html(customerName + "</br>" + customerAdd + "&nbsp;" + zipCode + "</br>");
+            $("#cust_name").html(customerName + "</br>" + customerAdd + ",&nbsp;" + zipCode + "</br>");
             var reqApprvlFor = $("#CenPH__lb_RCDDTL1__lb_1GFVA").html().replace("&nbsp;", "");
             $("#reqApprvlFor").html("<strong>Requesting Approval for:</strong>&nbsp;" + reqApprvlFor);
 			$("#ConstantMsg").html($("#CenPH_DdsConstant2").html());

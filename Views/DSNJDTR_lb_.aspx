@@ -67,8 +67,8 @@
                             <span class="summary-txt" id="order-id"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Employee Name</span>
-                            <span class="summary-txt" id="employee-name"></span>
+                            <span class="summary-title">Version Number</span>
+                            <span class="summary-txt" id="version-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
                             <span class="summary-title">Employee ID</span>
@@ -79,8 +79,8 @@
                             <span class="summary-txt" id="store-code"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="summary-title">Version Number</span>
-                            <span class="summary-txt" id="version-number"></span>
+                            <span class="summary-title">Employee Name</span>
+                            <span class="summary-txt" id="employee-name"></span>
                         </div>
                     </div>
               </div>

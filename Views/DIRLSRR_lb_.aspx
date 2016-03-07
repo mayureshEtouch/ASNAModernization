@@ -528,14 +528,12 @@
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <script type="text/javascript">
         $(document).ready(function () {
-
             $("[name='Category']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
             $("[name='Group']").text($("[id$=CenPH__lb_SFLCTL__lb_2AWCD]").text());
-            generateTableAndApplyInfiniteScrollForInstallations("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "warranty-submit");
+            generateTableAndApplyInfiniteScroll("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "warranty-submit");
             $('.close-icon').click(function (event) {
                 _00("F12", event);
             });
-
         });
 
     </script>

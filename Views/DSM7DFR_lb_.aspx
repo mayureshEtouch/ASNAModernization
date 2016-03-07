@@ -726,6 +726,7 @@
 				console.log("ss");
                 _00('Enter',event);
             });
+            $("#CenPH__lb_SFLCTL__lb_2AACD").ForceNumericOnly();
         });
     </script>
     <style>

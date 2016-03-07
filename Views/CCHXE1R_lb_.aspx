@@ -329,9 +329,9 @@
                                 <span class="form-label clm-form-label">Type:</span>
                                 <span class="form-text">
                                     <select class="editable-data" name="" id="ref-type">
-                                        <option value="R"> R </option>
-                                        <option value="F"> F </option>
-                                        <option selected="selected" value=" ">   </option>
+                                        <option value=" "> Please Choose </option>
+                                        <option value="R"> R - Relative </option>
+                                        <option value="F"> F - Friend </option>
                                     </select>
 									<span class="ro-data" id="ro-ref-type"></span>
                                 </span>

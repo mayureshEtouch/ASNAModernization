@@ -676,7 +676,7 @@
             $("#number1").on("keyup change", function () {
                 $("#CenPH__lb_SFLCTL__lb_2MHCD").val($("#number1").val());
             });
-            generateTableAndApplyInfiniteScroll("paymentMethod", "CenPH__lb_SFLRCD", "NONE", "nextPage", "nextPage"); // Table ID, Div ID to copy records from, any span to skip, next/submit button id
+            generateTableAndApplyInfiniteScroll("paymentMethod", "CenPH__lb_SFLRCD", "NONE", "nextPage"); // Table ID, Div ID to copy records from, any span to skip, next/submit button id
 			
 			//Select Payment method on double click
             //$('body').on('dblclick', '#paymentMethod tbody tr', function () {
