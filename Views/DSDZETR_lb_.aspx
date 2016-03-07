@@ -155,8 +155,11 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="requestdate" name="date" readonly="true">
+                                        <!--<input type="text" id="requestdate" name="date" readonly="true">
                                         <i id="reqesdate" class="material-icons calender-icon page-icons"></i>
+										-->
+										<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+                                        <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </span>
                                 </div>
@@ -1193,7 +1196,8 @@
                 $("#CenPH__lb_SFLCTL__lb_CCMC_lb_").val($("#pcode").val());
             });
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+           // $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+		    $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
             $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");

@@ -78,7 +78,7 @@
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Customer Name/ Partial Name :</span>
+                                    <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                         <%--<input type="text" id="name" class="mdl-textfield__input">--%>
                                     </div>
@@ -616,8 +616,6 @@
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
             $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
             // Search by Customer data table record mapping
-            var dataMergeIndices = [[0], [1, "&nbsp;&nbsp;&nbsp;", 8], [2, "&nbsp;", 5, "&nbsp;&nbsp;&nbsp;", 6, "&nbsp;&nbsp;&nbsp;", 7],[3]];
-            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "next", dataMergeIndices);
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");

@@ -118,7 +118,9 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                                <input type="text" id="requestdate" name="date" style="width: 148px;"><i class="material-icons calender-icon" id="requestcal"></i>
+                                <!--<input type="text" id="requestdate" name="date" style="width: 148px;"><i class="material-icons calender-icon" id="requestcal"></i>-->
+								<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+                                <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>
                         </div>
@@ -1156,7 +1158,8 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Set requested delivery date
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+            //$("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
             $("#requestcal").click(function () {
                 $("#requestdate").datepicker("show");
             });
@@ -1224,6 +1227,7 @@
 				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly(); 
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");

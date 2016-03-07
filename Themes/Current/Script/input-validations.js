@@ -267,3 +267,9 @@ jQuery.fn.ForceTwoDecimalPoints = function() {
         });
     });
 };
+
+jQuery.fn.ForceNumericMaxlength = function() {
+	return this.each(function() {
+		$(this).attr('maxlength','8');
+	});
+};
