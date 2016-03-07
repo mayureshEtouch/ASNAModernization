@@ -615,106 +615,15 @@
             //Set name
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
             $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
-            $('body').on('click', '#customerName tbody tr', function () {
-                if($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
-                    $("#customerName tbody tr:even").css("background-color", "#fff");
-                    $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
-                    $(this).css({ "background-color": "#d8d8d8" });
-                    $(this).addClass('clicked');
-                    $("div.icon-container").removeClass("icon-disable");
-                    $("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
-                    $("div.icon-container i.display-icon-disabled").addClass("display-icon").removeClass("display-icon-disabled");
-                }
-            });
-
             // Search by Customer data table record mapping
-            var generateTable = function (direction) {
-                $("#customerName tbody").empty();
-                var count = 1;
-                var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
-                var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                        var divid = $(this);
-                        var selectId = $(divid.children('select')).attr('id');
-                        var custName = $(divid.find('span:eq(0)')).html();
-                        var custPhone = $(divid.find('span:eq(1)')).html();
-                        var alterPhone = $(divid.find('span:eq(8)')).html();
-                        var custAdd1 = $(divid.find('span:eq(2)')).html();
-                        var custAdd2 = $(divid.find('span:eq(5)')).html();
-                        var c_column = $(divid.find('span:eq(3)')).html();
-                        var custAdd = custAdd1 + " " + custAdd2;
-                        var zipcode = $(divid.find('span:eq(6)')).html();
-                        var city = $(divid.find('span:eq(7)')).html();
-                        var tr = "";
-                        if (count === 1 && direction === "top-to-bottom") {
-                            tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                        } else if (count === recordCount && direction === "bottom-to-top") {
-                            tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                        } else {
-                            tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                        }
-                        var strtd = "";
-                        strtd = strtd + "<td>" + custName + "</td>";
-                        strtd = strtd + "<td>" + custPhone + "&nbsp;&nbsp;&nbsp;" + alterPhone + "</td>";
-                        strtd = strtd + "<td>" + custAdd + "&nbsp;&nbsp;&nbsp;" + zipcode + "&nbsp;&nbsp;&nbsp;" + city + "</td>";
-                        strtd = strtd + "<td>" + c_column + "</td>";
-                        var strclosetr = "</tr>";
-                        $("#customerName tbody").append(tr + strtd + strclosetr);
-                    } else if($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
-                        var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
-                        $("#customerName tbody").append(tr);
-                    }
-                });
-                $("#customerName tbody tr:even").css("background-color", "#fff");
-                $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
-            }
-            generateTable("top-to-bottom");
-            //Handle Page Up and Page Down events
-            $('body').on('keyup', function (e) {
-                var keycode = e.keycode || e.which;
-                if (keycode === 33) {
-                    _00("PgUp", event);
-                    generateTable("bottom-to-top");
-                } else if (keycode === 34) {
-                    _00("PgDn", event);
-                    generateTable("top-to-bottom");
-                }
-                return;
-            });
-
+            var dataMergeIndices = [[0], [1, "&nbsp;&nbsp;&nbsp;", 8], [2, "&nbsp;", 5, "&nbsp;&nbsp;&nbsp;", 6, "&nbsp;&nbsp;&nbsp;", 7],[3]];
+            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "submit-button", dataMergeIndices);
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-
-            //Select customer on double click
-            $('body').on('dblclick', '#customerName tbody tr', function (event) {
-                selectCusotmer(this, "1", event);
-            });
-
-            // Set first record as default selected
-            $("#customerName tbody tr:first").css("background-color", "#d8d8d8");
-            jQuery.tableNavigation({
-                "onRowChange": function (output) {
-                    if (output) {
-                        var selectId = $(output.row).data('selectid');
-                        if (output.r && output.keycode === "40") {
-                            _00("PgDn", event);
-                            generateTable("top-to-bottom");
-                        } else if (output.r && output.keycode === "38" && !selectId) {
-                            _00("PgUp", event);
-                            generateTable("bottom-to-top");
-                        } else {
-                            $("#customerName tbody tr:even").css("background-color", "#fff");
-                            $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
-                            $(output.row).css({ "background-color": "#d8d8d8" });
-                        }
-                    }
-                }
-            });
-
             //Display customer details
             $(".display-customer").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
