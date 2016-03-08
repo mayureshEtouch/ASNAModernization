@@ -86,11 +86,19 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--9-col-desktop">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span></div>                        
-                                <div class="mdl-cell mdl-cell--3-col pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" data-upgraded=",MaterialButton,MaterialRipple">Search Extra Phone<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                <div class="mdl-cell mdl-cell--6-col-desktop">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span></div>      
+								
+								 <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" data-upgraded=",MaterialButton,MaterialRipple">Search Extra Phone</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchNew" onclick="_00('Enter',event);">Search</span>
                                 </div>
+								
+                                <!--<div class="mdl-cell mdl-cell--3-col pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" data-upgraded=",MaterialButton,MaterialRipple">Search Extra Phone<span class="mdl-button__ripple-container">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchNew" onclick="_00('Enter',event);">Search</span>
+									<span class="mdl-ripple"></span></span></span>
+                                </div>-->
                             </div>
                         </div>
                     </div>
