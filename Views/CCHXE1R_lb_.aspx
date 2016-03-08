@@ -146,7 +146,7 @@
 											</select>
 											<span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
 											<span class="form-label">For</span>&nbsp;&nbsp;
-											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="5" style="width: 50px;"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
+											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="6" style="width: 50px;"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
 											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
 											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="7"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
 											<span class="form-label">Monthly</span>
@@ -1823,7 +1823,7 @@
             });
             //Add validation rules
             //$("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income").ForceNumericOnly();
-            $("#no-of-years,#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code,#ref-phone").ForceNumericOnly();
+            $("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code,#ref-phone").ForceNumericOnly();
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#no-of-years").numericWithCustomDecimalPrecisions(5,2);
             $("#ref-phone").validatePhone();*///123/456-7890

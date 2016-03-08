@@ -957,7 +957,10 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
 <style>
-
+ #__Page_Hidden{
+	min-height: 800px !important;
+	height: 100% !important;
+}
 #__Page_PopUp .DdsInlinePopUpTitle {
  height: 0;
 }

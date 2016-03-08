@@ -338,7 +338,7 @@
             }
             #CenPH__lb_RCDDTL1__lb_PH2S_lb_ {
               position: static !important;
-              width: 45px !important;
+              width: 118px !important;
             }
         </style>
         <script type="text/javascript">

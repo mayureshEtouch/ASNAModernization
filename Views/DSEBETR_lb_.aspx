@@ -118,7 +118,6 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                                <!--<input type="text" id="requestdate" name="date" style="width: 148px;"><i class="material-icons calender-icon" id="requestcal"></i>-->
 								<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
@@ -164,8 +163,8 @@
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="orderPayment">
+                        <div class="table-container" style="overflow: auto;" id="append-here">
+                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                                 <thead>
                                     <tr>
                                         <th width="25%">Payment Method</th>
@@ -1124,15 +1123,6 @@
 		.mdl-layout__content .DdsDecField {
 			font-weight: normal;
 		}
-        .input-field {
-            text-transform: uppercase !important;
-            position: relative !important;
-            left: 0px !important;
-            top: 0px !important;
-            width: auto !important;
-            border: 1px solid #c5c5c5 !important;
-            border-radius: 2px !important;
-        }
         .even-row-read-only-data {
             text-transform: uppercase !important;
             position: relative !important;
@@ -1149,6 +1139,50 @@
             width: auto !important;
             border: 0px !important;
             background-color: rgb(249, 249, 249) !important;
+        }
+        #CenPH__lb_SFLRCD{
+			display: table;
+            height: 125px !important;
+        }
+        #CenPH__lb_SFLRCD, #CenPH__lb_SFLRCD * {
+            position: static !important;
+        }
+        .DdsSubfileSBar {
+            display: none !important;
+        }
+		.table-data-content-container .mdl-data-table {
+			margin-bottom: 0;
+		}
+		.AlternateRow, .DefaultRow {
+			display: table-row;
+			width: 100%;
+			height: 32px !important;
+			border-bottom:1px solid #c5c5c5;
+		}
+		.AlternateRow {
+			background-color: rgb(249, 249, 249) !important;
+		}
+		.DefaultRow {
+			background-color: #FFF !important;
+		}
+        #CenPH__lb_SFLRCD__End {
+            background-color: #FFF !important;
+        }
+        #CenPH__lb_SFLRCD > div input:not([id*=RNICD]), #CenPH__lb_SFLRCD > div span:not([id*=RNICD]) {
+            margin-left: 12% !important;
+        }
+
+        #CenPH__lb_SFLRCD > div input, #CenPH__lb_SFLRCD > div span {
+            width: 12% !important;
+            display: table-cell;
+            padding: 1px 3px 2px !important;
+            margin-top: 4px;
+        }
+        .DdsSubfileCurrentRecord {
+            background-color: #d8d8d8 !important;
+        }
+        #CenPH__lb_SFLRCD > div span[id*="2SEL"] {
+            display: none;
         }
     </style>
     <script>
@@ -1167,7 +1201,7 @@
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
-
+            
             //Set payment page initial read only data
             $("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html().replace(/&nbsp;/g, ""));
             $("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html().replace(/&nbsp;/g, ""));
@@ -1181,77 +1215,20 @@
             $("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text().trim());
 
             //Generate table
-            /* script for table row starts here */
-            var generateTable = function (direction) {
-                $("#orderPayment tbody").empty();
-                var pmtMhtdSelector = "#CenPH__lb_SFLRCD__lb_RNICD\\.",
-                    amountSelector = "#CenPH__lb_SFLRCD__lb_2ATVA\\.",
-                    refSelector = "#CenPH__lb_SFLRCD__lb_2A9TX\\.",
-                    aprCodeSelector = "#CenPH__lb_SFLRCD__lb_2BATX\\.",
-                    firstRecordIdLength = $($('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]')[0]).attr('id').split("_").length,
-                    splitFirstRecordId = length = $($('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]')[0]).attr('id').split("_"),
-                    count = Number(splitFirstRecordId[firstRecordIdLength - 1]);
-                $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                        var divid = $(this);
-                        var selectId = $(divid.children('select')).attr('id')
-                        var row = "";
-                        row += "<tr data-selectid=" + selectId + ">";
-                        row += "<td id=pmt" + count + ">";
-                        row += "<\/td>";
-                        row += "<td id=amt" + count + ">";
-                        row += "<\/td>";
-                        row += "<td id=ref" + count + ">";
-                        row += "<\/td>";
-                        row += "<td id=aprcode" + count + ">";
-                        row += "<\/td>";
-                        row += "<\/tr>";
-                        $("#orderPayment tbody").append(row);
-                        var rowInputFields = (pmtMhtdSelector + count) + "," + (amountSelector + count) + "," + (refSelector + count) + "," + (aprCodeSelector + count);
-                        if ($(pmtMhtdSelector + count).attr("value") == "" || ($(pmtMhtdSelector + count).attr("value") && $(pmtMhtdSelector + count).attr("value").length > 0)) {
-                            $(rowInputFields).addClass("input-field");
-                        } else {
-                            if (count / 2 == 0) {
-                                $(rowInputFields).addClass("even-row-read-only-data");
-                            } else {
-                                $(rowInputFields).addClass("odd-row-read-only-data");
-                            }
-                        }
-                        $(pmtMhtdSelector + count).appendTo("#pmt" + count);
-                        $(amountSelector + count).appendTo("#amt" + count);
-                        $(refSelector + count).appendTo("#ref" + count);
-                        $(aprCodeSelector + count).appendTo("#aprcode" + count);
-                        count++;
-                    }
-                });
-				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly(); 
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
-                $("#orderPayment tbody tr:even").css("background-color", "#fff");
-                $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");
-
-            }
-            generateTable("top-to-bottom");
-            //Handle Page Up and Page Down events
-            $('body').on('keyup', function (event) {
-                var keycode = event.keyCode || event.which;
-                if (keycode === 33) {
-                    _00("PgUp", event);
-                    generateTable("bottom-to-top");
-                } else if (keycode === 34) {
-                    _00("PgDn", event);
-                    generateTable("top-to-bottom");
-                }
-                return;
+            $("#CenPH__lb_SFLRCD select").hide();
+            $("#CenPH__lb_SFLRCD").appendTo("#append-here");
+            $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
+                $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
             });
-            var selectCusotmer = function (row, value, event) {
-                var selectId = $(row).data('selectid');
-                a = selectId.split(".");
-                $("#" + a[0] + "\\." + a[1]).val(value);
-                _00('Enter', event);
-            }
+            $("body").on('hover', "div#CenPH__lb_SFLRCD:even input,div#CenPH__lb_SFLRCD:even span", function() {
+                $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
+            });
+
+            $("body").on('click', "div#CenPH__lb_SFLRCD input", function() {
+                $("div.icon-container").removeClass("icon-disable");
+                $("div.icon-container i.delete-icon-disabled").addClass("delete-icon").removeClass("delete-icon-disabled");
+            });
+            
             if($("#CenPH__lb_SFLCTL_VCBQDT").length > 0) {
                 $("#exp-date-val").html($("#CenPH__lb_SFLCTL_V1AXDT").html());
                 $("#exp-date-label,#exp-date-val").show();
@@ -1287,24 +1264,23 @@
             $("#exitPage").on("click", function (event) {
                 _00("F12", event);
             });
-            //Handle row select functionality and delete record functionality
-            $('body').on('click', '#orderPayment tbody tr', function () {
-                $("#orderPayment tbody tr:even").css("background-color", "#fff");
-                $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");
-                $(this).css({ "background-color": "#d8d8d8" });
-                $("#orderPayment tbody tr.selected").removeClass("selected");
-                $(this).addClass("selected");
-                $("div.icon-container").removeClass("icon-disable");
-				$("div.icon-container i.delete-icon-disabled").addClass("delete-icon").removeClass("delete-icon-disabled");
-            });
+            var deleteRow = function (row, value, event) {
+                var selectId = "CenPH__lb_SFLRCD__lb_2SEL";
+                var selectIndex = $(row).attr('id').split("_")[$(row).attr('id').split("_").length-1];
+                $("#" + selectId + "\\." + selectIndex).val(value);
+                _00('Enter', event);
+            }
             $("#delete-record").click(function (event) {
-                if ($("#orderPayment tbody tr.selected").length > 0) {
-                    var row = $("#orderPayment tbody tr.selected");
-                    selectCusotmer(row, "4", event);
-                } else {
-                    return;
-                }
+                var row = $("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord");
+                deleteRow(row, "4", event);
             });
+			
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly(); 
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
+
         });
     </script>
 </asp:Content>

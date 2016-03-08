@@ -96,7 +96,8 @@
     </div>
         <style>
         #__Page_Hidden{
-            height: 800px !important;
+            min-height: 800px !important;
+			height: 100% !important;
         }
         #__Page_PopUp {
           width: 650px !important;
