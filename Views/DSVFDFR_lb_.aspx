@@ -76,7 +76,7 @@
                                     <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Customer Name/ Partial Name :</span>
+                                    <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
 								</div>	
