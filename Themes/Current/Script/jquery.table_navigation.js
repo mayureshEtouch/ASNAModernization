@@ -147,8 +147,11 @@ jQuery.tableNavigation = function (settings) {
         jQuery.extendedNavigation.tables = jQuery(jQuery.extendedNavigation.settings.table_selector);
         bindInternalEventHandlers();
         $('body').keyup(function (event) {
-            var row = navigateTable(event);
-            jQuery.extendedNavigation.settings.onRowChange(row);
+            if(!event.target.hasAttribute("type")) {
+                var row = navigateTable(event);
+                jQuery.extendedNavigation.settings.onRowChange(row);
+            }
+            
         });
     });
 
@@ -661,7 +664,7 @@ jQuery.tableNavigation = function (settings) {
                 case 40: // arrow down
                 case 39: // arrow right
                     var next_row = getSelectedRow().next();
-                    if (next_row.length > 0) {
+                    if (next_row.length > 0 && $(next_row).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
                         // selectRow returns true if the next row was selected. In this case we does not want
                         // the arrow keys to cause a page scroll because the script handles the scrolling. However
                         // if there is no next row to select (selectRow() returns false) we want to use the default
@@ -688,13 +691,13 @@ jQuery.tableNavigation = function (settings) {
                             }
                         });
                         //return ;
-                        return { "r": !selectRow(next_row.get(0)), "row": next_row, "keycode": "40"};
+                        return { "r": /*!selectRow(next_row.get(0))*/true, "row": next_row, "keycode": "40"};
                     }
                     break;
                 case 38: // arrow up
                 case 37: // arrow left
                     var prev_row = getSelectedRow().prev();
-                    if (prev_row.length > 0) {
+                    if (prev_row.length > 0 && $(prev_row).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
                         // See the big comment block above for an explaination of this "return" line and it's
                         // exclamation mark.
                         //var r = !selectRow(prev_row.get(0));
@@ -718,7 +721,7 @@ jQuery.tableNavigation = function (settings) {
                                 };
                             }
                         });
-                        return { "r": !selectRow(prev_row.get(0)), "row": prev_row, "keycode": "38"};
+                        return { "r": /*!selectRow(prev_row.get(0))*/true, "row": prev_row, "keycode": "38"};
                         //return !selectRow(prev_row.get(0));
                     }
                     break;

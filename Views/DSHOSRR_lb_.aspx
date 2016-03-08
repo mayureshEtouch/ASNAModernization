@@ -59,7 +59,7 @@
                         <div class="fixed-table-container">
 						   <div class="header-background"> </div>
 						   <div class="fixed-table-container-inner">
-							<table cellspacing="0" cellpadding="0" border="0" id="salesperson">
+							<table cellspacing="0" cellpadding="0" border="0" id="salesperson" class="navigateable">
 							 <thead>
 							  <tr data-myval="">
 							   <th class="first"><div class="th-inner">Code</div></th>
@@ -501,6 +501,9 @@
                         var strclosetr = "</tr>";
 
                         $("#salesperson tbody").append(tr + strtd + strclosetr);
+                    } else if($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+                        var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+                        $("#salesperson tbody").append(tr);
                     }
                 });
                 $("#salesperson tbody tr:even").css("background-color", "#fff");

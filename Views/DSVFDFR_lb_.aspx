@@ -28,11 +28,11 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Display Customer by Phone #</span>
+                        <span class="heading-h1">Display Customer</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIJ5DFR</span>
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSVFDFR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
                         <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
@@ -121,10 +121,10 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
                                 <thead>
                                     <tr>
-                                        <th style='width: 22%;'>Customer</th>
+                                        <th style='width: 17%;'>Customer</th>
                                         <th style='width: 20%;'>Home phone</th>
                                         <th style='width: 20%;'>Work phone</th>
-                                        <th style='width: 55%;'>Address</th>
+                                        <th style='width: 60%;'>Address</th>
                                         <th style='width: 3%;'>C</th>
                                     </tr>
                                 </thead>
@@ -147,8 +147,8 @@
             </section>
 
         </main>
-        <div id="modal" class="simplePopup"></div>
     </div>
+    <div id="modal" class="simplePopup"></div>
         <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Customer/No Maint Display file                                                                           --%>
@@ -667,12 +667,12 @@
                         var custName2 = $(divid.find('span:eq(4)')).html();
                         var custName3 = $(divid.find('span:eq(5)')).html();
                         var custName4 = $(divid.find('span:eq(6)')).html();
-                        var custName = custName1 + " " + custName2 + " " + custName3 + " " + custName4;
+                        var custName = custName1;
                         var homePhone = $(divid.find('span:eq(1)')).html();
                         var workPhone = $(divid.find('span:eq(7)')).html();
                         var custAdd1 = $(divid.find('span:eq(2)')).html();
                         var custAdd2 = $(divid.find('span:eq(8)')).html();
-                        var custAdd = custAdd1 + " " + custAdd2;
+                        var custAdd = custAdd1 + " " + custAdd2 + " " + custName2 + " " + custName3 + " " + custName4;
                         var c_column = $(divid.find('span:eq(3)')).html();
                         var tr = "";
                         if (count === 1 && direction === "top-to-bottom") {

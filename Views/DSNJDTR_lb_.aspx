@@ -62,41 +62,36 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order #:</span>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-id"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Employee Name:</span>
-                            <span class="summary-txt" id="employee-name"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Phone details:</span>
-                            <span class="summary-txt">Home Phone: <span id="home-phone"></span></span>
-                            <span class="summary-txt">Work Phone: <span id="work-phone"></span></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Version number:</span>
+                            <span class="summary-title">Version Number</span>
                             <span class="summary-txt" id="version-number"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Employee ID</span>
+                            <span class="summary-txt" id="employee-id"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Store</span>
+                            <span class="summary-txt" id="store-code"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Employee Name</span>
+                            <span class="summary-txt" id="employee-name"></span>
                         </div>
                     </div>
               </div>
             </section>
-            <section class="form-data">
+            <section class="form-data spacer-container-bottom">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                           <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
-                              <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                    <span class="form-label">Employee #:</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" id="employee-id"></span>
-                                </div>
-                            </div>
-                              <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                     <span class="form-label">Order Date:</span>
                                 </div>
@@ -104,15 +99,23 @@
                                     <span class="form-text" id="order-date"></span>
                                 </div>
                             </div>
-                              <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                    <span class="form-label">Store:</span>
+                                    <span class="form-label">Home Phone:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" id="store-code"></span>
+                                    <span class="form-text" id="home-phone"></span>
                                 </div>
-                            </div>
-                              <div class="content-grid mdl-grid">
+							</div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                    <span class="form-label">Work Phone:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                    <span class="form-text" id="work-phone"></span>
+                                </div>
+							</div>
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                     <span class="form-label">Billing Address:</span>
                                 </div>
@@ -171,12 +174,8 @@
                         </div>
                     </div>
                     <div class="content-grid mdl-grid">
-                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
-                            <fieldset>
-                                <legend id="legen">Special Instructions:</legend>
-                                <!-- <span style="min-height: 20px;" class="form-text" id="special-instructions" name="CenPH_2AQNA"></span> -->
-                               <textarea id="special-instructions" rows="5" cols="40" readonly="readonly" name="CenPH_2AQNA"></textarea>
-                            </fieldset>
+                        <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
+                            <fieldset id="special-instructions"></fieldset>
                         </div>
                     </div>
                     
@@ -1094,12 +1093,70 @@
             $(new_fields[i]).text($.trim($(old_fields[i]).text()));
           };
 
-
+          //Special instructions section
+          
+          function generateSpecialInstructionsSection() {
+              //Create copyToAndFrom JSON object for special instructions
+              var copyToAndFrom = {
+                  "displayOnlyFields": {},
+                  "inputFields": {}
+              }
+              $("#special-instructions").empty();
+              var allInputFields = ($('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span').length ?
+                  $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span') : 
+                  $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span:not(:last)'));
+              for(var i = 0; i < allInputFields.length; i++) {
+                  var splInsNewField = '<span maxlength="60" type="text" id="special-instructions' + i + '" class="sp-inst editable-data"></span>';
+                  var splInsRONewField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style="display:block;"></span>';
+                  var oldInpId = $(allInputFields[i]).attr("id");
+                  var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];
+                  if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                      $("#special-instructions").append(splInsRONewField);
+                  } else {
+                      $("#special-instructions").append(splInsNewField);
+                  }
+                  
+                  
+                  copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
+                  copyToAndFrom.displayOnlyFields[splInsOldField] = "special-instructions" + i;
+              }
+              $("#special-instructions span:odd").css("background-color", "#fff");
+              $("#special-instructions span:even").css("background-color", "#f9f9f9");
+              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+              $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
+          }
+          generateSpecialInstructionsSection();
+          $('body').on('keydown', function (event) {
+              var keycode = event.keyCode || event.which;
+              if (keycode === 33) {
+                  /* Please note that the same event is being invoked in common.js hence have to comment it out*/
+                  //_00("PgUp", event);
+                  setTimeout(generateSpecialInstructionsSection, 1000);
+              } else if (keycode === 34) {
+                  /* Please note that the same event is being invoked in common.js hence have to comment it out*/
+                  //_00("PgDn", event);
+                  setTimeout(generateSpecialInstructionsSection, 1000);
+              }
+              return;
+          });
       });
     </script>
     <style>
-            /* #Div1{
-                 display: block;
-            } */
+    .sp-inst {
+        text-transform: uppercase !important;
+        position: relative !important;
+        left: 0px !important;
+        margin-top: 4px !important;
+        width: 99% !important;
+        margin-left: 0% !important;
+        margin-right: 1% !important;
+
+    }
+        #special-instructions span {
+            display: block !important;
+        }
+		#printInvoice {
+		  display: none;
+		 }
     </style>
     </asp:Content>

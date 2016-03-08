@@ -61,7 +61,7 @@
                         <div class="mdl-cell mdl-cell--3-col">
                             <span class="summary-title">Order # </span>
                             <div class="summary-txt">
-                                <span id="CenPH_1BANB"></span>
+                                <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
@@ -111,11 +111,11 @@
                                     <span class="form-label">Shipping Address:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col">
-                                    <div class="form-text shipping-add" data-upgraded=",MaterialTextfield">
-                                        <input type="text" class="full-input" id="CenPH_PBDTX" name="CenPH_PBDTX" maxlength="25">
+                                    <div class="form-text shipping-add" data-upgraded=",MaterialTextfield" id="shipping-add">
+                                        <input type="text" class="full-input" id="CenPH_PBDTX" name="CenPH_PBDTX" maxlength="25" >
                                         <span id="CenPH_PB" class="DdsCharField_OutputOnly"></span>
                                         <br />
-                                        <input type="text" class="full-input" id="CenPH_CETTX" name="CenPH_CETTX" maxlength="25">
+                                        <input type="text" class="full-input" id="CenPH_CETTX" name="CenPH_CETTX" maxlength="25" >
                                         <span id="CenPH_CE" class="DdsCharField_OutputOnly"></span>
                                         <br />
                                         <input type="text" class="full-input" id="CenPH_CEUTX" name="CenPH_CEUTX" maxlength="25">
@@ -155,8 +155,11 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="requestdate" name="date" readonly="true">
+                                        <!--<input type="text" id="requestdate" name="date" readonly="true">
                                         <i id="reqesdate" class="material-icons calender-icon page-icons"></i>
+										-->
+										<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
+                                        <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </span>
                                 </div>
@@ -175,13 +178,13 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="pcode" name="pcode" maxlength="10">
+                                        <input type="text" id="pcode" name="pcode" maxlength="10" >
                                         <span id="promocode" class="DdsCharField_OutputOnly"></span>
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <!-- <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col">
                                     <span class="form-label">Email:</span>
@@ -193,7 +196,7 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
@@ -1143,6 +1146,7 @@
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             // Set order number
             $("#CenPH_1BANB").html($("#CenPH__lb_SFLCTL__lb_1BANB").html().replace(/&nbsp;/g, ""));
+            $("#verssion-number").html($("#CenPH__lb_SFLCTL__lb_1EXNB").html().replace(/&nbsp;/g, ""));
             //Set billing address
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
             $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html());
@@ -1153,6 +1157,8 @@
             $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html());
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
+			
+			
             $('body').on('click', '.emp-code', function (event) {
                 _00('Enter', event);
             });
@@ -1192,7 +1198,8 @@
                 $("#CenPH__lb_SFLCTL__lb_CCMC_lb_").val($("#pcode").val());
             });
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+           // $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+		    $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
             $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
@@ -1223,7 +1230,7 @@
                     $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input') : 
                     $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span:not(:last)'));
                 for(var i = 0; i < allInputFields.length; i++) {
-                    var splInsNewField = '<input type="text" id="special-instructions' + i + '" class="sp-inst editable-data">';
+                    var splInsNewField = '<input maxlength="60" type="text" id="special-instructions' + i + '" class="sp-inst editable-data" tab-index="'+(9 + i)+'">';
                     var splInsRONewField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style="display:none;"></span>';
                     var oldInpId = $(allInputFields[i]).attr("id");
                     var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];
@@ -1243,6 +1250,21 @@
                 $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
             }
             
+			setTimeout(function(){
+			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr("tabindex","1");
+			$("#CenPH_PBDTX").attr("tabindex","2");
+			$("#CenPH_CETTX").attr("tabindex","3");
+			$("#CenPH_CEUTX").attr("tabindex","4");
+			$("#CenPH_CEWTX").attr("tabindex","5");
+			$("#CenPH_1FLST").attr("tabindex","6");
+			$("#requestdate").attr("tabindex","7");
+			$("#pcode").attr("tabindex","8");
+			$("#special-instructions input").each(function(){
+			  if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
+			});
+			},100)
+			
+			
             $('body').on('keydown', function (event) {
                 var keycode = event.keyCode || event.which;
                 if (keycode === 33) {

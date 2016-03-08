@@ -22,7 +22,85 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+            <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select TRS Ship-to Customer</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSGQPVI</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+            <section class="table-data-content-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container table-container-search">
+                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                                <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop">
+                                    <span class="summary-label">Customer phone number :</span>
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                        <input type="text" id="p1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                        <input type="text" id="p2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                        <input type="text" id="p3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--5-col-desktop">
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col" style="margin-right: 1%;">
+                                    <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop" style="margin: 0">
+                                    <span class="summary-label">Customer name/ partial name :</span>
+                                    <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                        <input type="text" id="name" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--9-col-desktop">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span></div>                        
+                                <div class="mdl-cell mdl-cell--3-col pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" data-upgraded=",MaterialButton,MaterialRipple">Search Extra Phone<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+      </div>
+      <div id="modal" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CU: PMT Spc Ship-to Cust  Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -312,4 +390,70 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+        #fkeys, #showDiagnostics, #footer,#message-container {
+            display: none;
+        }
+
+        #main-content {
+            width: 100%;
+        }
+    .clm-form-label{
+      display: inline-block;
+      width: 125px;
+    }
+    .clm-form-label-add{
+      display: inline-block;
+      width: 125px;
+      float: left;
+    }
+        .ro-data  {
+            display:none;
+        }
+        .error {
+            color: #ff0000;
+            font-size: 11px;
+            width: auto !important;
+        }
+        label.error {
+            margin-left: 114px;
+        }
+        .sp-ssn-error {
+            margin-left: 104px;
+        }
+        .ui-datepicker-month {
+            margin-right: 2% !important;
+            width: 40% !important;
+            border-radius: 3px;
+        }
+        .ui-datepicker-year {
+            margin-left: 2% !important;
+            width: 40% !important;
+            border-radius: 3px;
+        }
+    </style>
+    <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant5": "date",
+                "CenPH__lb_RCDDTL1__lb__lb_TME": "time"
+            },
+            "inputFields": {
+              "CenPH__lb_RCDDTL1__lb_DAVNB": "p1",
+              "CenPH__lb_RCDDTL1__lb_DBMNB":"p2",
+              "CenPH__lb_RCDDTL1__lb_DAXNB": "p3",
+              "CenPH__lb_RCDDTL1__lb_1ALTX":"name"
+            }
+        }
+        $(document).ready(function() {
+            copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+            $('body').on('click', '#previous', function(event) {
+                _00('F12', event);
+            });
+            $('body').on('click', '#search', function(event) {
+                _00('F8', event);
+            });
+            $("#p1,#p2,#p3").ForceNumericOnly();
+        });
+    </script>
     </asp:Content>

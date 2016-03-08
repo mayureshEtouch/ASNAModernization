@@ -7,11 +7,11 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -57,9 +57,9 @@
                         <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
                             <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom:-10px;padding-top:0;">
-                                <div class="icon-container icon-disable">
+                                <div class="icon-container">
                                 <span class="icon-txt">Change</span>
-                                <i class="material-icons md-15 md-light change-icon-disabled"></i>
+                                <i class="material-icons md-15 md-light change-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -69,12 +69,12 @@
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container" style="overflow: auto;" style="width:auto;">
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerPhones">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerPhones">
                             <thead>
                               <tr>
                                 <th>Type</th>
                                 <th>Telephone</th>
-                                <th>Ext</th>
+                                <th>Extension</th>
                               </tr>
                             </thead>
                             <tbody></tbody>
@@ -94,105 +94,57 @@
         </section>
             </main>
     </div>
-<style>
-#__Page_PopUp {
-  width: 650px !important;
-}
-#__Page_PopUp > tr:first-child {
- display: none;
-}
-#__Page_PopUp .DdsInlinePopUpTitle {
- height: 0;
-}
-.modal-dialog-container, #main-content {
-  width: 100% !important;
-}
-.modal-dialog-container {
-  margin: 0 auto;
-}
-.mdl-layout__content {
-  height: auto;
-  margin-bottom: 15px;
-}
- /* form class ends here */
-tr.selected {
-    background-color: #f1f1f1;
-}
-</style>
-<script type="text/javascript">
-  $(document).ready(function () {
-     var generateTable = function (direction) {
-
-         $("#customerPhones tbody").empty();
-         var count = 1;
-         var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
-         var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-             if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                 var divid = $(this);
-                 var selectId = $(divid.children('select')).attr('id');
-                 var type = $(divid.find('span:eq(0)')).html();
-                 var telephone = $(divid.find('span:eq(1)')).html();
-                 var ext = $(divid.find('span:eq(2)')).html();
-                 
-                 var tr = "";
-                 if (count === 1 && direction === "top-to-bottom") {
-                     tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                 } else if (count === recordCount && direction === "bottom-to-top") {
-                     tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                 } else {
-                     tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                 }
-                 var strtd = "";
-                 strtd = strtd + "<td>" + type + "</td>";
-                 strtd = strtd + "<td>" + telephone + "</td>";
-                 strtd = strtd + "<td>" + ext + "</td>";
-                 
-                 var strclosetr = "</tr>";
-                 $("#customerPhones tbody").append(tr + strtd + strclosetr);
-             }
-         });
-         $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
-     }
-     generateTable("top-to-bottom");
-    /* $("#customerPhones tbody tr").click(function(){
-       $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
-       $(this).toggleClass("selected");
-       $("div.icon-container").removeClass("icon-disable");
-     });*/
-     $('body').on('click', '#customerPhones tbody tr', function () {
-         $("#customerPhones tbody tr:even").css("background-color", "#fff");
-         $("#customerPhones tbody tr:odd").css("background-color", "#fcfcfc");
-         $(this).css({ "background-color": "#f1f1f1" });
-         $(this).closest("#customerPhones tbody tr").siblings().removeClass("selected");
-         $(this).addClass("selected");
-         $("div.icon-container").removeClass("icon-disable");
-         $("div.icon-container i.change-icon-disabled").addClass("change-icon").removeClass("change-icon-disabled");
-     });
-     $(".icon-container").click(function (event) {
-         if ($(".icon-container").hasClass("icon-disable")) {
-             alert("Please select a address");
-         } else {
-             var row = $("#customerPhones tbody tr.selected");
-             selectCusotmer(row, "2", event);
-         }
-     });
-     var selectCusotmer = function (row, value, event) {
+        <style>
+        #__Page_Hidden{
+            height: 800px !important;
+        }
+        #__Page_PopUp {
+          width: 650px !important;
+        }
+        #__Page_PopUp > tr:first-child {
+         display: none;
+        }
+        #__Page_PopUp .DdsInlinePopUpTitle {
+         height: 0;
+        }
+        .modal-dialog-container, #main-content {
+          width: 100% !important;
+        }
+        .modal-dialog-container {
+          margin: 0 auto;
+        }
+        .mdl-layout__content {
+          height: auto;
+          margin-bottom: 15px;
+        }
+         /* form class ends here */
+        tr.selected {
+            background-color: #f1f1f1;
+        }
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function () {
+               // generate phone numbers
+               generateTableAndApplyInfiniteScroll("customerPhones", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+               $(".icon-txt, .change-icon").click(function (event) {
+                   var row = $("#customerPhones tbody tr.selected");
+                   selectCusotmer(row, "2", event);
+               });
+               var selectCusotmer = function (row, value, event) {
                     var selectId = $(row).data('selectid');
                     a = selectId.split(".");
                     $("#" + a[0] + "\\." + a[1]).val(value);
                     _00('Enter', event);
                 }
-      $('#add').click(function (event) {
-         _00('F9', event);
-      })
-      $(".close-icon").click(function(event) {
-        /* Act on the event */
-        _00('F12',event);
-      });
-
-  });
-</script>
+                $('#add').click(function (event) {
+                   _00('F9', event);
+                })
+                $(".close-icon").click(function(event) {
+                  /* Act on the event */
+                  _00('F12',event);
+                });
+          });
+        </script>
         <div id="Div1" style="display:none;">
             
       <%--  CU: DSW Phone Numbers     Display file                                                                           --%>

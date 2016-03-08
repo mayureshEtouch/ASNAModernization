@@ -63,16 +63,10 @@
                             <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
-                                        <span class="form-label clm-form-label-add">Customer:</span>
+                                        <span class="form-label clm-form-label-add">Customer Name:</span>
                                         <span class="form-text">
                                         <span id="cust-name">000/000</span>
-                                        <br>
-                                        <span id="cust-first-add">000/000</span>
-                                        <br>
-                                        <span id="cust-second-add">000/000</span>
-                                        <br>
-                                        <span id="cust-zipcode">000/000</span>
-                                        </span>
+										</span>
                                     </div>
                                 </div>
                             </div>
@@ -83,6 +77,22 @@
                                         <span class="form-text" id="home-phone">000/ 000-000</span>
                                     </div>
                                 </div>
+							</div>
+							<div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="form-label clm-form-label" style="vertical-align: top;">Customer Address:</span>
+                                         <div style="display: inline-block; ">
+										<span id="cust-first-add">000/000</span>
+                                        <br>
+                                        <span id="cust-second-add">000/000</span>
+                                        <br>
+                                        <span id="cust-zipcode">000/000</span>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+							<div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">Office Phone:</span>
@@ -92,7 +102,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label form-label-input clm-form-label">Birthday:</span>
-                                        <input class="editable-data" type="text" id="cust-birth" size="15">
+                                        <input class="editable-data" type="text" id="cust-birth" size="15" readonly="true">
                                         <i id="cust-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span class="form-text" id="ro-cust-birth" class="ro-data">12/12/1986</span>
                                     </div>
@@ -110,7 +120,11 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
-                                        <span class="form-text"><input class="editable-data required validateSSN" type="text" id="cust-ssn" size="15" maxlength="11" onkeyup="validateInput(this)" placeholder="111-11-1111"><span class="ro-data" id="ro-cust-ssn" ></span></span>
+                                        <span class="form-text">
+                                        <input class="editable-data validateSSNLength" onkeyup="validateInput(this)" type="text" id="cust-ssn" size="15" maxlength="9">
+                                        <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                                        <input type="hidden" id="dummy-cust-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9">
+                                        <span class="ro-data" id="ro-cust-ssn" ></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -122,16 +136,17 @@
                                         <span class="form-text">
                                         <span class="form-label">Residence Type:</span>&nbsp;&nbsp;&nbsp;
 											<select class="editable-data" id="cust-res-type">
-												<option selected="selected" value="O"> O </option>
-												<option value="R"> R </option>
-												<option value="L"> L </option>
-												<option value=" ">   </option>
+                                                <option value=" " selected="selected">Please Choose</option>
+												<option value="O">O-Own</option>
+												<option value="R">R-Rent</option>
+												<option value="L">L-Live</option>
+												
 											</select>
 											<span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
 											<span class="form-label">For</span>&nbsp;&nbsp;
-											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
+											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="5" style="width: 50px;"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
 											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
-											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="10"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
+											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="7"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
 											<span class="form-label">Monthly</span>
 										</span>
                                     </div>
@@ -152,9 +167,10 @@
 										<span class="form-label clm-form-label">Marital Status:</span>
 										<span class="form-text">
 											<select class="editable-data" id="cust-martial-status">
-												<option value="M"> M </option>
-												<option value="S"> S </option>
-												<option selected="selected" value=" ">   </option>
+                                                <option selected="selected" value=" ">Please Choose</option>
+												<option value="M">M-Married</option>
+												<option value="S">S-Single</option>
+												
 											</select>
 											<span class="ro-data" id="ro-cust-martial-status"></span>
 										</span>
@@ -180,7 +196,7 @@
 									<div class="mdl-cell mdl-cell--4-col" style="margin:0">
 										<span class="form-label clm-form-label">Birthday:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-birth" size="15">
+											<input class="editable-data" type="text" id="sp-birth" size="15" readonly="true">
                                             <i id="sp-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
 											<span class="ro-data" id="ro-sp-birth"></span>
 										</span>
@@ -188,7 +204,9 @@
 									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
 										<span class="form-text">
-											<input class="editable-data required validateSSN" type="text" id="sp-ssn" size="15" maxlength="11" onkeyup="validateInput(this)" placeholder="111-11-1111">
+											<input class="editable-data validateSSNLength" onkeyup="validateInput(this)" type="text" id="sp-ssn" size="15" maxlength="9">
+                                        <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                                        <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
 											<span class="ro-data" id="ro-sp-ssn"></span>
 										</span>
 									</div>
@@ -209,9 +227,9 @@
 										</span>
 									</div>
 									<div class="mdl-cell mdl-cell--6-col" style="margin:0">
-										<span class="form-label clm-form-label" style="width: 170px;">Spouse Monthly Income:</span>
+										<span class="form-label clm-form-label">Spouse Monthly Income:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-monthly-income" size="15">
+											<input class="editable-data" type="text" id="sp-monthly-income" size="15" maxlength="10">
 											<span class="ro-data" id="ro-sp-monthly-income"></span>
 										</span>
 									</div>
@@ -226,7 +244,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Employed at:</span>
                                 <span class="form-text">
-									<input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" size="40" maxlength="20">
+									<input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20">
 									<span class="ro-data" id="ro-employed-at"></span>
 								</span>
                             </div>
@@ -246,7 +264,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Income:</span>
 								<span class="form-text">
-									<input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15" maxlength="10">
+									<input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15" maxlength="7">
 									<span class="ro-data" id="ro-cust-income"></span>
 								</span>
                             </div>
@@ -263,12 +281,12 @@
                                 <span class="form-label clm-form-label">Frequency:</span>
 								<span class="form-text">
 									<select class="editable-data" id="cust-frenq">
-										<option value="H"> H </option>
-										<option value="W"> W </option>
-										<option value="B"> B </option>
-										<option value="M"> M </option>
-										<option value=" ">   </option>
-										<option selected="selected" value="A"> A </option>
+                                        <option value=" " selected="selected">Please Choose</option>
+										<option value="H">H-Hourly</option>
+										<option value="W">W-Weekly</option>
+										<option value="B">B-Bi-weekly</option>
+										<option value="M">M-Monthly</option>
+										<option value="A">A-Annual</option>
 									</select>
 									<span class="ro-data" id="ro-cust-frenq"></span>
 								</span>
@@ -301,7 +319,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Phone No:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20" maxlength="12">
+									<input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20" maxlength="10">
 									<span class="ro-data" id="ro-ref-phone"></span>
 								</span>
                             </div>
@@ -311,9 +329,9 @@
                                 <span class="form-label clm-form-label">Type:</span>
                                 <span class="form-text">
                                     <select class="editable-data" name="" id="ref-type">
-                                        <option value="R"> R </option>
-                                        <option value="F"> F </option>
-                                        <option selected="selected" value=" ">   </option>
+                                        <option value=" "> Please Choose </option>
+                                        <option value="R"> R - Relative </option>
+                                        <option value="F"> F - Friend </option>
                                     </select>
 									<span class="ro-data" id="ro-ref-type"></span>
                                 </span>
@@ -1616,13 +1634,12 @@
         }
 		.clm-form-label{
 			display: inline-block;
-			width: 110px;
+			width: 125px;
 		}
 		.clm-form-label-add{
 			display: inline-block;
-			width: 110px;
+			width: 125px;
 			float: left;
-			height: 100px;
 		}
         .ro-data  {
             display:none;
@@ -1638,6 +1655,25 @@
         .sp-ssn-error {
             margin-left: 104px;
         }
+        .ui-datepicker-month {
+            margin-right: 2% !important;
+            width: 40% !important;
+            border-radius: 3px;
+        }
+        .ui-datepicker-year {
+            margin-left: 2% !important;
+            width: 40% !important;
+            border-radius: 3px;
+        }
+        #cust-ssn-error, #sp-ssn-error{
+            display: none;
+            float: left;
+        }
+		#cust-ssn-error {
+			margin-left: 0;
+			float: none;
+			display: inline-block !important;
+		}
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
@@ -1681,6 +1717,7 @@
               "CenPH__lb_RCDDTL1__lb_1DRCD": "cust-lic-first",
               "CenPH__lb_RCDDTL1__lb_DTX20":"cust-lic-second",
               "CenPH__lb_RCDDTL1__lb_1A4NB": "cust-ssn",
+              "cust-ssn": "dummy-cust-ssn",
               "CenPH__lb_RCDDTL1__lb_1RTCD":"cust-res-type",
               "CenPH__lb_RCDDTL1__lb_1REST": "no-of-years",
               "CenPH__lb_RCDDTL1__lb_1RES_usd_": "payment-of",
@@ -1689,6 +1726,7 @@
               "CenPH__lb_RCDDTL1__lb_1DEP_lb_": "cust-dependents",
               "CenPH__lb_RCDDTL1__lb_1SPNM": "sp-name",
               "CenPH__lb_RCDDTL1__lb_DDUN_lb_": "sp-ssn",
+              "sp-ssn": "dummy-sp-ssn",
               "CenPH__lb_RCDDTL1__lb_1SPST": "sp-lic-first",
               "CenPH__lb_RCDDTL1__lb_DG6XT": "sp-lic-second",
               "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "sp-monthly-income",
@@ -1715,6 +1753,8 @@
                 _00('F12', event);
             });
             $('body').on('click', '#next', function(event) {
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
                 _00('Enter', event);
             });
             $('body').on('click', '#updateCustomer', function(event) {
@@ -1745,9 +1785,9 @@
             });
             $("#cust-birth").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD_DateValue").val() || $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD").val());
             $("#sp-birth").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB_DateValue").val() || $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val());
-            $("#cust-birth").datepicker({ dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(2007, 6, 12) });
+            $("#cust-birth").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
             $("#cust-reqesdate").click(function () { $("#cust-birth").datepicker("show"); });
-            $("#sp-birth").datepicker({ dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(2007, 6, 12) });
+            $("#sp-birth").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
             $("#sp-reqesdate").click(function () { $("#sp-birth").datepicker("show"); });
             $("#cust-birth").on('change', function () {
                 var date = $("#cust-birth").val().split("/");
@@ -1760,11 +1800,56 @@
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB").val(date[2] + "-" + date[0] + "-" + date[1]);
             });
             //Add validation rules
-            //$("#cust-ssn,#sp-ssn").validateAndConvertToSSN();//123-45-6789
-            $("#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code").ForceNumericOnly();
-            $("#payment-of").numericWithCustomDecimalPrecisions(5,2);//123.45, 12345.00, 1.32
-            $("#no-of-years,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
-            $("#ref-phone").validatePhone();//123/456-7890
+            //$("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income").ForceNumericOnly();
+            $("#no-of-years,#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code,#ref-phone").ForceNumericOnly();
+            /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
+            $("#no-of-years").numericWithCustomDecimalPrecisions(5,2);
+            $("#ref-phone").validatePhone();*///123/456-7890
+
+            $(".ssn-show").on("mousedown", function() {
+                var input = $(this).siblings('input[type=text]');
+                if(input){
+                    var ssnId = $(input).attr('id');
+                    if(ssnId){
+                       setTimeout(function(){
+                           var ssnValue = $("#"+ssnId).val();
+                           var dummyValue = $("#dummy-"+ssnId).val();
+                           $("#"+ssnId).val($("#dummy-"+ssnId).val());
+                           $("#dummy-"+ssnId).val(ssnValue);
+                       },10);
+                   }
+               }
+             });
+             $(".ssn-show").on("mouseup", function() {
+               var input = $(this).siblings('input[type=text]');
+               if(input){
+                   var ssnId = $(input).attr('id');
+                    if(ssnId){
+                         var ssnValue = $("#"+ssnId).val();
+                         var dummyValue = $("#dummy-"+ssnId).val();
+                         $("#"+ssnId).val($("#dummy-"+ssnId).val());
+                         $("#dummy-"+ssnId).val(ssnValue);
+                    }
+                }
+             });
+             /*$("#cust-ssn").keypress(function(){
+                if($(this).val().indexOf('*') >= 0){
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($(this).val())
+                }else{
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                }
+                console.log($("#CenPH__lb_RCDDTL1__lb_1A4NB").val());
+                console.log('--------');
+             })
+             $("#sp-ssn").keypress(function(){
+                if($(this).val().indexOf('*') >= 0){
+                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($(this).val())
+                }else{
+                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                }
+                console.log($("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val());
+                console.log('--------');
+             })*/
         });
     </script>
 </asp:Content>

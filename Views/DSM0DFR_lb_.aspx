@@ -59,15 +59,16 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Model Number</span>
-                            <span class="summary-txt" id="model-number"></span>
+                            <span class="summary-title">Model</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="model-number"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="model-name"></span></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Product Category</span>
                             <span class="summary-txt" id="prod-cat"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Vendor Number</span>
+                            <span class="summary-title">Vendor Name</span>
                             <span class="summary-txt" id="vendor-number"></span>
                         </div>
                     </div>
@@ -887,7 +888,8 @@
         <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
-                    "CenPH__lb_SFLCTL__lb_2AXTX+CenPH__lb_SFLCTL__lb_2A2TX": "model-number",
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "model-number",
+					"CenPH__lb_SFLCTL__lb_2A2TX": "model-name",
                     "CenPH__lb_SFLCTL__lb_CFATX": "prod-cat",
                     "CenPH__lb_SFLCTL__lb_CECTX": "vendor-number"
                 },

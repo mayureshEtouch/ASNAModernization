@@ -84,19 +84,19 @@
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Purchase Total:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CEFVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Tax Amount:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CBLVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Balance Due:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col amount-text">
                             <span id="CenPH_CBNVA" class="form-text pull-right"></span>
                         </div>
                     </div>
@@ -104,13 +104,13 @@
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Miscellaneous:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_1ANPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Order Total:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CAQPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
@@ -118,7 +118,9 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                                <input type="text" id="requestdate" name="date" style="width: 164px;"><i class="material-icons calender-icon" id="requestcal"></i>
+                                <!--<input type="text" id="requestdate" name="date" style="width: 148px;"><i class="material-icons calender-icon" id="requestcal"></i>-->
+								<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+                                <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>
                         </div>
@@ -127,13 +129,13 @@
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Effective Tax Rate:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col ">
                             <span class="form-label">Payment Total:</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_CBMVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
@@ -1156,7 +1158,8 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Set requested delivery date
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
-            $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+            //$("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
+			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
             $("#requestcal").click(function () {
                 $("#requestdate").datepicker("show");
             });
@@ -1224,6 +1227,7 @@
 				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly(); 
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
                 $("#orderPayment tbody tr:even").css("background-color", "#fff");
                 $("#orderPayment tbody tr:odd").css("background-color", "#f9f9f9");

@@ -3,8 +3,19 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 2/29/2016 at 2:15 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+		 <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member SDGPPVR# --%>
-
+		 <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +33,75 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+	
+	 <div class="OverlayPopupBackground"></div>
+    <div class="modal-dialog-container">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row"> 
+                <!-- Title --> 
+                 <span class="mdl-layout-title logo-icon"></span>
+                <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon" event-data="F12"><i class="material-icons close md-15"></i></span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col"> 
+                    <!-- Title --> 
+                    <span class="heading-h1">TRS Sales Refer By</span> </div>
+                <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                    <!-- Navigation --> 
+                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SDGPPVR</span></div>
+            </div>
+        </section>
+        
+		<div class="box-container" style="margin-top: 20px; height: auto;">
+            <div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 5px 5px; background: none;">
+                <div class="content-grid mdl-grid">
+                    <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
+                        <div class="content-grid mdl-grid">
+							 <div class="mdl-cell mdl-cell--12-col"> 
+								<span style="margin: 0;">Order Number</span>
+								<span class="ord-num form-label"></span>
+								<span>&nbsp;for&nbsp;</span>
+								<span class="cust-name form-label"></span>
+							  </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Location:</span> </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
+                                <span class="form-text">
+                                    <input id="location" type="text" name="location" value="" maxlength="3"></span>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Employee:</span> </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
+                                <span class="form-text">
+                                    <input id="employee" type="text" name="employee" value="" maxlength="5"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container" style="padding: 0 0 5px 0;">
+                    <div class="mdl-cell mdl-cell--12-col pull-right">
+						<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Enter</span>
+					</div>
+                </div>
+            </div>
+        </div>
+		
+        </main>
+        <!--div id="modal" class="simplePopup"></div-->
+		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+         </div>
+    </div>
+	
         <div id="Div1">
             
       <%--  OE: PMT for Referenced    Prompt & validate record                                                               --%>
@@ -415,4 +495,86 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style type="text/css" media="screen">
+	#fkeys, #Div1 {
+		display: none;
+	}
+	 .modal-dialog-container {
+        margin: 0 auto;
+        margin-bottom: 45px;
+		width: 100%;
+      }
+	body {
+		font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
+	}
+	#__Page_PopUp {
+		min-width: 450px !important;
+        width: 450px !important;
+       left: 50% !important;
+       margin-left: -225px;
+       top: 25% !important;
+     }
+      #__Page_PopUp > tr:first-child {
+       display: none;
+      }
+      #__Page_PopUp .DdsInlinePopUpTitle {
+       height: 0;
+      }
+	   #wrapper {
+		width: 100% !important;
+		}
+		.mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+		 #__Page_Hidden{
+            height: 800px !important;
+        }
+		.confirmation-outer-conatiner {
+			left: 30% !important;
+		}
+	</style>
+	<script type="text/javascript">
+      $(document).ready(function() {
+        $('.ord-num').text($('#CenPH__lb_RCDDTL1__lb_1BANB').text());
+        $('.cust-name').text($('#CenPH__lb_RCDDTL1__lb_DALTX').text());
+       
+		$('#location').val($('#CenPH__lb_RCDDTL1__lb_1AACD').val());
+		$('#employee').val($('#CenPH__lb_RCDDTL1__lb_1AJCD').val());
+		
+		$("#location").on("change keyup", function () {
+                $("#CenPH__lb_RCDDTL1__lb_1AACD").val($("#location").val());
+            });
+			
+		$("#employee").on("change keyup", function () {
+			$("#CenPH__lb_RCDDTL1__lb_1AJCD").val($("#employee").val());
+		});
+		
+		$("#location").ForceNumericOnly();
+		
+		//Handle enter click event
+		$("#enter").on("click", function (event) {
+			_00("Enter", event);
+		});
+		
+		
+		 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+		  $(".confirmation-outer-conatiner").hide();
+		  $(".OverlayPopupBackground").hide();
+			} else {
+		  $(".confirmation-outer-conatiner").show();
+		  $(".OverlayPopupBackground").show();
+		}
+            
+		$("#yes").click(function (event) {
+			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+			_00('Enter', event);
+		});
+		$("#no").click(function (event) {
+			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+			_00('Enter', event);
+		});
+			
+      });
+    </script>
     </asp:Content>

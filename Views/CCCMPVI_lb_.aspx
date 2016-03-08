@@ -156,15 +156,19 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
-        $("#ssn-show").on("mousedown", function() {
-            var dummyValue = $("#ssn").val();
-            $("#ssn").val($("#dummy-ssn").val());
-            $("#dummy-ssn").val(dummyValue);
+       $("#ssn-show").on("mousedown", function() {
+          setTimeout(function(){
+              var ssnValue = $("#ssn").val();
+              var dummyValue = $("#dummy-ssn").val();
+              $("#ssn").val($("#dummy-ssn").val());
+              $("#dummy-ssn").val(ssnValue);
+          },10);
         });
         $("#ssn-show").on("mouseup", function() {
-            var orgValue = $("#ssn").val();
+            var ssnValue = $("#ssn").val();
+            var dummyValue = $("#dummy-ssn").val();
             $("#ssn").val($("#dummy-ssn").val());
-            $("#dummy-ssn").val(orgValue);
+            $("#dummy-ssn").val(ssnValue);
         });
         $('.error').text($('#MsgPH_DdsMessagePanel1').text());
         $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_1A4NB').val());
@@ -176,6 +180,8 @@
             $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($("#dummy-ssn").val());
             _00("Enter", event);
         });
+
+        $("#ssn").ForceNumericOnly();
 
       });
     </script>

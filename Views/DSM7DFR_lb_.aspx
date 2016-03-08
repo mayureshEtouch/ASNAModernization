@@ -42,22 +42,15 @@
             <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
                         <li class="progress-bar-divider">
-
                         <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                        <li class="white-to-gray-bullet">
-
-                        <li class="progress-bar-step3 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
+                        <li class="white-to-gray-bullet"></li>
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Enter Order Details</span> </li>
                         <li class="progress-bar-divider-first">
-
-                        <li class="progress-bar-step4  step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
                         <li class="progress-bar-divider">
-
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -66,16 +59,19 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Model Number</span>
-                            <span class="summary-txt" id = "model-number"></span>
+                            <span class="summary-title">Model</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="model-number"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="model-name"></span></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Product Category</span>
-                            <span class="summary-txt" id ="product-category"></span>
+                            <span class="summary-title">Product</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Category:</span><span id="product-category"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Type:</span><span id="product-type"></span></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Vendor Number</span>
-                            <span class="summary-txt" id ="vendor-number"></span>
+                            <span class="summary-title">Vendor</span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="vendor-number"></span></span>
+							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="vendor-name"></span></span>
                         </div>
                     </div>
                 </div>
@@ -143,7 +139,7 @@
                                         <th>Company</th>
                                         <th>Location</th>
                                         <th>Description</th>
-                                        <th>Avail</th>
+                                        <th>Available</th>
                                         <th>Xfers</th>
                                         <th>Ordered</th>
                                     </tr>
@@ -151,11 +147,11 @@
                                 <tbody>
                                     <%--<tr>
                                         <td>CON</td>
-                                        <td class="pull-right">001</td>
+                                        <td>001</td>
                                         <td>HOUSTON WHSE</td>
-                                        <td class="pull-right">56</td>
-                                        <td class="pull-right">0</td>
-                                        <td class="pull-right">204</td>
+                                        <td>56</td>
+                                        <td>0</td>
+                                        <td>204</td>
                                     </tr>--%>
                                 </tbody>
                             </table>
@@ -687,13 +683,20 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").html().replace(/&nbsp;/g, ""));
             //Set model data
 			
-            $("#model-number").html($("#CenPH__lb_SFLCTL__lb_PAXTX").html()+ "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_PA2TX").html() );
-            $("#product-category").html($("#CenPH__lb_SFLCTL__lb_PAXCD").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFATX").html());
-            $("#vendor-number").html($("#CenPH__lb_SFLCTL__lb_PBLNB").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CECTX").html());
+            $("#model-number").text($("[id$=lb_SFLCTL__lb_PAXTX]").text());
+			$("#model-name").text($("[id$=lb_SFLCTL__lb_PA2TX]").text());
+			$("#product-category").text($("[id$=lb_SFLCTL__lb_PAXCD]").text());
+			$("#product-type").text($("[id$=lb_SFLCTL__lb_CFATX]").text());
+			$("#vendor-number").text($("[id$=lb_SFLCTL__lb_PBLNB]").text());
+			$("#vendor-name").text($("[id$=lb_SFLCTL__lb_CECTX]").text());
+			//$("#model-number").html($("#CenPH__lb_SFLCTL__lb_PAXTX").html()+ "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_PA2TX").html() );
+            //$("#product-category").html($("#CenPH__lb_SFLCTL__lb_PAXCD").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFATX").html());
+            //$("#vendor-number").html($("#CenPH__lb_SFLCTL__lb_PBLNB").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CECTX").html());
             $("#CenPH__lb_SFLCTL__lb_2ABCD").addClass("mdl-textfield__input input-big");
             $("#CenPH__lb_SFLCTL__lb_2ABCD").appendTo("#filter-by-co");
             $("#CenPH__lb_SFLCTL__lb_2AACD").addClass("mdl-textfield__input input-big");
             $("#CenPH__lb_SFLCTL__lb_2AACD").appendTo("#filter-by-loc");
+			$("#customerName td:nth-child(2), #customerName td:nth-child(4), #customerName td:nth-child(5), #customerName td:nth-child(6)").css("text-align","right");
             //Generate table
             generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next"); // Table ID, Div ID to copy records from
             var doAction = function (row, value, event) {
@@ -723,6 +726,7 @@
 				console.log("ss");
                 _00('Enter',event);
             });
+            $("#CenPH__lb_SFLCTL__lb_2AACD").ForceNumericOnly();
         });
     </script>
     <style>
@@ -733,7 +737,9 @@
         #main-content {
             width: 100%;
         }
-
+		.mdl-data-table td:nth-child(2),.mdl-data-table td:nth-child(4),.mdl-data-table td:nth-child(5),.mdl-data-table td:nth-child(6){
+			text-align: right;
+		}
         #CenPH__lb_SFLCTL__lb_2ABCD, #CenPH__lb_SFLCTL__lb_2AACD {
             position: static !important;
             width: 100% !important;

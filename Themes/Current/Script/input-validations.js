@@ -183,7 +183,7 @@ jQuery.validator.addMethod("validateSSNLength", function(value, element) {
         }, 10);
         return true;
     } else {
-        $("#dummy-" + eleId).val("");
+        $("#dummy-" + eleId).val($("#dummy-" + eleId).val());
         return false;
     }
 }, '');
@@ -266,4 +266,10 @@ jQuery.fn.ForceTwoDecimalPoints = function() {
             }
         });
     });
+};
+
+jQuery.fn.ForceNumericMaxlength = function() {
+	return this.each(function() {
+		$(this).attr('maxlength','8');
+	});
 };

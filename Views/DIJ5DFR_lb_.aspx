@@ -77,10 +77,10 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
                                 <thead>
                                     <tr>
-                                        <th style='width: 22%;'>Telephone #</th>
-                                        <th style='width: 20%;'>Home/ Work</th>
-                                        <th style='width: 20%;'>Customer</th>
-                                        <th style='width: 55%;'>Address</th>
+                                        <th style='width: 15%;'>Telephone #</th>
+                                        <th style='width: 5%;'>Type</th>
+                                        <th style='width: 25%;'>Customer Name</th>
+                                        <th style='width: 72%;'>Address</th>
                                         <th style='width: 3%;'>C</th>
                                     </tr>
                                 </thead>
@@ -103,8 +103,8 @@
             </section>
 
         </main>
-        <div id="modal" class="simplePopup"></div>
     </div>
+    <div id="modal" class="simplePopup"></div>
         <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Numbers No/Maint  Display file                                                                           --%>
@@ -567,7 +567,7 @@
                         var custAdd2 = $(divid.find('span:eq(5)')).html();
                         var custAdd3 = $(divid.find('span:eq(6)')).html();
                         var custAdd4 = $(divid.find('span:eq(7)')).html();
-                        var custAdd = custAdd1 + " " + custAdd2 + custAdd3 + " " + custAdd4;
+                        var custAdd = custAdd1 + ", " + custAdd2 + "</br>" + custAdd3 + " " + custAdd4;
 
                         var tr = "";
                         if (count === 1 && direction === "top-to-bottom") {
