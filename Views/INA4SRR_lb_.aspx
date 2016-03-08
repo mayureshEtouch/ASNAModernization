@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:27 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member INA4SRR# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,83 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title logo-icon"></span>
+                <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Product Warranty</span> </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">INA4SRR</span></div>
+                </div>
+            </section>
+
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Category</span>
+                            <span class="summary-txt" id="cat-id"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Group</span>
+                            <span class="summary-txt" id="group-id"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="fixed-table-container">
+                            <div class="header-background"></div>
+                            <div class="fixed-table-container-inner">
+                                <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="selectWarranty">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:25%">
+                                                <div class="th-inner">Term</div>
+                                            </th>
+                                            <th style="width:25%">
+                                                <div class="th-inner">Type</div>
+                                            </th>
+                                            <th style="width:50%">
+                                                <div class="th-inner">Warranty</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="button-container">
+
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">submit</span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  IN: SEW Product Warr Bund Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -504,4 +591,43 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("[id='cat-id']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
+                $("[id='group-id']").text($("[id$=CenPH__lb_SFLCTL__lb_2AWCD]").text());
+                generateTableAndApplyInfiniteScroll("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "ROVTX", "next");
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: 450px !important;
+                left: 50% !important;
+                margin-left: -225px;
+            }
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 700px !important;
+            }
+        </style>
     </asp:Content>
