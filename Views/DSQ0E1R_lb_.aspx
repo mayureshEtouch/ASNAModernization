@@ -96,13 +96,15 @@
                     
           <div class="button-container" style="padding-bottom:0">
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-              <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop pull-left" style="padding-bottom:0">
+              <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop pull-left" style="padding-bottom:0; padding-left: 240px;">
                <span class="error"></span>
               </div>
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop" style="padding-bottom:0">
-                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hide" event-data="F9" id="f9-action-text"></span>
-              </div>
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
+             <!--
+			  <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop" style="padding-bottom:0">
+               
+              </div>-->
+              <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop pull-right" style="padding-bottom:0">
+			   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent hide" event-data="F9" id="f9-action-text"></span>
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="save-phone">Submit</span>
               </div>
             </div>

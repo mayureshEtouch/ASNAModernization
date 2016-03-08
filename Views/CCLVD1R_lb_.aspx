@@ -57,24 +57,24 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding: 0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0"><span class="form-label">Application:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin: 0"><span class="form-text" id="application"></span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0"><span class="form-label">Application:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop" style="margin: 0"><span class="form-text" id="application"></span> </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0"><span class="form-label">Status:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin: 0"><span class="form-text" id="status"></span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0"><span class="form-label">Status:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop" style="margin: 0"><span class="form-text" id="status"></span> </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0"><span class="form-label">Application Type:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin: 0"><span class="form-text" id="appType"></span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0"><span class="form-label">Application Type:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop" style="margin: 0"><span class="form-text" id="appType"></span> </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0"><span class="form-label">Slsmn:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin: 0"><span class="form-text" id="slsmn"></span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0"><span class="form-label">Salesman:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop" style="margin: 0"><span class="form-text" id="slsmn"></span> </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin: 0"><span class="form-label">Loc:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin: 0"><span class="form-text" id="location"></span> </div>
+                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0"><span class="form-label">Company/Location:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop" style="margin: 0"><span class="form-text" id="location"></span> </div>
                             </div>
                         </div>
                     </div>

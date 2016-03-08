@@ -412,8 +412,18 @@
                   $(".confirmation-outer-conatiner").hide();
                   $("main").show();
                 } else {
-                  $(".confirmation-outer-conatiner").show();
-                  $("main").hide();
+					console.log("else");
+                  //$(".confirmation-outer-conatiner").show();
+                 // $("main").hide();
+				    $(".mdl-layout__header, .mdl-layout__content").hide();
+					$("#__Page_PopUp tr:first").hide();
+				
+					$("#content").css('margin-top','-1px');
+					$(".modal-dialog-container").css('background-color','#808080');
+					$(".modal-dialog-container").css('opacity','.8');
+					$("#confirmprompt").show();
+					$(".modal-dialog-container1").show();
+					
                 }
                 
                 $("#yes").click(function (event) {
@@ -441,7 +451,7 @@
 						$(this).attr("maxlength", 5);
 					}
 				});
-				console.log("@ "+$("#CenPH__lb_RCDDTL1__lb_1AJCD"));
+				//console.log("@ "+$("#CenPH__lb_RCDDTL1__lb_1AJCD"));
 				$("#CenPH__lb_RCDDTL1__lb_1AJCD").ForceNumericWithQuestionMarkOnly();
             });
         </script>
