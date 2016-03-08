@@ -75,12 +75,12 @@
                             <span class="summary-txt" id="employee-id"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
-                            <span class="summary-title">Store</span>
-                            <span class="summary-txt" id="store-code"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col">
                             <span class="summary-title">Employee Name</span>
                             <span class="summary-txt" id="employee-name"></span>
+                        </div>
+						 <div class="mdl-cell mdl-cell--2-col">
+                            <span class="summary-title">Store</span>
+                            <span class="summary-txt" id="store-code"></span>
                         </div>
                     </div>
               </div>
