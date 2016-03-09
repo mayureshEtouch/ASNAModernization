@@ -84,7 +84,7 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
 
         } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
             var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
-            $("#customerName tbody").append(tr);
+            $("#" + tableId + " tbody").append(tr);
         }
     });
 }
