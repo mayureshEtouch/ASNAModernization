@@ -74,7 +74,7 @@
                                 <thead>
                                     <tr>
                                         <th>Model Number</th>
-                                        <th>Model Number Description</th>   
+                                        <th>Model Description</th>   
                                     </tr>
                                 </thead>
                                 <tbody></tbody>

@@ -79,7 +79,7 @@
                                     <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
-								</div>	
+                </div>  
                                  
                             </div>
                         </div>
@@ -628,7 +628,7 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Search by name
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
-			$("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
+      $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
             $('body').on('click', '#customerName tbody tr', function() {
                 $("#customerName tbody tr:even").css("background-color", "#fff");
                 $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
@@ -684,6 +684,10 @@
                         var strclosetr = "</tr>";
                         $("#customerName tbody").append(tr + strtd + strclosetr);
                     }
+          else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+            var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
+            $("#customerName tbody").append(tr);
+          }
                 });
                 $("#customerName tbody tr:even").css("background-color", "#fff");
                 $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
