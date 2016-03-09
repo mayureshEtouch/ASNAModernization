@@ -97,7 +97,9 @@
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding: 20px 0;line-height:20px;">
                             <span class="form-text" style="text-align: center;color:red;">
                                 This Social Security Number Already on File for a Customer.</br>
+                                <span style="text-align: center;color:blue; font-weight: bold;">
                                 Please Start over with the correct customer.
+                                </span>
                             </span>
                         </div>
                     </div>

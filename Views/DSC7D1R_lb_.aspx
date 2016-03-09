@@ -35,7 +35,7 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSC7D1R</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
-						<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
                     </div>
                 </div>
             </section>
@@ -100,10 +100,16 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Last Changed by User:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-									<span id="cus_changedby" class="input-label-text" style="display:inline-block"></span>
-									<span class="input-label" style="display:inline-block;margin:0 10px 0 20px;">On:</span>
-									<span id="cus_on" class="input-label-text" style="display:inline-block"></span>
-								</div>
+                                    <span id="cus_changedby" class="input-label-text" style="display:inline-block"></span>
+                                    <span class="input-label" style="display:inline-block;margin:0 10px 0 20px;">On:</span>
+                                    <span id="cus_on" class="input-label-text" style="display:inline-block"></span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Notes ? :</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_notes" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Tax exempt ? :</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_taxExempt" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Email Address:</span></div>
@@ -792,14 +798,15 @@
             // Set date and time
             $("[name='date']").text($("[id$=_DdsConstant23]").text());
             $("[name='time']").text($("[id$=RCDDTL1__lb__lb_TME]").text());
-			
+            
             if ($("#CenPH__lb_RCDDTL1").length > 0) {
                 var type = $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().html();
                 type += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().next().html();
                 var name = $("#CenPH__lb_RCDDTL1").find("span:contains('Name')").next().html();
                 var address = $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().html();
-				 address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
-                address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
+                address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().next().html();
+                address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
+                 address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
                 var zipcode = $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().html();
                 var homePhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Home Phone Number')").next().html();
                 var workPhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Work Phone Number')").next().html();
@@ -810,6 +817,11 @@
                 var on = $("#CenPH__lb_RCDDTL1").find("span:contains('On')").next().html();
                 var emailAddress = $("#CenPH__lb_RCDDTL1").find("span:contains('EMail Address')").next().html();
 
+                var cus_notes = $("#CenPH__lb_RCDDTL1").find("span:contains('Notes ?')").next().html();
+                var cus_taxExempt = $("#CenPH__lb_RCDDTL1").find("span:contains('Tax exempt ?')").next().html();
+                
+                console.log("address "+address);
+                
                 //Append to the table
                 $("#cus_type").html(type);
                 $("#cus_name").html(name);
@@ -823,16 +835,19 @@
                 $("#cus_changedby").html(lastChangedBy);
                 $("#cus_on").html(on);
                 $("#cus_email").html(emailAddress);
+                
+                $("#cus_notes").html(cus_notes || "Not Available");
+                $("#cus_taxExempt").html(cus_taxExempt || "Not Available");
             }
             /*$("#addresses").on('click', function(event) {
                 _00('F7',event);
             });
-			$("#notes").on('click', function(event) {
-				_00('F8',event);
-			});
-			$("#audit").on('click', function(event) {
-				_00('F9',event);
-			});
+            $("#notes").on('click', function(event) {
+                _00('F8',event);
+            });
+            $("#audit").on('click', function(event) {
+                _00('F9',event);
+            });
             
             $("#taxId").on('click', function(event) {
                 _00('F10',event);
