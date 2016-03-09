@@ -1155,7 +1155,7 @@
 		}
 		.AlternateRow, .DefaultRow {
 			display: table-row;
-			width: 100%;
+			width: 100% !important;
 			height: 32px !important;
 			border-bottom:1px solid #c5c5c5;
 		}
@@ -1175,8 +1175,10 @@
         #CenPH__lb_SFLRCD > div input, #CenPH__lb_SFLRCD > div span {
             width: 12% !important;
             display: table-cell;
+			float: left;
             padding: 1px 3px 2px !important;
             margin-top: 4px;
+			margin-left: 10px;
         }
         .DdsSubfileCurrentRecord {
             background-color: #d8d8d8 !important;
@@ -1184,6 +1186,14 @@
         #CenPH__lb_SFLRCD > div span[id*="2SEL"] {
             display: none;
         }
+		.DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
+			margin-left: 10px;
+			float: left;
+			text-align: left !important;
+		}
+		#CenPH__lb_SFLRCD > div > #CenPH__lb_SFLRCD_End {
+			margin-left:10px !important;
+		}
     </style>
     <script>
         $(document).ready(function () {

@@ -85,9 +85,11 @@
                                          <div style="display: inline-block; ">
 										<span id="cust-first-add">000/000</span>
                                         <br>
-                                        <span id="cust-second-add">000/000</span>
+                                        <span id="cust-middle-add">000/000</span>
                                         <br>
-                                        <span id="cust-zipcode">000/000</span>
+                                        <span id="cust-city-add">000/000</span>,&nbsp;<span id="cust-state-add">000/000</span>,&nbsp;<span id="cust-zipcode">000/000</span>
+                                        <br>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -101,10 +103,10 @@
                                 </div>
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
-                                        <span class="form-label form-label-input clm-form-label">Birthday:</span>
+                                        <span class="form-label clm-form-label vertical-top">Birthday:</span>
                                         <input class="editable-data" type="text" id="cust-birth" size="15" readonly="true">
                                         <i id="cust-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
-                                        <span class="form-text" id="ro-cust-birth" class="ro-data">12/12/1986</span>
+                                        <span class="form-text vertical-top ro-data" id="ro-cust-birth"></span>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                         <span class="form-label clm-form-label">License #:</span>
-                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2"><span id="ro-cust-lic-first" class="ro-data">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="20"><span id="ro-cust-lic-second" class="ro-data"></span></span>
+                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2"><span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="20"><span id="ro-cust-lic-second" class="ro-data"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -194,11 +196,11 @@
 										</span>
 									</div>
 									<div class="mdl-cell mdl-cell--4-col" style="margin:0">
-										<span class="form-label clm-form-label">Birthday:</span>
+										<span class="form-label clm-form-label vertical-top">Birthday:</span>
 										<span class="form-text">
 											<input class="editable-data" type="text" id="sp-birth" size="15" readonly="true">
                                             <i id="sp-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
-											<span class="ro-data" id="ro-sp-birth"></span>
+											<span class="ro-data vertical-top" id="ro-sp-birth"></span>
 										</span>
 									</div>
 									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
@@ -221,7 +223,7 @@
 										<span class="form-text">
 											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2">
 											<span class="ro-data" id="ro-sp-lic-first"></span>
-											&nbsp;&nbsp;&nbsp;&nbsp;
+											&nbsp;&nbsp;/&nbsp;&nbsp;
 											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="20">
 											<span class="ro-data" id="ro-sp-lic-second"></span>
 										</span>
@@ -1674,13 +1676,18 @@
 			float: none;
 			display: inline-block !important;
 		}
+        .vertical-top {
+            vertical-align: top;
+        }
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH__lb_RCDDTL1__lb_DALTX": "cust-name",
                 "CenPH__lb_RCDDTL1__lb_DBNTX": "cust-first-add",
-                "CenPH__lb_RCDDTL1__lb_DBPTX+CenPH__lb_RCDDTL1__lb_DBMTX": "cust-second-add",
+                "CenPH__lb_RCDDTL1__lb_DBOTX": "cust-middle-add",
+                "CenPH__lb_RCDDTL1__lb_DBPTX": "cust-city-add",
+                "CenPH__lb_RCDDTL1__lb_DBMTX": "cust-state-add",
                 "CenPH__lb_RCDDTL1__lb_DAPTX": "cust-zipcode",
                 "CenPH__lb_RCDDTL1__lb_DD1NB": "home-phone",
                 "CenPH__lb_RCDDTL1__lb_DD2NB": "office-phone",
@@ -1767,6 +1774,21 @@
               $(".OverlayPopupBackground").hide();
               //Set page details
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                if($("#CenPH__lb_RCDDTL1__lb_1DRCD").text().length>0){
+                    $("#cust-lic-first").hide();
+                    $("#ro-cust-lic-first").show();
+                }
+                if($("#CenPH__lb_RCDDTL1__lb_DTX20").text().length>0){
+                    $("#cust-lic-second").hide();
+                    $("#ro-cust-lic-second").show();
+                }
+                if($("#ro-cust-birth").text().length>0){
+                    $("#cust-birth").hide();
+                    $("#cust-reqesdate").hide();
+                    $("#ro-cust-birth").show();
+                }
+                
+
             } else {
               $(".editable-data").hide();
               $(".ro-data").show();
@@ -1832,6 +1854,20 @@
                     }
                 }
              });
+             /*
+             By default "Please Choose" would be selected
+              */
+             $('.mdl-layout__content').find('select').each(function(){
+                var val = $(this).val();
+                if(val === null){
+                    $(this).removeAttr('selected').find('option:first').attr('selected', 'selected');
+                }
+             })
+             /*
+             Space issue in Supervisor name
+              */
+             $("#cust-supervisor").val($("#CenPH__lb_RCDDTL1__lb_DWWTX").val());
+             //if($("#ctl00$CenPH$_lb_RCDDTL1_V1DOBD").text().trim()
              /*$("#cust-ssn").keypress(function(){
                 if($(this).val().indexOf('*') >= 0){
                     $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($(this).val())

@@ -58,37 +58,29 @@
                     </ul>
                 </div>
             </section>
-            <section class="table-data-content-container">
+           <section class="table-data-content-container">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop">
                                     <span class="summary-label">Customer Phone Number :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="number1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" disabled>
+                                      <input type="text" id="number1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" disabled>
                                         <input type="text" id="number2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" disabled>
                                         <input type="text" id="number3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop" disabled>
                                     </div>
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col">
-                                    <span class="circle-separator"><span>OR</span></span>
+                                <div class="mdl-cell mdl-cell--2-col" style="margin-right: 1%;">
+                                    <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Customer Name/ Partial Name :</span>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop" style="margin: 0">
+                                    <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
-                                </div>
-                                <div class="mdl-cell mdl-cell--1-col">
-                                    <span class="circle-separator"><span>OR</span></span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Email Address :</span>
-                                    <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="email" class="mdl-textfield__input" disabled>
-                                    </div>
-                                </div>
+								</div>	
+                                 
                             </div>
                         </div>
                         <div class="button-container">
@@ -636,6 +628,7 @@
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             //Search by name
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
+			$("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
             $('body').on('click', '#customerName tbody tr', function() {
                 $("#customerName tbody tr:even").css("background-color", "#fff");
                 $("#customerName tbody tr:odd").css("background-color", "#f9f9f9");
