@@ -943,7 +943,7 @@
             var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH_DdsConstant15": "date",
-                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb__lb_TME&nbsp;": "time",
                     "CenPH__lb_SFLCTL__lb_2BANB+custom_slash+CenPH__lb_SFLCTL__lb_2EXNB": "order-version",
                     "CenPH__lb_SFLCTL__lb_PALTX": "cust-name",
                     "CenPH__lb_SFLCTL_V2AIDT": "payment-date",

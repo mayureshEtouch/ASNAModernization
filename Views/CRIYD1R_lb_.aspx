@@ -2,9 +2,20 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 2/22/2016 at 6:03 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CRIYD1R# --%>
-
+        <%-- Migrated on 1/26/2016 at 2:27 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Legacy location: library ASNATSRC, file QDDSSRC, member INA4SRR# --%>
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,125 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Returned Check Display</span> </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRIYD1R</span></div>
+                    </div>
+                </section>
+                <section class="form-data" style="margin-bottom:5px;">
+                    <div class="form-data-wrapper" style="padding-bottom:0;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label" style="">Bank:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1UCTX_new">Woodforest Natl Bank</span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Account #:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="account-number"></span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <div class="content-grid mdl-grid">
+                                            <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                                <span class="form-label">Created:</span>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                                <span class="form-text" style="margin-left: -10px;" id="CenPH__lb_RCDDTL1_V1B6DT_new"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">Amount:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RHVA_new"></span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">Reason:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAFTX_new"></span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">Customer:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALTX_new"></span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">SSN#:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SS_lb_new"></span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">Entry:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="entry"></span>
+                                    </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                                        <span class="clr-blue">
+                                            <span class="form-text form-content" id="CenPH_DdsConstant12_new" style="color: #4085f2; font-weight:bold;">
+                                              
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comments">Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CU: DS1 Bad Check         Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -731,4 +860,60 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1UCTX": "CenPH__lb_RCDDTL1__lb_1UCTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1BNK_lb_+CenPH_DdsConstant16+CenPH__lb_RCDDTL1__lb_1CKA_lb_+CenPH_DdsConstant20+CenPH_DdsConstant21+CenPH__lb_RCDDTL1__lb_1GYNB": "account-number",
+                    "CenPH__lb_RCDDTL1_V1B6DT": "CenPH__lb_RCDDTL1_V1B6DT_new",
+                    "CenPH__lb_RCDDTL1__lb_1RHVA": "CenPH__lb_RCDDTL1__lb_1RHVA_new",
+                    "CenPH__lb_RCDDTL1__lb_1W6ST": "CenPH__lb_RCDDTL1__lb_1W6ST_new",
+                    "CenPH__lb_RCDDTL1__lb_1ALTX+CenPH__lb_RCDDTL1__lb_DA1CO": "CenPH__lb_RCDDTL1__lb_1ALTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1SS_lb_": "CenPH__lb_RCDDTL1__lb_1SS_lb_new",
+                    "CenPH__lb_RCDDTL1__lb_1AAVN+CenPH__lb_RCDDTL1__lb_1ABVN+CenPH__lb_RCDDTL1_V1AGDT+CenPH__lb_RCDDTL1__lb_1ABTM": "entry",
+                    "CenPH_DdsConstant12": "CenPH_DdsConstant12_new"
+
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "");
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+                $('#comments').click(function (event) {
+                    _00("F6", event);
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: 450px !important;
+                left: 50% !important;
+                margin-left: -225px;
+            }
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 700px !important;
+            }
+        </style>
     </asp:Content>
