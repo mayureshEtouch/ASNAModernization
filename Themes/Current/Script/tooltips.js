@@ -61,8 +61,8 @@ $(document).ready(function() {
             "ref-address": "Enter reference address",
             "ref-zip-code": "Only numeric",
             "ref-phone": "Only numeric",
-            "cust-ssn" : "Only numeric",
-            "sp-ssn": "Only numeric",
+            //"cust-ssn" : "Only numeric",
+            //"sp-ssn": "Only numeric",
             "sp-birth": "Select birth date"
         },
         "DSEBETR":{

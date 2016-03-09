@@ -68,7 +68,7 @@
                               </div>
                               <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                   <span class="form-text">
-                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" />
+                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" />
                                   <span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
                                   </span>
                                   <input type="hidden" id="dummy-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
@@ -183,6 +183,35 @@
 
         $("#ssn").ForceNumericOnly();
 
+
+        setTimeout(function(){
+        var chars;
+        $('.masking').on("keyup",function(e){
+          console.log('keypu');
+          var eleId = $(this).attr("id");
+          if($(this).val().indexOf('*') == -1)
+          {
+          chars = $(this).val();
+         }
+        else{
+         if(e.which == 8 || e.which ==46){ // backspace
+          
+           chars = chars.replace(chars.charAt(getCharPos(this)),"");
+          var sup = $(this).val(chars);
+           console.log(chars);
+         }
+        else{
+         if(getCharPos(this)<=5){
+          
+
+         }
+        }
+        }
+        $("#dummy-"+eleId).val(chars);
+        });
+
+        },2000)
+        
       });
     </script>
         <div id="Div1" style="display:none;">
