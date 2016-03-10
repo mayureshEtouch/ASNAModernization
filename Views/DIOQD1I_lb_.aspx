@@ -190,7 +190,8 @@
                                             <span class="form-label">Address:</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                            <span class="form-text" id="a-address"></span>
+                                            <span class="form-text" id="a-address"></span><br>
+                                            <span class="form-text" id="a-address-2"></span>
                                         </div>
                                     </div>
                                       <div class="content-grid mdl-grid">
@@ -997,8 +998,8 @@ body {
                   var new_fields = ['#customer-id','#customer-type','#customer-name','#mailing-list-indicator','#cust-addr-type','#cust-addr-ref','#cust-addr-ver'];
                 }else{
                   $("#customer-address-detail").show();
-                  var old_fields = ['#CenPH__lb_RCDDTL1__lb_1ALNB','#CenPH__lb_RCDDTL1__lb_1CGC_lb_','#CenPH__lb_RCDDTL1__lb_1P5N_lb_','#CenPH__lb_RCDDTL1__lb_1P6N_lb_','#CenPH__lb_RCDDTL1__lb_1JZXT','#CenPH__lb_RCDDTL1__lb_1J0XT','#CenPH__lb_RCDDTL1__lb_DAQTX','#CenPH__lb_RCDDTL1__lb_1P3N_lb_','#CenPH__lb_RCDDTL1__lb_DADST','#CenPH__lb_RCDDTL1__lb_1J2XT','#CenPH__lb_RCDDTL1__lb_1C4NA','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1__lb_1ABVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM'];
-                  var new_fields = ['#a-customer-id','#a-customer-type','#a-cust-addr-ref','#a-cust-addr-ver','#a-customer-name','#a-address','#a-city','#a-phone','#a-state','#a-zip','#CenPH_2AQNA','#last','#at','#on','#time'];
+                  var old_fields = ['#CenPH__lb_RCDDTL1__lb_1ALNB','#CenPH__lb_RCDDTL1__lb_1CGC_lb_','#CenPH__lb_RCDDTL1__lb_1P5N_lb_','#CenPH__lb_RCDDTL1__lb_1P6N_lb_','#CenPH__lb_RCDDTL1__lb_1JZXT','#CenPH__lb_RCDDTL1__lb_1J0XT','#CenPH__lb_RCDDTL1__lb_1J1XT','#CenPH__lb_RCDDTL1__lb_DAQTX','#CenPH__lb_RCDDTL1__lb_1P3N_lb_','#CenPH__lb_RCDDTL1__lb_DADST','#CenPH__lb_RCDDTL1__lb_1J2XT','#CenPH__lb_RCDDTL1__lb_1C4NA','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1__lb_1ABVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM'];
+                  var new_fields = ['#a-customer-id','#a-customer-type','#a-cust-addr-ref','#a-cust-addr-ver','#a-customer-name','#a-address','#a-address-2','#a-city','#a-phone','#a-state','#a-zip','#CenPH_2AQNA','#last','#at','#on','#time'];
                 }
                 for (var i = 0; i < old_fields.length; i++) {
                   $(new_fields[i]).text($.trim($(old_fields[i]).text()));
