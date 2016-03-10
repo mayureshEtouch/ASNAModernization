@@ -40,14 +40,14 @@ $(document).ready(function() {
             "ssn": "Only numeric"   
         },
         "CCHXE1R":{
-            "cust-lic-second": "Enter custumer license",
+            "cust-lic-second": "Enter customer license",
             "cust-birth": "Select birth date",
-            "cust-lic-first": "Enter custumer license",
+            "cust-lic-first": "Enter customer license",
             "ro-cust-ssn": "Only numeric",
             "no-of-years": "Only numeric",
             "payment-of": "Enter payment",
             "phone-listed-as": "only numeric",
-            "cust-dependents": "Enter custumer dependents",
+            "cust-dependents": "Enter customer dependents",
             "sp-name": "Enter spouse name",
             "sp-lic-first": "Enter license",
             "sp-lic-second": "Enter license",
@@ -150,8 +150,19 @@ $(document).ready(function() {
     var currentScreen = window.location.href.split("/")[(window.location.href.split("/").length - 1)].split("_")[0];
     var inputFieldsForToolTips = tooltipFields[currentScreen];
     //Apply tooltips
-    for (var field in inputFieldsForToolTips) {
+    /*for (var field in inputFieldsForToolTips) {
         $("#" + field).attr("title", inputFieldsForToolTips[field]);
         $("#" + field).tooltip();
+    }*/
+	for (var field in inputFieldsForToolTips) {
+        $("#" + field).attr("title", inputFieldsForToolTips[field]);
+        if(currentScreen === "CCHXE1R" && (field === "cust-birth" || field === "sp-birth")) {
+		    $("#" + field).tooltip({
+              position: { my: "left+8 center", at: "right center" }
+			  //position: { my: "left top+15", at: "left bottom", collision: "flipfit" }
+            });
+        } else {
+            $("#" + field).tooltip();
+        }
     }
 });
