@@ -1157,6 +1157,8 @@
 			display: table-row;
 			width: 100% !important;
 			height: 32px !important;
+			border-left: none !important;
+			border-right: none !important;
 			border-bottom:1px solid #c5c5c5;
 		}
 		.AlternateRow {
@@ -1169,9 +1171,8 @@
             background-color: #FFF !important;
         }
         #CenPH__lb_SFLRCD > div input:not([id*=RNICD]), #CenPH__lb_SFLRCD > div span:not([id*=RNICD]) {
-            margin-left: 12% !important;
+            xmargin-left: 12% !important;
         }
-
         #CenPH__lb_SFLRCD > div input, #CenPH__lb_SFLRCD > div span {
             width: 12% !important;
             display: table-cell;
@@ -1180,6 +1181,14 @@
             margin-top: 4px;
 			margin-left: 10px;
         }
+		#CenPH__lb_SFLRCD span.blank-space {
+			border-right: 1px solid #c5c5c5;
+			display: inline-block;
+			height: 31px;
+			margin-top: 0;
+			padding: 0 !important;
+			width: 10.45% !important;
+		}
         .DdsSubfileCurrentRecord {
             background-color: #d8d8d8 !important;
         }
@@ -1293,7 +1302,24 @@
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
-
+			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
+			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
+			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+			
+			//DdsSubfileRecord tabindex
+			  setTimeout(function(){   
+		   $(".DdsCharField").attr("tabindex","0");         
+		   $(".DdsSubfileRecord input").each(function(){
+			 if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
+		   }); 
+		   },100)
+		   setTimeout(function(){    
+		   $(".DdsDecField").attr("tabindex","0");       
+		   $(".DdsSubfileRecord input").each(function(){
+			 if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
+		   }); 
+		   },100)
+			
         });
     </script>
 </asp:Content>

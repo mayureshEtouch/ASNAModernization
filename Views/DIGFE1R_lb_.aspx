@@ -70,8 +70,8 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col">
                                 <div class="content-grid mdl-grid content-row-add-height">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Address:</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Address:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                         <div class="form-text shipping-add" data-upgraded=",MaterialTextfield">
                                             <input type="text" class="full-input" id="add-one" name="add-one" maxlength="25">
                                             <br>
@@ -80,50 +80,36 @@
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Home Phone #:</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Home Phone #:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="home-phone" name="home-phone" maxlength="10">
                                                                 </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Cell Phone #:</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Cell Phone #:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="cell-phone" name="cell-phone" maxlength="10">
                                                                 </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Email:</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                                                <input type="text" id="cust-email" style="text-transform: lowercase;" name="cust-email" class="full-input">
-                                                                </span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Email:</span> </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+									<input type="text" id="cust-email" style="text-transform: lowercase;" name="cust-email" class="full-input">
+									</span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
-                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
                                         <span class="form-text" data-upgraded=",MaterialTextfield">
                                           <span id="last-changed-by"></span>
                                             <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
                                         </span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <span style="position:relative">
-                                            <span id="last-changed-on"></span>
-                                            <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
-                                            <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
-                                            <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
-                                            </span>
-                                        </span>
-                                            <span>
-                                            <span class="input-side-gutter-space form-label">At:</span>
-                                            <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
-                                              <span id="last-changed-at"></span>
-                                            <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
-                                        </span>
-                                        </span> </span>
-                                        
-                                    </div>
+                                    
+                                </div>
+								<div class="content-grid mdl-grid content-row-height">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Notes ?</span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="notes" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
                                 <!-- <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">On:</span> </div>
@@ -189,14 +175,36 @@
                              </span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
-                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Extra Phone #s:</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield"> Y </span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Extra Phone #s:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield"> Y </span> </div>
                                 </div>
-                                
+								
+								
+								<div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+                                        <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <span style="position:relative">
+                                            <span id="last-changed-on"></span>
+                                            <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
+                                            <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
+                                            <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
+                                            </span>
+                                        </span>
+                                            <span>
+                                            <span class="input-side-gutter-space form-label">At:</span>
+                                            <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
+                                              <span id="last-changed-at"></span>
+                                            <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
+                                        </span>
+                                        </span> </span>
+                                        
+                                    </div>
+								</div>	
                                 
                             </div>
                         </div>
@@ -1096,6 +1104,7 @@
                     "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST": "cust-zipcode",
                     "CenPH__lb_RCDDTL1__lb_DBRST": "additional-add",
                     "CenPH__lb_RCDDTL1__lb_DTQST": "extra-phone",
+					"CenPH__lb_RCDDTL1__lb_DBQST": "notes",
                     "CenPH__lb_RCDDTL1__lb_1AAVN": "last-changed-by",
                     "CenPH__lb_RCDDTL1_V1AGDT": "last-changed-on",
                     "CenPH__lb_RCDDTL1__lb_1ABTM": "last-changed-at"
@@ -1156,7 +1165,9 @@
                     _00('Enter', event);
                 });
                 //Validations
-                $("#home-phone,#cell-phone,#extension, #work-phone").ForceNumericOnly();
+                $("#extension, #work-phone").ForceNumericOnly();
+				$("#home-phone,#cell-phone").ForceNumericWithPasteOption();
+				//$("#extension, #work-phone").ForceNumericOnly();
 				//$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
             });
         </script>

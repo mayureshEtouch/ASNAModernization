@@ -1075,17 +1075,6 @@ textarea {
 .display-icon-disabled {
 	background: url(../Images/icons/ic_description_black_24dp_1x-disable.png) no-repeat;
 }
-
-.credit-icon {
-	background: url(../Images/icons/credit-icon.png) no-repeat;
-}
-.completion-icon {
-	background: url(../Images/icons/completion-icon.png) no-repeat;
-}
-.tax-icon {
-	background: url(../Images/icons/tax-icon-disable.png) no-repeat;
-}
-
 .calender-icon {
 	background: url(../Images/icons/calender.png) no-repeat;
 	cursor: pointer;

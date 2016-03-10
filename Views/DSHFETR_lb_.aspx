@@ -177,9 +177,9 @@
                     copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
                     copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
                 }
-                console.log('copyToAndFrom is ');
-                console.log(copyToAndFrom);
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
+                $("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
                 $("#special-instructions").prepend('<legend id="legen">Notes:</legend>');
             }
             generateSpecialInstructionsSection();

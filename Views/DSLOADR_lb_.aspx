@@ -47,15 +47,15 @@
                 <div class="content-grid mdl-grid">
                     <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
                         <div class="content-grid mdl-grid">
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Company:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span class="form-label">Enter Your Company:</span> </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                 <span class="form-text">
                                     <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3" onkeypress="return onlyAlphabets(event, this)"></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">Enter Your Location:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span class="form-label">Enter Your Location:</span> </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                 <span class="form-text">
                                     <input id="enterYourLocation" type="text" name="enterYourLocation" value="112" maxlength="3"></span>
                             </div>

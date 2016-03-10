@@ -40,14 +40,14 @@ $(document).ready(function() {
             "#ssn": "Only numeric"
         },
         "CCHXE1R": {
-            "#cust-lic-second": "Enter custumer license",
+            "#cust-lic-second": "Enter customer license",
             "#cust-birth": "Select birth date",
-            "#cust-lic-first": "Enter custumer license",
+            "#cust-lic-first": "Enter customer license",
             "#ro-cust-ssn": "Only numeric",
             "#no-of-years": "Only numeric",
             "#payment-of": "Enter payment",
             "#phone-listed-as": "only numeric",
-            "#cust-dependents": "Enter custumer dependents",
+            "#cust-dependents": "Enter customer dependents",
             "#sp-name": "Enter spouse name",
             "#sp-lic-first": "Enter license",
             "#sp-lic-second": "Enter license",
@@ -97,7 +97,7 @@ $(document).ready(function() {
             "#ext": "Only numeric",
         },
         "DSB9E1R": {
-            "#middleInitial": "Enter midile name",
+            "#middleInitial": "Enter middle name",
             "#lastName": "Enter last name",
             "#businessName": "Enter business name",
             "#zcode": "Only numeric",
@@ -161,7 +161,7 @@ $(document).ready(function() {
             ".DdsCharField": "Enter payment method",
             ".DdsDecField": "Only numeric",
             ".hasDatepicker": "Select request date",
-            ".reference": "Enter reference"e
+            ".reference": "Enter reference"
         },*/
         "DSK6EFR": {
             ".term-input": "Enter warranty"
@@ -177,6 +177,7 @@ $(document).ready(function() {
 
     }
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR", "DSQ0E1R"];
+    
     var inputFieldsForToolTips = {}, currentScreen = "";
     if (window.location.href.indexOf("SignOn") !== -1) {
         inputFieldsForToolTips = tooltipFields["SignOn"];
@@ -193,12 +194,19 @@ $(document).ready(function() {
         for (var field in inputFieldsForToolTips) {
             if ($(field).length > 0) {
                 $(field).attr("title", inputFieldsForToolTips[field]);
-                if (currentScreen === "CCHXE1R" && field === "cust-birth") {
+                if(currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
+                    
                     $(field).tooltip({
                         position: {
-                            my: "left+8 center",
-                            at: "right center"
+                            my: "center top"
                         }
+                    });
+                }else if(currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
+                    
+                    $(field).tooltip({
+                        position: {
+                           my: "center top"
+                       }
                     });
                 } else {
                     $(field).tooltip();
