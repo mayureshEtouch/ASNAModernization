@@ -97,6 +97,7 @@
 
         </main>
     </div>
+	<div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             

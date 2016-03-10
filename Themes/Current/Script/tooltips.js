@@ -40,30 +40,30 @@ $(document).ready(function() {
             "#ssn": "Only numeric"   
         },
         "CCHXE1R":{
-            "#cust-lic-second": "Enter custumer license",
-            "#cust-birth": "Select birth date",
-            "#cust-lic-first": "Enter custumer license",
-            "#ro-cust-ssn": "Only numeric",
-            "#no-of-years": "Only numeric",
-            "#payment-of": "Enter payment",
-            "#phone-listed-as": "only numeric",
-            "#cust-dependents": "Enter custumer dependents",
-            "#sp-name": "Enter spouse name",
-            "#sp-lic-first": "Enter license",
-            "#sp-lic-second": "Enter license",
-            "#sp-monthly-income": "Enter spouse income",
-            "#employed-at": "Enter employed at",
-            "#employed-at-duration-years": "Enter employed duration year",
-            "#employed-at-duration-months": "Enter employed duration month",
-            "#cust-income": "Enter customer income",
-            "#cust-supervisor": "Enter customer supervisor",
-            "#ref-name": "Enter reference name",
-            "#ref-address": "Enter reference address",
-            "#ref-zip-code": "Only numeric",
-            "#ref-phone": "Only numeric",
-            //"#cust-ssn" : "Only numeric",
-            //"#sp-ssn": "Only numeric",
-            "#sp-birth": "Select birth date"
+            "cust-lic-second": "Enter customer license",
+            "cust-birth": "Select birth date",
+            "cust-lic-first": "Enter customer license",
+            "ro-cust-ssn": "Only numeric",
+            "no-of-years": "Only numeric",
+            "payment-of": "Enter payment",
+            "phone-listed-as": "only numeric",
+            "cust-dependents": "Enter customer dependents",
+            "sp-name": "Enter spouse name",
+            "sp-lic-first": "Enter license",
+            "sp-lic-second": "Enter license",
+            "sp-monthly-income": "Enter spouse income",
+            "employed-at": "Enter employed at",
+            "employed-at-duration-years": "Enter employed duration year",
+            "employed-at-duration-months": "Enter employed duration month",
+            "cust-income": "Enter customer income",
+            "cust-supervisor": "Enter customer supervisor",
+            "ref-name": "Enter reference name",
+            "ref-address": "Enter reference address",
+            "ref-zip-code": "Only numeric",
+            "ref-phone": "Only numeric",
+            //"cust-ssn" : "Only numeric",
+            //"sp-ssn": "Only numeric",
+            "sp-birth": "Select birth date"
         },
         "DSEBETR":{
             "#requestdate": "Select date"
@@ -176,6 +176,24 @@ $(document).ready(function() {
         }
 
     }
+
+    var currentScreen = window.location.href.split("/")[(window.location.href.split("/").length - 1)].split("_")[0];
+    var inputFieldsForToolTips = tooltipFields[currentScreen];
+    //Apply tooltips
+    /*for (var field in inputFieldsForToolTips) {
+        $("#" + field).attr("title", inputFieldsForToolTips[field]);
+        $("#" + field).tooltip();
+    }*/
+	for (var field in inputFieldsForToolTips) {
+        $("#" + field).attr("title", inputFieldsForToolTips[field]);
+        if(currentScreen === "CCHXE1R" && (field === "cust-birth" || field === "sp-birth")) {
+		    $("#" + field).tooltip({
+              position: { my: "left+8 center", at: "right center" }
+			  //position: { my: "left top+15", at: "left bottom", collision: "flipfit" }
+            });
+        } else {
+            $("#" + field).tooltip();
+        }
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR","DSQ0E1R"];
     var inputFieldsForToolTips = {};
     if(window.location.href.indexOf("SignOn") !== -1) {
