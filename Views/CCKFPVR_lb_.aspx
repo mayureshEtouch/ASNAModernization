@@ -95,7 +95,7 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
                                     <span class="form-label">Home Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
                                     <span class="form-text" id="homePhone"></span>
                                 </div>
                             </div>

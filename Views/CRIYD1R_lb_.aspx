@@ -141,8 +141,11 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
 
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comments">Comments</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -150,6 +153,7 @@
                 </section>
             </main>
         </div>
+        <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             

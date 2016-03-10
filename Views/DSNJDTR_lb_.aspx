@@ -123,6 +123,7 @@
                                     <span class="form-text">
                                       <span id="billing-addr-1"></span><br/>
                                       <span id="billing-addr-2"></span><br/>
+                                      <span id="billing-addr-2-2"></span><br/>
                                       <span id="billing-addr-3"></span>&nbsp;
                                       <span id="billing-addr-4"></span>&nbsp;
                                       <span id="billing-addr-5"></span>
@@ -163,6 +164,7 @@
                                     <span class="form-text">
                                       <span id="shipping-addr-1"></span><br/>
                                       <span id="shipping-addr-2"></span><br/>
+                                      <span id="shipping-addr-2-2"></span><br/>
                                       <span id="shipping-addr-3"></span>&nbsp;
                                       <span id="shipping-addr-4"></span>&nbsp;
                                       <span id="shipping-addr-5"></span>
@@ -1087,8 +1089,8 @@
           /*setDateTime(dateFieldId,timeFieldId)*/
           setDateTime('CenPH_DdsConstant15','CenPH__lb_SFLCTL__lb__lb_TME');
 
-          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL__lb_2AACD',    '#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX'];
-          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5'];
+          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL__lb_2AACD',    '#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAOTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEUTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX'];
+          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-2-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-2-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5'];
           for (var i = 0; i < old_fields.length; i++) {
             $(new_fields[i]).text($.trim($(old_fields[i]).text()));
           };
