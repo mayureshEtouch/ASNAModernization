@@ -157,12 +157,12 @@ $(document).ready(function() {
             ".model-number": "Enter model number",
             ".serial-number": "Enter serial number"
         },
-        "DSEBETR":{
+        /*"DSEBETR":{
             ".DdsCharField": "Enter payment method",
             ".DdsDecField": "Only numeric",
             ".hasDatepicker": "Select request date",
             ".reference": "Enter reference"
-        },
+        },*/
         "DSK6EFR":{
             ".term-input": "Enter warranty"
         },

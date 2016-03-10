@@ -1692,7 +1692,7 @@
 				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;" TabIndex="3" maxlength="3"></div></td>').appendTo(row);
 				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input model-number" type="text" style="text-align: left;" TabIndex="4" maxlength="20" name="model" ></div></td>').appendTo(row);
 				$(' <td><span></span></td>').appendTo(row);
-				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" TabIndex="5" maxlength="20"></div></td>').appendTo(row);
+				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" TabIndex="5" maxlength="20"></div></td>').appendTo(row);
 
 				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
 
