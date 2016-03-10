@@ -89,7 +89,8 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">And Social Security #:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                        <span class="form-text"><input type="text" maxlength="9" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1A4NB_new" /></span>
+                                        <span class="form-text"><input onkeyup="validateInput(this)" type="text" maxlength="9" class="validateSSNLengthNew mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1A4NB_new" /><span id="ssn-show" style="color:blue;cursor: pointer;">Show</span></span>
+                                        <input type="hidden" id="dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
                                     </div>
                                 </div>
                             </div>
@@ -97,16 +98,27 @@
                         </div>
                         <div class="button-container" style="padding-bottom: 5px;">
                             <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop pull-left modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="second-id-entry">Alternate/2nd ID Entry</span>
+                                </div><div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="button-container" style="padding-bottom: 5px;">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </section>
 
             </main>
+            <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         </div>
+
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
@@ -608,7 +620,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-         <script type="text/javascript">
+        <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH_DdsConstant1+CenPH__lb_RCDDTL1__lb_DTX30": "CenPH__lb_RCDDTL1__lb_DTX30_new"
@@ -627,7 +639,34 @@
                 $('#next').click(function (event) {
                     _00("Enter", event);
                 });
+                $('#second-id-entry').click(function (event) {
+                    _00("F3", event);
+                });
+                //validations
                 $("#CenPH__lb_RCDDTL1__lb_1BTXT_new,#CenPH__lb_RCDDTL1__lb_1Y1NB_new,#CenPH__lb_RCDDTL1__lb_1A4NB_new").ForceNumericOnly();
+                $("#ssn-show").on("mousedown", function() {
+                    setTimeout(function(){
+                        var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                        var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                        $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
+                        $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
+                    },10);
+                });
+                $("#ssn-show").on("mouseup", function() {
+                    var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                    var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
+                    $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
+                });
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
             });
 
         </script>
@@ -656,7 +695,10 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 700px !important;
+                height: 800px !important;
+            }
+            .simplePopup {
+              left: 28% !important;
             }
         </style>
     </asp:Content>

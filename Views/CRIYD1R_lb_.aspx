@@ -141,7 +141,7 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
 
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comments">Comments</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right">
@@ -889,6 +889,9 @@
                 $('#comments').click(function (event) {
                     _00("F6", event);
                 });
+                $('#next').click(function (event) {
+                    _00("Enter", event);
+                });
             });
 
         </script>
@@ -917,7 +920,7 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 700px !important;
+                height: 800px !important;
             }
         </style>
     </asp:Content>

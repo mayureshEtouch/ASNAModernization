@@ -161,7 +161,7 @@ $(document).ready(function() {
             ".DdsCharField": "Enter payment method",
             ".DdsDecField": "Only numeric",
             ".hasDatepicker": "Select request date",
-            ".reference": "Enter reference"
+            ".reference": "Enter reference"e
         },*/
         "DSK6EFR": {
             ".term-input": "Enter warranty"
@@ -177,7 +177,7 @@ $(document).ready(function() {
 
     }
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR", "DSQ0E1R"];
-    var inputFieldsForToolTips = {};
+    var inputFieldsForToolTips = {}, currentScreen = "";
     if (window.location.href.indexOf("SignOn") !== -1) {
         inputFieldsForToolTips = tooltipFields["SignOn"];
         applyTooltip();

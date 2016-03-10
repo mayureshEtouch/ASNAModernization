@@ -4,7 +4,19 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 2/22/2016 at 6:07 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CAL6E1I# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +34,123 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+            <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title logo-icon"></span>
+                <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Alternate/2nd ID Entry</span> </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CAL6E1I</span>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Driver State:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                                                <input id="CenPH__lb_RCDDTL1__lb_DDRCD_new" type="text" class="mdl-textfield__input" size="15" maxlength="2"/>
+                                                                </span> </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">License ID:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                                                <input id="CenPH__lb_RCDDTL1__lb_DTX20_new" type="text" class="mdl-textfield__input" size="15" maxlength="20"/>
+                                                                </span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Type ID:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                    <select id="CenPH__lb_RCDDTL1__lb_1H0CO_new">
+                                        <option value=" ">Please choose</option>
+                                        <option selected="selected" value="CRCARD">CRCARD</option>
+                                    </select>
+                                </span> </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Card Type:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                    <select id="CenPH__lb_RCDDTL1__lb_1H1CO_new">
+                                        <option selected="selected" value=" ">Please choose</option>
+                                        <option value="VISA">VISA</option>
+                                        <option value="MC">MC</option>
+                                        <option value="AMEX">AMEX</option>
+                                        <option value="DISCVR">DISCVR</option>
+                                        <option value="DPTCRD">DPTCRD</option>
+                                        <option value="OILCRD">OILCRD</option>
+                                    </select>
+                                </span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Last 4 Card#:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                                                <input id="CenPH__lb_RCDDTL1__lb_1L0N_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="4" />
+                                                                </span> </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Exp:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                                                <input id="CenPH__lb_RCDDTL1__lb_DMOTH_new" type="text" class="mdl-textfield__input-small" size="5" maxlength="2" />
+                                                                &nbsp;/&nbsp;
+                                                                <input id="CenPH__lb_RCDDTL1__lb_DYRS2_new" type="text" class="mdl-textfield__input-small" size="5" maxlength="2" />
+                                                                </span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Name on Card:</span> </div>
+                                <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
+                                                                <input id="CenPH__lb_RCDDTL1__lb_1L6XT_new" type="text" class="mdl-textfield__input" size="15" maxlength="30"/>
+                                                                </span> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding-bottom: 5px;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    </div>
+    <div id="modal" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CU: ED1 Alternate/2nd ID  Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -827,4 +955,71 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_DDRCD" : "CenPH__lb_RCDDTL1__lb_DDRCD_new",
+                    "CenPH__lb_RCDDTL1__lb_DTX20" : "CenPH__lb_RCDDTL1__lb_DTX20_new",
+                    "CenPH__lb_RCDDTL1__lb_1H0CO" : "CenPH__lb_RCDDTL1__lb_1H0CO_new",
+                    "CenPH__lb_RCDDTL1__lb_1H1CO" : "CenPH__lb_RCDDTL1__lb_1H1CO_new",
+                    "CenPH__lb_RCDDTL1__lb_1L0N_lb_" : "CenPH__lb_RCDDTL1__lb_1L0N_lb_new",
+                    "CenPH__lb_RCDDTL1__lb_1L6XT" : "CenPH__lb_RCDDTL1__lb_1L6XT_new",
+                    "CenPH__lb_RCDDTL1__lb_DMOTH" : "CenPH__lb_RCDDTL1__lb_DMOTH_new",
+                    "CenPH__lb_RCDDTL1__lb_DYRS2" : "CenPH__lb_RCDDTL1__lb_DYRS2_new",
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+                $('#next').click(function (event) {
+                    _00("Enter", event);
+                });
+                //validations
+                $("#CenPH__lb_RCDDTL1__lb_1L0N_lb_new,#CenPH__lb_RCDDTL1__lb_DMOTH_new,#CenPH__lb_RCDDTL1__lb_DYRS2_new").ForceNumericOnly();
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: 50% !important;
+                left: 22% !important;
+            }
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 800px !important;
+            }
+            .simplePopup {
+              left: 28% !important;
+            }
+        </style>
     </asp:Content>
