@@ -153,8 +153,8 @@
                         </div>
                         <div class="mdl-cell mdl-cell--6-col pull-right">
                             <div class="icon-container icon-disable" id="delete-record">
-								<span class="icon-txt display-customer">Delete</span>
-								<i class="material-icons md-15 md-light display-customer delete-icon-disabled"></i>
+								<span class="icon-txt display-customer delete">Delete</span>
+								<i class="material-icons md-15 md-light display-customer delete-icon-disabled delete" style="cursor: pointer;"></i>
 							</div>
                         </div>
                     </div>
@@ -1194,6 +1194,9 @@
 		#CenPH__lb_SFLRCD > div > #CenPH__lb_SFLRCD_End {
 			margin-left:10px !important;
 		}
+        #CenPH__lb_SFLRCD {
+            border-collapse: collapse;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -1280,7 +1283,7 @@
                 $("#" + selectId + "\\." + selectIndex).val(value);
                 _00('Enter', event);
             }
-            $("#delete-record").click(function (event) {
+            $(".delete").click(function (event) {
                 var row = $("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord");
                 deleteRow(row, "4", event);
             });

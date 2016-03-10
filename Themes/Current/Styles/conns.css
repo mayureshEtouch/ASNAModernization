@@ -1349,6 +1349,7 @@ body div, body span, body textarea {
 	background: #FFFFE0 !important;
 	font-size: 12px;
 	color: #444444;
+	z-index: 100;
 }
 .ui-tooltip:after, .ui-tooltip:before {
 	bottom: 100%;
@@ -1359,6 +1360,7 @@ body div, body span, body textarea {
 	width: 0;
 	position: absolute;
 	pointer-events: none;
+	z-index: 100;
 }
 
 .ui-tooltip:after {
@@ -1366,10 +1368,15 @@ body div, body span, body textarea {
 	border-bottom-color: #FFFFE0;
 	border-width: 6px;
 	margin-left: -6px;
+	z-index: 100;
 }
 .ui-tooltip:before {
 	border-color: rgba(194, 225, 245, 0);
 	border-bottom-color: #E6DB55;
 	border-width: 8px;
 	margin-left: -8px;
+	z-index: 100;
+}
+.ui-tooltip {
+  display: inline-block !important;
 }
