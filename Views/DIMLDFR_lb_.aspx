@@ -242,49 +242,11 @@ $('.error').text($('#MsgPH_DdsMessagePanel1').text());
 
 /*setDateTime(dateFieldId,timeFieldId)*/
 setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
-// Search by Customer data table record mapping
-var generateTableAddressess = function (direction) {
 
-  $("#customerAddress tbody").empty();
-  var count = 1;
-  var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
-  var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-      var divid = $(this);
-      var selectId = $(divid.children('select')).attr('id');
-      var type = $(divid.find('span:eq(0)')).html();
-      var reference = $(divid.find('span:eq(1)')).html();
-      var ver = $(divid.find('span:eq(2)')).html();
-      var name = $(divid.find('span:eq(3)')).html();
-      var address = $(divid.find('span:eq(6)')).html() + "<br>" + $(divid.find('span:eq(8)')).html();;
-      var phoneNumber = $(divid.find('span:eq(4)')).html();
-      var zip = $(divid.find('span:eq(9)')).html();
-      var build = $(divid.find('span:eq(5)')).html() + "<br>" + $(divid.find('span:eq(7)')).html();
-      var tr = "";
-      if (count === 1 && direction === "top-to-bottom") {
-        tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-      } else if (count === recordCount && direction === "bottom-to-top") {
-        tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-      } else {
-        tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
-      }
-      var strtd = "";
-      strtd = strtd + "<td>" + type + "</td>";
-      strtd = strtd + "<td>" + reference + "</td>";
-      strtd = strtd + "<td>" + ver + "</td>";
-      strtd = strtd + "<td>" + name + "</td>";
-      strtd = strtd + "<td>" + address + "</td>";
-      strtd = strtd + "<td>" + phoneNumber + "</td>";
-      strtd = strtd + "<td>" + zip + "</td>";
-      strtd = strtd + "<td>" + build + "</td>";
-      var strclosetr = "</tr>";
-      $("#customerAddress tbody").append(tr + strtd + strclosetr);
-    }
-  });
-  $("#customerAddress tbody tr:even").css("background-color", "#fff");
-  $("#customerAddress tbody tr:odd").css("background-color", "#f9f9f9");
-}
-generateTableAddressess("top-to-bottom");
+var dataMergeIndices = [[0], [1], [2], [3],[6, "<br>", 8],[4],[9],[5, "<br>", 7]];
+generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+// Search by Customer data table record mapping
+//generateTableAddressess("top-to-bottom");
             $('body').on('click', '#customerAddress tbody tr', function () {
               $("#customerAddress tbody tr:even").css("background-color", "#fff");
               $("#customerAddress tbody tr:odd").css("background-color", "#f9f9f9");
@@ -314,10 +276,10 @@ generateTableAddressess("top-to-bottom");
               var keycode = event.keycode || event.which;
               if (keycode === 33) {
                   //_00("PgUp", event);
-                  generateTableAddressess("bottom-to-top");
+                  //generateTableAddressess("bottom-to-top");
               } else if (keycode === 34) {
                   //_00("PgDn", event);
-                  generateTableAddressess("top-to-bottom");
+                  //generateTableAddressess("top-to-bottom");
               }
               return;
           });

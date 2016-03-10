@@ -187,25 +187,22 @@
         setTimeout(function(){
         var chars;
         $('.masking').on("keyup",function(e){
-          console.log('keypu');
           var eleId = $(this).attr("id");
           if($(this).val().indexOf('*') == -1)
           {
           chars = $(this).val();
          }
         else{
-         if(e.which == 8 || e.which ==46){ // backspace
-          
-           chars = chars.replace(chars.charAt(getCharPos(this)),"");
-          var sup = $(this).val(chars);
-           console.log(chars);
-         }
-        else{
-         if(getCharPos(this)<=5){
-          
-
-         }
-        }
+         if(e.which == 8 || e.which ==46){ // backspace  
+           if (e.which==8 && getCharPos(this)==0){
+           }
+           else{
+             chars = chars.replace(chars.charAt(getCharPos(this)),"");
+            var curpos=getCharPos(this);  
+            var sup = $('#ssn').val(chars);
+            $('#ssn').selectRange(curpos);
+           }
+          }
         }
         $("#dummy-"+eleId).val(chars);
         });
