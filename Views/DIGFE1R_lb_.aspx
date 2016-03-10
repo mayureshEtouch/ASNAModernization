@@ -1165,7 +1165,8 @@
                     _00('Enter', event);
                 });
                 //Validations
-                $("#home-phone,#cell-phone,#extension, #work-phone").ForceNumericOnly();
+                $("#extension, #work-phone").ForceNumericOnly();
+				$("#home-phone,#cell-phone").ForceNumericWithPasteOption();
 				//$("#extension, #work-phone").ForceNumericOnly();
 				//$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
             });
