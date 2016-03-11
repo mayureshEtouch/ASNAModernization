@@ -1726,7 +1726,7 @@
 				$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 				$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
 				$(this).find("td:eq(2) input").ForceNumericOnly();
-				$(this).find("td:eq(1) input").ForceNumericOnly();
+				$(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly();
 				if($(this).find("td:eq(0) select").val()=="DL"){
 					$(this).find("td:eq(6) input").prop('disabled', false);
 					$(this).find("td:eq(6) div").removeClass("is-disabled");
