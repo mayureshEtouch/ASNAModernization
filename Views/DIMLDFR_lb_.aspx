@@ -24,7 +24,6 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 <!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
   <main class="mdl-layout__content">
     <section class="time-date">
@@ -158,7 +157,7 @@
   </section>
 </main>
 <div id="modal" class="simplePopup"></div>
-</div>
+
 <!-- Modified HTML code ends here -->
 
 

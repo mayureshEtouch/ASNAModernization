@@ -24,7 +24,6 @@
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 	<div class="OverlayPopupBackground"></div>
 	<!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -96,10 +95,6 @@
 						<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
 						<span class="add-item-title" data-code=34>ADD ORDER ITEMS</span>
 						
-						<%--<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
-						<span class="add-item-title">VIEW NEXT ORDERS</span>
-						<span class="add-icon"><img src="../Themes/Current/Images/add-btn.png"></span>
-						<span class="add-item-title">VIEW PREVIOUS ORDERS</span>--%>
 					</div>
 				</div>
 			</section>   
@@ -237,10 +232,7 @@
 			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
 		  </div>
 		</div>
-        <section class="copyright">
-            <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
-        </section>
-    </div>
+   
 	
 	
         <div id="Div1" style="display:none;">
@@ -1642,7 +1634,10 @@
                 if (e.which != 115) {
                     var keydnIndex= $(this).parents("tr").index();
 					var el = $(".installation-codes")[keydnIndex];
-					$("[id='CenPH__lb_SFLRCD__lb_2AECD."+$("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+					if($("[id^='CenPH__lb_SFLRCD__lb_2AECD']")!='undefined') {
+						$("[id='CenPH__lb_SFLRCD__lb_2AECD."+$("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+					}
+					
                 } else {
                    var keydnIndex= $(this).parents("tr").index();
 					
@@ -1694,7 +1689,7 @@
 				$(' <td><span></span></td>').appendTo(row);
 				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" maxlength="20"></div></td>').appendTo(row);
 
-				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
+				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input installation-codes" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
 
 				$('<td><span></span></td>').appendTo(row);
 				$('<td><i class="material-icons"></i></td>').appendTo(row);
@@ -1789,7 +1784,6 @@
 					 }
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericWithQuestionMarkOnly();
-					console.log("data inserting...end");
                 });
 			});
 			if($("#datatableValueInsert").is(":visible") ){

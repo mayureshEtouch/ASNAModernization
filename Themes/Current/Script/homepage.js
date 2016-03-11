@@ -27,6 +27,7 @@ var setHomePageWidth = function() {
         var mdlColumnWidth;
 
         function columnWidth() {
+		
             mdlColumnWidth = ($(window).width()) / 3;
             $('.homepage-content .mdl-cell').css("width", mdlColumnWidth);
         }
@@ -52,6 +53,7 @@ var setHomePageWidth = function() {
 window.addEventListener("orientationchange", function() {
 if(window.orientation=='0'){  
 	setHomePageWidth();
+	setHomePage();
 }
 	else {
 		setHomePage();
@@ -59,9 +61,12 @@ if(window.orientation=='0'){
 
 }, false);
 
-if (window.matchMedia("(orientation: portrait)").matches) {
+$(document).ready(function() {
+	if (window.matchMedia("(orientation: portrait)").matches) {
    setHomePageWidth();
+   setHomePage();
 }
 else {
 	setHomePage();
 }
+});
