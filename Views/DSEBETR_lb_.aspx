@@ -1302,6 +1302,10 @@
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
+            $('[id^="CenPH__lb_SFLRCD__lb_RNICD"]').addClass("payment");
+            $('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').addClass("reference");
+            $('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
 			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
 			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
 			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
