@@ -1863,6 +1863,7 @@
 					 $(this).find("td:eq(9) span").text("");
 					 $(this).find("td:eq(10) span").text("");
 					 $(this).find("td:eq(11) span").text("");
+					  $(this).find("td:eq(12) span").text("");
 		           		
 					 
 			 });   

@@ -1139,6 +1139,7 @@
         }
         $(document).ready(function () {
             //Hide all read only mode elements
+			var ext= $("#CenPH__lb_SFLCTL__lb_CEONB").html()==undefined?"":"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html();
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
             //set date and time
             setDateTime("CenPH_DdsConstant16", "CenPH__lb_SFLCTL__lb__lb_TME");
@@ -1155,7 +1156,7 @@
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());
-            $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html()+"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html());
+            $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html()+""+ext);
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
 			
