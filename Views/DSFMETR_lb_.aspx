@@ -68,7 +68,7 @@
 				<%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
 				<div class="content-grid mdl-grid">
 					<div class="mdl-cell mdl-cell--3-col">
-						<span class="summary-title">Order #</span>
+						<span class="summary-title">Order #/Version #</span>
 						<span class="summary-txt" name ="order"></span>
 					</div>
 					<div class="mdl-cell mdl-cell--3-col">

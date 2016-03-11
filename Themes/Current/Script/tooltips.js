@@ -107,7 +107,7 @@ $(document).ready(function() {
             "#extn": "Only numeric",
             "#cphone": "Only numeric",
             "#additionalAddress": "Enter address",
-            "#firstName": "Enter name",
+            "#firstName": "Enter first name",
             "#address1": "Enter address",
             "#address2": "Enter address",
             "#hphone1": "Only numeric",
@@ -123,7 +123,7 @@ $(document).ready(function() {
             "#email": "Enter email address"
         },
         "CCJ0PVR": {
-            "#emp-name": "Enter employee name",
+            "#emp-name": "Enter Employee ID",
             "#promotion": "Enter promotion"
         },
         "DIGFE1R": {

@@ -533,7 +533,7 @@
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant9]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
-            var dataMergeIndices = [[0], [1], [2], [3, "&nbsp;", 6, "&nbsp;&nbsp;&nbsp;", 7],[4]];
+            var dataMergeIndices = [[0], [1], [2], [3, "&nbsp;",5,"&nbsp;", 6, "&nbsp;&nbsp;&nbsp;", 7],[4]];
             generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
             var selectCusotmer = function (row, value, event) {
