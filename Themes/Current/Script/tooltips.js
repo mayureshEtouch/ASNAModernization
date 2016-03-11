@@ -37,7 +37,7 @@ $(document).ready(function() {
             "#card_number": "Only numeric"
         },
         "CCCMPVI": {
-            "#ssn": "Only numeric"
+            //"#ssn": "Only numeric"
         },
         "CCHXE1R": {
             "#cust-lic-second": "Enter customer license",
