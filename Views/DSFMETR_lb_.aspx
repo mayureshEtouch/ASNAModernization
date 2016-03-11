@@ -1729,7 +1729,9 @@
 				$(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
 				$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
 				$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
 				$(this).find("td:eq(2) input").ForceNumericOnly();
+				$(this).find("td:eq(1) input").ForceNumericOnly();
 				if($(this).find("td:eq(0) select").val()=="DL"){
 					$(this).find("td:eq(6) input").prop('disabled', false);
 					$(this).find("td:eq(6) div").removeClass("is-disabled");
@@ -1767,7 +1769,6 @@
             $("#datatableValue").hide();
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
-			  console.log("data insertifdsfng...");
 			$('body').on("change blur keydown", $("input, select"),function(){
   			 $("#datatableValueInsert tbody").find("tr").each(function(i){
 					console.log("data inserting...");
@@ -1776,7 +1777,8 @@
 					 $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
                     $("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").val($(this).find("td:eq(3) input").val());
 					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val($(this).find("td:eq(4) span").val());
-                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val()); 
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val());
+					$("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text($(this).find("td:eq(7) input").val());
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
 					if($(this).find("td:eq(0) select").val()=="DL"){
 						$(this).find("td:eq(6) input").prop('disabled', false);
@@ -1788,8 +1790,7 @@
 						$(this).find("td:eq(6) div").addClass("is-disabled");
 					 }
                     $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-					$("[id$='lb_SFLRCD__lb_2AACD."+(i)+"']").ForceNumericWithQuestionMarkOnly();
-					console.log("data inserting...end");
+					$("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").ForceNumericWithQuestionMarkOnly();
                 });
 			});
 			if($("#datatableValueInsert").is(":visible") ){

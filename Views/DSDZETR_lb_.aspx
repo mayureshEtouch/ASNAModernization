@@ -73,6 +73,7 @@
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="CenPH_PANTX"></span><span id="CenPH_PAQTX"></span>
                                 <br />
+								<span id="CenPH_PADST"></span><span id="CenPH_PAOTX"></span>
                                 <span id="CenPH_PADST"></span><span id="CenPH_PAPTX"></span>
                             </div>
                         </div>
@@ -1151,10 +1152,11 @@
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
             $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html());
             $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + "&nbsp;");
+			$("#CenPH_PAOTX").html($("#CenPH__lb_SFLCTL__lb_PAOTX").html());
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());
-            $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html());
+            $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html()+"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html());
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
 			
