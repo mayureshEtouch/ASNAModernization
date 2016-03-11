@@ -22,13 +22,13 @@ $(document).ready(function() {
             "#pcode": "Enter promotion code"
         },
         "DSWXDFR": {
-            "#number": "Enter maodel name"
+            "#number": "Enter model number to search by"
         },
         "DIQADFR": {
             "#fNo": "Only numeric",
-            "#fAddress": "Enter address",
-            "#fType": "Enter type",
-            "#fReference": "Enter reference"
+            "#fAddress": "Enter address to search by",
+            "#fType": "Enter type to search by",
+            "#fReference": "Enter reference to search by"
         },
         "DIMMPVR": {
             "#emp-id": "Enter employee id"
@@ -69,7 +69,7 @@ $(document).ready(function() {
             "#requestdate": "Select date"
         },
         "DSQJSRR": {
-            "#number1": "Only numeric"
+            "#number1": "Enter payment method to search by"
         },
         "DSIME1R": {
             "#middleInitial": "Enter name",
@@ -90,14 +90,14 @@ $(document).ready(function() {
             "#emailAddress": "Enter email address"
         },
         "DIMLDFR": {
-            "#number2": "Only numeric",
-            "#number1": "Enter type"
+            "#number2": "Enter reference to search by",
+            "#number1": "Enter type to search by"
         },
         "DSQ0E1R": {
             "#ext": "Only numeric",
         },
         "DSB9E1R": {
-            "#middleInitial": "Enter middle name",
+            "#middleInitial": "Enter Middle Initial",
             "#lastName": "Enter last name",
             "#businessName": "Enter business name",
             "#zcode": "Only numeric",
@@ -107,7 +107,7 @@ $(document).ready(function() {
             "#extn": "Only numeric",
             "#cphone": "Only numeric",
             "#additionalAddress": "Enter address",
-            "#firstName": "Enter name",
+            "#firstName": "Enter first name",
             "#address1": "Enter address",
             "#address2": "Enter address",
             "#hphone1": "Only numeric",
@@ -123,7 +123,7 @@ $(document).ready(function() {
             "#email": "Enter email address"
         },
         "CCJ0PVR": {
-            "#emp-name": "Enter employee name",
+            "#emp-name": "Enter Employee ID",
             "#promotion": "Enter promotion"
         },
         "DIGFE1R": {
@@ -145,7 +145,7 @@ $(document).ready(function() {
             "#CenPH__lb_RCDDTL1__lb_1AMTX": "Only numeric"
         },
         "DIQXDFR": {
-            "#CenPH__lb_SFLCTL__lb_2Q1TX": "Enter reference"
+            "#CenPH__lb_SFLCTL__lb_2Q1TX": "Enter reference to search by"
         },
         "DSM7DFR": {
             "#CenPH__lb_SFLCTL__lb_2ABCD": "Enter company",
@@ -157,12 +157,13 @@ $(document).ready(function() {
             ".model-number": "Enter model number",
             ".serial-number": "Enter serial number"
         },
-        /*"DSEBETR":{
-            ".DdsCharField": "Enter payment method",
-            ".DdsDecField": "Only numeric",
+        "DSEBETR":{
+            ".payment": "Enter payment method",
+            ".amount": "Enter amount",
             ".hasDatepicker": "Select request date",
-            ".reference": "Enter reference"
-        },*/
+            ".reference": "Enter reference code",
+            ".approval-code": "Enter approval code"
+        },
         "DSK6EFR": {
             ".term-input": "Enter warranty"
         },

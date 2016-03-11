@@ -113,7 +113,7 @@
 								   <th class="first"><div class="th-inner">Company</div></th>
 								   <th><div class="th-inner">Location</div></th>
 								   <th><div class="th-inner">Description</div></th>
-								   <th><div class="th-inner">Distance</div></th>
+								   <th><div class="th-inner">Dist</div></th>
 								  </tr>
 								 </thead>
 								 <tbody>

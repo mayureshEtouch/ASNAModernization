@@ -59,7 +59,7 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order # </span>
+                            <span class="summary-title">Order #/Version # </span>
                             <div class="summary-txt">
                                 <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
                             </div>
@@ -1300,15 +1300,15 @@
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").show();
                 _00('Enter', event);
             });
-
-            // To show Billing & Shipping address in Order Detail page
+	
+			// To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
-                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
-                sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());
+                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text()+ ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
+                sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());
             }
             else {
-                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
-                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
+                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
+                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
 
             //Employee field validation
