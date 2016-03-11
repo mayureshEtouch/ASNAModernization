@@ -1765,7 +1765,18 @@
                 _00('Enter', event);
             });
             $('body').on('click', '#updateCustomer', function(event) {
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
                 _00('F7', event);
+            });
+            $(window).keydown(function(event){
+                //console.log('hiii preseed');
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13'){
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                }
+                
             });
             if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
               $(".editable-data").show();
@@ -1877,17 +1888,16 @@
                chars = $(this).val();
               }
              else{
-              if(e.which == 8 || e.which ==46){ // backspace
-               
-                chars = chars.replace(chars.charAt(getCharPos(this)),"");
-               var sup = $(this).val(chars);
-              }
-             else{
-              if(getCharPos(this)<=5){
-               
-
-              }
-             }
+              if(e.which == 8 || e.which ==46){ // backspace  
+                if (e.which==8 && getCharPos(this)==0){
+                }
+                else{
+                  chars = chars.replace(chars.charAt(getCharPos(this)),"");
+                 var curpos=getCharPos(this);  
+                 var sup = $('#'+eleId).val(chars);
+                 $('#'+eleId).selectRange(curpos);
+                }
+               }
              }
              $("#dummy-"+eleId).val(chars);
              });
@@ -1902,17 +1912,16 @@
                chars2 = $(this).val();
               }
              else{
-              if(e.which == 8 || e.which ==46){ // backspace
-               
-                chars2 = chars2.replace(chars2.charAt(getCharPos(this)),"");
-               var sup = $(this).val(chars2);
-              }
-             else{
-              if(getCharPos(this)<=5){
-               
-
-              }
-             }
+              if(e.which == 8 || e.which ==46){ // backspace  
+                if (e.which==8 && getCharPos(this)==0){
+                }
+                else{
+                  chars2 = chars2.replace(chars2.charAt(getCharPos(this)),"");
+                 var curpos=getCharPos(this);  
+                 var sup = $('#'+eleId).val(chars2);
+                 $('#'+eleId).selectRange(curpos);
+                }
+               }
              }
              $("#dummy-"+eleId).val(chars2);
              });

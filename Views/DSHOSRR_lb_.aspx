@@ -477,7 +477,10 @@
 			$("[name='date']").text($("[id$=CenPH_DdsConstant7]").text());
 			$("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             /* script for table row starts here */
-            var generateTable = function (direction) {
+           var dataMergeIndices = [[0], [1]];
+           generateTableAndApplyInfiniteScroll("salesperson", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+
+            /*var generateTable = function (direction) {
                 $("#salesperson tbody").empty();
                 var count = 1;
                 var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
@@ -509,19 +512,19 @@
                 $("#salesperson tbody tr:even").css("background-color", "#fff");
                 $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
             }
-            generateTable("top-to-bottom");
+            generateTable("top-to-bottom");*/
             //Handle Page Up and Page Down events
-            $('body').on('keyup', function (e) {
+            /*$('body').on('keyup', function (e) {
                 var keycode = e.keycode || e.which;
                 if (keycode === 33) {
-                    _00("PgUp", event);
-                    generateTable("bottom-to-top");
+                    //_00("PgUp", event);
+                    //generateTable("bottom-to-top");
                 } else if (keycode === 34) {
-                    _00("PgDn", event);
-                    generateTable("top-to-bottom");
+                    //_00("PgDn", event);
+                    //generateTable("top-to-bottom");
                 }
                 return;
-            });
+            });*/
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -539,7 +542,7 @@
             });
             // Set first record as default selected
             $("#salesperson tbody tr:first").css("background-color", "#d8d8d8");
-            jQuery.tableNavigation({
+            /*jQuery.tableNavigation({
                 "onRowChange": function (output) {
                     if (output) {
                         var selectId = $(output.row).data('selectid');
@@ -556,7 +559,7 @@
                         }
                     }
                 }
-            });
+            });*/
 
         });
 

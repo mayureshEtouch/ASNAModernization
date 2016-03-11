@@ -22,4 +22,46 @@ var setHomePage = function() {
     }
 }
 
-setHomePage();
+var setHomePageWidth = function() {
+    if (typeof jQuery !== 'undefined') {
+        var mdlColumnWidth;
+
+        function columnWidth() {
+            mdlColumnWidth = ($(window).width()) / 3;
+            $('.homepage-content .mdl-cell').css("width", mdlColumnWidth);
+        }
+        $(window).resize(function() {
+            columnWidth();
+        });
+		 $(function() {
+            columnWidth();
+            $(".card").flip({
+                axis: 'x',
+                trigger: 'click',
+                speed: 700
+            });
+        });
+       
+    } else {
+        setTimeout(setHomePageWidth, 100);
+    }
+	columnWidth();
+}
+
+
+window.addEventListener("orientationchange", function() {
+if(window.orientation=='0'){  
+	setHomePageWidth();
+}
+	else {
+		setHomePage();
+	}
+
+}, false);
+
+if (window.matchMedia("(orientation: portrait)").matches) {
+   setHomePageWidth();
+}
+else {
+	setHomePage();
+}

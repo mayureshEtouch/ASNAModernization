@@ -59,7 +59,7 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order # </span>
+                            <span class="summary-title">Order #/Version # </span>
                             <div class="summary-txt">
                                 <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
                             </div>
@@ -1244,9 +1244,8 @@
                     copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
                     copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
                 }
-                console.log('copyToAndFrom is ');
-                console.log(copyToAndFrom);
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                $("#special-instructions").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
                 $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
             }
             

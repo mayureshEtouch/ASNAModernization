@@ -39,7 +39,9 @@ li a{
 */
 
 /* homepage CSS starts here */
-
+.mdl-layout__content {
+	height: auto !important;
+}
 .homepage-content .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
 		width: calc(33.3333%);
 		width: -webkit-calc(33.3333%);
