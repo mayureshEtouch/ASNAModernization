@@ -97,7 +97,7 @@ $(document).ready(function() {
             "#ext": "Only numeric",
         },
         "DSB9E1R": {
-            "#middleInitial": "Enter middle name",
+            "#middleInitial": "Enter Middle Initial",
             "#lastName": "Enter last name",
             "#businessName": "Enter business name",
             "#zcode": "Only numeric",
