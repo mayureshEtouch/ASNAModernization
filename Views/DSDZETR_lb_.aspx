@@ -72,6 +72,7 @@
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="CenPH_PANTX"></span><span id="CenPH_PAQTX"></span>
                                 <br />
+								<span id="CenPH_PADST"></span><span id="CenPH_PAOTX"></span>
                                 <span id="CenPH_PADST"></span><span id="CenPH_PAPTX"></span>
                             </div>
                         </div>
@@ -1150,10 +1151,11 @@
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
             $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html());
             $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + "&nbsp;");
+			$("#CenPH_PAOTX").html($("#CenPH__lb_SFLCTL__lb_PAOTX").html());
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());
-            $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html());
+            $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html()+"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html());
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
 			
@@ -1299,15 +1301,15 @@
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").show();
                 _00('Enter', event);
             });
-
-            // To show Billing & Shipping address in Order Detail page
+	
+			// To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
-                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
-                sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());
+                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text()+ ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
+                sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());
             }
             else {
-                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
-                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
+                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
+                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
 
             //Employee field validation

@@ -478,88 +478,9 @@
 			$("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             /* script for table row starts here */
            var dataMergeIndices = [[0], [1]];
-           generateTableAndApplyInfiniteScroll("salesperson", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-
-            /*var generateTable = function (direction) {
-                $("#salesperson tbody").empty();
-                var count = 1;
-                var recordCount = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').length - 1;
-                $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-                        var divid = $(this);
-                        var selectId = $(divid.children('select')).attr('id')
-                        //var tr = "<tr data-selectid=" + selectId + ">";
-                        var tr = "";
-                        if (count === 1 && direction === "top-to-bottom") {
-                            tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                        } else if (count === recordCount && direction === "bottom-to-top") {
-                            tr += "<tr data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
-                        } else {
-                            tr += "<tr data-selectid=" + selectId + " data-count=" + (count++) + ">";
-                        }
-                        var strtd = "";
-                        divid.find('span').map(function (i, e) {
-                            strtd = strtd + "<td>" + ($(e).text()) + "</td>";
-                        });
-                        var strclosetr = "</tr>";
-
-                        $("#salesperson tbody").append(tr + strtd + strclosetr);
-                    } else if($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
-                        var tr = '<tr tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
-                        $("#salesperson tbody").append(tr);
-                    }
-                });
-                $("#salesperson tbody tr:even").css("background-color", "#fff");
-                $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
-            }
-            generateTable("top-to-bottom");*/
-            //Handle Page Up and Page Down events
-            /*$('body').on('keyup', function (e) {
-                var keycode = e.keycode || e.which;
-                if (keycode === 33) {
-                    //_00("PgUp", event);
-                    //generateTable("bottom-to-top");
-                } else if (keycode === 34) {
-                    //_00("PgDn", event);
-                    //generateTable("top-to-bottom");
-                }
-                return;
-            });*/
-            var selectCusotmer = function (row, value, event) {
-                var selectId = $(row).data('selectid');
-                a = selectId.split(".");
-                $("#" + a[0] + "\\." + a[1]).val(value);
-                _00('Enter', event);
-            }
-
-            //Select customer on double click
-            $('body').on('dblclick', '#salesperson tbody tr', function () {
-                selectCusotmer(this, "1");
-            });
-            $("#select-customer").click(function () {
-                var row = $("#salesperson tbody tr.selected");
-                selectCusotmer(row, "1");
-            });
+           generateTableAndApplyInfiniteScroll("salesperson", "CenPH__lb_SFLRCD", "NONE", "select-customer", dataMergeIndices);
             // Set first record as default selected
             $("#salesperson tbody tr:first").css("background-color", "#d8d8d8");
-            /*jQuery.tableNavigation({
-                "onRowChange": function (output) {
-                    if (output) {
-                        var selectId = $(output.row).data('selectid');
-                        if (output.r && output.keycode === "40") {
-                            _00("PgDn", event);
-                            generateTable("top-to-bottom");
-                        } else if (output.r && output.keycode === "38" && !selectId) {
-                            _00("PgUp", event);
-                            generateTable("bottom-to-top");
-                        } else {
-                            $("#salesperson tbody tr:even").css("background-color", "#fff");
-                            $("#salesperson tbody tr:odd").css("background-color", "#f9f9f9");
-                            $(output.row).css({ "background-color": "#d8d8d8" });
-                        }
-                    }
-                }
-            });*/
 
         });
 

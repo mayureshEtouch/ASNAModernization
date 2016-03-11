@@ -216,10 +216,13 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant39]").text());
             $("[name='time']").text($("[id$=CenPH_DdsConstant40]").text());
             //Set styles for alignment
-            $("#CenPH_RSignon_User").css({ "position": "relative", "left": "72px", "top": "20px" });
+            $("#CenPH_RSignon_User").css({ "position": "relative", "left": "35px", "top": "20px" });
             $("#CenPH_RSignon_Password").css({ "position": "relative", "left": "40px", "top": "40px" });
             $("#CenPH_DdsConstant1").css({ "position": "relative", "left": "0px", "top": "20px" });
             $("#CenPH_DdsConstant2").css({ "position": "relative", "left": "0px", "top": "40px" });
+			
+			$("[id$=CenPH_DdsConstant1]").html("Username");
+			
             //Display error popup for backend messages
             if ($("#CenPH_RSignon_Message").text().length > 1) {
                 $('#modal').html($("#CenPH_RSignon_Message").text());
