@@ -125,10 +125,10 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
     $('body').on('keyup', function(event) {
         var keycode = event.keycode || event.which;
         if (keycode === 33) {
-            _00("PgUp", event);
+            //_00("PgUp", event);
             generateTable("bottom-to-top");
         } else if (keycode === 34) {
-            _00("PgDn", event);
+            //_00("PgDn", event);
             generateTable("top-to-bottom");
         }
         return;
