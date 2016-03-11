@@ -59,7 +59,7 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order # </span>
+                            <span class="summary-title">Order #/Version # </span>
                             <div class="summary-txt">
                                 <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
                             </div>
