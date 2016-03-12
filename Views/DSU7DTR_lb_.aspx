@@ -63,7 +63,7 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #</span> <span name="order" class="summary-txt" id="order-version"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #/Version #</span> <span name="order" class="summary-txt" id="order-version"></span> </div>
                         <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
                         <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Date</span> <span name="username" class="summary-txt" id="payment-date"></span> </div>
                     </div>
@@ -96,7 +96,7 @@
                                             <th style="width: 10%">
                                                 <div class="th-inner">Date</th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Typ</div>
+                                                <div class="th-inner">Type</div>
                                             </th>
                                             <th style="width: 10%">
                                                 <div class="th-inner">Amount</div>
@@ -108,13 +108,13 @@
                                                 <div class="th-inner">Approval</div>
                                             </th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Ver</div>
+                                                <div class="th-inner">Version</div>
                                             </th>
                                             <th style="width: 10%">
                                                 <div class="th-inner">M</div>
                                             </th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Acct #</div>
+                                                <div class="th-inner">Account #</div>
                                             </th>
                                             <th style="width: 10%">
                                                 <div class="th-inner">ID</div>
@@ -967,7 +967,8 @@
                 });
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                generateTableAndApplyInfiniteScroll("completed-order-payment", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [8], [10]]; // What is the column name for sapn index 7
+                generateTableAndApplyInfiniteScroll("completed-order-payment", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
             });
         </script>
     </asp:Content>

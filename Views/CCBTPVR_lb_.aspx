@@ -22,7 +22,96 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Link Credit/DIS Customer</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCBTPVR</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="white-to-gray-bullet"></li>
+
+                            <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
+
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="table-data-content-container">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="table-container table-container-search">
+                                <div class="content-grid mdl-grid select-customer-screen-grid">
+                                    <div class="mdl-cell mdl-cell--12-col" style="margin: 10px 5px 5px;color: blue;" id="CenPH_DdsConstant2_new"></div>
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop">
+                                        <span class="summary-label">Find By Home Phone</span>
+                                        <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new1" value="" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new2" value="" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new3" maxlength="4" value="" class="mdl-textfield__input mdl-cell--4-col mdl-cell--7-col-desktop">
+                                        </div>
+                                    </div>
+                                    <div style="margin-right:3%;">
+                                        <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                        <span class="summary-label">By Owner Name</span>
+                                        <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1A2TX_new" class="mdl-textfield__input mdl-cell--8-col mdl-cell--11-col-desktop" maxlength="25">
+                                        </div>
+                                    </div>
+                                    <div style="margin-right:3%;">
+                                        <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-desktop" style="margin: 0">
+                                        <span class="summary-label" style=" position: relative; top: 20%;margin-top: 5%;">Blank both the unlink with No Customer Match</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--9-col-desktop">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--3-col pull-right">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">NEXT</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </main>
+        </div>
+        <div id="modal" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CU: PMT Crd/DIS Link      Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -629,4 +718,38 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant9": "date",
+                    "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
+                    "CenPH_DdsConstant2+CenPH_DdsConstant3+CenPH_DdsConstant4": "CenPH_DdsConstant2_new"
+                },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_1A2TX": "CenPH__lb_RCDDTL1__lb_1A2TX_new"
+                }
+            }
+            $(document).ready(function () {
+                $('body').css({ "background-color": "white" });
+                var phone = $("#CenPH__lb_RCDDTL1__lb_1BXNB").val();
+                if(phone.length > 0) {
+                    $("#CenPH__lb_RCDDTL1__lb_1BXNB_new1").val(phone.substr(0,3));
+                    $("#CenPH__lb_RCDDTL1__lb_1BXNB_new2").val(phone.substr(3,3));
+                    $("#CenPH__lb_RCDDTL1__lb_1BXNB_new3").val(phone.substr(5,4));
+                }
+                $("#CenPH__lb_RCDDTL1__lb_1BXNB_new1,#CenPH__lb_RCDDTL1__lb_1BXNB_new2,#CenPH__lb_RCDDTL1__lb_1BXNB_new3").on("change keyup keydown mouseup mousedown", function() {
+                    $("#CenPH__lb_RCDDTL1__lb_1BXNB").val($("#CenPH__lb_RCDDTL1__lb_1BXNB_new1").val() + $("#CenPH__lb_RCDDTL1__lb_1BXNB_new2").val() + $("#CenPH__lb_RCDDTL1__lb_1BXNB_new3").val());
+                });
+                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+                $("#CenPH__lb_RCDDTL1__lb_1BXNB_new1,#CenPH__lb_RCDDTL1__lb_1BXNB_new2,#CenPH__lb_RCDDTL1__lb_1BXNB_new3").ForceNumericOnly();
+                //Next button click handler
+                $("#next").click(function (event) {
+                     _00('Enter', event);
+                });
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                
+            });
+        </script>
     </asp:Content>

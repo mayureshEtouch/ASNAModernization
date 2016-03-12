@@ -89,7 +89,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">And Social Security #:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                        <span class="form-text"><input onkeyup="validateInput(this)" type="text" maxlength="9" class="validateSSNLengthNew mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1A4NB_new" /><span id="ssn-show" style="color:blue;cursor: pointer;">Show</span></span>
+                                        <span class="form-text"><input type="text" maxlength="9" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1A4NB_new" /><span id="ssn-show" style="color:blue;cursor: pointer;">Show</span></span>
                                         <input type="hidden" id="dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
                                     </div>
                                 </div>
@@ -105,13 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="button-container" style="padding-bottom: 5px;">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
-                                </div>
-                            </div>
-                        </div> -->
+                        
                     </div>
                 </section>
 
@@ -642,7 +636,6 @@
                 $('#second-id-entry').click(function (event) {
                     _00("F3", event);
                 });
-                //validations
                 $("#CenPH__lb_RCDDTL1__lb_1BTXT_new,#CenPH__lb_RCDDTL1__lb_1Y1NB_new,#CenPH__lb_RCDDTL1__lb_1A4NB_new").ForceNumericOnly();
                 $("#ssn-show").on("mousedown", function() {
                     setTimeout(function(){

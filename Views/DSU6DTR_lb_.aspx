@@ -63,12 +63,24 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #</span> <span name="order" class="summary-txt" id="order-version">24413630 / 2</span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #/Version #</span> <span name="order" class="summary-txt" id="order-version"></span> </div>
                     </div>
                 </div>
             </section>
             <span id="custom_slash" style="display:none;">/</span>
-            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                                <span class="icon-txt credits">Credits</span><i class="material-icons md-15 md-light change-icon credits credit-icon"></i>
+                                <span class="icon-txt comp-status">Details</span><i class="material-icons md-15 md-light comp-status display-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="fixed-table-container">
@@ -77,6 +89,10 @@
                                 <table cellspacing="0" cellpadding="0" border="0" id="completed-orders-detail" class="navigateable">
                                     <thead>
                                         <tr>
+                                            <th style="width: 8%">
+                                                <div class="th-inner">Del <br /> type
+                                                </div>
+                                            </th>
                                             <th style="width: 8%">
                                                 <div class="th-inner">Del <br /> Status
                                                 </div>
@@ -114,15 +130,11 @@
                                                 </div>
                                             </th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Status<br /> &nbsp;
+                                                <div class="th-inner">Delivered<br /> &nbsp;
                                                 </div>
                                             </th>
                                             <th style="width: 13%">
                                                 <div class="th-inner">Model <br /> Description
-                                                </div>
-                                            </th>
-                                            <th style="width: 7%">
-                                                <div class="th-inner">Del <br /> Date
                                                 </div>
                                             </th>
                                         </tr>
@@ -1146,6 +1158,10 @@
                 }
             }
             $(document).ready(function () {
+
+                var dataMergeIndices = [[0], [1], [2], [3],[4], [5], [6], [7], [8], [9], [11], [12]]; //Not sure about span number 13
+                  generateTableAndApplyInfiniteScroll("completed-orders-detail", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+
                 $('body').on('click', '#previous', function (event) {
                     _00('F12', event);
                 });
@@ -1154,7 +1170,16 @@
                 });
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                generateTableAndApplyInfiniteScroll("completed-orders-detail", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+                //Credits details
+                $(".credits").click(function (event) {
+                    var row = $("#completed-orders-detail tbody tr.selected");
+                    doAction(row, "7", event);
+                });
+                //Completion status
+                $(".comp-status").click(function (event) {
+                    var row = $("#completed-orders-detail tbody tr.selected");
+                    doAction(row, "8", event);
+                });
             });
         </script>
     </asp:Content>

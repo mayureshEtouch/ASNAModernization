@@ -134,8 +134,10 @@
                 </div>
             </section>
         </main>
-        <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         </div>
+        <div id="modal" class="simplePopup" style="left: 30%;"></div>
+        <!-- <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div> -->
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             
@@ -676,7 +678,7 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
         <style>
-            #Div1, #fkeys, #showDiagnostics, #footer {
+            #fkeys, #showDiagnostics, #footer {
                 display: none;
             }
             #main-content {
@@ -686,18 +688,17 @@
                 height: 800px !important;
             }
               #__Page_PopUp {
-                left: 50% !important;
-                margin-left: -225px;
+                left: 30% !important;
             }
 
             #__Page_PopUp tbody tr:first-child {
-				 height: 0px !important;
+				        height: 0px !important;
                 display: none;
             }
 
             #__Page_PopUp .DdsInlinePopUpTitle {
                 height: 0 !important;
-				width: 0 !important;
+				        width: 0 !important;
             }
             .modal-dialog-container {
                 width: 100%;
@@ -715,12 +716,15 @@
               position: static !important;
               width: 45px !important;
             }
-			#notice-first li {
-				list-style: none;
-			}
-			#notice-second li {
-				list-style: none;
-			}
+      			#notice-first li {
+      				list-style: none;
+      			}
+      			#notice-second li {
+      				list-style: none;
+      			}
+            .simplePopup {
+                left: 30% !important;
+            }
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -774,6 +778,16 @@
                     $("#second-message").show();
                     $("#first-message").hide();
                 }
+
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
             });
         </script>
     </asp:Content>

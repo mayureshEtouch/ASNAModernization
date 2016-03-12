@@ -79,34 +79,33 @@
                                     <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="completed-tax-details">
                                         <thead>
                                             <tr>
-                                                <th style="width: 14%">
-                                                    <div class="th-inner">Effective <br /> Status
+                                                <th style="width: 10%">
+                                                    <div class="th-inner">Ln <br /> &nbsp;
                                                     </div>
                                                 </th>
-                                                <th style="width: 14%">
+                                                <th style="width: 10%">
+                                                    <div class="th-inner">Effective <br /> &nbsp;
+                                                    </div>
+                                                </th>
+                                                <th style="width: 10%">
                                                     <div class="th-inner">Standard<br /> Tax Rate</div>
                                                 </th>
-                                                <th style="width: 14%">
+                                                <th style="width: 10%">
                                                     <div class="th-inner">Product<br /> Adj Rate</div>
                                                 </th>
-                                                <th style="width: 14%">
+                                                <th style="width: 10%">
                                                     <div class="th-inner">Warranty<br /> Adj Rate</div>
                                                 </th>
-                                                <th style="width: 14%">
+                                                <th style="width: 10%">
                                                     <div class="th-inner">Install<br /> Adj Rate</div>
                                                 </th>
                                                 <th style="width: 10%">
                                                     <div class="th-inner">Other<br /> Adj Rate</div>
                                                 </th>
                                                 <th style="width: 10%">
-                                                    <div class="th-inner">Taxing<br /> &nbsp;
+                                                    <div class="th-inner">Taxing<br /> Zip Code
                                                     </div>
                                                 </th>
-                                                <th style="width: 10%">
-                                                    <div class="th-inner">Zip Code<br /> &nbsp;
-                                                    </div>
-                                                </th>
-
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -117,7 +116,7 @@
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                    <!-- <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div> -->
                                 </div>
                             </div>
                         </div>
@@ -793,7 +792,9 @@
                 
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                generateTableAndApplyInfiniteScroll("completed-tax-details", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]]; // What are the column names for sapn index 8,9,10,11
+                generateTableAndApplyInfiniteScroll("completed-tax-details", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+                //generateTableAndApplyInfiniteScroll("completed-tax-details", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
             });
         </script>
     </asp:Content>

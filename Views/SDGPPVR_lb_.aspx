@@ -62,23 +62,25 @@
                 <div class="content-grid mdl-grid">
                     <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
                         <div class="content-grid mdl-grid">
-							 <div class="mdl-cell mdl-cell--12-col"> 
+							 <div class="mdl-cell mdl-cell--12-col" style="margin-left: 0px;"> 
 								<span style="margin: 0;">Order Number</span>
-								<span class="ord-num form-label"></span>
+								<span class="ord-num form-label" id="CenPH__lb_RCDDTL1__lb_1BANB_new"></span>
 								<span>&nbsp;for&nbsp;</span>
-								<span class="cust-name form-label"></span>
+								<span class="cust-name form-label" id="CenPH__lb_RCDDTL1__lb_DALTX_new"></span>
 							  </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Location:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
                                 <span class="form-text">
-                                    <input id="location" type="text" name="location" value="" maxlength="3"></span>
+                                    <input id="CenPH__lb_RCDDTL1__lb_1AACD_new" type="text" name="location" value="" maxlength="3"></span>
+                                    <span id="CenPH__lb_RCDDTL1__lb_DB7TX_new"></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Employee:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
                                 <span class="form-text">
-                                    <input id="employee" type="text" name="employee" value="" maxlength="5"></span>
+                                    <input id="CenPH__lb_RCDDTL1__lb_1AJCD_new" type="text" name="employee" value="" maxlength="5"></span>
+                                    <span id="CenPH__lb_RCDDTL1__lb_DA0TX_new"></span>
                             </div>
                         </div>
                     </div>
@@ -90,8 +92,10 @@
                 </div>
             </div>
         </div>
-		
+		    
         </main>
+
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         <!--div id="modal" class="simplePopup"></div-->
 		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
@@ -101,7 +105,7 @@
               </div>
          </div>
     </div>
-	
+	   <div id="modal" class="simplePopup"></div>
         <div id="Div1">
             
       <%--  OE: PMT for Referenced    Prompt & validate record                                                               --%>
@@ -535,46 +539,58 @@
 		}
 	</style>
 	<script type="text/javascript">
-      $(document).ready(function() {
-        $('.ord-num').text($('#CenPH__lb_RCDDTL1__lb_1BANB').text());
-        $('.cust-name').text($('#CenPH__lb_RCDDTL1__lb_DALTX').text());
-       
-		$('#location').val($('#CenPH__lb_RCDDTL1__lb_1AACD').val());
-		$('#employee').val($('#CenPH__lb_RCDDTL1__lb_1AJCD').val());
-		
-		$("#location").on("change keyup", function () {
-                $("#CenPH__lb_RCDDTL1__lb_1AACD").val($("#location").val());
+
+      var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH__lb_RCDDTL1__lb_1BANB": "CenPH__lb_RCDDTL1__lb_1BANB_new",
+                "CenPH__lb_RCDDTL1__lb_DALTX": "CenPH__lb_RCDDTL1__lb_DALTX_new",
+                "CenPH__lb_RCDDTL1__lb_DB7TX": "CenPH__lb_RCDDTL1__lb_DB7TX_new",
+                "CenPH__lb_RCDDTL1__lb_DA0TX": "CenPH__lb_RCDDTL1__lb_DA0TX_new"
+            },
+            "inputFields": {
+                "CenPH__lb_RCDDTL1__lb_1AACD" : "CenPH__lb_RCDDTL1__lb_1AACD_new",
+                "CenPH__lb_RCDDTL1__lb_1AJCD" : "CenPH__lb_RCDDTL1__lb_1AJCD_new"
+            }
+        }
+
+        $(document).ready(function () {
+            copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+            $('.close-icon').click(function (event) {
+                _00("F12", event);
             });
-			
-		$("#employee").on("change keyup", function () {
-			$("#CenPH__lb_RCDDTL1__lb_1AJCD").val($("#employee").val());
-		});
-		
-		$("#location").ForceNumericOnly();
-		
-		//Handle enter click event
-		$("#enter").on("click", function (event) {
-			_00("Enter", event);
-		});
-		
-		
-		 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
-		  $(".confirmation-outer-conatiner").hide();
-		  $(".OverlayPopupBackground").hide();
-			} else {
-		  $(".confirmation-outer-conatiner").show();
-		  $(".OverlayPopupBackground").show();
-		}
-            
-		$("#yes").click(function (event) {
-			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-			_00('Enter', event);
-		});
-		$("#no").click(function (event) {
-			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-			_00('Enter', event);
-		});
-			
-      });
+            $('#enter').click(function (event) {
+                _00("Enter", event);
+            });
+            $('#second-id-entry').click(function (event) {
+                _00("F3", event);
+            });
+            if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                  $(".confirmation-outer-conatiner").hide();
+                  $(".OverlayPopupBackground").hide();
+                } else {
+                  $(".confirmation-outer-conatiner").show();
+                  $(".OverlayPopupBackground").show();
+            }
+                      
+            $("#yes").click(function (event) {
+              $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+              _00('Enter', event);
+            });
+            $("#no").click(function (event) {
+              $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+              _00('Enter', event);
+            });
+
+            //Error message
+            if($(".simplePopupClose").length > 0) {
+                $(".simplePopupBackground1").show();
+            } else {
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function() {
+                $(".simplePopupBackground1").hide();
+            });
+            $("#CenPH__lb_RCDDTL1__lb_1AACD_new, #CenPH__lb_RCDDTL1__lb_1AJCD_new").ForceNumericOnly();
+        });
     </script>
-    </asp:Content>
+</asp:Content>
