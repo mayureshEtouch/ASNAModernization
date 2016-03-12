@@ -24,7 +24,6 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -109,13 +108,7 @@
                 </div>
             </section>
         </main>
-        <%--        <div class="confirmation-outer-conatiner simplePopup">
-            <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
-            <div class="button-container">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
-            </div>
-        </div>--%>
+       
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
@@ -124,7 +117,7 @@
             </div>
         </div>
         <div id="modal1" class="simplePopup"></div>
-    </div>
+    
     <div id="Div1" style="display:none;">
 
         <%--  OE: EDT Ent Ord Warr      Edit file                                                                              --%>

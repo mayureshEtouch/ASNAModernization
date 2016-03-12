@@ -24,7 +24,6 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -153,7 +152,7 @@
 
         </main>
         <div id="modal" class="simplePopup"></div>
-    </div>
+    
 
 
     <div id="Div1" style="display:none;">
@@ -607,7 +606,7 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('body').css({ "background-color": "white" });
+		
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant8]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());

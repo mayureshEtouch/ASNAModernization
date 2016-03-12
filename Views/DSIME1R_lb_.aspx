@@ -27,7 +27,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -116,7 +115,7 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <select name="mailingList" id="mailingList"></select>
+                                        <select name="mailingList" id="mailingList" style="width: 180px;"></select>
                                         <!-- <input type="text" id="mailingList" name="mailingList" style="width: 50px;" value="Y"> -->
                                   </span>
                                 </div>
@@ -274,7 +273,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>
-    </div>
+    
 
         <div id="Div1" style="display:none;">
             

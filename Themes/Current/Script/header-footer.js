@@ -3,7 +3,7 @@
     var userName = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html() || " ";
     var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("[id$='__lb__lb_JOB']").html() || " ";
     var header = "";
-    header += "<header class=\"mdl-layout__header is-casting-shadow\">";
+    header += "<div class=\"mdl-layout--fixed-header mdl-layout--large-screen-only\"><header class=\"mdl-layout__header is-casting-shadow \">";
     header += "            <div class=\"mdl-layout__header-row\">";
     header += "                <!-- Title -->";
     header += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
@@ -25,7 +25,7 @@
     loginHeader += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
     loginHeader += "                <div class=\"mdl-layout-spacer\"><\/div>";
     loginHeader += "            <\/div>";
-    loginHeader += "        <\/header>";
+    loginHeader += "        <\/header></\div>";
 
     if ($("#login-container").length > 0) {
         $("#main-content").prepend(loginHeader);

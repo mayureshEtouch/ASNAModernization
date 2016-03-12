@@ -23,7 +23,6 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" id="modernized-header-container">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -109,7 +108,7 @@
         <!--<section class="copyright">
             <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
         </section>-->
-    </div>
+    
     <div id="Div1" style="display:none;">
 
         <%--  CU: PMT Customer          Prompt & validate record                              --%>

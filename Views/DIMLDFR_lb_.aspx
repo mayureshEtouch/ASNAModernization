@@ -24,7 +24,6 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 <!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
   <main class="mdl-layout__content">
     <section class="time-date">
@@ -124,7 +123,7 @@
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container" style="overflow: auto;">
-          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerAddress">
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerAddress" class="navigateable">
             <thead>
               <tr>
                 <th>Type</th>
@@ -158,7 +157,7 @@
   </section>
 </main>
 <div id="modal" class="simplePopup"></div>
-</div>
+
 <!-- Modified HTML code ends here -->
 
 
@@ -244,18 +243,10 @@ $('.error').text($('#MsgPH_DdsMessagePanel1').text());
 setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
 
 var dataMergeIndices = [[0], [1], [2], [3],[6, "<br>", 8],[4],[9],[5, "<br>", 7]];
-generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 // Search by Customer data table record mapping
 //generateTableAddressess("top-to-bottom");
-            $('body').on('click', '#customerAddress tbody tr', function () {
-              $("#customerAddress tbody tr:even").css("background-color", "#fff");
-              $("#customerAddress tbody tr:odd").css("background-color", "#f9f9f9");
-              $(this).css({ "background-color": "#e8e8e8" });
-              $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
-              $(this).addClass("selected");
-              $("div.icon-container").removeClass("icon-disable");
-              $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
-            });
+           
             $(".display-customer").click(function (event) {
               if ($(".icon-container").hasClass("icon-disable")) {
                 alert("Please select a address");
@@ -270,19 +261,7 @@ generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE
              $("#" + a[0] + "\\." + a[1]).val(value);
              _00('Enter', event);
            }
-          //Handle Page Up and Page Down events
-          $('body').on('keyup', function(event) {
-            console.log('clicking a key!!!');
-              var keycode = event.keycode || event.which;
-              if (keycode === 33) {
-                  //_00("PgUp", event);
-                  //generateTableAddressess("bottom-to-top");
-              } else if (keycode === 34) {
-                  //_00("PgDn", event);
-                  //generateTableAddressess("top-to-bottom");
-              }
-              return;
-          });
+
          });
        </script>
 
