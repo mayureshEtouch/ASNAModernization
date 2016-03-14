@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -66,19 +65,19 @@
                             <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--2-col">
                             <span class="summary-title">Version Number</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--2-col">
                             <span class="summary-title">Employee ID</span>
                             <span class="summary-txt" id="employee-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--3-col">
                             <span class="summary-title">Employee Name</span>
                             <span class="summary-txt" id="employee-name"></span>
                         </div>
-						            <div class="mdl-cell mdl-cell--2-col">
+						 <div class="mdl-cell mdl-cell--2-col">
                             <span class="summary-title">Store</span>
                             <span class="summary-txt" id="store-code"></span>
                         </div>
@@ -203,7 +202,6 @@
     <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
 </section>
 <br/><br/> -->
-    </div>
     <div id="modal" class="simplePopup"></div>
     
         <div id="Div1" style="display:none;">
