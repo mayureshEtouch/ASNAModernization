@@ -22,7 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -125,7 +125,6 @@
             </section>
         </main>
         <div id="modal" class="simplePopup"></div>
-    </div>
     <div id="Div1" style="display:none;">
 
         <%--  SY: SEL Payment Method Select record                                                                             --%>
