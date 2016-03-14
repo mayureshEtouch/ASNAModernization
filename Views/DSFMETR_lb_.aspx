@@ -1666,6 +1666,8 @@
 				createNewBody();
 			}
 			copyData();
+			$("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
+			$("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
         });
 		
 		 function showTableBody(){
@@ -1766,7 +1768,6 @@
             $("#datatableValueInsert").show();
 			$('body').on("change blur keydown", $("input, select"),function(){
   			 $("#datatableValueInsert tbody").find("tr").each(function(i){
-					console.log("data inserting...");
                     $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
 					$("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
 					 $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
@@ -1833,6 +1834,8 @@
 			}); 
 			
         }    
+		
+		
         $("#reset").click(function(e) {
 			$("[id^='CenPH__lb_SFLRCD']").find("input,select").each(function(i){
 				// alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
@@ -1868,8 +1871,6 @@
 					 
 			 });   
         });
-		 $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
-         $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
 		
     </script>  
     </asp:Content>

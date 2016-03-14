@@ -1032,6 +1032,10 @@ textarea {
 .filter-search-container .search-container{
 	width: calc(84% - 0px);
 }
+#main-content {
+	margin-left: 0 !important;
+	border: none !important;
+}
 }
 
 /* Media queries ends here */

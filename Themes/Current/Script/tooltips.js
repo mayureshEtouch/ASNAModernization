@@ -69,7 +69,7 @@ $(document).ready(function() {
             "#requestdate": "Select date"
         },
         "DSQJSRR": {
-            "#number1": "Enter payment method to search by"
+            "#number1": "Enter Payment Method"
         },
         "DSIME1R": {
             "#middleInitial": "Enter name",

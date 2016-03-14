@@ -462,6 +462,11 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
+<style>
+#salesperson tbody > tr:hover {
+	cursor: pointer;
+}
+</style>
     <script type="text/javascript">
         $(document).ready(function () {
             $("body").css({ "background-color": "#FFFFFF" });
