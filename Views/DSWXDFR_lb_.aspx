@@ -62,10 +62,10 @@
                     <div class="table-data-maincontainer">
                         <div class="table-container filter-search-container">
                             <div class="content-grid mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+								<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet filter-txt-cnt">
                         			<span class="summary-table-title">Filter by:</span>
                         		</div>
-								<div class="mdl-cell mdl-cell--10-col search-container">
+								<div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
 									<div class="content-grid mdl-grid">
 										<div class="mdl-cell mdl-cell--2-col">
                         					<span class="summary-table-title pull-right">Model Number</span>
@@ -75,7 +75,7 @@
                         				</div>
 									</div>
 								</div>
-								<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+								<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet button-cnt-container">
                         			<div class="button-container">
          								<button class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</button>
         							</div>
