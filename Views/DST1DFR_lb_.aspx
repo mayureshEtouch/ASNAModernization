@@ -29,7 +29,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Display Whse Comments</span>
+                        <span class="heading-h1">Display Warehouse Comments</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -71,7 +71,7 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="whs-comments">
                                 <thead>
                                     <tr>
-                                        <th width="15%">Whse Comments</th>
+                                        <th width="15%">Warehouse Comments</th>
                                     </tr>
                                 </thead>
                                 <tbody>

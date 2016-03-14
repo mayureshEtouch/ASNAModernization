@@ -167,7 +167,7 @@ $(document).ready(function() {
         },
         "DSK6EFR": {
             ".term-input": "Enter warranty"
-        },
+        }/*,
         "DSLOADR": {
             "#enterYourCompany": "Enter company",
             "#enterYourLocation": "Only numeric"
@@ -175,7 +175,7 @@ $(document).ready(function() {
         "SignOn": {
             "#CenPH_RSignon_User": "Enter username",
             "#CenPH_RSignon_Password": "Enter password"
-        }
+        }*/
 
     }
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR", "DSQ0E1R"];

@@ -66,19 +66,19 @@
 				<div class="order-summary-wrapper">
 				<%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
 				<div class="content-grid mdl-grid">
-					<div class="mdl-cell mdl-cell--3-col">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 						<span class="summary-title">Order #/Version #</span>
 						<span class="summary-txt" name ="order"></span>
 					</div>
-					<div class="mdl-cell mdl-cell--3-col">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 						<span class="summary-title">Customer Name</span>
 						<span class="summary-txt" name= "username"></span>
 					</div>
-					 <div class="mdl-cell mdl-cell--3-col">
+					 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 						<span class="summary-title">Billing Address</span>
 						<span id="billAddressDesc" class="summary-txt"></span>
 					</div>
-					<div class="mdl-cell mdl-cell--3-col">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 					
 						<span class="summary-title">Shipping Address</span>
 						<span id="shipAddressDesc" class="summary-txt"></span>
@@ -107,6 +107,7 @@
                                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValueInsert">
                                     <thead>
                                         <tr>
+											<th style="width: 2%">&nbsp;</th>
                                             <th style="width: 8%">Delivery <br />Status</th>
                                             <th style="width: 7%;">From <br />Location</th>
                                             <th style="width: 4%">Quantity</th>
@@ -121,7 +122,7 @@
                                             <th style="width: 9%">Actual <br />Price ($)</th>
                                             <th style="width: 9%">Extended <br />Price ($)</th>
                                             <th style="width: 5%">Installation <br />Price ($)</th>
-                                            <th style="width: 9%">Status</th>
+                                            <th style="width: 7%">Status</th>
                                         </tr>
                                     </thead>
                                     
@@ -130,10 +131,11 @@
                                  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValue">
                                     <thead>
                                         <tr>
+											<th style="width: 2%">&nbsp;</th>
                                             <th style="width: 6%">Delivery <br />Status</th>
                                             <th style="width: 10%">From <br />Location</th>
                                             <th style="width: 4%">Quantity</th>
-                                            <th style="width: 17%">Model <br />Number</th>
+                                            <th style="width: 15%">Model <br />Number</th>
                                             <th style="width: 9%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
                                             <th style="width: 6%">Installation <br />Code</th>
@@ -149,6 +151,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+											<td><span></span></td>
                                             <td><span></span></td>
                                             <td style="text-align: right"><span></span></td>
                                             <td><span></span></td>
@@ -167,6 +170,7 @@
                                         </tr>
                                         
                                         <tr>
+										<td><span></span></td>
                                             <td><span></span></td>
                                             <td style="text-align: right"><span></span></td>
                                             <td><span></span></td>
@@ -185,6 +189,7 @@
                                         </tr>
                                         
                                         <tr>
+										<td><span></span></td>
                                             <td><span></span></td>
                                             <td style="text-align: right"><span></span></td>
                                             <td><span></span></td>
@@ -208,11 +213,11 @@
                             </div>
                             <div class="button-container nextStep"> 
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--11-col">
+                                    <div class="mdl-cell mdl-cell--11-col mdl-cell--7-col-tablet">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous" >Previous</span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--1-col pull-right">
+                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet pull-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
 									</div>                               
                                 
@@ -1684,6 +1689,7 @@
 			for (var i = 0; i < 3; i++) {
 				var row = $('<tr></tr>').appendTo($("#datatableValueInsert tbody"));
 
+				$('<td><span></span></td>').appendTo(row);
 
 				$('<td><select class="del-status"><option>Please Choose</option><option value="TK">TK - Taken from store</option><option value="PU">PU - Customer pickup</option><option value="DL">DL - Warehouse delivery</option></select></td>').appendTo(row);
 
@@ -1717,31 +1723,34 @@
 			tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
 					
 		    $("#datatableValueInsert tbody").find("tr").each(function(i){
-				$(this).find("td:eq(0) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
-				$(this).find("td:eq(1) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
-				$(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
-				$(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
-				$(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
-				$(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
-				$("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
-				$(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
-				$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
-				$(this).find("td:eq(13) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
-				$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-				$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RGLTX."+(i + tindex)+"']").text());
-				$(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
-				$(this).find("td:eq(2) input").ForceNumericOnly();
-				$(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly();
-				if($(this).find("td:eq(0) select").val()=="DL"){
-					$(this).find("td:eq(6) input").prop('disabled', false);
-					$(this).find("td:eq(6) div").removeClass("is-disabled");
-					$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+			
+				$(this).find("td:eq(0) span").text($("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").text()); 
+				
+				$(this).find("td:eq(1) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
+				$(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
+				$(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
+				$(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
+				$(this).find("td:eq(5) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
+				$("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(14) select").val("Cancel"):$(this).find("td:eq(14) select").val("Active"); 
+				$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(13) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(14) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(7) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+				$(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_RGLTX."+(i + tindex)+"']").text());
+				$(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
+				$(this).find("td:eq(3) input").ForceNumericOnly();
+				$(this).find("td:eq(2) input").ForceNumericWithQuestionMarkOnly();
+				if($(this).find("td:eq(1) select").val()=="DL"){
+					$(this).find("td:eq(7) input").prop('disabled', false);
+					$(this).find("td:eq(7) div").removeClass("is-disabled");
+					$(this).find("td:eq(7) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 				}
 				else 
 				{       
-					$(this).find("td:eq(6) input").val("");  
-					$(this).find("td:eq(6) input").prop('disabled', true);
-					$(this).find("td:eq(6) div").addClass("is-disabled");
+					$(this).find("td:eq(7) input").val("");  
+					$(this).find("td:eq(7) input").prop('disabled', true);
+					$(this).find("td:eq(7) div").addClass("is-disabled");
 				}
 			});  
 			
@@ -1773,24 +1782,25 @@
             $("#datatableValueInsert").show();
 			$('body').on("change blur keydown", $("input, select"),function(){
   			 $("#datatableValueInsert tbody").find("tr").each(function(i){
-                    $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(0) select").val()); 
-					$("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(1) input").val());
-					 $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val()); 
-                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").val($(this).find("td:eq(3) input").val());
-					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val($(this).find("td:eq(4) span").val());
-                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val());
-					$("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text($(this).find("td:eq(7) input").val());
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(14) select").val()=="Active"?" ":4); 
-					if($(this).find("td:eq(0) select").val()=="DL"){
-						$(this).find("td:eq(6) input").prop('disabled', false);
-						$(this).find("td:eq(6) div").removeClass("is-disabled");
+					$("[id$='lb_SFLRCD__lb_2AUST."+(i+tindex)+"']").val($(this).find("td:eq(0) span").val());
+                    $("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").val($(this).find("td:eq(1) select").val()); 
+					$("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").val($(this).find("td:eq(2) input").val());
+					 $("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").val($(this).find("td:eq(3) input").val()); 
+                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").val($(this).find("td:eq(4) input").val());
+					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val($(this).find("td:eq(5) span").val());
+                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
+					$("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text($(this).find("td:eq(8) input").val());
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(15) select").val()=="Active"?" ":4); 
+					if($(this).find("td:eq(1) select").val()=="DL"){
+						$(this).find("td:eq(7) input").prop('disabled', false);
+						$(this).find("td:eq(7) div").removeClass("is-disabled");
 				     }else 
 					 {       
-						$(this).find("td:eq(6) input").val("");  
-						$(this).find("td:eq(6) input").prop('disabled', true);
-						$(this).find("td:eq(6) div").addClass("is-disabled");
+						$(this).find("td:eq(7) input").val("");  
+						$(this).find("td:eq(7) input").prop('disabled', true);
+						$(this).find("td:eq(7) div").addClass("is-disabled");
 					 }
-                    $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
+                    $(this).find("td:eq(7) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
 					$("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").ForceNumericWithQuestionMarkOnly();
                 });
 			});
@@ -1821,21 +1831,22 @@
 		
 			$("#datatableValue tbody tr").each(function(i){
 				modelName = $("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text();
-				$(this).find("td:eq(0)").text($("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").text());        
-				$(this).find("td:eq(1)").text($("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").text());
-				$(this).find("td:eq(2)").text($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").text());
-				$(this).find("td:eq(3)").text($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").text());
-				$(this).find("td:eq(4)").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
-				$(this).find("td:eq(5)").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").text());
-				$(this).find("td:eq(6)").text($("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").text());
-				$(this).find("td:eq(7)").text($("[id$='lb_SFLRCD__lb_RGLTX."+(i+tindex)+"']").text());
-				$(this).find("td:eq(8)").text($("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text());
-				$(this).find("td:eq(9)").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tindex)+"']").text()=="y"? "done":"");
-				$(this).find("td:eq(10)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text()=="y"? "done":"");
-				$(this).find("td:eq(11)").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tindex)+"']").text());
-				$(this).find("td:eq(12)").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tindex)+"']").text());
-				$(this).find("td:eq(13)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text());
-				$("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").text()=="4"?  $(this).find("td:eq(14)").html("Cancelled").css("color", "#e32527"):  $(this).find("td:eq(14)").html("Active").css("color", "#00af00");
+				$(this).find("td:eq(0)").text($("[id$='lb_SFLRCD__lb_2AUST."+(i+tindex)+"']").text());
+				$(this).find("td:eq(1)").text($("[id$='lb_SFLRCD__lb_2AIST."+(i+tindex)+"']").text());        
+				$(this).find("td:eq(2)").text($("[id$='lb_SFLRCD__lb_2AACD."+(i+tindex)+"']").text());
+				$(this).find("td:eq(3)").text($("[id$='lb_SFLRCD__lb_2A1NB."+(i+tindex)+"']").text());
+				$(this).find("td:eq(4)").text($("[id$='lb_SFLRCD__lb_2AXTX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(5)").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(6)").text($("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(7)").text($("[id$='lb_SFLRCD__lb_2AECD."+(i+tindex)+"']").text());
+				$(this).find("td:eq(8)").text($("[id$='lb_SFLRCD__lb_RGLTX."+(i+tindex)+"']").text());
+				$(this).find("td:eq(9)").text($("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text());
+				$(this).find("td:eq(10)").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tindex)+"']").text()=="y"? "done":"");
+				$(this).find("td:eq(11)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text()=="y"? "done":"");
+				$(this).find("td:eq(12)").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i+tindex)+"']").text());
+				$(this).find("td:eq(13)").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i+tindex)+"']").text());
+				$(this).find("td:eq(14)").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i+tindex)+"']").text());
+				$("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").text()=="4"?  $(this).find("td:eq(15)").html("Cancelled").css("color", "#e32527"):  $(this).find("td:eq(15)").html("Active").css("color", "#00af00");
 			}); 
 			
 			$("#datatableValue tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
@@ -1846,6 +1857,7 @@
         $("#reset").click(function(e) {
 			$("[id^='CenPH__lb_SFLRCD']").find("input,select").each(function(i){
 				// alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
+					$("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").val(""); 
                     $("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
                     $("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
                     $("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
@@ -1860,21 +1872,22 @@
                 });
 				 
 			 $("#datatableValueInsert tbody").find("tr").each(function(i){
-				$(this).find("td:eq(14) select").val("Active");
-					$(this).find("td:eq(0) select").val("");
-					 $(this).find("td:eq(1) input").val("");
+					$(this).find("td:eq(0) span").text("");
+					$(this).find("td:eq(15) select").val("Active");
+					$(this).find("td:eq(1) select").val("");
 					 $(this).find("td:eq(2) input").val("");
 					 $(this).find("td:eq(3) input").val("");
-					 $(this).find("td:eq(4) span").text("");
-					 $(this).find("td:eq(5) input").val("");
+					 $(this).find("td:eq(4) input").val("");
+					 $(this).find("td:eq(5) span").text("");
 					 $(this).find("td:eq(6) input").val("");
-					 $(this).find("td:eq(7) span").text("");
+					 $(this).find("td:eq(7) input").val("");
 					 $(this).find("td:eq(8) span").text("");
 					 $(this).find("td:eq(9) span").text("");
 					 $(this).find("td:eq(10) span").text("");
 					 $(this).find("td:eq(11) span").text("");
-					  $(this).find("td:eq(12) span").text("");
+					 $(this).find("td:eq(12) span").text("");
 					  $(this).find("td:eq(13) span").text("");
+					  $(this).find("td:eq(14) span").text("");
 		           		
 					 
 			 });   
