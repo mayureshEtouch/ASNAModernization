@@ -49,10 +49,10 @@
         <main class="mdl-layout__content">
         <section class="time-date">
             <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col"> 
+                <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-tablet"> 
                     <!-- Title --> 
                     <span class="heading-h1">Prompt to Find Customer</span> </div>
-                <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-tablet pull-right"> 
                     <!-- Navigation --> 
                     <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCCMPVI</span></div>
             </div>
