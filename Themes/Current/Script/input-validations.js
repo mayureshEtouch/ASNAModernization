@@ -46,7 +46,16 @@ jQuery.fn.ForceNumericWithPasteOption =
 					event.preventDefault(); 
 				}   
 			}
-		});
+		}) && $(this).on('paste',function(event) {
+				var $el = $(this);
+				setTimeout(function(){
+				    if ($el.val() != $el.val().replace(/[^\d\.]/g,"")) 
+				    { 
+				    	$el.val("");
+				    }
+				    return;
+				},100);
+			});
 });
 };	
 

@@ -92,7 +92,7 @@
                     <span class="summary-table-title pull-right">Reference #</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col">
-                    <input type="text"  id="number2" class="mdl-textfield__input">
+                    <input type="text"  id="number2" class="mdl-textfield__input" maxlength="9">
                   </div>
                 </div>
               </div>
@@ -144,7 +144,7 @@
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data='F12' id="exit">Previous</span>
-              <span class="error"></span>
+              <!-- <span class="error"></span> -->
             </div>
             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data='F9' id="addAddress">add address</span>
@@ -237,7 +237,9 @@ $('#number1').val($('#CenPH__lb_SFLCTL__lb_2CGC_lb_').val());
 $('#number2').val($('#CenPH__lb_SFLCTL__lb_2P5N_lb_').val());
 $('#cus_name').text($('#CenPH__lb_SFLCTL__lb_2ALTX').text());
 
-$('.error').text($('#MsgPH_DdsMessagePanel1').text());
+$('#number2').ForceNumericWithPasteOption();
+
+//$('.error').text($('#MsgPH_DdsMessagePanel1').text());
 
 /*setDateTime(dateFieldId,timeFieldId)*/
 setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
