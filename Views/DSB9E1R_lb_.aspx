@@ -377,6 +377,7 @@
                   if(el.indexOf(end_id_part)>=0){
                     var index = old_fields.indexOf(el);
                     var new_field_id = new_fields[index];
+                    new_field_id = (new_field_id == '#type') ? '#firstName': new_field_id;
                     setTimeout(function() {
                       $(new_field_id).focus();
                     }, 500);

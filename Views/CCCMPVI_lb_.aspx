@@ -187,7 +187,6 @@
         //$("#ssn").ForceNumericOnly();
         $("#ssn").ForceNumericWithPasteOption();
         $("#ssn").on("change keyup mouseup paste", function(event) {
-            debugger
             maskUnmaskSSN("ssn", event);
         });
         
