@@ -123,7 +123,7 @@
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container" style="overflow: auto;">
-          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerAddress" class="navigateable">
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerAddress">
             <thead>
               <tr>
                 <th>Type</th>
