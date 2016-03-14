@@ -20,7 +20,7 @@
     header += "        <\/header>";
 
     var loginHeader = "";
-    loginHeader += "<header class=\"mdl-layout__header is-casting-shadow\">";
+    loginHeader += "<header class=\"mdl-layout--fixed-header mdl-layout__header is-casting-shadow\">";
     loginHeader += "            <div class=\"mdl-layout__header-row\">";
     loginHeader += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
     loginHeader += "                <div class=\"mdl-layout-spacer\"><\/div>";

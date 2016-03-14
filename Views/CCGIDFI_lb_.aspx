@@ -124,6 +124,30 @@
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data" id="forth-message" style="display:none;">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="payerr"></span></div>
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="title-msg"></span></div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
@@ -688,6 +712,9 @@
               #__Page_PopUp {
                 left: 50% !important;
                 margin-left: -225px;
+                min-width: 550px !important;
+                min-height: 400px !important;
+                height: auto !important;
             }
 
             #__Page_PopUp tbody tr:first-child {
@@ -721,6 +748,9 @@
 			#notice-second li {
 				list-style: none;
 			}
+      #modal1 {
+        left: 35% !important;
+      }
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -760,19 +790,32 @@
                     $("#notice-first").html(notes);
                     $("#second-message").hide();
                     $("#first-message").show();
+                    $("#forth-message").hide();
                 } else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("No Cash Option Product on Invoice") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#third");
                     $("#nocopp").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
                     $("#third-message").show();
+                    $("#forth-message").hide();
                     $("#first-message").hide();
                     $("#second-message").hide();
                     $("#modal1").css('left','32%');
                     $("#__Page_PopUp").css('height','380px');
+                } else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Over Max") !== -1) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#forth");
+                    $("#payerr").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+                    $("#title-msg").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
+                    $("#forth-message").show();
+                    $("#third-message").hide();
+                    $("#first-message").hide();
+                    $("#second-message").hide();
+                    //$("#modal1").css('left','32%');
+                    //$("#__Page_PopUp").css('height','380px');
                 } else {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#second");
                     $("#notice-second").html(notes);
                     $("#second-message").show();
                     $("#first-message").hide();
+                    $("#forth-message").hide();
                 }
             });
         </script>

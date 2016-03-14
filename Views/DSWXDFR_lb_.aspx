@@ -67,10 +67,10 @@
                         		</div>
 								<div class="mdl-cell mdl-cell--10-col search-container">
 									<div class="content-grid mdl-grid">
-										<div class="mdl-cell mdl-cell--1-col">
-                        					<span class="summary-table-title pull-right">Name</span>
+										<div class="mdl-cell mdl-cell--2-col">
+                        					<span class="summary-table-title pull-right">Model Number</span>
                         				</div>
-                        				<div class="mdl-cell mdl-cell--11-col">
+                        				<div class="mdl-cell mdl-cell--10-col">
                         					<input type="text" id="number" class="mdl-textfield__input">
                         				</div>
 									</div>
