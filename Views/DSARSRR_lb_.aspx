@@ -103,10 +103,8 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <div class="fixed-table-container">
-							   <div class="header-background"> </div>
-							   <div class="fixed-table-container-inner">
-								<table cellspacing="0" cellpadding="0" border="0" id="selectLocation" class="navigateable">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" id="selectLocation" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
 								 <thead>
 								  <tr data-myval="">
 								   <th class="first"><div class="th-inner">Company</div></th>
@@ -119,7 +117,6 @@
 								 </tbody>
 								</table>
 							   </div>
-							  </div>
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">

@@ -158,6 +158,7 @@
                 </div>
             </section>
         </main>
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         </div>
         <!-- Modified HTML code ends here -->
@@ -817,6 +818,15 @@
                     $("#first-message").hide();
                     $("#forth-message").hide();
                 }
+
+                if($(".simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                });
             });
         </script>
     </asp:Content>
