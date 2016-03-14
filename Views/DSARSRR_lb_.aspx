@@ -71,13 +71,13 @@
                                 <div class="mdl-cell mdl-cell--10-col search-container">
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--1-col">
-                                            <span class="summary-table-title pull-right">Co</span>
+                                            <span class="summary-table-title pull-right">Company</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col" id="filter-by-co">
                                             <%--<input type="text" id="number1" class="mdl-textfield__input">--%>
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col">
-                                            <span class="summary-table-title pull-right">Loc</span>
+                                            <span class="summary-table-title pull-right">Location</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col" id="filter-by-loc">
                                             <%--<input type="text" id="number2" class="mdl-textfield__input">--%>

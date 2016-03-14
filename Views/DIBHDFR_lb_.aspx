@@ -126,7 +126,7 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 15%">Telephone #</th>
-                                        <th style="width: 10%">Typ</th>
+                                        <th style="width: 10%">Type</th>
                                         <th style="width: 17%">Customer</th>
                                         <th style="width: 55%">Address</th>
                                         <th style="width: 3%">C</th>
