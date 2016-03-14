@@ -88,7 +88,7 @@
                                     <span class="form-label">Customer:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
-                                    <span class="form-text" id="cust-name1">SST, SANTHOSH G</span>
+                                    <span class="form-text" id="cust-name1"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
@@ -97,11 +97,11 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
                                     <span class="form-text">
-                                        <span id="cust-add1">Texas</span>
+                                        <span id="cust-add1"></span>
                                     <br/>
-                                    <span id="cust-add2">Beaumont TX</span>
+                                    <span id="cust-add2"></span>
                                     <br/>
-                                    <span id="cust-add3">77703</span>
+                                    <span id="cust-add3"></span>
                                     <br/>
                                     </span>
                                 </div>
@@ -121,7 +121,7 @@
                                     <span class="form-label">At:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
-                                    <span class="form-text" id="at">000 000</span>
+                                    <span class="form-text" id="at"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">

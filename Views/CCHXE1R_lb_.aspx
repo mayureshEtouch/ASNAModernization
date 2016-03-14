@@ -1834,7 +1834,7 @@
             });
             //Add validation rules
             //$("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income").ForceNumericOnly();
-            $("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-phone").ForceNumericOnly();
+            $("#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-phone").ForceNumericOnly();
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#no-of-years").numericWithCustomDecimalPrecisions(5,2);
             $("#ref-phone").validatePhone();*///123/456-7890
