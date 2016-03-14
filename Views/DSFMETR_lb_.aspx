@@ -110,10 +110,11 @@
                                             <th style="width: 8%">Delivery <br />Status</th>
                                             <th style="width: 7%;">From <br />Location</th>
                                             <th style="width: 4%">Quantity</th>
-                                            <th style="width: 14%">Model <br />Number</th>
+                                            <th style="width: 10%">Model <br />Number</th>
 											 <th style="width: 12%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
                                             <th style="width: 6%">Installation <br />Code</th>
+											<th style="width: 4%">Instructions</th>
                                             <th style="width: 3%">Level</th>
                                             <th style="width: 3%">Warranty</th>
                                             <th style="width: 3%">Credit</th>
@@ -1633,6 +1634,7 @@
 		$('body').on('change keyup keydown', '.installation-codes', function (e) {
                 if (e.which != 115) {
                     var keydnIndex= $(this).parents("tr").index();
+					
 					var el = $(".installation-codes")[keydnIndex];
 					if($("[id^='CenPH__lb_SFLRCD__lb_2AECD']")!='undefined') {
 						$("[id='CenPH__lb_SFLRCD__lb_2AECD."+$("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
@@ -1692,7 +1694,7 @@
 				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" maxlength="20"></div></td>').appendTo(row);
 
 				$('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input installation-codes" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
-
+				$('<td><span></span></td>').appendTo(row);
 				$('<td><span></span></td>').appendTo(row);
 				$('<td><i class="material-icons"></i></td>').appendTo(row);
 				$('<td><i class="material-icons"></i></td>').appendTo(row);
@@ -1722,11 +1724,12 @@
 				$(this).find("td:eq(4) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
 				$(this).find("td:eq(5) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
 				$("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(13) select").val("Cancel"):$(this).find("td:eq(13) select").val("Active"); 
-				$(this).find("td:eq(10) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
-				$(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
-				$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(11) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
+				$(this).find("td:eq(13) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
 				$(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
-				$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
+				$(this).find("td:eq(7) span").text($("[id$='lb_SFLRCD__lb_RGLTX."+(i + tindex)+"']").text());
+				$(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_RCWST."+(i + tindex)+"']").text());
 				$(this).find("td:eq(2) input").ForceNumericOnly();
 				$(this).find("td:eq(1) input").ForceNumericWithQuestionMarkOnly();
 				if($(this).find("td:eq(0) select").val()=="DL"){
@@ -1741,6 +1744,8 @@
 					$(this).find("td:eq(6) div").addClass("is-disabled");
 				}
 			});  
+			
+			$("#datatableValueInsert tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
 		}        
 		
 		// ASNA Hidden UI Table  index. Used for reference
@@ -1775,7 +1780,7 @@
 					$("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val($(this).find("td:eq(4) span").val());
                     $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(5) input").val());
 					$("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text($(this).find("td:eq(7) input").val());
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(13) select").val()=="Active"?" ":4); 
+                    $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(14) select").val()=="Active"?" ":4); 
 					if($(this).find("td:eq(0) select").val()=="DL"){
 						$(this).find("td:eq(6) input").prop('disabled', false);
 						$(this).find("td:eq(6) div").removeClass("is-disabled");
@@ -1833,6 +1838,8 @@
 				$("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").text()=="4"?  $(this).find("td:eq(14)").html("Cancelled").css("color", "#e32527"):  $(this).find("td:eq(14)").html("Active").css("color", "#00af00");
 			}); 
 			
+			$("#datatableValue tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
+			
         }    
 		
 		
@@ -1853,7 +1860,7 @@
                 });
 				 
 			 $("#datatableValueInsert tbody").find("tr").each(function(i){
-				$(this).find("td:eq(13) select").val("Active");
+				$(this).find("td:eq(14) select").val("Active");
 					$(this).find("td:eq(0) select").val("");
 					 $(this).find("td:eq(1) input").val("");
 					 $(this).find("td:eq(2) input").val("");
@@ -1867,6 +1874,7 @@
 					 $(this).find("td:eq(10) span").text("");
 					 $(this).find("td:eq(11) span").text("");
 					  $(this).find("td:eq(12) span").text("");
+					  $(this).find("td:eq(13) span").text("");
 		           		
 					 
 			 });   

@@ -69,7 +69,7 @@ $(document).ready(function() {
             "#requestdate": "Select date"
         },
         "DSQJSRR": {
-            "#number1": "Enter Payment Method"
+            "#number1": "Enter payment method"
         },
         "DSIME1R": {
             "#middleInitial": "Enter name",
@@ -97,7 +97,7 @@ $(document).ready(function() {
             "#ext": "Only numeric",
         },
         "DSB9E1R": {
-            "#middleInitial": "Enter Middle Initial",
+            "#middleInitial": "Enter middle initial",
             "#lastName": "Enter last name",
             "#businessName": "Enter business name",
             "#zcode": "Enter zip code",
@@ -123,7 +123,7 @@ $(document).ready(function() {
             "#email": "Enter email address"
         },
         "CCJ0PVR": {
-            "#emp-name": "Enter Employee id",
+            "#emp-name": "Enter Employee ID",
             "#promotion": "Enter promotion"
         },
         "DIGFE1R": {
@@ -155,7 +155,8 @@ $(document).ready(function() {
             ".from-loc": "Only numeric",
             ".mdl-textfield__input": "Only numeric",
             ".model-number": "Enter model number",
-            ".serial-number": "Enter serial number"
+            ".serial-number": "Enter serial number",
+			".installation-codes": "Enter installation codes"
         },
         "DSEBETR":{
             ".payment": "Enter payment method",
