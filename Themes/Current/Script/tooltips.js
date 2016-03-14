@@ -100,7 +100,7 @@ $(document).ready(function() {
             "#middleInitial": "Enter Middle Initial",
             "#lastName": "Enter last name",
             "#businessName": "Enter business name",
-            "#zcode": "Only numeric",
+            "#zcode": "Enter zip code",
             "#bphone1": "Only numeric",
             "#bphone2": "Only numeric",
             "#bphone3": "Only numeric",

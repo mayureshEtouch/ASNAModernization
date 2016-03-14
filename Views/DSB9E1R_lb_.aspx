@@ -273,6 +273,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('.error').text($('.DdsSflMsgField_OutputOnly').text());
+		
         /*setDateTime(dateFieldId,timeFieldId)*/
         setDateTime('CenPH_DdsConstant32','CenPH__lb_RCDDTL1__lb__lb_TME');
 
@@ -400,7 +401,8 @@
 
           }
           
-        
+		  $("#hphone1,#bphone1,#bphone2,#bphone3,#hphone2,#hphone3,#cphone,#extn").ForceNumericWithPasteOption();
+      
 
       });
     </script>
