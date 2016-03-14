@@ -25,7 +25,6 @@
         <!-- Modified HTML code starts here -->
     <div class="OverlayPopupBackground"></div>
     <div class="mdl-layout__container">
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
             <main class="mdl-layout__content spacer-container-bottom ">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -341,13 +340,13 @@
                         </div>
                         <div class="button-container" style="padding-bottom:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop" style="padding-bottom:0;margin-left:9px">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-desktop" style="padding-bottom:0;margin-left:9px">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-left" style="padding-bottom:0">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop pull-right" style="padding-bottom:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right" style="padding-bottom:0">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>
@@ -367,7 +366,7 @@
               </div>
           </div>
         </div>
-    </div>
+    
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             

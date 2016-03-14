@@ -23,7 +23,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
           <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -67,7 +67,7 @@
 								<div class="mdl-cell mdl-cell--10-col search-container">
 									<div class="content-grid mdl-grid">
 										<div class="mdl-cell mdl-cell--1-col">
-                        					<span class="summary-table-title pull-right">Referenced</span>
+                        					<span class="summary-table-title pull-right">Reference</span>
                         				</div>
                         				<div class="mdl-cell mdl-cell--11-col" id="model-filter" data-upgraded=",MaterialTextfield">
 										
@@ -120,7 +120,6 @@
                         </section>
             
         </main>
-    </div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             

@@ -46,10 +46,10 @@
         <main class="mdl-layout__content">
         <section class="time-date">
             <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col"> 
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> 
                     <!-- Title --> 
                     <span class="heading-h1">Swipe or Enter Number</span> </div>
-                <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right"> 
                     <!-- Navigation --> 
                     <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIJVPVR</span></div>
             </div>

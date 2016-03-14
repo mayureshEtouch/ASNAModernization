@@ -70,11 +70,12 @@
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Billing Address</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
-                                <span id="CenPH_PANTX"></span><span id="CenPH_PAQTX"></span>
+                               	<span id="CenPH_PANTX"></span><span id="CenPH_PAOTX"></span>
                                 <br />
-								<span id="CenPH_PADST"></span><span id="CenPH_PAOTX"></span>
-                                <span id="CenPH_PADST"></span><span id="CenPH_PAPTX"></span>
-                            </div>
+								<span id="CenPH_PAQTX"></span>
+								<span id="CenPH_PADST"></span>
+                                <span id="CenPH_PAPTX"></span>
+	                        </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Phone Details</span>
@@ -1140,6 +1141,7 @@
         $(document).ready(function () {
             //Hide all read only mode elements
 			var ext= $("#CenPH__lb_SFLCTL__lb_CEONB").html()==undefined?"":"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html();
+			var secAddr = $("#CenPH__lb_SFLCTL__lb_PAOTX").html() ==undefined?"":($("#CenPH__lb_SFLCTL__lb_PAOTX").text().trim()==""?"":",&nbsp;"+$("#CenPH__lb_SFLCTL__lb_PAOTX").html());
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
             //set date and time
             setDateTime("CenPH_DdsConstant16", "CenPH__lb_SFLCTL__lb__lb_TME");
@@ -1148,11 +1150,13 @@
             // Set order number
             $("#CenPH_1BANB").html($("#CenPH__lb_SFLCTL__lb_1BANB").html().replace(/&nbsp;/g, ""));
             $("#verssion-number").html($("#CenPH__lb_SFLCTL__lb_1EXNB").html().replace(/&nbsp;/g, ""));
-            //Set billing address
+			
+		    //Set billing address
+			//console.log("secAddr"+secAddr);						
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
-            $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html());
-            $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + "&nbsp;");
-			$("#CenPH_PAOTX").html($("#CenPH__lb_SFLCTL__lb_PAOTX").html());
+            $("#CenPH_PAQTX").html(",&nbsp;"+$("#CenPH__lb_SFLCTL__lb_PAQTX").html());
+            $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + "&nbsp;,");
+			$("#CenPH_PAOTX").html(secAddr);
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());
@@ -1305,12 +1309,13 @@
 	
 			// To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
-                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text()+ ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
-                sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());
+			
+                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text()+ ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + "," + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
+               sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text()+ ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + "," + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());	
             }
             else {
-                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
-                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", <br />" + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
+                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + "," + $("[id$='lb_SFLCTL__lb_CCXST']").text()  + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
+                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAOTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + "," + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
 
             //Employee field validation
