@@ -120,7 +120,7 @@
                                 <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="5">
+                                    <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="10">
                                                                 &nbsp;</span> 
 									<span id="state" class="form-text" data-upgraded=",MaterialTextfield"></span>,&nbsp;
 									<span id="city" class="form-text" data-upgraded=",MaterialTextfield"></span>							

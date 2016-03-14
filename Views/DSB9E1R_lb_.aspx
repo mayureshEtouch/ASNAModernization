@@ -199,7 +199,7 @@
                                 <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col" style="margin:0"> 
                                   <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input maxlength="5" type="text" id="zcode" name="zcode" class="zip-code" value="">
+                                    <input maxlength="10" type="text" id="zcode" name="zcode" class="zip-code" value="">
                                     <span id="place"></span>, <span id="state"></span>
                                   </span> 
                                 </div>
