@@ -35,7 +35,7 @@
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCJ0PVR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
@@ -61,7 +61,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-label">Application:</span>
+                                    <span class="form-label">Application No.:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
                                     <span class="form-text" id="app-number"></span>
@@ -69,7 +69,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-label">Employee:</span>
+                                    <span class="form-label">Employee ID:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                     <span class="form-text"><input type="text" id="emp-name" class="full-input editable-data" name="employee" maxlength="5"><span class="ro-data" id="ro-emp-name"></span></span>
@@ -88,7 +88,7 @@
                                     <span class="form-label">Customer:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
-                                    <span class="form-text" id="cust-name1">SST, SANTHOSH G</span>
+                                    <span class="form-text" id="cust-name1"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
@@ -97,11 +97,11 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
                                     <span class="form-text">
-                                        <span id="cust-add1">Texas</span>
+                                        <span id="cust-add1"></span>
                                     <br/>
-                                    <span id="cust-add2">Beaumont TX</span>
+                                    <span id="cust-add2"></span>
                                     <br/>
-                                    <span id="cust-add3">77703</span>
+                                    <span id="cust-add3"></span>
                                     <br/>
                                     </span>
                                 </div>
@@ -118,10 +118,10 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-label">At:</span>
+                                    <span class="form-label">Company/Location:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
-                                    <span class="form-text" id="at">000 000</span>
+                                    <span class="form-text" id="at"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
@@ -150,7 +150,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-label">Social Security:</span>
+                                    <span class="form-label">Social Security #:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                     <span class="form-text"><span type="text" id="ssn" class="full-input" name="socialSecurity"></span></span>

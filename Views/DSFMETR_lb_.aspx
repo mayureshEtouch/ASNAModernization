@@ -66,19 +66,19 @@
 				<div class="order-summary-wrapper">
 				<%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
 				<div class="content-grid mdl-grid">
-					<div class="mdl-cell mdl-cell--3-col">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 						<span class="summary-title">Order #/Version #</span>
 						<span class="summary-txt" name ="order"></span>
 					</div>
-					<div class="mdl-cell mdl-cell--3-col">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 						<span class="summary-title">Customer Name</span>
 						<span class="summary-txt" name= "username"></span>
 					</div>
-					 <div class="mdl-cell mdl-cell--3-col">
+					 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 						<span class="summary-title">Billing Address</span>
 						<span id="billAddressDesc" class="summary-txt"></span>
 					</div>
-					<div class="mdl-cell mdl-cell--3-col">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
 					
 						<span class="summary-title">Shipping Address</span>
 						<span id="shipAddressDesc" class="summary-txt"></span>
@@ -213,11 +213,11 @@
                             </div>
                             <div class="button-container nextStep"> 
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--11-col">
+                                    <div class="mdl-cell mdl-cell--11-col mdl-cell--7-col-tablet">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous" >Previous</span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--1-col pull-right">
+                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet pull-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
 									</div>                               
                                 

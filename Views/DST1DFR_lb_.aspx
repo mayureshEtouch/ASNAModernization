@@ -71,7 +71,7 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="whs-comments">
                                 <thead>
                                     <tr>
-                                        <th width="15%">Whse Comments</th>
+                                        <th width="15%">Warehouse Comments</th>
                                     </tr>
                                 </thead>
                                 <tbody>
