@@ -314,7 +314,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Zip Code:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="5">
+									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="10">
 									<span class="ro-data" id="ro-ref-zip-code"></span>
 								</span>
                             </div>
@@ -1834,7 +1834,7 @@
             });
             //Add validation rules
             //$("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income").ForceNumericOnly();
-            $("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code,#ref-phone").ForceNumericOnly();
+            $("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-phone").ForceNumericOnly();
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#no-of-years").numericWithCustomDecimalPrecisions(5,2);
             $("#ref-phone").validatePhone();*///123/456-7890

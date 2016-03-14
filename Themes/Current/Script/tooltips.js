@@ -59,7 +59,7 @@ $(document).ready(function() {
             "#cust-supervisor": "Enter customer supervisor",
             "#ref-name": "Enter reference name",
             "#ref-address": "Enter reference address",
-            "#ref-zip-code": "Only numeric",
+            "#ref-zip-code": "Enter zip code",
             "#ref-phone": "Only numeric",
             //"#cust-ssn" : "Only numeric",
             //"#sp-ssn": "Only numeric",

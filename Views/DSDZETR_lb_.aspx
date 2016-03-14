@@ -57,17 +57,17 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Order #/Version # </span>
                             <div class="summary-txt">
                                 <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Customer Name </span>
                             <span id="CenPH_PALTX" class="summary-txt"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Billing Address</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="CenPH_PANTX"></span><span id="CenPH_PAQTX"></span>
@@ -76,7 +76,7 @@
                                 <span id="CenPH_PADST"></span><span id="CenPH_PAPTX"></span>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Phone Details</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
                                 <span id="Hphone">HOME:</span>
@@ -92,7 +92,7 @@
             <section class="form-data">
                 <div class="form-data-wrapper" style="margin-bottom: 50px;padding-bottom:0;">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col">
                                     <span class="form-label">Employee #:</span>
@@ -129,7 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col">
                                     <span class="form-label">Delivery Code:</span>
