@@ -70,7 +70,8 @@
                               </div>
                               <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                   <span class="form-text">
-                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" />
+                                  <!-- <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" /> -->
+                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking" size="15" maxlength="9" style="width: 50% !important;" />
                                   <span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
                                   </span>
                                   <input type="hidden" id="dummy-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
@@ -159,12 +160,12 @@
     <script type="text/javascript">
       $(document).ready(function() {
        $("#ssn-show").on("mousedown", function() {
-          setTimeout(function(){
+          setTimeout(function() {
               var ssnValue = $("#ssn").val();
               var dummyValue = $("#dummy-ssn").val();
               $("#ssn").val($("#dummy-ssn").val());
               $("#dummy-ssn").val(ssnValue);
-          },10);
+          },0);
         });
         $("#ssn-show").on("mouseup", function() {
             var ssnValue = $("#ssn").val();
@@ -183,33 +184,12 @@
             _00("Enter", event);
         });
 
-        $("#ssn").ForceNumericOnly();
-
-
-        setTimeout(function(){
-        var chars;
-        $('.masking').on("keyup",function(e){
-          var eleId = $(this).attr("id");
-          if($(this).val().indexOf('*') == -1)
-          {
-          chars = $(this).val();
-         }
-        else{
-         if(e.which == 8 || e.which ==46){ // backspace  
-           if (e.which==8 && getCharPos(this)==0){
-           }
-           else{
-             chars = chars.replace(chars.charAt(getCharPos(this)),"");
-            var curpos=getCharPos(this);  
-            var sup = $('#ssn').val(chars);
-            $('#ssn').selectRange(curpos);
-           }
-          }
-        }
-        $("#dummy-"+eleId).val(chars);
+        //$("#ssn").ForceNumericOnly();
+        $("#ssn").ForceNumericWithPasteOption();
+        $("#ssn").on("change keyup mouseup paste", function(event) {
+            debugger
+            maskUnmaskSSN("ssn", event);
         });
-
-        },2000)
         
       });
     </script>
