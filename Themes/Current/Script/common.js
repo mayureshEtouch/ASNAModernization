@@ -50,10 +50,10 @@
         } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
             $("#previous-page,#next-page").remove();
             if($("#CenPH__lb_SFLRCD_0").length === 0) {
-                $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 50px;font-size: 20px;font-weight: bold;'><</a>");
+                $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
             }
             if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
-                $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 10px;font-size: 20px;font-weight: bold;'>></a>");
+                $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 10px;' class='next-icon'></a>");
             }
         }
     });
@@ -90,10 +90,10 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
         } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
             $("#previous-page,#next-page").remove();
             if($("#CenPH__lb_SFLRCD_0").length === 0) {
-                $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 50px;font-size: 20px;font-weight: bold;'><</a>");
+                $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
             }
             if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
-                $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 10px;font-size: 20px;font-weight: bold;'>></a>");
+                $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 10px;' class='next-icon'></a>");
             }
         }
     });
@@ -131,12 +131,11 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
     }
 
-    $('body').on("click", "#next-page", function() {
+    $('body').on("click", "#next-page", function(event) {
         _00("PgDn", event);
         generateTable("top-to-bottom");
     });
-    /*$("#previous-page").click(function() {*/
-    $('body').on("click", "#previous-page", function() {
+    $('body').on("click", "#previous-page", function(event) {
         _00("PgUp", event);
         generateTable("top-to-bottom");
     });

@@ -51,11 +51,11 @@
             </section>--%>
             <section class="time-date">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet">
                         <!-- Title -->
                         <span class="heading-h1">Prompt for Credit Application Entry</span>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCKFPVR</span>
                     </div>
@@ -64,25 +64,25 @@
             <section class="form-data">
                 <div class="form-data-wrapper credit-application-entry">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding: 0">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell-brd" style="padding: 0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0">
                                     <span class="form-label">Company/Location:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0">
                                     <span class="form-text" id="cust_location">000/ 000</span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0">
                                     <span class="form-label">Customer:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0">
                                     <span class="form-text" id="cust_name"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding: 0">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell-brd" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col" style="margin: 0">
                                     <span class="form-label">Employee:</span>

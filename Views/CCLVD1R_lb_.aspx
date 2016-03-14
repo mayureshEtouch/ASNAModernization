@@ -955,7 +955,8 @@
         }
 
         #__Page_Hidden {
-            height: 920px !important;
+            min-height: 920px !important;
+			height: 100% !important;
         }
 
         .modal-dialog-container {

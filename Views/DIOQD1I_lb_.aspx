@@ -76,39 +76,39 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                           <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0;margin:0;">
                               
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-label">Mailing List Indicator</span>
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                    <span class="form-label">Mailing List Indicator:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                                     <span class="form-text" id="mailing-list-indicator"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-label">Cust Addr Type:</span>
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                    <span class="form-label">Customer Address Type:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                                     <span class="form-text" id="cust-addr-type"></span>
                                 </div>
                             </div>
                           </div>
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0;margin:0;">
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-label">Cust Addr Ref#:</span>
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                    <span class="form-label">Customer Address Reference #:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                                     <span class="form-text" id="cust-addr-ref"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-label">Cust Addr Ver#:</span>
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                                    <span class="form-label">Customer Address Version #:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                                     <span class="form-text" id="cust-addr-ver"></span>
                                 </div>
                             </div>

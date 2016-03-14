@@ -23,7 +23,6 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -70,22 +69,22 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--10-col search-container">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--1-col">
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet">
                                             <span class="summary-table-title pull-right">Company</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col" id="filter-by-co">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
                                             <%--<input type="text" id="number1" class="mdl-textfield__input">--%>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col">
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet">
                                             <span class="summary-table-title pull-right">Location</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col" id="filter-by-loc">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-loc">
                                             <%--<input type="text" id="number2" class="mdl-textfield__input">--%>
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col">
                                             <span class="summary-table-title pull-right">Dist</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col" id="filter-by-dist">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-dist">
                                             <%--<input type="text" id="number3" class="mdl-textfield__input">--%>
                                         </div>
                                     </div>
@@ -124,10 +123,10 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" >
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col-desktop pull-right modal-button-container">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-loc">Submit</button>
                                 </div>
                             </div>
@@ -137,7 +136,7 @@
             </section>
 
         </main>
-    </div>
+   
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display:none;">
 

@@ -1384,3 +1384,14 @@ body div, body span, body textarea {
 .ui-tooltip {
   display: inline-block !important;
 }
+
+/* Previous & Next Icon */
+.prev-icon, .next-icon {
+	background: url('../Images/arrow-left.png') no-repeat;
+	display: inline-block;
+	height: 30px;
+	width: 27px;
+}
+.next-icon {
+	background: url('../Images/arrow-right.png') no-repeat;
+}
