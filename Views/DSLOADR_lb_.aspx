@@ -244,7 +244,7 @@
             </div>
         </div>
     </main>
-    <div id="Div1">
+    <div id="Div1" style="display: none;">
 
         <%-- %%TS  SD  20011113  100242  COOL1       REL-V4R4M0  5769-PW1                                                      --%>
         <%--             10:31:40    CASECURE    REL-R08M00  5714-UT1                                                          --%>
