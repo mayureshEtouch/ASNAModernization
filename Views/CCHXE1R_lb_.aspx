@@ -1845,6 +1845,10 @@
             $("#cust-ssn").on("change keyup mouseup paste", function(event) {
                 maskUnmaskSSN("cust-ssn", event);
             });
+            $("#sp-ssn, #cust-ssn").each(function(){
+                $(this).val($(this).val().replace(/\D/g,''));
+                $(this).trigger('change');
+            })
             $("#ssn-show").on("mousedown", function() {
                 setTimeout(function() {
                     var ssnValue = $("#cust-ssn").val();

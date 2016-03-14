@@ -44,7 +44,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col">
                             <!-- Title -->
-                            <span class="heading-h1">Display Phone Number</span>
+                            <span class="heading-h1">Display Phone Numbers</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
