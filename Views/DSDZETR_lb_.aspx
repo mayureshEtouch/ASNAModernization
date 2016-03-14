@@ -1151,11 +1151,11 @@
             $("#verssion-number").html($("#CenPH__lb_SFLCTL__lb_1EXNB").html().replace(/&nbsp;/g, ""));
 			
 		    //Set billing address
-											
+						console.log($("#CenPH__lb_SFLCTL__lb_PAOTX").html());					
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html());
-            $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html()==undefined?"":",&nbsp;"+$("#CenPH__lb_SFLCTL__lb_PAQTX").html());
+            $("#CenPH_PAQTX").html(",&nbsp;"+$("#CenPH__lb_SFLCTL__lb_PAQTX").html());
             $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + "&nbsp;,");
-			$("#CenPH_PAOTX").html($("#CenPH__lb_SFLCTL__lb_PAOTX").html()==undefined?"":",&nbsp;"+$("#CenPH__lb_SFLCTL__lb_PAOTX").html());
+			$("#CenPH_PAOTX").html(",&nbsp;"+$("#CenPH__lb_SFLCTL__lb_PAOTX").html());
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());

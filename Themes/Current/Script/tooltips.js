@@ -137,12 +137,12 @@ $(document).ready(function() {
             "#add-two": "Enter address"
         },
         "DSQ0E1R": {
-            "#input-phone-type": "Only numeric",
+            "#input-phone-type": "Choose a phone type",
             "#telephone": "Only numeric",
             "#ext": "Only numeric"
         },
         "DSCZE1R": {
-            "#CenPH__lb_RCDDTL1__lb_1AMTX": "Only numeric"
+            "#CenPH__lb_RCDDTL1__lb_1AMTX": "Enter Tax ID"
         },
         "DIQXDFR": {
             "#CenPH__lb_SFLCTL__lb_2Q1TX": "Enter reference to search by"
