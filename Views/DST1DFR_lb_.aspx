@@ -29,7 +29,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Display Whse Comments</span>
+                        <span class="heading-h1">Display Warehouse Comments</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
