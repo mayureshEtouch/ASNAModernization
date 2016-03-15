@@ -17,10 +17,10 @@
     header += "                <span class=\"username\">" + userName + "<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons arrow-down\"><\/i><\/span>";
     header += "                <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\" for=\"demo-menu-lower-right\"><li id=\"user-logout\" class=\"mdl-menu__item\"><a href=\"javascript:void(0);\">Logout</a></li></ul>";
     header += "            <\/div>";
-    header += "        <\/header>";
+    header += "        <\/header></\div>";
 
     var loginHeader = "";
-    loginHeader += "<header class=\"mdl-layout--fixed-header mdl-layout__header is-casting-shadow\">";
+    loginHeader += "<div class=\"mdl-layout--fixed-header mdl-layout--large-screen-only\"><header class=\"mdl-layout__header is-casting-shadow \">";
     loginHeader += "            <div class=\"mdl-layout__header-row\">";
     loginHeader += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
     loginHeader += "                <div class=\"mdl-layout-spacer\"><\/div>";

@@ -590,20 +590,25 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        #CenPH__lb_SFLCTL__lb_2ALTX {
-            position: relative !important;
-            left: 0px !important;
-            top: 0px !important;
-            width: calc(100%) !important;
-        }
-		#customerName tbody > tr:hover {
-			cursor: pointer;
-		}
-        tr.selected {
-            background-color: #d8d8d8 !important;
-        }
+#CenPH__lb_SFLCTL__lb_2ALTX {
+	position: relative !important;
+	left: 0px !important;
+	top: 0px !important;
+	width: calc(100%) !important;
+}
+#customerName tbody > tr:hover {
+	cursor: pointer;
+}
+tr.selected {
+	background-color: #d8d8d8 !important;
+}
 
-    </style>
+@media (min-width: 768px) and (max-width: 1023px) {
+.summary-label {
+	font-size: 11px;
+}
+}
+</style>
     <script type="text/javascript">
         $(document).ready(function () {
 		

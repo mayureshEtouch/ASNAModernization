@@ -76,8 +76,8 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Name:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Last Name:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <span id="lastName-span" class="hide"></span>
                                     <input size="22" maxlength="15" type="text" id="lastName" name="lastName" class="hide" value="">
                                     <span class="input-side-gutter-space form-label" style="float:right">Suffix:

@@ -145,6 +145,7 @@ a:visited, .mdl-menu__item a {
 
 .time-date .pull-right {
 	flex: 1;
+	-webkit-flex:1;
 }
 .order-summary-wrapper .mdl-cell {
 	border-right: #c6c6c6 1px solid;
@@ -174,7 +175,8 @@ a:visited, .mdl-menu__item a {
 	margin: 0;
 	padding: 0;
 	line-height: normal;
-	display: flex;
+	display: -webkit-flex; /* NEW */
+    display: flex;
 }
 .progress-bar .progress-bar-main li {
 	float: left;
@@ -203,6 +205,7 @@ a:visited, .mdl-menu__item a {
 }
 .progress-bar .step-width {
 	flex: 1;
+	 -webkit-flex:1;
 }
 /* progress bar css ends here */
 
@@ -922,8 +925,7 @@ textarea {
 .fixed-table-container-inner {
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 100%;
-	max-height: 282px;
+	height: auto;
 }
 .header-background {
 	height: 35px; /* height of header */
@@ -1018,6 +1020,7 @@ textarea {
 	width: 13%;
 }
 .filter-search-container{overflow: hidden;}
+
 }
  @media (min-width: 1024px) and (max-width: 1100px) {
 #wrapper,  #span-content,  #content,  #main-content {
