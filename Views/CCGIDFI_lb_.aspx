@@ -784,7 +784,8 @@
                     }
                 });
 				
-				$("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
+                $("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
+                $("#CenPH__lb_SFLCTL__lb_PPTST option[value=' ']").text("Please Choose");
 				
                 if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Continue to GE Credit?") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#first");

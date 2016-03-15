@@ -1894,8 +1894,7 @@
 					  $(this).find("td:eq(14) span").text("");
 		           		
 					 
-			 });   
+			 });  
         });
-		
     </script>  
     </asp:Content>
