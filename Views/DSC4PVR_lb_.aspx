@@ -441,22 +441,29 @@
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB").ForceNumericOnly();
         });
     </script>
-    <style>
-        #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
-            position: relative !important;
-            left: 0px !important;
-            top: 0px !important;
-        }
-        #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB {
-            width: calc(16.6666666667% - 16px) !important;
-        }
+<style>
+#CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
+	position: relative !important;
+	left: 0px !important;
+	top: 0px !important;
+}
+#CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB {
+	width: calc(16.6666666667% - 16px) !important;
+}
 
-        #CenPH__lb_RCDDTL1__lb_PAXNB {
-            width: calc(66.6666666667% - 16px) !important;
-        }
+#CenPH__lb_RCDDTL1__lb_PAXNB {
+	width: calc(66.6666666667% - 16px) !important;
+}
 
-        #CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
-            width:100% !important;
-        }
-    </style>
+#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
+	width:100% !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	
+.summary-label {
+	font-size: 11px;
+}
+}
+</style>
 </asp:Content>

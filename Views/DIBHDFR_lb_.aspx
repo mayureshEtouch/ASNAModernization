@@ -521,11 +521,16 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-	<style>
-		#customerName tbody > tr:hover {
-			cursor: pointer;
-		}
-	</style>
+<style>
+	#customerName tbody > tr:hover {
+		cursor: pointer;
+	}
+@media (min-width: 768px) and (max-width: 1023px) {
+.summary-label {
+	font-size: 11px;
+}
+}
+</style>
     <script type="text/javascript">
         $(document).ready(function () {
             window.DSBPDFR = window.DSBPDFR || {}
