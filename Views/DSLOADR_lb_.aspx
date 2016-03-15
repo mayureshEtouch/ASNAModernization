@@ -586,6 +586,12 @@
             } else {
                 $(".homepage-content").hide();
                 $("#Div1").show();
+                var nextButton="";
+                nextButton += "<div class=\"button-container\" style=\"margin-right: 0px; margin-top: -55px;\">";
+                nextButton += "                    <span class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\" type=\"button\" onclick=\"_00('Enter', event);\" id=\"login\" data-upgraded=\",MaterialButton,MaterialRipple\">Next<span class=\"mdl-button__ripple-container\"><span class=\"mdl-ripple is-animating\" style=\"width: 159.819px; height: 159.819px; transform: translate(-50%, -50%) translate(32px, 7px);\"><\/span><\/span><\/span>";
+                nextButton += "                <\/div>";
+                $("#CenPH_DSLOADD2_OUTQ1").attr("Readonly", true);
+                $("#content").after(nextButton);
             }
             $("#enter-sales-order").on("click", function () {
                 $(".homepage-content").hide();
