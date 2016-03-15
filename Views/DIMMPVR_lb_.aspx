@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-						<span class="error" style="margin-left:210px"></span>
+						<!-- <span class="error" style="margin-left:210px"></span> -->
                     </div>
 
                     <div class="button-container" style="padding-bottom:0">
@@ -91,8 +91,14 @@
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
               </div>
           </div>
+          <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     </div>
-    <!-- Modified HTML code ends here -->
+
+      
+    </div>
+<div id="modal1" class="simplePopup"></div>    
+<!-- Modified HTML code ends here -->
+
         <div id="Div1" style="display:none;">
             
       <%--  SY: PMT Employee ID (NV)  Prompt & validate record                                                               --%>
@@ -405,6 +411,10 @@
                 top: 30% !important;
                 left: 27% !important;
             }
+            .simplePopup{
+              left: 30% !important;
+              top: 20% !important;
+            }
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -455,6 +465,14 @@
 				});
 				//console.log("@ "+$("#CenPH__lb_RCDDTL1__lb_1AJCD"));
 				$("#CenPH__lb_RCDDTL1__lb_1AJCD").ForceNumericWithQuestionMarkOnly();
-            });
+        if($(".simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+         } else {
+             $(".simplePopupBackground1").hide();
+         }
+         $("body").on("click", ".simplePopupClose", function() {
+             $(".simplePopupBackground1").hide();
+         });
+      });
         </script>
     </asp:Content>

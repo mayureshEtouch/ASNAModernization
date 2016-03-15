@@ -55,6 +55,11 @@
             if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
                 $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
             }
+            if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                $('#eof-indicator').remove();
+                var tr = "<a id='eof-indicator' style='float: right;margin-right: 10px;'>" + $("#CenPH__lb_SFLRCD_End").html() + "</a>"
+                $("#" + tableId).after(tr);
+            }
         }
     });
 }
@@ -94,6 +99,11 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
             }
             if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
                 $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+            }
+            if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                $('#eof-indicator').remove();
+                var tr = "<a id='eof-indicator' style='float: right;margin-right: 10px;'>" + $("#CenPH__lb_SFLRCD_End").html() + "</a>"
+                $("#" + tableId).after(tr);
             }
         }
     });

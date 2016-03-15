@@ -67,6 +67,8 @@
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <span id="firstName-span" class="hide"></span>
                                     <input maxlength="10" type="text" id="firstName" name="firstName" class="zip-code full-input hide" value="">
+                                    <span class="input-side-gutter-space form-label" id="credit-customer" style="float:right; color:blue;">
+                                    </span>
                                     </span>
                                 </div>
                             </div>
@@ -139,15 +141,6 @@
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Notes ?:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <span id="notes"></span>
-                                        <!-- <input type="text" id="notes" name="notes" style="width: 50px;" value="N"> -->
-                                  </span>
-                                </div>
-                            </div>
-                            <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -190,14 +183,6 @@
                                         <select name="type" id="type"></select>
                                         <!-- <input type="text" id="type" name="type" style="width: 50px;" value=""> -->
                                         <span class="input-side-gutter-space" id="typeText"  style="display: none;"></span> </span>
-                                </div>
-                            </div>
-                            <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Credit Customer:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0"> 
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                        <span style="width: 200px; display: inline-block;"></span>
-                                    </span> 
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-add-height">
@@ -251,6 +236,15 @@
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <span id="taxExempt"></span>
                                         <!-- <input type="text" id="taxExempt" name="taxExempt" style="width: 50px;" value="N"> -->
+                                  </span>
+                                </div>
+                            </div>
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Notes ?:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <span id="notes"></span>
+                                        <!-- <input type="text" id="notes" name="notes" style="width: 50px;" value="N"> -->
                                   </span>
                                 </div>
                             </div>
@@ -1287,7 +1281,11 @@
             });
           }
         }
-
+        /* If credit customer, show credit-customer div*/
+        if($("span:contains('Credit Customer')").length>0){
+            $("#credit-customer").text("(Credit Customer)");
+        }
+        /* End of If credit customer, show credit-customer div*/
       if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
         /*Pop up confirm box*/
         $(".OverlayPopupBackground").show();
@@ -1303,6 +1301,7 @@
         });
 
       }
+      $("#cphone").val($("#cphone").val().replace(/\D/g, ""));
   });
 </script>
     </asp:Content>

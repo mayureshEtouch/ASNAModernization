@@ -82,7 +82,7 @@ $(document).ready(function() {
             "#firstName": "Enter first name",
             "#address1": "Enter address",
             "#address2": "Enter address",
-            "#zcode": "Only numeric",
+            "#zcode": "Enter Zip Code",
             "#hphone1": "Only numeric",
             "#hphone2": "Only numeric",
             "#hphone3": "Only numeric",
@@ -90,11 +90,8 @@ $(document).ready(function() {
             "#emailAddress": "Enter email address"
         },
         "DIMLDFR": {
-            "#number2": "Enter reference to search by",
+            "#number2": "Only numeric",
             "#number1": "Enter type to search by"
-        },
-        "DSQ0E1R": {
-            "#ext": "Only numeric",
         },
         "DSB9E1R": {
             "#middleInitial": "Enter middle initial",
@@ -156,7 +153,7 @@ $(document).ready(function() {
             ".mdl-textfield__input": "Only numeric",
             ".model-number": "Enter model number",
             ".serial-number": "Enter serial number",
-			".installation-codes": "Enter installation codes"
+			".installation-codes": "Enter installation code"
         },
         "DSEBETR":{
             ".payment": "Enter payment method",

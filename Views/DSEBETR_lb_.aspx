@@ -1205,6 +1205,7 @@
     </style>
     <script>
         $(document).ready(function () {
+            //function renderPage() {
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant23]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
@@ -1319,7 +1320,17 @@
 			 if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
 		   }); 
 		   },100)
-			
+			//}
+            /*renderPage();
+                $('body').on('keyup', function(event) {
+        var keycode = event.keycode || event.which;
+        if (keycode === 33) {
+            renderPage();
+        } else if (keycode === 34) {
+            renderPage();
+        }
+        return;
+    });*/
         });
     </script>
 </asp:Content>
