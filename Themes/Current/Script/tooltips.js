@@ -90,7 +90,7 @@ $(document).ready(function() {
             "#emailAddress": "Enter email address"
         },
         "DIMLDFR": {
-            "#number2": "Enter reference to search by",
+            "#number2": "Only numeric",
             "#number1": "Enter type to search by"
         },
         "DSQ0E1R": {
