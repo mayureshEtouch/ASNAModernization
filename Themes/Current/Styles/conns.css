@@ -245,8 +245,11 @@ a:visited, .mdl-menu__item a {
 /*Signon screen CSS ends */
 
 /* Button CSS starts */
-.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
+.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled{
 	color: #fff;
+	opacity: 0.2;
+}
+.mdl-layout__content input[disabled][disabled], .mdl-layout__content textarea[disabled] {
 	opacity: 0.2;
 }
 /* Button CSS ends */
@@ -1206,6 +1209,7 @@ textarea {
 	overflow-y: auto;
 }
 .button-container {
+	clear: both;
 	margin: 0 5px;
 	padding: 0 0 10px;
 }
@@ -1390,7 +1394,7 @@ body div, body span, body textarea {
 	background: url('../Images/arrow-left.png') no-repeat;
 	display: inline-block;
 	height: 30px;
-	width: 27px;
+	width: 30px;
 }
 .next-icon {
 	background: url('../Images/arrow-right.png') no-repeat;

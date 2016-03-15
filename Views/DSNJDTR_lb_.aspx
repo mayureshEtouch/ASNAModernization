@@ -61,23 +61,23 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
                             <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Version Number</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Employee ID</span>
                             <span class="summary-txt" id="employee-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Employee Name</span>
                             <span class="summary-txt" id="employee-name"></span>
                         </div>
-						 <div class="mdl-cell mdl-cell--2-col">
+						 <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
                             <span class="summary-title">Store</span>
                             <span class="summary-txt" id="store-code"></span>
                         </div>
@@ -89,36 +89,36 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                           <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd mdl-cell--4-col-tablet" style="padding:0;margin:0;">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Order Date:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="order-date"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Home Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="home-phone"></span>
                                 </div>
 							</div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Work Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="work-phone"></span>
                                 </div>
 							</div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Billing Address:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text">
                                       <span id="billing-addr-1"></span><br/>
                                       <span id="billing-addr-2"></span><br/>
@@ -130,36 +130,36 @@
                                 </div>
                             </div>
                           </div>
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd mdl-cell--4-col-tablet" style="padding:0">
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Date Stamp:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="date-stamp"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Delivery Code:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="delivery-code"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Expected Del Date:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="expected-del-date"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Shipping Address:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text">
                                       <span id="shipping-addr-1"></span><br/>
                                       <span id="shipping-addr-2"></span><br/>
@@ -182,11 +182,11 @@
                     
           <div class="button-container" style="padding-bottom:0;">
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:5px;">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-cell--5-col-tablet" style="padding-bottom:0;margin-left:5px;">
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">previous</span>
                 <!--span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="returnToMenu" event-data="F3">Return to menu</span-->
               </div>
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0;px;">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-cell--3-col-tablet pull-right" style="padding-bottom:0;px;">
                 <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printInvoice" event-data="F6">Reprint invoice</span>
                 <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="whseComments" event-data="F5">Warehouse comments</span>
               </div>
