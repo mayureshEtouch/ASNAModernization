@@ -156,7 +156,7 @@ $(document).ready(function() {
             ".mdl-textfield__input": "Only numeric",
             ".model-number": "Enter model number",
             ".serial-number": "Enter serial number",
-			".installation-codes": "Enter installation codes"
+			".installation-codes": "Enter installation code"
         },
         "DSEBETR":{
             ".payment": "Enter payment method",
