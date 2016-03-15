@@ -112,9 +112,9 @@
                         <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
                             <div class="mdl-cell mdl-cell--6-col pull-right">
-                                <div class="icon-container icon-disable">
+                                <div class="icon-container">
                                   <span class="icon-txt display-customer">Display</span>
-                                  <i class="material-icons md-15 md-light display-customer display-icon-disabled"></i></div>
+                                  <i class="material-icons md-15 md-light display-customer display-icon"></i></div>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="exit">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="exit">Next</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="next">Next</span>
                             </div>
                         </div>
                     </div>
@@ -282,27 +282,9 @@
     var dataMergeIndices = [[2], [3], [8], [4], [1], [5], [0], [6, "<br>", 7]];
     generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
                
-                $('body').on('click', '#customerAddress tbody tr', function () {
-                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
-                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
-                    $(this).css({ "background-color": "#f1f1f1" });
-                    $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
-                    $(this).addClass("selected");
-                    $("div.icon-container").removeClass("icon-disable");
-                    $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
-                });
-                $('body').on('dblclick', '#customerAddress tbody tr', function () {
-                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
-                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
-                    $(this).css({ "background-color": "#f1f1f1" });
-                    $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
-                    $(this).addClass("selected");
-                    $("div.icon-container").removeClass("icon-disable");
-                    $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
-                    selectCusotmer(row, "1", event);
-                });
+                
                 $(".display-customer").click(function (event) {
-                    if ($(".icon-container").hasClass("icon-disable")) {
+                    if ($(".icon-container").hasClass("selected")) {
                         alert("Please select a address");
                     } else {
                         var row = $("#customerAddress tbody tr.selected");
