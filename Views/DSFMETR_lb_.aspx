@@ -1643,7 +1643,10 @@
 					
 					var el = $(".installation-codes")[keydnIndex];
 					if($("[id^='CenPH__lb_SFLRCD__lb_2AECD']")!='undefined') {
-						$("[id='CenPH__lb_SFLRCD__lb_2AECD."+$("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+					 
+					   //if($("[id^='CenPH__lb_SFLRCD__lb_2AECD']").length > 0){
+							$("[id='CenPH__lb_SFLRCD__lb_2AECD\\."+$("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1]+"']").val($(el).val());
+					   //}
 					}
 					
                 } else {
@@ -1692,7 +1695,7 @@
 
 				$('<td><span></span></td>').appendTo(row);
 
-				$('<td><select class="del-status"><option selected="selected">Please Choose</option><option value="TK">TK - Taken from store</option><option value="PU">PU - Customer pickup</option><option value="DL">DL - Warehouse delivery</option></select></td>').appendTo(row);
+				$('<td><select class="del-status"><option selected="selected" value=" ">Please Choose</option><option value="TK">TK - Taken from store</option><option value="PU">PU - Customer pickup</option><option value="DL">DL - Warehouse delivery</option></select></td>').appendTo(row);
 
 				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input from-loc" type="text" maxlength="3" style="text-align: right" > </div></td>').appendTo(row);
 				$('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;"  maxlength="3"></div></td>').appendTo(row);
