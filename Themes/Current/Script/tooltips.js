@@ -82,7 +82,7 @@ $(document).ready(function() {
             "#firstName": "Enter first name",
             "#address1": "Enter address",
             "#address2": "Enter address",
-            "#zcode": "Only numeric",
+            "#zcode": "Enter Zip Code",
             "#hphone1": "Only numeric",
             "#hphone2": "Only numeric",
             "#hphone3": "Only numeric",
@@ -92,9 +92,6 @@ $(document).ready(function() {
         "DIMLDFR": {
             "#number2": "Only numeric",
             "#number1": "Enter type to search by"
-        },
-        "DSQ0E1R": {
-            "#ext": "Only numeric",
         },
         "DSB9E1R": {
             "#middleInitial": "Enter middle initial",

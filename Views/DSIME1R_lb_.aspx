@@ -1301,6 +1301,7 @@
         });
 
       }
+      $("#cphone").val($("#cphone").val().replace(/\D/g, ""));
   });
 </script>
     </asp:Content>
