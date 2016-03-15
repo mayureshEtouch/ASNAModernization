@@ -698,7 +698,7 @@
 				width: calc(46.6% - 0px);
 			}
 		}
-        table tbody tr td:nth-child(3) { text-align: right; }
+        table tbody tr td:nth-child(3),  table tbody tr td:nth-child(4),  table tbody tr td:nth-child(5) { text-align: right; }
         #customerName tbody > tr:hover {
 			cursor: pointer;
 		}
