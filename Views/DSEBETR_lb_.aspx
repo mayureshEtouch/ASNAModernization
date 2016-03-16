@@ -163,14 +163,14 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;" id="enterPayment">
-                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="payment-method">
                                 <thead>
                                     <tr>
-                                        <th width="25%">Payment Method</th>
-                                        <th width="25%">Amount ($)</th>
-                                        <th width="21%">Reference</th>
-                                        <th width="22%">Approval Code</th>
-										<th style="width: 7%">Status</th>
+                                        <th width="20%">Payment Method</th>
+                                        <th width="20%">Amount ($)</th>
+                                        <th width="20%">Reference</th>
+                                        <th width="20%">Approval Code</th>
+										<th width= "20%">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1170,21 +1170,27 @@
         #CenPH__lb_SFLRCD > div input:not([id*=RNICD]), #CenPH__lb_SFLRCD > div span:not([id*=RNICD]) {
             xmargin-left: 12% !important;
         }
-        #CenPH__lb_SFLRCD > div input, #CenPH__lb_SFLRCD > div span {
+        #CenPH__lb_SFLRCD > div input,  #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
             width: 12% !important;
             display: table-cell;
 			float: left;
             padding: 1px 3px 2px !important;
             margin-top: 4px;
 			margin-left: 10px;
+			margin-right: 0;
         }
+		#CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
+			padding: 1px 4px 2px !important;
+		}
 		#CenPH__lb_SFLRCD span.blank-space {
 			border-right: 1px solid #c5c5c5;
 			display: inline-block;
+			float: left;
 			height: 31px;
 			margin-top: 0;
 			padding: 0 !important;
-			width: 10.45% !important;
+			margin-left: 0;
+			margin-right: 0 !important;
 		}
         .DdsSubfileCurrentRecord {
             background-color: #d8d8d8 !important;
@@ -1235,9 +1241,7 @@
             $("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text().trim());
 
             //Generate table
-			$("#CenPH__lb_SFLRCD select").empty();
-			$("#CenPH__lb_SFLRCD select").css("float","right");
-            $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+			
             $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
             $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
                 $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
@@ -1306,9 +1310,30 @@
             $('[id^="CenPH__lb_SFLRCD__lb_RNICD"]').addClass("payment");
             $('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').addClass("reference");
             $('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
-			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
-			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
-			$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+		
+			
+			function renderPage() {
+				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
+				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
+				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
+				
+				$("#CenPH__lb_SFLRCD select").empty();
+			$("#CenPH__lb_SFLRCD select").css({
+     'float'  : 'right',
+	 'margin-right' : '12%',
+	 'width' : '80px',
+	 'margin-top' : '3px'
+});
+            $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+			
+				var mainWidth = $("#payment-method th:first-child").width();
+				var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
+
+				var blankWidth = mainWidth  - inputWidth + 2;
+				$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right",blankWidth);
+				$("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("margin-right",blankWidth);
+			}
 			
 			//DdsSubfileRecord tabindex
 			  setTimeout(function(){   
@@ -1324,8 +1349,8 @@
 		   }); 
 		   },100)
 			//}
-            /*renderPage();
-                $('body').on('keyup', function(event) {
+           renderPage();
+                $('body').on('keyup keydown', function(event) {
         var keycode = event.keycode || event.which;
         if (keycode === 33) {
             renderPage();
@@ -1333,7 +1358,7 @@
             renderPage();
         }
         return;
-    });*/
+    });
         });
     </script>
 </asp:Content>
