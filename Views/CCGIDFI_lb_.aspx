@@ -738,7 +738,7 @@
                 left: 50% !important;
                 margin-left: -225px;
                 min-width: 550px !important;
-                min-height: 400px !important;
+                min-height: 450px !important;
                 height: auto !important;
             }
 
@@ -774,7 +774,8 @@
 				list-style: none;
 			}
       #modal1 {
-        left: 35% !important;
+        left: 30% !important;
+        top: 40% !important;
       }
         </style>
         <script type="text/javascript">
