@@ -250,7 +250,7 @@
             <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--8-col">
                     <!-- Title -->
-                    <span class="heading-h1"></span>
+                    <span class="heading-h1">Output Queue </span>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
@@ -260,32 +260,42 @@
                 </div>
             </div>
         </section>
-        <div class="box-container" style="margin-top: 20px; height: auto; width: 435px;">
-            <div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 5px 5px; background: none;">
-                <div class="content-grid mdl-grid">
-                    <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
-                        <div class="content-grid mdl-grid">
-                            <div style="margin: 0" class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet"><span class="form-label">Location Code:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet">
-                                <span class="form-text location-code"></span>
-                            </div>
-                        </div>
-                        <div class="content-grid mdl-grid">
-                            <div style="margin: 0" class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet"><span class="form-label">Output Queue:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet">
-                                <span class="form-text">
-                                    <input id="Output-queue" type="text" name="Output-queue" value="" maxlength="3"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="button-container" style="padding: 0 0 5px 0;">
-                    <div class="mdl-cell mdl-cell--12-col pull-right">
-						<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);">Next</span>
+        <section class="table-data-content-container" style="margin-top: 20px; height: auto;">
+			<div class="table-data-wrapper">
+				<div class="table-data-maincontainer">
+					<div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 5px 5px; background: none;">
+						<div class="content-grid mdl-grid">
+							<div style="padding: 0" class="mdl-cell mdl-cell--12-col">
+								<div class="content-grid mdl-grid">
+									<div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet"><span class="form-label">Location Code:</span> </div>
+									<div style="margin: 0" class="mdl-cell mdl-cell--3-col mdl-cell--5-col-tablet">
+										<span class="form-text location-code"></span>
+									</div>
+								</div>
+								<div class="content-grid mdl-grid">
+									<div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet"><span class="form-label">Output Queue:</span> </div>
+									<div style="margin: 0" class="mdl-cell mdl-cell--3-col mdl-cell--5-col-tablet">
+										<span class="form-text">
+											<input id="Output-queue" type="text" name="Output-queue" value="" disabled="disabled"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="button-container" style="padding: 0 0 5px 0;">
+							 <div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('F2',event);">Location Screen</span>
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('F6',event);">Messages</span>
+								</div>
+								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);">Next</span>
+								</div>
+							</div>
+						</div>
 					</div>
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+        </section>
     </main>
 	
     <div id="Div1" style="display: none;">
@@ -636,7 +646,7 @@
 				$('#output-queue').show();
 				$("[name='date']").text($("[id$=CenPH_DdsConstant9]").text());
 				$("[name='time']").text($("[id$=CenPH_DdsConstant24]").text());
-				$('.location-code').text($("[id$=DSLOADD2_LOCN]").text() + $("[id$=DdsConstant21]").text() + $("[id$=DSLOADD2_LOCD]").text())
+				$('.location-code').text($("[id$=DSLOADD2_LOCN]").text() + " " + $("[id$=DdsConstant21]").text()+ " " + $("[id$=DSLOADD2_LOCD]").text());
                
                 $("#CenPH_DSLOADD2_OUTQ1").attr("Readonly", true);
             }
