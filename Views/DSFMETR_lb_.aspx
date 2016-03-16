@@ -215,7 +215,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--11-col mdl-cell--7-col-tablet">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous" >Previous</span>
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>
+                                        <!--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>-->
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet pull-right">
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
@@ -1858,7 +1858,7 @@
         }    
 		
 		
-        $("#reset").click(function(e) {
+       /* $("#reset").click(function(e) {
 			$("[id^='CenPH__lb_SFLRCD']").find("input,select").each(function(i){
 				// alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
 					$("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").val(""); 
@@ -1895,6 +1895,6 @@
 		           		
 					 
 			 });  
-        });
+        });*/
     </script>  
     </asp:Content>
