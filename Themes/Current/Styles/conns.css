@@ -1020,12 +1020,31 @@ textarea {
 	width: 13%;
 }
 .filter-search-container{overflow: hidden;}
+input[maxlength='1'] {
+	width: 15px;
+}
+input[maxlength='3'] {
+	width: 30px;
+}
+input[maxlength='4'] {
+	width: 40px;
+}
 
 }
  @media (min-width: 1024px) and (max-width: 1100px) {
 #wrapper,  #span-content,  #content,  #main-content {
 	width: 100% !important;
 }
+input[maxlength='1'] {
+	width: 15px;
+}
+input[maxlength='3'] {
+	width: 30px;
+}
+input[maxlength='4'] {
+	width: 40px;
+}
+
 }
 
 @media (min-width: 768px) {
