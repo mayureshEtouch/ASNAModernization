@@ -99,8 +99,8 @@
                             <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Business Phone:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="bphone1" name="bphone1" value="" size="1" maxlength="3">
-                                    <input type="text" id="bphone2" name="bphone2" value="" size="1" maxlength="3">
+                                    <input type="text" id="bphone1" name="bphone1" value="" size="2" maxlength="3">
+                                    <input type="text" id="bphone2" name="bphone2" value="" size="2" maxlength="3">
                                     <input type="text" id="bphone3" name="bphone3" value="" size="2" maxlength="4">
                                     <span class="input-side-gutter-space form-label">Ext:
                                     <input type="text" id="extn" name="extn" size="2" maxlength="4">
@@ -259,17 +259,22 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>
-        <style type="text/css" media="screen">
-            #wrapper {
-                width: 100% !important;
-            }
-            #__Page_PopUp {
-                min-width: 550px !important;
-            }
-            .hide{
-                display: none;
-            }
-        </style>    
+<style type="text/css" media="screen">
+	#wrapper {
+		width: 100% !important;
+	}
+	#__Page_PopUp {
+		min-width: 550px !important;
+	}
+	.hide{
+		display: none;
+	}
+	@media (min-width: 768px) and (max-width: 1023px) { 
+		[name='lastName'] {
+			width: 95px;
+		}
+	}
+</style>    
     <script type="text/javascript">
       $(document).ready(function() {
         $('.error').text($('.DdsSflMsgField_OutputOnly').text());
