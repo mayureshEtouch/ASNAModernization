@@ -401,7 +401,7 @@
             });
 
           }
-          
+          $("#cphone").replace(/\D/g, "");
 		  $("#hphone1,#bphone1,#bphone2,#bphone3,#hphone2,#hphone3,#cphone,#extn").ForceNumericWithPasteOption();
       
 
