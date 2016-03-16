@@ -150,7 +150,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col pull-right">
+                        <div class="mdl-cell mdl-cell--6-col pull-right" style="display:none">
                             <div class="icon-container icon-disable" id="delete-record">
 								<span class="icon-txt display-customer delete">Delete</span>
 								<i class="material-icons md-15 md-light display-customer delete-icon-disabled delete" style="cursor: pointer;"></i>
@@ -162,14 +162,15 @@
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container" style="overflow: auto;" id="append-here">
+                        <div class="table-container" style="overflow: auto;" id="enterPayment">
                              <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                                 <thead>
                                     <tr>
                                         <th width="25%">Payment Method</th>
                                         <th width="25%">Amount ($)</th>
-                                        <th width="25%">Reference</th>
-                                        <th width="25%">Approval Code</th>
+                                        <th width="21%">Reference</th>
+                                        <th width="22%">Approval Code</th>
+										<th style="width: 7%">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1234,8 +1235,10 @@
             $("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text().trim());
 
             //Generate table
-            $("#CenPH__lb_SFLRCD select").hide();
-            $("#CenPH__lb_SFLRCD").appendTo("#append-here");
+			$("#CenPH__lb_SFLRCD select").empty();
+			$("#CenPH__lb_SFLRCD select").css("float","right");
+            $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+            $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
             $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
                 $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
             });
