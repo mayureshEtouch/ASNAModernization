@@ -92,7 +92,7 @@
         </div>
 		
         </main>
-        <!--div id="modal" class="simplePopup"></div-->
+        
 		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
               <div class="button-container">
@@ -101,7 +101,8 @@
               </div>
          </div>
     </div>
-	
+    <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+  	<div id="modal1" class="simplePopup"></div>
         <div id="Div1">
             
       <%--  OE: PMT for Referenced    Prompt & validate record                                                               --%>
@@ -533,6 +534,11 @@
 		.confirmation-outer-conatiner {
 			left: 30% !important;
 		}
+    .simplePopup{
+      left: 25% !important;
+      top: 20% !important;
+      width:45% !important;
+    }
 	</style>
 	<script type="text/javascript">
       $(document).ready(function() {
@@ -574,7 +580,14 @@
 			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
 			_00('Enter', event);
 		});
-			
+			if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+       } else {
+           $(".simplePopupBackground1").hide();
+       }
+       $("body").on("click", ".simplePopupClose", function() {
+           $(".simplePopupBackground1").hide();
+       });
       });
     </script>
     </asp:Content>
