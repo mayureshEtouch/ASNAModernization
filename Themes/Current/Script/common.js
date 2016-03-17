@@ -248,7 +248,7 @@ function copyData(fields, events) {
     }
     for (var ele in inputFields) {
         if ($("#" + ele).length > 0) {
-            $("#" + inputFields[ele]).val($("#" + ele).val().replace(/\s/g, ""));
+            $("#" + inputFields[ele]).val($("#" + ele).val();//.replace(/\s/g, ""));
             setHandlers(inputFields[ele], ele, events);
         }
 
