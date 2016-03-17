@@ -1209,6 +1209,9 @@
         #CenPH__lb_SFLRCD {
             border-collapse: collapse;
         }
+		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option{
+			font-weight: normal !important;
+		}
     </style>
     <script>
         $(document).ready(function () {
@@ -1319,12 +1322,7 @@
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
 				
 				$("#CenPH__lb_SFLRCD select").empty();
-			$("#CenPH__lb_SFLRCD select").css({
-     'float'  : 'right',
-	 'margin-right' : '12%',
-	 'width' : '80px',
-	 'margin-top' : '3px'
-});
+			$("#CenPH__lb_SFLRCD select").css({'float'  : 'right','margin-right' : '12%','width' : '80px','margin-top' : '3px'});
             $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
 			
 				var mainWidth = $("#payment-method th:first-child").width();
