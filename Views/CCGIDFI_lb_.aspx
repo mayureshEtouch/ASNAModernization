@@ -160,7 +160,8 @@
             <section class="form-data" id="fifth-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="auterr"></span></div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="auterr"></span></div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label"></span></div>
                         <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="title-msg-fifth"></span></div>
                     </div>
                     <div class="content-grid mdl-grid">
@@ -839,6 +840,7 @@
                 }else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Unable to Authorize") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#fifth");
                     $("#auterr").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+                    $("#digit-label").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
                     $("#title-msg-fifth").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
                     $("#fifth-message").show();
                     //$("#modal1").css('left','32%');
