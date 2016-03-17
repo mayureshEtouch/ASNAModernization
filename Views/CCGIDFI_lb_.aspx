@@ -811,6 +811,7 @@
 				
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value=' ']").text("Please Choose");
+                makeSelectDescriptive("CenPH__lb_SFLCTL__lb_PPTST",['Y','N'],['Yes','No'])
 				
                 $("#fifth-message").hide();
                 $("#forth-message").hide();
