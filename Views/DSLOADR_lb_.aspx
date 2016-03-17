@@ -487,7 +487,12 @@
             if ($("#CenPH_DSLOADD1_SDSTRC").length > 0) {
                 $('#output-queue').hide();
                 $("#location-entry-container").show();
-            } 
+				setTimeout(function(){
+					$("#enterYourCompany").attr("tabindex","1");
+					$("#enterYourLocation").attr("tabindex","2");
+					$("#enter").attr("tabindex","3");
+				},100)
+					} 
 
             if ($("#CenPH_DSLOADD2_OUTQ1").length > 0) {
                 $('#location-entry-container').hide();

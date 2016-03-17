@@ -101,6 +101,8 @@
         }
         #__Page_PopUp {
           width: 650px !important;
+		  left: 50% !important;
+		  margin-left: -325px !important;
         }
         #__Page_PopUp > tr:first-child {
          display: none;

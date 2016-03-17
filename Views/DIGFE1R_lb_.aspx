@@ -209,12 +209,12 @@
                         </div>
                         <div class="button-container">
                           <div class="content-grid mdl-grid">
-                              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitpage">Previous</span>
+                              <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitpage">Previous</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses">Addresses</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phone">Phones</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                              <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right">
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
 							  </div>
                           </div>
@@ -1066,7 +1066,8 @@
             }
 
             #__Page_Hidden {
-                height: 920px !important;
+                height: 100% !important;
+				position: fixed !important;
             }
             #__Page_PopUp > tr:first-child {
              display: none;
