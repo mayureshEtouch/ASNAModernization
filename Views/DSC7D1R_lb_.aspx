@@ -804,10 +804,13 @@
                 var type = $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().html();
                 type += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().next().html();
                 var name = $("#CenPH__lb_RCDDTL1").find("span:contains('Name')").next().html();
-                var address = $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().html();
-                address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().next().html();
-                address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
-                 address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
+                //var address = $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().html();
+                //address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().next().html();
+                //address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
+                 //address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
+                 var address = $("#CenPH__lb_RCDDTL1__lb_PANTX").text();
+                 address += "<br>"+$("#CenPH__lb_RCDDTL1__lb_PAOTX").text();
+                 address += "<br>"+$("#CenPH__lb_RCDDTL1__lb_PAQTX").text()+", "+$("#CenPH__lb_RCDDTL1__lb_PADST").text();
                 var zipcode = $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().html();
                 var homePhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Home Phone Number')").next().html();
                 var workPhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Work Phone Number')").next().html();
