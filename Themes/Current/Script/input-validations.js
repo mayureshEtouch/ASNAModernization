@@ -137,34 +137,49 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
     var beforePrecisonWithPeriodRx = new RegExp("^([0-9]{1," + beforePrecision + "})(\\.)?$");
     var regex = new RegExp("^([0-9]{1," + beforePrecision + "})(\\.[0-9]{1," + afterPrecision + "})?$");
     return this.each(function() {
-        $(this).on("keypress", function(event) {
-            if ((event.which != 46 || $(this).val().indexOf('.') != -1) &&
-                ((event.which < 48 || event.which > 57) &&
-                  (event.which != 0 && event.which != 8))) {
-                event.preventDefault();
-                return false;
-              }
-
-              var text = $(this).val();
-
-              if ((text.indexOf('.') != -1) &&
-                (text.substring(text.indexOf('.')).length > 2) &&
-                (event.which != 0 && event.which != 8) &&
-                ($(this)[0].selectionStart >= text.length - 2)) {
-                event.preventDefault();
-                return false;
-              }
-              
-        }) && $(this).on('paste',function(event) {
-                var $el = $(this);
-                setTimeout(function(){
-                    if ($el.val() != $el.val().replace(/[^\d\.]/g,"")) 
-                    { 
-                        $el.val("");
+        $(this).on("change keyup", function(e) {
+            if (beforePrecisonRx.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (beforePrecisonWithPeriodRx.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (regex.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else {
+                var inpValue = $(this).val();
+                var splitByPeriod = inpValue.split(".");
+                splitByPeriod= splitByPeriod.filter(Boolean);
+                if(splitByPeriod.length === 1) {
+                    //$(this).val($(this).val().replace(/\D/g,""));
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
+                    if(splitByPeriod[0].length > beforePrecision) {
+                        $(this).val($(this).val().substr(0, beforePrecision));
                     }
-                    return;
-                },100);
-            });
+                    $(this).val(splitByPeriod[0]);
+                } else if(splitByPeriod.length === 2) {
+                    //$(this).val(splitByPeriod[0]+"."+splitByPeriod[1].replace(/\D/g,""));
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
+                    if(splitByPeriod[0].length > beforePrecision) {
+                        $(this).val($(this).val().substr(0, beforePrecision));
+                    }
+                    $(this).val(splitByPeriod[0]);
+                    splitByPeriod[1] = splitByPeriod[1].replace(/\D/g,"");
+                    if(splitByPeriod[1].length > beforePrecision) {
+                        splitByPeriod[1] = splitByPeriod[1].substr(0, afterPrecision);
+                    }
+                    $(this).val(splitByPeriod[0] + "." + splitByPeriod[1]);
+                }
+                inpValue = $(this).val();
+                splitByPeriod = inpValue.split(".");
+                if (splitByPeriod[0].length > beforePrecision/* || !(/^([0-9])$/.test(splitByPeriod[0]))*/) {
+                    splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
+                    $(this).val(splitByPeriod.join("."));
+                } else if(splitByPeriod.length === 2 && splitByPeriod[1].length > afterPrecision) {
+                    $(this).val(inpValue.substr(0, inpValue.length - 1));
+                }
+                return;
+            }
+
+        });
     });
 }
 
