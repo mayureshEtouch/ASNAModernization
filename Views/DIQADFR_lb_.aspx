@@ -126,9 +126,9 @@
                         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerAddress">
                             <thead>
                               <tr>
-                                <th>Typ</th>
+                                <th>Type</th>
                                 <th>Reference #</th>
-                                <th>Ver</th>
+                                <th>Version</th>
                                 <th>Name</th>
                                 <th>Address</th>
                                 <th>Phone Number</th>
