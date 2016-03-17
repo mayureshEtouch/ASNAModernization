@@ -1252,10 +1252,25 @@
                     copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
                 }
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-                $("#special-instructions").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
+                /*$("#special-instructions").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");*/
+                $("#sp-previous-page,#sp-next-page").remove();
+                debugger
+                if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                    $("#special-instructions").
+                        after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                }
+                $("#special-instructions").
+                    after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
                 $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
             }
-            
+            $('body').on("click", "#sp-next-page", function(event) {
+                _00("PgDn", event);
+                generateSpecialInstructionsSection();
+            });
+            $('body').on("click", "#sp-previous-page", function(event) {
+                _00("PgUp", event);
+                generateSpecialInstructionsSection();
+            });
 			setTimeout(function(){
 			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr("tabindex","1");
 			$("#CenPH_PBDTX").attr("tabindex","2");
