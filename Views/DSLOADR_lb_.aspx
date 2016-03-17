@@ -41,7 +41,7 @@
                 </div>
             </div>
         </section>
-        <div class="box-container" style="margin-top: 20px; height: auto;">
+        <div class="box-container" style="margin-top: 10%; height: auto;">
             <div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 5px 5px; background: none;">
                 <div class="content-grid mdl-grid">
                     <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
@@ -71,179 +71,7 @@
     </main>
     <%--Location entry modernized html end--%>
 
-    <main class="mdl-layout__content homepage-content" style="display: none;">
-        <div class="content-grid mdl-grid" style="height:100%;">
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
-                <!-- front-content starts here -->
-                <div class="front contracts-bg">
-                    <div class="front-content">
-                        <div class="contracts-icon"></div>
-                        <p class="block-heading">Work with Contracts</p>
-                    </div>
-                    <!-- front-content ends here -->
-                </div>
-                <!-- back-content starts here -->
-                <div class="back">
-                    <div class="icon-title-container">
-                        <div class="contracts-icon-hover"></div>
-                        <h2 class="_title">Work with Contracts</h2>
-                    </div>
-                    <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Calculate Credit Contract</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Short GE Application</p>
-                        </a></li>
-                    </ul>
-                    <!-- back-content ends here -->
-                </div>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
-                <!-- front-content starts here -->
-                <div class="front sales-order-bg">
-                    <div class="front-content">
-                        <div class="sales-order-icon"></div>
-                        <p class="block-heading">Work with Sales Order</p>
-                    </div>
-                    <!-- front-content ends here -->
-                </div>
-                <!-- back-content starts here -->
-                <div class="back">
-                    <div class="icon-title-container">
-                        <div class="sales-order-icon-hover"></div>
-                        <h2 class="_title">Work with Sales Order</h2>
-                    </div>
-                    <ul class="_list">
-                        <li class="_item" id="enter-sales-order"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Sales Order</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Edit Sales Order</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Sales Order</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Credit Applications</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Old Sales Orders</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Worksheet Sales Process</p>
-                        </a></li>
-                    </ul>
-                    <!-- back-content ends here -->
-                </div>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
-                <!-- front-content starts here -->
-                <div class="front inv-delv-sch-bg">
-                    <div class="front-content">
-                        <div class="invent-delv-sch-icon"></div>
-                        <p class="block-heading">Inventory &amp; Delivery Schedule</p>
-                    </div>
-                    <!-- front-content ends here -->
-                </div>
-                <!-- back-content starts here -->
-                <div class="back">
-                    <div class="icon-title-container">
-                        <div class="invent-delv-sch-icon-hover"></div>
-                        <h2 class="_title">Inventory & Delivery Schedule</h2>
-                    </div>
-                    <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
-                        </a></a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
-                        </a></li>
-                    </ul>
-                    <!-- back-content ends here -->
-                </div>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
-                <!-- front-content starts here -->
-                <div class="front misc-cust-serv-bg">
-                    <div class="front-content">
-                        <div class="misc-cust-serv-icon"></div>
-                        <p class="block-heading">Misc. Customer Service</p>
-                    </div>
-                    <!-- front-content ends here -->
-                </div>
-                <!-- back-content starts here -->
-                <div class="back">
-                    <div class="icon-title-container">
-                        <div class="misc-cust-serv-icon-hover"></div>
-                        <h2 class="_title">Misc. Customer Service</h2>
-                    </div>
-                    <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
-                        </a></li>
-                    </ul>
-                    <!-- back-content ends here -->
-                </div>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
-                <!-- front-content starts here -->
-                <div class="front incomplete-orders-bg">
-                    <div class="front-content">
-                        <div class="incomplete-orders-icon"></div>
-                        <p class="block-heading">Incomplete Orders</p>
-                    </div>
-                    <!-- front-content ends here -->
-                </div>
-                <!-- back-content starts here -->
-                <div class="back">
-                    <div class="icon-title-container">
-                        <div class="incomplete-orders-icon-hover"></div>
-                        <h2 class="_title">Incomplete Orders</h2>
-                    </div>
-                    <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
-                        </a></li>
-                    </ul>
-                    <!-- back-content ends here -->
-                </div>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
-                <!-- front-content starts here -->
-                <div class="front othr-misc-sales-menu-bg">
-                    <div class="front-content">
-                        <div class="misc-sales-menu-icon"></div>
-                        <p class="block-heading">Other Misc. Sales Menu</p>
-                    </div>
-                    <!-- front-content ends here -->
-                </div>
-                <!-- back-content starts here -->
-                <div class="back">
-                    <div class="icon-title-container">
-                        <div class="misc-sales-menu-icon-hover"></div>
-                        <h2 class="_title">Other Misc. Sales Menu</h2>
-                    </div>
-                    <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p>Enter Pickup Completions</p>
 
-                        </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
-                        </a></li>
-                    </ul>
-                    <!-- back-content ends here -->
-                </div>
-            </div>
-        </div>
-    </main>
 	
 	 <main class="mdl-layout__content" id="output-queue" style="display: none;">
         <section class="time-date">
@@ -586,22 +414,21 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
- <style>
--        #Div1, #fkeys, #diagnostics, #footer, [id$='_DSLOADD2']{
--            display: none;
--        }
--		 .DdsRecord {
+    <style>
+        #Div1, #fkeys, #diagnostics, #footer, [id$='_DSLOADD2']{
+            display: none;
+        }
+		 .DdsRecord {
 			display: none;
 		}
--        #main-content {
--            width: 100%;
--        }
--
--        .homepage-content .mdl-cell {
--            margin: 0px;
--        }
+        #main-content {
+            width: 100%;
+        }
 
--    </style>
+        .homepage-content .mdl-cell {
+            margin: 0px;
+        }
+    </style>
 
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/homepage.js")%>"></script>
     <script type="text/javascript">
@@ -638,23 +465,19 @@
                 $("#CenPH_DSLOADD1_SDSTRI").val($("#enterYourLocation").val());
             });
             if ($("#CenPH_DSLOADD1_SDSTRC").length > 0) {
-                $(".homepage-content").show();
-                $("#Div1").hide();
-            } else {
-                $(".homepage-content").hide();
-                //$("#Div1").show();
-				$('#output-queue').show();
+                $('#output-queue').hide();
+                $("#location-entry-container").show();
+            } 
+
+            if ($("#CenPH_DSLOADD2_OUTQ1").length > 0) {
+                $('#location-entry-container').hide();
+                $('#output-queue').show();
 				$("[name='date']").text($("[id$=CenPH_DdsConstant9]").text());
 				$("[name='time']").text($("[id$=CenPH_DdsConstant24]").text());
 				$('.location-code').text($("[id$=DSLOADD2_LOCN]").text() + " " + $("[id$=DdsConstant21]").text()+ " " + $("[id$=DSLOADD2_LOCD]").text());
-               
                 $("#CenPH_DSLOADD2_OUTQ1").attr("Readonly", true);
             }
-            $("#enter-sales-order").on("click", function () {
-                $(".homepage-content").hide();
-                $("#Div1").hide();
-                $("#location-entry-container").show();
-            });
+            
             //Handle enter click event
             $("#enter").on("click", function (event) {
                 _00("Enter", event);
