@@ -1209,7 +1209,7 @@
         #CenPH__lb_SFLRCD {
             border-collapse: collapse;
         }
-		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option  {
+		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option{
 			font-weight: normal !important;
 		}
     </style>
