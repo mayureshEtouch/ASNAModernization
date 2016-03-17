@@ -153,9 +153,9 @@ $(document).ready(function() {
             ".mdl-textfield__input": "Only numeric",
             ".model-number": "Enter model number",
             ".serial-number": "Enter serial number",
-			".installation-codes": "Enter installation code"
+            ".installation-codes": "Enter installation code"
         },
-        "DSEBETR":{
+        "DSEBETR": {
             ".payment": "Enter payment method",
             ".amount": "Enter amount",
             ".hasDatepicker": "Select request date",
@@ -164,20 +164,23 @@ $(document).ready(function() {
         },
         "DSK6EFR": {
             ".term-input": "Enter warranty term"
-        }/*,
-        "DSLOADR": {
-            "#enterYourCompany": "Enter company",
-            "#enterYourLocation": "Only numeric"
-        },
-        "SignOn": {
-            "#CenPH_RSignon_User": "Enter username",
-            "#CenPH_RSignon_Password": "Enter password"
-        }*/
+        }
+        /*,
+                "DSLOADR": {
+                    "#enterYourCompany": "Enter company",
+                    "#enterYourLocation": "Only numeric"
+                },
+                "SignOn": {
+                    "#CenPH_RSignon_User": "Enter username",
+                    "#CenPH_RSignon_Password": "Enter password"
+                }*/
 
     }
+    $(".home-icon").tooltip();
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR", "DSQ0E1R"];
-    
-	var inputFieldsForToolTips = {}, currentScreen = "";
+
+    var inputFieldsForToolTips = {},
+        currentScreen = "";
     if (window.location.href.indexOf("SignOn") !== -1) {
         inputFieldsForToolTips = tooltipFields["SignOn"];
         applyTooltip();
@@ -191,21 +194,21 @@ $(document).ready(function() {
     function applyTooltip() {
         //Apply tooltips
         for (var field in inputFieldsForToolTips) {
-			if ($(field).length > 0) {
+            if ($(field).length > 0) {
                 $(field).attr("title", inputFieldsForToolTips[field]);
-				if(currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
-					
+                if (currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
+
                     $(field).tooltip({
                         position: {
                             my: "center top"
                         }
                     });
-                }else if(currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
-					
+                } else if (currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
+
                     $(field).tooltip({
                         position: {
-						   my: "center top"
-                       }
+                            my: "center top"
+                        }
                     });
                 } else {
                     $(field).tooltip();
