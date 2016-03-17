@@ -163,7 +163,7 @@ $(document).ready(function() {
             ".approval-code": "Enter approval code"
         },
         "DSK6EFR": {
-            ".term-input": "Enter warranty"
+            ".term-input": "Enter warranty term"
         }/*,
         "DSLOADR": {
             "#enterYourCompany": "Enter company",
