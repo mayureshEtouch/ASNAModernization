@@ -1245,7 +1245,27 @@
 
             //Generate table
 			
-            $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
+			$("div#CenPH__lb_SFLRCD__End").remove();
+			$("#previous-page,#next-page").remove();
+				if($("#CenPH__lb_SFLRCD_0").length === 0) {
+					$("div#CenPH__lb_SFLRCD__End").remove();
+                    $("#enterPayment").
+                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                }
+				
+                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+			
+			  $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
+			  
+			$('body').on("click", "#next-page", function(event) {
+                _00("PgDn", event);
+                renderPage();
+            });
+            $('body').on("click", "#previous-page", function(event) {
+                _00("PgUp", event);
+                renderPage();
+            });
+			
             $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
                 $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
             });
@@ -1316,6 +1336,16 @@
 		
 			
 			function renderPage() {
+					
+					$("div#CenPH__lb_SFLRCD__End").remove();
+			$("#previous-page,#next-page").remove();
+				if($("#CenPH__lb_SFLRCD_0").length === 0) {
+					$("div#CenPH__lb_SFLRCD__End").remove();
+                    $("#enterPayment").
+                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                }
+				
+                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');

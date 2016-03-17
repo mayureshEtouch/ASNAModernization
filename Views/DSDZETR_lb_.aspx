@@ -1254,13 +1254,13 @@
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                 /*$("#special-instructions").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");*/
                 $("#sp-previous-page,#sp-next-page").remove();
-                debugger
+                
                 if($("#CenPH__lb_SFLRCD_0").length === 0) {
                     $("#special-instructions").
-                        after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                        after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
                 }
                 $("#special-instructions").
-                    after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                    after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
                 $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
             }
             $('body').on("click", "#sp-next-page", function(event) {
