@@ -165,10 +165,33 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
             } else {
                 var inpValue = $(this).val();
                 var splitByPeriod = inpValue.split(".");
-                if (splitByPeriod[0].length > beforePrecision || !(/^([0-9])$/.test(splitByPeriod[0]))) {
+                splitByPeriod= splitByPeriod.filter(Boolean);
+                if(splitByPeriod.length === 1) {
+                    //$(this).val($(this).val().replace(/\D/g,""));
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
+                    if(splitByPeriod[0].length > beforePrecision) {
+                        $(this).val($(this).val().substr(0, beforePrecision));
+                    }
+                    $(this).val(splitByPeriod[0]);
+                } else if(splitByPeriod.length === 2) {
+                    //$(this).val(splitByPeriod[0]+"."+splitByPeriod[1].replace(/\D/g,""));
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
+                    if(splitByPeriod[0].length > beforePrecision) {
+                        $(this).val($(this).val().substr(0, beforePrecision));
+                    }
+                    $(this).val(splitByPeriod[0]);
+                    splitByPeriod[1] = splitByPeriod[1].replace(/\D/g,"");
+                    if(splitByPeriod[1].length > beforePrecision) {
+                        splitByPeriod[1] = splitByPeriod[1].substr(0, afterPrecision);
+                    }
+                    $(this).val(splitByPeriod[0] + "." + splitByPeriod[1]);
+                }
+                inpValue = $(this).val();
+                splitByPeriod = inpValue.split(".");
+                if (splitByPeriod[0].length > beforePrecision/* || !(/^([0-9])$/.test(splitByPeriod[0]))*/) {
                     splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
                     $(this).val(splitByPeriod.join("."));
-                } else {
+                } else if(splitByPeriod.length === 2 && splitByPeriod[1].length > afterPrecision) {
                     $(this).val(inpValue.substr(0, inpValue.length - 1));
                 }
                 return;
