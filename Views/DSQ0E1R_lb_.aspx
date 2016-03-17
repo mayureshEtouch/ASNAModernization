@@ -173,6 +173,10 @@
         .hide{
           display: none;
         }
+        #__Page_Hidden {
+          height: 100% !important;
+          position: fixed;
+        }
         </style>
         <script type="text/javascript">
           $(document).ready(function () {

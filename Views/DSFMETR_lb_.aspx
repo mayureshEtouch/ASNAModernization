@@ -102,7 +102,7 @@
 			<section class="order-detail-table-data">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div class="table-container">
+                            <div class="table-container" style="margin-bottom: 10px;">
                             	
                                 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValueInsert">
                                     <thead>
@@ -1758,9 +1758,26 @@
 				}
 			});  
 			
-			$("#datatableValueInsert tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
+			//$("#datatableValueInsert tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
+			$("#previous-page,#next-page").remove();
+           
+			 if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                    $(".table-container").
+                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                }
+                $(".table-container").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                
 		}        
 		
+		 $('body').on("click", "#next-page", function(event) {
+                _00("PgDn", event);
+                copyData();
+            });
+            $('body').on("click", "#previous-page", function(event) {
+                _00("PgUp", event);
+                copyData();
+            });
+			
 		// ASNA Hidden UI Table  index. Used for reference
        	var tindex=0;
 		   if($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id")!=undefined){

@@ -87,7 +87,9 @@
                
             </section>
         </main>
-        <div id="modal1" class="simplePopup"></div>
+        
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
     </div>
     <!-- Modified HTML code ends here -->
         <style>
@@ -131,6 +133,10 @@
 			#__Page_PopUp tbody tr:first-child{
 				display:none;
 			}
+        #modal1 {
+          left: 30% !important;
+          top: 40% !important;
+        }
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {
@@ -148,6 +154,14 @@
                     _00('F12', event);
                 });
                 copyData(copyToAndFrom);
+                if($(".simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                });
             });
         </script>
         <div id="Div1" style="display:none;">
