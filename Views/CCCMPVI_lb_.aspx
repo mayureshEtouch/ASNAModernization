@@ -184,8 +184,7 @@
             _00("Enter", event);
         });
 
-        //$("#ssn").ForceNumericOnly();
-        $("#ssn").ForceNumericWithPasteOption();
+        $("#ssn").ForceNumericOnly();
         $("#ssn").on("change keyup mouseup paste", function(event) {
             maskUnmaskSSN("ssn", event);
         });

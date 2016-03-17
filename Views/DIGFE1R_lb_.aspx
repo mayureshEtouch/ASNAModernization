@@ -139,8 +139,7 @@
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield"> 
                                 <select name="" id="mailing-list">
-                                    <option selected="selected" value="Y"> Y </option>
-                                    <option value=" "> Please Choose </option>
+                                    <option value=" " selected="selected"> Please Choose </option>
                                     <option value="Y"> Y - Yes </option>
                                     <option value="0"> 0 - 12 Months COP Ap </option>
                                     <option value="1"> 1 - 18 Months COP Ap </option>
@@ -1166,7 +1165,7 @@
                 });
                 //Validations
                 $("#extension, #work-phone").ForceNumericOnly();
-				$("#home-phone,#cell-phone").ForceNumericWithPasteOption();
+				$("#home-phone,#cell-phone").ForceNumericOnly();
 				//$("#extension, #work-phone").ForceNumericOnly();
 				//$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
             });

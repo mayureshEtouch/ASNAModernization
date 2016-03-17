@@ -7,56 +7,38 @@
 jQuery.fn.ForceNumericOnly =
     function() {
         return this.each(function() {
-            $(this).keydown(function(e) {
-                if (e.shiftKey && e.keyCode === 9) {
-                    return true;
-                } else if (e.shiftKey || e.ctrlKey || e.altKey) {
-                    return false;
-                } else {
-                    var key = e.keyCode;
-                    if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
-                        return false;
+        $(this).keydown(function(event) {
+            // Allow: backspace, delete, tab, escape, and enter
+            if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || 
+                    // Allow: Ctrl+V
+                    (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||  
+                    // Allow: Ctrl+c
+                    (event.ctrlKey == true && (event.which == '99' || event.which == '67')) || 
+                    // Allow: Ctrl+A
+                (event.keyCode == 65 && event.ctrlKey === true) || 
+                 // Allow: home, end, left, right
+                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                     // let it happen, don't do anything
+                     return;
+            }
+            else {
+                // Ensure that it is a number and stop the keypress
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+                    event.preventDefault(); 
+                }   
+            }
+        }) && $(this).on('paste',function(event) {
+                var $el = $(this);
+                setTimeout(function(){
+                    if ($el.val() != $el.val().replace(/\D/g, "")) 
+                    { 
+                        $el.val($el.val().replace(/\D/g, ""));
                     }
-                }
+                    return;
+                },100);
             });
-        });
-    };
-
-jQuery.fn.ForceNumericWithPasteOption =
-	function() {
-		return this.each(function() {
-		$(this).keydown(function(event) {
-			// Allow: backspace, delete, tab, escape, and enter
-			if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || 
-					// Allow: Ctrl+V
-					(event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||  
-					// Allow: Ctrl+c
-					(event.ctrlKey == true && (event.which == '99' || event.which == '67')) || 
-					// Allow: Ctrl+A
-				(event.keyCode == 65 && event.ctrlKey === true) || 
-				 // Allow: home, end, left, right
-				(event.keyCode >= 35 && event.keyCode <= 39)) {
-					 // let it happen, don't do anything
-					 return;
-			}
-			else {
-				// Ensure that it is a number and stop the keypress
-				if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
-					event.preventDefault(); 
-				}   
-			}
-		}) && $(this).on('paste',function(event) {
-				var $el = $(this);
-				setTimeout(function(){
-				    if ($el.val() != $el.val().replace(/[^\d\.]/g,"")) 
-				    { 
-				    	$el.val("");
-				    }
-				    return;
-				},100);
-			});
 });
-};	
+};
 
 // Numeric with question mark
 jQuery.fn.ForceNumericWithQuestionMarkOnly =
@@ -165,10 +147,33 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
             } else {
                 var inpValue = $(this).val();
                 var splitByPeriod = inpValue.split(".");
-                if (splitByPeriod[0].length > beforePrecision || !(/^([0-9])$/.test(splitByPeriod[0]))) {
+                splitByPeriod= splitByPeriod.filter(Boolean);
+                if(splitByPeriod.length === 1) {
+                    //$(this).val($(this).val().replace(/\D/g,""));
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
+                    if(splitByPeriod[0].length > beforePrecision) {
+                        $(this).val($(this).val().substr(0, beforePrecision));
+                    }
+                    $(this).val(splitByPeriod[0]);
+                } else if(splitByPeriod.length === 2) {
+                    //$(this).val(splitByPeriod[0]+"."+splitByPeriod[1].replace(/\D/g,""));
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
+                    if(splitByPeriod[0].length > beforePrecision) {
+                        $(this).val($(this).val().substr(0, beforePrecision));
+                    }
+                    $(this).val(splitByPeriod[0]);
+                    splitByPeriod[1] = splitByPeriod[1].replace(/\D/g,"");
+                    if(splitByPeriod[1].length > beforePrecision) {
+                        splitByPeriod[1] = splitByPeriod[1].substr(0, afterPrecision);
+                    }
+                    $(this).val(splitByPeriod[0] + "." + splitByPeriod[1]);
+                }
+                inpValue = $(this).val();
+                splitByPeriod = inpValue.split(".");
+                if (splitByPeriod[0].length > beforePrecision/* || !(/^([0-9])$/.test(splitByPeriod[0]))*/) {
                     splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
                     $(this).val(splitByPeriod.join("."));
-                } else {
+                } else if(splitByPeriod.length === 2 && splitByPeriod[1].length > afterPrecision) {
                     $(this).val(inpValue.substr(0, inpValue.length - 1));
                 }
                 return;

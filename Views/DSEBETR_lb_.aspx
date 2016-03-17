@@ -117,7 +117,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+								<input class="editable-data" type="text" id="requestdate" name="date" size="16" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>
@@ -1209,6 +1209,9 @@
         #CenPH__lb_SFLRCD {
             border-collapse: collapse;
         }
+		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option{
+			font-weight: normal !important;
+		}
     </style>
     <script>
         $(document).ready(function () {
@@ -1235,7 +1238,7 @@
             $("#CenPH_CEFVA").html($("[id$=CenPH__lb_SFLCTL__lb_CEFVA]").text());
             $("#CenPH_CBMVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBMVA]").text());
             $("#CenPH_1ANPR").text($("[id$=CenPH__lb_SFLCTL__lb_1ANPR]").text());
-            $("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text());
+            $("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text().trim() == .00 ? "0.00" :$("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text().trim());
             $("#CenPH_V1ACPC").text($("[id$=CenPH__lb_SFLCTL_V1ACPC]").text());
             $("#CenPH_CBLVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text().trim() == .00 ? "0.00" : $("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text().trim());
             $("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text().trim());
@@ -1319,12 +1322,7 @@
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
 				
 				$("#CenPH__lb_SFLRCD select").empty();
-			$("#CenPH__lb_SFLRCD select").css({
-     'float'  : 'right',
-	 'margin-right' : '12%',
-	 'width' : '80px',
-	 'margin-top' : '3px'
-});
+			$("#CenPH__lb_SFLRCD select").css({'float'  : 'right','margin-right' : '12%','width' : '80px','margin-top' : '3px'});
             $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
 			
 				var mainWidth = $("#payment-method th:first-child").width();

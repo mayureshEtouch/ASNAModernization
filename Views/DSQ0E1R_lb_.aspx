@@ -203,7 +203,7 @@
                 if(error_msg!=''){
                   $('.error').text(error_msg);
                 }
-                $('#telephone, #ext').ForceNumericWithPasteOption();
+                $('#telephone, #ext').ForceNumericOnly();
               }else if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length>0){
                 
 
@@ -251,6 +251,7 @@
                     event.preventDefault();
                 } 
             })
+            $("#telephone").val($("#telephone").val().replace(/\D/g, ""));
           });
         </script>
         <div id="Div1" style="display:none;">

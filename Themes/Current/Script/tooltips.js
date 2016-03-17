@@ -40,22 +40,22 @@ $(document).ready(function() {
             //"#ssn": "Only numeric"
         },
         "CCHXE1R": {
-            "#cust-lic-second": "Enter customer license",
+            "#cust-lic-second": "Enter customer's license #",
             "#cust-birth": "Select birth date",
-            "#cust-lic-first": "Enter customer license",
+            "#cust-lic-first": "Enter customer's license #",
             "#ro-cust-ssn": "Only numeric",
             "#no-of-years": "Only numeric",
-            "#payment-of": "Enter payment",
-            "#phone-listed-as": "only numeric",
-            "#cust-dependents": "Enter customer dependents",
+            "#payment-of": "Only numeric",
+            "#phone-listed-as": "Only numeric",
+            "#cust-dependents": "Only 0 to 9 allowed",
             "#sp-name": "Enter spouse name",
-            "#sp-lic-first": "Enter license",
-            "#sp-lic-second": "Enter license",
-            "#sp-monthly-income": "Enter spouse income",
+            "#sp-lic-first": "Enter spouse's license #",
+            "#sp-lic-second": "Enter spouse's license #",
+            "#sp-monthly-income": "Only numeric",
             "#employed-at": "Enter employed at",
-            "#employed-at-duration-years": "Enter employed duration year",
-            "#employed-at-duration-months": "Enter employed duration month",
-            "#cust-income": "Enter customer income",
+            "#employed-at-duration-years": "Only numeric",
+            "#employed-at-duration-months": "Only numeric",
+            "#cust-income": "Only numeric",
             "#cust-supervisor": "Enter customer supervisor",
             "#ref-name": "Enter reference name",
             "#ref-address": "Enter reference address",
@@ -153,9 +153,9 @@ $(document).ready(function() {
             ".mdl-textfield__input": "Only numeric",
             ".model-number": "Enter model number",
             ".serial-number": "Enter serial number",
-			".installation-codes": "Enter installation code"
+            ".installation-codes": "Enter installation code"
         },
-        "DSEBETR":{
+        "DSEBETR": {
             ".payment": "Enter payment method",
             ".amount": "Enter amount",
             ".hasDatepicker": "Select request date",
@@ -163,21 +163,24 @@ $(document).ready(function() {
             ".approval-code": "Enter approval code"
         },
         "DSK6EFR": {
-            ".term-input": "Enter warranty"
-        }/*,
-        "DSLOADR": {
-            "#enterYourCompany": "Enter company",
-            "#enterYourLocation": "Only numeric"
-        },
-        "SignOn": {
-            "#CenPH_RSignon_User": "Enter username",
-            "#CenPH_RSignon_Password": "Enter password"
-        }*/
+            ".term-input": "Enter warranty term"
+        }
+        /*,
+                "DSLOADR": {
+                    "#enterYourCompany": "Enter company",
+                    "#enterYourLocation": "Only numeric"
+                },
+                "SignOn": {
+                    "#CenPH_RSignon_User": "Enter username",
+                    "#CenPH_RSignon_Password": "Enter password"
+                }*/
 
     }
+    $(".home-icon").tooltip();
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR", "DSQ0E1R"];
-    
-	var inputFieldsForToolTips = {}, currentScreen = "";
+
+    var inputFieldsForToolTips = {},
+        currentScreen = "";
     if (window.location.href.indexOf("SignOn") !== -1) {
         inputFieldsForToolTips = tooltipFields["SignOn"];
         applyTooltip();
@@ -191,21 +194,21 @@ $(document).ready(function() {
     function applyTooltip() {
         //Apply tooltips
         for (var field in inputFieldsForToolTips) {
-			if ($(field).length > 0) {
+            if ($(field).length > 0) {
                 $(field).attr("title", inputFieldsForToolTips[field]);
-				if(currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
-					
+                if (currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
+
                     $(field).tooltip({
                         position: {
                             my: "center top"
                         }
                     });
-                }else if(currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
-					
+                } else if (currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
+
                     $(field).tooltip({
                         position: {
-						   my: "center top"
-                       }
+                            my: "center top"
+                        }
                     });
                 } else {
                     $(field).tooltip();

@@ -237,7 +237,7 @@ $('#number1').val($('#CenPH__lb_SFLCTL__lb_2CGC_lb_').val());
 $('#number2').val($('#CenPH__lb_SFLCTL__lb_2P5N_lb_').val());
 $('#cus_name').text($('#CenPH__lb_SFLCTL__lb_2ALTX').text());
 
-$('#number2').ForceNumericWithPasteOption();
+$('#number2').ForceNumericOnly();
 
 //$('.error').text($('#MsgPH_DdsMessagePanel1').text());
 
