@@ -1123,10 +1123,25 @@
               $("#special-instructions span:odd").css("background-color", "#fff");
               $("#special-instructions span:even").css("background-color", "#f9f9f9");
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-              var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
-              $("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
-              $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
+              if ($("#CenPH__lb_SFLRCD__End").length > 0) {
+                          $("#previous-page,#next-page").remove();
+                          if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                              $("#special-instructions").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+                          }
+                          if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                              $("#special-instructions").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                          }
+                          if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                              $('#eof-indicator').remove();
+                              var tr = "<a id='eof-indicator' style='float: right;margin-right: 10px; margin-top: 7px;'>" + $("#CenPH__lb_SFLRCD_End").html() + "</a>"
+                              $("#special-instructions").after(tr);
+                          }
+                      }
+              //var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
+              //$("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
+              //$("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
           }
+
           generateSpecialInstructionsSection();
           $('body').on('keydown', function (event) {
               var keycode = event.keyCode || event.which;
@@ -1140,6 +1155,14 @@
                   setTimeout(generateSpecialInstructionsSection, 1000);
               }
               return;
+          });
+          $('body').on("click", "#next-page", function(event) {
+            _00("PgDn", event);
+              setTimeout(generateSpecialInstructionsSection, 1000);
+          });
+          $('body').on("click", "#previous-page", function(event) {
+              _00("PgUp", event);
+            setTimeout(generateSpecialInstructionsSection, 1000);
           });
       });
     </script>

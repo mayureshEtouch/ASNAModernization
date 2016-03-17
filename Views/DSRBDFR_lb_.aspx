@@ -131,6 +131,19 @@
                    var row = $("#customerPhones tbody tr.selected");
                    selectCusotmer(row, "2", event);
                });
+               if ($("#CenPH__lb_SFLRCD__End").length > 0) {
+                   //$("#previous-page,#next-page").remove();
+                   if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                       $("#customerPhones").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+                   }
+                   if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                       $("#customerPhones").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                   }
+                   if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                       $('#eof-indicator').remove();
+                       $("#customerPhones").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                   }
+               }
                var selectCusotmer = function (row, value, event) {
                     var selectId = $(row).data('selectid');
                     a = selectId.split(".");
