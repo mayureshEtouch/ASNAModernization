@@ -84,7 +84,7 @@
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Home Phone Number:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet"><span id="cus_homenumber" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_homenumber" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Work Phone Number:</span></div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet"><span id="cus_worknumber" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="ext-div"><span class="input-label" style="display: inline-block;">Ext:</span><span id="cus_worknumber_ext" style="padding-left: 5px;font-size: 12px;"></span></div>
