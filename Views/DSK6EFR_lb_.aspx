@@ -79,7 +79,7 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="warranty-term-list">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="warranty-term-list">
                                 <thead>
                                     <tr>
                                         <th>Model Number</th>
@@ -746,14 +746,21 @@
             $("#order-number").html($("#CenPH__lb_SFLCTL__lb_2BANB").html().replace(/&nbsp;/g, ""));
             $("#version-number").html($("#CenPH__lb_SFLCTL__lb_PEXNB").html().replace(/&nbsp;/g, ""));
             //Generate warranty term table
+			
             var generateTable1 = function () {
+			var count = 0;
+			var idDiv = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').attr("id");
+			if (idDiv){
+				count = idDiv.replace(/\D/g,"");
+			}
+			  var row = "";
                 var mNumberSelector = "#CenPH__lb_SFLRCD__lb_1AXTX\\.",
                     srNumberSelector = "#CenPH__lb_SFLRCD__lb_1A8TX\\.",
                     mwExpDateSelector = "#CenPH__lb_SFLRCD_VRBADT\\.",
                     wTermSelector = "#CenPH__lb_SFLRCD__lb_RGPTX\\.",
                     wPriceSelector = "#CenPH__lb_SFLRCD__lb_1AIPR\\.",
                     ewExpDateSelector = "#CenPH__lb_SFLRCD_VRA9DT\\.";
-                var count = 0, row = "";
+              
                 var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
@@ -764,18 +771,31 @@
                         }
                         row = '';
                         row += '<tr>';
+						
                         row += '<td>' + $(mNumberSelector + count).html() + '</td>';
                         row += '<td>' + $(srNumberSelector + count).html() + '</td>';
                         row += '<td>' + $(mwExpDateSelector + count).html() + '</td>';
                         row += '<td>';
                         row += termBox;
                         row += '</td>';
-                        row += '<td>' + $(wPriceSelector + count).html() + '</td>';
+                       // row += '<td>' + ($(wPriceSelector + count).html()) + '</td>';
+					    row += '<td>' + (($(wPriceSelector + count).length > 0) ? $(wPriceSelector + count).html() : '&nbsp;') + '</td>';
                         row += '<td>' + (($(ewExpDateSelector + count).length > 0) ? $(ewExpDateSelector + count).html() : '&nbsp;') + '</td>';
                         row += '</tr>';
                         count++;
+						
                         $("#warranty-term-list tbody").append(row);
-                    }
+                    }else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+						$("#previous-page,#next-page").remove();
+						if($("#CenPH__lb_SFLRCD_0").length === 0) {
+						$("#warranty-term-list").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+						}
+						if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+							$("#warranty-term-list").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+						}
+					
+					}
+					
                 });
                 $("#warranty-term-list tbody tr:even").css("background-color", "#fff");
                 $("#warranty-term-list tbody tr:odd").css("background-color", "#f9f9f9");
@@ -789,10 +809,11 @@
                 });
             }
             generateTable1();
-
+			
+			//generateTableAndApplyInfiniteScroll("warranty-term-list", "CenPH__lb_SFLRCD", "NONE", "next"); // Table ID, Div ID 
             //Set input term value to original term text box
-            $('body').on('change keyup keydown', 'input.term-input', function (e) {
-                if (e.which != 115) {
+            $('body').on('change', 'input.term-input', function (e) {
+			    if (e.which != 115) {
                     var targetInputBox = $(this).data("term");
                     $(targetInputBox).val($(this).val());
                 } else {
@@ -803,6 +824,42 @@
                     return false;
                 }
             });
+			
+			
+			var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+			
+			 $('body').on("click", "#next-page", function(event) {
+				$("#warranty-term-list tbody").empty();
+                _00("PgDn", event);
+			
+				generateTable1();
+            });
+            $('body').on("click", "#previous-page", function(event) {
+                $("#warranty-term-list tbody").empty();
+					
+					_00("PgUp", event);
+					//$("#warranty-term-list tbody").empty();
+					  generateTable1();
+           });
+			
+		
+			     $('body').on('keyup keydown', function(event) {
+					var keycode = event.keycode || event.which;
+					if (keycode === 33) {
+					$("#warranty-term-list tbody").empty();
+						generateTable1();
+					} else if (keycode === 34) {
+					$("#warranty-term-list tbody").empty();
+						generateTable1();
+					}
+					return;
+				});
+		
             function dealycode(targT) {
                 var inpe = jQuery.Event("keydown");
                 inpe.which = 115;

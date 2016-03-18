@@ -85,7 +85,7 @@
                                                 <div class="th-inner">Type</div>
                                             </th>
                                             <th style="width:50%">
-                                                <div class="th-inner">Warranty</div>
+                                                <div class="th-inner">Warranty ($)</div>
                                             </th>
                                         </tr>
                                     </thead>
