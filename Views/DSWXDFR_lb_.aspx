@@ -104,10 +104,8 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow-y: visible;">
-                            <div class="fixed-table-container">
-							   <div class="header-background"> </div>
-							   <div class="fixed-table-container-inner">
-								<table cellspacing="0" cellpadding="0" border="0" id="customerName" class="navigateable" >
+                            
+								<table cellspacing="0" cellpadding="0" border="0" id="customerName" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" >
 								 <thead>
 								  <tr data-myval="">
 								   <th class="first"><div class="th-inner">Model Number</div></th>
@@ -121,8 +119,7 @@
 								 <tbody>
 								 </tbody>
 								</table>
-							   </div>
-							  </div>
+							  
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
