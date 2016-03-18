@@ -108,12 +108,12 @@
 								<table cellspacing="0" cellpadding="0" border="0" id="customerName" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" >
 								 <thead>
 								  <tr data-myval="">
-								   <th class="first"><div class="th-inner">Model Number</div></th>
-								   <th><div class="th-inner">Description</div></th>
-								   <th><div class="th-inner">Item Price ($)</div></th>
-								   <th><div class="th-inner">Vendor Number</div></th>
-								   <th width="13%"><div class="th-inner">Product Category</div></th>
-								   <th><div class="th-inner">Status</div></th>
+								   <th class="first">Model Number</th>
+								   <th>Description</th>
+								   <th>Item Price ($)</th>
+								   <th>Vendor Number</th>
+								   <th width="13%">Product Category</th>
+								   <th>Status</th>
 								  </tr>
 								 </thead>
 								 <tbody>
