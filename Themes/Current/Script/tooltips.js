@@ -25,10 +25,10 @@ $(document).ready(function() {
             "#number": "Enter model number to search by"
         },
         "DIQADFR": {
-            "#fNo": "Only numeric",
+            "#fNo": "Enter name to search by",
             "#fAddress": "Enter address to search by",
             "#fType": "Enter type to search by",
-            "#fReference": "Enter reference to search by"
+            "#fReference": "Only numeric"
         },
         "DIMMPVR": {
             "#emp-id": "Enter employee id"

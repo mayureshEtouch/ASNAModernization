@@ -22,7 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <div class="mdl-layout__container"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
+    <div class="mdl-layout__container">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -94,7 +94,7 @@
 
         </main>
         <div id="modal" class="simplePopup" style="position: absolute; top: 197px; left: 438.5px; display: none;"><div class="simplePopupClose">X</div>No data to display.<br></div>
-    </div></div>
+    </div>
     <div id="Div1" style="display:none;">
 
         <%--  IN: DSP Sub/Rpl Models    Display file                                                                           --%>
