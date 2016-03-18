@@ -146,7 +146,7 @@ $(document).ready(function() {
         },
         "DSM7DFR": {
             "#CenPH__lb_SFLCTL__lb_2ABCD": "Enter company",
-            "#CenPH__lb_SFLCTL__lb_2AACD": "Enter location"
+            "#CenPH__lb_SFLCTL__lb_2AACD": "Only numeric"
         },
         "DSFMETR": {
             ".from-loc": "Only numeric",
@@ -157,7 +157,7 @@ $(document).ready(function() {
         },
         "DSEBETR": {
             ".payment": "Enter payment method",
-            ".amount": "Enter amount",
+            ".amount": "Only numeric",
             ".hasDatepicker": "Select request date",
             ".reference": "Enter reference code",
             ".approval-code": "Enter approval code"
