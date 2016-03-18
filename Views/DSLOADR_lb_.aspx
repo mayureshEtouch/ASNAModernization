@@ -5,7 +5,6 @@
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
     <%-- Migrated on 1/26/2016 at 1:42 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
     <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSLOADR# --%>
-    <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/Themes/Current/Styles/homepage.css")%>" />
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -494,7 +493,7 @@
 				},100)
 					} 
 
-            if ($("#CenPH_DSLOADD2_OUTQ1").length > 0) {
+            if ($("#CenPH_DSLOADD2_OUTQ1").length > 0 || $("#CenPH__DSLOADD2").length > 0) {
                 $('#location-entry-container').hide();
                 $('#output-queue').show();
 				$("[name='date']").text($("[id$=CenPH_DdsConstant9]").text());
