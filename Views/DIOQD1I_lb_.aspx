@@ -157,15 +157,15 @@
                                     <span class="summary-txt" id="a-customer-id"></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col">
-                                    <span class="summary-title">Addr Type:</span>
+                                    <span class="summary-title">Address Type:</span>
                                     <span class="summary-txt" id="a-customer-type"></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col">
-                                    <span class="summary-title">Ref#:</span>
+                                    <span class="summary-title">Reference #:</span>
                                     <span class="summary-txt" id="a-cust-addr-ref"></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col">
-                                    <span class="summary-title">Ver#:</span>
+                                    <span class="summary-title">Version #:</span>
                                     <span class="summary-txt" id="a-cust-addr-ver"></span>
                                 </div>
                             </div>
