@@ -851,8 +851,10 @@
 			     $('body').on('keyup keydown', function(event) {
 					var keycode = event.keycode || event.which;
 					if (keycode === 33) {
+					$("#warranty-term-list tbody").empty();
 						generateTable1();
 					} else if (keycode === 34) {
+					$("#warranty-term-list tbody").empty();
 						generateTable1();
 					}
 					return;
