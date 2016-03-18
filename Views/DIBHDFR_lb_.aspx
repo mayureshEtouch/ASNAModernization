@@ -525,6 +525,10 @@
 	#customerName tbody > tr:hover {
 		cursor: pointer;
 	}
+	.mdl-layout__content input[disabled][disabled], .mdl-layout__content textarea[disabled] {
+		color: #000;
+		opacity: 0.4;
+	}
 @media (min-width: 768px) and (max-width: 1023px) {
 .summary-label {
 	font-size: 11px;
