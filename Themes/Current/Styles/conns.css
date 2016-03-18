@@ -1265,6 +1265,7 @@ input[maxlength='4'] {
 	vertical-align: top;
 }
 .order-detail-table-data .mdl-data-table th {
+	font-size: 11px;
 	line-height: 18px;
 }
 .table-data-content-container .mdl-data-table th, .table-data-content-container .mdl-data-table td , .order-detail-table-data .mdl-data-table th, .order-detail-table-data .mdl-data-table td {
@@ -1292,6 +1293,9 @@ input[maxlength='4'] {
 .order-detail-table-data .mdl-textfield__input, .order-detail-table-data select, .table-data-content-container .mdl-textfield__input, .table-data-content-container select {
 	border: 1px solid #c5c5c5;
 	border-radius: 2px;/*width: 100%;*/ 
+}
+.order-detail-table-data .mdl-textfield__input, .order-detail-table-data select {
+	font-size: 11px;
 }
 .order-detail-table-data select {
 	padding-left: 0;

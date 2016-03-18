@@ -108,19 +108,19 @@
                                     <thead>
                                         <tr>
 											<th style="width: 2%">&nbsp;</th>
-                                            <th style="width: 8%">Delivery <br />Status</th>
+                                            <th style="width: 7%">Delivery <br />Status</th>
                                             <th style="width: 7%;">From <br />Location</th>
                                             <th style="width: 4%">Quantity</th>
-                                            <th style="width: 10%">Model <br />Number</th>
-											 <th style="width: 12%">Model <br />Name</th>
+                                            <th style="width: 14%">Model <br />Number</th>
+											 <th style="width: 8%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
                                             <th style="width: 6%">Installation <br />Code</th>
-											<th style="width: 4%">Instructions</th>
+											<th style="width: 9%">Instructions</th>
                                             <th style="width: 3%">Level</th>
                                             <th style="width: 3%">Warranty</th>
                                             <th style="width: 3%">Credit</th>
-                                            <th style="width: 9%">Actual <br />Price ($)</th>
-                                            <th style="width: 9%">Extended <br />Price ($)</th>
+                                            <th style="width: 7%">Actual <br />Price ($)</th>
+                                            <th style="width: 7%">Extended <br />Price ($)</th>
                                             <th style="width: 5%">Installation <br />Price ($)</th>
                                             <th style="width: 7%">Status</th>
                                         </tr>
