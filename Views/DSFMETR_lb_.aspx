@@ -108,11 +108,11 @@
                                     <thead>
                                         <tr>
 											<th style="width: 2%">&nbsp;</th>
-                                            <th style="width: 7%">Delivery <br />Status</th>
-                                            <th style="width: 7%;">From <br />Location</th>
+                                            <th style="width: 5%">Delivery <br />Status</th>
+                                            <th style="width: 5%;">From <br />Location</th>
                                             <th style="width: 4%">Quantity</th>
                                             <th style="width: 14%">Model <br />Number</th>
-											 <th style="width: 8%">Model <br />Name</th>
+											 <th style="width: 12%">Model <br />Name</th>
                                             <th style="width: 8%">Serial <br />Number</th>
                                             <th style="width: 6%">Installation <br />Code</th>
 											<th style="width: 9%">Instructions</th>
