@@ -72,10 +72,10 @@
                           <div class="mdl-cell mdl-cell--10-col search-container">
                             <div class="content-grid mdl-grid">
                               <div class="mdl-cell mdl-cell--1-col">
-                                <span class="summary-table-title pull-right">No.</span>
+                                <span class="summary-table-title pull-right">Name</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fNo" class="mdl-textfield__input" maxlength="10">
+                                <input type="text"  id="fNo" class="mdl-textfield__input" maxlength="20">
                               </div>
                               <div class="mdl-cell mdl-cell--1-col">
                                 <span class="summary-table-title pull-right">Address</span>
@@ -87,13 +87,13 @@
                                 <span class="summary-table-title pull-right">Type</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fType" class="mdl-textfield__input">
+                                <input type="text" maxlength="3"  id="fType" class="mdl-textfield__input">
                               </div>
                               <div class="mdl-cell mdl-cell--1-col">
                                 <span class="summary-table-title pull-right">Reference</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fReference" class="mdl-textfield__input" maxlength="3">
+                                <input type="text"  id="fReference" class="mdl-textfield__input" maxlength="9">
                               </div>
                             </div>
                           </div>
@@ -126,14 +126,14 @@
                         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerAddress">
                             <thead>
                               <tr>
-                                <th>Type</th>
-                                <th>Reference #</th>
-                                <th>Version</th>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Phone Number</th>
-                                <th>Zip Code</th>
-                                <th>Build</th>
+                                <th width="25%">Name</th>
+                                <th width="29%">Address</th>
+                                <th width="12%">Phone Number</th>
+                                <th width="8%">Zip Code</th>
+                                <th width="5%">Type</th>
+                                <th width="8%">Reference #</th>
+                                <th width="5%">Version</th>
+                                <th width="8%">Build</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -279,7 +279,8 @@
 
     }
     // Search by Customer data table record mapping
-    var dataMergeIndices = [[2], [3], [8], [4], [1], [5], [0], [6, "<br>", 7]];
+    //var dataMergeIndices = [[2], [3], [8], [4], [1], [5], [0], [6, "<br>", 7]];
+    var dataMergeIndices = [[4],[1],[5],[0],[2], [3], [8],[6, "<br>", 7]];
     generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
                
                 
@@ -297,7 +298,7 @@
                                $("#" + a[0] + "\\." + a[1]).val(value);
                                _00('Enter', event);
                            }
-
+       $("#fReference").ForceNumericOnly();
     });
     </script>
         <div id="Div1" style="display:none;">
