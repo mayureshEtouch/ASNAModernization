@@ -55,8 +55,8 @@
             <section class="form-data" id="first-message">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue&nbsp;?</strong>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue&nbsp;?</strong>
                         </span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
@@ -85,8 +85,8 @@
             <section class="form-data" id="second-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Account for Cust not on GE Money System</span></div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue&nbsp;?</strong></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">Account for Cust not on GE Money System</span></div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue&nbsp;?</strong></span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
@@ -766,7 +766,7 @@
             }
             #CenPH__lb_SFLCTL__lb_PPTST {
               position: static !important;
-              width: 45px !important;
+              width: 120px !important;
             }
 			#notice-first li {
 				list-style: none;
@@ -778,6 +778,7 @@
         left: 30% !important;
         top: 40% !important;
       }
+
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
