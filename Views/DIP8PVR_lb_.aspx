@@ -352,9 +352,9 @@
             }
             $(document).ready(function () {
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
-                $('.close-icon').click(function (event) {
-                    _00("F12", event);
-                });
+                /*$('.close-icon').click(function (event) {
+                    _00("F3", event);
+                });*/
                 $('#next').click(function (event) {
                     _00("Enter", event);
                 });
