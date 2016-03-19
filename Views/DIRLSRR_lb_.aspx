@@ -534,6 +534,21 @@
             $("[name='Category']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
             $("[name='Group']").text($("[id$=CenPH__lb_SFLCTL__lb_2AWCD]").text());
             generateTableAndApplyInfiniteScroll("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "warranty-submit");
+            $('body').on("click", "#next-page, #previous-page", function(event) {
+                $("#previous-page,#next-page").remove();
+                setTimeout(function(){
+                    if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                        $("#selectWarranty").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                    if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                        $("#selectWarranty").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                    }
+                    if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                        $('#eof-indicator').remove();
+                        $("#selectWarranty").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                },10)
+            });
             $('.close-icon').click(function (event) {
                 _00("F12", event);
             });
