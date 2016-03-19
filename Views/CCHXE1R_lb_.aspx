@@ -113,7 +113,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                         <span class="form-label clm-form-label">License #:</span>
-                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2"><span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="20"><span id="ro-cust-lic-second" class="ro-data"></span></span>
+                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2"><span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="8"><span id="ro-cust-lic-second" class="ro-data"></span></span>
                                     </div>
                                 </div>
                             </div>
