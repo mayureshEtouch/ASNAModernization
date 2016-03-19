@@ -105,9 +105,10 @@
 
 
         </main>
-        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-        <div id="modal" class="simplePopup"></div>
+        
     </div>
+    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
 
     <div id="Div1" style="display:none;">
