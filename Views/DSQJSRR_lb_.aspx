@@ -101,7 +101,7 @@
 										<tr>
 											<th width="12%" class="first"><div class="th-inner">Payment Method</div></th>
 											<th width="20%"><div class="th-inner">From</div></th>
-											<th width="30%"><div class="th-inner">Thru</div></th>
+											<th width="30%"><div class="th-inner">Through</div></th>
 											<th><div class="th-inner">Description</div></th>
 										</tr>
 									</thead>

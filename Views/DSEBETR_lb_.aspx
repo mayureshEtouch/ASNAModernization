@@ -1250,10 +1250,10 @@
 				if($("#CenPH__lb_SFLRCD_0").length === 0) {
 					$("div#CenPH__lb_SFLRCD__End").remove();
                     $("#enterPayment").
-                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
                 }
 				
-                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
 			
 			  $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
 			  
@@ -1333,34 +1333,39 @@
             $('[id^="CenPH__lb_SFLRCD__lb_RNICD"]').addClass("payment");
             $('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').addClass("reference");
             $('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
+			
+		
+				
 		
 			
 			function renderPage() {
 					
 					$("div#CenPH__lb_SFLRCD__End").remove();
-			$("#previous-page,#next-page").remove();
-				if($("#CenPH__lb_SFLRCD_0").length === 0) {
-					$("div#CenPH__lb_SFLRCD__End").remove();
-                    $("#enterPayment").
-                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
-                }
+					$("#previous-page,#next-page").remove();
+					if($("#CenPH__lb_SFLRCD_0").length === 0) {
+						$("div#CenPH__lb_SFLRCD__End").remove();
+						$("#enterPayment").
+							after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+					}
 				
-                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+				
+				$("#CenPH__lb_SFLRCD select").empty();
+				$("#CenPH__lb_SFLRCD select").css({'float'  : 'right','margin-right' : '12%','width' : '80px','margin-top' : '3px'});
+				$("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+				
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
 				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
 				
-				$("#CenPH__lb_SFLRCD select").empty();
-			$("#CenPH__lb_SFLRCD select").css({'float'  : 'right','margin-right' : '12%','width' : '80px','margin-top' : '3px'});
-            $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
-			
 				var mainWidth = $("#payment-method th:first-child").width();
 				var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
 
 				var blankWidth = mainWidth  - inputWidth + 2;
 				$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right",blankWidth);
 				$("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("margin-right",blankWidth);
+
 			}
 			
 			//DdsSubfileRecord tabindex
@@ -1378,15 +1383,16 @@
 		   },100)
 			//}
            renderPage();
-                $('body').on('keyup keydown', function(event) {
-        var keycode = event.keycode || event.which;
-        if (keycode === 33) {
-            renderPage();
-        } else if (keycode === 34) {
-            renderPage();
-        }
-        return;
-    });
+       $('body').on('keyup keydown', function(event) {
+			var keycode = event.keycode || event.which;
+			if (keycode === 33) {
+				renderPage();
+			} else if (keycode === 34) {
+				renderPage();
+			}
+			event.stopPropagation();
+			return;
+		});
         });
     </script>
 </asp:Content>
