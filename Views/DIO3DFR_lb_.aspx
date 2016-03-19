@@ -109,7 +109,7 @@
                                     <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop"> <span data-upgraded=",MaterialButton,MaterialRipple" id="previous" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Previous<span class="mdl-button__ripple-container"><span style="width: 173.114px; height: 173.114px; transform: translate(-50%, -50%) translate(50px, 21px);" class="mdl-ripple is-animating"></span></span>
                                         </span>
                                     </div> -->
-                                    <div class="mdl-cell mdl-cell--6-col-desktop pull-right"> <span id="next" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    <div class="mdl-cell mdl-cell--12-col-desktop pull-right"> <span id="next" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                         </span>
                                     </div>
                                 </div>

@@ -9,6 +9,11 @@
 <link rel="stylesheet" type="text/css" href="~/Themes/Current/Styles/Framework.css">
 <link rel="stylesheet" type="text/css" href="~/Themes/Current/Styles/Theme.css">
 <asp:ContentPlaceHolder runat="server" id="HeaderPH" />
+<style>
+	div#wrapper * {
+    position: relative;
+}
+</style>
 </head>
 <body class="no-overflow">
 <form id="form1" runat="server">
@@ -19,7 +24,7 @@
     </div>
 </div><!-- #header -->
 <div id="content" class="content clearfix">
-    <div id="fkeys" class="fkeys">
+    <div id="fkeys" class="fkeys" style="min-height: 100px;    float: left;">
         <asp:ContentPlaceHolder ID="FKeyPH" runat="server" />
     </div><!-- #fkeys -->
     <div id="main-content" class="main-content">
