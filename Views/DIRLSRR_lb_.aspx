@@ -582,5 +582,9 @@ width: 100% !important;
         #__Page_Hidden{
             height: 800px !important;
         }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
     </style>
 </asp:Content>
