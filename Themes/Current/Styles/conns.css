@@ -1282,6 +1282,7 @@ input[maxlength='4'] {
 	height: auto;
 	line-height: 14px;
 	word-wrap: break-word;
+	font-size: 11px;
 }
 .order-detail-table-data .mdl-data-table td span.numText, .table-data-content-container .mdl-data-table td span.numText {
 	text-align: right;

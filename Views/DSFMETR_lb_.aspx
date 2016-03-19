@@ -1524,6 +1524,7 @@
 	.order-detail-table-data .mdl-data-table td span {
 		display: inline-block;
 		padding-top: 3px;
+		font-size: 11px;
 	}
     </style>
 	 <script type="text/javascript">
