@@ -621,7 +621,7 @@ tr.selected {
             $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
 			
             // Search by Customer data table record mapping
-            var dataMergeIndices = [[0], [1, "&nbsp;&nbsp;&nbsp;", 8], [2, "&nbsp;", 9, "&nbsp;&nbsp;&nbsp;", 5, "&nbsp;&nbsp;&nbsp;", 7,"&nbsp;&nbsp;&nbsp;", 6],[3]];
+            var dataMergeIndices = [[0], [1, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", 8], [2, "&nbsp;", 9, "&nbsp;&nbsp;&nbsp;", 5, ",&nbsp;", 7,",&nbsp;", 6],[3]];
 			
             generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "next", dataMergeIndices);
 			

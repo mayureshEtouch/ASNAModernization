@@ -109,7 +109,7 @@
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Notes ? :</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_notes" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Tax exempt ? :</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Tax Exempt ? :</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_taxExempt" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
