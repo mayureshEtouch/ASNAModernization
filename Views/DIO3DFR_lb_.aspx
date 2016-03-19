@@ -68,11 +68,11 @@
                         <div class="table-data-maincontainer">
                             <div class="table-container filter-search-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet filter-txt-cnt"> <span class="summary-table-title">Filter by:&nbsp;&nbsp;&nbsp;</span> </div>
                                     <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
                                         <div class="content-grid mdl-grid">
-                                            <div class="mdl-cell mdl-cell--3-col"> <span class="summary-table-title pull-right">Type</span> </div>
-                                            <div class="mdl-cell mdl-cell--8-col">
+                                            <div class="mdl-cell mdl-cell--4-col"> <span class="summary-table-title pull-right">Type</span> </div>
+                                            <div class="mdl-cell mdl-cell--7-col">
                                                 <input type="text" class="mdl-textfield__input" id="CenPH__lb_SFLCTL__lb_2B5S_lb_new">
                                             </div>
                                         </div>
@@ -106,9 +106,9 @@
                             </div>
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop"> <span data-upgraded=",MaterialButton,MaterialRipple" id="previous" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Previous<span class="mdl-button__ripple-container"><span style="width: 173.114px; height: 173.114px; transform: translate(-50%, -50%) translate(50px, 21px);" class="mdl-ripple is-animating"></span></span>
+                                    <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop"> <span data-upgraded=",MaterialButton,MaterialRipple" id="previous" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Previous<span class="mdl-button__ripple-container"><span style="width: 173.114px; height: 173.114px; transform: translate(-50%, -50%) translate(50px, 21px);" class="mdl-ripple is-animating"></span></span>
                                         </span>
-                                    </div>
+                                    </div> -->
                                     <div class="mdl-cell mdl-cell--6-col-desktop pull-right"> <span id="next" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                         </span>
                                     </div>
@@ -573,7 +573,7 @@
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
                 var dataMergeIndices =  [[0], [1], [2]];
                 generateTableAndApplyInfiniteScroll("select-printer", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-                $('.close-icon').click(function (event) {
+                $('.close-icon, #previous').click(function (event) {
                     _00("F12", event);
                 });
                 //Error message
