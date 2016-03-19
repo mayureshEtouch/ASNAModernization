@@ -145,6 +145,7 @@ a:visited, .mdl-menu__item a {
 
 .time-date .pull-right {
 	flex: 1;
+	-webkit-flex:1;
 }
 .order-summary-wrapper .mdl-cell {
 	border-right: #c6c6c6 1px solid;
@@ -174,7 +175,8 @@ a:visited, .mdl-menu__item a {
 	margin: 0;
 	padding: 0;
 	line-height: normal;
-	display: flex;
+	display: -webkit-flex; /* NEW */
+    display: flex;
 }
 .progress-bar .progress-bar-main li {
 	float: left;
@@ -203,6 +205,7 @@ a:visited, .mdl-menu__item a {
 }
 .progress-bar .step-width {
 	flex: 1;
+	 -webkit-flex:1;
 }
 /* progress bar css ends here */
 
@@ -245,8 +248,11 @@ a:visited, .mdl-menu__item a {
 /*Signon screen CSS ends */
 
 /* Button CSS starts */
-.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
+.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled{
 	color: #fff;
+	opacity: 0.2;
+}
+.mdl-layout__content input[disabled][disabled], .mdl-layout__content textarea[disabled] {
 	opacity: 0.2;
 }
 /* Button CSS ends */
@@ -919,8 +925,7 @@ textarea {
 .fixed-table-container-inner {
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 100%;
-	max-height: 282px;
+	height: auto;
 }
 .header-background {
 	height: 35px; /* height of header */
@@ -1015,11 +1020,31 @@ textarea {
 	width: 13%;
 }
 .filter-search-container{overflow: hidden;}
+input[maxlength='1'] {
+	width: 15px;
+}
+input[maxlength='3'] {
+	width: 30px;
+}
+input[maxlength='4'] {
+	width: 40px;
+}
+
 }
  @media (min-width: 1024px) and (max-width: 1100px) {
 #wrapper,  #span-content,  #content,  #main-content {
 	width: 100% !important;
 }
+input[maxlength='1'] {
+	width: 15px;
+}
+input[maxlength='3'] {
+	width: 30px;
+}
+input[maxlength='4'] {
+	width: 60px !important;
+}
+
 }
 
 @media (min-width: 768px) {
@@ -1031,6 +1056,10 @@ textarea {
 }
 .filter-search-container .search-container{
 	width: calc(84% - 0px);
+}
+#main-content {
+	margin-left: 0 !important;
+	border: none !important;
 }
 }
 
@@ -1202,6 +1231,7 @@ textarea {
 	overflow-y: auto;
 }
 .button-container {
+	clear: both;
 	margin: 0 5px;
 	padding: 0 0 10px;
 }
@@ -1235,6 +1265,7 @@ textarea {
 	vertical-align: top;
 }
 .order-detail-table-data .mdl-data-table th {
+	font-size: 11px;
 	line-height: 18px;
 }
 .table-data-content-container .mdl-data-table th, .table-data-content-container .mdl-data-table td , .order-detail-table-data .mdl-data-table th, .order-detail-table-data .mdl-data-table td {
@@ -1263,6 +1294,9 @@ textarea {
 	border: 1px solid #c5c5c5;
 	border-radius: 2px;/*width: 100%;*/ 
 }
+.order-detail-table-data .mdl-textfield__input, .order-detail-table-data select {
+	font-size: 11px;
+}
 .order-detail-table-data select {
 	padding-left: 0;
 }
@@ -1279,6 +1313,7 @@ textarea {
 }
 .order-detail-table-data .mdl-data-table tbody tr, .table-data-content-container .mdl-data-table tbody tr {
 	height: 28px;
+	position: static;
 }
 .order-detail-table-data .mdl-checkbox.is-checked .mdl-checkbox__tick-outline, .table-data-content-container .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
 	background: #e32527 url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIwIDAgMSAxIgogICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0Ij4KICA8cGF0aAogICAgIGQ9Ik0gMC4wNDAzODA1OSwwLjYyNjc3NjcgMC4xNDY0NDY2MSwwLjUyMDcxMDY4IDAuNDI5Mjg5MzIsMC44MDM1NTMzOSAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IE0gMC4yMTcxNTcyOSwwLjgwMzU1MzM5IDAuODUzNTUzMzksMC4xNjcxNTcyOSAwLjk1OTYxOTQxLDAuMjczMjIzMyAwLjMyMzIyMzMsMC45MDk2MTk0MSB6IgogICAgIGlkPSJyZWN0Mzc4MCIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIiAvPgo8L3N2Zz4K") repeat scroll 0 0;
@@ -1379,4 +1414,15 @@ body div, body span, body textarea {
 }
 .ui-tooltip {
   display: inline-block !important;
+}
+
+/* Previous & Next Icon */
+.prev-icon, .next-icon {
+	background: url('../Images/arrow-left.png') no-repeat;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+.next-icon {
+	background: url('../Images/arrow-right.png') no-repeat;
 }

@@ -25,10 +25,10 @@ $(document).ready(function() {
             "#number": "Enter model number to search by"
         },
         "DIQADFR": {
-            "#fNo": "Only numeric",
+            "#fNo": "Enter name to search by",
             "#fAddress": "Enter address to search by",
             "#fType": "Enter type to search by",
-            "#fReference": "Enter reference to search by"
+            "#fReference": "Only numeric"
         },
         "DIMMPVR": {
             "#emp-id": "Enter employee id"
@@ -40,26 +40,26 @@ $(document).ready(function() {
             //"#ssn": "Only numeric"
         },
         "CCHXE1R": {
-            "#cust-lic-second": "Enter customer license",
+            "#cust-lic-second": "Enter customer's license #",
             "#cust-birth": "Select birth date",
-            "#cust-lic-first": "Enter customer license",
+            "#cust-lic-first": "Enter customer's license #",
             "#ro-cust-ssn": "Only numeric",
             "#no-of-years": "Only numeric",
-            "#payment-of": "Enter payment",
-            "#phone-listed-as": "only numeric",
-            "#cust-dependents": "Enter customer dependents",
+            "#payment-of": "Only numeric",
+            "#phone-listed-as": "Only numeric",
+            "#cust-dependents": "Only 0 to 9 allowed",
             "#sp-name": "Enter spouse name",
-            "#sp-lic-first": "Enter license",
-            "#sp-lic-second": "Enter license",
-            "#sp-monthly-income": "Enter spouse income",
+            "#sp-lic-first": "Enter spouse's license #",
+            "#sp-lic-second": "Enter spouse's license #",
+            "#sp-monthly-income": "Only numeric",
             "#employed-at": "Enter employed at",
-            "#employed-at-duration-years": "Enter employed duration year",
-            "#employed-at-duration-months": "Enter employed duration month",
-            "#cust-income": "Enter customer income",
+            "#employed-at-duration-years": "Only numeric",
+            "#employed-at-duration-months": "Only numeric",
+            "#cust-income": "Only numeric",
             "#cust-supervisor": "Enter customer supervisor",
             "#ref-name": "Enter reference name",
             "#ref-address": "Enter reference address",
-            "#ref-zip-code": "Only numeric",
+            "#ref-zip-code": "Enter zip code",
             "#ref-phone": "Only numeric",
             //"#cust-ssn" : "Only numeric",
             //"#sp-ssn": "Only numeric",
@@ -69,7 +69,7 @@ $(document).ready(function() {
             "#requestdate": "Select date"
         },
         "DSQJSRR": {
-            "#number1": "Enter payment method to search by"
+            "#number1": "Enter payment method"
         },
         "DSIME1R": {
             "#middleInitial": "Enter name",
@@ -82,7 +82,7 @@ $(document).ready(function() {
             "#firstName": "Enter first name",
             "#address1": "Enter address",
             "#address2": "Enter address",
-            "#zcode": "Only numeric",
+            "#zcode": "Enter Zip Code",
             "#hphone1": "Only numeric",
             "#hphone2": "Only numeric",
             "#hphone3": "Only numeric",
@@ -90,17 +90,14 @@ $(document).ready(function() {
             "#emailAddress": "Enter email address"
         },
         "DIMLDFR": {
-            "#number2": "Enter reference to search by",
+            "#number2": "Only numeric",
             "#number1": "Enter type to search by"
         },
-        "DSQ0E1R": {
-            "#ext": "Only numeric",
-        },
         "DSB9E1R": {
-            "#middleInitial": "Enter Middle Initial",
+            "#middleInitial": "Enter middle initial",
             "#lastName": "Enter last name",
             "#businessName": "Enter business name",
-            "#zcode": "Only numeric",
+            "#zcode": "Enter zip code",
             "#bphone1": "Only numeric",
             "#bphone2": "Only numeric",
             "#bphone3": "Only numeric",
@@ -123,7 +120,7 @@ $(document).ready(function() {
             "#email": "Enter email address"
         },
         "CCJ0PVR": {
-            "#emp-name": "Enter Employee id",
+            "#emp-name": "Enter Employee ID",
             "#promotion": "Enter promotion"
         },
         "DIGFE1R": {
@@ -137,49 +134,53 @@ $(document).ready(function() {
             "#add-two": "Enter address"
         },
         "DSQ0E1R": {
-            "#input-phone-type": "Only numeric",
+            "#input-phone-type": "Choose a phone type",
             "#telephone": "Only numeric",
             "#ext": "Only numeric"
         },
         "DSCZE1R": {
-            "#CenPH__lb_RCDDTL1__lb_1AMTX": "Only numeric"
+            "#CenPH__lb_RCDDTL1__lb_1AMTX": "Enter Tax ID"
         },
         "DIQXDFR": {
             "#CenPH__lb_SFLCTL__lb_2Q1TX": "Enter reference to search by"
         },
         "DSM7DFR": {
             "#CenPH__lb_SFLCTL__lb_2ABCD": "Enter company",
-            "#CenPH__lb_SFLCTL__lb_2AACD": "Enter location"
+            "#CenPH__lb_SFLCTL__lb_2AACD": "Only numeric"
         },
         "DSFMETR": {
             ".from-loc": "Only numeric",
             ".mdl-textfield__input": "Only numeric",
             ".model-number": "Enter model number",
-            ".serial-number": "Enter serial number"
+            ".serial-number": "Enter serial number",
+            ".installation-codes": "Enter installation code"
         },
-        "DSEBETR":{
+        "DSEBETR": {
             ".payment": "Enter payment method",
-            ".amount": "Enter amount",
+            ".amount": "Only numeric",
             ".hasDatepicker": "Select request date",
             ".reference": "Enter reference code",
             ".approval-code": "Enter approval code"
         },
         "DSK6EFR": {
-            ".term-input": "Enter warranty"
-        },
-        "DSLOADR": {
-            "#enterYourCompany": "Enter company",
-            "#enterYourLocation": "Only numeric"
-        },
-        "SignOn": {
-            "#CenPH_RSignon_User": "Enter username",
-            "#CenPH_RSignon_Password": "Enter password"
+            ".term-input": "Enter warranty term"
         }
+        /*,
+                "DSLOADR": {
+                    "#enterYourCompany": "Enter company",
+                    "#enterYourLocation": "Only numeric"
+                },
+                "SignOn": {
+                    "#CenPH_RSignon_User": "Enter username",
+                    "#CenPH_RSignon_Password": "Enter password"
+                }*/
 
     }
+    $(".home-icon").tooltip();
     var promptWindows = ["CCCMPVI", "DIGFE1R", "DIJVPVR", "DIMMPVR", "DSQ0E1R"];
-    
-    var inputFieldsForToolTips = {}, currentScreen = "";
+
+    var inputFieldsForToolTips = {},
+        currentScreen = "";
     if (window.location.href.indexOf("SignOn") !== -1) {
         inputFieldsForToolTips = tooltipFields["SignOn"];
         applyTooltip();
@@ -195,19 +196,19 @@ $(document).ready(function() {
         for (var field in inputFieldsForToolTips) {
             if ($(field).length > 0) {
                 $(field).attr("title", inputFieldsForToolTips[field]);
-                if(currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
-                    
+                if (currentScreen === "CCHXE1R" && (field === "#cust-birth" || field === "#sp-birth")) {
+
                     $(field).tooltip({
                         position: {
                             my: "center top"
                         }
                     });
-                }else if(currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
-                    
+                } else if (currentScreen === "DSDZETR" && field === "#CenPH__lb_SFLCTL__lb_1AJCD") {
+
                     $(field).tooltip({
                         position: {
-                           my: "center top"
-                       }
+                            my: "center top"
+                        }
                     });
                 } else {
                     $(field).tooltip();

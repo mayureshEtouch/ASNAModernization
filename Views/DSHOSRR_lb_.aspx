@@ -20,7 +20,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!--  -->
 
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -56,20 +56,20 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-						   <div class="header-background"> </div>
-						   <div class="fixed-table-container-inner">
-							<table cellspacing="0" cellpadding="0" border="0" id="salesperson" class="navigateable">
+                        <div class="">
+						  <!--  <div class="header-background"> </div> -->
+						   <!-- <div class="fixed-table-container-inner"> -->
+							<table cellspacing="0" cellpadding="0" border="0" id="salesperson" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
 							 <thead>
-							  <tr data-myval="">
-							   <th class="first"><div class="th-inner">Code</div></th>
-							   <th><div class="th-inner">Name</div></th>
+							  <tr>
+							   <th><!-- <div class="th-inner"> -->Code<!-- </div> --></th>
+							   <th><!-- <div class="th-inner"> -->Name<!-- </div> --></th>
 							  </tr>
 							 </thead>
 							 <tbody>
 							 </tbody>
 							</table>
-						   </div>
+						   <!-- </div> -->
 						  </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
@@ -86,7 +86,6 @@
             </section>
 
         </main>
-    </div>
     <div id="modal" class="simplePopup"></div>
 
     <div id="Div1" style="display:none;">
@@ -462,6 +461,11 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
+<style>
+#salesperson tbody > tr:hover {
+	cursor: pointer;
+}
+</style>
     <script type="text/javascript">
         $(document).ready(function () {
             $("body").css({ "background-color": "#FFFFFF" });

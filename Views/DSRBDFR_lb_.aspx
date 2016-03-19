@@ -44,7 +44,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col">
                             <!-- Title -->
-                            <span class="heading-h1">Display Phone Number</span>
+                            <span class="heading-h1">Display Phone Numbers</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
@@ -101,6 +101,8 @@
         }
         #__Page_PopUp {
           width: 650px !important;
+		  left: 50% !important;
+		  margin-left: -325px !important;
         }
         #__Page_PopUp > tr:first-child {
          display: none;
@@ -131,6 +133,7 @@
                    var row = $("#customerPhones tbody tr.selected");
                    selectCusotmer(row, "2", event);
                });
+
                var selectCusotmer = function (row, value, event) {
                     var selectId = $(row).data('selectid');
                     a = selectId.split(".");

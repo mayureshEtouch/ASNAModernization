@@ -23,13 +23,13 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
             <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Display Whse Comments</span>
+                        <span class="heading-h1">Display Warehouse Comments</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -42,17 +42,17 @@
             <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
-                        <li class="white-to-gray-bullet"></li>
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
 
-                        <li class="progress-bar-step2 gray-bg step-width"><span class="step-title-selected">Step 2</span> <span class="step-txt-selected">Enter Sales Order</span> </li>
-                        <li class="progress-bar-divider-first"></li>
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                        <li class="progress-bar-divider"></li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                        <li class="progress-bar-divider"></li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
                         <div class="clear"></div>
@@ -71,7 +71,7 @@
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="whs-comments">
                                 <thead>
                                     <tr>
-                                        <th width="15%">Whse Comments</th>
+                                        <th width="15%">Warehouse Comments</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -96,7 +96,6 @@
             </section>
 
         </main>
-    </div>
 	<div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">

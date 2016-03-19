@@ -32,7 +32,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-headeddddr">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title logo-icon"></span>
@@ -63,11 +63,13 @@
                                         </div>
                                         <div class="mdl-cell mdl-cell--7-col">
                                             <span class="form-text">
-                                                <span id="cust-name">SST, SANTOSH G</span>
+                                                <span id="cust-name"></span>
                                             <br/>
-                                            <span id="cust-add1">TEXAS</span>
+                                            <span id="cust-add1"></span>
                                             <br/>
-                                            <span id="cust-zip">77703</span><span id="cust-add2">BEAUMONT</span><span id="cust-add3">TX</span>
+                                            <span id="cust-add2"></span>
+                                            <br/>
+                                            <span id="cust-city"></span>, <span id="cust-state">TX</span>, <span id="cust-zip"></span>
                                             </span>
                                         </div>
                                     </div>
@@ -113,11 +115,13 @@
                                         </div>
                                         <div class="mdl-cell mdl-cell--7-col">
                                             <span class="form-text">
-                                                <span id="cust-name-12">SST, SANTOSH G</span>
+                                                <span id="cust-name-2"></span>
                                             <br/>
-                                            <span id="cust-add12">TEXAS</span>
+                                            <span id="cust-add2-1"></span>
                                             <br/>
-                                            <span id="cust-zip2">77703</span><span id="cust-add22">BEAUMONT</span><span id="cust-add32">TX</span>
+                                            <span id="cust-add2-2"></span>
+                                            <br />
+                                            <span id="cust-city-2"></span>, <span id="cust-state-2"></span>, <span id="cust-zip-2"></span>
                                             </span>
                                         </div>
                                     </div>
@@ -850,16 +854,18 @@
                 "displayOnlyFields": {
                     "CenPH__lb_RCDDTL1__lb_1ALTX": "cust-name",
                     "CenPH__lb_RCDDTL1__lb_DBNTX": "cust-add1",
+                    "CenPH__lb_RCDDTL1__lb_DAOTX": "cust-add2",
                     "CenPH__lb_RCDDTL1__lb_DAPTX&nbsp;": "cust-zip",
-                    "CenPH__lb_RCDDTL1__lb_DBPTX&nbsp;": "cust-add2",
-                    "CenPH__lb_RCDDTL1__lb_DBMTX&nbsp;": "cust-add3",
+                    "CenPH__lb_RCDDTL1__lb_DBPTX&nbsp;": "cust-city",
+                    "CenPH__lb_RCDDTL1__lb_DBMTX&nbsp;": "cust-state",
                     "CenPH__lb_RCDDTL1__lb_DD1NB": "cust-home-phone1",
                     "CenPH__lb_RCDDTL1__lb_DD2NB": "cust-office-phone1",
-                    "CenPH__lb_RCDDTL1__lb_DWZTX": "cust-name-12",
-                    "CenPH__lb_RCDDTL1__lb_DANTX": "cust-add12",
-                    "CenPH__lb_RCDDTL1__lb_DC0XT&nbsp;": "cust-zip2",
-                    "CenPH__lb_RCDDTL1__lb_DAQTX&nbsp;": "cust-add22",
-                    "CenPH__lb_RCDDTL1__lb_DW6TX&nbsp;": "cust-add32",
+                    "CenPH__lb_RCDDTL1__lb_DWZTX": "cust-name-2",
+                    "CenPH__lb_RCDDTL1__lb_DANTX": "cust-add2-1",
+                    "CenPH__lb_RCDDTL1__lb_DBOTX": "cust-add2-2",
+                    "CenPH__lb_RCDDTL1__lb_DC0XT": "cust-zip-2",
+                    "CenPH__lb_RCDDTL1__lb_DAQTX": "cust-city-2",
+                    "CenPH__lb_RCDDTL1__lb_DW6TX": "cust-state-2",
                     "CenPH__lb_RCDDTL1__lb_DPPNB": "cust-home-phone2",
                     "CenPH__lb_RCDDTL1__lb_DPQNB": "cust-office-phone2",
                 },

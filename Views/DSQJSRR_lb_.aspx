@@ -22,7 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -101,7 +101,7 @@
 										<tr>
 											<th width="12%" class="first"><div class="th-inner">Payment Method</div></th>
 											<th width="20%"><div class="th-inner">From</div></th>
-											<th width="30%"><div class="th-inner">Thru</div></th>
+											<th width="30%"><div class="th-inner">Through</div></th>
 											<th><div class="th-inner">Description</div></th>
 										</tr>
 									</thead>
@@ -113,7 +113,7 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage"">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Submit</span>
@@ -125,7 +125,6 @@
             </section>
         </main>
         <div id="modal" class="simplePopup"></div>
-    </div>
     <div id="Div1" style="display:none;">
 
         <%--  SY: SEL Payment Method Select record                                                                             --%>

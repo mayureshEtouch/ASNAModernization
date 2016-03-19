@@ -62,20 +62,20 @@
                     <div class="table-data-maincontainer">
                         <div class="table-container filter-search-container">
                             <div class="content-grid mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+								<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet filter-txt-cnt">
                         			<span class="summary-table-title">Filter by:</span>
                         		</div>
-								<div class="mdl-cell mdl-cell--10-col search-container">
+								<div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
 									<div class="content-grid mdl-grid">
-										<div class="mdl-cell mdl-cell--1-col">
-                        					<span class="summary-table-title pull-right">Name</span>
+										<div class="mdl-cell mdl-cell--2-col">
+                        					<span class="summary-table-title pull-right">Model Number</span>
                         				</div>
-                        				<div class="mdl-cell mdl-cell--11-col">
+                        				<div class="mdl-cell mdl-cell--10-col">
                         					<input type="text" id="number" class="mdl-textfield__input">
                         				</div>
 									</div>
 								</div>
-								<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+								<div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet button-cnt-container">
                         			<div class="button-container">
          								<button class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</button>
         							</div>
@@ -104,25 +104,22 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow-y: visible;">
-                            <div class="fixed-table-container">
-							   <div class="header-background"> </div>
-							   <div class="fixed-table-container-inner">
-								<table cellspacing="0" cellpadding="0" border="0" id="customerName" class="navigateable" >
+                            
+								<table cellspacing="0" cellpadding="0" border="0" id="customerName" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" >
 								 <thead>
 								  <tr data-myval="">
-								   <th class="first"><div class="th-inner">Model Number</div></th>
-								   <th><div class="th-inner">Description</div></th>
-								   <th><div class="th-inner">Item Price ($)</div></th>
-								   <th><div class="th-inner">Vendor Number</div></th>
-								   <th width="13%"><div class="th-inner">Product Category</div></th>
-								   <th><div class="th-inner">Status</div></th>
+								   <th class="first">Model Number</th>
+								   <th>Description</th>
+								   <th>Item Price ($)</th>
+								   <th>Vendor Number</th>
+								   <th width="13%">Product Category</th>
+								   <th>Status</th>
 								  </tr>
 								 </thead>
 								 <tbody>
 								 </tbody>
 								</table>
-							   </div>
-							  </div>
+							  
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
@@ -698,7 +695,7 @@
 				width: calc(46.6% - 0px);
 			}
 		}
-        table tbody tr td:nth-child(3) { text-align: right; }
+        table tbody tr td:nth-child(3),  table tbody tr td:nth-child(4),  table tbody tr td:nth-child(5) { text-align: right; }
         #customerName tbody > tr:hover {
 			cursor: pointer;
 		}

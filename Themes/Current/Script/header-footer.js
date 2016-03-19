@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     // Add header section
-    var userName = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html() || " ";
-    var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("[id$='__lb__lb_JOB']").html() || " ";
+    var userName = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html() || $("#CenPH_MENUFMT_ZUSER").html() || " ";
+    var terminal = $("#CenPH__lb_SFLCTL__lb__lb_JOB").html() || $("#CenPH_DSLOADD1_TERM").html() || $("#CenPH_MENUFMT_ZTERM").html() || $("[id$='__lb__lb_JOB']").html() || " ";
     var header = "";
     header += "<div class=\"mdl-layout--fixed-header mdl-layout--large-screen-only\"><header class=\"mdl-layout__header is-casting-shadow \">";
     header += "            <div class=\"mdl-layout__header-row\">";
@@ -12,15 +12,15 @@
     header += "                <!-- Navigation -->";
     header += "                <span class=\"terminal\">Terminal #: " + terminal + "<\/span> <span class=\"black-divider\"><\/span>";
     header += "                <!--<i class=\"material-icons md-16\">help<\/i>-->";
-    header += "                <i class=\"material-icons md-15 mdl-badge notifications-icon\" data-badge=\"1\" title=\"Notification\"><\/i> <span class=\"black-divider\"><\/span><span class=\"home-icon\"><i class=\"material-icons md-15 home\" title=\"Home\"><\/i><\/span> <span class=\"black-divider\"><\/span>";
+    header += "                <i class=\"material-icons md-15 mdl-badge notifications-icon\" style=\"margin-right: 10px\" title=\"Notification\"><\/i> <span class=\"black-divider\"><\/span><span id=\"go-to-home\" class=\"home-icon\"><i class=\"material-icons md-15 home\" title=\"Home\"><\/i><\/span> <span class=\"black-divider\"><\/span>";
     header += "                <span class=\"user-icon\"><\/span>";
     header += "                <span class=\"username\">" + userName + "<\/span> <span id=\"demo-menu-lower-right\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons arrow-down\"><\/i><\/span>";
     header += "                <ul class=\"mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect\" for=\"demo-menu-lower-right\"><li id=\"user-logout\" class=\"mdl-menu__item\"><a href=\"javascript:void(0);\">Logout</a></li></ul>";
     header += "            <\/div>";
-    header += "        <\/header>";
+    header += "        <\/header></\div>";
 
     var loginHeader = "";
-    loginHeader += "<header class=\"mdl-layout__header is-casting-shadow\">";
+    loginHeader += "<div class=\"mdl-layout--fixed-header mdl-layout--large-screen-only\"><header class=\"mdl-layout__header is-casting-shadow \">";
     loginHeader += "            <div class=\"mdl-layout__header-row\">";
     loginHeader += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
     loginHeader += "                <div class=\"mdl-layout-spacer\"><\/div>";
@@ -72,6 +72,10 @@
     //Logout
     $("#user-logout").on("click", function(event) {
         window.location.href = "../Monarch/!EoJ.aspx/";
+    });
+
+    $("#go-to-home").click(function(event) {
+        _00("F3", event);
     });
 });
 

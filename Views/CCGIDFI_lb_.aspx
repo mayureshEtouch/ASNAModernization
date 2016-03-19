@@ -55,8 +55,8 @@
             <section class="form-data" id="first-message">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue&nbsp;?</strong>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="first"><strong>Continue&nbsp;?</strong>
                         </span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
@@ -85,8 +85,8 @@
             <section class="form-data" id="second-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--7-col"> <span class="form-text">Account for Cust not on GE Money System</span></div>
-                        <div class="mdl-cell mdl-cell--5-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue&nbsp;?</strong></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">Account for Cust not on GE Money System</span></div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="second"><strong>Continue&nbsp;?</strong></span> </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
@@ -124,7 +124,56 @@
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
-								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data" id="forth-message" style="display:none;">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="payerr"></span></div>
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="title-msg"></span></div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-data" id="fifth-message" style="display:none;">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="auterr"></span></div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label"></span></div>
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="title-msg-fifth"></span></div>
+                    </div>
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
@@ -135,9 +184,8 @@
             </section>
         </main>
         <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         </div>
-        <div id="modal" class="simplePopup" style="left: 30%;"></div>
-        <!-- <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div> -->
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             
@@ -678,7 +726,7 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
         <style>
-            #fkeys, #showDiagnostics, #footer {
+            #Div1, #fkeys, #showDiagnostics, #footer {
                 display: none;
             }
             #main-content {
@@ -688,17 +736,21 @@
                 height: 800px !important;
             }
               #__Page_PopUp {
-                left: 30% !important;
+                left: 50% !important;
+                margin-left: -225px;
+                min-width: 550px !important;
+                min-height: 450px !important;
+                height: auto !important;
             }
 
             #__Page_PopUp tbody tr:first-child {
-				        height: 0px !important;
+                 height: 0px !important;
                 display: none;
             }
 
             #__Page_PopUp .DdsInlinePopUpTitle {
                 height: 0 !important;
-				        width: 0 !important;
+                width: 0 !important;
             }
             .modal-dialog-container {
                 width: 100%;
@@ -714,17 +766,19 @@
             }
             #CenPH__lb_SFLCTL__lb_PPTST {
               position: static !important;
-              width: 45px !important;
+              width: 120px !important;
             }
-      			#notice-first li {
-      				list-style: none;
-      			}
-      			#notice-second li {
-      				list-style: none;
-      			}
-            .simplePopup {
-                left: 30% !important;
+            #notice-first li {
+                list-style: none;
             }
+            #notice-second li {
+                list-style: none;
+            }
+      #modal1 {
+        left: 30% !important;
+        top: 40% !important;
+      }
+
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -752,41 +806,59 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var divid = $(this);
                         divid.find('span').map(function(i, e) {
-						 notes += "<li>"+$(e).html() +"</li>";
-	                   });
+                         notes += "<li>"+$(e).html() +"</li>";
+                       });
                     }
                 });
-				
-				$("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
-				
+                
+                $("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
+                $("#CenPH__lb_SFLCTL__lb_PPTST option[value=' ']").text("Please Choose");
+                makeSelectDescriptive("CenPH__lb_SFLCTL__lb_PPTST",['Y','N'],['Yes','No'])
+                
+                $("#fifth-message").hide();
+                $("#forth-message").hide();
+                $("#third-message").hide();
+                $("#second-message").hide();
+                $("#first-message").hide();
+
                 if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Continue to GE Credit?") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#first");
                     $("#notice-first").html(notes);
-                    $("#second-message").hide();
                     $("#first-message").show();
                 } else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("No Cash Option Product on Invoice") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#third");
                     $("#nocopp").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
                     $("#third-message").show();
-                    $("#first-message").hide();
-                    $("#second-message").hide();
                     $("#modal1").css('left','32%');
                     $("#__Page_PopUp").css('height','380px');
+                } else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Over Max") !== -1) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#forth");
+                    $("#payerr").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+                    $("#title-msg").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
+                    $("#forth-message").show();
+                    //$("#modal1").css('left','32%');
+                    //$("#__Page_PopUp").css('height','380px');
+                }else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Unable to Authorize") !== -1) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#fifth");
+                    $("#auterr").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+                    $("#digit-label").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
+                    $("#title-msg-fifth").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
+                    $("#fifth-message").show();
+                    //$("#modal1").css('left','32%');
+                    //$("#__Page_PopUp").css('height','380px');
                 } else {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#second");
                     $("#notice-second").html(notes);
                     $("#second-message").show();
-                    $("#first-message").hide();
                 }
 
-                //Error message
                 if($(".simplePopupClose").length > 0) {
-                    $(".simplePopupBackground1").show();
+                   $(".simplePopupBackground1").show();
                 } else {
-                    $(".simplePopupBackground1").hide();
+                   $(".simplePopupBackground1").hide();
                 }
                 $("body").on("click", ".simplePopupClose", function() {
-                    $(".simplePopupBackground1").hide();
+                   $(".simplePopupBackground1").hide();
                 });
             });
         </script>

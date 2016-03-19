@@ -25,7 +25,6 @@
         <!-- Modified HTML code starts here -->
     <div class="OverlayPopupBackground"></div>
     <div class="mdl-layout__container">
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-upgraded" data-upgraded=",MaterialLayout">
             <main class="mdl-layout__content spacer-container-bottom ">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -123,7 +122,7 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
                                         <span class="form-text">
-                                        <input class="editable-data validateSSNLength" onkeyup="validateInput(this)" type="text" id="cust-ssn" size="15" maxlength="9">
+                                        <input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="9">
                                         <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-cust-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9">
                                         <span class="ro-data" id="ro-cust-ssn" ></span></span>
@@ -206,8 +205,8 @@
 									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
 										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
 										<span class="form-text">
-											<input class="editable-data validateSSNLength" onkeyup="validateInput(this)" type="text" id="sp-ssn" size="15" maxlength="9">
-                                        <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+											<input class="editable-data" type="text" id="sp-ssn" size="15" maxlength="9">
+                                        <span class="ssn-sp-show" id="ssn-sp-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
 											<span class="ro-data" id="ro-sp-ssn"></span>
 										</span>
@@ -314,7 +313,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Zip Code:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="5">
+									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="10">
 									<span class="ro-data" id="ro-ref-zip-code"></span>
 								</span>
                             </div>
@@ -341,13 +340,11 @@
                         </div>
                         <div class="button-container" style="padding-bottom:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop" style="padding-bottom:0;margin-left:9px">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:9px">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                    <span class="pull-right mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-left" style="padding-bottom:0">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop pull-right" style="padding-bottom:0">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>
@@ -367,7 +364,7 @@
               </div>
           </div>
         </div>
-    </div>
+    
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             
@@ -1834,37 +1831,50 @@
             });
             //Add validation rules
             //$("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income").ForceNumericOnly();
-            $("#cust-ssn,#sp-ssn,#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-zip-code,#ref-phone").ForceNumericOnly();
-            /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
+            $("#payment-of,#sp-monthly-income,#cust-income,#cust-dependents,#employed-at-duration-years,#employed-at-duration-months,#ref-phone").ForceNumericOnly();
             $("#no-of-years").numericWithCustomDecimalPrecisions(5,2);
+            /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#ref-phone").validatePhone();*///123/456-7890
+            $("#sp-ssn, #cust-ssn").ForceNumericOnly();
+            $("#sp-ssn").on("change keyup mouseup paste", function(event) {
+                maskUnmaskSSN("sp-ssn", event);
+            });
+            $("#cust-ssn").on("change keyup mouseup paste", function(event) {
+                maskUnmaskSSN("cust-ssn", event);
+            });
+            $("#sp-ssn, #cust-ssn").each(function(){
+                $(this).val($(this).val().replace(/\D/g,''));
+                $(this).trigger('change');
+            })
+            $("#ssn-show").on("mousedown", function() {
+                setTimeout(function() {
+                    var ssnValue = $("#cust-ssn").val();
+                    var dummyValue = $("#dummy-cust-ssn").val();
+                    $("#cust-ssn").val($("#dummy-cust-ssn").val());
+                    $("#dummy-cust-ssn").val(ssnValue);
+                },0);
+            });
+            $("#ssn-sp-show").on("mouseup", function() {
+                  var ssnValue = $("#sp-ssn").val();
+                  var dummyValue = $("#dummy-sp-ssn").val();
+                  $("#sp-ssn").val($("#dummy-sp-ssn").val());
+                  $("#dummy-sp-ssn").val(ssnValue);
+            });
+            $("#ssn-show").on("mouseup", function() {
+                  var ssnValue = $("#cust-ssn").val();
+                  var dummyValue = $("#dummy-cust-ssn").val();
+                  $("#cust-ssn").val($("#dummy-cust-ssn").val());
+                  $("#dummy-cust-ssn").val(ssnValue);
+            });
+            $("#ssn-sp-show").on("mousedown", function() {
+                setTimeout(function() {
+                    var ssnValue = $("#sp-ssn").val();
+                    var dummyValue = $("#dummy-sp-ssn").val();
+                    $("#sp-ssn").val($("#dummy-sp-ssn").val());
+                    $("#dummy-sp-ssn").val(ssnValue);
+                },0);
+            });
 
-            $(".ssn-show").on("mousedown", function() {
-                var input = $(this).siblings('input[type=text]');
-                if(input){
-                    var ssnId = $(input).attr('id');
-                    if(ssnId){
-                       setTimeout(function(){
-                           var ssnValue = $("#"+ssnId).val();
-                           var dummyValue = $("#dummy-"+ssnId).val();
-                           $("#"+ssnId).val($("#dummy-"+ssnId).val());
-                           $("#dummy-"+ssnId).val(ssnValue);
-                       },10);
-                   }
-               }
-             });
-             $(".ssn-show").on("mouseup", function() {
-               var input = $(this).siblings('input[type=text]');
-               if(input){
-                   var ssnId = $(input).attr('id');
-                    if(ssnId){
-                         var ssnValue = $("#"+ssnId).val();
-                         var dummyValue = $("#dummy-"+ssnId).val();
-                         $("#"+ssnId).val($("#dummy-"+ssnId).val());
-                         $("#dummy-"+ssnId).val(ssnValue);
-                    }
-                }
-             });
              /*
              By default "Please Choose" would be selected
               */
@@ -1878,55 +1888,9 @@
              Space issue in Supervisor name
               */
              $("#cust-supervisor").val($("#CenPH__lb_RCDDTL1__lb_DWWTX").val());
-             //if($("#ctl00$CenPH$_lb_RCDDTL1_V1DOBD").text().trim()
-             setTimeout(function(){
-             var chars;
-             $('#cust-ssn').on("keyup",function(e){
-               var eleId = $(this).attr("id");
-               if($(this).val().indexOf('*') == -1)
-               {
-               chars = $(this).val();
-              }
-             else{
-              if(e.which == 8 || e.which ==46){ // backspace  
-                if (e.which==8 && getCharPos(this)==0){
-                }
-                else{
-                  chars = chars.replace(chars.charAt(getCharPos(this)),"");
-                 var curpos=getCharPos(this);  
-                 var sup = $('#'+eleId).val(chars);
-                 $('#'+eleId).selectRange(curpos);
-                }
-               }
-             }
-             $("#dummy-"+eleId).val(chars);
-             });
+             
 
-             },2000)
-             setTimeout(function(){
-             var chars2;
-             $('#sp-ssn').on("keyup",function(e){
-               var eleId = $(this).attr("id");
-               if($(this).val().indexOf('*') == -1)
-               {
-               chars2 = $(this).val();
-              }
-             else{
-              if(e.which == 8 || e.which ==46){ // backspace  
-                if (e.which==8 && getCharPos(this)==0){
-                }
-                else{
-                  chars2 = chars2.replace(chars2.charAt(getCharPos(this)),"");
-                 var curpos=getCharPos(this);  
-                 var sup = $('#'+eleId).val(chars2);
-                 $('#'+eleId).selectRange(curpos);
-                }
-               }
-             }
-             $("#dummy-"+eleId).val(chars2);
-             });
-
-             },2000);
+             //if($("#ctl00$CenPH$_lb_RCDDTL1_V1DOBD").text().trim()         
              /*$("#cust-ssn, #sp-ssn").on("blur focus",function(){
                 $("#cust-ssn-error").hide();
                 $("#sp-ssn-error").hide();

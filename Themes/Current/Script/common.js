@@ -48,8 +48,18 @@ var generateTableWithoutSpanIndex = function(recordCount, tableId, direction, ig
                 $("#" + tableId + " tbody tr:last").css("background-color", "#d8d8d8");
             }
         } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
-            var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
-            $("#" + tableId + " tbody").append(tr);
+            $("#previous-page,#next-page").remove();
+            if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+            }
+            if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+            }
+            /*if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                $('#eof-indicator').remove();
+                var tr = "<a id='eof-indicator' style='float: right;margin-right: 10px;'>" + $("#CenPH__lb_SFLRCD_End").html() + "</a>"
+                $("#" + tableId).after(tr);
+            }*/
         }
     });
 }
@@ -83,8 +93,18 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
             $("#" + tableId + " tbody").append(tr+dataArray+"</tr>");
 
         } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
-            var tr = '<tr id="CenPH__lb_SFLRCD__End_New" tabindex="4" style="cursor: default;"><td style="border: none;background-color: white;">' + $("#CenPH__lb_SFLRCD_End").html() + '</td></tr>'
-            $("#" + tableId + " tbody").append(tr);
+            $("#previous-page,#next-page").remove();
+            if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+            }
+            if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+            }
+            /*if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                $('#eof-indicator').remove();
+                var tr = "<a id='eof-indicator' style='float: right;margin-right: 10px;'>" + $("#CenPH__lb_SFLRCD_End").html() + "</a>"
+                $("#" + tableId).after(tr);
+            }*/
         }
     });
 }
@@ -120,6 +140,15 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
     }
+
+    $('body').on("click", "#next-page", function(event) {
+        _00("PgDn", event);
+        generateTable("top-to-bottom");
+    });
+    $('body').on("click", "#previous-page", function(event) {
+        _00("PgUp", event);
+        generateTable("top-to-bottom");
+    });
     generateTable("top-to-bottom");
     //Handle Page Up and Page Down events
     $('body').on('keyup', function(event) {
@@ -219,7 +248,7 @@ function copyData(fields, events) {
     }
     for (var ele in inputFields) {
         if ($("#" + ele).length > 0) {
-            $("#" + inputFields[ele]).val($("#" + ele).val().replace(/\s/g, ""));
+            $("#" + inputFields[ele]).val($("#" + ele).val());//.replace(/\s/g, ""));
             setHandlers(inputFields[ele], ele, events);
         }
 

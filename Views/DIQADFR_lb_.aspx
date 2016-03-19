@@ -23,7 +23,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
            
             <main class="mdl-layout__content">
                 <section class="time-date">
@@ -72,10 +72,10 @@
                           <div class="mdl-cell mdl-cell--10-col search-container">
                             <div class="content-grid mdl-grid">
                               <div class="mdl-cell mdl-cell--1-col">
-                                <span class="summary-table-title pull-right">No.</span>
+                                <span class="summary-table-title pull-right">Name</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fNo" class="mdl-textfield__input" maxlength="10">
+                                <input type="text"  id="fNo" class="mdl-textfield__input" maxlength="20">
                               </div>
                               <div class="mdl-cell mdl-cell--1-col">
                                 <span class="summary-table-title pull-right">Address</span>
@@ -87,13 +87,13 @@
                                 <span class="summary-table-title pull-right">Type</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fType" class="mdl-textfield__input">
+                                <input type="text" maxlength="3"  id="fType" class="mdl-textfield__input">
                               </div>
                               <div class="mdl-cell mdl-cell--1-col">
                                 <span class="summary-table-title pull-right">Reference</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col">
-                                <input type="text"  id="fReference" class="mdl-textfield__input" maxlength="3">
+                                <input type="text"  id="fReference" class="mdl-textfield__input" maxlength="9">
                               </div>
                             </div>
                           </div>
@@ -112,9 +112,9 @@
                         <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
                             <div class="mdl-cell mdl-cell--6-col pull-right">
-                                <div class="icon-container icon-disable">
+                                <div class="icon-container">
                                   <span class="icon-txt display-customer">Display</span>
-                                  <i class="material-icons md-15 md-light display-customer display-icon-disabled"></i></div>
+                                  <i class="material-icons md-15 md-light display-customer display-icon"></i></div>
                             </div>
                         </div>
                     </div>
@@ -123,17 +123,17 @@
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container" style="overflow: auto;">
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="customerAddress">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerAddress">
                             <thead>
                               <tr>
-                                <th>Typ</th>
-                                <th>Reference #</th>
-                                <th>Ver</th>
-                                <th>Name</th>
-                                <th>Address</th>
-                                <th>Phone Number</th>
-                                <th>Zip Code</th>
-                                <th>Build</th>
+                                <th width="25%">Name</th>
+                                <th width="29%">Address</th>
+                                <th width="12%">Phone Number</th>
+                                <th width="8%">Zip Code</th>
+                                <th width="5%">Type</th>
+                                <th width="8%">Reference #</th>
+                                <th width="5%">Version</th>
+                                <th width="8%">Build</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -146,7 +146,7 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="exit">Previous</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="exit">Next</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="next">Next</span>
                             </div>
                         </div>
                     </div>
@@ -161,8 +161,6 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
-        </div>
-        </div>
     <style>
          @media (min-width: 768px){
           .filter-search-container .button-cnt-container {
@@ -281,30 +279,13 @@
 
     }
     // Search by Customer data table record mapping
-    var dataMergeIndices = [[2], [3], [8], [4], [1], [5], [0], [6, "<br>", 7]];
+    //var dataMergeIndices = [[2], [3], [8], [4], [1], [5], [0], [6, "<br>", 7]];
+    var dataMergeIndices = [[4],[1],[5],[0],[2], [3], [8],[6, "<br>", 7]];
     generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
                
-                $('body').on('click', '#customerAddress tbody tr', function () {
-                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
-                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
-                    $(this).css({ "background-color": "#f1f1f1" });
-                    $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
-                    $(this).addClass("selected");
-                    $("div.icon-container").removeClass("icon-disable");
-                    $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
-                });
-                $('body').on('dblclick', '#customerAddress tbody tr', function () {
-                    $("#customerAddress tbody tr:even").css("background-color", "#fff");
-                    $("#customerAddress tbody tr:odd").css("background-color", "#fcfcfc");
-                    $(this).css({ "background-color": "#f1f1f1" });
-                    $(this).closest("#customerAddress tbody tr").siblings().removeClass("selected");
-                    $(this).addClass("selected");
-                    $("div.icon-container").removeClass("icon-disable");
-                    $('i.display-customer').removeClass('display-icon-disabled').addClass('display-icon');
-                    selectCusotmer(row, "1", event);
-                });
+                
                 $(".display-customer").click(function (event) {
-                    if ($(".icon-container").hasClass("icon-disable")) {
+                    if ($(".icon-container").hasClass("selected")) {
                         alert("Please select a address");
                     } else {
                         var row = $("#customerAddress tbody tr.selected");
@@ -317,7 +298,7 @@
                                $("#" + a[0] + "\\." + a[1]).val(value);
                                _00('Enter', event);
                            }
-
+       $("#fReference").ForceNumericOnly();
     });
     </script>
         <div id="Div1" style="display:none;">

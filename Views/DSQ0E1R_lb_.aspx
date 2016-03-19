@@ -11,6 +11,7 @@
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/tooltips.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -61,19 +62,19 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--12-col mdl-cell" id="div-add-edit-number" style="padding:0">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--5-col pull-right">
+                      <div class="mdl-cell mdl-cell--4-col pull-right">
                         <span class="form-label" style="margin-right:10px">Phone Type:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                      <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                           <span class="form-text" id="phone-type"></span>
                       </div>
                     </div>
 
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--5-col pull-right">
+                      <div class="mdl-cell mdl-cell--4-col pull-right">
                           <span class="form-label" style="margin-right:10px">Telephone #:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                      <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                           <span class="form-text">
                             <input type="text" maxlength="10" id="telephone" class="only-numeric mdl_textfield_input_small" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extension&nbsp;&nbsp;&nbsp;
                             <input type="text" id="ext" class="only-numeric mdl_textfield_input_small" size="5" maxlength="4" />
@@ -84,10 +85,10 @@
                   </div>
                   <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" id="div-number-type" style="padding:0" style="display:none;">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--5-col pull-right">
+                      <div class="mdl-cell mdl-cell--4-col pull-right">
                           <span class="form-label" style="margin-right:10px">Phone Type:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                      <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                         <span class="form-text">
                           <input type="text" id="input-phone-type" class="mdl_textfield_input_small uppercase" size="4" maxlength="3" />&nbsp;&nbsp;&nbsp;<span id="span-phone-types"></span>
                         </span>
@@ -99,7 +100,7 @@
           <div class="button-container" style="padding-bottom:0">
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
               <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop pull-left" style="padding-bottom:0; padding-left: 240px;">
-               <span class="error"></span>
+               <!-- <span class="error"></span> -->
               </div>
              <!--
 			  <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop" style="padding-bottom:0">
@@ -115,7 +116,8 @@
             </section>
     
     </main>
-     
+     <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+     <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         </div>
     <!-- <div id="modal" class="simplePopup"></div> -->
 
@@ -172,6 +174,14 @@
         .hide{
           display: none;
         }
+        #__Page_Hidden {
+          height: 100% !important;
+          position: fixed;
+        }
+        #modal1 {
+          left: 30% !important;
+          top: 40% !important;
+        }
         </style>
         <script type="text/javascript">
           $(document).ready(function () {
@@ -202,6 +212,7 @@
                 if(error_msg!=''){
                   $('.error').text(error_msg);
                 }
+                $('#telephone, #ext').ForceNumericOnly();
               }else if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length>0){
                 
 
@@ -249,6 +260,15 @@
                     event.preventDefault();
                 } 
             })
+            $("#telephone").val($("#telephone").val().replace(/\D/g, ""));
+            if($(".simplePopupClose").length > 0) {
+               $(".simplePopupBackground1").show();
+            } else {
+               $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+            });
           });
         </script>
         <div id="Div1" style="display:none;">

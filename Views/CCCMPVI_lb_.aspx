@@ -49,10 +49,10 @@
         <main class="mdl-layout__content">
         <section class="time-date">
             <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--8-col"> 
+                <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> 
                     <!-- Title --> 
                     <span class="heading-h1">Prompt to Find Customer</span> </div>
-                <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right"> 
                     <!-- Navigation --> 
                     <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCCMPVI</span></div>
             </div>
@@ -70,8 +70,9 @@
                               </div>
                               <div class="mdl-cell mdl-cell--7-col" style="margin:0">
                                   <span class="form-text">
-                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" />
-                                  <span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                                  <!-- <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" /> -->
+                                  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking" size="15" maxlength="9" style="width: 50% !important;" />
+                                  <a id="ssn-show" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>
                                   </span>
                                   <input type="hidden" id="dummy-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
                                   <!-- <span></span> -->
@@ -158,15 +159,15 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
-       $("#ssn-show").on("mousedown", function() {
-          setTimeout(function(){
+       $("#ssn-show").on("mousedown taphold", function() {
+          setTimeout(function() {
               var ssnValue = $("#ssn").val();
               var dummyValue = $("#dummy-ssn").val();
               $("#ssn").val($("#dummy-ssn").val());
               $("#dummy-ssn").val(ssnValue);
-          },10);
+          },0);
         });
-        $("#ssn-show").on("mouseup", function() {
+        $("#ssn-show").on("mouseup dragend", function() {
             var ssnValue = $("#ssn").val();
             var dummyValue = $("#dummy-ssn").val();
             $("#ssn").val($("#dummy-ssn").val());
@@ -184,32 +185,9 @@
         });
 
         $("#ssn").ForceNumericOnly();
-
-
-        setTimeout(function(){
-        var chars;
-        $('.masking').on("keyup",function(e){
-          var eleId = $(this).attr("id");
-          if($(this).val().indexOf('*') == -1)
-          {
-          chars = $(this).val();
-         }
-        else{
-         if(e.which == 8 || e.which ==46){ // backspace  
-           if (e.which==8 && getCharPos(this)==0){
-           }
-           else{
-             chars = chars.replace(chars.charAt(getCharPos(this)),"");
-            var curpos=getCharPos(this);  
-            var sup = $('#ssn').val(chars);
-            $('#ssn').selectRange(curpos);
-           }
-          }
-        }
-        $("#dummy-"+eleId).val(chars);
+        $("#ssn").on("change keyup mouseup paste", function(event) {
+            maskUnmaskSSN("ssn", event);
         });
-
-        },2000)
         
       });
     </script>

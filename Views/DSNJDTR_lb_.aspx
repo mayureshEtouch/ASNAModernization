@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -42,17 +41,17 @@
             <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
-                        <li class="white-to-gray-bullet"></li>
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
 
-                        <li class="progress-bar-step2 gray-bg step-width"><span class="step-title-selected">Step 2</span> <span class="step-txt-selected">Enter Sales Order</span> </li>
-                        <li class="progress-bar-divider-first"></li>
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                        <li class="progress-bar-divider"></li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                        <li class="progress-bar-divider"></li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
                         <div class="clear"></div>
@@ -62,23 +61,23 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
                             <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Version Number</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Employee ID</span>
                             <span class="summary-txt" id="employee-id"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Employee Name</span>
                             <span class="summary-txt" id="employee-name"></span>
                         </div>
-						 <div class="mdl-cell mdl-cell--2-col">
+						 <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
                             <span class="summary-title">Store</span>
                             <span class="summary-txt" id="store-code"></span>
                         </div>
@@ -90,36 +89,36 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                           <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin:0;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd mdl-cell--4-col-tablet" style="padding:0;margin:0;">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Order Date:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="order-date"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Home Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="home-phone"></span>
                                 </div>
 							</div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Work Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="work-phone"></span>
                                 </div>
 							</div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Billing Address:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text">
                                       <span id="billing-addr-1"></span><br/>
                                       <span id="billing-addr-2"></span><br/>
@@ -131,36 +130,36 @@
                                 </div>
                             </div>
                           </div>
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell-brd mdl-cell--4-col-tablet" style="padding:0">
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Date Stamp:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="date-stamp"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Delivery Code:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="delivery-code"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Expected Del Date:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="expected-del-date"></span>
                                 </div>
                             </div>
                               <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Shipping Address:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text">
                                       <span id="shipping-addr-1"></span><br/>
                                       <span id="shipping-addr-2"></span><br/>
@@ -183,13 +182,13 @@
                     
           <div class="button-container" style="padding-bottom:0;">
             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:5px;">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-cell--5-col-tablet" style="padding-bottom:0;margin-left:5px;">
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">previous</span>
                 <!--span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="returnToMenu" event-data="F3">Return to menu</span-->
               </div>
-              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0;px;">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-cell--3-col-tablet pull-right" style="padding-bottom:0;px;">
                 <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printInvoice" event-data="F6">Reprint invoice</span>
-                <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="whseComments" event-data="F5">Whse comments</span>
+                <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="whseComments" event-data="F5">Warehouse comments</span>
               </div>
             </div>
           </div>
@@ -203,7 +202,6 @@
     <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
 </section>
 <br/><br/> -->
-    </div>
     <div id="modal" class="simplePopup"></div>
     
         <div id="Div1" style="display:none;">
@@ -1089,8 +1087,8 @@
           /*setDateTime(dateFieldId,timeFieldId)*/
           setDateTime('CenPH_DdsConstant15','CenPH__lb_SFLCTL__lb__lb_TME');
 
-          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL__lb_2AACD',    '#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAOTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEUTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX'];
-          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-2-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-2-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5'];
+          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL_V2AXDT','#CenPH__lb_SFLCTL__lb_2AACD','#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAOTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEUTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX'];
+          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#expected-del-date','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-2-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-2-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5'];
           for (var i = 0; i < old_fields.length; i++) {
             $(new_fields[i]).text($.trim($(old_fields[i]).text()));
           };
@@ -1125,10 +1123,25 @@
               $("#special-instructions span:odd").css("background-color", "#fff");
               $("#special-instructions span:even").css("background-color", "#f9f9f9");
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-              var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
-              $("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
-              $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
+              if ($("#CenPH__lb_SFLRCD__End").length > 0) {
+                          $("#previous-page,#next-page").remove();
+                          if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                              $("#special-instructions").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+                          }
+                          if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                              $("#special-instructions").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                          }
+                          /*if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                              $('#eof-indicator').remove();
+                              var tr = "<a id='eof-indicator' style='float: right;margin-right: 10px; margin-top: 7px;'>" + $("#CenPH__lb_SFLRCD_End").html() + "</a>"
+                              $("#special-instructions").after(tr);
+                          }*/
+                      }
+              //var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
+              //$("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
+              //$("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
           }
+
           generateSpecialInstructionsSection();
           $('body').on('keydown', function (event) {
               var keycode = event.keyCode || event.which;
@@ -1142,6 +1155,14 @@
                   setTimeout(generateSpecialInstructionsSection, 1000);
               }
               return;
+          });
+          $('body').on("click", "#next-page", function(event) {
+            _00("PgDn", event);
+              setTimeout(generateSpecialInstructionsSection, 1000);
+          });
+          $('body').on("click", "#previous-page", function(event) {
+              _00("PgUp", event);
+            setTimeout(generateSpecialInstructionsSection, 1000);
           });
       });
     </script>

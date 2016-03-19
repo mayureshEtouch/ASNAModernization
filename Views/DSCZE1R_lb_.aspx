@@ -24,7 +24,7 @@
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
       <div class="OverlayPopupBackground"></div>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -66,7 +66,7 @@
                         <div class="mdl-cell mdl-cell--12-col">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col">
-                                    <span class="form-label" style="">Customer name:</span>
+                                    <span class="form-label" style="">Customer Name:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col">
                                     <span class="form-text" id="cust-name">SST, SANTOSH G</span>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col" >
-                                    <span class="form-label">Last changed by user:</span>
+                                    <span class="form-label">Last Changed by User:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col" >
                                     <span class="form-text" id="last-changed-by"></span>
@@ -90,7 +90,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col" >
-                                    <span class="form-label">Date last changed:</span>
+                                    <span class="form-label">Date Last Changed:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col">
                                     <span class="form-text" id="last-changed-date"></span>
@@ -100,13 +100,15 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--12-col" >
+                            <div class="mdl-cell mdl-cell--8-col">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous
                                 </span>
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit To Menu
                                 </span>
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="delete" data-upgraded=",MaterialButton,MaterialRipple">Delete
                                 </span>
+                            </div>
+														<div class="mdl-cell mdl-cell--4-col pull-right">
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit
                                 </span>
                             </div>
@@ -123,7 +125,6 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
           </div>
       </div>
-    </div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             

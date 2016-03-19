@@ -86,7 +86,9 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Home Phone Number:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_homenumber" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Work Phone Number:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_worknumber" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet"><span id="cus_worknumber" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="ext-div"><span class="input-label" style="display: inline-block;">Ext:</span><span id="cus_worknumber_ext" style="padding-left: 5px;font-size: 12px;"></span></div>
+                                <!-- <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet"></div> -->
                             </div>
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Cell Phone Number:</span></div>
@@ -122,7 +124,7 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7">Addresses</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8">Notes</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="audit"  event-data="F9">audit</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId"  event-data="F10">tax id</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId"  event-data="F10" style="display: none;">tax id</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="display-submit">next</span>
@@ -802,13 +804,17 @@
                 var type = $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().html();
                 type += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Type')").next().next().html();
                 var name = $("#CenPH__lb_RCDDTL1").find("span:contains('Name')").next().html();
-                var address = $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().html();
-                address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().next().html();
-                address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
-                 address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
+                //var address = $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().html();
+                //address += "</br>" + $("#CenPH__lb_RCDDTL1").find("span:contains('Address')").next().next().html();
+                //address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().html();
+                 //address += "&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().next().next().html();
+                 var address = $("#CenPH__lb_RCDDTL1__lb_PANTX").text();
+                 address += "<br>"+$("#CenPH__lb_RCDDTL1__lb_PAOTX").text();
+                 address += "<br>"+$("#CenPH__lb_RCDDTL1__lb_PAQTX").text()+", "+$("#CenPH__lb_RCDDTL1__lb_PADST").text();
                 var zipcode = $("#CenPH__lb_RCDDTL1").find("span:contains('Zip Code')").next().html();
                 var homePhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Home Phone Number')").next().html();
                 var workPhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Work Phone Number')").next().html();
+                var workPhoneNumberExt = $("#CenPH__lb_RCDDTL1__lb_DEONB").text();
                 var cellPhoneNumber = $("#CenPH__lb_RCDDTL1").find("span:contains('Cell Phone Number')").next().html();
                 var mailingList = $("#CenPH__lb_RCDDTL1").find("span:contains('Mailing List ?')").next().html();
                 var additionalAddresses = $("#CenPH__lb_RCDDTL1").find("span:contains('Additional address ?')").next().html();
@@ -828,6 +834,10 @@
                 $("#cus_zipcode").html(zipcode);
                 $("#cus_homenumber").html(homePhoneNumber);
                 $("#cus_worknumber").html(workPhoneNumber);
+                $("#cus_worknumber_ext").html(workPhoneNumberExt);
+                if($("#cus_worknumber_ext").text().length == 0){
+                    $("#ext-div").hide();
+                }
                 $("#cus_cellnumber").html(cellPhoneNumber || "Not Available");
                 $("#cus_mailinglist").html(mailingList || "Not Available");
                 $("#cus_additionaladdress").html(additionalAddresses || "Not Available");

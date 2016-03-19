@@ -23,7 +23,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -106,7 +106,6 @@
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
                 </div>
               </div>
-        </div>
         <style type="text/css" media="screen">
           .sp-inst {
               text-transform: uppercase !important;
@@ -178,11 +177,39 @@
                     copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
                 }
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-                var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
-                $("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
-                $("#special-instructions").prepend('<legend id="legen">Notes:</legend>');
+                
+                  if ($("#CenPH__lb_SFLRCD__End").length > 0) {
+                      $("#previous-page,#next-page").remove();
+                      if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                          $("#special-instructions").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+                      }
+                      //if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                          $("#special-instructions").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                     // }
+                      /*if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                          $('#eof-indicator').remove();
+                          $("#special-instructions").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                      }*/
+                  }
+                
+  
+                
+
+                //var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
+                //$("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
+                //$("#special-instructions").prepend('<legend id="legen">Notes:</legend>');
             }
             generateSpecialInstructionsSection();
+
+
+             $('body').on("click", "#next-page", function(event) {
+                _00("PgDn", event);
+                generateSpecialInstructionsSection();
+            });
+            $('body').on("click", "#previous-page", function(event) {
+                _00("PgUp", event);
+                generateSpecialInstructionsSection();
+            });
             $('body').on('keydown', function (event) {
                 var keycode = event.keyCode || event.which;
                 if (keycode === 33) {
@@ -196,6 +223,7 @@
                 }
                 return;
             });
+           
           });
         </script>
         <div id="Div1" style="display: none;">

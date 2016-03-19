@@ -23,7 +23,7 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -77,7 +77,7 @@
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
-                                    <span class="summary-label">Customer Name/ Partial Name :</span>
+                                    <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                         <input type="text" id="name" class="mdl-textfield__input" disabled>
                                     </div>
@@ -126,7 +126,7 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 15%">Telephone #</th>
-                                        <th style="width: 10%">Typ</th>
+                                        <th style="width: 10%">Type</th>
                                         <th style="width: 17%">Customer</th>
                                         <th style="width: 55%">Address</th>
                                         <th style="width: 3%">C</th>
@@ -153,7 +153,6 @@
 
         </main>
         <div id="modal" class="simplePopup"></div>
-    </div>
     <div id="Div1" style="display:none;">
 
         <%--  CU: DSP Numbers by #      Display file                                                                           --%>
@@ -522,11 +521,20 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-	<style>
-		#customerName tbody > tr:hover {
-			cursor: pointer;
-		}
-	</style>
+<style>
+	#customerName tbody > tr:hover {
+		cursor: pointer;
+	}
+	.mdl-layout__content input[disabled][disabled], .mdl-layout__content textarea[disabled] {
+		color: #000;
+		opacity: 0.4;
+	}
+@media (min-width: 768px) and (max-width: 1023px) {
+.summary-label {
+	font-size: 11px;
+}
+}
+</style>
     <script type="text/javascript">
         $(document).ready(function () {
             window.DSBPDFR = window.DSBPDFR || {}

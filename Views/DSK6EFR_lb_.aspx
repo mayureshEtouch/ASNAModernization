@@ -789,7 +789,6 @@
                 });
             }
             generateTable1();
-
             //Set input term value to original term text box
             $('body').on('change keyup keydown', 'input.term-input', function (e) {
                 if (e.which != 115) {
@@ -810,7 +809,6 @@
                 $("#CenPH__lb_SFLRCD_" + index).find("input").val("?");
                 $("#CenPH__lb_SFLRCD_" + index).find("input").trigger(inpe);
             }
-
             $('body').on('click', '.warranty-term', function (event) {
                 _00('Enter', event);
             });
@@ -840,3 +838,5 @@
         $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>
 </asp:Content>
+
+

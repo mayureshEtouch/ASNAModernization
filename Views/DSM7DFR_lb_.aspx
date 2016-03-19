@@ -23,7 +23,6 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -85,18 +84,18 @@
 								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
                         			<span class="summary-table-title">Filter by:</span>
                         		</div>
-								<div class="mdl-cell mdl-cell--10-col search-container">
+								<div class="mdl-cell mdl-cell--10-col mdl-cell--5-col-tablet search-container">
 									<div class="content-grid mdl-grid">
 										<div class="mdl-cell mdl-cell--1-col">
                         					<span class="summary-table-title pull-right">Company</span>
                         				</div>
-                        				<div id="filter-by-co" class="mdl-cell mdl-cell--5-col">
+                        				<div id="filter-by-co" class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
                         					
                         				</div>
 										<div class="mdl-cell mdl-cell--1-col">
                         					<span class="summary-table-title pull-right">Location</span>
                         				</div>
-                        				<div id="filter-by-loc" class="mdl-cell mdl-cell--5-col">
+                        				<div id="filter-by-loc" class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
                         					
                         				</div>
 									</div>
@@ -145,14 +144,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <%--<tr>
-                                        <td>CON</td>
-                                        <td>001</td>
-                                        <td>HOUSTON WHSE</td>
-                                        <td>56</td>
-                                        <td>0</td>
-                                        <td>204</td>
-                                    </tr>--%>
+                                   
                                 </tbody>
                             </table>
                         </div>
@@ -172,7 +164,7 @@
 
         </main>
         <div id="modal" class="simplePopup"></div>
-    </div>
+   
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display:none;">
 

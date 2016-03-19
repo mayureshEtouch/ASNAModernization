@@ -120,7 +120,7 @@
                                 <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Zip Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="5">
+                                    <input type="text" id="cust-zipcode" name="cust-zipcode" class="zip-code" maxlength="10">
                                                                 &nbsp;</span> 
 									<span id="state" class="form-text" data-upgraded=",MaterialTextfield"></span>,&nbsp;
 									<span id="city" class="form-text" data-upgraded=",MaterialTextfield"></span>							
@@ -139,8 +139,7 @@
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield"> 
                                 <select name="" id="mailing-list">
-                                    <option selected="selected" value="Y"> Y </option>
-                                    <option value=" "> Please Choose </option>
+                                    <option value=" " selected="selected"> Please Choose </option>
                                     <option value="Y"> Y - Yes </option>
                                     <option value="0"> 0 - 12 Months COP Ap </option>
                                     <option value="1"> 1 - 18 Months COP Ap </option>
@@ -210,12 +209,12 @@
                         </div>
                         <div class="button-container">
                           <div class="content-grid mdl-grid">
-                              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitpage">Previous</span>
+                              <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitpage">Previous</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses">Addresses</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes">Notes</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phone">Phones</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                              <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right">
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
 							  </div>
                           </div>
@@ -1067,7 +1066,8 @@
             }
 
             #__Page_Hidden {
-                height: 920px !important;
+                height: 100% !important;
+				position: fixed !important;
             }
             #__Page_PopUp > tr:first-child {
              display: none;
@@ -1166,7 +1166,7 @@
                 });
                 //Validations
                 $("#extension, #work-phone").ForceNumericOnly();
-				$("#home-phone,#cell-phone").ForceNumericWithPasteOption();
+				$("#home-phone,#cell-phone").ForceNumericOnly();
 				//$("#extension, #work-phone").ForceNumericOnly();
 				//$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
             });
