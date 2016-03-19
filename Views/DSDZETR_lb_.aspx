@@ -60,7 +60,7 @@
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Order #/Version # </span>
                             <div class="summary-txt">
-                                <span id="CenPH_1BANB"></span><span>&nbsp;/&nbsp;</span><span id="verssion-number"></span>
+                                <span id="CenPH_1BANB"></span><span>/</span><span id="verssion-number"></span>
                             </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
@@ -1155,9 +1155,9 @@
 			
 		    //Set billing address
 								
-            $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html()+ "&nbsp;,");
-            $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html()+ "&nbsp;,");
-            $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + "&nbsp;,");
+            $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html()+ ", ");
+            $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html()+ ", ");
+            $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + ", ");
 			$("#CenPH_PAOTX").html(secAddr);
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
@@ -1327,12 +1327,12 @@
 			// To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
 			
-                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text()+  ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim()==""?"":","+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + "," + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
-               sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text()+($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim()==""?"":","+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + "," + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());	
+                sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text()+  ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
+               sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text()+($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());	
             }
             else {
-                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim()==""?"":","+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", " + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + "," + $("[id$='lb_SFLCTL__lb_CCXST']").text()  + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
-                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim()==""?"":","+$("[id$='lb_SFLCTL__lb_CEUTX']").text()) + ", " + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + "," + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
+                setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CCXST']").text()  + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
+                setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text()) + ", <br>" + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
 
             //Employee field validation
