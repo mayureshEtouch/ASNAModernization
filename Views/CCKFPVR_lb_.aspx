@@ -138,6 +138,8 @@
             </section>
         </main>
     </div>
+    <div class="simplePopupBackground1" style="display: none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
     <div id="Div1">
 
         <%--  OE: PMT to Enter Appl.    Prompt & validate record                                                               --%>
@@ -929,6 +931,15 @@
             $("#return-to-invoice,#close-modal").on("click", function (event) {
                 _00('F3', event);
             });
+            //Error message
+            if($(".simplePopupClose").length > 0) {
+                $(".simplePopupBackground1").show();
+            } else {
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function() {
+                $(".simplePopupBackground1").hide();
+            });
         });
 
 
@@ -962,5 +973,9 @@
 		#content {
 			height: auto !important;
 		}
+        .simplePopup {
+          left: 28% !important;
+          top: 40% !important;
+        }
     </style>
 </asp:Content>
