@@ -555,6 +555,10 @@ width: 100% !important;
         #form1 {
             margin-top: -20px;
         }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
