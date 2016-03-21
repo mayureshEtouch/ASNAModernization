@@ -902,6 +902,8 @@
                 //Set page details
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                 //Set page display data
+                $("#display-incoming-transfers td:nth-child(6)").css("text-align","right");
+
                 generateTableAndApplyInfiniteScroll("display-incoming-transfers", "CenPH__lb_SFLRCD", "NONE", "next");
                 $('body').on('click', '#exitPage', function (event) {
                     _00('F12', event);
