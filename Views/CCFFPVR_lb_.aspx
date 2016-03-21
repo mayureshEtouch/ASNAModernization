@@ -622,7 +622,8 @@
                 "inputFields": {
                     "CenPH__lb_RCDDTL1__lb_1BTXT" : "CenPH__lb_RCDDTL1__lb_1BTXT_new",
                     "CenPH__lb_RCDDTL1__lb_1Y1NB" : "CenPH__lb_RCDDTL1__lb_1Y1NB_new",
-                    "CenPH__lb_RCDDTL1__lb_1A4NB" : "CenPH__lb_RCDDTL1__lb_1A4NB_new"
+                    "CenPH__lb_RCDDTL1__lb_1A4NB" : "CenPH__lb_RCDDTL1__lb_1A4NB_new",
+                    "CenPH__lb_RCDDTL1__lb_1A4NB_new" : "dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new",
                 }
             }
             $(document).ready(function () {
@@ -631,6 +632,7 @@
                     _00("F12", event);
                 });
                 $('#next').click(function (event) {
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
                     _00("Enter", event);
                 });
                 $('#second-id-entry').click(function (event) {
@@ -651,6 +653,13 @@
                     $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
                     $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
                 });
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").on("change keyup mouseup paste", function(event) {
+                    maskUnmaskSSN("CenPH__lb_RCDDTL1__lb_1A4NB_new", event);
+                });
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").each(function(){
+                    $(this).val($(this).val().replace(/\D/g,''));
+                    $(this).trigger('change');
+                })
                 //Error message
                 if($(".simplePopupClose").length > 0) {
                     $(".simplePopupBackground1").show();
