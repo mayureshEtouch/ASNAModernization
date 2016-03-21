@@ -106,7 +106,7 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_1ANPR" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col ">
+                       <div class="mdl-cell mdl-cell--2-col ">
                             <span class="form-label">Payment Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
@@ -130,7 +130,6 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
                         </div>
-                        
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Order Total:</span>
                         </div>

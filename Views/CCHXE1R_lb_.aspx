@@ -154,18 +154,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-grid mdl-grid" style="margin: 0 15px;padding: 15px 0 0;">
-                            <div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
-                                <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                        <span class="form-label clm-form-label">Phone Listed as:</span>
+												<div class="content-grid mdl-grid" style="margin: 10px 15px 0;">												
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+															<span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-											<input class="editable-data" type="text" size="30" id="phone-listed-as" maxlength="24">
+											<input class="editable-data" type="text" size="17" id="phone-listed-as" maxlength="24">
 											<span class="ro-data" id="ro-phone-listed-as"></span>
 										</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-										<span class="form-label clm-form-label">Marital Status:</span>
+														</div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+															<span class="form-label clm-form-label">Marital Status:</span>
 										<span class="form-text">
 											<select class="editable-data" id="cust-martial-status">
                                                 <option selected="selected" value=" ">Please Choose</option>
@@ -175,68 +173,67 @@
 											</select>
 											<span class="ro-data" id="ro-cust-martial-status"></span>
 										</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-										<span class="form-label clm-form-label" style="width: 100px;">Dependents:</span>
+														</div>
+                        </div>
+												
+												<div class="content-grid mdl-grid" style="margin: 0 15px;">												
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+															<span class="form-label clm-form-label">Dependents:</span>
 										<span class="form-text">
 											<input class="editable-data" id="cust-dependents" type="text" size="5" maxlength="2">
 											<span class="ro-data" id="ro-cust-dependents"></span>
 										</span>
-                                    </div>
-                                </div>
-                            </div>
-							<div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
-								<div class="content-grid mdl-grid">
-									<div class="mdl-cell mdl-cell--5-col" style="white-space:nowrap;margin: 0;">
-										<span class="form-label clm-form-label">Spouse Name:</span>
+														</div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+															<span class="form-label clm-form-label">Spouse Name:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-name" size="30" maxlength="25">
+											<input class="editable-data" type="text" id="sp-name" size="17" maxlength="25">
 											<span class="ro-data" id="ro-sp-name"></span>
 										</span>
-									</div>
-									<div class="mdl-cell mdl-cell--4-col" style="margin:0">
-										<span class="form-label clm-form-label vertical-top">Birthday:</span>
+														</div>
+                        </div>
+												
+												<div class="content-grid mdl-grid" style="margin: 0 15px;">												
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+															<span class="form-label clm-form-label vertical-top">Birthday:</span>
 										<span class="form-text">
 											<input class="editable-data" type="text" id="sp-birth" size="15" readonly="true">
                                             <i id="sp-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
 											<span class="ro-data vertical-top" id="ro-sp-birth"></span>
 										</span>
-									</div>
-									<div class="mdl-cell mdl-cell--3-col" style="margin:0">
-										<span class="form-label clm-form-label" style="width: 100px;">S.S.#:</span>
+														</div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+															<span class="form-label clm-form-label">S.S.#:</span>
 										<span class="form-text">
 											<input class="editable-data" type="text" id="sp-ssn" size="15" maxlength="9">
                                         <span class="ssn-sp-show" id="ssn-sp-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
 											<span class="ro-data" id="ro-sp-ssn"></span>
 										</span>
-									</div>
-								</div>
-							</div>
+														</div>
                         </div>
-                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
-							<div class="mdl-cell mdl-cell--12-col" style="padding:0;margin: 0;">
-								<div class="content-grid mdl-grid">
-									<div class="mdl-cell mdl-cell--5-col" style="margin:0">
-										<span class="form-label clm-form-label">License #:</span>
+												
+												<div class="content-grid mdl-grid" style="margin: 0 15px;">												
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+															<span class="form-label clm-form-label">License #:</span>
 										<span class="form-text">
 											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2">
 											<span class="ro-data" id="ro-sp-lic-first"></span>
 											&nbsp;&nbsp;/&nbsp;&nbsp;
-											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="20">
+											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="8">
 											<span class="ro-data" id="ro-sp-lic-second"></span>
 										</span>
-									</div>
-									<div class="mdl-cell mdl-cell--6-col" style="margin:0">
-										<span class="form-label clm-form-label">Spouse Monthly Income:</span>
+														</div>
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+															<span class="form-label clm-form-label">Spouse Monthly Income:</span>
 										<span class="form-text">
 											<input class="editable-data" type="text" id="sp-monthly-income" size="15" maxlength="10">
 											<span class="ro-data" id="ro-sp-monthly-income"></span>
 										</span>
-									</div>
-								</div>
-							</div>
+														</div>
                         </div>
+												
+												
                     </div>
                 </section>
                 <section class="form-data">
@@ -304,7 +301,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Address:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-address" class="editable-data mdl-cell--7-col" size="5" maxlength="25">
+									<input type="text" id="ref-address" class="editable-data mdl-cell--6-col" size="5" maxlength="25">
 									<span class="ro-data" id="ro-ref-address"></span>
 								</span>
                             </div>
@@ -340,11 +337,11 @@
                         </div>
                         <div class="button-container" style="padding-bottom:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop" style="padding-bottom:0;margin-left:9px">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--4-col-tablet" style="padding-bottom:0;margin-left:9px">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                     <span class="pull-right mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--4-col-tablet pull-right" style="padding-bottom:0">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>

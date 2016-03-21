@@ -126,13 +126,13 @@
                         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerAddress">
                             <thead>
                               <tr>
-                                <th width="25%">Name</th>
-                                <th width="29%">Address</th>
+                                <th width="17%">Name</th>
+                                <th width="25%">Address</th>
                                 <th width="12%">Phone Number</th>
                                 <th width="8%">Zip Code</th>
                                 <th width="5%">Type</th>
                                 <th width="8%">Reference #</th>
-                                <th width="5%">Version</th>
+                                <th width="17%">Version</th>
                                 <th width="8%">Build</th>
                               </tr>
                             </thead>
