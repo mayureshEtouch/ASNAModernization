@@ -94,10 +94,10 @@
                                       <table cellspacing="0" cellpadding="0" border="0" id="x-ref-items" class="navigateable">
                                        <thead>
                                         <tr data-myval="">
-                                         <th class="first"><div class="th-inner">Reference</div></th>
-                                         <th><div class="th-inner">Type</div></th>
-                                         <th><div class="th-inner">Model Number</div></th>
-                                         <th><div class="th-inner">Description</div></th>
+                                         <th width="25%" class="first"><div class="th-inner">Reference</div></th>
+                                         <th width="10%"><div class="th-inner">Type</div></th>
+                                         <th width="25%"><div class="th-inner">Model Number</div></th>
+                                         <th width="40%"><div class="th-inner">Description</div></th>
                                         </tr>
                                        </thead>
                                        <tbody>
@@ -526,7 +526,9 @@
       height: auto;
       width: 100% !important;
     }
-    
+    #next-page, #previous-page{
+      margin-top: 7px !important;
+    }
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
