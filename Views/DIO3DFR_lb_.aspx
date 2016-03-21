@@ -635,5 +635,8 @@
             .simplePopup {
               left: 28% !important;
             }
+            #previous-page, #next-page{
+              margin-top:7px;
+            }
         </style>
     </asp:Content>
