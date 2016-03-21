@@ -1132,6 +1132,9 @@
         #special-instructions span {
             display: block !important;
         }
+		#ui-datepicker-div {
+		z-index: 1000 !important;
+		}
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
