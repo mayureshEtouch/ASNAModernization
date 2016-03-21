@@ -96,7 +96,7 @@
                             <span class="form-label">Balance Due:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col amount-text">
-                            <span id="CenPH_CBNVA" class="form-text pull-right"></span>
+                            <span id="CenPH_CBNVA" class="form-text pull-right" style="padding-right: 5%;"></span>
                         </div>
                     </div>
                     <div class="content-grid mdl-grid">
@@ -117,7 +117,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" type="text" id="requestdate" name="date" size="16" readonly="true">
+								<input class="editable-data" type="text" id="requestdate" name="date" size="17" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>

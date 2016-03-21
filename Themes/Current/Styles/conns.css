@@ -375,7 +375,7 @@ a:visited, .mdl-menu__item a {
 	margin-top: 55px;
 }
 .login-icon {
-	background: url('../Images/login.png') right top no-repeat #fff;
+	background: url('../Images/login.png') right top no-repeat transparent;
 	width: 77px;
 	height: 78px;
 	float: right;
