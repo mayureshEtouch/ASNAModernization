@@ -1524,6 +1524,7 @@
     .order-detail-table-data .mdl-data-table td span {
         display: inline-block;
         padding-top: 3px;
+        font-size: 11px;
     }
     </style>
      <script type="text/javascript">
@@ -1544,7 +1545,7 @@
          $("[name='order']").html("");     
          
         if($("[id$=__lb_SFLCTL__lb_1EXNB]").html()!=undefined){
-        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").text().trim() + " "+$("[id$=_DdsConstant20]").html() +" "+$("[id$=__lb_SFLCTL__lb_1EXNB]").html());
+        $("[name='order']").html($("[id$=lb_SFLCTL__lb_1BANB]").text().trim()+$("[id$=_DdsConstant20]").html()+$("[id$=__lb_SFLCTL__lb_1EXNB]").html().replace(/&nbsp;/g, ""));
         }
         $("[name='treminal']").text($("[id$=lb_SFLCTL__lb__lb_JOB]").text());
 

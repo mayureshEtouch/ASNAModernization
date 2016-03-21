@@ -59,20 +59,18 @@
                     </ul>
                 </div>
             </section>
+			
+				<section class="order-summary">
+		<div class="order-summary-wrapper">
+				<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet"> <span class="summary-title">Type</span> <span class="summary-txt" id="cus_name"></span> </div>
+				</div>
+		</div>
+</section>
+
                 <section class="form-data">
                     <div class="form-data-wrapper display-application-status">
-                        <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
-                              <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--1-col" style="margin:0">
-                                    <span class="form-label">Name:</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                    <span class="form-text" id="cus_name"></span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+                       
                         <div class="content-grid mdl-grid">
                             <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
                                 <fieldset id="special-instructions"></fieldset>
@@ -197,7 +195,7 @@
 
                 //var moreBottom = $("#CenPH__lb_SFLRCD_End").length > 0 ? $("#CenPH__lb_SFLRCD_End").html(): "";
                 //$("#special-instructions").append("<span id=more-bottom>" + moreBottom + "</span>");
-                //$("#special-instructions").prepend('<legend id="legen">Notes:</legend>');
+                $("#special-instructions").prepend('<legend id="legen">Notes:</legend>');
             }
             generateSpecialInstructionsSection();
 

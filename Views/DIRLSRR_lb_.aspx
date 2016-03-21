@@ -105,7 +105,10 @@
 
 
         </main>
+        
     </div>
+    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
 
     <div id="Div1" style="display:none;">
@@ -531,9 +534,32 @@
             $("[name='Category']").text($("[id=CenPH__lb_SFLCTL__lb_2AXCD]").text());
             $("[name='Group']").text($("[id$=CenPH__lb_SFLCTL__lb_2AWCD]").text());
             generateTableAndApplyInfiniteScroll("selectWarranty", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "warranty-submit");
+            $('body').on("click", "#next-page, #previous-page", function(event) {
+                $("#previous-page,#next-page").remove();
+                setTimeout(function(){
+                    if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                        $("#selectWarranty").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                    if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                        $("#selectWarranty").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                    }
+                    if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                        $('#eof-indicator').remove();
+                        $("#selectWarranty").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                },10)
+            });
             $('.close-icon').click(function (event) {
                 _00("F12", event);
             });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
         });
 
     </script>
@@ -571,5 +597,9 @@ width: 100% !important;
         #__Page_Hidden{
             height: 800px !important;
         }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
     </style>
 </asp:Content>

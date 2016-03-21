@@ -123,8 +123,8 @@
                                       <span id="billing-addr-1"></span><br/>
                                       <span id="billing-addr-2"></span><br/>
                                       <span id="billing-addr-2-2"></span><br/>
-                                      <span id="billing-addr-3"></span>&nbsp;
-                                      <span id="billing-addr-4"></span>&nbsp;
+                                      <span id="billing-addr-3"></span>,&nbsp;
+                                      <span id="billing-addr-4"></span>,&nbsp;
                                       <span id="billing-addr-5"></span>
                                     </span>
                                 </div>
@@ -164,8 +164,8 @@
                                       <span id="shipping-addr-1"></span><br/>
                                       <span id="shipping-addr-2"></span><br/>
                                       <span id="shipping-addr-2-2"></span><br/>
-                                      <span id="shipping-addr-3"></span>&nbsp;
-                                      <span id="shipping-addr-4"></span>&nbsp;
+                                      <span id="shipping-addr-3"></span>,&nbsp;
+                                      <span id="shipping-addr-4"></span>,&nbsp;
                                       <span id="shipping-addr-5"></span>
                                     </span>
                                 </div>

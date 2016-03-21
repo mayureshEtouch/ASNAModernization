@@ -106,11 +106,11 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_1ANPR" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Order Total:</span>
+                       <div class="mdl-cell mdl-cell--2-col ">
+                            <span class="form-label">Payment Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CAQPR" class="form-text pull-right"></span>
+                            <span id="CenPH_CBMVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Requested Delivery Date:</span>
@@ -130,11 +130,11 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col ">
-                            <span class="form-label">Payment Total:</span>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Order Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CBMVA" class="form-text pull-right"></span>
+                            <span id="CenPH_CAQPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
                             <span class="form-label">Expected Delivery Date:</span>
@@ -1214,7 +1214,7 @@
 		}
     </style>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             //function renderPage() {
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant23]").text());
@@ -1222,15 +1222,15 @@
             //Set requested delivery date
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
             //$("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
-			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
-            $("#requestcal").click(function () {
+            $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
+            $("#requestcal").click(function() {
                 $("#requestdate").datepicker("show");
             });
-            $("#requestdate").on('keyup change', function () {
+            $("#requestdate").on('keyup change', function() {
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
-            
+
             //Set payment page initial read only data
             $("[name='order']").html($("[id$=CenPH__lb_SFLCTL__lb_1BANB]").html().replace(/&nbsp;/g, ""));
             $("[name='version']").html($("[id$=CenPH__lb_SFLCTL__lb_1EXNB]").html().replace(/&nbsp;/g, ""));
@@ -1238,34 +1238,34 @@
             $("#CenPH_CEFVA").html($("[id$=CenPH__lb_SFLCTL__lb_CEFVA]").text());
             $("#CenPH_CBMVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBMVA]").text());
             $("#CenPH_1ANPR").text($("[id$=CenPH__lb_SFLCTL__lb_1ANPR]").text());
-            $("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text().trim() == .00 ? "0.00" :$("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text().trim());
+            $("#CenPH_CBNVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text().trim() == .00 ? "0.00" : $("[id$=CenPH__lb_SFLCTL__lb_CBNVA]").text().trim());
             $("#CenPH_V1ACPC").text($("[id$=CenPH__lb_SFLCTL_V1ACPC]").text());
             $("#CenPH_CBLVA").text($("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text().trim() == .00 ? "0.00" : $("[id$=CenPH__lb_SFLCTL__lb_CBLVA]").text().trim());
             $("#CenPH_CAQPR").text($("[id$=CenPH__lb_SFLCTL__lb_CAQPR]").text().trim());
 
             //Generate table
-			
-			$("div#CenPH__lb_SFLRCD__End").remove();
-			$("#previous-page,#next-page").remove();
-				if($("#CenPH__lb_SFLRCD_0").length === 0) {
-					$("div#CenPH__lb_SFLRCD__End").remove();
-                    $("#enterPayment").
-                        after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
-                }
-				
-                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-			
-			  $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
-			  
-			$('body').on("click", "#next-page", function(event) {
+
+            /*$("div#CenPH__lb_SFLRCD__End").remove();*/
+            /*$("#previous-page,#next-page").remove();
+            if ($("#CenPH__lb_SFLRCD_0").length === 0) {
+                $("div#CenPH__lb_SFLRCD__End").remove();
+                $("#enterPayment").
+                after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+            }*/
+
+            /*$("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");*/
+
+            $("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
+
+            /*$('body').on("click", "#next-page", function(event) {
                 _00("PgDn", event);
                 renderPage();
             });
             $('body').on("click", "#previous-page", function(event) {
                 _00("PgUp", event);
                 renderPage();
-            });
-			
+            });*/
+
             $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
                 $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
             });
@@ -1277,14 +1277,14 @@
                 $("div.icon-container").removeClass("icon-disable");
                 $("div.icon-container i.delete-icon-disabled").addClass("delete-icon").removeClass("delete-icon-disabled");
             });
-            
-            if($("#CenPH__lb_SFLCTL_VCBQDT").length > 0) {
+
+            if ($("#CenPH__lb_SFLCTL_VCBQDT").length > 0) {
                 $("#exp-date-val").html($("#CenPH__lb_SFLCTL_V1AXDT").html());
                 $("#exp-date-label,#exp-date-val").show();
             }
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-                
+
                 $("#requestdate,#requestcal").hide();
                 $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
                 $("#reqdate").show();
@@ -1297,102 +1297,105 @@
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
-            $("#yes").click(function (event) {
+            $("#yes").click(function(event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
             });
-            $("#no").click(function (event) {
+            $("#no").click(function(event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 _00('Enter', event);
             });
             //Handle next button click event
-            $("#nextPage").on("click", function (event) {
+            $("#nextPage").on("click", function(event) {
                 _00("Enter", event);
             });
             //F12 event
-            $("#exitPage").on("click", function (event) {
+            $("#exitPage").on("click", function(event) {
                 _00("F12", event);
             });
-            var deleteRow = function (row, value, event) {
+            var deleteRow = function(row, value, event) {
                 var selectId = "CenPH__lb_SFLRCD__lb_2SEL";
-                var selectIndex = $(row).attr('id').split("_")[$(row).attr('id').split("_").length-1];
+                var selectIndex = $(row).attr('id').split("_")[$(row).attr('id').split("_").length - 1];
                 $("#" + selectId + "\\." + selectIndex).val(value);
                 _00('Enter', event);
             }
-            $(".delete").click(function (event) {
+            $(".delete").click(function(event) {
                 var row = $("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord");
                 deleteRow(row, "4", event);
             });
-			
+
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
-            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly(); 
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
-            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align","right");
+            $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align", "right");
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
             $('[id^="CenPH__lb_SFLRCD__lb_RNICD"]').addClass("payment");
             $('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').addClass("reference");
             $('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
-			
-		
-				
-		
-			
-			function renderPage() {
-					
-					$("div#CenPH__lb_SFLRCD__End").remove();
-					$("#previous-page,#next-page").remove();
-					if($("#CenPH__lb_SFLRCD_0").length === 0) {
-						$("div#CenPH__lb_SFLRCD__End").remove();
-						$("#enterPayment").
-							after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
-					}
-				
-                $("#enterPayment").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-				
-				$("#CenPH__lb_SFLRCD select").empty();
-				$("#CenPH__lb_SFLRCD select").css({'float'  : 'right','margin-right' : '12%','width' : '80px','margin-top' : '3px'});
-				$("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
-				
-				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
-				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
-				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
-				$( "<span class='blank-space'></span>" ).insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
-				
-				var mainWidth = $("#payment-method th:first-child").width();
-				var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
 
-				var blankWidth = mainWidth  - inputWidth + 2;
-				$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right",blankWidth);
-				$("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("margin-right",blankWidth);
 
-			}
-			
-			//DdsSubfileRecord tabindex
-			  setTimeout(function(){   
-		   $(".DdsCharField").attr("tabindex","0");         
-		   $(".DdsSubfileRecord input").each(function(){
-			 if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
-		   }); 
-		   },100)
-		   setTimeout(function(){    
-		   $(".DdsDecField").attr("tabindex","0");       
-		   $(".DdsSubfileRecord input").each(function(){
-			 if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
-		   }); 
-		   },100)
-			//}
-           renderPage();
-       $('body').on('keyup keydown', function(event) {
-			var keycode = event.keycode || event.which;
-			if (keycode === 33) {
-				renderPage();
-			} else if (keycode === 34) {
-				renderPage();
-			}
-			event.stopPropagation();
-			return;
-		});
+            function renderPage(addSpace) {
+                if (addSpace) {
+                    $("div#CenPH__lb_SFLRCD__End").remove();
+                    $("#sp-previous-page,#sp-next-page").remove();
+                    if ($("#CenPH__lb_SFLRCD_0").length === 0) {
+                        $("div#CenPH__lb_SFLRCD__End").remove();
+                        $("#enterPayment").
+                        after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+                    }
+                    $("#enterPayment").after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
+
+                    $("#CenPH__lb_SFLRCD select").empty();
+                    $("#CenPH__lb_SFLRCD select").css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+                    $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+                }
+                var mainWidth = $("#payment-method th:first-child").width();
+                var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
+                var blankWidth = mainWidth - inputWidth + 2;
+                $("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right", blankWidth);
+                $("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("margin-right", blankWidth);
+            }
+
+            //DdsSubfileRecord tabindex
+            setTimeout(function() {
+                $(".DdsCharField").attr("tabindex", "0");
+                $(".DdsSubfileRecord input").each(function() {
+                    if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
+                });
+            }, 100)
+            setTimeout(function() {
+                    $(".DdsDecField").attr("tabindex", "0");
+                    $(".DdsSubfileRecord input").each(function() {
+                        if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
+                    });
+                }, 100)
+                //}
+            renderPage(true);
+            $('body').on('keyup keydown', function(event) {
+                var keycode = event.keycode || event.which;
+                if (keycode === 33) {
+                    renderPage(true);
+                } else if (keycode === 34) {
+                    renderPage(true);
+                }
+                return;
+            });
+            $('body').on("click", "#sp-next-page", function(event) {
+                _00("PgDn", event);
+                renderPage(true);
+            });
+            $('body').on("click", "#sp-previous-page", function(event) {
+                _00("PgUp", event);
+                renderPage(true);
+            });
+            $(window).resize(function() {
+                renderPage(false);
+            })
         });
     </script>
 </asp:Content>

@@ -351,10 +351,8 @@
                 }
             }
             $(document).ready(function () {
+                $("#__atKmap__").val("000100000000000000000000110001");
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
-                $('.close-icon').click(function (event) {
-                    _00("F12", event);
-                });
                 $('#next').click(function (event) {
                     _00("Enter", event);
                 });
