@@ -106,11 +106,11 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_1ANPR" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Order Total:</span>
+                       <div class="mdl-cell mdl-cell--2-col ">
+                            <span class="form-label">Payment Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CAQPR" class="form-text pull-right"></span>
+                            <span id="CenPH_CBMVA" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-label">Requested Delivery Date:</span>
@@ -130,11 +130,11 @@
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
                             <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--2-col ">
-                            <span class="form-label">Payment Total:</span>
+                        <div class="mdl-cell mdl-cell--2-col">
+                            <span class="form-label">Order Total:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CBMVA" class="form-text pull-right"></span>
+                            <span id="CenPH_CAQPR" class="form-text pull-right"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
                             <span class="form-label">Expected Delivery Date:</span>
