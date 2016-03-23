@@ -22,7 +22,90 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Tax Exempt ID</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSDLD1R</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        </div>
+
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first">
+
+                                <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                                <li class="progress-bar-divider">
+
+                                    <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                                    <li class="progress-bar-divider">
+
+                                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                                        <li class="progress-bar-divider">
+
+                                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="table-data-content-container">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="table-container table-container-search">
+                                <div class="content-grid mdl-grid" style="padding:0">
+                                    <div class="mdl-cell mdl-cell--6-col" style="padding-left: 20px;">
+                                        <div class="content-grid mdl-grid">
+                                            <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Customer Name:</span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALTX_new"></span> </div>
+                                        </div>
+                                        <div class="content-grid mdl-grid">
+                                            <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Last Changed by User:</span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AAVN_new"></span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--6-col">
+                                        <div class="content-grid mdl-grid">
+                                            <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Tax ID:</span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AMTX_new"></span> </div>
+                                        </div>
+                                        <div class="content-grid mdl-grid">
+                                            <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Date Last Changed:</span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1AGDT_new"></span> </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="button-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div id="modal" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CU: DR1 Tax Exempt        Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -530,4 +613,28 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+         <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant10": "date",
+                    "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
+                    "CenPH__lb_RCDDTL1__lb_1ALTX": "CenPH__lb_RCDDTL1__lb_1ALTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1AMTX": "CenPH__lb_RCDDTL1__lb_1AMTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1AAVN": "CenPH__lb_RCDDTL1__lb_1AAVN_new",
+                    "CenPH__lb_RCDDTL1_V1AGDT": "CenPH__lb_RCDDTL1_V1AGDT_new"
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                $('body').css({ "background-color": "white" });
+                copyData(copyToAndFrom, "");
+                $("#next").click(function (event) {
+                     _00('Enter', event);
+                });
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+            });
+        </script>
     </asp:Content>

@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 2/22/2016 at 6:04 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DIH9SRR# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,103 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Select AFS Markdowns</span> </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIH9SRR</span></div>
+                    </div>
+                </section>
+                <section class="table-data-content-container filter-field-container" style="margin: 16px 0;">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="table-container filter-search-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                        <span class="summary-table-title">Filter by:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--10-col search-container">
+                                        <div class="content-grid mdl-grid">
+                                            <div class="mdl-cell mdl-cell--4-col">
+                                                <span class="summary-table-title pull-right">Model Number</span>
+                                            </div>
+                                            <div class="mdl-cell mdl-cell--7-col" id="filter-by-co">
+                                                <input type="text" id="number1" class="mdl-textfield__input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                        <div class="button-container">
+                                            <button class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter', event);">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="fixed-table-container">
+                                <div class="header-background"></div>
+                                <div class="fixed-table-container-inner">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="records">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:8%">
+                                                    <div class="th-inner">RSN</div>
+                                                </th>
+                                                <th style="width:22%">
+                                                    <div class="th-inner">Model Number</div>
+                                                </th>
+                                                <th style="width:25%">
+                                                    <div class="th-inner">Description</div>
+                                                </th>
+                                                <th style="width:12%">
+                                                    <div class="th-inner">Cat</div>
+                                                </th>
+                                                <th style="width:18%">
+                                                    <div class="th-inner">Serial #</div>
+                                                </th>
+                                                <th style="width:15%">
+                                                    <div class="th-inner">Price</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">submit</span></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  IN: SEL AFS Markdowns     Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -745,4 +852,53 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "number1"
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "keyup keydown mouseup mousedown click change");
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5]];
+                generateTableAndApplyInfiniteScroll("records", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+                $('#next').click(function (event) {
+                    _00("F12", event);
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: auto !important;
+                left: 20% !important;
+            }
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 700px !important;
+            }
+        </style>
     </asp:Content>

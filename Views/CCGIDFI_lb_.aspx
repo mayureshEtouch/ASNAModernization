@@ -173,7 +173,7 @@
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;">Previous</span>
-								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second" >Display Transaction</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
@@ -744,13 +744,13 @@
             }
 
             #__Page_PopUp tbody tr:first-child {
-				 height: 0px !important;
+                 height: 0px !important;
                 display: none;
             }
 
             #__Page_PopUp .DdsInlinePopUpTitle {
                 height: 0 !important;
-				width: 0 !important;
+                width: 0 !important;
             }
             .modal-dialog-container {
                 width: 100%;
@@ -768,12 +768,12 @@
               position: static !important;
               width: 120px !important;
             }
-			#notice-first li {
-				list-style: none;
-			}
-			#notice-second li {
-				list-style: none;
-			}
+            #notice-first li {
+                list-style: none;
+            }
+            #notice-second li {
+                list-style: none;
+            }
       #modal1 {
         left: 30% !important;
         top: 40% !important;
@@ -806,15 +806,15 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var divid = $(this);
                         divid.find('span').map(function(i, e) {
-						 notes += "<li>"+$(e).html() +"</li>";
-	                   });
+                         notes += "<li>"+$(e).html() +"</li>";
+                       });
                     }
                 });
-				
+                
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value=' ']").text("Please Choose");
                 makeSelectDescriptive("CenPH__lb_SFLCTL__lb_PPTST",['Y','N'],['Yes','No'])
-				
+                
                 $("#fifth-message").hide();
                 $("#forth-message").hide();
                 $("#third-message").hide();

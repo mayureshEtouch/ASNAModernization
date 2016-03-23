@@ -3,10 +3,10 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 2/29/2016 at 2:15 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-		 <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member SDGPPVR# --%>
-		 <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
@@ -33,8 +33,8 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-	
-	 <div class="OverlayPopupBackground"></div>
+  
+   <div class="OverlayPopupBackground"></div>
     <div class="modal-dialog-container">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row"> 
@@ -57,17 +57,17 @@
             </div>
         </section>
         
-		<div class="box-container" style="margin-top: 20px; height: auto;">
+    <div class="box-container" style="margin-top: 20px; height: auto;">
             <div class="form-data-wrapper" style="border: none; box-shadow: none; padding: 0; margin: 14px 5px 5px; background: none;">
                 <div class="content-grid mdl-grid">
                     <div style="padding: 0" class="mdl-cell mdl-cell--12-col">
                         <div class="content-grid mdl-grid">
-							 <div class="mdl-cell mdl-cell--12-col"> 
-								<span style="margin: 0;">Order Number</span>
-								<span class="ord-num form-label"></span>
-								<span>&nbsp;for&nbsp;</span>
-								<span class="cust-name form-label"></span>
-							  </div>
+               <div class="mdl-cell mdl-cell--12-col"> 
+                <span style="margin: 0;">Order Number</span>
+                <span class="ord-num form-label"></span>
+                <span>&nbsp;for&nbsp;</span>
+                <span class="cust-name form-label"></span>
+                </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Location:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
                                 <span class="form-text">
@@ -85,15 +85,15 @@
                 </div>
                 <div class="button-container" style="padding: 0 0 5px 0;">
                     <div class="mdl-cell mdl-cell--12-col pull-right">
-						<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Enter</span>
-					</div>
+            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Enter</span>
+          </div>
                 </div>
             </div>
         </div>
-		
+    
         </main>
         
-		<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
               <div class="button-container">
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
@@ -102,7 +102,7 @@
          </div>
     </div>
     <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-  	<div id="modal1" class="simplePopup"></div>
+    <div id="modal1" class="simplePopup"></div>
         <div id="Div1">
             
       <%--  OE: PMT for Referenced    Prompt & validate record                                                               --%>
@@ -496,20 +496,20 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-	<style type="text/css" media="screen">
-	#fkeys, #Div1 {
-		display: none;
-	}
-	 .modal-dialog-container {
+  <style type="text/css" media="screen">
+  #fkeys, #Div1 {
+    display: none;
+  }
+   .modal-dialog-container {
         margin: 0 auto;
         margin-bottom: 45px;
-		width: 100%;
+    width: 100%;
       }
-	body {
-		font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
-	}
-	#__Page_PopUp {
-		min-width: 450px !important;
+  body {
+    font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
+  }
+  #__Page_PopUp {
+    min-width: 450px !important;
         width: 450px !important;
        left: 50% !important;
        margin-left: -225px;
@@ -521,66 +521,66 @@
       #__Page_PopUp .DdsInlinePopUpTitle {
        height: 0;
       }
-	   #wrapper {
-		width: 100% !important;
-		}
-		.mdl-layout__content {
+     #wrapper {
+    width: 100% !important;
+    }
+    .mdl-layout__content {
             height: auto !important;
             overflow: hidden !important;
         }
-		 #__Page_Hidden{
+     #__Page_Hidden{
             height: 800px !important;
         }
-		.confirmation-outer-conatiner {
-			left: 30% !important;
-		}
+    .confirmation-outer-conatiner {
+      left: 30% !important;
+    }
     .simplePopup{
       left: 25% !important;
       top: 20% !important;
       width:45% !important;
     }
-	</style>
-	<script type="text/javascript">
+  </style>
+  <script type="text/javascript">
       $(document).ready(function() {
         $('.ord-num').text($('#CenPH__lb_RCDDTL1__lb_1BANB').text());
         $('.cust-name').text($('#CenPH__lb_RCDDTL1__lb_DALTX').text());
        
-		$('#location').val($('#CenPH__lb_RCDDTL1__lb_1AACD').val());
-		$('#employee').val($('#CenPH__lb_RCDDTL1__lb_1AJCD').val());
-		
-		$("#location").on("change keyup", function () {
+    $('#location').val($('#CenPH__lb_RCDDTL1__lb_1AACD').val());
+    $('#employee').val($('#CenPH__lb_RCDDTL1__lb_1AJCD').val());
+    
+    $("#location").on("change keyup", function () {
                 $("#CenPH__lb_RCDDTL1__lb_1AACD").val($("#location").val());
             });
-			
-		$("#employee").on("change keyup", function () {
-			$("#CenPH__lb_RCDDTL1__lb_1AJCD").val($("#employee").val());
-		});
-		
-		$("#location").ForceNumericOnly();
-		
-		//Handle enter click event
-		$("#enter").on("click", function (event) {
-			_00("Enter", event);
-		});
-		
-		
-		 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
-		  $(".confirmation-outer-conatiner").hide();
-		  $(".OverlayPopupBackground").hide();
-			} else {
-		  $(".confirmation-outer-conatiner").show();
-		  $(".OverlayPopupBackground").show();
-		}
+      
+    $("#employee").on("change keyup", function () {
+      $("#CenPH__lb_RCDDTL1__lb_1AJCD").val($("#employee").val());
+    });
+    
+    $("#location").ForceNumericOnly();
+    
+    //Handle enter click event
+    $("#enter").on("click", function (event) {
+      _00("Enter", event);
+    });
+    
+    
+     if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+      $(".confirmation-outer-conatiner").hide();
+      $(".OverlayPopupBackground").hide();
+      } else {
+      $(".confirmation-outer-conatiner").show();
+      $(".OverlayPopupBackground").show();
+    }
             
-		$("#yes").click(function (event) {
-			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-			_00('Enter', event);
-		});
-		$("#no").click(function (event) {
-			$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-			_00('Enter', event);
-		});
-			if($(".simplePopupClose").length > 0) {
+    $("#yes").click(function (event) {
+      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+      _00('Enter', event);
+    });
+    $("#no").click(function (event) {
+      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+      _00('Enter', event);
+    });
+      if($(".simplePopupClose").length > 0) {
                  $(".simplePopupBackground1").show();
        } else {
            $(".simplePopupBackground1").hide();

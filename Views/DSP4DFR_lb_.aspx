@@ -22,7 +22,104 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+            <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Customer Changes</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSP4DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="order-summary" style="margin-bottom: 16px;">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Current Information</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2P7TX_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Home Phone:</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CSTNB_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Work Phone:</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CU3NB_new"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container" style="overflow: auto;">
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
+                                <thead>
+                                    <tr>
+                                        <th>Current Change</th>
+                                        <th>Home Phone</th>
+                                        <th>Work Phone</th>
+                                        <th>Changed By</th>
+                                        <th>Prior Change</th>
+                                        <th>Customer Name</th>
+                                        <th>Customer Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent pull-left" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop pull-left">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="address-errors" data-upgraded=",MaterialButton,MaterialRipple">Address errors<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Next<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="modal" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+    <div id="Div1" style="display: none;">
             
       <%--  CU: DSP Customer Changes  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -609,4 +706,41 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #customerName tbody > tr:hover {
+              cursor: pointer;
+            }
+        </style>
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant11": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2P7TX": "CenPH__lb_SFLCTL__lb_2P7TX_new",
+                    "CenPH__lb_SFLCTL__lb_CSTNB": "CenPH__lb_SFLCTL__lb_CSTNB_new",
+                    "CenPH__lb_SFLCTL__lb_CU3NB": "CenPH__lb_SFLCTL__lb_CU3NB_new"
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                $('body').css({ "background-color": "white" });
+                copyData(copyToAndFrom, "");
+                // Search by Customer data table record mapping
+                var dataMergeIndices = [[0, "&nbsp;", 1], [2], [3], [4], [5, "&nbsp;", 6], [7], [8, "&nbsp;", 9, "&nbsp;", 10, "</br>", 11, "&nbsp;", 12]];
+                generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          
+                //Next button click handler
+                $("#next").click(function (event) {
+                     _00('Enter', event);
+                });
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                $("#address-errors").click(function (event) {
+                    _00('F5', event);
+                });
+                
+            });
+        </script>
     </asp:Content>

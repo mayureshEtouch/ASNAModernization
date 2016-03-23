@@ -1,4 +1,4 @@
-﻿var generateTableWithoutSpanIndex = function(recordCount, tableId, direction, ignoreSapn, tableSelector) {
+var generateTableWithoutSpanIndex = function(recordCount, tableId, direction, ignoreSapn, tableSelector) {
     var count = 1;
     $(tableSelector).each(function() {
         var notLastRow = $(this).attr('id') !== 'CenPH__lb_SFLRCD__End';

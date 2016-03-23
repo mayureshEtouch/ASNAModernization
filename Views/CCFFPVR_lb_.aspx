@@ -4,7 +4,19 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 2/22/2016 at 6:05 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CCFFPVR# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +34,88 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Prompt to Validate</span> </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCFFPVR</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="form-data" style="margin-bottom:5px;">
+                    <div class="form-data-wrapper" style="padding-bottom:0;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <span class="form-label" style="margin: 0;" id="CenPH__lb_RCDDTL1__lb_DTX30_new"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Enter Customer Zip Code:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-text"><input type="text" maxlength="5" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1BTXT_new"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Enter the last 4 digits of Account #:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-text"><input type="text" maxlength="4" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1Y1NB_new"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">And Social Security #:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-text"><input type="text" maxlength="9" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1A4NB_new" /><span id="ssn-show" style="color:blue;cursor: pointer;">Show</span></span>
+                                        <input type="hidden" id="dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="button-container" style="padding-bottom: 5px;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop pull-left modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="second-id-entry">Alternate/2nd ID Entry</span>
+                                </div><div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+            </main>
+            <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        </div>
+
+        <div id="modal" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CU: PMT to Validate       Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -521,4 +614,93 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant1+CenPH__lb_RCDDTL1__lb_DTX30": "CenPH__lb_RCDDTL1__lb_DTX30_new"
+                },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_1BTXT" : "CenPH__lb_RCDDTL1__lb_1BTXT_new",
+                    "CenPH__lb_RCDDTL1__lb_1Y1NB" : "CenPH__lb_RCDDTL1__lb_1Y1NB_new",
+                    "CenPH__lb_RCDDTL1__lb_1A4NB" : "CenPH__lb_RCDDTL1__lb_1A4NB_new",
+                    "CenPH__lb_RCDDTL1__lb_1A4NB_new" : "dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new",
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+                $('#next').click(function (event) {
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
+                    _00("Enter", event);
+                });
+                $('#second-id-entry').click(function (event) {
+                    _00("F3", event);
+                });
+                $("#CenPH__lb_RCDDTL1__lb_1BTXT_new,#CenPH__lb_RCDDTL1__lb_1Y1NB_new,#CenPH__lb_RCDDTL1__lb_1A4NB_new").ForceNumericOnly();
+                $("#ssn-show").on("mousedown", function() {
+                    setTimeout(function(){
+                        var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                        var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                        $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
+                        $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
+                    },10);
+                });
+                $("#ssn-show").on("mouseup", function() {
+                    var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                    var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
+                    $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
+                });
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").on("change keyup mouseup paste", function(event) {
+                    maskUnmaskSSN("CenPH__lb_RCDDTL1__lb_1A4NB_new", event);
+                });
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").each(function(){
+                    $(this).val($(this).val().replace(/\D/g,''));
+                    $(this).trigger('change');
+                })
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: 450px !important;
+                left: 50% !important;
+                margin-left: -225px;
+            }
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 800px !important;
+            }
+            .simplePopup {
+              left: 28% !important;
+            }
+        </style>
     </asp:Content>
