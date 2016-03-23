@@ -61,7 +61,7 @@
           <div class="form-data-wrapper" style="padding-bottom:0;">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--12-col"> 
-                <span class="form-label" style="margin: 0;">Is This Customer Going to Be A Credit Sale?</span>
+                <span class="form-label" style="margin: 0;">If the new customer requires credit processing, please enter social security number of the customer</span>
               </div>
               <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                             <div class="content-grid mdl-grid">

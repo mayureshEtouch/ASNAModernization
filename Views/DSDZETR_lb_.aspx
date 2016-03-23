@@ -121,7 +121,15 @@
                                         <br />
                                         <input type="text" class="full-input" id="CenPH_CEUTX" name="CenPH_CEUTX" maxlength="25">
                                         <span id="CenPH_CEU" class="DdsCharField_OutputOnly"></span>
-                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+							<div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--3-col">
+                                    <span class="form-label">Zip Code:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--9-col">
+                                    <div class="form-text shipping-add" data-upgraded=",MaterialTextfield" id="zipcode">
                                         <input type="text" id="CenPH_CEWTX" name="CenPH_CEWTX" maxlength="10">
                                         <span id="CenPH_CEW" class="DdsCharField_OutputOnly"></span>
                                         <span id="CenPH_CEVTX" class="DdsCharField_OutputOnly"></span>
@@ -208,9 +216,10 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop" style="margin-left:9px;">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('F11', event);">Edit Customer Details</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-								 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('F11', event);">Edit Customer Details</span>
+								 
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('Enter', event);">Next</span>
                             </div>
                         </div>
@@ -1131,6 +1140,9 @@
         #special-instructions span {
             display: block !important;
         }
+		#ui-datepicker-div {
+		z-index: 1000 !important;
+		}
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {

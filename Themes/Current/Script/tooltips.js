@@ -19,7 +19,8 @@ $(document).ready(function() {
         "DSDZETR": {
             "#CenPH__lb_SFLCTL__lb_1AJCD": "Enter employee number",
             "#requestdate": "Select request date",
-            "#pcode": "Enter promotion code"
+            "#pcode": "Enter promotion code",
+			"#CenPH_CEWTX": "Enter zipcode"
         },
         "DSWXDFR": {
             "#number": "Enter model number to search by"
