@@ -39,6 +39,42 @@ jQuery.fn.ForceNumericOnly =
             });
 });
 };
+// Alphabet only control handler
+jQuery.fn.ForceAlphabetOnly =
+    function() {
+        return this.each(function() {
+        $(this).keydown(function(event) {
+            // Allow: backspace, delete, tab, escape, and enter
+            if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || 
+                    // Allow: Ctrl+V
+                    (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||  
+                    // Allow: Ctrl+c
+                    (event.ctrlKey == true && (event.which == '99' || event.which == '67')) || 
+                    // Allow: Ctrl+A
+                (event.keyCode == 65 && event.ctrlKey === true) || 
+                 // Allow: home, end, left, right
+                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                     // let it happen, don't do anything
+                     return;
+            }
+            else {
+                // Ensure that it is a alphabet and stop the keypress
+                if ((event.keyCode < 65 || event.keyCode > 90)) {
+                    event.preventDefault(); 
+                }   
+            }
+        }) && $(this).on('paste',function(event) {
+                var $el = $(this);
+                setTimeout(function(){
+                    if ($el.val() != $el.val().replace(/\W/g, "")) 
+                    { 
+                        $el.val($el.val().replace(/\W/g, ""));
+                    }
+                    return;
+                },100);
+            });
+});
+};
 
 // Numeric with question mark
 jQuery.fn.ForceNumericWithQuestionMarkOnly =
