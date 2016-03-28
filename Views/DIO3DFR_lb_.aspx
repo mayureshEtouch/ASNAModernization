@@ -573,6 +573,22 @@
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
                 var dataMergeIndices =  [[0], [1], [2]];
                 generateTableAndApplyInfiniteScroll("select-printer", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                $('body').on("click", "#next-page, #previous-page", function(event) {
+                   $("#previous-page,#next-page").remove();
+                    setTimeout(function(){
+                        if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                            $("#select-printer").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                        }
+                        if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                            $("#select-printer").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                        }
+                        if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                            $('#eof-indicator').remove();
+                            $("#select-printer").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                        }
+                    },10)
+                });
+                
                 $('.close-icon, #previous').click(function (event) {
                     _00("F12", event);
                 });
@@ -618,6 +634,9 @@
             }
             .simplePopup {
               left: 28% !important;
+            }
+            #previous-page, #next-page{
+              margin-top:7px;
             }
         </style>
     </asp:Content>

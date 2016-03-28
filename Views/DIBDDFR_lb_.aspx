@@ -22,7 +22,183 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Customer Phone Numbers</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIBDDFR</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first"></li>
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider"></li>
+
+                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                                                   <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                    <section class="table-data-content-container filter-field-container">
+                      <div class="table-data-wrapper" style="margin-top: 20px;">
+                        <div class="table-data-maincontainer">
+                          <div class="table-container filter-search-container">
+
+                            <div class="content-grid mdl-grid">
+                              <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                <span class="summary-table-title">Filter by:</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--10-col search-container">
+                                <div class="content-grid mdl-grid">
+                                  <div class="mdl-cell mdl-cell--1-col">
+                                    <span class="summary-table-title pull-right">Type</span>
+                                  </div>
+                                  <div class="mdl-cell mdl-cell--5-col">
+                                    <input type="text" id="phoneType" maxlength="3" class="mdl-textfield__input">
+                                  </div>
+                                  <div class="mdl-cell mdl-cell--1-col">
+                                    <span class="summary-table-title pull-right">Telephone</span>
+                                  </div>
+                                  <div class="mdl-cell mdl-cell--5-col">
+                                    <input type="text" id="telephone" maxlength="10" class="mdl-textfield__input">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                <div class="button-container">
+                                  <button class="mdl-button mdl-button--accent" event-data='Enter' id="search">Search</button>
+                                </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                      </div>
+                    </div>
+                </section>           
+                <section class="table-data-content-container spacer-container-bottom" style="margin-top:16px;">
+                  <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                      <div class="table-container" style="overflow: auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customers">
+                          <thead>
+                            <thead>
+                              <tr>
+                                <th width="8%"><div class="th-inner">Type</div></th>
+                                <th width="16%"><div class="th-inner">Telephone</div></th>
+                                <th width="8%"><div class="th-inner">Ext</div></th>
+                                <th width="32%"><div class="th-inner">Customer</div></th>
+                                <th width="4%"><div class="th-inner">C</div></th>
+                                <th width="32%"><div class="th-inner">Home Phone</div></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+        <div id="modal" class="simplePopup"></div>
+<style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+@media (min-width: 768px){
+  .filter-search-container .button-cnt-container {
+    width: calc(8% - 0px);
+  }
+  .filter-search-container .filter-txt-cnt {
+    width: calc(8% - 0px);
+  }
+  .filter-search-container .search-container{
+    width: calc(84% - 0px);
+  }
+  .filter-search-container .search-container .mdl-cell--1-col{
+    width: calc(15% - 0px);
+  }
+  .filter-search-container .search-container .mdl-cell--5-col{
+    width: calc(30% - 0px);
+  }
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  .filter-search-container .button-cnt-container {
+    width: calc(100% - 0px);
+  }
+  .filter-search-container .filter-txt-cnt {
+    width: calc(100% - 0px);
+  }
+  .filter-search-container .search-container{
+    width: calc(98% - 0px);
+  }
+  .filter-search-container .summary-table-title{
+    text-align: left;
+  }
+  .filter-search-container .button-container{
+    margin: 10px;
+  }
+  .filter-search-container .button-container .mdl-button{
+    border-radius: 2px;
+    height: auto;
+    padding: 6px 8px;
+  }
+  .filter-search-container .search-container .mdl-cell--1-col{
+    width: calc(25% - 0px);
+  }
+  .filter-search-container .search-container .mdl-cell--5-col{
+    width: calc(73% - 0px);
+  }
+}
+</style>        
+<script type="text/javascript">
+        $(document).ready(function() {
+          var copyToAndFrom = {
+              "displayOnlyFields": {
+              },
+              "inputFields": {
+                  "CenPH__lb_SFLCTL__lb_2PACD" : "phoneType",
+                  "CenPH__lb_SFLCTL__lb_2ZTNB" : "telephone"
+              }
+          }
+          /*setDateTime(dateFieldId,timeFieldId)*/
+          setDateTime('CenPH_DdsConstant10','CenPH__lb_SFLCTL__lb__lb_TME');
+          copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+          $("#telephone").val($("#telephone").val().replace(/\D/g,''));
+          $("#telephone").ForceNumericOnly();
+          $("#phoneType").ForceAlphabetOnly();
+          var dataMergeIndices = [[0], [1], [2], [3],[4],[6]];
+          generateTableAndApplyInfiniteScroll("customers", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+        });
+</script>
+        <div id="Div1" style="display: none;">
             
       <%--  CU: DSP Numbers by Type   Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
