@@ -66,6 +66,8 @@
                         <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Current Information</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2P7TX_new"></span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CETTX_new"></span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CE2TX_new"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
                             <span class="summary-title">Home Phone:</span>
@@ -717,6 +719,8 @@
                     "CenPH_DdsConstant11": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                     "CenPH__lb_SFLCTL__lb_2P7TX": "CenPH__lb_SFLCTL__lb_2P7TX_new",
+                    "CenPH__lb_SFLCTL__lb_CETTX+CenPH__lb_SFLCTL__lb_CEUTX": "CenPH__lb_SFLCTL__lb_CETTX_new",
+                    "CenPH__lb_SFLCTL__lb_CE2TX+CenPH__lb_SFLCTL__lb_CC1ST+CenPH__lb_SFLCTL__lb_CEWTX": "CenPH__lb_SFLCTL__lb_CE2TX_new",
                     "CenPH__lb_SFLCTL__lb_CSTNB": "CenPH__lb_SFLCTL__lb_CSTNB_new",
                     "CenPH__lb_SFLCTL__lb_CU3NB": "CenPH__lb_SFLCTL__lb_CU3NB_new"
                 },
