@@ -98,9 +98,9 @@
                         </div>
                         <div class="button-container" style="padding-bottom: 5px;">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop pull-left modal-button-container">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-left modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F3">Exit</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="second-id-entry">Alternate/2nd ID Entry</span>
-                                </div><div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
@@ -700,7 +700,8 @@
                 height: 800px !important;
             }
             .simplePopup {
-              left: 28% !important;
+              left: 30% !important;
+              top: 40% !important;
             }
         </style>
     </asp:Content>

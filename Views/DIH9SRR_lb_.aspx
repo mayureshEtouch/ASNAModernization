@@ -865,7 +865,7 @@
             $(document).ready(function () {
                 copyData(copyToAndFrom, "keyup keydown mouseup mousedown click change");
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5]];
-                generateTableAndApplyInfiniteScroll("records", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("records", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
                 $('.close-icon').click(function (event) {
                     _00("F12", event);
