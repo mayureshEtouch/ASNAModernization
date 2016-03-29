@@ -700,7 +700,8 @@
                 height: 800px !important;
             }
             .simplePopup {
-              left: 28% !important;
+              left: 30% !important;
+              top: 40% !important;
             }
         </style>
     </asp:Content>
