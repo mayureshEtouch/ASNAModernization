@@ -37,6 +37,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 	 <!-- Modified HTML code starts here -->
+	  <div class="OverlayPopupBackground"></div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
       	<header class="mdl-layout__header">
             <div class="mdl-layout__header-row"> 
@@ -93,8 +94,7 @@
         </section>
 		
         </main>
-        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-        <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
+      
         </div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
@@ -318,45 +318,38 @@
  #Div1, #fkeys, #showDiagnostics, #footer {
                 display: none;
             }
-            #main-content {
-                width: 100%;
-            }
-            #__Page_Hidden{
-                height: 800px !important;
-            }
-              #__Page_PopUp {
-                left: 50% !important;
-                margin-left: -225px;
-                min-width: 550px !important;
-                min-height: 450px !important;
-                height: auto !important;
-            }
-
-            #__Page_PopUp tbody tr:first-child {
-                 height: 0px !important;
-                display: none;
-            }
-
-            #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 0 !important;
-                width: 0 !important;
-            }
-            .modal-dialog-container {
-                width: 100%;
-                margin-top: 0;
-            }
-
-            .mdl-layout__content {
-                height: auto !important;
-                overflow: hidden !important;
-            }
-            #form1 {
-                margin-top: -20px;
-            }
-            
-      #modal1 {
-        left: 30% !important;
-        top: 40% !important;
+          .modal-dialog-container, #main-content, #wrapper {
+        width: 100% !important;
+      }
+      .modal-dialog-container {
+        margin: 0 auto;
+        margin-bottom: 45px;
+      }
+      .mdl-layout__content {
+        height: auto;
+      }
+      .OverlayPopupBackground {
+          opacity: 0.7;
+          display: none;
+          background: #000;
+          position: fixed;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: 2;
+      }
+     #__Page_PopUp {
+        width: 450px !important;
+       left: 50% !important;
+       margin-left: -250px;
+       top: 25% !important;
+     }
+      #__Page_PopUp > tr:first-child {
+       display: none;
+      }
+      #__Page_PopUp .DdsInlinePopUpTitle {
+       height: 0;
       }
 
         </style>
