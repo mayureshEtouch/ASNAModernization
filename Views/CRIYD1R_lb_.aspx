@@ -138,13 +138,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="button-container">
+                        <!-- <div class="button-container">
                             <div class="content-grid mdl-grid">
-
+                        
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comments">Comments</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--2-col-desktop pull-left" style="margin-left: 10px;">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comments">Comments</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
@@ -885,6 +898,9 @@
                 copyData(copyToAndFrom, "");
                 $('.close-icon').click(function (event) {
                     _00("F12", event);
+                });
+                $('#exit').click(function (event) {
+                    _00("F3", event);
                 });
                 $('#comments').click(function (event) {
                     _00("F6", event);
