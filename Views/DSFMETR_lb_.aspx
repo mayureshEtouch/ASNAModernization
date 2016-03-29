@@ -1725,6 +1725,8 @@
            },100)
            
         function copyData(){
+		
+			console.log("copyData");
             tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
                     
             $("#datatableValueInsert tbody").find("tr").each(function(i){
@@ -1732,11 +1734,33 @@
                 $(this).find("td:eq(0) span").text($("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").text()); 
                 
                 $(this).find("td:eq(1) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
-                $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val());
-                $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val()); 
-                $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val());
+				
+				$(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").text());
+				if ($("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").text().trim()!=""){
+					$(this).find("td:eq(2) input").prop("readonly", true);
+					$(this).find("td:eq(2) input").css("border","none");
+				}
+				
+                $(this).find("td:eq(3) input").val($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").text()); 
+				if ($("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").text().trim()!=""){
+					$(this).find("td:eq(3) input").prop("readonly", true);
+					$(this).find("td:eq(3) input").css("border","none");
+				}
+				
+                $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").text());
+				if ($("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").text().trim()!=""){
+					$(this).find("td:eq(4) input").prop("readonly", true);
+					$(this).find("td:eq(4) input").css("border","none");
+				}
+				
                 $(this).find("td:eq(5) span").text($("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").text());
-                $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val()); 
+				
+                $(this).find("td:eq(6) input").val($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").text()); 
+				if ($("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").text().trim()!=""){
+					$(this).find("td:eq(6) input").prop("readonly", true);
+					$(this).find("td:eq(6) input").css("border","none");
+				}
+				
                 $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(14) select").val("Cancel"):$(this).find("td:eq(14) select").val("Active"); 
                 $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(13) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
