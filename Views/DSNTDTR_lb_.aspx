@@ -64,9 +64,9 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Version #</span> <span name="username" class="summary-txt" id="version-no"></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #/Version #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+
                         
                     </div>
                 </div>
@@ -87,53 +87,67 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-                            <div class="header-background"> </div>
-                            <div class="fixed-table-container-inner">
-                                <table cellspacing="0" cellpadding="0" border="0" id="orders-detail-data" class="navigateable">
+                       
+                                <table cellspacing="0" cellpadding="0" border="0" id="orders-detail-data" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
-                                            <th style="width: 5%">
-                                                <div class="th-inner">Del <br /> typ
+                                            <th>
+                                                <div class="th-inner">Del <br /> Type
                                                 </div>
                                             </th>
-                                            <th style="width: 8%">
+                                            <th>
                                                 <div class="th-inner">Del <br /> Status
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th>
                                                 <div class="th-inner">From <br /> Loc
                                                 </div>
                                             </th>
-                                            <th style="width: 8%">
-                                                <div class="th-inner">Qty<br /> &nbsp;
+                                            <th>
+                                                <div class="th-inner">Qty
                                                 </div>
                                             </th>
-                                            <th style="width: 12%">
-                                                <div class="th-inner">Model <br /> Number
+                                            <th>
+                                                <div class="th-inner">Model<br /> Number
                                                 </div>
                                             </th>
-                                            <th style="width: 12%">
+                                            <th>
                                                 <div class="th-inner">Serial <br /> Number
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
-                                                <div class="th-inner">Warranty<br /> &nbsp;
+                                            <th>
+                                                <div class="th-inner">Warranty
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
-                                                <div class="th-inner">Credit<br /> &nbsp;
+                                            <th>
+                                                <div class="th-inner">Credit
                                                 </div>
                                             </th>
-                                            <th style="width: 18%">
-                                                <div class="th-inner">Model Number<br />&nbsp;Description</div>
+                                            <th>
+                                                <div class="th-inner">Model Number<br />Description</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th>
                                                 <div class="th-inner">Actl <br /> Price
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th>
                                                 <div class="th-inner">Extd <br /> Price
+                                                </div>
+                                            </th>
+											<th>
+                                                <div class="th-inner">Installation <br /> Code
+                                                </div>
+                                            </th>
+											<th>
+                                                <div class="th-inner">Installation <br />Description
+                                                </div>
+                                            </th>
+											<th>
+                                                <div class="th-inner">Delivery <br /> Level
+                                                </div>
+                                            </th>
+											<th>
+                                                <div class="th-inner">Installation <br /> Price
                                                 </div>
                                             </th>
                                         </tr>
@@ -141,8 +155,7 @@
                                     <tbody>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
+                            
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
@@ -1381,7 +1394,6 @@
                     "CenPH_DdsConstant16": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                     "CenPH__lb_SFLCTL__lb_2ALTX": "cust-name",
-                    "CenPH__lb_SFLCTL__lb_2EXNB": "version-no",
                     "CenPH__lb_SFLCTL__lb_2BANB+custom_slash+CenPH__lb_SFLCTL__lb_2EXNB": "order-version"
                 },
                 "inputFields": {
@@ -1396,8 +1408,18 @@
                 });
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                generateTableAndApplyInfiniteScroll("orders-detail-data", "CenPH__lb_SFLRCD", ["Constant"], "NONE");
+               // generateTableAndApplyInfiniteScroll("orders-detail-data", "CenPH__lb_SFLRCD", ["Constant"], "NONE");
 
+				
+				 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [10], [12], [14], [15], [17], [19]]; 
+                generateTableAndApplyInfiniteScroll("orders-detail-data", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+				
+				$('#orders-detail-data tr td').each(function (i, col )
+				 {
+					
+					$(col).text($(col).text().trim()=="undefined"?"":$(col).text().trim());
+				 });
+				 
                 //Credits details
                 $(".credits").click(function (event) {
                     var row = $("#orders-detail-data tbody tr.selected");
