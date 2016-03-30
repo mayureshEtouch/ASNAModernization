@@ -64,7 +64,7 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #/Version #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
                         <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
                         
                     </div>
