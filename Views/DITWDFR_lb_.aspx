@@ -77,32 +77,52 @@
                                 <table cellspacing="0" cellpadding="0" border="0" id="display-invoice-taxes-charged" class="navigateable">
                                     <thead>
                                         <tr>
-                                            <th style="width:10%">
+                                            <th style="width:7%">
                                                 <div class="th-inner">Ln <br />
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Date <br />
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Standard<br /> Tax Rate</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Product<br /> Adj Rate</div>
                                             </th>
-                                            <th style="width: 15%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Warranty<br /> Adj Rate</div>
                                             </th>
-                                            <th style="width: 15%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Install<br /> Adj Rate</div>
                                             </th>
-                                            <th style="width: 15%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Other<br /> Adj Rate</div>
                                             </th>
-                                            <th style="width: 15%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Taxing<br /> &nbsp;
                                                 Zip Code
+                                                </div>
+                                            </th>
+                                            <th style="width: 7%">
+                                                <div class="th-inner">Product<br /> Taxes
+                                                </div>
+                                            </th>
+                                            <th style="width: 7%">
+                                                <div class="th-inner">Warranty<br /> Taxes
+                                                </div>
+                                            </th>
+                                            <th style="width: 7%">
+                                                <div class="th-inner">Install<br /> Taxes
+                                                </div>
+                                            </th>
+                                            <th style="width: 7%">
+                                                <div class="th-inner">Other<br /> Taxes
+                                                </div>
+                                            </th>
+                                            <th style="width: 9%">
+                                                <div class="th-inner">Total Amount<br /> Taxes
                                                 </div>
                                             </th>
                                         </tr>
@@ -847,7 +867,8 @@
                 });
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                generateTableAndApplyInfiniteScroll("display-invoice-taxes-charged", "CenPH__lb_SFLRCD", ["1OEA", "1OFA", "1OGA", "1OHA", "RB8VA"], "NONE");
+                var indices = [[0],[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12]]
+                generateTableAndApplyInfiniteScroll("display-invoice-taxes-charged", "CenPH__lb_SFLRCD", ["1OEA", "1OFA", "1OGA", "1OHA", "RB8VA"], "NONE",indices);
 
             });
         </script>

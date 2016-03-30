@@ -64,8 +64,9 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Version #</span> <span name="username" class="summary-txt" id="version-no"></span> </div>
                         
                     </div>
                 </div>
@@ -1380,6 +1381,7 @@
                     "CenPH_DdsConstant16": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                     "CenPH__lb_SFLCTL__lb_2ALTX": "cust-name",
+                    "CenPH__lb_SFLCTL__lb_2EXNB": "version-no",
                     "CenPH__lb_SFLCTL__lb_2BANB+custom_slash+CenPH__lb_SFLCTL__lb_2EXNB": "order-version"
                 },
                 "inputFields": {

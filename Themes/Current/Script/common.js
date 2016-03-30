@@ -88,6 +88,7 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
                         data += spanIndices[i][j];
                     }
                 }
+                data = 'undefined' === data ? "" : data;
                 dataArray += "<td>" + data + "</td>";
             }
             $("#" + tableId + " tbody").append(tr+dataArray+"</tr>");
