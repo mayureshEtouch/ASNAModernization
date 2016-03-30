@@ -856,7 +856,7 @@
                      _00('Enter', event);
                 });
                 $("#previous").click(function (event) {
-                    _00('F12', event);
+                    _00('F3',event);
                 });
                 
             });
