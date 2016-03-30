@@ -733,7 +733,7 @@
                 width: 100%;
             }
             #__Page_Hidden{
-                height: 800px !important;
+                height: 100% !important;
             }
               #__Page_PopUp {
                 left: 50% !important;

@@ -48,10 +48,10 @@
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-cell mdl-cell--9-col">
                         <!-- Title -->
                         <span class="heading-h1">Enter Employee Code</span> </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <div class="mdl-cell mdl-cell--3-col pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIP8PVR</span>
                     </div>
@@ -395,11 +395,11 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 800px !important;
+                height: 100% !important;
             }
             .simplePopup {
               left: 28% !important;
-              top: 70% !important;
+              top: 50% !important;
             }
         </style>
     </asp:Content>
