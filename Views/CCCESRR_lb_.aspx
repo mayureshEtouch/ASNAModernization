@@ -112,7 +112,7 @@
                                                     <div class="th-inner">Customer Name</div>
                                                 </th>
                                                 <th width="16%">
-                                                    <div class="th-inner">Price
+                                                    <div class="th-inner">Reference
                                                     </div>
                                                 </th>
                                             </tr>
@@ -555,6 +555,12 @@
                 $("#previous").click(function (event) {
                     _00('F3', event);
                 });
+				
+				$('#customer-by-phone tr td:nth-child(4)').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
+			 
                 $("#CenPH__lb_SFLCTL__lb_2EONB_new").ForceNumericOnly();
             });
         </script>

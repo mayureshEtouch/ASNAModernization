@@ -228,7 +228,12 @@ function copyData(fields, events) {
         var outvalues = "";
         if (combineFromAll.length > 1) {
             for (var i = 0; i < combineFromAll.length; i++) {
-                outvalues += $("#" + combineFromAll[i]).html().replace(/&nbsp;/g, "") + "&nbsp;";
+                if($("#" + combineFromAll[i]).html()) {
+                    outvalues += $("#" + combineFromAll[i]).html().replace(/&nbsp;/g, "") + "&nbsp;";
+                } else {
+                    outvalues += "";
+                }
+                
             }
         } else {
             if (ele.indexOf("&nbsp;") !== -1) {

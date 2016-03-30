@@ -111,15 +111,15 @@
                                             <tr>
                                                 <th style="width:5%">Itm</th>
                                                 <th style="width:5%">Scheduled</th>
-                                                <th style="width:5%">T</th>
-                                                <th style="width:5%">S</th>
+                                                <th style="width:5%">Delivery Type</th>
+                                                <th style="width:5%">Order Delivery Status</th>
                                                 <th style="width:5%">Serial Number</th>
-                                                <th style="width:5%">Ins</th>
-                                                <th style="width:5%">Del</th>
-                                                <th style="width:5%">Zne</th>
-                                                <th style="width:5%">Frm</th>
-                                                <th style="width:7%">Ref</th>
-                                                <th style="width:8%">Del</th>
+                                                <th style="width:5%">Installation</th>
+                                                <th style="width:5%">Location</th>
+                                                <th style="width:5%">Delivery Zone</th>
+                                                <th style="width:5%">From Location</th>
+                                                <th style="width:7%">Reference Number: Line</th>
+                                                <th style="width:8%">Reference Number: Deliver</th>
                                                 <th style="width:15%">Employee</th>
                                                 <th style="width:10%">Credits</th>
                                             </tr>

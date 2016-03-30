@@ -107,7 +107,7 @@
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--9-col-desktop">
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</button></div>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
                                     <div class="mdl-cell mdl-cell--3-col pull-right">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">NEXT</span>
                                     </div>
@@ -775,10 +775,11 @@
                 $("#next").click(function (event) {
                      _00('Enter', event);
                 });
-                $("#previous").click(function (event) {
-                    _00('F12', event);
-                });
-                
+				
+				$('body').on('click', '#previous', function (event) {
+					_00('F12',event);
+				});
+               
             });
         </script>
     </asp:Content>

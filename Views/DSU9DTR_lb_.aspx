@@ -71,7 +71,7 @@
                                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2BANB_new"></span>
                             </div>
                             <div class="mdl-cell mdl-cell--3-col">
-                                <span class="summary-title">Ln:</span>
+                                <span class="summary-title">Line:</span>
                                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2AZNB_new"></span>
                             </div>
                             <div class="mdl-cell mdl-cell--3-col">

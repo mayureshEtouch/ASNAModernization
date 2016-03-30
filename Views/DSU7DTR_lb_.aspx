@@ -95,7 +95,7 @@
                                         <tr>
                                             <th style="width: 10%">
                                                 <div class="th-inner">Date</th>
-                                            <th style="width: 10%">
+                                            <th style="width: 5%">
                                                 <div class="th-inner">Type</div>
                                             </th>
                                             <th style="width: 10%">
@@ -104,13 +104,13 @@
                                             <th style="width: 15%">
                                                 <div class="th-inner">Reference</div>
                                             </th>
-                                            <th style="width: 15%">
+                                            <th style="width: 10%">
                                                 <div class="th-inner">Approval</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Version</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 8%">
                                                 <div class="th-inner">M</div>
                                             </th>
                                             <th style="width: 10%">
@@ -118,6 +118,9 @@
                                             </th>
                                             <th style="width: 10%">
                                                 <div class="th-inner">ID</div>
+                                            </th>
+											<th style="width: 15%">
+                                                <div class="th-inner">&nbsp;</div>
                                             </th>
                                         </tr>
                                     </thead>
@@ -967,7 +970,7 @@
                 });
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [8], [10]]; // What is the column name for sapn index 7
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [9], [11], [7]]; // What is the column name for sapn index 7
                 generateTableAndApplyInfiniteScroll("completed-order-payment", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
             });
         </script>

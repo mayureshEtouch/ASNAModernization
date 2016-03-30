@@ -68,17 +68,19 @@
                 <span>&nbsp;for&nbsp;</span>
                 <span class="cust-name form-label"></span>
                 </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Location:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--4-col"><span class="form-label">For Location:</span> </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text">
-                                    <input id="location" type="text" name="location" value="" maxlength="3"></span>
+                                    <input id="location" type="text" name="location" value="" maxlength="3" size="4"></span>
+                                    <span id="displayLocation"></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col"><span class="form-label">For Employee:</span> </div>
-                            <div style="margin: 0" class="mdl-cell mdl-cell--6-col">
+                            <div style="margin: 0" class="mdl-cell mdl-cell--4-col"><span class="form-label">For Employee:</span> </div>
+                            <div style="margin: 0" class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text">
-                                    <input id="employee" type="text" name="employee" value="" maxlength="5"></span>
+                                    <input id="employee" type="text" name="employee" value="" maxlength="5" size="4"></span>
+                                    <span id="displayEmployee"></span>
                             </div>
                         </div>
                     </div>
@@ -547,6 +549,8 @@
        
     $('#location').val($('#CenPH__lb_RCDDTL1__lb_1AACD').val());
     $('#employee').val($('#CenPH__lb_RCDDTL1__lb_1AJCD').val());
+    $('#displayLocation').html($('#CenPH__lb_RCDDTL1__lb_DB7TX').html());
+    $('#displayEmployee').html($('#CenPH__lb_RCDDTL1__lb_DA0TX').html());
     
     $("#location").on("change keyup", function () {
                 $("#CenPH__lb_RCDDTL1__lb_1AACD").val($("#location").val());

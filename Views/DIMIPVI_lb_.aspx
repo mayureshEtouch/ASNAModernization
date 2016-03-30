@@ -33,7 +33,110 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Address Entry</span></div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIMIPVI</span></div>
+                    </div>
+                </section>
+                <section class="form-data" style="margin-bottom:5px;">
+                    <div class="form-data-wrapper" style="padding-bottom:0;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Name:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1JZXT_new" maxlength="30"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Phone:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1P3N_lb_new" maxlength="10" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Address:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J0XT_new" maxlength="30"/></span>
+                                        <span class="form-text" style="margin-top: 5px; display: block;"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J1XT_new" maxlength="30"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <span class="form-label" style="margin: 7px 10px 0 0">Zip:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J2XT_new" maxlength="10"/></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                              <div class="content-grid mdl-grid">
+                                  <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                      <span class="form-label" style="margin: 7px 10px 0 0"></span>
+                                  </div>
+                                  <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                      <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="button-container" style="padding-bottom: 5px;">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-left modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+            </div>
+        </div>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CU: PMT Enter Cust Addr   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -434,4 +537,101 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST": "CenPH__lb_RCDDTL1__lb_DAQTX_new"
+                },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_1JZXT" : "CenPH__lb_RCDDTL1__lb_1JZXT_new",
+                    "CenPH__lb_RCDDTL1__lb_1P3N_lb_" : "CenPH__lb_RCDDTL1__lb_1P3N_lb_new",
+                    "CenPH__lb_RCDDTL1__lb_1J0XT" : "CenPH__lb_RCDDTL1__lb_1J0XT_new",
+                    "CenPH__lb_RCDDTL1__lb_1J1XT" : "CenPH__lb_RCDDTL1__lb_1J1XT_new",
+                    "CenPH__lb_RCDDTL1__lb_1J2XT" : "CenPH__lb_RCDDTL1__lb_1J2XT_new"
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+                              
+                $('.close-icon, #exit').click(function (event) {
+                    _00("F3", event);
+                });
+                $('#next').click(function (event) {
+                    _00("Enter", event);
+                });
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
+                //Confirm prompt
+                if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                    $(".confirmation-outer-conatiner").hide();
+                    $("main").show();
+                    $(".close-icon").show();
+                } else {
+                    $(".confirmation-outer-conatiner").show();
+                    $(".close-icon").hide();
+                    $("main").hide();
+                }
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_Hidden{
+                height: 800px !important;
+            }
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: 450px !important;
+                left: 50% !important;
+                margin-left: -225px;
+                top: 10% !important;
+            }
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 1px !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #selectWarranty tbody tr td:last-child {
+                display: none;
+            }
+
+            .modal-dialog-container {
+                width: 100% !important;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #form1 {
+                margin-top: -20px;
+            }
+            .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+            }
+            .confirmation-outer-conatiner {
+                top: 30% !important;
+                left: 28% !important;
+            }
+        </style>
     </asp:Content>
