@@ -1154,6 +1154,12 @@ input[maxlength='4'] {
 .orders-icon-disabled {
 	background: url(../Images/icons/ic_shopping_cart_black_24dp_1x-disable.png) no-repeat;
 }
+.completion-icon {
+	background: url(../Images/icons/completion-icon.png) no-repeat;
+}
+.completion-icon-disabled {
+	background: url(../Images/icons/completion-icon-disable.png) no-repeat;
+}
 
 
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
