@@ -149,6 +149,14 @@
                                     <span class="form-text" id="total-rec"></span>
                                 </div>
                             </div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--5-col">
+                                    <span class="form-label">Expected del date:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                    <span class="form-text" id="total-rec"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

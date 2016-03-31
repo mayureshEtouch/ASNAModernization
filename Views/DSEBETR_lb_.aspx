@@ -117,7 +117,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--2-col">
                             <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" type="text" id="requestdate" name="date" size="17" readonly="true">
+								<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                             </span>

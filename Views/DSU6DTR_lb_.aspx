@@ -93,7 +93,7 @@
                                                 <div class="th-inner">Del <br /> type
                                                 </div>
                                             </th>
-                                            <th style="width: 8%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Del <br /> Status
                                                 </div>
                                             </th>
@@ -117,7 +117,7 @@
                                                 <div class="th-inner">Serial <br /> Number
                                                 </div>
                                             </th>
-                                            <th style="width: 11%">
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Warranty<br /> &nbsp;
                                                 </div>
                                             </th>
@@ -129,7 +129,11 @@
                                                 <div class="th-inner">Price $<br /> &nbsp;
                                                 </div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 8%">
+                                                <div class="th-inner">Price: <br />Installation $
+                                                </div>
+                                            </th>
+                                            <th style="width: 7%">
                                                 <div class="th-inner">Delivered<br /> &nbsp;
                                                 </div>
                                             </th>
@@ -1159,7 +1163,7 @@
             }
             $(document).ready(function () {
 
-                var dataMergeIndices = [[0], [1], [2], [3],[4], [5], [6], [7], [8], [9], [11], [12]]; //Not sure about span number 13
+                var dataMergeIndices = [[0], [1], [2], [3],[4], [5], [6], [7], [8], [9], [13], [11], [12]]; //Not sure about span number 13
                   generateTableAndApplyInfiniteScroll("completed-orders-detail", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 
                 $('body').on('click', '#previous', function (event) {

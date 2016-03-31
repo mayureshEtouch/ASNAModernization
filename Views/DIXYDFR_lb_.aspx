@@ -79,31 +79,47 @@
                                     <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="completed-tax-details">
                                         <thead>
                                             <tr>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Ln <br /> &nbsp;
                                                     </div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 12%">
                                                     <div class="th-inner">Effective <br /> &nbsp;
                                                     </div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Standard<br /> Tax Rate</div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Product<br /> Adj Rate</div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Warranty<br /> Adj Rate</div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Install<br /> Adj Rate</div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Other<br /> Adj Rate</div>
                                                 </th>
-                                                <th style="width: 10%">
+                                                <th style="width: 8%">
                                                     <div class="th-inner">Taxing<br /> Zip Code
+                                                    </div>
+                                                </th>
+                                                <th style="width: 8%">
+                                                    <div class="th-inner">Product<br /> Taxes
+                                                    </div>
+                                                </th>
+                                                <th style="width: 8%">
+                                                    <div class="th-inner">Warranty<br /> Taxes
+                                                    </div>
+                                                </th>
+                                                <th style="width: 8%">
+                                                    <div class="th-inner">Install<br /> Taxes
+                                                    </div>
+                                                </th>
+                                                <th style="width: 8%">
+                                                    <div class="th-inner">Other<br /> Taxes
                                                     </div>
                                                 </th>
                                             </tr>
@@ -792,7 +808,7 @@
                 
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]]; // What are the column names for sapn index 8,9,10,11
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]; // What are the column names for sapn index 8,9,10,11
                 generateTableAndApplyInfiniteScroll("completed-tax-details", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
                 //generateTableAndApplyInfiniteScroll("completed-tax-details", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
             });
