@@ -68,10 +68,10 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 10px 5px 5px;color: blue;" id="CenPH_DdsConstant2_new"></div>
                                     <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop">
                                         <span class="summary-label">Find By Home Phone</span>
-                                        <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new1" value="" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
-                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new2" value="" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
-                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new3" maxlength="4" value="" class="mdl-textfield__input mdl-cell--4-col mdl-cell--7-col-desktop">
+                                        <div  id ="promptDiv" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                            <!--<input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new" value="" maxlength="10" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                            <!-- <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new2" value="" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
+                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new3" maxlength="4" value="" class="mdl-textfield__input mdl-cell--4-col mdl-cell--7-col-desktop"> -->
                                         </div>
                                     </div>
                                     <div style="margin-right:3%;">
@@ -718,6 +718,15 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style>
+		#CenPH__lb_RCDDTL1__lb_1BXNB {
+			position:static !important;
+			margin-top: -15px;
+			width: 240px !important;
+			color: #333 !important;
+			font-weight: normal !important;
+		}
+	</style>
         <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -727,11 +736,16 @@
                 },
                 "inputFields": {
                     "CenPH__lb_RCDDTL1__lb_1A2TX": "CenPH__lb_RCDDTL1__lb_1A2TX_new"
+                    
                 }
             }
             $(document).ready(function () {
                 $('body').css({ "background-color": "white" });
-                var phone = $("#CenPH__lb_RCDDTL1__lb_1BXNB").val();
+				
+				$("#CenPH__lb_RCDDTL1__lb_1BXNB").insertAfter("#promptDiv");
+				$("#CenPH__lb_RCDDTL1__lb_1BXNB").attr("maxlength","10");
+				
+                /*var phone = $("#CenPH__lb_RCDDTL1__lb_1BXNB").val();
                 if(phone.length > 0) {
                     $("#CenPH__lb_RCDDTL1__lb_1BXNB_new1").val(phone.substr(0,3));
                     $("#CenPH__lb_RCDDTL1__lb_1BXNB_new2").val(phone.substr(3,3));
@@ -739,9 +753,9 @@
                 }
                 $("#CenPH__lb_RCDDTL1__lb_1BXNB_new1,#CenPH__lb_RCDDTL1__lb_1BXNB_new2,#CenPH__lb_RCDDTL1__lb_1BXNB_new3").on("change keyup keydown mouseup mousedown", function() {
                     $("#CenPH__lb_RCDDTL1__lb_1BXNB").val($("#CenPH__lb_RCDDTL1__lb_1BXNB_new1").val() + $("#CenPH__lb_RCDDTL1__lb_1BXNB_new2").val() + $("#CenPH__lb_RCDDTL1__lb_1BXNB_new3").val());
-                });
+                });*/
                 copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-                $("#CenPH__lb_RCDDTL1__lb_1BXNB_new1,#CenPH__lb_RCDDTL1__lb_1BXNB_new2,#CenPH__lb_RCDDTL1__lb_1BXNB_new3").ForceNumericOnly();
+              // $("#CenPH__lb_RCDDTL1__lb_1BXNB").ForceNumericOnly();
                 //Next button click handler
                 $("#next").click(function (event) {
                      _00('Enter', event);
