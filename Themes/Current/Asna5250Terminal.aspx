@@ -5,9 +5,9 @@
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 </asp:Content>
 
-<asp:Content ID="FKeyArea" runat="server" ContentPlaceHolderID="FKeyPH">
+<%--<asp:Content ID="FKeyArea" runat="server" ContentPlaceHolderID="FKeyPH">
     <input class="DdsKey" id="Exit" onclick="WingsTerminal.executeMacro(['Exit', 'REDIRECT:../../Monarch/!Eoj.aspx']);" type="button" value="Exit"/>
-</asp:Content>
+</asp:Content> --%>
 
 <asp:Content ID="CentralArea" runat="server" ContentPlaceHolderID="CenPH">
     <mdf:AsnaTerm5250 runat="server" />
