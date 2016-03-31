@@ -189,6 +189,7 @@
               <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-cell--3-col-tablet pull-right" style="padding-bottom:0;px;">
                 <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printInvoice" event-data="F6">Reprint invoice</span>
                 <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="whseComments" event-data="F5">Warehouse comments</span>
+                <span style="margin-right:0" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter">Next</span>
               </div>
             </div>
           </div>
