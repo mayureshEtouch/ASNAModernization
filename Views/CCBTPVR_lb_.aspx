@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -66,7 +65,7 @@
                             <div class="table-container table-container-search">
                                 <div class="content-grid mdl-grid select-customer-screen-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 10px 5px 5px;color: blue;" id="CenPH_DdsConstant2_new"></div>
-                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet mdl-cell--3-col-desktop">
                                         <span class="summary-label">Find By Home Phone</span>
                                         <div  id ="promptDiv" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                             <!--<input type="text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new" value="" maxlength="10" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
@@ -77,7 +76,7 @@
                                     <div style="margin-right:3%;">
                                         <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--3-col-desktop" style="margin: 0">
                                         <span class="summary-label">By Owner Name</span>
                                         <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                             <input type="text" id="CenPH__lb_RCDDTL1__lb_1A2TX_new" class="mdl-textfield__input mdl-cell--8-col mdl-cell--11-col-desktop" maxlength="25">
@@ -86,7 +85,7 @@
                                     <div style="margin-right:3%;">
                                         <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-desktop" style="margin: 0">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--2-col-tablet mdl-cell--4-col-desktop summary-label-tablet" style="margin: 0">
                                         <span class="summary-label" style=" position: relative; top: 20%;margin-top: 5%;">Blank both the unlink with No Customer Match</span>
 
                                     </div>
@@ -94,10 +93,10 @@
                             </div>
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--9-col-desktop">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop pull-right">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">NEXT</span>
                                     </div>
                                 </div>
@@ -108,7 +107,6 @@
 
 
             </main>
-        </div>
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
@@ -725,6 +723,19 @@
 			width: 240px !important;
 			color: #333 !important;
 			font-weight: normal !important;
+		}
+		@media (min-width: 767px) and (max-width: 1023px) { 
+			#CenPH__lb_RCDDTL1__lb_1BXNB {
+				width: 200px !important;
+			}
+			.select-customer-screen-grid .summary-label-tablet {
+				width: 145px;
+			}
+		}
+		@media (min-width: 1024px) and (max-width: 1100px) { 
+			#CenPH__lb_RCDDTL1__lb_1BXNB {
+				width: 200px !important;
+			}
 		}
 	</style>
         <script type="text/javascript">

@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
             <main class="mdl-layout__content">
                 <section class="time-date">
@@ -61,7 +60,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="table-data-content-container">
+                <section class="table-data-content-container filter-field-container">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div class="table-container filter-search-container">
@@ -137,7 +136,7 @@
                     </div>
                 </section>
             </main>
-        </div>
+        
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">

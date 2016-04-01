@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -94,7 +93,7 @@
                                     <div style="margin-right:2%;">
                                         <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" >
                                         <span class="summary-label">Social Security</span>
                                         <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                             <input type="text" id="CenPH__lb_RCDDTL1__lb_1B2NB_new" class="mdl-textfield__input mdl-cell--12-col mdl-cell--8-col-desktop" maxlength="10">
@@ -106,9 +105,9 @@
                             </div>
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--9-col-desktop">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop pull-right">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">NEXT</span>
                                     </div>
                                 </div>
@@ -117,7 +116,6 @@
                     </div>
                 </section>
             </main>
-        </div>
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">

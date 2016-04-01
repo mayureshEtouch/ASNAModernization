@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -60,7 +59,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="table-data-content-container">
+                <section class="table-data-content-container filter-field-container">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div class="table-container filter-search-container">
@@ -73,7 +72,7 @@
                                             <div class="mdl-cell mdl-cell--2-col">
                                                 <span class="summary-table-title pull-right">Name</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--10-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet" id="filter-by-co">
                                                 <input type="text" id="CenPH__lb_SFLCTL__lb_2A2TX_new" class="mdl-textfield__input" maxlength="25">
                                             </div>
 
@@ -137,7 +136,6 @@
                 </section>
 
             </main>
-        </div>
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
@@ -833,6 +831,9 @@
             #customerName tbody > tr:hover {
               cursor: pointer;
             }
+			.filter-search-container .button-container .mdl-button {
+				height: 16px;
+			}
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {

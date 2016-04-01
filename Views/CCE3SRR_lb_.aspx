@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -60,7 +59,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="table-data-content-container">
+                <section class="table-data-content-container filter-field-container">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div class="table-container filter-search-container">
@@ -73,7 +72,7 @@
                                             <div class="mdl-cell mdl-cell--2-col" style="width: 100px;">
                                                 <span class="summary-table-title pull-right">Reference</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--10-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet" id="filter-by-co">
                                                 <input type="text" id="CenPH__lb_SFLCTL__lb_2REF_lb_new" class="mdl-textfield__input" maxlength="10">
                                             </div>
                                         </div>
@@ -95,10 +94,7 @@
                 <section class="table-data-content-container spacer-container-bottom" style="margin:18px auto 0;">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div class="fixed-table-container">
-                                <div class="header-background"></div>
-                                <div class="fixed-table-container-inner">
-                                    <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="customer">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customer">
                                         <thead>
                                             <tr>
                                                 <th>
@@ -133,7 +129,7 @@
                                         <tbody>
                                         </tbody>
                                     </table>
-                                </div>
+                               
                                 <div class="button-container">
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
@@ -143,13 +139,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </section>
 
             </main>
-        </div>
+        
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
