@@ -100,7 +100,7 @@
                                         <span class="form-label">Reason:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAFTX_new"></span>
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1W6ST_new"></span>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
@@ -111,6 +111,25 @@
                                         <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALTX_new"></span>
                                     </div>
                                 </div>
+								
+								<div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">Inv:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GZNB_new"></span>
+                                    </div>
+                                </div>
+								
+								<div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                                        <span class="form-label">ID:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ZVCD_new"></span>
+                                    </div>
+                                </div>
+								
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                         <span class="form-label">SSN#:</span>
@@ -888,7 +907,9 @@
                     "CenPH__lb_RCDDTL1__lb_1ALTX+CenPH__lb_RCDDTL1__lb_DA1CO": "CenPH__lb_RCDDTL1__lb_1ALTX_new",
                     "CenPH__lb_RCDDTL1__lb_1SS_lb_": "CenPH__lb_RCDDTL1__lb_1SS_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1AAVN+CenPH__lb_RCDDTL1__lb_1ABVN+CenPH__lb_RCDDTL1_V1AGDT+CenPH__lb_RCDDTL1__lb_1ABTM": "entry",
-                    "CenPH_DdsConstant12": "CenPH_DdsConstant12_new"
+                    "CenPH_DdsConstant12": "CenPH_DdsConstant12_new",
+					"CenPH__lb_RCDDTL1__lb_1GZNB": "CenPH__lb_RCDDTL1__lb_1GZNB_new",
+					"CenPH__lb_RCDDTL1__lb_1ZVCD+CenPH__lb_RCDDTL1__lb_1GSNB": "CenPH__lb_RCDDTL1__lb_1ZVCD_new"
 
                 },
                 "inputFields": {

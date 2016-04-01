@@ -34,6 +34,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
             <!-- Modified HTML code starts here -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
         <header class="mdl-layout__header">
@@ -60,7 +61,7 @@
             <section class="form-data">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;" id="div_driver">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Driver State:</span> </div>
                                 <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
@@ -68,7 +69,7 @@
                                                                 </span> </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;" id="div_license">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">License ID:</span> </div>
                                 <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
@@ -149,6 +150,13 @@
         <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     </div>
     <div id="modal" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             
@@ -967,11 +975,20 @@
                     "CenPH__lb_RCDDTL1__lb_1L0N_lb_" : "CenPH__lb_RCDDTL1__lb_1L0N_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1L6XT" : "CenPH__lb_RCDDTL1__lb_1L6XT_new",
                     "CenPH__lb_RCDDTL1__lb_DMOTH" : "CenPH__lb_RCDDTL1__lb_DMOTH_new",
-                    "CenPH__lb_RCDDTL1__lb_DYRS2" : "CenPH__lb_RCDDTL1__lb_DYRS2_new",
+                    "CenPH__lb_RCDDTL1__lb_DYRS2" : "CenPH__lb_RCDDTL1__lb_DYRS2_new"
                 }
             }
             $(document).ready(function () {
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+                /*
+                Hidding div if driver state & licence id is not present for given user
+                 */
+                if($("#CenPH__lb_RCDDTL1__lb_DDRCD").length > 0){
+                    $("#div_driver").show();
+                }
+                if($("#CenPH__lb_RCDDTL1__lb_DTX20").length > 0){
+                    $("#div_license").show();
+                }
                 $('.close-icon').click(function (event) {
                     _00("F12", event);
                 });
@@ -989,6 +1006,23 @@
                 $("body").on("click", ".simplePopupClose", function() {
                     $(".simplePopupBackground1").hide();
                 });
+                if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+                  /*Pop up confirm box*/
+                  $(".OverlayPopupBackground").show();
+                  $(".confirmation-outer-conatiner").show();
+                  
+                  $("#yes").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                      //_00('Enter', event);
+                      _16(event,this,1,'Enter');
+                  });
+                  $("#no").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                      //_00('Enter', event);
+                      _16(event,this,1,'Enter');
+                  });
+
+                }
             });
 
         </script>
@@ -1020,6 +1054,9 @@
             }
             .simplePopup {
               left: 28% !important;
+            }
+            #div_driver, #div_license {
+                display: none;
             }
         </style>
     </asp:Content>

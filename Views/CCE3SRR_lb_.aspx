@@ -113,7 +113,7 @@
                                                     <div class="th-inner">Bank</div>
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">T</div>
+                                                    <div class="th-inner">Loan Type</div>
                                                 </th>
                                                 <th>
                                                     <div class="th-inner">Next Due</div>
