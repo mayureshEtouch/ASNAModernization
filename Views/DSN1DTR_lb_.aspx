@@ -154,7 +154,7 @@
                                     <span class="form-label">Expected del date:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
-                                    <span class="form-text" id="total-rec"></span>
+                                    <span class="form-text" id="exp-deliver-date"></span>
                                 </div>
                             </div>
                         </div>
@@ -1228,7 +1228,8 @@
                     "CenPH__lb_SFLCTL__lb_CAQPR": "order-total",
                     "CenPH__lb_SFLCTL__lb_CBMVA": "payment-total",
                     "CenPH__lb_SFLCTL__lb_CBNVA": "bal-due",
-                    "CenPH__lb_SFLCTL__lb_CHRVA": "total-rec"
+                    "CenPH__lb_SFLCTL__lb_CHRVA": "total-rec",
+                    "CenPH__lb_SFLCTL_V2AXDT": "exp-deliver-date"
                 },
                 "inputFields": {
                 }

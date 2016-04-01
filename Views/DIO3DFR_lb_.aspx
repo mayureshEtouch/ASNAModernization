@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet button-cnt-container">
                                         <div class="button-container">
-                                            <button class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</button>
+                                            <span class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>
                                         </div>
                                     </div>
                                 </div>
@@ -639,5 +639,9 @@
 			.filter-field-container .filter-search-container {
 				min-height: 40px !important;
 			}
+      .filter-search-container .button-container .mdl-button {
+        height: 16px;
+      }
         </style>
+      
     </asp:Content>
