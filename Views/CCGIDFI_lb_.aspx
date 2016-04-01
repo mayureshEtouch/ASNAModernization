@@ -113,13 +113,20 @@
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="nocopp"></span></div>
-                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text">No Cash Option Product on Invoice</span></div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">No Cash Option Product on Invoice</span></div>
+					  <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="third"><strong>Continue&nbsp;?</strong>
+					</span> </div>
                     </div>
-                    <div class="content-grid mdl-grid">
+					
+					<div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
-                            
+                            <fieldset>
+                                <legend id="legend">NOTES:</legend>
+                                <ul id="notice-third" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></ul>
+                            </fieldset>
                         </div>
                     </div>
+					
                     <div class="button-container" style="padding:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
@@ -774,6 +781,9 @@
             #notice-second li {
                 list-style: none;
             }
+			#notice-third li {
+                list-style: none;
+            }
       #modal1 {
         left: 30% !important;
         top: 40% !important;
@@ -828,6 +838,7 @@
                 } else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("No Cash Option Product on Invoice") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#third");
                     $("#nocopp").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+					 $("#notice-third").html(notes);
                     $("#third-message").show();
                     $("#modal1").css('left','32%');
                     $("#__Page_PopUp").css('height','380px');
