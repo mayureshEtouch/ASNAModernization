@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 3/21/2016 at 5:36 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CCVCD1I# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,83 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Application Status</span> </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCVCD1I</span></div>
+                    </div>
+                </section>
+                <section class="form-data">
+                    <div class="form-data-wrapper display-application-status">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Application:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Status:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1K0ST_new"></span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Application Type:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AHCO_new"></span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Salesman:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AJCD_new"></span> </div>
+                                </div>
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Location:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0" > <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABCD_new"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid">
+                            <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                                <fieldset>
+                                    <legend id="legend">Notes:</legend>
+                                    <textarea id="CenPH__lb_RCDDTL1__lb_1ULTX_new" rows="5" cols="40" name="CenPH_2AQNA" style="padding: 5px -5px 5px 10px;" readonly="readonly"></textarea>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--12-col"> <span class="form-text"><strong>Approval for:</strong> <span id="CenPH__lb_RCDDTL1__lb_1G5VA_new"></span> <strong>With:</strong> <span id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> <strong>% Down</strong></span> </div>
+                        </div>
+                        <div class="button-container" style="padding:0">
+                            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ok">ok</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  OE: DSW Error Status      Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -945,4 +1032,84 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1ITNB": "CenPH__lb_RCDDTL1__lb_1ITNB_new",
+                    "CenPH__lb_RCDDTL1__lb_1K0ST+CenPH__lb_RCDDTL1__lb_DU7TX": "CenPH__lb_RCDDTL1__lb_1K0ST_new",
+                    "CenPH__lb_RCDDTL1__lb_1AHCO": "CenPH__lb_RCDDTL1__lb_1AHCO_new",
+                    "CenPH__lb_RCDDTL1__lb_1AJCD": "CenPH__lb_RCDDTL1__lb_1AJCD_new",
+                    "CenPH__lb_RCDDTL1__lb_1ABCD+CenPH_DdsConstant13+CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1ABCD_new",
+                    "CenPH__lb_RCDDTL1__lb_1ULTX+CenPH__lb_RCDDTL1__lb_DUJTX": "CenPH__lb_RCDDTL1__lb_1ULTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1G5VA": "CenPH__lb_RCDDTL1__lb_1G5VA_new",
+                    "CenPH__lb_RCDDTL1_V1AGP3": "CenPH__lb_RCDDTL1_V1AGP3_new"
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "");
+                              
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+                $('#exit').click(function (event) {
+                    _00("F3", event);
+                });
+                $('#ok').click(function (event) {
+                    _00("Enter", event);
+                });
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
+            });
+
+        </script>
+        <style>
+            #__Page_Hidden{
+                height: 800px !important;
+            }
+            #__Page_PopUp {
+                min-width: 450px !important;
+                width: 50% !important;
+                left: 50% !important;
+                margin-left: -25%;
+                top: 10% !important;
+            }
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 1px !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #selectWarranty tbody tr td:last-child {
+                display: none;
+            }
+
+            .modal-dialog-container {
+                width: 100% !important;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #form1 {
+                margin-top: -20px;
+            }
+            .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+            }
+        </style>
     </asp:Content>
