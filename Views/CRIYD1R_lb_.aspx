@@ -123,7 +123,7 @@
 								
 								<div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                                        <span class="form-label">Id:</span>
+                                        <span class="form-label">ID:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                         <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ZVCD_new"></span>
