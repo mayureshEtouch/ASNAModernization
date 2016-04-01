@@ -61,7 +61,7 @@
             <section class="form-data">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;" id="div_driver">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">Driver State:</span> </div>
                                 <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
@@ -69,7 +69,7 @@
                                                                 </span> </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0;margin: 0;" id="div_license">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label form-label-input">License ID:</span> </div>
                                 <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text">
@@ -980,6 +980,15 @@
             }
             $(document).ready(function () {
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+                /*
+                Hidding div if driver state & licence id is not present for given user
+                 */
+                if($("#CenPH__lb_RCDDTL1__lb_DDRCD").length > 0){
+                    $("#div_driver").show();
+                }
+                if($("#CenPH__lb_RCDDTL1__lb_DTX20").length > 0){
+                    $("#div_license").show();
+                }
                 $('.close-icon').click(function (event) {
                     _00("F12", event);
                 });
@@ -1045,6 +1054,9 @@
             }
             .simplePopup {
               left: 28% !important;
+            }
+            #div_driver, #div_license {
+                display: none;
             }
         </style>
     </asp:Content>
