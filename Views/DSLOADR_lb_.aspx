@@ -473,10 +473,12 @@
             $(window).resize(function () {
                 $("#form1").height($('body').height() - $('.copyright').height());
             });
+			
+			//console.log("location is "+($("#CenPH_DSLOADD1_SDSTRI").val()=="000"?"":$("#CenPH_DSLOADD1_SDSTRI").val()));
             $("[name='date']").text($("[id$=CenPH_DdsConstant6]").text());
             $("[name='time']").text($("[id$=CenPH_DdsConstant7]").text());
             $("#enterYourCompany").val($("#CenPH_DSLOADD1_SDSTRC").val());
-            $("#enterYourLocation").val($("#CenPH_DSLOADD1_SDSTRI").val());
+            $("#enterYourLocation").val($("#CenPH_DSLOADD1_SDSTRI").val()=="000"?"":$("#CenPH_DSLOADD1_SDSTRI").val());
             $("#enterYourCompany").on("change keyup", function () {
                 $("#CenPH_DSLOADD1_SDSTRC").val($("#enterYourCompany").val());
             });

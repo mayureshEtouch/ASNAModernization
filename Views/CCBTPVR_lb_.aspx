@@ -755,7 +755,7 @@
                     $("#CenPH__lb_RCDDTL1__lb_1BXNB").val($("#CenPH__lb_RCDDTL1__lb_1BXNB_new1").val() + $("#CenPH__lb_RCDDTL1__lb_1BXNB_new2").val() + $("#CenPH__lb_RCDDTL1__lb_1BXNB_new3").val());
                 });*/
                 copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-              // $("#CenPH__lb_RCDDTL1__lb_1BXNB").ForceNumericOnly();
+				$("#CenPH__lb_RCDDTL1__lb_1BXNB").ForceNumericOnly();
                 //Next button click handler
                 $("#next").click(function (event) {
                      _00('Enter', event);

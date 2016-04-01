@@ -111,7 +111,7 @@
                                                 <div class="th-inner">Version</div>
                                             </th>
                                             <th style="width: 8%">
-                                                <div class="th-inner">M</div>
+                                                <div class="th-inner">Method Type</div>
                                             </th>
                                             <th style="width: 10%">
                                                 <div class="th-inner">Account #</div>
