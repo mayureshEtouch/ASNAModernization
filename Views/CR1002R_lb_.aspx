@@ -25,7 +25,7 @@
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <main class="mdl-layout__content" id="first-view" style="display: none;">
+            <main class="mdl-layout__content" id="first-view" style="display: none;margin-bottom: 50px;">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col">
@@ -84,7 +84,7 @@
                                         </div>
                                         <div class="content-grid mdl-grid">
                                             <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Co-Debtor:</span> </div>
-                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_CRSPNB_new" /></span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_CRSPNB_new" maxlength="30" /></span> </div>
                                         </div>
                                         <div class="content-grid mdl-grid">
                                             <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Co-Debtor D.O.B</span> </div>
@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="content-grid mdl-grid">
                                             <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Months:</span> </div>
-                                            <div style="margin:0" class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_CRMTHB_new"/></span>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_CRMTHB_new" maxlength="2" /></span>
                                             </div>
                                             <div class="mdl-cell mdl-cell--1-col" style="margin:0 0 0 20px;"> <span class="form-label">State:</span> </div>
                                             <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DSPFMT1_CRSCDB_new"></span> </div>
@@ -122,7 +122,7 @@
                                         </div>
                                         <div class="content-grid mdl-grid">
                                             <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">Add-on Amount:</span> </div>
-                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_ADDON_usd_new" /></span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_ADDON_usd_new" maxlength="7" /></span> </div>
                                         </div>
                                         <div class="content-grid mdl-grid">
                                             <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">First Payment Due:</span> </div>
@@ -179,7 +179,7 @@
                                         </div>
                                         <div class="content-grid mdl-grid" st>
                                             <div style="margin:0" class="mdl-cell mdl-cell--4-col"> <span class="form-label">From Contract #:</span> </div>
-                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="CenPH_DSPFMT1_FRCNTC_new"></input></span> </div>
+                                            <div style="margin:0" class="mdl-cell mdl-cell--8-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="CenPH_DSPFMT1_FRCNTC_new" maxlength="10"></input></span> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@
                                 <div class="button-container">
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">refresh</span>
                                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg">Display Messages</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
@@ -1680,8 +1680,8 @@
                 }
 
                 //Set button click handlers
-                $('body').on('click', '#previous', function(event) {
-                    _00('F12', event);
+                $('body').on('click', '#refresh', function(event) {
+                    _00('F5', event);
                 });
                 $('body').on('click', '#disp-msg', function(event) {
                     _00('F6', event);
@@ -1807,6 +1807,8 @@
                     _00('F7', event);
                 });
             }
+            //validations
+            $("#CenPH_DSPFMT1_ADDON_usd_new,#CenPH_DSPFMT1_CRMTHB_new,#CenPH_DSPFMT1_FRCNTC_new").ForceNumericOnly();
         });
     </script>
     </asp:Content>

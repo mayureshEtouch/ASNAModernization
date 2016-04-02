@@ -85,14 +85,14 @@
             </main>
         </div>
         
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container" id="second-view" style="">
+        <!-- <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container" id="second-view" style="">
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
-                    <!-- Title -->
+                    Title
                     <span class="mdl-layout-title logo-icon"></span>
-                    <!-- <span class="mdl-layout-heading">StoreFront</span> -->
+                    <span class="mdl-layout-heading">StoreFront</span>
                     <div class="mdl-layout-spacer"></div>
-                    <!-- <span class="close-icon"><i class="material-icons md-15 close"></i></span> -->
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
                 </div>
             </header>
             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2;margin-top: 15px;margin-left: -10%;">
@@ -102,8 +102,25 @@
                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
                 </div>
             </div>
+        </div> -->
+        <div class="mdl-layout mdl-js-layout modal-dialog-container" id="second-view" style="" tabindex="-1">
+            <header class="mdl-layout__header" tabindex="-1">
+                <div class="mdl-layout__header-row" tabindex="-1">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon" tabindex="-1"></span>
+                    <!-- <span class="mdl-layout-heading">StoreFront</span> -->
+                    <div class="mdl-layout-spacer" tabindex="-1"></div>
+                    <!-- <span class="close-icon"><i class="material-icons md-15 close"></i></span> -->
+                </div>
+            </header>
+            <main class="mdl-layout__content" tabindex="-1"><div id="confirmprompt" class="confirmation-outer-conatiner" style="margin-top: 50px;" tabindex="-1">
+                <i class="material-icons md-15 md-light help-icon" tabindex="-1"></i> <span class="confirmation-text" tabindex="-1">Do you want to continue</span>
+                <div class="button-container" tabindex="-1">
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes" tabindex="-1">yes</span>
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no" tabindex="-1">no</span>
+                </div>
+            </div></main>
         </div>
-
 
          <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
          
@@ -638,6 +655,9 @@
             .simplePopup {
                 left: 30% !important;
                 top: 40% !important;
+            }
+            #confirmprompt {
+               position: static !important;
             }
         </style>
     </asp:Content>
