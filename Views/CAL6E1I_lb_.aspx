@@ -36,7 +36,6 @@
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
             <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -148,7 +147,7 @@
             </section>
         </main>
         <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-    </div>
+    
     <div id="modal" class="simplePopup"></div>
     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
         <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>

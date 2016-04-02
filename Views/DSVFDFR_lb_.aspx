@@ -64,7 +64,7 @@
                         <div class="table-container table-container-search">
                             <div class="content-grid mdl-grid select-customer-screen-grid">
                                 <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--3-col-tablet">
                                     <span class="summary-label">Customer Phone Number :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                       <input type="text" id="number1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" disabled>
@@ -75,7 +75,7 @@
                                 <div class="mdl-cell mdl-cell--2-col" style="margin-right: 1%;">
                                     <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--3-col-tablet" style="margin: 0">
                                     <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     </div>
