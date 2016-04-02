@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                            <div class="mdl-cell mdl-cell--12-col"> <span class="form-text"><strong>Approval for:</strong> <span id="CenPH__lb_RCDDTL1__lb_1G5VA_new"></span> <strong>With:</strong> <span id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> <strong>% Down</strong></span> </div>
+                            <div class="mdl-cell mdl-cell--12-col"> <span class="form-text"><strong>Approved for:</strong> <span id="CenPH__lb_RCDDTL1__lb_1G5VA_new"></span> <strong>With:</strong> <span id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> <strong>% Down</strong></span> </div>
                         </div>
                         <div class="button-container" style="padding:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
