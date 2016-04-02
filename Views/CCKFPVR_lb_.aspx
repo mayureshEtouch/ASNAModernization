@@ -35,7 +35,6 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -46,14 +45,7 @@
             </div>
         </header>
         <main class="mdl-layout__content">
-<%--            <section class="time-date">
-                <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
-                        <!-- Title -->
-                        <span class="heading-h1">Prompt for Credit Application Entry</span>
-                    </div>
-                </div>
-            </section>--%>
+
             <section class="time-date">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet">
@@ -137,7 +129,7 @@
                 </div>
             </section>
         </main>
-    </div>
+    
     <div class="simplePopupBackground1" style="display: none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div>
     <div id="Div1">

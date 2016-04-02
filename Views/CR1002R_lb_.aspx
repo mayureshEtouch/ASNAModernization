@@ -24,7 +24,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <main class="mdl-layout__content" id="first-view" style="display: none;">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
@@ -445,7 +444,7 @@
             </section>
         </main>
             <div id="modal" class="simplePopup"></div>
-        </div>
+      
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             
