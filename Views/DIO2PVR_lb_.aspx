@@ -371,10 +371,10 @@
 					if($(this).val().trim() == ""){
 					  $(this).val(" ").text("Please Choose");
 					    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
-					}
+					}				
                       return this;
 				});
-				
+				$("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='?']").remove();
 			    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
           if($(".simplePopupClose").length > 0) {
                      $(".simplePopupBackground1").show();
