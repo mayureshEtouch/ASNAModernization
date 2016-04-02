@@ -194,7 +194,7 @@
           $("#telephone").val($("#telephone").val().replace(/\D/g,''));
           $("#telephone").ForceNumericOnly();
           $("#phoneType").ForceAlphabetOnly();
-          var dataMergeIndices = [[0], [1], [2], [3],[4],[6]];
+          var dataMergeIndices = [[0], [1], [2], [3, ",", "&nbsp;", 7, ",", "&nbsp;", 8, ",", "&nbsp;", 9],[4],[6]];
           generateTableAndApplyInfiniteScroll("customers", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
         });
 </script>

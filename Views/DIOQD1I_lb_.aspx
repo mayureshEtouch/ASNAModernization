@@ -261,7 +261,8 @@
                 </main>
 
         </div>
-        
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        <div id="modal" class="simplePopup"></div>
         <div id="Div1" style="display:none;">
             
       <%--  CU: DS1 Customer Address  Display record(1 screen)                                                               --%>
@@ -982,6 +983,10 @@ body {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 13px;
 }
+.simplePopup {
+  left: 28% !important;
+  top: 50% !important;
+}
 </style>
         <script type="text/javascript">
             $(document).ready(function () {
@@ -1004,10 +1009,19 @@ body {
                 for (var i = 0; i < old_fields.length; i++) {
                   $(new_fields[i]).text($.trim($(old_fields[i]).text()));
                 };
-                var error_msg = $.trim($('.DdsSflMsgField_OutputOnly').text())
+                /*var error_msg = $.trim($('.DdsSflMsgField_OutputOnly').text())
                 if(error_msg!=''){
                   $('.error').text(error_msg);
-                }  
+                }*/
+                //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });  
             });
         </script>
     </asp:Content>
