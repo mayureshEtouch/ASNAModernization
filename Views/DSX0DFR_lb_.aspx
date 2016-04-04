@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
             <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -64,19 +63,19 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-title">Customer Name</span>
                             <span class="summary-txt" id="cust-name"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order #:</span>
+                            <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Line #:</span>
+                            <span class="summary-title">Line #</span>
                             <span class="summary-txt" id="line-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Version #:</span>
+                            <span class="summary-title">Version #</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
 
@@ -87,48 +86,45 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-                            <div class="header-background"></div>
-                            <div class="fixed-table-container-inner">
-                                <table cellspacing="0" cellpadding="0" border="0" id="detail-completion-status" class="navigateable">
+                                <table cellspacing="0" cellpadding="0" border="0" id="detail-completion-status" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
-                                            <th style="width: 10%">
-                                                <div class="th-inner">Del<br/>Lin</div>
+                                            <th style="width: 5%">
+                                                <div class="th-inner">Del Line</div>
                                             </th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Schedule<br/>Delivery</div>
+                                                <div class="th-inner">Schedule Delivery</div>
                                             </th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Del<br/>Typ</div>
+                                                <div class="th-inner">Delivery Type</div>
                                             </th>
                                             <th style="width: 10%">
-                                                <div class="th-inner">Del<br/>Sts</div>
+                                                <div class="th-inner">Delivery Status</div>
                                             </th>
                                             <th style="width: 15%">
-                                                <div class="th-inner">Model<br/>Number</div>
+                                                <div class="th-inner">Model Number</div>
                                             </th>
                                             <th style="width:15%">
-                                                <div class="th-inner">Serial<br/>Number</div>
+                                                <div class="th-inner">Serial Number</div>
                                             </th>
                                             <th style="width:10%">
-                                                <div class="th-inner">Ins<br/>&nbsp;</div>
+                                                <div class="th-inner">Ins</div>
                                             </th>
                                             <th style="width:10%">
-                                                <div class="th-inner">Frm<br/>&nbsp;</div>
+                                                <div class="th-inner">From</div>
                                             </th>
                                             <th style="width:10%">
-                                                <div class="th-inner">Del<br/>&nbsp;</div>
+                                                <div class="th-inner">Del</div>
                                             </th>
-
+											  <th style="width:5%">
+                                                <div class="th-inner"></div>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
@@ -140,7 +136,6 @@
                 </div>
             </section>
         </main>
-    </div>
     <div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">

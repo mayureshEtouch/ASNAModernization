@@ -22,7 +22,6 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">

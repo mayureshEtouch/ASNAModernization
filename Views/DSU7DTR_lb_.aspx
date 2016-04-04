@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
             <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
         <main class="mdl-layout__content">
             <section class="time-date">
@@ -64,7 +63,7 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #/Version #</span> <span name="order" class="summary-txt" id="order-version"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
                         <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Date</span> <span name="username" class="summary-txt" id="payment-date"></span> </div>
                     </div>
                 </div>
@@ -143,7 +142,6 @@
             </section>
         </main>
 
-        </div>
         <div id="modal" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">

@@ -40,7 +40,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+    
     <header class="mdl-layout__header">
                         <div class="mdl-layout__header-row"> 
                                 <!-- Title --> 
@@ -104,7 +104,6 @@
             </div>
         </section>
             </main>
-    </div>
     <div class="simplePopupBackground1" style="display: none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div>
         <style>

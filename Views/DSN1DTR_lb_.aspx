@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
             <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -64,15 +63,15 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer name:</span>
+                            <span class="summary-title">Customer Name</span>
                             <span class="summary-txt" id="cust-name"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Order #:</span>
+                            <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-number"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Version #:</span>
+                            <span class="summary-title">Version #</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
                     </div>
@@ -84,7 +83,7 @@
                         <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Purchased amount:</span>
+                                    <span class="form-label">Purchased Amount:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="pur-total"></span>
@@ -100,7 +99,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Tax rate:</span>
+                                    <span class="form-label">Tax Rate:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="tax-rate"></span>
@@ -108,7 +107,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Tax amount:</span>
+                                    <span class="form-label">Tax Amount:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="tax-amount"></span>
@@ -119,7 +118,7 @@
                         <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Order total:</span>
+                                    <span class="form-label">Order Total:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="order-total"></span>
@@ -127,7 +126,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Payment total:</span>
+                                    <span class="form-label">Payment Total:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="payment-total"></span>
@@ -135,7 +134,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Balance due:</span>
+                                    <span class="form-label">Balance Due:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="bal-due"></span>
@@ -143,7 +142,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Total receivables:</span>
+                                    <span class="form-label">Total Receivables:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="total-rec"></span>
@@ -151,7 +150,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Expected del date:</span>
+                                    <span class="form-label">Expected Del Date:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
                                     <span class="form-text" id="exp-deliver-date"></span>
@@ -164,14 +163,11 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-                            <div class="header-background"></div>
-                            <div class="fixed-table-container-inner">
-                                <table cellspacing="0" cellpadding="0" border="0" id="order-payment-data" class="navigateable">
+                                <table cellspacing="0" cellpadding="0" border="0" id="order-payment-data" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
                                             <th style="width: 20%">
-                                                <div class="th-inner">Pmt Mth</div>
+                                                <div class="th-inner">Payment Method</div>
                                             </th>
                                             <th style="width: 20%">
                                                 <div class="th-inner">Amount</div>
@@ -192,8 +188,8 @@
                                         
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
+                           
+                        
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
@@ -205,7 +201,6 @@
                 </div>
             </section>
         </main>
-    </div>
     <!-- Modified HTML code ends here -->
     <div id="modal" class="simplePopup"></div>
         <div id="Div1" style="display:none;">

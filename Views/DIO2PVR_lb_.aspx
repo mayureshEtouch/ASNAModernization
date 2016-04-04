@@ -32,7 +32,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -82,7 +81,7 @@
 
         </main>
         <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-    </div>
+    
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
@@ -371,10 +370,10 @@
 					if($(this).val().trim() == ""){
 					  $(this).val(" ").text("Please Choose");
 					    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
-					}
+					}				
                       return this;
 				});
-				
+				$("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='?']").remove();
 			    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
           if($(".simplePopupClose").length > 0) {
                      $(".simplePopupBackground1").show();

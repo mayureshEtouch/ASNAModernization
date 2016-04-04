@@ -72,17 +72,17 @@
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container table-container-form spacer-container-bottom ">
-                <div class="table-data-wrapper">
-                    <div class="table-data-maincontainer">
+            <section class="form-data spacer-container-bottom">
+                <div  class="form-data-wrapper" style="padding: 0;">
+                    <div>
                         <div class="table-container table-container-search">
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Address:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_address" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Zip Code:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_zipcode" class="input-label-text"></span></div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Home Phone Number:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_homenumber" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Work Phone Number:</span></div>
@@ -90,13 +90,13 @@
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="ext-div"><span class="input-label" style="display: inline-block;">Ext:</span><span id="cus_worknumber_ext" style="padding-left: 5px;font-size: 12px;"></span></div>
                                 <!-- <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet"></div> -->
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Cell Phone Number:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_cellnumber" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Mailing List ?:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_mailinglist" class="input-label-text"></span></div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Additional Address ?:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Last Changed by User:</span></div>
@@ -106,13 +106,13 @@
                                     <span id="cus_on" class="input-label-text" style="display:inline-block"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Notes ? :</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_notes" class="input-label-text"></span></div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Tax Exempt ? :</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_taxExempt" class="input-label-text"></span></div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Email Address:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_email" class="input-label-text"></span></div>
                             </div>
@@ -768,31 +768,13 @@
             padding: 4px 5px 4px 5px;
         }
 
-        .modal-dialog-container .select-customer-screen-grid .mdl-cell, .select-customer-screen-grid .mdl-cell {
-            margin: 0 0 0 8px;
-        }
-
-        {
-            margin: 0 0 0 8px;
-        }
-        /* form class starts here */
         .table-container-form {
             margin: 16px 0 0 0;
         }
 
         .input-label, .input-label-text {
-            color: #797979;
-            display: block;
-            font-family: "Open Sans","OpenSansRegular","Arial",sans-serif;
-            font-size: 12px;
-            padding-top: 12px;
+            font-size: 13px;
         }
-
-        .input-label {
-            font-weight: 600;
-        }
-        /* form class ends here */
-        /* 26 jan classes ends here */
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
