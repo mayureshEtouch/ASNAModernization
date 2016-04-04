@@ -188,6 +188,52 @@
                     </div>
                 </div>
             </section>
+            <section class="form-data" id="sixth-message" style="display:none;">
+                <div class="form-data-wrapper display-application-status">
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="otbok"></span></div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label"></span></div>
+                        
+                    </div>
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Requested</span></div>
+                        <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="requested"></span></div>
+                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Approved</span></div>
+                        <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="approved"></span></div>
+                    </div>
+                      <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Contact</span></div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="contact"></span></div>
+                    </div> 
+                     <div class="mdl-cell mdl-cell--12-col">
+                        <span class="form-text" id="title-msg-sixth" style="margin-left: 14px;"></span>
+                    </div> 
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Account #</span></div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="account"></span></div>
+                    </div>
+                    
+                    <div class="content-grid mdl-grid">
+                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                            <fieldset>
+                                <legend id="legend">NOTES:</legend>
+                                <ul id="notice-sixth" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></ul>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="button-container" style="padding:0">
+                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;" event-data="F12">Previous</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second"  event-data="F9">Display Transaction</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
@@ -783,6 +829,9 @@
 			#notice-third li {
                 list-style: none;
             }
+            #notice-sixth li {
+                list-style: none;
+            }
       #modal1 {
         left: 30% !important;
         top: 40% !important;
@@ -826,6 +875,7 @@
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value=' ']").text("Please Choose");
                 makeSelectDescriptive("CenPH__lb_SFLCTL__lb_PPTST",['Y','N'],['Yes','No'])
                 
+                $("#sixth-message").hide();
                 $("#fifth-message").hide();
                 $("#forth-message").hide();
                 $("#third-message").hide();
@@ -856,6 +906,19 @@
                     $("#digit-label").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
                     $("#title-msg-fifth").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
                     $("#fifth-message").show();
+                    //$("#modal1").css('left','32%');
+                    //$("#__Page_PopUp").css('height','380px');
+                }else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Requested amount") !== -1) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#sixth");
+                    $("#otbok").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
+                    $("#requested").text($("#CenPH__lb_SFLCTL__lb_PRLVA").text().trim())
+                    $("#approved").text($("#CenPH__lb_SFLCTL__lb_PRMVA").text().trim())
+                    $("#contact").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
+                    $("#account").text($("#CenPH__lb_SFLCTL__lb_CY2NB").text())
+                    $("#digit-label").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
+                    $("#title-msg-sixth").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
+                    $("#notice-sixth").html(notes);
+                    $("#sixth-message").show();
                     //$("#modal1").css('left','32%');
                     //$("#__Page_PopUp").css('height','380px');
                 } else {

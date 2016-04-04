@@ -92,33 +92,50 @@
                                             <th style="width: 5%">
                                                 <div class="th-inner">Del Line</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 5%">
                                                 <div class="th-inner">Schedule Delivery</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 5%">
                                                 <div class="th-inner">Delivery Type</div>
                                             </th>
-                                            <th style="width: 10%">
+                                            <th style="width: 5%">
                                                 <div class="th-inner">Delivery Status</div>
                                             </th>
                                             <th style="width: 15%">
                                                 <div class="th-inner">Model Number</div>
                                             </th>
-                                            <th style="width:15%">
+                                            <th style="width:12%">
                                                 <div class="th-inner">Serial Number</div>
                                             </th>
-                                            <th style="width:10%">
+                                            <th style="width:3%">
                                                 <div class="th-inner">Ins</div>
                                             </th>
-                                            <th style="width:10%">
+                                            <th style="width:3%">
                                                 <div class="th-inner">From</div>
                                             </th>
-                                            <th style="width:10%">
+                                            <th style="width:3%">
                                                 <div class="th-inner">Del</div>
                                             </th>
 											  <th style="width:5%">
-                                                <div class="th-inner"></div>
+                                                <div class="th-inner">Date Completed</div>
                                             </th>
+											
+											<th style="width:6%">
+                                                <div class="th-inner">Employee Code</div>
+                                            </th>
+											<th style="width:12%">
+                                                <div class="th-inner">Employee Name</div>
+                                            </th>
+											<th style="width:11%">
+                                                <div class="th-inner">Destination Carrier</div>
+                                            </th>
+											<th style="width:5%">
+                                                <div class="th-inner">Destination <br>Shipping Mode</div>
+                                            </th>
+											<th style="width:5%">
+                                                <div class="th-inner">Destination <br>Tracking Number</div>
+                                            </th>
+										
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1277,7 +1294,12 @@
                 });
                 copyData(copyToAndFrom, "");
                 $("#time").prepend("&nbsp;");
-                generateTableAndApplyInfiniteScroll("detail-completion-status", "CenPH__lb_SFLRCD", "NONE", "NONE");
+               // generateTableAndApplyInfiniteScroll("detail-completion-status", "CenPH__lb_SFLRCD", "NONE", "NONE");
+			   
+			    var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [10], [12], [13], [15], [17], [19]];
+                generateTableAndApplyInfiniteScroll("detail-completion-status", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          
+		  
 
             });
         </script>
