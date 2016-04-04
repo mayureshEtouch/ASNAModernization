@@ -349,6 +349,9 @@
       #__Page_PopUp .DdsInlinePopUpTitle {
        height: 0;
       }
+	   #__Page_Hidden {
+			height: 730px !important;
+		 }
 
         </style>
         <script type="text/javascript">

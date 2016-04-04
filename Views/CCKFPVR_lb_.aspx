@@ -940,15 +940,15 @@
         #fkeys, #Div1 {
             display: none !important;
         }
-
+		#__Page_PopUp tbody > tr:first-child {
+			display: none;
+		}
         #__Page_PopUp {
             left: 13% !important;
             min-width: 75% !important;
         }
 
-		#__Page_PopUp tbody td:first-child {
-			height: 0px !important;
-		}
+		
         .modal-dialog-container {
             width: 100%;
             margin-top: 0;
@@ -969,5 +969,8 @@
           left: 28% !important;
           top: 40% !important;
         }
+		 #__Page_Hidden {
+			height: 730px !important;
+		 }
     </style>
 </asp:Content>
