@@ -63,7 +63,7 @@
                                         <span class="form-label" style="">Bank:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1UCTX_new">Woodforest Natl Bank</span>
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1UCTX_new"></span>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
