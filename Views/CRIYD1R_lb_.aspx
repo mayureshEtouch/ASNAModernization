@@ -63,7 +63,7 @@
                                         <span class="form-label" style="">Bank:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0">
-                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1UCTX_new">Woodforest Natl Bank</span>
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1UCTX_new"></span>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
@@ -903,7 +903,7 @@
                     "CenPH__lb_RCDDTL1__lb_1BNK_lb_+CenPH_DdsConstant16+CenPH__lb_RCDDTL1__lb_1CKA_lb_+CenPH_DdsConstant20+CenPH_DdsConstant21+CenPH__lb_RCDDTL1__lb_1GYNB": "account-number",
                     "CenPH__lb_RCDDTL1_V1B6DT": "CenPH__lb_RCDDTL1_V1B6DT_new",
                     "CenPH__lb_RCDDTL1__lb_1RHVA": "CenPH__lb_RCDDTL1__lb_1RHVA_new",
-                    "CenPH__lb_RCDDTL1__lb_1W6ST": "CenPH__lb_RCDDTL1__lb_1W6ST_new",
+                    "CenPH__lb_RCDDTL1__lb_1W6ST+CenPH__lb_RCDDTL1__lb_DAFTX": "CenPH__lb_RCDDTL1__lb_1W6ST_new",
                     "CenPH__lb_RCDDTL1__lb_1ALTX+CenPH__lb_RCDDTL1__lb_DA1CO": "CenPH__lb_RCDDTL1__lb_1ALTX_new",
                     "CenPH__lb_RCDDTL1__lb_1SS_lb_": "CenPH__lb_RCDDTL1__lb_1SS_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1AAVN+CenPH__lb_RCDDTL1__lb_1ABVN+CenPH__lb_RCDDTL1_V1AGDT+CenPH__lb_RCDDTL1__lb_1ABTM": "entry",

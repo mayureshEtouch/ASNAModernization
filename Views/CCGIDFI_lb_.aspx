@@ -787,7 +787,9 @@
         left: 30% !important;
         top: 40% !important;
       }
-
+ #__Page_Hidden {
+			height: 730px !important;
+		 }
         </style>
         <script type="text/javascript">
             $(document).ready(function () {
