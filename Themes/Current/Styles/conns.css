@@ -778,6 +778,8 @@ textarea {
 /* 28 jan classes starts here */
 
 .confirmation-outer-conatiner {
+	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif !important;
+	font-size: 13px !important;
 	margin: 0 auto;
 	padding: 15px;
 	position: absolute;
@@ -1175,7 +1177,7 @@ textarea {
 }
 .order-detail-table-data .mdl-data-table, .table-data-content-container .mdl-data-table {
 	border: none;
-	border-radius: 5px;
+	border-radius: 5px 5px 0 0;
 	margin-top: 1px;
 	margin-bottom: 7px;
 	white-space: normal;
@@ -1369,6 +1371,7 @@ body div, body span, body textarea {
 /* Smartphones (landscape) ---Mobile landscape (480x320)-------- */
 
 @media (min-width:480px) and (max-width:599px) {
+
 }
 
 
@@ -1435,6 +1438,15 @@ input[maxlength='4'] {
 	margin-left: 0 !important;
 	border: none !important;
 }
+}
+
+
+@media screen and (max-width: 1024px) {
+.mdl-layout__header {
+	display: block !important;
+}
+}
+
 }
 
 /* Media queries ends here */

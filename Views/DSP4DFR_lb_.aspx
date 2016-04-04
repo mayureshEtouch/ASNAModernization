@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
             <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -103,13 +102,12 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-desktop">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop mdl-cell--6-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent pull-left" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+									  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="address-errors" data-upgraded=",MaterialButton,MaterialRipple">Address errors<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop pull-left">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="address-errors" data-upgraded=",MaterialButton,MaterialRipple">Address errors<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right">
+                              
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-desktop mdl-cell--2-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Next<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>
@@ -118,7 +116,6 @@
                 </div>
             </section>
         </main>
-    </div>
     <div id="modal" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display: none;">

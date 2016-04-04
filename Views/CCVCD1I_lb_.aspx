@@ -34,7 +34,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
@@ -90,7 +89,7 @@
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                            <div class="mdl-cell mdl-cell--12-col"> <span class="form-text"><strong>Approval for:</strong> <span id="CenPH__lb_RCDDTL1__lb_1G5VA_new"></span> <strong>With:</strong> <span id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> <strong>% Down</strong></span> </div>
+                            <div class="mdl-cell mdl-cell--12-col"> <span class="form-text"><strong>Approved for:</strong> <span id="CenPH__lb_RCDDTL1__lb_1G5VA_new"></span> <strong>With:</strong> <span id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> <strong>% Down</strong></span> </div>
                         </div>
                         <div class="button-container" style="padding:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
@@ -105,7 +104,6 @@
                     </div>
                 </section>
             </main>
-        </div>
         <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         <div id="modal1" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
