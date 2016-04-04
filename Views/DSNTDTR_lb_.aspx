@@ -64,7 +64,7 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #/Version #</span> <span name="order" id="order-version" class="summary-txt"></span> </div>
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
 
                         
                     </div>
@@ -76,14 +76,14 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
                             <div class="icon-container">
-                <span class="icon-txt credits">Credits</span><i class="material-icons md-15 md-light change-icon credits credit-icon"></i>
+                <span class="icon-txt credits">Credits</span><i class="material-icons md-15 md-light credits credit-icon"></i>
                 <span class="icon-txt comp-status">Completion status</span><i class="material-icons md-15 md-light comp-status completion-icon"></i>
               </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+            <section class="table-data-content-container spacer-container-bottom" >
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                        
@@ -91,19 +91,19 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                <div class="th-inner">Del <br /> Type
+                                                <div class="th-inner">Delivery <br /> Type
                                                 </div>
                                             </th>
                                             <th>
-                                                <div class="th-inner">Del <br /> Status
+                                                <div class="th-inner">Delivery <br /> Status
                                                 </div>
                                             </th>
                                             <th>
-                                                <div class="th-inner">From <br /> Loc
+                                                <div class="th-inner">From <br /> Location
                                                 </div>
                                             </th>
                                             <th>
-                                                <div class="th-inner">Qty
+                                                <div class="th-inner">Quantity
                                                 </div>
                                             </th>
                                             <th>
@@ -126,11 +126,11 @@
                                                 <div class="th-inner">Model Number<br />Description</div>
                                             </th>
                                             <th>
-                                                <div class="th-inner">Actl <br /> Price
+                                                <div class="th-inner">Actual <br /> Price
                                                 </div>
                                             </th>
                                             <th>
-                                                <div class="th-inner">Extd <br /> Price
+                                                <div class="th-inner">Extended <br /> Price
                                                 </div>
                                             </th>
 											<th>

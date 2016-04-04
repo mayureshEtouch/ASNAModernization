@@ -63,7 +63,7 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
                         <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #</span> <span name="order" id="order-number" class="summary-txt"></span> </div>
                         <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Version #</span> <span name="username" class="summary-txt" id="version-number"></span> </div>
                     </div>
@@ -87,10 +87,10 @@
                                                 </div>
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">Mfg Warr<br /> Exp Date</div>
+                                                <div class="th-inner">Mfg Warranty<br /> Expiry Date</div>
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">Warr<br /> Typ
+                                                <div class="th-inner">Warranty<br /> Type
                                                 </div>
                                             </th>
                                             <th style="width: 14%">
@@ -102,7 +102,7 @@
                                                 </div>
                                             </th>
                                             <th style="width: 15%">
-                                                <div class="th-inner">Ext Warr<br /> Exp Date</div>
+                                                <div class="th-inner">Ext Warranty<br /> Exp Date</div>
                                             </th>
                                         </tr>
                                     </thead>
