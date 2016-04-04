@@ -613,6 +613,7 @@
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                     _00('Enter', event);
                 });
+                $("#CenPH__lb_RCDDTL1__lb_1Y2NB_new").ForceNumericOnly();
             });
 
         </script>
