@@ -1324,6 +1324,21 @@
                 _00('Enter', event);
             });
 	
+			// Tabindex of input fields
+			setTimeout(function(){
+			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr("tabindex","1");
+			$("#CenPH_PBDTX").attr("tabindex","2");
+			$("#CenPH_CETTX").attr("tabindex","3");
+			$("#CenPH_CEUTX").attr("tabindex","4");
+			$("#CenPH_CEWTX").attr("tabindex","5");
+			$("#CenPH_1FLST").attr("tabindex","6");
+			$("#requestdate").attr("tabindex","7");
+			$("#pcode").attr("tabindex","8");
+			$("#special-instructions input").each(function(){
+			  if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
+			});
+			},100)
+	
 			// To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
 			

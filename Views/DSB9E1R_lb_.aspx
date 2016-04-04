@@ -409,7 +409,25 @@
          // $("#cphone").replace(/\D/g, "");
 		  $("#hphone1,#bphone1,#bphone2,#bphone3,#hphone2,#hphone3,#cphone,#extn").ForceNumericOnly();
 		  
-		 
+		 // TabIndex of Input fields
+		 setTimeout(function(){
+			$("#type").attr("tabindex","1");
+			$("#firstName").attr("tabindex","2");
+			$("#middleInitial").attr("tabindex","3");
+			$("#lastName").attr("tabindex","4");
+			$("#suffix-input").attr("tabindex","5");
+			$("#businessName").attr("tabindex","6");
+			$("#address1").attr("tabindex","7");
+			$("#address2").attr("tabindex","8");
+			$("#zcode").attr("tabindex","1");
+			$("#hphone1").attr("tabindex","2");
+			$("#hphone2").attr("tabindex","3");
+			$("#hphone3").attr("tabindex","4");
+			$("#bphone1").attr("tabindex","5");
+			$("#bphone2").attr("tabindex","6");
+			$("#bphone3").attr("tabindex","7");
+			$("#cphone").attr("tabindex","8");
+			},100)
       
 
       });

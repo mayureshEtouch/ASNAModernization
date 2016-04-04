@@ -429,6 +429,7 @@
             $("#CenPH__lb_RCDDTL1__lb_1ALTX").addClass("mdl-textfield__input");
             //Set phone number fields
             $("#CenPH__lb_RCDDTL1__lb_PAVNB").appendTo("#search-by-phone");
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB").focus();
             $("#CenPH__lb_RCDDTL1__lb_PBMNB").appendTo("#search-by-phone");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").appendTo("#search-by-phone");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").addClass("mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop");

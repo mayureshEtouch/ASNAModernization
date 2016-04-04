@@ -970,7 +970,7 @@
           top: 40% !important;
         }
 		 #__Page_Hidden {
-			height: 730px !important;
+			height: 100% !important;
 		 }
     </style>
 </asp:Content>

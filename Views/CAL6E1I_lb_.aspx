@@ -1031,7 +1031,7 @@
                 width: 50% !important;
                 left: 22% !important;
             }
-            #__Page_PopUp > tr:first-child {
+            #__Page_PopUp tbody > tr:first-child {
               display: none;
             }
             #__Page_PopUp .DdsInlinePopUpTitle {

@@ -780,14 +780,14 @@ textarea {
 .confirmation-outer-conatiner {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif !important;
 	font-size: 13px !important;
-	margin: 0 auto;
 	padding: 15px;
 	position: absolute;
 	top: 23%;
-	left: 45%;
+	left: 50%;
 	background: #fff;
 	border: 2px solid #c5c5c5;
 	width: 180px;
+	margin: 0 0 0 -90px;
 	border-radius: 5px;
 }
 .confirmation-outer-conatiner .confirmation-text {
@@ -1413,6 +1413,12 @@ input[maxlength='4'] {
 .heading-h1 {
  font-size: 17px;
 }
+.mdl-grid .mdl-cell--3-col:nth-child(2n), .mdl-grid  .mdl-cell--4-col:nth-child(2n) {
+	border-right: none !important;
+}
+.order-summary-wrapper .mdl-cell {
+	margin-bottom: 10px;
+} 
 }
 @media (min-width: 1024px) and (max-width: 1100px) {
 #wrapper,  #span-content,  #content,  #main-content {

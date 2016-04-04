@@ -328,10 +328,11 @@ $(document).ready(function() {
         $('#modal2').html(errorMsg);
         $('#modal2').simplePopup();
     }
-	  setTimeout(function(){   
+	// Tabindex for input fields
+	  /* setTimeout(function(){   
            $(".form-text").attr("tabindex","0");  
 			$(":input:not(:hidden)").each(function (i) { $(this).attr('tabindex', i + 1); });
-           },100)
+           },100) */
 });
 
 function makeSelectDescriptive(selectId, values, descriptions) {

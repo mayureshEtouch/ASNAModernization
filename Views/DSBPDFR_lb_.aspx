@@ -619,6 +619,7 @@ tr.selected {
             //Set name
             $("#CenPH__lb_SFLCTL__lb_2ALTX").appendTo("#search-by-name");
             $("#CenPH__lb_SFLCTL__lb_2ALTX").addClass("mdl-textfield__input");
+			$("#CenPH__lb_SFLCTL__lb_2ALTX").focus();
 			
             // Search by Customer data table record mapping
             var dataMergeIndices = [[0], [1, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", 8], [2, "&nbsp;", 9, "&nbsp;&nbsp;&nbsp;", 5, ",&nbsp;", 7,",&nbsp;", 6],[3]];
