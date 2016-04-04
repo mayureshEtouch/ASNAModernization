@@ -1053,6 +1053,7 @@
             }
             .simplePopup {
               left: 28% !important;
+              top: 50% !important;
             }
             #div_driver, #div_license {
                 display: none;
