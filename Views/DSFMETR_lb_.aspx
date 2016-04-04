@@ -1725,7 +1725,7 @@
            },100)
            
         function copyData(){
-			tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+			//tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             $("#datatableValueInsert tbody").find("tr").each(function(i){
                 $(this).find("td:eq(0) span").text($("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(1) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
@@ -1832,6 +1832,7 @@
         
         // Check if Current state of page is Review or Edit
          if($(".DdsCharField").length > 1) {
+		 
             // if Current state of page is Edit
             // Hide New Confirm UI Table
             $("#datatableValue").hide();
@@ -1865,8 +1866,9 @@
                 copyData();
             }
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Tabl
-        } 
-        else {
+        }
+        else if ($('#CenPH__lb_CONFIRM').length > 0){
+		
             // if Current stateof page is Review /Confirm
             // Hide New Edit UI Table
             $("#datatableValueInsert").hide();
@@ -1876,6 +1878,8 @@
             var yesbutton = $("#yes");
             var nobutton = $("#no");
             
+			
+			
             yesbutton.click(function () {
                     $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
                     // Show New Confirm / Review UI Table 
@@ -1908,7 +1912,19 @@
             
             $("#datatableValue tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
             
-        }    
+        }else{
+			
+				$("#datatableValue").hide();
+				$("#datatableValueInsert").hide();
+				
+				$("#enter").css('display','none');
+				setTimeout(function(){
+					$("#previous-page, #next-page").hide();
+					$(".add-icon, .add-item-title").hide();
+				},10);
+				
+				
+			}		
         
         
        /* $("#reset").click(function(e) {
