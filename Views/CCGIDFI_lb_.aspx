@@ -192,22 +192,22 @@
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="otbok"></span></div>
-                        <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label"></span></div>
+                        <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label-6"></span></div>
                         
                     </div>
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Requested</span></div>
                         <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="requested"></span></div>
-                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Approved</span></div>
-                        <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="approved"></span></div>
-                    </div>
-                      <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Contact</span></div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="contact"></span></div>
+                        <div class="mdl-cell mdl-cell--3-col div_approved"> <span class="form-label">Approved</span></div>
+                        <div class="mdl-cell mdl-cell--3-col pull-right div_approved"> <span style="padding-right: 12px;" class="form-text" id="approved"></span></div>
                     </div> 
-                     <div class="mdl-cell mdl-cell--12-col">
-                        <span class="form-text" id="title-msg-sixth" style="margin-left: 14px;"></span>
+					<div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                     <div class="mdl-cell mdl-cell--6-col">
+                        <span class="form-text" id="title-msg-sixth"></span>
                     </div> 
+					<div class="mdl-cell mdl-cell--6-col pull-right div_continue"><span class="form-text" style="margin-right: 10px;" id="sixth"><strong>Continue&nbsp;?</strong>
+					</span> </div>
+					</div>
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Account #</span></div>
                         <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="account"></span></div>
@@ -911,14 +911,20 @@
                 }else if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Requested amount") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#sixth");
                     $("#otbok").text($("#CenPH__lb_SFLCTL__lb_2FXCO").text())
-                    $("#requested").text($("#CenPH__lb_SFLCTL__lb_PRLVA").text().trim())
-                    $("#approved").text($("#CenPH__lb_SFLCTL__lb_PRMVA").text().trim())
-                    $("#contact").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
+                    $("#requested").text($("#CenPH__lb_SFLCTL__lb_PRLVA").text())
+                    $("#approved").text($("#CenPH__lb_SFLCTL__lb_PRMVA").text())
+                    //$("#contact").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
                     $("#account").text($("#CenPH__lb_SFLCTL__lb_CY2NB").text())
-                    $("#digit-label").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
+                    $("#digit-label-6").text($("#CenPH__lb_SFLCTL__lb_CZQNB").text())
                     $("#title-msg-sixth").text($("#CenPH__lb_SFLCTL__lb_CBANA").text())
                     $("#notice-sixth").html(notes);
                     $("#sixth-message").show();
+					if($("#CenPH__lb_SFLCTL__lb_PPTST").length == 0){
+						$(".div_continue").hide();
+					}
+					if($("#CenPH__lb_SFLCTL__lb_PRMVA").length == 0){
+						$(".div_approved").hide();
+					}
                     //$("#modal1").css('left','32%');
                     //$("#__Page_PopUp").css('height','380px');
                 } else {
