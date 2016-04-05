@@ -31,14 +31,14 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <header class="mdl-layout__header" class="first-view" style="display: none;">
+        <header class="mdl-layout__header first-view" style="display: none;">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title logo-icon"></span>
                 <div class="mdl-layout-spacer"></div>
                 <span class="close-icon"><i class="material-icons md-15 close"></i></span>
             </div>
         </header>
-        <main class="mdl-layout__content" class="first-view" style="display: none;">
+        <main class="mdl-layout__content first-view" style="display: none;">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
@@ -79,6 +79,9 @@
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--6-col" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1" style="margin-left: -5px;">exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right" style="padding-bottom:0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next1" style="margin-left: -5px;">next</span>
                             </div>
                         </div>
                     </div>
@@ -264,10 +267,10 @@
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit2">Exit</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next2">next</span>
                                     </div>
                                 </div>
                             </div>
@@ -356,10 +359,11 @@
                 }
             };
             $(document).ready(function () {
+                debugger
                 $('body').on('click', '.close-icon', function (event) {
                     _00('F12', event);
                 });
-                $('body').on('click', '#next', function (event) {
+                $('body').on('click', '#next1,#next2', function (event) {
                     _00('Enter', event);
                 });
                 $('body').on('click', '#exit1,#exit2', function (event) {
