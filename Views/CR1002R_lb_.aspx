@@ -193,16 +193,24 @@
                                             <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Life:</span> </div>
                                             <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                             <select id="CenPH_DSPFMT1_CRLIFB_new">
-                            <option value=" ">   </option>
-                            <option value="0"> 0 </option>
-                            <option selected="selected" value="1"> 1 </option>
-                            <option value="2"> 2 </option>
-
-                          </select></span> </div>
+                                                <option value=" ">   </option>
+                                                <option value="0"> 0 </option>
+                                                <option selected="selected" value="1"> 1 </option>
+                                                <option value="2"> 2 </option>
+                                              </select>
+                                            </span> </div>
                                         </div>
                                         <div class="content-grid mdl-grid" style="padding-left: 0px;">
                                             <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Property:</span> </div>
-                                            <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DSPFMT1_CRPRPB_new">1</span> </div>
+                                            <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                                <select id="CenPH_DSPFMT1_CRPRPB_new" style="display: none;">
+                                                    <option value=" ">   </option>
+                                                    <option value="0"> 0 </option>
+                                                    <option selected="selected" value="1"> 1 </option>
+                                                </select>
+                                            </span>
+                                            <span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DSPFMT1_CRPRPB_new_ro" style="display: none;"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="mdl-cell mdl-cell--6-col">
@@ -210,21 +218,20 @@
                                             <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Accidental &amp; Health:</span> </div>
                                             <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                               <select id="CenPH_DSPFMT1_CRACHB_new">
-                            <option value=" ">   </option>
-                            <option value="0"> 0 </option>
-                            <option selected="selected" value="1"> 1 </option>
-                          </select>
+                                                <option value=" ">   </option>
+                                                <option value="0"> 0 </option>
+                                                <option selected="selected" value="1"> 1 </option>
+                                              </select>
                                             </span> </div>
                                         </div>
                                         <div class="content-grid mdl-grid">
                                             <div class="mdl-cell mdl-cell--4-col" style="margin:0"><span class="form-label">Unemployment:</span> </div>
                                             <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                               <select id="CenPH_DSPFMT1_CRUEMB_new">
-                            <option value=" ">   </option>
-                            <option value="0"> 0 </option>
-                            <option selected="selected" value="1"> 1 </option>
-
-                          </select>
+                                                <option value=" ">   </option>
+                                                <option value="0"> 0 </option>
+                                                <option selected="selected" value="1"> 1 </option>
+                                              </select>
                                             </span> </div>
                                         </div>
                                     </div>
@@ -430,13 +437,13 @@
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Previous</span>
+                                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Previous</span> -->
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise1">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg1">Display Messages</span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">Print</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                    <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next1">next</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -1597,7 +1604,7 @@
                 "CenPH_DSPFMT1_CRSCDB": "CenPH_DSPFMT1_CRSCDB_new",
                 "CenPH_DSPFMT1_CRPCHB": "CenPH_DSPFMT1_CRPCHB_new",
                 "CenPH_DSPFMT1_CRDWNB": "CenPH_DSPFMT1_CRDWNB_new",
-                "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new",
+                "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new_ro",
                 "CenPH_DSPFMT1_CRPHNB": "ro-CenPH_DSPFMT1_CRPHNB_new",
                 "CenPH_DSPFMT1_CRWRKB": "ro-CenPH_DSPFMT1_CRWRKB_new"
             },
@@ -1612,7 +1619,8 @@
               "CenPH_DSPFMT1_FRCNTC": "CenPH_DSPFMT1_FRCNTC_new",
               "CenPH_DSPFMT1_CRLIFB": "CenPH_DSPFMT1_CRLIFB_new",
               "CenPH_DSPFMT1_CRACHB": "CenPH_DSPFMT1_CRACHB_new",
-              "CenPH_DSPFMT1_CRUEMB": "CenPH_DSPFMT1_CRUEMB_new"
+              "CenPH_DSPFMT1_CRUEMB": "CenPH_DSPFMT1_CRUEMB_new",
+              "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new"
             }
         };
         var copyToAndFromSecondView = {
@@ -1664,6 +1672,15 @@
                 $("#first-view").show();
                 $("#second-view").hide();
                 copyData(copyToAndFromFirstView, "keyup keydown change blur mouseup mousedown");
+
+                if ($("#CenPH_DSPFMT1_CRPRPB").is('span')) {
+                    $("#CenPH_DSPFMT1_CRPRPB_new_ro").show();
+                    $("#CenPH_DSPFMT1_CRPRPB_new").hide();
+                } else {
+                    $("#CenPH_DSPFMT1_CRPRPB_new_ro").hide();
+                    $("#CenPH_DSPFMT1_CRPRPB_new").show();
+                }
+
                 if ($("#CenPH_DSPFMT1_CRPHNB").is('span')) {
                     $("#ro-CenPH_DSPFMT1_CRPHNB_new").show();
                     $("#CenPH_DSPFMT1_CRPHNB_new").hide();
@@ -1688,15 +1705,15 @@
                 });
                 $('body').on('click', '#next', function(event) {
                     if ($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val().length > 0) {
-                        $("#CenPH_DSPFMT1_SS_lb_1_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+                        $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
                     } else {
-                        $("#CenPH_DSPFMT1_SS_lb_1_new").val($("#CenPH_DSPFMT1_SS_lb_1_new").val());
+                        $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new").val());
                     }
 
                     if ($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val().length > 0) {
-                        $("#CenPH_DSPFMT1_SS_lb_2_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                        $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
                     } else {
-                        $("#CenPH_DSPFMT1_SS_lb_2_new").val($("#CenPH_DSPFMT1_SS_lb_2_new").val());
+                        $("#CenPH_DSPFMT1_SS_lb_2").val($("#CenPH_DSPFMT1_SS_lb_2_new").val());
                     }
                     //$("#CenPH_DSPFMT1_SS_lb_2_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
                     _00('Enter', event);
