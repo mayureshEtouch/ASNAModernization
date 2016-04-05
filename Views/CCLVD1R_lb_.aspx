@@ -85,12 +85,25 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div class="content-grid mdl-grid" style="padding: 10px 0 0;display:none;">
+                    <!-- <div class="content-grid mdl-grid" style="padding: 10px 0 0;display:none;">
                         <div class="mdl-cell mdl-cell--12-col"><span class="form-text"><strong>Approval for:</strong> 6,666,000.60 <strong>With:</strong> 666.60 <strong>% Down</strong></span> </div>
+                    </div> -->
+                    <div class="content-grid mdl-grid" style="padding: 10px 0 0;display: none;" id="appr-for">
+                        <div class="mdl-cell mdl-cell--12-col"> <span class="form-text"><strong>Approved for:</strong> <span id="CenPH__lb_RCDDTL1__lb_1G5VA_new"></span> <strong>With:</strong> <span id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> <strong>% Down</strong></span> </div>
                     </div>
-                    <div class="button-container" style="padding: 0">
+                    <!-- <div class="button-container" style="padding: 0">
                         <div class="content-grid mdl-grid" style="padding-bottom: 5px">
                             <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right" style="padding-bottom: 0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ok">ok</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="button-container" style="padding: 0">
+                        <div class="content-grid mdl-grid" style="padding-bottom: 5px">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left" style="padding-bottom: 0">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom: 0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ok">ok</span>
                             </div>
                         </div>
@@ -932,11 +945,17 @@
             $("#location").html(location);
             var notes = $("#CenPH__lb_RCDDTL1__lb_DUJTX").html().replace(/&nbsp;/g, "");
             $("#CenPH_2AQNA").val(notes);
-
-            
+            if($("#CenPH__lb_RCDDTL1__lb_1G5VA").length > 0) {
+                $("#appr-for").show();
+                $("#CenPH__lb_RCDDTL1__lb_1G5VA_new").html($("#CenPH__lb_RCDDTL1__lb_1G5VA").html().replace(/&nbsp;/g, ""));
+                $("#CenPH__lb_RCDDTL1_V1AGP3_new").html($("#CenPH__lb_RCDDTL1_V1AGP3").html().replace(/&nbsp;/g, ""));
+            }
             //handle F12 event
             $("#ok,.close-icon").on("click", function (event) {
                 _00('F12', event);
+            });
+            $("#exit").on("click", function (event) {
+                _00('F3', event);
             });
         });
 
