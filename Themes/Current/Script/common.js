@@ -329,10 +329,16 @@ $(document).ready(function() {
         $('#modal2').simplePopup();
     }
 	// Tabindex for input fields
-	  /* setTimeout(function(){   
-           $(".form-text").attr("tabindex","0");  
-			$(":input:not(:hidden)").each(function (i) { $(this).attr('tabindex', i + 1); });
-           },100) */
+	   setTimeout(function(){   
+           //$(".form-text").attr("tabindex","0");  
+				$(":input:not(:hidden),.mdl-button").each(
+					function (i) { 
+					var tabindex = $(this).data('tb-index');
+					if(tabindex && undefined != tabindex){
+						$(this).attr('tabindex', tabindex); 
+					}
+				});
+      },1000) 
 });
 
 function makeSelectDescriptive(selectId, values, descriptions) {

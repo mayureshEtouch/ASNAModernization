@@ -63,7 +63,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Name:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1JZXT_new" maxlength="30"/></span>
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1JZXT_new" maxlength="30" data-tb-index="1"/></span>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Phone:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1P3N_lb_new" maxlength="10" /></span>
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1P3N_lb_new" maxlength="10" data-tb-index="2" /></span>
                                     </div>
                                 </div>
                             </div>
@@ -83,8 +83,8 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Address:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J0XT_new" maxlength="30"/></span>
-                                        <span class="form-text" style="margin-top: 5px; display: block;"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J1XT_new" maxlength="30"/></span>
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J0XT_new" maxlength="30" data-tb-index="3"/></span>
+                                        <span class="form-text" style="margin-top: 5px; display: block;"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J1XT_new" maxlength="30" data-tb-index="4"/></span>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Zip:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J2XT_new" maxlength="10"/></span>
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J2XT_new" maxlength="10" data-tb-index="5"/></span>
                                     </div>
                                 </div>
                             </div>

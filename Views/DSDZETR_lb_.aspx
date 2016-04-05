@@ -70,12 +70,12 @@
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Billing Address</span>
                             <div class="summary-txt" data-upgraded=",MaterialTextfield">
-                               	<span id="CenPH_PANTX"></span><span id="CenPH_PAOTX"></span>
+                                <span id="CenPH_PANTX"></span><span id="CenPH_PAOTX"></span>
                                 <br />
-								<span id="CenPH_PAQTX"></span>
-								<span id="CenPH_PADST"></span>
+                                <span id="CenPH_PAQTX"></span>
+                                <span id="CenPH_PADST"></span>
                                 <span id="CenPH_PAPTX"></span>
-	                        </div>
+                            </div>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Phone Details</span>
@@ -124,7 +124,7 @@
                                     </div>
                                 </div>
                             </div>
-							<div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col">
                                     <span class="form-label">Zip Code:</span>
                                 </div>
@@ -166,8 +166,8 @@
                                     <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <!--<input type="text" id="requestdate" name="date" readonly="true">
                                         <i id="reqesdate" class="material-icons calender-icon page-icons"></i>
-										-->
-										<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
+                                        -->
+                                        <input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
                                         <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </span>
@@ -219,7 +219,7 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('F11', event);">Edit Customer Details</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-								 
+                                 
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('Enter', event);">Next</span>
                             </div>
                         </div>
@@ -1140,9 +1140,9 @@
         #special-instructions span {
             display: block !important;
         }
-		#ui-datepicker-div {
-		z-index: 1000 !important;
-		}
+        #ui-datepicker-div {
+        z-index: 1000 !important;
+        }
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
@@ -1153,9 +1153,9 @@
         }
         $(document).ready(function () {
             //Hide all read only mode elements
-			var ext= $("#CenPH__lb_SFLCTL__lb_CEONB").html()==undefined?"":"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html();
-			var secAddr = $("#CenPH__lb_SFLCTL__lb_PAOTX").html() ==undefined?"":($("#CenPH__lb_SFLCTL__lb_PAOTX").text().trim()==""?"":" "+$("#CenPH__lb_SFLCTL__lb_PAOTX").html()+"&nbsp;,");
-			
+            var ext= $("#CenPH__lb_SFLCTL__lb_CEONB").html()==undefined?"":"&nbsp;/&nbsp;"+$("#CenPH__lb_SFLCTL__lb_CEONB").html();
+            var secAddr = $("#CenPH__lb_SFLCTL__lb_PAOTX").html() ==undefined?"":($("#CenPH__lb_SFLCTL__lb_PAOTX").text().trim()==""?"":" "+$("#CenPH__lb_SFLCTL__lb_PAOTX").html()+"&nbsp;,");
+            
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
             //set date and time
             setDateTime("CenPH_DdsConstant16", "CenPH__lb_SFLCTL__lb__lb_TME");
@@ -1164,21 +1164,21 @@
             // Set order number
             $("#CenPH_1BANB").html($("#CenPH__lb_SFLCTL__lb_1BANB").html().replace(/&nbsp;/g, ""));
             $("#verssion-number").html($("#CenPH__lb_SFLCTL__lb_1EXNB").html().replace(/&nbsp;/g, ""));
-			
-		    //Set billing address
-								
+            
+            //Set billing address
+                                
             $("#CenPH_PANTX").html($("#CenPH__lb_SFLCTL__lb_PANTX").html()+ ", ");
             $("#CenPH_PAQTX").html($("#CenPH__lb_SFLCTL__lb_PAQTX").html()+ ", ");
             $("#CenPH_PADST").html($("#CenPH__lb_SFLCTL__lb_PADST").html() + ", ");
-			$("#CenPH_PAOTX").html(secAddr);
+            $("#CenPH_PAOTX").html(secAddr);
             $("#CenPH_PAPTX").html($("#CenPH__lb_SFLCTL__lb_PAPTX").html());
             // Set phone numbers
             $("#CenPH_CHPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CHPH_lb_").html());
             $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html()+""+ext);
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
-			
-			
+            
+            
             $('body').on('click', '.emp-code', function (event) {
                 _00('Enter', event);
             });
@@ -1219,13 +1219,13 @@
             });
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
            // $("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
-		    $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
+            $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
             $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
-			$("#requestdate, #pcode").css("width", "166px");
+            $("#requestdate, #pcode").css("width", "166px");
             //$("#expectedDate").text($("#CenPH__lb_SFLCTL_V1AXDT").text());
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
@@ -1284,9 +1284,9 @@
                 _00("PgUp", event);
                 generateSpecialInstructionsSection();
             });
-			
-			
-			
+            
+            
+            
             $('body').on('keydown', function (event) {
                 var keycode = event.keyCode || event.which;
                 if (keycode === 33) {
@@ -1323,27 +1323,27 @@
                 $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").show();
                 _00('Enter', event);
             });
-	
-			// Tabindex of input fields
-			setTimeout(function(){
-			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr("tabindex","1");
-			$("#CenPH_PBDTX").attr("tabindex","2");
-			$("#CenPH_CETTX").attr("tabindex","3");
-			$("#CenPH_CEUTX").attr("tabindex","4");
-			$("#CenPH_CEWTX").attr("tabindex","5");
-			$("#CenPH_1FLST").attr("tabindex","6");
-			$("#requestdate").attr("tabindex","7");
-			$("#pcode").attr("tabindex","8");
-			$("#special-instructions input").each(function(){
-			  if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
-			});
-			},100)
-	
-			// To show Billing & Shipping address in Order Detail page
+    
+            // Tabindex of input fields
+            setTimeout(function(){
+            $("#CenPH__lb_SFLCTL__lb_1AJCD").attr("tabindex","1");
+            $("#CenPH_PBDTX").attr("tabindex","2");
+            $("#CenPH_CETTX").attr("tabindex","3");
+            $("#CenPH_CEUTX").attr("tabindex","4");
+            $("#CenPH_CEWTX").attr("tabindex","5");
+            $("#CenPH_1FLST").attr("tabindex","6");
+            $("#requestdate").attr("tabindex","7");
+            $("#pcode").attr("tabindex","8");
+            $("#special-instructions input").each(function(){
+              if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
+            });
+            },100)
+    
+            // To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
-			
+            
                 sessionStorage.setItem("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text()+  ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text());
-               sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text()+($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text());	
+               sessionStorage.setItem("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text()+($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text()); 
             }
             else {
                 setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim()==""?"":", "+$("[id$='lb_SFLCTL__lb_CEUTX']").text())  + ", <br>" + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CCXST']").text()  + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
