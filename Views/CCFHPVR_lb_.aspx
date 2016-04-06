@@ -660,6 +660,7 @@
             }
             #confirmprompt {
                position: static !important;
+               margin-left: 30% !important;
             }
         </style>
     </asp:Content>

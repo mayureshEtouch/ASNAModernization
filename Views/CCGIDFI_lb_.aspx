@@ -51,7 +51,7 @@
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCGIDFI</span> </div>
                 </div>
             </section>
-            <section class="form-data" id="first-message">
+            <!-- <section class="form-data" id="first-message">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">Continue to GE Credit? <strong>'N'</strong> will exit</span> </div>
@@ -80,8 +80,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="form-data" id="second-message" style="display:none;">
+            </section> -->
+            <!-- <section class="form-data" id="second-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">Account for Cust not on GE Money System</span></div>
@@ -107,17 +107,17 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="form-data" id="third-message" style="display:none;">
+            </section> -->
+            <!-- <section class="form-data" id="third-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="nocopp"></span></div>
                         <div class="mdl-cell mdl-cell--6-col"> <span class="form-text">No Cash Option Product on Invoice</span></div>
-					  <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="third"><strong>Continue&nbsp;?</strong>
-					</span> </div>
+                                  <div class="mdl-cell mdl-cell--6-col pull-right"><span class="form-text" style="margin-right: 10px;" id="third"><strong>Continue&nbsp;?</strong>
+                                </span> </div>
                     </div>
-					
-					<div class="content-grid mdl-grid">
+                                
+                                <div class="content-grid mdl-grid">
                         <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
                             <fieldset>
                                 <legend id="legend">NOTES:</legend>
@@ -125,7 +125,7 @@
                             </fieldset>
                         </div>
                     </div>
-					
+                                
                     <div class="button-container" style="padding:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
                             <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
@@ -138,8 +138,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="form-data" id="forth-message" style="display:none;">
+            </section> -->
+            <!-- <section class="form-data" id="forth-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--12-col"> <span class="form-text" id="payerr"></span></div>
@@ -162,8 +162,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="form-data" id="fifth-message" style="display:none;">
+            </section> -->
+            <!-- <section class="form-data" id="fifth-message" style="display:none;">
                 <div class="form-data-wrapper display-application-status">
                     <div class="content-grid mdl-grid" style="padding: 10px 0 0">
                         <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="auterr"></span></div>
@@ -187,54 +187,113 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="form-data" id="sixth-message" style="display:none;">
-                <div class="form-data-wrapper display-application-status">
-                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="otbok"></span></div>
-                        <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label-6"></span></div>
+            </section> -->
+                <!-- <section class="form-data" id="sixth-message">
+                    <div class="form-data-wrapper display-application-status">
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="otbok"></span></div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="digit-label-6"></span></div>
+                            
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Requested</span></div>
+                            <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="requested"></span></div>
+                            <div class="mdl-cell mdl-cell--3-col div_approved"> <span class="form-label">Approved</span></div>
+                            <div class="mdl-cell mdl-cell--3-col pull-right div_approved"> <span style="padding-right: 12px;" class="form-text" id="approved"></span></div>
+                        </div> 
+                                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                         <div class="mdl-cell mdl-cell--6-col">
+                            <span class="form-text" id="title-msg-sixth"></span>
+                        </div> 
+                                        <div class="mdl-cell mdl-cell--6-col pull-right div_continue"><span class="form-text" style="margin-right: 10px;" id="sixth"><strong>Continue&nbsp;?</strong>
+                                        </span> </div>
+                                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Account #</span></div>
+                            <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="account"></span></div>
+                        </div>
                         
-                    </div>
-                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Requested</span></div>
-                        <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="requested"></span></div>
-                        <div class="mdl-cell mdl-cell--3-col div_approved"> <span class="form-label">Approved</span></div>
-                        <div class="mdl-cell mdl-cell--3-col pull-right div_approved"> <span style="padding-right: 12px;" class="form-text" id="approved"></span></div>
-                    </div> 
-					<div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                     <div class="mdl-cell mdl-cell--6-col">
-                        <span class="form-text" id="title-msg-sixth"></span>
-                    </div> 
-					<div class="mdl-cell mdl-cell--6-col pull-right div_continue"><span class="form-text" style="margin-right: 10px;" id="sixth"><strong>Continue&nbsp;?</strong>
-					</span> </div>
-					</div>
-                    <div class="content-grid mdl-grid" style="padding: 10px 0 0">
-                        <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Account #</span></div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="account"></span></div>
-                    </div>
-                    
-                    <div class="content-grid mdl-grid">
-                        <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
-                            <fieldset>
-                                <legend id="legend">NOTES:</legend>
-                                <ul id="notice-sixth" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></ul>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="button-container" style="padding:0">
-                        <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                            <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;" event-data="F12">Previous</span>
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second"  event-data="F9">Display Transaction</span>
+                        <div class="content-grid mdl-grid">
+                            <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                                <fieldset>
+                                    <legend id="legend">NOTES:</legend>
+                                    <ul id="notice-sixth" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;"></ul>
+                                </fieldset>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
+                        </div>
+                        <div class="button-container" style="padding:0">
+                            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                                <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous-second" style="margin-left: -5px;" event-data="F12">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="displayTransaction-second"  event-data="F9">Display Transaction</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </main>
+                </section> -->
+               <section class="form-data" id="sixth-message" style="">
+                    <div class="form-data-wrapper display-application-status">
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--6-col"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2FXCO_new"></span></div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right"> <span style="padding-right: 12px;" class="form-text" id="CenPH__lb_SFLCTL__lb_CZQNB_new"></span></div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Requested</span></div>
+                            <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="CenPH__lb_SFLCTL__lb_PRLVA_new"></span></div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Approved</span></div>
+                            <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="CenPH__lb_SFLCTL__lb_PRMVA_new"></span></div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label"></span></div>
+                            <div class="mdl-cell mdl-cell--3-col"> <span style="padding-right: 12px;" class="form-text" id="CenPH__lb_SFLCTL__lb_PA8NA_new"></span></div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--6-col">
+                                <span class="form-text" id="CenPH__lb_SFLCTL__lb_CBANA_new"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col pull-right div_continue"><span class="form-text" style="margin-right: 10px;" id="sixth"><strong>Continue&nbsp;?</strong>
+                                <select id="CenPH__lb_SFLCTL__lb_PPTST_new">
+                                    <option selected="selected" value=" ">Please Choose</option>
+                                    <option value="N">N - No</option>
+                                    <option value="Y">Y - Yes</option>
+                                </select></span> </div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Account #</span></div>
+                            <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="CenPH__lb_SFLCTL__lb_CY2NB_new"></span></div>
+                        </div>
+                        <div class="content-grid mdl-grid" style="padding: 10px 0 0">
+                            <div class="mdl-cell mdl-cell--3-col"> <span class="form-label">Key Number</span></div>
+                            <div class="mdl-cell mdl-cell--4-col"> <span style="padding-right: 12px;" class="form-text" id="CenPH__lb_SFLCTL__lb_CFRCO_new"></span></div>
+                        </div>
+                        <div class="content-grid mdl-grid">
+                            <div style="margin-right:15px" class="mdl-cell mdl-cell--12-col">
+                                <fieldset>
+                                    <legend id="legend">NOTES:</legend>
+                                    <ul id="CenPH__lb_SFLRCD__lb_1BBNA_new" class="form-text" style="font-weight: normal;line-height: 25px;padding: 0 30px 0 3px;">
+                                    </ul>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="button-container" style="padding:0">
+                            <div class="content-grid mdl-grid" style="padding-bottom:5px">
+                                <div class="mdl-cell mdl-cell--8-col" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" style="margin-left: -5px;">Exit</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="display-ts">Display Transaction</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col pull-right" style="padding-bottom:0">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> 
+            </main>
         <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         
@@ -832,36 +891,51 @@
             #notice-sixth li {
                 list-style: none;
             }
-      #modal1 {
-        left: 30% !important;
-        top: 40% !important;
-      }
- #__Page_Hidden {
-			height: 730px !important;
-		 }
+            #modal1 {
+                left: 30% !important;
+                top: 40% !important;
+            }
+            #__Page_Hidden {
+    			height: 730px !important;
+    		 }
         </style>
         <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_2FXCO": "CenPH__lb_SFLCTL__lb_2FXCO_new",
+                    "CenPH__lb_SFLCTL__lb_PRLVA": "CenPH__lb_SFLCTL__lb_PRLVA_new",
+                    "CenPH__lb_SFLCTL__lb_PRMVA": "CenPH__lb_SFLCTL__lb_PRMVA_new",
+                    "CenPH__lb_SFLCTL__lb_CZQNB": "CenPH__lb_SFLCTL__lb_CZQNB_new",
+                    "CenPH__lb_SFLCTL__lb_PA8NA": "CenPH__lb_SFLCTL__lb_PA8NA_new",
+                    "CenPH__lb_SFLCTL__lb_CBANA": "CenPH__lb_SFLCTL__lb_CBANA_new",
+                    "CenPH__lb_SFLCTL__lb_CY2NB": "CenPH__lb_SFLCTL__lb_CY2NB_new",
+                    "CenPH__lb_SFLCTL__lb_CFRCO": "CenPH__lb_SFLCTL__lb_CFRCO_new"
+                },
+                "inputFields": {
+                }
+            };
+            var copyToAndFromSecond = {
+                "displayOnlyFields": {
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_PPTST" : "CenPH__lb_SFLCTL__lb_PPTST_new"
+                }
+            };
             $(document).ready(function () {
-                var notes = "";
-                $('body').on('click', '#previous,#previous-second', function (event) {
+                $('body').on('click', '.close-icon', function (event) {
                     _00('F12', event);
                 });
-                $('body').on('click', '#next,#next-first', function (event) {
+                $('body').on('click', '#previous', function (event) {
+                    _00('F3', event);
+                });
+                $('body').on('click', '#next', function (event) {
                     _00('Enter', event);
                 });
-                $('body').on('click', '#displayTransaction,#displayTransaction-second', function (event) {
+                $('body').on('click', '#display-ts', function (event) {
                     _00('F9', event);
                 });
-                /*$("#CenPH__lb_SFLCTL__lb_PPTST_first").on("change", function(event) {
-                  $("#CenPH__lb_SFLCTL__lb_PPTST").val($("#CenPH__lb_SFLCTL__lb_PPTST_first").val());
-                  _00("Enter", event);
-                });
-                $("#CenPH__lb_SFLCTL__lb_PPTST_second").on("change", function(event) {
-                  $("#CenPH__lb_SFLCTL__lb_PPTST").val($("#CenPH__lb_SFLCTL__lb_PPTST_second").val());
-                  _00("Enter", event);
-                });*/
                 
-                $("#CenPH__lb_SFLCTL__lb_PPTST_first").val()
+                var notes = "";
                 $('div#CenPH__lb_SFLRCD>div[id^=CenPH__lb_SFLRCD]').each(function() {
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var divid = $(this);
@@ -870,18 +944,35 @@
                        });
                     }
                 });
+
+                for(var i in copyToAndFrom.displayOnlyFields) {
+                    if($("#"+i).length === 0 || $("#"+i).html() === "&nbsp;") {
+                        $("#"+i+"_new").parent().parent().hide();
+                    }
+                }
+                copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+                $("#CenPH__lb_SFLRCD__lb_1BBNA_new").html(notes);
+                if($("#CenPH__lb_SFLCTL__lb_PPTST").length !== 0) {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST_new,.div_continue").show();
+                    copyData(copyToAndFromSecond, "change keyup keydown click mouseup mousedown");
+                } else {
+                    $("#CenPH__lb_SFLCTL__lb_PPTST_new,.div_continue").hide();
+                }
+
+                if($(".simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                });
                 
+                /*
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value='?']").remove();
                 $("#CenPH__lb_SFLCTL__lb_PPTST option[value=' ']").text("Please Choose");
-                makeSelectDescriptive("CenPH__lb_SFLCTL__lb_PPTST",['Y','N'],['Yes','No'])
+                makeSelectDescriptive("CenPH__lb_SFLCTL__lb_PPTST",['Y','N'],['Yes','No']) 
                 
-                $("#sixth-message").hide();
-                $("#fifth-message").hide();
-                $("#forth-message").hide();
-                $("#third-message").hide();
-                $("#second-message").hide();
-                $("#first-message").hide();
-
                 if($("#CenPH__lb_SFLCTL__lb_CBANA").html().indexOf("Continue to GE Credit?") !== -1) {
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#first");
                     $("#notice-first").html(notes);
@@ -931,16 +1022,9 @@
                     $("#CenPH__lb_SFLCTL__lb_PPTST").appendTo("#second");
                     $("#notice-second").html(notes);
                     $("#second-message").show();
-                }
+                }*/
 
-                if($(".simplePopupClose").length > 0) {
-                   $(".simplePopupBackground1").show();
-                } else {
-                   $(".simplePopupBackground1").hide();
-                }
-                $("body").on("click", ".simplePopupClose", function() {
-                   $(".simplePopupBackground1").hide();
-                });
+                
             });
         </script>
     </asp:Content>
