@@ -79,7 +79,7 @@
                             <div style="margin: 0" class="mdl-cell mdl-cell--4-col"><span class="form-label">For Employee:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text">
-                                    <input id="employee" type="text" name="employee" value="" maxlength="5" size="4"></span>
+                                    <input id="employee" type="text" name="employee" value="" maxlength="5" size="6"></span>
                                     <span id="displayEmployee"></span>
                             </div>
                         </div>
@@ -531,16 +531,8 @@
             overflow: hidden !important;
         }
      #__Page_Hidden{
-            height: 800px !important;
+            height: 100% !important;
         }
-    .confirmation-outer-conatiner {
-      left: 30% !important;
-    }
-    .simplePopup{
-      left: 25% !important;
-      top: 20% !important;
-      width:45% !important;
-    }
   </style>
   <script type="text/javascript">
       $(document).ready(function() {
