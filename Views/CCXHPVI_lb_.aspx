@@ -64,7 +64,7 @@
                                         <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                             <span class="form-label">Do you want the</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-right: 15px;">
+                                        <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-right: -17px;margin-left: -30px;">
                                             <span class="form-text" id="CenPH__lb_RCDDTL1__lb_PZLNB_new"></span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col" style="margin:0">
@@ -73,7 +73,7 @@
                                         <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-left: -45px;margin-top: -3px;">
                                             <span class="form-text">
                                           <select id="CenPH__lb_RCDDTL1__lb_DQ1ST_new">
-                                               <option selected="selected" value=" ">   </option>
+                                               <option selected="selected" value=" ">Please Choose</option>
                                                <option value="N"> N </option>
                                                <option value="Y"> Y </option>
                                             </select>
