@@ -533,6 +533,12 @@
      #__Page_Hidden{
             height: 100% !important;
         }
+		.simplePopup {
+			width: 180px !important;
+			left: 50% !important;
+			margin-left: -90px;
+			top: 35% !important;
+		}
   </style>
   <script type="text/javascript">
       $(document).ready(function() {
