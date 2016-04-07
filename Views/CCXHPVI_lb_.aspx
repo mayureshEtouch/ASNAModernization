@@ -64,7 +64,7 @@
                                         <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                             <span class="form-label">Do you want the</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-right: -17px;margin-left: -30px;">
+                                        <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-left: -15px;">
                                             <span class="form-text" id="CenPH__lb_RCDDTL1__lb_PZLNB_new"></span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col" style="margin:0">
@@ -110,7 +110,7 @@
                     <!-- <span class="close-icon"><i class="material-icons md-15 close"></i></span> -->
                 </div>
             </header>
-            <main class="mdl-layout__content" tabindex="-1"><div id="confirmprompt" class="confirmation-outer-conatiner" style="margin-top: 50px;" tabindex="-1">
+            <main class="mdl-layout__content" tabindex="-1"><div id="confirmprompt" class="confirmation-outer-conatiner" style="margin-top: 50px;margin-left: 30%;" tabindex="-1">
                 <i class="material-icons md-15 md-light help-icon" tabindex="-1"></i> <span class="confirmation-text" tabindex="-1">Do you want to continue</span>
                 <div class="button-container" tabindex="-1">
                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes" tabindex="-1">yes</span>

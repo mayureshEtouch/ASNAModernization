@@ -225,7 +225,7 @@
                             </div>
                             <!-- content-grid mdl-grid ends here -->
                             <!-- content-grid mdl-grid starts here -->
-                            <div class="content-grid mdl-grid" style="padding:0;display: none;">
+                            <div class="content-grid mdl-grid" style="padding:0;">
                                 <!-- 12 col starts here -->
                                 <div class="mdl-cell mdl-cell--12-col" id="CenPH__lb_RCDDTL1__lb_1A8NA_new_co">
                                     <div class="content-grid mdl-grid">
@@ -391,7 +391,7 @@
                     copyData(copyToAndFromFirstView);
                 }
                 
-                if($("__Page_PopUp .simplePopupClose").length > 0) {
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
                    $(".simplePopupBackground1").show();
                 } else {
                    $(".simplePopupBackground1").hide();

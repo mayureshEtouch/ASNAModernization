@@ -313,33 +313,33 @@ $(document).ready(function() {
         $('#modal').simplePopup();
     }
 
-    if (($("__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1 || $("__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1)) {
+    if (($("#__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1 || $("#__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1)) {
 
         var errorMsg = "";
-        if ($("__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
-            errorMsg += $("__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
+        if ($("#__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
         }
-        if ($("__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
-            errorMsg += $("__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+        if ($("#__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
         }
-        if ($("__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1) {
-            errorMsg += $("__Page_PopUp #MsgPH_DdsMessagePanel1").text();
+        if ($("#__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1) {
+            errorMsg += $("#__Page_PopUp #MsgPH_DdsMessagePanel1").text();
         }
         $('#modal2').html(errorMsg);
         $('#modal2').simplePopup();
     }
 
-    if (($("__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1 || $("__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("__Page_PopUp #MsgPH_DdsMessagePanel1").text()) !== -1) {
+    if (($("#__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1 || $("#__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1 || $("#__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1) && hideMessage.indexOf($("#__Page_PopUp #MsgPH_DdsMessagePanel1").text()) !== -1) {
 
         var errorMsg = "";
-        if ($("__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
-            errorMsg += $("__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
+        if ($("#__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#__Page_PopUp #CenPH__lb_MSGRCD1_MSGKEY\\.0").text() + "</br>";
         }
-        if ($("__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
-            errorMsg += $("__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
+        if ($("#__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text().length > 1) {
+            errorMsg += $("#__Page_PopUp #CenPH__lb_MSGRCD_MSGKEY\\.0").text() + "</br>";
         }
-        if ($("__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1) {
-            errorMsg += $("__Page_PopUp #MsgPH_DdsMessagePanel1").text();
+        if ($("#__Page_PopUp #MsgPH_DdsMessagePanel1").text().length > 1) {
+            errorMsg += $("#__Page_PopUp #MsgPH_DdsMessagePanel1").text();
         }
         $('#promptErrorMsg').html(errorMsg);
         $('#promptErrorMsg').simplePopup();

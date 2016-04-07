@@ -660,7 +660,7 @@
                     $(this).trigger('change');
                 })
                 //Error message
-                if($("__Page_PopUp .simplePopupClose").length > 0) {
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
                     $(".simplePopupBackground1").show();
                 } else {
                     $(".simplePopupBackground1").hide();

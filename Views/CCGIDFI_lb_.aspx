@@ -959,7 +959,7 @@
                     $("#CenPH__lb_SFLCTL__lb_PPTST_new,.div_continue").hide();
                 }
 
-                if($("__Page_PopUp .simplePopupClose").length > 0) {
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
                    $(".simplePopupBackground1").show();
                 } else {
                    $(".simplePopupBackground1").hide();

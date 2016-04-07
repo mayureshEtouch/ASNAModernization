@@ -997,7 +997,7 @@
                 //validations
                 $("#CenPH__lb_RCDDTL1__lb_1L0N_lb_new,#CenPH__lb_RCDDTL1__lb_DMOTH_new,#CenPH__lb_RCDDTL1__lb_DYRS2_new").ForceNumericOnly();
                 //Error message
-                if($("__Page_PopUp .simplePopupClose").length > 0) {
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
                     $(".simplePopupBackground1").show();
                 } else {
                     $(".simplePopupBackground1").hide();
