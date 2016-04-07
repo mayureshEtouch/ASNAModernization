@@ -1167,9 +1167,6 @@
         #CenPH__lb_SFLRCD__End {
             background-color: #FFF !important;
         }
-        #CenPH__lb_SFLRCD > div input:not([id*=RNICD]), #CenPH__lb_SFLRCD > div span:not([id*=RNICD]) {
-            xmargin-left: 12% !important;
-        }
         #CenPH__lb_SFLRCD > div input,  #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
             width: 12% !important;
             display: table-cell;
@@ -1196,7 +1193,8 @@
             background-color: #d8d8d8 !important;
         }
         #CenPH__lb_SFLRCD > div span[id*="2SEL"] {
-            display: none;
+            float: right;
+			width: 16% !important;
         }
 		.DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
 			margin-left: 10px;
@@ -1212,6 +1210,7 @@
 		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
 			font-weight: normal !important;
 		}
+		
     </style>
     <script>
         $(document).ready(function() {
@@ -1290,6 +1289,16 @@
                 $("#reqdate").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+				
+				
+				$('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function(i){
+				
+					$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text()=="4"?"Cancel":"Active");
+					//$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+				});
+				
+			
+				  
             } else {
                 //$("#exp-date-label,#exp-date-val").hide();
                 $("#reqdate").hide();
