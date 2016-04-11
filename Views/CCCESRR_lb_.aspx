@@ -95,24 +95,20 @@
                 <section class="table-data-content-container spacer-container-bottom" style="margin-top:18px;">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div class="fixed-table-container">
-                                <div class="header-background"></div>
-                                <div class="fixed-table-container-inner">
-                                    <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="customer-by-phone">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customer-by-phone">
                                         <thead>
                                             <tr>
                                                 <th width="16%">
-                                                    <div class="th-inner">Phone Number</div>
+                                                    Phone Number
                                                 </th>
                                                 <th width="10%">
-                                                    <div class="th-inner">Type</div>
+                                                    Type
                                                 </th>
                                                 <th width="58%">
-                                                    <div class="th-inner">Customer Name</div>
+                                                    Customer Name
                                                 </th>
                                                 <th width="16%">
-                                                    <div class="th-inner">Reference
-                                                    </div>
+                                                    Reference
                                                 </th>
                                             </tr>
                                         </thead>
@@ -120,8 +116,7 @@
 
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
+                                
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col-desktop">

@@ -58,7 +58,7 @@
             <section class="form-data">
                 <div class="form-data-wrapper Submit-to-credit-for-review" style="margin-bottom: 45px !important;">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                     <span class="form-label">Application No.:</span>
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell-brd" style="padding:0">
+                        <div class="mdl-cell mdl-cell--6-col" style="padding:0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                     <span class="form-label">Refered Account #:</span>
@@ -195,10 +195,10 @@
                     </div>
                     <div class="button-container" style="padding-bottom:0">
                         <div class="content-grid mdl-grid" style="padding-bottom:5px">
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left" style="padding-bottom:0">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-cell--4-col-tablet pull-left" style="padding-bottom:0">
                                 <span style="margin-left: -5px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right" style="padding-bottom:0">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop mdl-cell--4-col-tablet pull-right" style="padding-bottom:0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
                             </div>
                         </div>

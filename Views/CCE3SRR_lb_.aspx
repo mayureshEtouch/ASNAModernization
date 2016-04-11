@@ -98,31 +98,31 @@
                                         <thead>
                                             <tr>
                                                 <th>
-                                                    <div class="th-inner">Reference</div>
+                                                    Reference
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Extension</div>
+                                                    Extension
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Customer Name</div>
+                                                    Customer Name
                                                 </th>
                                                 <th width="13%">
-                                                    <div class="th-inner">Home Phone</div>
+                                                    Home Phone
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Bank</div>
+                                                    Bank
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Loan Type</div>
+                                                    Loan Type
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Next Due</div>
+                                                    Next Due
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Payment</div>
+                                                    Payment
                                                 </th>
                                                 <th>
-                                                    <div class="th-inner">Balance</div>
+                                                    Balance
                                                 </th>
                                             </tr>
                                         </thead>

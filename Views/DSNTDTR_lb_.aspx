@@ -86,79 +86,79 @@
             <section class="table-data-content-container spacer-container-bottom" >
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                       
+                       <div class="table-container" style="margin-bottom: 10px;">
                                 <table cellspacing="0" cellpadding="0" border="0" id="orders-detail-data" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
                                             <th>
-                                                <div class="th-inner">Delivery <br /> Type
-                                                </div>
+                                                Delivery <br /> Type
+                                               
                                             </th>
                                             <th>
-                                                <div class="th-inner">Delivery <br /> Status
-                                                </div>
+                                                Delivery <br /> Status
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">From <br /> Location
-                                                </div>
+                                                From <br /> Location
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Quantity
-                                                </div>
+                                               Quantity
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Model<br /> Number
-                                                </div>
+                                                Model<br /> Number
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Serial <br /> Number
-                                                </div>
+                                                Serial <br /> Number
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Warranty
-                                                </div>
+                                                Warranty
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Credit
-                                                </div>
+                                               Credit
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Model Number<br />Description</div>
+                                                Model Number<br />Description
                                             </th>
                                             <th>
-                                                <div class="th-inner">Actual <br /> Price
-                                                </div>
+                                                Actual <br /> Price
+                                                
                                             </th>
                                             <th>
-                                                <div class="th-inner">Extended <br /> Price
-                                                </div>
+                                                Extended <br /> Price
+                                                
                                             </th>
 											<th>
-                                                <div class="th-inner">Installation <br /> Code
-                                                </div>
+                                                Installation <br /> Code
+                                                
                                             </th>
 											<th>
-                                                <div class="th-inner">Installation <br />Description
-                                                </div>
+                                                Installation <br />Description
+                                                
                                             </th>
 											<th>
-                                                <div class="th-inner">Delivery <br /> Level
-                                                </div>
+                                                Delivery <br /> Level
+                                                
                                             </th>
 											<th>
-                                                <div class="th-inner">Installation <br /> Price
-                                                </div>
+                                                Installation <br /> Price
+                                                
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     </tbody>
                                 </table>
-                            
+                            </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
-                                <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
                             </div>
                         </div>
                     </div>
@@ -1428,6 +1428,9 @@
                     var row = $("#orders-detail-data tbody tr.selected");
                     doAction(row, "8", event);
                 });
+				
+				
+			
             });
         </script>
     </asp:Content>

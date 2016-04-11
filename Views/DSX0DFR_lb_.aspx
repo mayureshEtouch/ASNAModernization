@@ -86,54 +86,55 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
+						<div class="table-container" style="margin-bottom: 10px;">
                                 <table cellspacing="0" cellpadding="0" border="0" id="detail-completion-status" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
                                             <th style="width: 5%">
-                                                <div class="th-inner">Del Line</div>
+                                                Del Line
                                             </th>
                                             <th style="width: 5%">
-                                                <div class="th-inner">Schedule Delivery</div>
+                                                Schedule Delivery
                                             </th>
                                             <th style="width: 5%">
-                                                <div class="th-inner">Delivery Type</div>
+                                                Delivery Type
                                             </th>
                                             <th style="width: 5%">
-                                                <div class="th-inner">Delivery Status</div>
+                                                Delivery Status
                                             </th>
                                             <th style="width: 15%">
-                                                <div class="th-inner">Model Number</div>
+                                                Model Number
                                             </th>
                                             <th style="width:12%">
-                                                <div class="th-inner">Serial Number</div>
+                                                Serial Number
                                             </th>
                                             <th style="width:3%">
-                                                <div class="th-inner">Ins</div>
+                                                Ins
                                             </th>
                                             <th style="width:3%">
-                                                <div class="th-inner">From</div>
+                                                From
                                             </th>
                                             <th style="width:3%">
-                                                <div class="th-inner">Del</div>
+                                                Del
                                             </th>
 											  <th style="width:5%">
-                                                <div class="th-inner">Date Completed</div>
+                                                Date Completed
                                             </th>
 											
 											<th style="width:6%">
-                                                <div class="th-inner">Employee Code</div>
+                                                Employee Code
                                             </th>
 											<th style="width:12%">
-                                                <div class="th-inner">Employee Name</div>
+                                                Employee Name
                                             </th>
 											<th style="width:11%">
-                                                <div class="th-inner">Destination Carrier</div>
+                                                Destination Carrier
                                             </th>
 											<th style="width:5%">
-                                                <div class="th-inner">Destination <br>Shipping Mode</div>
+                                                Destination <br>Shipping Mode
                                             </th>
 											<th style="width:5%">
-                                                <div class="th-inner">Destination <br>Tracking Number</div>
+                                                Destination <br>Tracking Number
                                             </th>
 										
                                         </tr>
@@ -142,11 +143,12 @@
                                         
                                     </tbody>
                                 </table>
+								</div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--7-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
                                         id="help">help</span> </div>
-                                <div class="mdl-cell mdl-cell--6-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop pull-right mdl-cell--1-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
                             </div>
                         </div>
                     </div>

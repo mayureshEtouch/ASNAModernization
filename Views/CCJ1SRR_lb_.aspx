@@ -95,10 +95,7 @@
                 <section class="table-data-content-container spacer-container-bottom" style="margin-top:18px;">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div class="fixed-table-container">
-                                <div class="header-background"></div>
-                                <div class="fixed-table-container-inner">
-                                    <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="customerName">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
                                         <thead>
                                             <tr>
                                                 <th>
@@ -119,8 +116,7 @@
                                             
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
+                                
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col-desktop">

@@ -354,7 +354,16 @@ $(document).ready(function() {
 						$(this).attr('tabindex', tabindex); 
 					}
 				});
-      },1000) 
+      },1000)
+
+      //Set confirm prompt to "Yes" by default
+      if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+          if($("#__Page_PopUp #CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+            $("#__Page_PopUp #CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+          } else {
+            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+          } 
+      } 
 });
 
 function makeSelectDescriptive(selectId, values, descriptions) {
@@ -375,3 +384,5 @@ var doAction = function(row, value, event) {
     $("#" + a[0] + "\\." + a[1]).val(value);
     _00('Enter', event);
 }
+
+

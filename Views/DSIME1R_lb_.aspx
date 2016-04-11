@@ -4,11 +4,6 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 1/26/2016 at 2:11 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSIME1R# --%>
-        <link rel="stylesheet" href="css/material.min.css">
-        <link rel="stylesheet" href="css/conns.css">
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="js/material.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -35,7 +30,7 @@
                         <span class="heading-h1">Edit Customer Details</span> </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right"> 
                         <!-- Navigation --> 
-                        <i class="material-icons md-15 md-light" computer-icon></i> <span class="date-time-txt">DSIME1R</span> 
+                        <i class="material-icons md-15 md-light computer-icon" ></i> <span class="date-time-txt">DSIME1R</span> 
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
                         <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time">
                         </div>
@@ -256,7 +251,13 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F12"  data-tb-index="19">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7" data-tb-index="20">Addresses</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8" data-tb-index="21">No data-tb-index="10"tes</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phones" event-data="F9" data-tb-index="22">phones</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId" event-data="F10" data-tb-index="23">tax id</span> </div>
+                            <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> 
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F12"  data-tb-index="19">Previous</span> 
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addresses" event-data="F7" data-tb-index="20">Addresses</span> 
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="notes" event-data="F8" data-tb-index="21">Notes</span> 
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phones" event-data="F9" data-tb-index="22">phones</span> 
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxId" event-data="F10" data-tb-index="23">tax id</span> 
+							</div>
                             <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return" event-data="Enter" data-tb-index="24">Next</span> </div>
                         </div>
                     </div>

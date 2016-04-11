@@ -103,7 +103,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label vertical-top">Birthday:</span>
-                                        <input class="editable-data" type="text" id="cust-birth" size="15" readonly="true">
+                                        <input class="editable-data" type="text" id="cust-birth" size="15" readonly="true" data-tb-index="1">
                                         <i id="cust-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span class="form-text vertical-top ro-data" id="ro-cust-birth"></span>
                                     </div>
@@ -113,7 +113,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                         <span class="form-label clm-form-label">License #:</span>
-                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2" data-tb-index="1"><span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="8" data-tb-index="2"><span id="ro-cust-lic-second" class="ro-data"></span></span>
+                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2" data-tb-index="2"><span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="8" data-tb-index="3"><span id="ro-cust-lic-second" class="ro-data"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
                                         <span class="form-text">
-                                        <input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="9" data-tb-index="3">
+                                        <input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="9" data-tb-index="4">
                                         <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-cust-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9">
                                         <span class="ro-data" id="ro-cust-ssn" ></span></span>
@@ -136,7 +136,7 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-text">
                                         <span class="form-label">Residence Type:</span>&nbsp;&nbsp;&nbsp;
-											<select class="editable-data" id="cust-res-type" data-tb-index="4">
+											<select class="editable-data" id="cust-res-type" data-tb-index="5">
                                                 <option value=" " selected="selected">Please Choose</option>
 												<option value="O">O-Own</option>
 												<option value="R">R-Rent</option>
@@ -145,9 +145,9 @@
 											</select>
 											<span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
 											<span class="form-label">For</span>&nbsp;&nbsp;
-											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="6" style="width: 50px;" data-tb-index="5"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
+											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="6" style="width: 50px;" data-tb-index="6"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
 											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
-											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="7" data-tb-index="6"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
+											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="7" data-tb-index="7"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
 											<span class="form-label">Monthly</span>
 										</span>
                                     </div>
@@ -158,14 +158,14 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
 															<span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-											<input class="editable-data" type="text" size="17" id="phone-listed-as" maxlength="24" data-tb-index="7">
+											<input class="editable-data" type="text" size="17" id="phone-listed-as" maxlength="24" data-tb-index="8">
 											<span class="ro-data" id="ro-phone-listed-as"></span>
 										</span>
 														</div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 															<span class="form-label clm-form-label">Marital Status:</span>
 										<span class="form-text">
-											<select class="editable-data" id="cust-martial-status" data-tb-index="8">
+											<select class="editable-data" id="cust-martial-status" data-tb-index="9">
                                                 <option selected="selected" value=" ">Please Choose</option>
 												<option value="M">M-Married</option>
 												<option value="S">S-Single</option>
@@ -180,14 +180,14 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
 															<span class="form-label clm-form-label">Dependents:</span>
 										<span class="form-text">
-											<input class="editable-data" id="cust-dependents" type="text" size="5" maxlength="2" data-tb-index="9">
+											<input class="editable-data" id="cust-dependents" type="text" size="5" maxlength="2" data-tb-index="10">
 											<span class="ro-data" id="ro-cust-dependents"></span>
 										</span>
 														</div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 															<span class="form-label clm-form-label">Spouse Name:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-name" size="17" maxlength="25" data-tb-index="10">
+											<input class="editable-data" type="text" id="sp-name" size="17" maxlength="25" data-tb-index="11">
 											<span class="ro-data" id="ro-sp-name"></span>
 										</span>
 														</div>
@@ -197,7 +197,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
 															<span class="form-label clm-form-label vertical-top">Birthday:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-birth" size="15" readonly="true" data-tb-index="11">
+											<input class="editable-data" type="text" id="sp-birth" size="15" readonly="true" data-tb-index="12">
                                             <i id="sp-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
 											<span class="ro-data vertical-top" id="ro-sp-birth"></span>
 										</span>
@@ -205,7 +205,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 															<span class="form-label clm-form-label">S.S.#:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-ssn" size="15" maxlength="9" data-tb-index="12">
+											<input class="editable-data" type="text" id="sp-ssn" size="15" maxlength="9" data-tb-index="13">
                                         <span class="ssn-sp-show" id="ssn-sp-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
 											<span class="ro-data" id="ro-sp-ssn"></span>
@@ -217,17 +217,17 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
 															<span class="form-label clm-form-label">License #:</span>
 										<span class="form-text">
-											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2"  data-tb-index="13">
+											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2"  data-tb-index="14">
 											<span class="ro-data" id="ro-sp-lic-first"></span>
 											&nbsp;&nbsp;/&nbsp;&nbsp;
-											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="8" data-tb-index="14">
+											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="8" data-tb-index="15">
 											<span class="ro-data" id="ro-sp-lic-second"></span>
 										</span>
 														</div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 															<span class="form-label clm-form-label">Spouse Monthly Income:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-monthly-income" size="15" maxlength="10" data-tb-index="15">
+											<input class="editable-data" type="text" id="sp-monthly-income" size="15" maxlength="10" data-tb-index="16">
 											<span class="ro-data" id="ro-sp-monthly-income"></span>
 										</span>
 														</div>
@@ -242,17 +242,17 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Employed at:</span>
                                 <span class="form-text">
-									<input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="16">
+									<input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
 									<span class="ro-data" id="ro-employed-at"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Duration:</span>
                                 <span class="form-text">
-									<input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3" data-tb-index="17">
+									<input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3" data-tb-index="18">
 									<span class="ro-data" id="ro-employed-at-duration-years"></span>
 									&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
-									<input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2" data-tb-index="18">
+									<input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2" data-tb-index="19">
 									<span class="ro-data" id="ro-employed-at-duration-months"></span>
 									&nbsp;Months
                             </span>
@@ -262,14 +262,14 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Income:</span>
 								<span class="form-text">
-									<input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15" maxlength="7"  data-tb-index="19"> 
+									<input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15" maxlength="7"  data-tb-index="20"> 
 									<span class="ro-data" id="ro-cust-income"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 								<span class="form-label clm-form-label">Supervisor:</span>
 								<span class="form-text">
-									<input type="text" id="cust-supervisor" class="editable-data mdl-cell--6-col" size="30" maxlength="30" data-tb-index="20">
+									<input type="text" id="cust-supervisor" class="editable-data mdl-cell--6-col" size="30" maxlength="30" data-tb-index="21">
 									<span class="ro-data" id="ro-cust-supervisor"></span>
 								</span>
                             </div>
@@ -278,7 +278,7 @@
                             <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Frequency:</span>
 								<span class="form-text">
-									<select class="editable-data" id="cust-frenq" data-tb-index="21">
+									<select class="editable-data" id="cust-frenq" data-tb-index="22">
                                         <option value=" " selected="selected">Please Choose</option>
 										<option value="H">H-Hourly</option>
 										<option value="W">W-Weekly</option>
@@ -294,14 +294,14 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Reference Name:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-name" class="editable-data mdl-cell--5-col" size="20" maxlength="20" data-tb-index="22">
+									<input type="text" id="ref-name" class="editable-data mdl-cell--5-col" size="20" maxlength="20" data-tb-index="23">
 									<span class="ro-data" id="ro-ref-name"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Address:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-address" class="editable-data mdl-cell--6-col" size="5" maxlength="25" data-tb-index="23">
+									<input type="text" id="ref-address" class="editable-data mdl-cell--6-col" size="5" maxlength="25" data-tb-index="24">
 									<span class="ro-data" id="ro-ref-address"></span>
 								</span>
                             </div>
@@ -310,14 +310,14 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Zip Code:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="10" data-tb-index="24">
+									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="10" data-tb-index="25">
 									<span class="ro-data" id="ro-ref-zip-code"></span>
 								</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Phone No:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20" maxlength="10" data-tb-index="25">
+									<input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20" maxlength="10" data-tb-index="26">
 									<span class="ro-data" id="ro-ref-phone"></span>
 								</span>
                             </div>
@@ -326,7 +326,7 @@
                             <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Type:</span>
                                 <span class="form-text">
-                                    <select class="editable-data" name="" id="ref-type" data-tb-index="26">
+                                    <select class="editable-data" name="" id="ref-type" data-tb-index="27">
                                         <option value=" "> Please Choose </option>
                                         <option value="R"> R - Relative </option>
                                         <option value="F"> F - Friend </option>
@@ -338,11 +338,11 @@
                         <div class="button-container" style="padding-bottom:0">
                             <div class="content-grid mdl-grid" style="padding-bottom:5px">
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--4-col-tablet" style="padding-bottom:0;margin-left:9px">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple" data-tb-index="27">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
-                                    <span class="pull-right mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple" data-tb-index="28">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple" data-tb-index="28">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                    <span class="pull-right mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateCustomer" data-upgraded=",MaterialButton,MaterialRipple" data-tb-index="29">update customer<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--4-col-tablet pull-right" style="padding-bottom:0">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple" data-tb-index="29">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple" data-tb-index="30">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                 </div>
                             </div>
                         </div>

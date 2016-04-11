@@ -7,7 +7,7 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -31,14 +31,15 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <!-- Modified HTML code starts here -->
-        <header class="mdl-layout__header first-view" style="display: none;">
+		<div id="first-view" style="display: none;">
+        <header class="mdl-layout__header first-view" >
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title logo-icon"></span>
                 <div class="mdl-layout-spacer"></div>
                 <span class="close-icon"><i class="material-icons md-15 close"></i></span>
             </div>
         </header>
-        <main class="mdl-layout__content first-view" style="display: none;">
+        <main class="mdl-layout__content first-view">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
@@ -89,12 +90,12 @@
                
             </section>
         </main>
+		</div>
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container" id="second-view" style="display: none;">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span class="mdl-layout-title logo-icon"></span>
-                <!--<span class="mdl-layout-heading">StoreFront</span>-->
                 <div class="mdl-layout-spacer"></div>
                 <span class="close-icon"><i class="material-icons md-15 close"></i></span>
             </div>
@@ -292,7 +293,7 @@
                 width: 100%;
             }
             #__Page_Hidden{
-                height: 800px !important;
+                height: 100% !important;
             }
             #__Page_PopUp {
                 left: 20% !important;
@@ -373,7 +374,7 @@
                     _00('F3', event);
                 });
                 if($("#CenPH__lb_RCDDTL1__lb_1FQCO").length > 0) {
-                    $(".first-view").hide();
+                    $("#first-view").hide();
                     $("#second-view").show();
                     //show-hide containers accroding to data
                     for(var i in copyToAndFromSecondView.displayOnlyFields) {
@@ -386,7 +387,7 @@
                     }
                     copyData(copyToAndFromSecondView);
                 } else {
-                    $(".first-view").show();
+                    $("#first-view").show();
                     $("#second-view").hide();
                     copyData(copyToAndFromFirstView);
                 }

@@ -1888,6 +1888,13 @@
                     $("#confirmprompt").hide();
                });
             
+			nobutton.click(function (event) {
+				$('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("N");
+                $("#datatableValueInsert").show();
+				$("#datatableValue").hide();
+                _00('Enter', event);
+            });
+			
             // update data from ASNA Hidden UI Table to Confirm/ Review UI Table
         
             $("#datatableValue tbody tr").each(function(i){

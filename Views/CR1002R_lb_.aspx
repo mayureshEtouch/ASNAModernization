@@ -1776,7 +1776,7 @@
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
                 $("#cust-reqesdate1").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").datepicker("show"); });
 
-                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy' });
+                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new_selectdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker("show"); });
 
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").on('change', function() {
@@ -1786,13 +1786,21 @@
                 });
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").on('change', function() {
                     //var date = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val().split("/");
-                    $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val());
-                    $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val());
+                    //$("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val());
+                    //$("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val());
+                    var coDob = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val().split("/"); 
+                    var coDobModified = coDob[2] + "-" + coDob[0] + "-" + coDob[1];
+                    $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val(coDobModified);
+                    $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val(coDobModified);
                 });
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").on('change', function() {
                     //var date = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val().split("/");
-                    $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val());
-                    $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val());
+                    //$("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val());
+                    //$("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val());
+                    var coDob = $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val().split("/"); 
+                    var coDobModified = coDob[2] + "-" + coDob[0] + "-" + coDob[1];
+                    $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val(coDobModified);
+                    $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val(coDobModified);
                 });
 
                 //Set SSN# on enter key press

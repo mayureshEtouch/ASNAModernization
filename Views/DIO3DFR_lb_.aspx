@@ -7,7 +7,7 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
@@ -54,7 +54,7 @@
                             <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIO3DFR</span></div>
                     </div>
                 </section>
-                <section class="order-summary">
+                <section class="order-summary" style="margin-top: 16px;">
                     <div class="order-summary-wrapper">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Company</span> <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ABCD_new"></span> </div>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="table-data-content-container filter-field-container">
+                <section class="table-data-content-container filter-field-container" style="margin-top: 16px;">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div class="table-container filter-search-container">

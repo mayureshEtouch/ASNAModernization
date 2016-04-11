@@ -7,7 +7,7 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
@@ -44,10 +44,10 @@
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
                         <!-- Title -->
                         <span class="heading-h1">Addressing Information</span> </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIO2PVR</span></div>
                 </div>
@@ -309,12 +309,14 @@
                 width: 100%;
             }
             #__Page_Hidden{
-                height: 830px !important;
+                height: 100% !important;
             }
               #__Page_PopUp {
-                left: 35% !important;
+                left: 50% !important;
                 min-width: 450px !important;
                 top: 25% !important;
+				width: 550px !important;
+				margin-left: -275px;
             }
 
             #__Page_PopUp > tr:first-child {

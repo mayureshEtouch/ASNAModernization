@@ -976,7 +976,8 @@
 }
 #__Page_PopUp {
 top: 14% !important;
-left: 27% !important;
+left: 50% !important;
+margin-left: -304px !important;
 }
 body {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;

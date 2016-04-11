@@ -72,37 +72,34 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-                            <div class="header-background"> </div>
-                            <div class="fixed-table-container-inner">
-                                <table cellspacing="0" cellpadding="0" border="0" id="order-warranty-data" class="navigateable">
+                                <table cellspacing="0" cellpadding="0" border="0" id="order-warranty-data" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
                                             <th style="width: 15%">
-                                                <div class="th-inner">Model <br /> Number
-                                                </div>
+                                                Model <br /> Number
+                                                
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">Serial <br /> Number
-                                                </div>
+                                                Serial <br /> Number
+                                                
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">Mfg Warranty<br /> Expiry Date</div>
+                                                Mfg Warranty<br /> Expiry Date
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">Warranty<br /> Type
-                                                </div>
+                                                Warranty<br /> Type
+                                                
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">SMA<br /> Mos
-                                                </div>
+                                                SMA<br /> Mos
+                                                
                                             </th>
                                             <th style="width: 14%">
-                                                <div class="th-inner">Warranty<br /> Price
-                                                </div>
+                                                Warranty<br /> Price
+                                                
                                             </th>
                                             <th style="width: 15%">
-                                                <div class="th-inner">Ext Warranty<br /> Exp Date</div>
+                                                Ext Warranty<br /> Exp Date
                                             </th>
                                         </tr>
                                     </thead>
@@ -110,12 +107,11 @@
 
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
+                           
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
-                                <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
                             </div>
                         </div>
                     </div>
