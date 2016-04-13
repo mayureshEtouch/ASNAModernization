@@ -440,7 +440,19 @@
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
             //Only numbers validation
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB").ForceNumericOnly();
+			
+			$("form input[type=text]").on('input',function () {
+				var tab = $(this).attr("tabindex");
+				if($(this).val().length == $(this).attr('maxlength')) {
+					//$(this).next("input").focus();
+					tab++;
+					$("[tabindex='"+tab+"']").focus();
+					
+				}
+			});
+			
         });
+		
     </script>
 <style>
 #CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {

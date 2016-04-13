@@ -67,9 +67,9 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--3-col-tablet">
                                     <span class="summary-label">Customer Phone Number :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="p1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
-                                        <input type="text" id="p2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop">
-                                        <input type="text" id="p3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--5-col-desktop">
+                                        <input type="text" id="p1" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="1">
+                                        <input type="text" id="p2" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2">
+                                        <input type="text" id="p3" maxlength="4" class="mdl-textfield__input mdl-cell--4-col mdl-cell--5-col-desktop" data-tb-index="3">
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col" style="margin-right: 1%;">
@@ -78,7 +78,7 @@
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--3-col-tablet" style="margin: 0">
                                     <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                        <input type="text" id="name" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop">
+                                        <input type="text" id="name" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop" data-tb-index="4">
                                     </div>
                                 </div>
                             </div>
@@ -457,6 +457,16 @@
                 _00('F8', event);
             });
             $("#p1,#p2,#p3").ForceNumericOnly();
+			
+			$("form input[type=text]").on('input',function () {
+				var tab = $(this).attr("tabindex");
+				if($(this).val().length == $(this).attr('maxlength')) {
+					//$(this).next("input").focus();
+					tab++;
+					$("[tabindex='"+tab+"']").focus();
+					
+				}
+			});
         });
     </script>
     </asp:Content>

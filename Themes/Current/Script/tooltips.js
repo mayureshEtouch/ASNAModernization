@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
     var tooltipFields = {
         "DSC4PVR": {
             "#CenPH__lb_RCDDTL1__lb_PAVNB": "Only numeric",
@@ -20,7 +20,7 @@ $(document).ready(function() {
             "#CenPH__lb_SFLCTL__lb_1AJCD": "Enter employee number",
             "#requestdate": "Select request date",
             "#pcode": "Enter promotion code",
-			"#CenPH_CEWTX": "Enter zipcode"
+            "#CenPH_CEWTX": "Enter zipcode"
         },
         "DSWXDFR": {
             "#number": "Enter model number to search by"
@@ -165,16 +165,15 @@ $(document).ready(function() {
         },
         "DSK6EFR": {
             ".term-input": "Enter warranty term"
+        },
+        "DSLOADR": {
+            "#enterYourCompany": "Enter company",
+            "#enterYourLocation": "Only numeric"
+        },
+        "SignOn": {
+            "#CenPH_RSignon_User": "Enter username",
+            "#CenPH_RSignon_Password": "Enter password"
         }
-        /*,
-                "DSLOADR": {
-                    "#enterYourCompany": "Enter company",
-                    "#enterYourLocation": "Only numeric"
-                },
-                "SignOn": {
-                    "#CenPH_RSignon_User": "Enter username",
-                    "#CenPH_RSignon_Password": "Enter password"
-                }*/
 
     }
     $(".home-icon").tooltip();
@@ -230,3 +229,4 @@ $(document).ready(function() {
         }
     });
 });
+*/

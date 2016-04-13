@@ -437,7 +437,15 @@
 			$("#cphone").attr("tabindex","8");
 			},100)
       
-
+			$("form input[type=text]").on('input',function () {
+				var tab = $(this).attr("tabindex");
+				if($(this).val().length == $(this).attr('maxlength')) {
+					//$(this).next("input").focus();
+					tab++;
+					$("[tabindex='"+tab+"']").focus();
+					
+				}
+			});
       });
     </script>
         <div id="Div1" style="display:none;">
