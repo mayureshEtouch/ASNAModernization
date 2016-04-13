@@ -1307,6 +1307,16 @@
 
       }
       $("#cphone").val($("#cphone").val().replace(/\D/g, ""));
+	  
+	  $("form input[type=text]").on('input',function () {
+		var tab = $(this).attr("tabindex");
+		if($(this).val().length == $(this).attr('maxlength')) {
+			//$(this).next("input").focus();
+			tab++;
+			$("[tabindex='"+tab+"']").focus();
+			
+		}
+	 });
   });
 </script>
     </asp:Content>
