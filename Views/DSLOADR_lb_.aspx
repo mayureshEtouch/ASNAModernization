@@ -48,7 +48,7 @@
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span class="form-label">Enter Your Company:</span> </div>
                             <div style="margin: 0" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                 <span class="form-text">
-                                    <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3" onkeypress="return onlyAlphabets(event, this)"></span>
+                                    <input id="enterYourCompany" type="text" name="enterYourCompany" value="CON" maxlength="3" ></span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
@@ -510,6 +510,7 @@
                 _00("Enter", event);
             });
 			$("#enterYourLocation").ForceNumericOnly();
+			$("#enterYourCompany").ForceAlphabetOnly();
         });
     </script>
 </asp:Content>

@@ -118,7 +118,7 @@
                             </div>
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col" style="margin:0">
-                                    <span class="form-label">Company/Location:</span>
+                                    <span class="form-label">Company/ Location:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--9-col" style="margin:0">
                                     <span class="form-text" id="at"></span>
@@ -161,10 +161,10 @@
                     <div class="content-grid mdl-grid" style="padding: 10px 0">
                         <div class="mdl-cell mdl-cell--12-col">
                             <div class="total-format-text">
-                                <span class="form-label">Product</span><span class="form-text" id="cust-prod"></span><span class="form-text">+</span>
-                                <span style="display:none;" class="form-label">Maint.</span><span class="form-text" id="cust-maint"></span><span class="form-text"></span>
-                                <span class="form-label" style="margin-left: -45px;">Addon</span><span class="form-text" id="cust-addon"></span><span class="form-text"></span>
-                                <span style="display:none;" class="form-label">Down</span><span class="form-text" id="cust-down"></span>
+                                <span class="form-label">Product:</span><span class="form-text" id="cust-prod"></span><span class="form-text">+</span>
+                                <span style="display:none;" class="form-label">Maint.:</span><span class="form-text" id="cust-maint"></span><span class="form-text"></span>
+                                <span class="form-label" style="margin-left: -45px;">Addon:</span><span class="form-text" id="cust-addon"></span><span class="form-text"></span>
+                                <span style="display:none;" class="form-label">Down:</span><span class="form-text" id="cust-down"></span>
                             </div>
                         </div>
                     </div>
