@@ -60,42 +60,42 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col" style="padding:0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Application No.:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="app-number"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Employee ID:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text"><input type="text" id="emp-name" class="full-input editable-data" name="employee" maxlength="5"><span class="ro-data" id="ro-emp-name"></span></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Promotion:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text"><input type="text" id="promotion" class="full-input editable-data" name="promotion"><span class="ro-data" id="ro-promotion"></span></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Customer:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="cust-name1"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Address:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text">
                                         <span id="cust-add1"></span>
                                     <br/>
@@ -109,50 +109,50 @@
                         </div>
                         <div class="mdl-cell mdl-cell--6-col" style="padding:0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Refered Account #:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="ref-account"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Company/ Location:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="at"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Submit:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="is-submit">Y</span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Home Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="home-phone"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Office Phone:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="office-phone"></span>
                                 </div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Social Security #:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text"><span type="text" id="ssn" class="full-input" name="socialSecurity"></span></span>
                                 </div>
                             </div>
