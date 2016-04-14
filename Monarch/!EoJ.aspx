@@ -42,7 +42,7 @@
     </div>
 	<script type="text/javascript">
 		function Redirect() {
-		   window.location="../SignOn.aspx/";
+		   window.location="./SignOn.aspx/";
 		}
 		$( window ).load(function() {
 			setTimeout("Redirect();", 1000);
