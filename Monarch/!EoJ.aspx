@@ -42,7 +42,7 @@
     </div>
 	<script type="text/javascript">
 		function Redirect() {
-		   window.location="./SignOn.aspx/";
+           window.location = document.getElementById('AppBody_HyperLink1').href;
 		}
 		$( window ).load(function() {
 			setTimeout("Redirect();", 1000);
