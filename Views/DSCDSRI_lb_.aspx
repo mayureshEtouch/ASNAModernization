@@ -161,12 +161,14 @@
 		// search box one keyup trigger 
 		$('body').on('focus', '#number1', function (event) {
 		  $('#CenPH__lb_SFLCTL__lb_2J2XT').val($(this).val());
-		  _09('#2CGC#','3,4','#SFLCTL');
+		 _09('#2J2XT','3,2','#SFLCTL');
+		 
 		}); 
 
 		$('body').on('focus', '#number2', function (event) {
 		  $('#CenPH__lb_SFLCTL__lb_2J0XT').val($(this).val());
-		  _09('#2CGC#','3,4','#SFLCTL');
+		  //_09('#2CGC#','3,4','#SFLCTL');
+		  _09('#2J0XT','3,13','#SFLCTL');
 		}); 
 			
 		$('#number1').val($('#CenPH__lb_SFLCTL__lb_2J2XT').val());
@@ -175,7 +177,7 @@
 		setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
 
 			var dataMergeIndices = [[0], [1], [2], [3], [4]];
-			generateTableAndApplyInfiniteScroll("custAddressDetails", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+			generateTableAndApplyInfiniteScroll("custAddressDetails", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 			
 
          });
