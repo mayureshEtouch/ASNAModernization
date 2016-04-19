@@ -104,7 +104,7 @@
                         </a></a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
+                        <li class="_item"><a data-menu="11" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
