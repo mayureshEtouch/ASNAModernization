@@ -22,7 +22,150 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	
+       <div class="OverlayPopupBackground"></div>
+
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col">
+          <!-- Title -->
+          <span class="heading-h1">Select Model</span>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col pull-right">
+          <!-- Navigation -->
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSEDSRR</span>
+          <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+          <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+        </div>
+      </div>
+    </section>
+    <section class="progress-bar">
+		<div class="progress-bar-wrapper">
+			<ul class="progress-bar-main">
+				<li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+				<li class="progress-bar-divider-first">
+
+				<li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+				<li class="progress-bar-divider">
+
+				<li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+				<li class="progress-bar-divider">
+
+				<li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+				<li class="progress-bar-divider">
+
+				<li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+			</ul>
+		</div>
+	</section>
+    
+	 <section class="table-data-content-container filter-field-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--2-col">
+                                            <span class="summary-table-title pull-right">Model Number</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--10-col" id="filter-by-product-category">
+                                            <input type="text" id="number1" class="mdl-textfield__input">
+                                        </div>                        
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		<section class="add-item">
+					   
+		 </section>
+		 
+		 <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="modelDetails" data-upgraded=",MaterialDataTable">
+								 <thead>
+									<tr>
+										<th>Model Number</th>
+										<th>Description</th>
+										<th>Category</th>
+									</tr>
+								</thead>
+										
+										
+										
+								<tbody>
+											
+								</tbody>
+								</table>
+								<a class="next-icon" style="float: right;margin-right: 15px;" id="next-page" href="javascript:void(0);"></a>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+</main>
+<div id="modal" class="simplePopup"></div>
+
+<!-- Modified HTML code ends here -->
+
+
+<style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+		// search box one keyup trigger 
+		$('body').on('keyup change', '#number1', function (event) {
+		  $('#CenPH__lb_SFLCTL__lb_2AXTX').val($(this).val());
+		}); 
+		// search box one keyup trigger 
+		$('body').on('focus', '#number1', function (event) {
+		  $('#CenPH__lb_SFLCTL__lb_2AXTX').val($(this).val());
+		  _09('#2AXTX','3,4','#SFLCTL');
+		}); 
+
+			
+		$('#number1').val($('#CenPH__lb_SFLCTL__lb_2AXTX').val());
+		setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
+
+			var dataMergeIndices = [[0], [1], [2]];
+			generateTableAndApplyInfiniteScroll("modelDetails", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+			
+
+         });
+       </script>
+
+
+       <div id="Div1" style="display:none;">
             
       <%--  IN: SEL Active SKUs       Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
