@@ -42,7 +42,7 @@
                         <h2 class="_title">Work with Contracts</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Calculate Credit Contract</p>
+                        <li class="_item"><a href="javascript:void(0);"  data-menu="6"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Calculate Credit Contract</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
                         </a></li>
