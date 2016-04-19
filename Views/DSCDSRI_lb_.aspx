@@ -22,7 +22,167 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	
+	    <div class="OverlayPopupBackground"></div>
+
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col">
+          <!-- Title -->
+          <span class="heading-h1">Select Customer by Address</span>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col pull-right">
+          <!-- Navigation -->
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSCDSRI</span>
+          <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
+          <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+        </div>
+      </div>
+    </section>
+     <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+    
+	<section class="table-data-content-container filter-field-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--1-col" style="width: 72px;">
+                                            <span class="summary-table-title pull-right">Zip Code</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--5-col" id="filter-by-co">
+                                            <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1">
+                                        </div> 
+																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
+                                            <span class="summary-table-title pull-right">Address</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--5-col" id="filter-by-co">
+                                            <input type="text" id="number2" class="mdl-textfield__input" data-tb-index="2">
+                                        </div>                       
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			
+		<section class="add-item">
+					   
+		 </section>
+		 
+		<section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="custAddressDetails" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Zip Code</th>
+														<th>Address #1</th>
+														<th>Type</th>
+														<th>Customer Name</th>
+														<th>Phone Number</th>
+													</tr>
+												</thead>
+												<tbody>
+																						
+												</tbody>
+										</table>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+</main>
+<div id="modal" class="simplePopup"></div>
+
+<!-- Modified HTML code ends here -->
+
+
+<style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+		// search box one keyup trigger 
+		$('body').on('keyup change', '#number1', function (event) {
+		  $('#CenPH__lb_SFLCTL__lb_2J2XT').val($(this).val());
+		}); 
+		
+		$('body').on('keyup change', '#number2', function (event) {
+		  $('#CenPH__lb_SFLCTL__lb_2J0XT').val($(this).val());
+		}); 
+		
+		// search box one keyup trigger 
+		$('body').on('focus', '#number1', function (event) {
+		  $('#CenPH__lb_SFLCTL__lb_2J2XT').val($(this).val());
+		  _09('#2CGC#','3,4','#SFLCTL');
+		}); 
+
+		$('body').on('focus', '#number2', function (event) {
+		  $('#CenPH__lb_SFLCTL__lb_2J0XT').val($(this).val());
+		  _09('#2CGC#','3,4','#SFLCTL');
+		}); 
+			
+		$('#number1').val($('#CenPH__lb_SFLCTL__lb_2J2XT').val());
+		$('#number2').val($('#CenPH__lb_SFLCTL__lb_2J0XT').val());
+		
+		setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
+
+			var dataMergeIndices = [[0], [1], [2], [3], [4]];
+			generateTableAndApplyInfiniteScroll("custAddressDetails", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+			
+
+         });
+       </script>
+
+
+       <div id="Div1" style="display:none;">
             
       <%--  CU: SEL Customer by Addr  Select record                                         --%>
       <%--  CRTDSPF                                                                         --%>
