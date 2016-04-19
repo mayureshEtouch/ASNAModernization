@@ -22,7 +22,376 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Calculate Credit Quotes</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCHNPVR</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first">
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                        </ul>
+                    </div>
+                </section>
+                <section class="table-data-content-container">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="table-container table-container-search">
+                            <!-- content-grid mdl-grid starts here -->
+                                <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 4 col starts here -->
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">Contract State of:</span> </div>
+                                <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="contract_state_of"></span> </div>
+                            </div>
+                            
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Employee:</span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input maxlength="5" type="text" class="mdl-textfield__input" id="employee_id" size="10" data-tb-index="1"/></span> </div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                
+                          </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            
+                            <!-- content-grid mdl-grid starts here -->
+                                <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 4 col starts here -->
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">Payment Method:</span> </div>
+                                <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text">
+                                <select data-tb-index="2" id="payment_methods"></select>
+
+                                </span> </div>
+                            </div>
+                            
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Credit Account:</span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" maxlength="12" id="credit_account" size="10" data-tb-index="3"/></span> </div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Balance:</span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" id="balance" maxlength="7" size="10" data-tb-index="4"/></span> </div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                
+                          </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            
+                            <!-- content-grid mdl-grid starts here -->
+                                <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 4 col starts here -->
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Insurance A/H:</span> </div>
+                                <div  class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="insurance" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="5"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--2-col"> <span class="form-label">C/L:</span> </div>
+                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="cl" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="6"/></span> </div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--2-col"> <span class="form-label">Prop:</span> </div>
+                                <div  class="mdl-cell mdl-cell--4-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="prop" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0; padding-left: 5px;"> <span class="form-label">U-Emp:</span> </div>
+                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px -8px;"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="u_emp" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="8"/></span> </div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Down Payment:</span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="down_payment" maxlength="9" class="mdl-textfield__input" size="10" data-tb-index="9"/></span> </div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                
+                          </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            
+                            <!-- content-grid mdl-grid starts here -->
+                                <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 4 col starts here -->
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Total Amount to be Financed:</span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="total_amount">0.00</span> </div>
+                                
+                                
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                
+                          </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            
+                            <!-- content-grid mdl-grid starts here -->
+                                <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 4 col starts here -->
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="content-grid mdl-grid">
+                                <div  class="mdl-cell mdl-cell--2-col"> <span class="form-label">For:</span> </div>
+                                <div  class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width:40%" /></span> </div>
+                                <div  class="mdl-cell mdl-cell--2-col" style=""> <span class="form-label">Months</span> </div>
+                                <div  class="mdl-cell mdl-cell--4-col" style=""> <span data-upgraded=",MaterialTextfield" class="form-label">
+                                  With Payment of
+                                </span>
+                                </div>
+                                <div  class="mdl-cell mdl-cell--2-col">
+                                <span data-upgraded=",MaterialTextfield" class="form-text" id="with_payment_of"></span></div>
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                  
+                                  <!-- 4 col starts here -->
+                                  <div class="mdl-cell mdl-cell--2-col">
+                                    <div class="content-grid mdl-grid">
+                            </div>
+                                  </div>
+                                  <!-- 4 col ends here -->
+                                
+                          </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div style="overflow: auto;" class="table-container">
+                                <div>               
+                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
+                     <thead>
+                              <tr>
+                                <th width="6%">Category</th>
+                                <th>Model Number</th>
+                                <th width="6%">Quantity</th>
+                                <th>Value $</th>
+                                <th>Maint $</th>
+                                <th>Total $</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><input type="text" id="cat_1" maxlength="3" size="2" value="" /></td>
+                                <td><input type="text" id="mod_no_1" maxlength="20" value="" /></td>
+                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_1" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="value_1" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="maint_1" value="" /></td>
+                                <td class="pull-right"><span id="total_1"></span></td>
+                              </tr> 
+                              <tr>
+                                <td><input type="text" id="cat_2" maxlength="3" size="2" value="" /></td>
+                                <td><input type="text" id="mod_no_2" maxlength="20" value="" /></td>
+                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_2" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="value_2" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="maint_2" value="" /></td>
+                                <td class="pull-right"><span id="total_2"></span></td>
+                              </tr> 
+                              <tr>
+                                <td><input type="text" id="cat_3" maxlength="3" size="2" value="" /></td>
+                                <td><input type="text" id="mod_no_3" maxlength="20" value="" /></td>
+                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_3" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="value_3" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="maint_3" value="" /></td>
+                                <td class="pull-right"><span id="total_3"></span></td>
+                              </tr> 
+                              <tr>
+                                <td><input type="text" id="cat_4" maxlength="3" size="2" value="" /></td>
+                                <td><input type="text" id="mod_no_4" maxlength="20" value="" /></td>
+                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_4" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="value_4" value="" /></td>
+                                <td class="pull-right"><input maxlength="9" type="text" id="maint_4" value="" /></td>
+                                <td class="pull-right"><span id="total_4"></span></td>
+                              </tr> 
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                                    
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="13" event-data="F12">Previous</span>
+                            
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="14" event-data="F9">Get Customer</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F4" data-tb-index="15">Prompt</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter" data-tb-index="16">next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+            </main>
+    <div id="modal1" class="simplePopup"></div>
+    <style type="text/css" media="screen">
+    .table-data-content-container .mdl-data-table td {
+      padding: 3px 10px;
+    }
+    </style>    
+        <script type="text/javascript">
+          var copyToAndFrom = {
+              "displayOnlyFields": {
+                "CenPH__lb_RCDDTL1__lb_DVGCD": "contract_state_of",
+                "CenPH__lb_RCDDTL1__lb_DPRDV": "total_amount",
+                "CenPH__lb_RCDDTL1__lb_DCJVA": "with_payment_of",
+                "CenPH__lb_RCDDTL1__lb_DEYVA": "total_1",
+                "CenPH__lb_RCDDTL1__lb_DGOVA": "total_2",
+                "CenPH__lb_RCDDTL1__lb_DGPVA": "total_3",
+                "CenPH__lb_RCDDTL1__lb_DGQVA": "total_4",
+                  
+              },
+              "inputFields": {
+                "CenPH__lb_RCDDTL1__lb_DAJCD": "employee_id",
+                "CenPH__lb_RCDDTL1__lb_DACC_lb_":"credit_account",
+                "CenPH__lb_RCDDTL1__lb_DCLVA": "balance",
+                "CenPH__lb_RCDDTL1__lb_DLEST":"insurance",
+                "CenPH__lb_RCDDTL1__lb_DLFST": "cl",
+                "CenPH__lb_RCDDTL1__lb_DLGST": "prop",
+                "CenPH__lb_RCDDTL1__lb_DLHST": "u_emp",
+                "CenPH__lb_RCDDTL1__lb_DGEVA":"down_payment",
+                "CenPH__lb_RCDDTL1__lb_DDUNB": "months",
+                "CenPH__lb_RCDDTL1__lb_DPQST": "payment_methods",
+
+                "CenPH__lb_RCDDTL1__lb_1PRDC": "cat_1", 
+                "CenPH__lb_RCDDTL1__lb_DA6TX": "mod_no_1", 
+                "CenPH__lb_RCDDTL1__lb_1PRDQ": "quantity_1", 
+                "CenPH__lb_RCDDTL1__lb_1GFVA": "value_1", 
+                "CenPH__lb_RCDDTL1__lb_1PRDM": "maint_1", 
+                
+                "CenPH__lb_RCDDTL1__lb_DAWCO": "cat_2", 
+                "CenPH__lb_RCDDTL1__lb_DUPTX": "mod_no_2", 
+                "CenPH__lb_RCDDTL1__lb_DI2NB": "quantity_2", 
+                "CenPH__lb_RCDDTL1__lb_DGIVA": "value_2", 
+                "CenPH__lb_RCDDTL1__lb_DGLVA": "maint_2", 
+                
+                "CenPH__lb_RCDDTL1__lb_DAXCO": "cat_3", 
+                "CenPH__lb_RCDDTL1__lb_DUQTX": "mod_no_3", 
+                "CenPH__lb_RCDDTL1__lb_DI3NB": "quantity_3",
+                "CenPH__lb_RCDDTL1__lb_DGJVA": "value_3", 
+                "CenPH__lb_RCDDTL1__lb_DGMVA": "maint_3", 
+                
+                "CenPH__lb_RCDDTL1__lb_DAYCO": "cat_4", 
+                "CenPH__lb_RCDDTL1__lb_DURTX": "mod_no_4", 
+                "CenPH__lb_RCDDTL1__lb_DI4NB": "quantity_4", 
+                "CenPH__lb_RCDDTL1__lb_DGKVA": "value_4", 
+                "CenPH__lb_RCDDTL1__lb_DGNVA": "maint_4", 
+
+              }
+          };
+          $(document).ready(function() {
+            /*
+            Select box
+             */
+            var $options = $("#CenPH__lb_RCDDTL1__lb_DPQST > option").clone().map(function(index){
+              if($(this).val()!='?'){
+                  if($(this).val().trim() ==""){
+                      $(this).val(" ").text("Please Choose");
+                  }
+                  return this;
+              }else{
+                var $options = '<option value="'+$.trim($("#CenPH__lb_RCDDTL1__lb_DPQST").text())+'">'+$.trim($("#CenPH__lb_RCDDTL1__lb_DPQST").text())+'</option>';
+              }
+              /*
+              Ending select box
+               */
+            });
+            $("#payment_methods").append($options);
+            /*var values = ['SLS','CML','BLD'];
+            var descriptions = ['Sales','Commercial','Builder'];
+            makeSelectDescriptive("payment_methods",values,descriptions);*/
+            copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+            $("#employee_id, #credit_account, #months").ForceNumericOnly();
+            $("#balance, #down_payment").numericWithTwoDecimalPrecisions();
+          });
+          </script>
+
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CA: PMT for Quotes        Prompt & validate record                              --%>
       <%--  CRTDSPF                                                                         --%>
