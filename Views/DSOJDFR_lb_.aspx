@@ -22,7 +22,119 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Expected PO's</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSOJDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Model Number</span>
+                            <span class="summary-txt" id="modelno"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Product Category</span>
+                            <span class="summary-txt" id="prdCategory"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <span class="summary-title">Vendor Number</span>
+                            <span class="summary-txt" id="vendor"></span>
+                        </div>
+                    </div>
+            	</div>
+            </section>
+ <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblExpectedPO" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Expected Receipt</th>
+														<th>Company</th>
+														<th>Location</th>
+														<th>PO Number</th>
+														<th>Request</th>
+														<th>Received</th>
+														<th>Remaining Quantity</th>
+														<th>Purchase Cost</th>
+													</tr>
+												</thead>
+												<tbody>
+													<%--<tr class="selected-row">
+														<td></td>
+														<td></td>
+														<td class="pull-right"></td>
+														<td class="pull-right"></td>
+														<td class="pull-right"></td>
+														<td class="pull-right"></td>
+														<td class="pull-right"></td>
+														<td class="pull-right"></td>
+													</tr>
+													<tr>
+														<td>5/31/03</td>
+														<td>CON</td>
+														<td class="pull-right">112</td>
+														<td class="pull-right">454513</td>
+														<td class="pull-right">30</td>
+														<td class="pull-right">0</td>
+														<td class="pull-right">30</td>
+														<td class="pull-right">.00</td>
+													</tr>--%>													
+												</tbody>
+										</table>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display: none;">
             
       <%--  IN: DSP Expected PO       Display file                                          --%>
       <%--  CRTDSPF                                                                         --%>
@@ -674,4 +786,29 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant14": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "modelno",
+                    "CenPH__lb_SFLCTL__lb_2AXCD+CenPH__lb_SFLCTL__lb_CFATX": "prdCategory",
+                    "CenPH__lb_SFLCTL__lb_PBLNB": "vendor"
+                }
+            }
+            $(document).ready(function () {
+                $('body').css({ "background-color": "white" });
+                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+                // display table for selected model number
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6] ,[7]];
+                generateTableAndApplyInfiniteScroll("tblExpectedPO", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                $("#next").click(function (event) {
+                    _00('Enter', event);
+                });
+            });
+        </script>
     </asp:Content>
