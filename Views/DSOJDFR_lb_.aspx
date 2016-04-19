@@ -799,7 +799,7 @@
             $(document).ready(function () {
                 $('body').css({ "background-color": "white" });
                 copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-                // Search by Customer data table record mapping
+                // display table for selected model number
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6] ,[7]];
                 generateTableAndApplyInfiniteScroll("tblExpectedPO", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
           
