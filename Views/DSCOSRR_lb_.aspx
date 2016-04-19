@@ -22,7 +22,110 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Product Category</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSCOSRR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">24th October 2015</span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            <section class="table-data-content-container filter-field-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--2-col">
+                                            <span class="summary-table-title pull-right">Product Category</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--10-col" id="filter-by-product-category">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2AXCD_new" class="mdl-textfield__input" maxlength="3">
+                                        </div>                        
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="add-item">
+               
+            </section>
+             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="productcategory" data-upgraded=",MaterialDataTable">
+                 <thead>
+                <tr>
+                 <th><!-- <div class="th-inner"> -->Product Category<!-- </div> --></th>
+                 <th><!-- <div class="th-inner"> -->Description<!-- </div> --></th>
+                 <th><!-- <div class="th-inner"> -->Sales Class<!-- </div> --></th>
+                </tr>
+               </thead>
+               <tbody>
+               </tbody>
+              </table>
+                    <a class="next-icon" style="float: right;margin-right: 15px;" id="next-page" href="javascript:void(0);"></a>
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span></div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+         
+        <div id="modal" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  Select IN: Product Catego Select record                                         --%>
       <%--  CRTDSPF                                                                         --%>
@@ -356,4 +459,39 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant12": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time"
+                    
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2AXCD": "CenPH__lb_SFLCTL__lb_2AXCD_new"
+                }
+            }
+        $(document).ready(function (){
+          $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+          $("body").css({ "background-color": "#FFFFFF" });
+            $('body').on('click', '#productcategory tbody tr', function () {
+                $("#productcategory tbody tr:even").css("background-color", "#fff");
+                $("#productcategory tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#productcategory tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+            var dataMergeIndices = [[0], [1], [2]];
+            generateTableAndApplyInfiniteScroll("productcategory", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+            $("#productcategory tbody tr:first").css("background-color", "#d8d8d8");
+            /*$('#next').click(function (event) {
+                    _00("Enter", event);
+                });*/
+              $('#exit').click(function (event) {
+                    _00("F12", event);
+                });
+              $("#time").html("&nbsp;" + $("#time").html())
+        });
+      </script>
     </asp:Content>
