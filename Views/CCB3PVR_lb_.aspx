@@ -22,7 +22,125 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Credit Customer Search</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCB3PVR</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first">
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step6 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="table-data-content-container">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div class="table-container table-container-search">
+                                <div class="content-grid mdl-grid select-customer-screen-grid">
+                                  <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop">
+                                      <span class="summary-label">Select Phone Number</span>
+                                      <div class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                            <input type="text" id="number1" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="1" maxlength="10">
+                                            <!-- <input type="text" id="number2" value="" maxlength="3" class="mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2">
+                                            <input type="text" id="number3" maxlength="4"  value="" class="mdl-textfield__input mdl-cell--4-col mdl-cell--8-col-desktop" data-tb-index="3"> -->
+                                        </div>
+                                    </div>
+                                    <div style="margin-right:2%;">
+                                        <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop" style="margin: 0">
+                                        <span class="summary-label">Credit Account</span>
+                                        <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                            <input type="text" id="credit_account" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="2" maxlength="12">
+                                        </div>
+                                    </div>
+                                            <div style="margin-right:2%;">
+                                        <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" style="margin: 0">
+                                        <span class="summary-label">Customer Name</span>
+                                        <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                            <input type="text" id="name" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="3" maxlength="25">
+                                        </div>
+                                    </div>
+                                            <div style="margin-right:2%;">
+                                        <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop" style="margin: 0">
+                                        <span class="summary-label">Social Security</span>
+                                        <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                            <input type="text" id="ssn" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="4" maxlength="10">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--9-col-desktop">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3" data-tb-index="5">Previous</span></div>                        
+                                    <div class="mdl-cell mdl-cell--3-col pull-right">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" event-data="Enter" data-tb-index="6">NEXT</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+               
+            </main>
+            <div id="modal1" class="simplePopup"></div>
+    <style type="text/css" media="screen">
+    .table-data-content-container .mdl-data-table td {
+      padding: 3px 10px;
+    }
+    </style>    
+        <script type="text/javascript">
+          var copyToAndFrom = {
+              "inputFields": {
+                "CenPH__lb_RCDDTL1__lb_1BXNB": "number1",
+                "CenPH__lb_RCDDTL1__lb_PACC_lb_":"credit_account",
+                "CenPH__lb_RCDDTL1__lb_1A2TX": "name",
+                "CenPH__lb_RCDDTL1__lb_1B2NB":"ssn",
+                
+              }
+          };
+          $(document).ready(function() {
+            copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+            $("#number1, #credit_account, #ssn").ForceNumericOnly();
+          });
+          </script>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CR: PMT for Selection     Prompt & validate record                              --%>
       <%--  CRTDSPF                                                                         --%>

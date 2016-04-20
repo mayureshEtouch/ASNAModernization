@@ -316,6 +316,8 @@
         <script type="text/javascript">
           var copyToAndFrom = {
               "displayOnlyFields": {
+                "CenPH_DdsConstant17": "date",
+                "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
                 "CenPH__lb_RCDDTL1__lb_DVGCD": "contract_state_of",
                 "CenPH__lb_RCDDTL1__lb_DPRDV": "total_amount",
                 "CenPH__lb_RCDDTL1__lb_DCJVA": "with_payment_of",
@@ -391,7 +393,7 @@
           </script>
 
     <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;">
+        <div id="Div1" style="display: block;">
             
       <%--  CA: PMT for Quotes        Prompt & validate record                              --%>
       <%--  CRTDSPF                                                                         --%>

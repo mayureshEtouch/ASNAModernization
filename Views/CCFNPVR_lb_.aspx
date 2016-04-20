@@ -62,7 +62,8 @@
 		
 		<section class="form-data">
                 <div class="form-data-wrapper" style="padding-bottom:0;">
-				<div style="padding-left: 10px;font-size: 13px; font-weight: bold;">PROGRAM ERROR</div>
+				<div style="padding-left: 10px;font-size: 13px; font-weight: bold;">
+        <span id="program_text"></span></div>
 				<div class="content-grid mdl-grid">
 				  <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                       <div class="content-grid mdl-grid">
@@ -71,10 +72,10 @@
                         	</div>
                         	<div class="mdl-cell mdl-cell--6-col" style="margin:0">
                            		<span class="form-text">
-									 <select name="select" style="width: 150px;">
-										<option>Please Choose</option>
-                           				<option>N</option>
-										<option>Y</option>
+									 <select name="select" id="select_prompt" style="width: 150px;">
+										<option value=" ">Please Choose</option>
+                           				<option value="N">N</option>
+										<option value="Y">Y</option>
 										
                            		</select></span>
                         	</div>
@@ -93,7 +94,8 @@
         </section>
 		
         </main>
-      
+        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+      <div id="modal1" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             
@@ -352,11 +354,25 @@
 	   #__Page_Hidden {
 			height: 730px !important;
 		 }
-
+     .simplePopup {
+         left: 30% !important;
+         top: 40% !important;
+     }
         </style>
         <script type="text/javascript">
+            var copyToAndFrom = {
+                 "displayOnlyFields": {
+                     "CenPH__lb_RCDDTL1__lb_PTX30": "program_text",
+                 }
+            };
             $(document).ready(function () {
-               
+              copyData(copyToAndFrom, "");
+              $("#select_prompt").on('change',function(){
+                console.log($(this).val());
+                $("#CenPH__lb_RCDDTL1__lb_PQ1ST").val($(this).val())
+              })
+                
+
 
                 if($(".simplePopupClose").length > 0) {
                    $(".simplePopupBackground1").show();
