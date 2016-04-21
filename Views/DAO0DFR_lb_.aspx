@@ -22,7 +22,173 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Open Orders Against Model</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSEGDFR</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                            <li class="progress-bar-divider-first">
+
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                        </ul>
+                    </div>
+                </section>
+                <section class="table-data-content-container filter-field-container">
+                                    <div class="table-data-wrapper">
+                                        <div class="table-data-maincontainer">
+                                            <div class="table-container filter-search-container">
+                                                <div class="content-grid mdl-grid">
+                                                    <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                                        <span class="summary-table-title">Filter by:</span>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--10-col search-container">
+                                                        <div class="content-grid mdl-grid">
+                                                            <div class="mdl-cell mdl-cell--2-col" >
+                                                                <span class="summary-table-title pull-right" >Product category </span>
+                                                            </div>
+                                                            <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
+                                                                <input type="text" id="product_category" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="3">
+                                                            </div>
+                                                            <div class="mdl-cell mdl-cell--9-col" id="">
+                                                                <span id="product_name" class="summary-txt" style="padding-top: 12px; padding-left: 5%;"></span>
+                                                                
+                                                            </div>                        
+                                                        </div>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                                        <div class="button-container">
+                                                            <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                            <section class="add-item">
+                                                <div class="add-item-wrapper">
+                                                    <div class="content-grid mdl-grid">
+                                                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                                                            <div class="icon-container">
+                                                <span class="icon-txt inventory">Inventory</span><i class="material-icons md-15 md-light reserve-icon inventory"></i>
+                                                <span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                 <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div style="overflow: auto;" class="table-container">
+                                <div>               
+                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="products" data-upgraded=",MaterialDataTable">
+                     <thead>
+                              <tr>
+                                <th>Model Number</th>
+                                <th>Description </th>
+                                <th>Vendor Number</th>
+                              </tr>
+                            </thead>
+                            <tbody>                     
+                            </tbody>
+                        </table>
+                    </div>
+                                    
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+            </main>
+     <div id="modal1" class="simplePopup"></div>
+     <style type="text/css" media="screen">
+      #products tbody > tr:hover {
+              cursor: pointer;
+            }
+     </style>    
+         <script type="text/javascript">
+           var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant11": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_CFATX": "product_name"
+                },
+                "inputFields":{
+                    "CenPH__lb_SFLCTL__lb_2AXCD": "product_category"
+                }
+           };
+           $(document).ready(function() {
+             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+             var dataMergeIndices = [[0], [1], [2]];
+             generateTableAndApplyInfiniteScroll("products", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+             $("#product_category").ForceNumericOnly();
+
+             var selectCusotmer = function (row, value, event) {
+                 var selectId = $(row).data('selectid');
+                 a = selectId.split(".");
+                 $("#" + a[0] + "\\." + a[1]).val(value);
+                 _00('Enter', event);
+             }
+             //Display customer details
+             $(".display-customer").click(function (event) {
+                 if ($(".icon-container").hasClass("icon-disable")) {
+                     alert("Please select the customer");
+                 } else {
+                     var row = $("#products tbody tr.selected");
+                     selectCusotmer(row, "5", event);
+                 }
+             });
+             //Change customer details
+             $(".inventory").click(function (event) {
+                 if ($(".icon-container").hasClass("icon-disable")) {
+                     alert("Please select the customer");
+                 } else {
+                     var row = $("#products tbody tr.selected");
+                     selectCusotmer(row, "7", event);
+                 }
+             });
+
+           });
+           </script>  
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  IN: DSP SKU/Prod Cat(SLS) Display file                                          --%>
       <%--  CRTDSPF                                                                         --%>

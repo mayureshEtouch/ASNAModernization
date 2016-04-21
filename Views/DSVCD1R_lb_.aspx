@@ -81,7 +81,7 @@
             	</div>
             </section>
 						
-						<section class="table-data-content-container" style="margin-top: 16px;">
+						<section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
 														<div class="table-data-wrapper">
 																<div class="table-data-maincontainer">
 																		<div class="table-container table-container-search">
