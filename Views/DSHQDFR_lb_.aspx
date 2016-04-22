@@ -22,8 +22,166 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
-            
+    <!-- Modified HTML code starts here -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Select Customer Order</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSHQDFR</span> 
+                <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span>
+                <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="progress-bar">
+                    <div class="progress-bar-wrapper">
+                        <ul class="progress-bar-main">
+                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                            <li class="white-to-gray-bullet">
+
+                            <li class="progress-bar-step2 gray-bg step-width"><span class="step-title-selected">Step 2</span> <span class="step-txt-selected">Enter Sales Order</span> </li>
+                             <li class="progress-bar-divider-first">
+
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step4  step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                            <li class="progress-bar-divider">
+
+                            <li class="progress-bar-step6 step-width"><span class="step-title">Step 6</span> <span class="step-txt">Confirmation</span> </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="order-summary order-summary-container">
+                        <div class="order-summary-wrapper">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <span class="summary-title">Name:</span>
+                                    <span class="summary-txt" id="name"></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <span class="summary-title">Telephone:</span>
+                                    <span class="summary-txt" id="telephone"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="add-item">
+                      <div class="add-item-wrapper">
+                          <div class="content-grid mdl-grid">
+                              <div class="mdl-cell mdl-cell--12-col pull-right">
+                                  <div class="icon-container">
+
+                      <span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+                      </div>
+                              </div>
+                          </div>
+                      </div>
+                      </section>
+        <section class="table-data-content-container spacer-container-bottom">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container" style="overflow: auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="orders" >
+                            <thead>
+                                <tr>
+                                    <th>Order #</th>
+                                    <th>Ver</th>
+                                    <th>T</th>
+                                    <th>Ordered</th>
+                                    <th>Loc</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col-desktop">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F7" id="">Select Completed Order</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            </main>
+            <div id="modal" class="simplePopup"></div>
+            <section class="copyright">
+                <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
+            </section>
+        </div>
+            <style>
+        
+        #orders tbody > tr:hover {
+          cursor: pointer;
+        }
+        tr.selected {
+          background-color: #d8d8d8 !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+        .summary-label {
+          font-size: 11px;
+        }
+        }
+        </style>
+            <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                  "CenPH_DdsConstant12": "date",
+                  "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                  "CenPH__lb_SFLCTL__lb_2ALTX": "name",
+                  "CenPH__lb_SFLCTL__lb_CHPH_lb_": "telephone"
+                },
+                "inputFields": {
+                }
+            };
+                $(document).ready(function () {
+                    copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                    var dataMergeIndices = [[0], [1], [2],[3], [4]];
+              
+                    generateTableAndApplyInfiniteScroll("orders", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+              
+                    var selectCusotmer = function (row, value, event) {
+                        var selectId = $(row).data('selectid');
+                        a = selectId.split(".");
+                        $("#" + a[0] + "\\." + a[1]).val(value);
+                        _00('Enter', event);
+                    }
+                    //Display customer details
+                    $(".display-customer").click(function (event) {
+                        if ($(".icon-container").hasClass("icon-disable")) {
+                            alert("Please select the customer");
+                        } else {
+                            var row = $("#orders tbody tr.selected");
+                            selectCusotmer(row, "5", event);
+                        }
+                    });
+                    
+                });
+            </script>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;"> 
       <%--  OE: DSP Order Header Sel  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
       <%--  RSTDSP(*YES)                                                                                                     --%>

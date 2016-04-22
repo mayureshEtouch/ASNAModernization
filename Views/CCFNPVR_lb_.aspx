@@ -358,6 +358,9 @@
          left: 30% !important;
          top: 40% !important;
      }
+     #__Page_PopUp #wrapper {
+          padding-bottom: 25px;
+     }
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {

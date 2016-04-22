@@ -82,7 +82,7 @@
                                                     </div>
                                                     <div class="mdl-cell mdl-cell--1-col button-cnt-container">
                                                         <div class="button-container">
-                                                            <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                                            <span class="mdl-button mdl-button--accent" id="search">Search</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -127,7 +127,7 @@
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
                             </div>
                         </div>
                     </div>
@@ -142,6 +142,9 @@
       #products tbody > tr:hover {
               cursor: pointer;
             }
+      .filter-search-container .button-container .mdl-button {
+          height: 16px;
+        }
      </style>    
          <script type="text/javascript">
            var copyToAndFrom = {
@@ -157,7 +160,7 @@
            $(document).ready(function() {
              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
              var dataMergeIndices = [[0], [1], [2]];
-             generateTableAndApplyInfiniteScroll("products", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+             generateTableAndApplyInfiniteScroll("products", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
              $("#product_category").ForceNumericOnly();
 
              var selectCusotmer = function (row, value, event) {
@@ -185,6 +188,17 @@
                  }
              });
 
+             $("#search").click(function (event) {
+                var row = $("#products tbody tr.selected");
+                if(row.length>0){
+                  var selectId = $(row).data('selectid');
+                  a = selectId.split(".");
+                  $("#" + a[0] + "\\." + a[1]).val(" ");
+                }
+                _00('Enter', event);
+                //var row = $("#products tbody tr.selected");
+                //selectCusotmer(row, "", event);
+             });
            });
            </script>  
     <!-- Modified HTML code ends here -->

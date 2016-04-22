@@ -384,5 +384,27 @@ var doAction = function(row, value, event) {
     $("#" + a[0] + "\\." + a[1]).val(value);
     _00('Enter', event);
 }
-
+/*
+var inputs = copyToAndFrom.inputFields; 
+It works based on class namely 'f4' on input fields
+ */
+var doF4Action = function(inputs){
+    $(".f4").keydown(function(e){
+      //debugger
+      var keyCode = e.keyCode || e.which;
+      var field_id = this.id;
+      if(keyCode == 115){
+        e.preventDefault();
+        $.each( inputs, function( key, value ) {
+          if(field_id==value){
+            $("#"+key).focus();
+                var e = jQuery.Event("keydown");
+                e.which = 115; // # Some key code value
+                $("#"+key).trigger(e);
+            return false;
+          }
+        });
+      }
+    })
+}
 
