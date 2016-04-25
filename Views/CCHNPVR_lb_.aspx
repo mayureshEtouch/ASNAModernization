@@ -100,7 +100,7 @@
                                     <div class="content-grid mdl-grid">
                                 <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">Payment Method:</span> </div>
                                 <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text">
-                                <select data-tb-index="2" id="payment_methods"></select>
+                                <select data-tb-index="2" id="payment_methods" onfocus="_09('#DPQST','6,18','#RCDDTL1');"></select>
 
                                 </span> </div>
                             </div>
@@ -112,7 +112,7 @@
                                   <div class="mdl-cell mdl-cell--4-col">
                                     <div class="content-grid mdl-grid">
                                 <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Credit Account:</span> </div>
-                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" maxlength="12" id="credit_account" size="10" data-tb-index="3"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input f4" maxlength="12" id="credit_account" size="10" data-tb-index="3" onfocus="_09('#DACC#','6,37','#RCDDTL1');"/></span> </div>
                             </div>
                                   </div>
                                   <!-- 4 col ends here -->
@@ -210,7 +210,7 @@
                                 <div  class="mdl-cell mdl-cell--2-col"> <span class="form-label">For:</span> </div>
                                 <div  class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width:40%" /></span> </div>
                                 <div  class="mdl-cell mdl-cell--2-col" style=""> <span class="form-label">Months</span> </div>
-                                <div  class="mdl-cell mdl-cell--4-col" style=""> <span data-upgraded=",MaterialTextfield" class="form-label">
+                                <div  class="mdl-cell mdl-cell--4-col" style=""> <span data-upgraded=",MaterialTextfield" class="form-label" id="lbl_with_payment_of">
                                   With Payment of
                                 </span>
                                 </div>
@@ -252,32 +252,32 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td><input type="text" id="cat_1" maxlength="3" size="2" value="" /></td>
-                                <td><input type="text" id="mod_no_1" maxlength="20" value="" /></td>
+                                <td><input type="text" id="cat_1" maxlength="3" size="2" value="" class="f4" onfocus="_09('#1PRDC','16,4','#RCDDTL1');"/></td>
+                                <td><input type="text" id="mod_no_1" maxlength="20" value=""  class="f4" onfocus="_09('#DA6TX','16,8','#RCDDTL1');"/></td>
                                 <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_1" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="value_1" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="maint_1" value="" /></td>
                                 <td class="pull-right"><span id="total_1"></span></td>
                               </tr> 
                               <tr>
-                                <td><input type="text" id="cat_2" maxlength="3" size="2" value="" /></td>
-                                <td><input type="text" id="mod_no_2" maxlength="20" value="" /></td>
+                                <td><input type="text" id="cat_2" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAWCO','17,4','#RCDDTL1');"/></td>
+                                <td><input type="text" id="mod_no_2" maxlength="20" value=""  class="f4" onfocus="_09('#DUPTX','17,8','#RCDDTL1');"/></td>
                                 <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_2" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="value_2" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="maint_2" value="" /></td>
                                 <td class="pull-right"><span id="total_2"></span></td>
                               </tr> 
                               <tr>
-                                <td><input type="text" id="cat_3" maxlength="3" size="2" value="" /></td>
-                                <td><input type="text" id="mod_no_3" maxlength="20" value="" /></td>
+                                <td><input type="text" id="cat_3" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAXCO','18,4','#RCDDTL1');"/></td>
+                                <td><input type="text" id="mod_no_3" maxlength="20" value=""  class="f4" onfocus="_09('#DUQTX','18,8','#RCDDTL1');"/></td>
                                 <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_3" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="value_3" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="maint_3" value="" /></td>
                                 <td class="pull-right"><span id="total_3"></span></td>
                               </tr> 
                               <tr>
-                                <td><input type="text" id="cat_4" maxlength="3" size="2" value="" /></td>
-                                <td><input type="text" id="mod_no_4" maxlength="20" value="" /></td>
+                                <td><input type="text" id="cat_4" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAYCO','19,4','#RCDDTL1');"/></td>
+                                <td><input type="text" id="mod_no_4" maxlength="20" value=""  class="f4" onfocus="_09('#DURTX','19,8','#RCDDTL1');"/></td>
                                 <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_4" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="value_4" value="" /></td>
                                 <td class="pull-right"><input maxlength="9" type="text" id="maint_4" value="" /></td>
@@ -389,11 +389,20 @@
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
             $("#employee_id, #credit_account, #months").ForceNumericOnly();
             $("#balance, #down_payment").numericWithTwoDecimalPrecisions();
+            if($("#CenPH__lb_RCDDTL1__lb_DCJVA").length==0){
+              $("#lbl_with_payment_of").hide();
+            }
+            /*
+            Performing F4 action on original fields when user does F4 on Moder UI fields.
+            input fields obj must be supplied to doF4Action function and also f4 class should be there for modern UI fields.
+             */
+            //doF4Action(copyToAndFrom.inputFields);
           });
+
           </script>
 
     <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: block;">
+        <div id="Div1" style="display: none;">
             
       <%--  CA: PMT for Quotes        Prompt & validate record                              --%>
       <%--  CRTDSPF                                                                         --%>

@@ -22,7 +22,123 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display SKU by Model</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DAPLDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            <section class="table-data-content-container filter-field-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--2-col">
+                                            <span class="summary-table-title pull-right">Model Number</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--10-col" id="filter-by-product-category">
+                                            <input type="text" id="number1" class="mdl-textfield__input">
+                                        </div>                        
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+								<span class="icon-txt display-model">Display</span><i class="material-icons md-15 md-light display-icon"></i>
+								<span class="icon-txt display-inventory">Inventory</span><i class="material-icons md-15 md-light reserve-icon"></i>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblModelDesc" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Model Number</th>
+														<th width="40%">Description</th>
+														<th>Vendor Number</th>
+														<th>Product Category</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>										
+												</tbody>
+										</table>
+										<a class="next-icon" style="float: right;margin-right: 15px;" id="next-page" href="javascript:void(0);"></a>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="byModelDescription">By Model description</span>
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  IN: DSP SKU by Model-Rst2 Display file                                          --%>
       <%--  CRTDSPF                                                                         --%>
@@ -490,4 +606,76 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant10": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time"
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "number1"
+                }
+            }
+            $(document).ready(function () {
+                $('body').on('keyup change', '#number1', function (event) {
+                    $('#CenPH__lb_SFLCTL__lb_2AXTX').val($(this).val());
+                });
+                // search box one keyup trigger 
+                $('body').on('focus', '#number1', function (event) {
+                    $('#CenPH__lb_SFLCTL__lb_2AXTX').val($(this).val());
+                    _09('#2AXTX', '5,4', '#SFLCTL');
+                });
+                $('#number1').val($('#CenPH__lb_SFLCTL__lb_2AXTX').val());
+
+
+
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+                //Display Model details
+                $(".display-model").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the Model");
+                    } else {
+                        var row = $("#tblModelDesc tbody tr.selected");
+                        selectCusotmer(row, "5", event);
+                    }
+                });
+
+                //Display Inventory details
+                $(".display-inventory").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the Model");
+                    } else {
+                        var row = $("#tblModelDesc tbody tr.selected");
+                        selectCusotmer(row, "7", event);
+                    }
+                });
+
+
+                $('body').css({ "background-color": "white" });
+               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+                // display table for selected model number
+                var dataMergeIndices = [[0], [1], [2], [3], [4]];
+                generateTableAndApplyInfiniteScroll("tblModelDesc", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                
+                $("#byModelDescription").click(function (event) {
+                    _00('F13', event);
+                });
+
+                $("#search").click(function (event) {
+                    _00('Enter', event);
+                });
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                $("#next").click(function (event) {
+                    _00('Enter', event);
+                });
+            });
+        </script>
+
     </asp:Content>
