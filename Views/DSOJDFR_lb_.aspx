@@ -93,27 +93,7 @@
 														<th>Purchase Cost</th>
 													</tr>
 												</thead>
-												<tbody>
-													<%--<tr class="selected-row">
-														<td></td>
-														<td></td>
-														<td class="pull-right"></td>
-														<td class="pull-right"></td>
-														<td class="pull-right"></td>
-														<td class="pull-right"></td>
-														<td class="pull-right"></td>
-														<td class="pull-right"></td>
-													</tr>
-													<tr>
-														<td>5/31/03</td>
-														<td>CON</td>
-														<td class="pull-right">112</td>
-														<td class="pull-right">454513</td>
-														<td class="pull-right">30</td>
-														<td class="pull-right">0</td>
-														<td class="pull-right">30</td>
-														<td class="pull-right">.00</td>
-													</tr>--%>													
+												<tbody>										
 												</tbody>
 										</table>
 								</div>
