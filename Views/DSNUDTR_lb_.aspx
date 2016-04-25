@@ -22,7 +22,172 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Order Credit Data</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSNUDTR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+						<section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Customer name  :</span>
+                            <span id="customerName" class="summary-txt"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Order number . :</span>
+                            <span id="orderNumber" class="summary-txt"></span>
+                        </div>
+                        
+                    </div>
+            	</div>
+            </section>
+            
+            <section class="add-item">
+               
+            </section>
+             <section class="table-data-content-container" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayDetails" data-upgraded=",MaterialDataTable" style="margin-bottom: 25px;">
+								 <thead>
+													<tr>
+														<th>Delivery Status</th>
+														<th>From Location</th>
+														<th>Quantity</th>
+														<th>Model Number</th>
+														<th>Actual Price</th>
+														<th>Total Credit</th>
+														<th>Total Price</th>
+													</tr>
+												</thead>
+												<tbody>
+														<tr>
+														<td class="pull-right"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AIST_new"></span></td>
+														<td class="pull-right"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AACD_new"></span></td>
+														<td class="pull-right"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2A1NB_new"></span></td>
+														<td> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AXTX_new"></span></td>
+														<td class="pull-right"><span class="form-text" id="CenPH__lb_SFLCTL__lb_2AMVA_new"></span></td>
+														<td class="pull-right"><span class="form-text" id="CenPH__lb_SFLCTL__lb_CBPVA_new"></span></td>
+														<td class="pull-right"><span class="form-text" id="CenPH__lb_SFLCTL__lb_CBIVA_new"></span></td>
+													</tr>									
+												</tbody>
+										</table>
+								</div>
+                                
+								
+						</div>
+				</div>
+				</div>
+		</section>
+		
+		 <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper" style="width: 45%; margin: 3px auto 5px;">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Credit Type</th>
+														<th>Credit Amount</th>
+													
+													</tr>
+												</thead>
+												<tbody>
+																				
+												</tbody>
+										</table>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+ <style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+
+</style>
+
+<script type="text/javascript">
+var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_2AIST": "CenPH__lb_SFLCTL__lb_2AIST_new",
+					 "CenPH__lb_SFLCTL__lb_2AACD":"CenPH__lb_SFLCTL__lb_2AACD_new",
+					  "CenPH__lb_SFLCTL__lb_2A1NB":"CenPH__lb_SFLCTL__lb_2A1NB_new",
+						"CenPH__lb_SFLCTL__lb_2AXTX+CenPH__lb_SFLCTL__lb_2A2TX":"CenPH__lb_SFLCTL__lb_2AXTX_new",
+							"CenPH__lb_SFLCTL__lb_2AMVA":"CenPH__lb_SFLCTL__lb_2AMVA_new",
+							"CenPH__lb_SFLCTL__lb_CBPVA":"CenPH__lb_SFLCTL__lb_CBPVA_new",
+							"CenPH__lb_SFLCTL__lb_CBIVA":"CenPH__lb_SFLCTL__lb_CBIVA_new",
+							"CenPH__lb_SFLCTL__lb_2BANB":"orderNumber",
+							"CenPH__lb_SFLCTL__lb_PALTX":"customerName"
+
+                },
+                "inputFields": {
+                }
+            }
+			
+  $(document).ready(function() {
+		copyData(copyToAndFrom, "");
+		$("[name='date']").text($("[id$=_DdsConstant19]").text());
+        $("[name='time']").text($("[id$=SFLCTL__lb__lb_TME]").text());
+		  
+			 
+			var dataMergeIndices = [[0], [1]];
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLCTL", "NONE", "next", dataMergeIndices);
+		
+
+		 
+		  
+   });
+</script>
+	   
+        <div id="Div1" style="display:none">
             
       <%--  OE: DTR Dsp Ord Crdt      Display transactions                                                                   --%>
       <%--  CRTDSPF                                                                                                          --%>
