@@ -1181,8 +1181,6 @@
         #special-instructions span {
             display: block !important;
         }
-		#printInvoice {
-		  display: none;
-		 }
+		
     </style>
     </asp:Content>

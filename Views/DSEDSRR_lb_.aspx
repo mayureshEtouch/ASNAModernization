@@ -74,7 +74,7 @@
                                             <span class="summary-table-title pull-right">Model Number</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--10-col" id="filter-by-product-category">
-                                            <input type="text" id="number1" class="mdl-textfield__input">
+                                            <input type="text" id="number1" maxlength="20" class="mdl-textfield__input">
                                         </div>                        
                                     </div>
                                 </div>
