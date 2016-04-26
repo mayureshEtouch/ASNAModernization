@@ -161,7 +161,7 @@
              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
              var dataMergeIndices = [[0], [1], [2]];
              generateTableAndApplyInfiniteScroll("products", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-             $("#product_category").ForceNumericOnly();
+             $("#product_category").ForceNumericWithQuestionMarkOnly();
 
              var selectCusotmer = function (row, value, event) {
                  var selectId = $(row).data('selectid');
