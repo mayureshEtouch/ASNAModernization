@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -66,7 +67,7 @@
                               <span class="form-label">Address Type:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col" style="margin:0">
-                              <span class="form-text"><input id="CenPH__lb_RCDDTL1__lb_1CGC_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="3"  data-tb-index="1"/></span>
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1CGC_lb_new"><!-- <input id="CenPH__lb_RCDDTL1__lb_1CGC_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="3"  data-tb-index="1"/> --></span>
                           </div>
                     </div>
                   </div>
@@ -605,7 +606,7 @@
                     
                 },
                 "inputFields": {
-                    "CenPH__lb_RCDDTL1__lb_1CGC_lb_": "CenPH__lb_RCDDTL1__lb_1CGC_lb_new",
+                   //"CenPH__lb_RCDDTL1__lb_1CGC_lb_": "CenPH__lb_RCDDTL1__lb_1CGC_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1P5N_lb_": "CenPH__lb_RCDDTL1__lb_1P5N_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1JZXT": "CenPH__lb_RCDDTL1__lb_1JZXT_new",
                     "CenPH__lb_RCDDTL1__lb_1P3N_lb_": "CenPH__lb_RCDDTL1__lb_1P3N_lb_new",
@@ -617,6 +618,7 @@
             $(document).ready(function(){
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#CenPH__lb_RCDDTL1__lb_1CGC_lb_new").append($("#CenPH__lb_RCDDTL1__lb_1CGC_lb_"));
               $('.close-icon').click(function (event) {
                     _00("F12", event);
                 });
@@ -626,7 +628,7 @@
               $('#exit').click(function (event) {
                     _00("F3", event);
                 });
-                if($(".simplePopupClose").length > 0) {
+              if($(".simplePopupClose").length > 0) {
                      $(".simplePopupBackground1").show();
                } else {
                    $(".simplePopupBackground1").hide();
@@ -642,7 +644,9 @@
            #__Page_PopUp {
             min-width: 450px !important;
             width: 40% !important;
-            left: 30% !important;
+            left: 50% !important;
+            margin-left: -225px;
+                margin-top: 72px !important;
             }
             #__Page_PopUp > tr:first-child {
               display: none;
@@ -662,11 +666,18 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 700px !important;
+                height: 100% !important;
             }
             .simplePopup {
               left: 28% !important;
-              top: 30% !important;
+              top: 50% !important;
             }
+           #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
+            text-transform: uppercase;
+            position: absolute;
+            left: 109px !important;
+            top: 20px !important;
+            width: 85px !important;
+           }
         </style>
     </asp:Content>
