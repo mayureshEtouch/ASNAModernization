@@ -19,20 +19,29 @@
         }
 
 
-        #AsnaTermStatusBar {
+         #AsnaTermStatusBar {
             background-color: #000 !important;
         }
 
         #AsnaTermCursor {
             width: 1px !important;
-            margin: 0px 0px 0px -10px !important;
-            background-color: #ffffff !important;
+			margin: 20px 0 0 -10px !important;
+			padding-top: 15px !important;
+			height: 12px !important;
+			
         }
-
         #r05c052 pre {
             margin-left: 0 !important;
         }
-
+		#r05c052, #r06c052, #r07c052, #r08c052, #r09c052 {
+			height: 35px !important;
+		}
+		#r05c052, #r05c052 pre, #r06c052, #r06c052 pre, #r07c052, #r07c052 pre, #r08c052, #r08c052 pre, #r09c052, #r09c052 pre  {
+			margin-top: 10px !important;
+		}
+		#r05c016, #r06c016, #r07c016, #r08c016, #r09c016 {
+			margin-top: 20px !important;
+		}
         .AsnaTermFldTouchableMask, #AsnaTermSliderRow {
             background-color: black;
             border: none;
@@ -41,9 +50,6 @@
 @media all and (device-width: 768px) and (orientation:portrait) {
     body {
         background: #000;
-    }
-    #AsnaTermCursor {
-        margin: 0px 0px 0px -20px !important;
     }
     #AsnaTermFacade {
         height: 100% !important;
@@ -60,7 +66,18 @@
     [data-asna-len="8"] {
         left: 69.5% !important;
     }
-   
+   #AsnaTermCursor {
+        margin: 20px 0px 0px -20px !important;
+    }
+}
+.safari-cursor {
+	margin: 20px 0px 0px -10px !important;
+}
+@media all and (device-width: 768px) and (orientation:portrait) {
+
+.safari-cursor {
+        margin-left: 20px !important;
+    }
 }
 
 </style>
@@ -73,6 +90,15 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+    $( "div[data-asna-len]" ).on('click touchstart focus touchend',function(e) {
+        /*console.log($(this).attr("id"));
+        var mycss = $(this).attr("style").split(";");
+        var topPos = mycss[4].split(":")[1];
+        var myStyle = $("#AsnaTermCursor").attr("style") + "top:" + topPos-10 + " !important";
+        $("#AsnaTermCursor").attr("style", myStyle);*/
+		
+		
+    });
     //$("#AsnaTermCursor").remove();
     $("#AsnaTerm5250 div pre").each(function(){
         //console.log($(this).text());
@@ -93,7 +119,14 @@ $("#AsnaTerm5250 div pre").each(function(){
         //$('<input type="text" value="xyz">').prependTo($(this));
     }
 });
+//$("#AsnaTermCursor").css({"top":($("#r05c052").position().top+10+"!important"), "left":$("#r05c052").position().left, "width": "5px !important" }).children().text().trim();
 })
+
+var is_safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+if (is_safari) {	
+	$("#AsnaTermCursor").addClass("safari-cursor");
+};
+
 WingsTerminal.Render(function () {
         var browserWidth = $(window).width();
 
