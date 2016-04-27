@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CCD0DFR_lb_.aspx.cs" Inherits="conns.CCD0DFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 4/19/2016 at 8:43 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -22,7 +22,149 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+      <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Product Category</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCD0DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">24th October 2015</span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Account</span>
+                            <div class="summary-txt">
+                                <span id="CenPH_DdsConstant4_new"></span>
+                            </div>
+                        </div>
+                        <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Customer Name </span>
+                            <span id="CenPH_PALTX" class="summary-txt"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Billing Address</span>
+                            <div class="summary-txt" data-upgraded=",MaterialTextfield">
+                                <span id="CenPH_PANTX"></span><span id="CenPH_PAOTX"></span>
+                                <br />
+                                <span id="CenPH_PAQTX"></span>
+                                <span id="CenPH_PADST"></span>
+                                <span id="CenPH_PAPTX"></span>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Phone Details</span>
+                            <div class="summary-txt" data-upgraded=",MaterialTextfield">
+                                <span id="Hphone">HOME:</span>
+                                <span id="CenPH_CHPH_lb_"></span>
+                                <br />
+                                <span id="Wphone">WORK:</span>
+                                <span id="CenPH_CWPH_lb_"></span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                           
+                            <span class="summary-txt" name="order" id="CenPH_DdsConstant4_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            
+                            <span class="summary-txt" name="version" id="CenPH__lb_SFLCTL__lb_2REF_lb_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                           
+                            <span class="summary-txt" name="username" id="CenPH__lb_SFLCTL__lb_2CENB_new"></span>CenPH__lb_SFLCTL__lb_CWZTX
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            
+                            <span class="summary-txt" name="username" id="CenPH__lb_SFLCTL__lb_CWZTX_new"></span>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                                <span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="productcategory" data-upgraded=",MaterialDataTable">
+                 <thead>
+                <tr>
+                 <th><!-- <div class="th-inner"> -->Type<!-- </div> --></th>
+                 <th><!-- <div class="th-inner"> -->Loaded<!-- </div> --></th>
+                 <th><!-- <div class="th-inner"> -->Reference #<!-- </div> --></th>
+                 <th><!-- <div class="th-inner"> -->Reference $<!-- </div> --></th>
+                 <th><!-- <div class="th-inner"> -->Information<!-- </div> --></th>
+                </tr>
+               </thead>
+               <tbody>
+               </tbody>
+              </table>
+                   <!--  <a class="next-icon" style="float: right;margin-right: 15px;" id="next-page" href="javascript:void(0);"></a> -->
+                </div>
+                                
+                 <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span></div>
+                        <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+         
+        <div id="modal" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  CR: DSP Cust Acct Extnsn  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -2217,4 +2359,47 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant11": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2REF_lb_+CenPH__lb_SFLCTL__lb_2CENB+CenPH__lb_SFLCTL__lb_CWZTX": "CenPH_DdsConstant4_new"
+                },
+                "inputFields": {
+                   
+                }
+            }
+            $(document).ready(function(){
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("body").css({ "background-color": "#FFFFFF" });
+            $('body').on('click', '#productcategory tbody tr', function () {
+                $("#productcategory tbody tr:even").css("background-color", "#fff");
+                $("#productcategory tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#productcategory tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+            var dataMergeIndices = [[0], [1], [2], [3], [4]];
+            generateTableAndApplyInfiniteScroll("productcategory", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+            $("#productcategory tbody tr:first").css("background-color", "#d8d8d8");
+            $('#exit').click(function (event) {
+                    _00("F3", event);
+                });
+            $("#time").html("&nbsp;" + $("#time").html())
+            var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            //Display customer details
+            $(".display-customer").click(function (event) {
+                var row = $("#productcategory tbody tr.selected");
+                selectCusotmer(row, "5", event);
+            });
+            });
+       </script>
     </asp:Content>

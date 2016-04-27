@@ -1400,6 +1400,15 @@ body div, body span, body textarea {
 	background: url('../Images/arrow-right.png') no-repeat;
 }
 
+/* New classes 13 April 2016 starts here */
+.display-po-details-icon {
+	background: url(../Images/icons/ic_assignment_black_24dp_1x.png) no-repeat;
+}
+.display-po-details-icon-disabled {
+	background: url(../Images/icons/ic_assignment_black_24dp_1x-disable.png) no-repeat;
+}
+
+/* New classes 13 April 2016 starts here */
 
 /* Media queries starts here */
 

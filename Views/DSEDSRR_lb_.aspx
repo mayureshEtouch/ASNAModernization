@@ -74,7 +74,7 @@
                                             <span class="summary-table-title pull-right">Model Number</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--10-col" id="filter-by-product-category">
-                                            <input type="text" id="number1" class="mdl-textfield__input">
+                                            <input type="text" id="number1" maxlength="20" class="mdl-textfield__input">
                                         </div>                        
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
 												</div>
 										</div>
 								</div>

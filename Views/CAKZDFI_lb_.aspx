@@ -1,10 +1,20 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CAKZDFI_lb_.aspx.cs" Inherits="conns.CAKZDFI_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 4/19/2016 at 8:38 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNA3SRC, file QDDSSRC, member CAKZDFI# --%>
-
+	<link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +32,189 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+         <header class="mdl-layout__header">
+                        <div class="mdl-layout__header-row"> 
+                                <!-- Title --> 
+                                 <span class="mdl-layout-title logo-icon"></span>
+                                <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                                <div class="mdl-layout-spacer"></div>
+                                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                        </div>
+                </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Select Add-on Account</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CAKZDFI</span>
+                        </div>
+                    </div>
+                </section>
+				
+				<section class="order-summary">
+                <div class="order-summary-wrapper" style="margin-top:18px;">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col">
+                            <span class="summary-title">Application :</span>
+                            <span id="application" class="summary-txt"></span>
+                        </div>
+                     
+                        
+                    </div>
+            	</div>
+            </section>
+         
+		   <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+								<!--<span class="icon-txt select-account" >Select</span><i class="material-icons md-15 md-light change-icon change-customer change-icon"></i>-->
+								<span class="icon-txt deselect-account">DeSelect</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+								<span class="icon-txt display-account">Account</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			
+          <section class="table-data-content-container spacer-container-bottom">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container" style="overflow: auto;" style="width:auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="displayData">
+                            <thead>
+                              <tr>
+                                <th>S</th>
+                                <th>OV</th>
+                                <th>Reference</th>
+								<th>TT</th>
+								<th>Cmp</th>
+								<th>CO</th>
+								<th>Pmt</th>
+								<th>Mde</th>
+								<th>Balance $</th>
+								<th>Pay-off $</th>
+                              </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
+																							
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" >next</span>
+												</div>
+										</div>
+					</div>
+                </div>
+            </div>
+        </section>
+            </main>
+    <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+	   
+        <style>
+        #__Page_Hidden{
+            min-height: 800px !important;
+			height: 100% !important;
+        }
+        #__Page_PopUp {
+          width: 650px !important;
+		  left: 50% !important;
+		  margin-left: -325px !important;
+		 
+        }
+        #__Page_PopUp > tr:first-child {
+         display: none;
+        }
+        #__Page_PopUp .DdsInlinePopUpTitle {
+         height: 0;
+        }
+        .modal-dialog-container, #main-content {
+          width: 100% !important;
+        }
+        .modal-dialog-container {
+          margin: 0 auto;
+        }
+        .mdl-layout__content {
+          height: auto;
+          margin-bottom: 15px;
+        }
+         /* form class ends here */
+        tr.selected {
+            background-color: #f1f1f1;
+        }
+        .simplePopup {
+            left: 28% !important;
+            top: 40% !important;
+			
+          }
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function () {
+				
+				
+			$("#application").text($("#CenPH__lb_SFLCTL__lb_2ITNB").text());
+		
+                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
+			
+            generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+			
+			
+			var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            //Display customer details
+            $(".select-account").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "1", event);
+                }
+            });
+            //Change customer details
+            $(".deselect-account").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "4", event);
+                }
+            });
+			
+			 $(".display-account").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+            });
+			
+			if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+				  
+                });
+          });
+        </script>
+        <div id="Div1" style="display:none;">
             
       <%--  CA: DSP Sel Addon Cntrcts Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

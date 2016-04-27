@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSLRPVR_lb_.aspx.cs" Inherits="conns.DSLRPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 3/21/2016 at 5:35 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -22,7 +22,155 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+       <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Employee Profile</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSLRPVR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+					<section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Company :</span>
+                            <span id="company" class="summary-txt"></span>
+                        </div>
+						
+						<div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Location :</span>
+                            <span id="location" class="summary-txt"></span>
+                        </div>
+                     
+                        
+                    </div>
+            	</div>
+            </section>
+            
+            <section class="add-item">
+               
+            </section>
+				<section class="form-data">
+                <div class="form-data-wrapper" style="padding-bottom:0;">
+				<div class="content-grid mdl-grid">
+				  <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                        	<div class="mdl-cell mdl-cell--2-col" style="margin:0">
+                           		<span class="form-label" style="margin: 7px 10px 0 0">Profile :</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                           		<span class="form-text"><input type="text" tabindex="3" id="profile" maxlength="10" class="mdl-textfield__input" size="15"/></span>
+                        	</div>
+
+                   	</div>
+					
+					 <div class="content-grid mdl-grid">
+                        	<div class="mdl-cell mdl-cell--2-col" style="margin:0">
+                           		<span class="form-label" style="margin: 7px 10px 0 0">Password :</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                           		<span class="form-text"><input type="password" tabindex="4" maxlength="10" id="password" class="mdl-textfield__input" size="15"/></span>
+                        	</div>
+
+                   	</div>
+                  </div>
+                  <div class="mdl-cell mdl-cell--12-col" style="padding:0"></div>
+				</div>
+				<div class="button-container" style="padding-bottom: 5px;">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
+						</div>
+					</div>
+				</div>
+		  </div>
+            </section>
+		
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+ <style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+
+</style>
+
+<script type="text/javascript">
+var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1ABCD": "company",
+					 "CenPH__lb_RCDDTL1__lb_1AACD":"location",
+					  "CenPH__lb_RCDDTL1__lb__lb_TME":"time"
+
+                },
+                "inputFields": {
+					"CenPH__lb_RCDDTL1__lb_1N9CD":"profile",
+					"CenPH__lb_RCDDTL1__lb_1Q2TX":"password"
+                }
+            }
+			
+  $(document).ready(function() {
+		copyData(copyToAndFrom, "");
+		
+		 
+		$('body').on('keyup change', '#profile', function (event) {
+		  $('#CenPH__lb_RCDDTL1__lb_1N9CD').val($(this).val());
+		}); 
+		 
+		$('body').on('focus', '#profile', function (event) {
+		  $('#CenPH__lb_RCDDTL1__lb_1N9CD').val($(this).val());
+		 _09('#1N9CD','10,11','#RCDDTL1');
+		}); 
+
+			
+		$('#profile').val($('#CenPH__lb_RCDDTL1__lb_1N9CD').val());
+		
+		
+		
+		$('body').on('keyup change', '#password', function (event) {
+		  $('#CenPH__lb_RCDDTL1__lb_1Q2TX').val($(this).val());
+		}); 
+		 
+		$('body').on('focus', '#password', function (event) {
+		  $('#CenPH__lb_RCDDTL1__lb_1Q2TX').val($(this).val());
+		 _09('#1N9CD','10,11','#RCDDTL1');
+		}); 
+
+			
+		$('#password').val($('#CenPH__lb_RCDDTL1__lb_1Q2TX').val());
+		 
+		  
+   });
+</script>
+	   
+        <div id="Div1" style="display:none">
             
       <%--  WH: PMT for User          Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -269,13 +417,15 @@
               CssClass="DdsCharField"
               Length="10" 
               Alias="#1Q2TX" 
-              VisibleCondition="*False"
+              VisibleCondition="*True"
+	      InputStyle="Password"
               Usage="Both" 
               VirtualRowCol="12,11" 
               PositionCursor="34" 
               TabIndex="4"  />
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 100px; top: 267px;"
+	      VisibleCondition="*False"
               Text=".........." 
               CssClass="DdsConstant"
  />

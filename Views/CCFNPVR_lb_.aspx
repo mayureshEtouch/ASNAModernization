@@ -358,6 +358,9 @@
          left: 30% !important;
          top: 40% !important;
      }
+     #__Page_PopUp #wrapper {
+          padding-bottom: 25px;
+     }
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {
@@ -367,8 +370,8 @@
             };
             $(document).ready(function () {
               copyData(copyToAndFrom, "");
+              $("#select_prompt").val($("#CenPH__lb_RCDDTL1__lb_PQ1ST").val());
               $("#select_prompt").on('change',function(){
-                console.log($(this).val());
                 $("#CenPH__lb_RCDDTL1__lb_PQ1ST").val($(this).val())
               })
                 
