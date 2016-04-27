@@ -38,7 +38,7 @@
                                  <span class="mdl-layout-title logo-icon"></span>
                                 <!--<span class="mdl-layout-heading">StoreFront</span>--> 
                                 <div class="mdl-layout-spacer"></div>
-                                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                                <span class="close-icon"  event-data="F12"><i class="material-icons md-15 close"></i></span>
                         </div>
                 </header>
             <main class="mdl-layout__content">
@@ -56,7 +56,7 @@
                 </section>
 				
 				<section class="order-summary">
-                <div class="order-summary-wrapper">
+                <div class="order-summary-wrapper" style="margin-top:18px;">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col">
                             <span class="summary-title">Application :</span>
@@ -73,7 +73,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
                             <div class="icon-container">
-								<span class="icon-txt select-account">Select</span><i class="material-icons md-15 md-light change-icon change-customer change-icon"></i>
+								<!--<span class="icon-txt select-account" >Select</span><i class="material-icons md-15 md-light change-icon change-customer change-icon"></i>-->
 								<span class="icon-txt deselect-account">DeSelect</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
 								<span class="icon-txt display-account">Account</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
 							</div>
@@ -110,7 +110,7 @@
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
 																							
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" >next</span>
 												</div>
 										</div>
 					</div>
@@ -118,12 +118,13 @@
             </div>
         </section>
             </main>
-    <div class="simplePopupBackground1" style="display: none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div>
+	   
         <style>
         #__Page_Hidden{
             min-height: 800px !important;
-			height: 100% !important;
+			height: 1000px !important;
         }
         #__Page_PopUp {
           width: 650px !important;
@@ -179,7 +180,7 @@
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the customer");
                 } else {
-                    var row = $("#customerName tbody tr.selected");
+                    var row = $("#displayData tbody tr.selected");
                     selectCusotmer(row, "1", event);
                 }
             });
@@ -188,7 +189,7 @@
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the customer");
                 } else {
-                    var row = $("#customerName tbody tr.selected");
+                    var row = $("#displayData tbody tr.selected");
                     selectCusotmer(row, "4", event);
                 }
             });
@@ -197,11 +198,20 @@
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the customer");
                 } else {
-                    var row = $("#customerName tbody tr.selected");
+                    var row = $("#displayData tbody tr.selected");
                     selectCusotmer(row, "5", event);
                 }
             });
 			
+			if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+				  
+                });
           });
         </script>
         <div id="Div1" style="display:none;">

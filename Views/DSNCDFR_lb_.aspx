@@ -90,13 +90,13 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Company</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col" id="filter-by-co">
-                                            <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1">
+                                            <input type="text" id="number1" maxlength="3"  class="mdl-textfield__input" data-tb-index="1">
                                         </div> 
 																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Location</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col" id="filter-by-co">
-                                            <input type="text" id="number2" class="mdl-textfield__input" data-tb-index="2">
+                                            <input type="text" id="number2" maxlength="3"  class="mdl-textfield__input" data-tb-index="2">
                                         </div>
 																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Total Avail</span>

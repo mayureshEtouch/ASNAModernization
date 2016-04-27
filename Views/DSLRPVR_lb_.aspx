@@ -87,7 +87,7 @@
                            		<span class="form-label" style="margin: 7px 10px 0 0">Profile :</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                           		<span class="form-text"><input type="text" id="profile" class="mdl-textfield__input" size="15"/></span>
+                           		<span class="form-text"><input type="text" tabindex="3" id="profile" maxlength="10" class="mdl-textfield__input" size="15"/></span>
                         	</div>
 
                    	</div>
@@ -97,7 +97,7 @@
                            		<span class="form-label" style="margin: 7px 10px 0 0">Password :</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                           		<span class="form-text"><input type="password" id="password" class="mdl-textfield__input" size="15"/></span>
+                           		<span class="form-text"><input type="password" tabindex="4" maxlength="10" id="password" class="mdl-textfield__input" size="15"/></span>
                         	</div>
 
                    	</div>

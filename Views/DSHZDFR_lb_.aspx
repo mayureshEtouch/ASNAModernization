@@ -34,8 +34,8 @@
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSHZDFR</span>
-                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -72,7 +72,7 @@
                                         <span class="summary-table-title pull-right">Model Number</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col" id="filter-by-co">
-                                        <input type="text" id="modelNumber" class="mdl-textfield__input" value="P08S" data-tb-index="1">
+                                        <input type="text" id="modelNumber" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span class="summary-table-title pull-right">Status</span>
@@ -146,7 +146,7 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display:none;">
+    <div id="Div1" style="display: none;">
 
         <%--  IN: DSP Inv by Model      Display file                                          --%>
         <%--  CRTDSPF                                                                         --%>
@@ -531,18 +531,22 @@
         var old_fields = ['#CenPH__lb_SFLCTL__lb_2APST'];
         var new_fields = ['#status'];
         /*Filling up text for modern screen fields*/
+        var counter = true;
         for (var i = 0; i < old_fields.length; i++) {
+           
             if ($(new_fields[i]) && $(new_fields[i]).is('input')) {
                 $(new_fields[i]).val($.trim($(old_fields[i]).val()) || $.trim($(old_fields[i]).text()));
             }
             else if ($(new_fields[i]) && $(new_fields[i]).is('span')) {
                 $(new_fields[i]).text($.trim($(old_fields[i]).text()));
             } else if ($(new_fields[i]) && $(new_fields[i]).is('select')) {
+                console.log("hello");
                 if ($(old_fields[i]).is('select')) {
                     var $options = $(old_fields[i] + " > option").clone().map(function (index) {
                         if ($(this).val() != '?') {
                             if ($(this).val().trim() == "") {
-                                $(this).val(" ").text("Please Choose");
+                               
+                                    $(this).val(" ").text("Please Choose");
                             }
                             return this;
                         }
@@ -551,8 +555,10 @@
                     var $options = '<option value="' + $.trim($(old_fields[i]).text()) + '">' + $.trim($(old_fields[i]).text()) + '</option>';
                 }
                 $(new_fields[i]).append($options);
+                $("#status option[value=' ']").insertBefore("#status  option:eq( 0 )");
             }
         };
+       
 
 
         $('body').on('keyup change', '#modelNumber', function (event) {
