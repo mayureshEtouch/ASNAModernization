@@ -121,7 +121,7 @@
                                   <div class="mdl-cell mdl-cell--4-col">
                                     <div class="content-grid mdl-grid">
                                 <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Balance:</span> </div>
-                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" id="balance" maxlength="7" size="10" data-tb-index="4"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" class="mdl-textfield__input" id="balance" maxlength="8" size="10" data-tb-index="4"/></span> </div>
                             </div>
                                   </div>
                                   <!-- 4 col ends here -->
@@ -157,7 +157,7 @@
                                   <div class="mdl-cell mdl-cell--4-col">
                                     <div class="content-grid mdl-grid">
                                 <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Down Payment:</span> </div>
-                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="down_payment" maxlength="9" class="mdl-textfield__input" size="10" data-tb-index="9"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="down_payment" maxlength="10" class="mdl-textfield__input" size="10" data-tb-index="9"/></span> </div>
                             </div>
                                   </div>
                                   <!-- 4 col ends here -->
@@ -252,35 +252,35 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td><input type="text" id="cat_1" maxlength="3" size="2" value="" class="f4" onfocus="_09('#1PRDC','16,4','#RCDDTL1');"/></td>
-                                <td><input type="text" id="mod_no_1" maxlength="20" value=""  class="f4" onfocus="_09('#DA6TX','16,8','#RCDDTL1');"/></td>
-                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_1" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="value_1" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="maint_1" value="" /></td>
+                                <td><input type="text" id="cat_1" maxlength="3" size="2" value="" class="f4" onfocus="_09('#1PRDC','16,4','#RCDDTL1');" data-tb-index="12"/></td>
+                                <td><input type="text" id="mod_no_1" maxlength="20" value=""  class="f4" onfocus="_09('#DA6TX','16,8','#RCDDTL1');" data-tb-index="13"/></td>
+                                <td class=""><input maxlength="3" size="2" type="text" id="quantity_1" value="" data-tb-index="14" /></td>
+                                <td class=""><input maxlength="9" type="text" id="value_1" value="" data-tb-index="15" /></td>
+                                <td class=""><input maxlength="9" type="text" id="maint_1" value="" data-tb-index="16" /></td>
                                 <td class="pull-right"><span id="total_1"></span></td>
                               </tr> 
                               <tr>
-                                <td><input type="text" id="cat_2" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAWCO','17,4','#RCDDTL1');"/></td>
-                                <td><input type="text" id="mod_no_2" maxlength="20" value=""  class="f4" onfocus="_09('#DUPTX','17,8','#RCDDTL1');"/></td>
-                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_2" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="value_2" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="maint_2" value="" /></td>
+                                <td><input type="text" id="cat_2" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAWCO','17,4','#RCDDTL1');" data-tb-index="17"/></td>
+                                <td><input type="text" id="mod_no_2" maxlength="20" value=""  class="f4" onfocus="_09('#DUPTX','17,8','#RCDDTL1');" data-tb-index="18"/></td>
+                                <td class=""><input maxlength="3" size="2" type="text" id="quantity_2" value="" data-tb-index="19" /></td>
+                                <td class=""><input maxlength="9" type="text" id="value_2" value="" data-tb-index="20" /></td>
+                                <td class=""><input maxlength="9" type="text" id="maint_2" value="" data-tb-index="21" /></td>
                                 <td class="pull-right"><span id="total_2"></span></td>
                               </tr> 
                               <tr>
-                                <td><input type="text" id="cat_3" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAXCO','18,4','#RCDDTL1');"/></td>
-                                <td><input type="text" id="mod_no_3" maxlength="20" value=""  class="f4" onfocus="_09('#DUQTX','18,8','#RCDDTL1');"/></td>
-                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_3" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="value_3" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="maint_3" value="" /></td>
+                                <td><input type="text" id="cat_3" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAXCO','18,4','#RCDDTL1');" data-tb-index="22"/></td>
+                                <td><input type="text" id="mod_no_3" maxlength="20" value=""  class="f4" onfocus="_09('#DUQTX','18,8','#RCDDTL1');" data-tb-index="23"/></td>
+                                <td class=""><input maxlength="3" size="2" type="text" id="quantity_3" value=""  data-tb-index="24"/></td>
+                                <td class=""><input maxlength="9" type="text" id="value_3" value=""  data-tb-index="25"/></td>
+                                <td class=""><input maxlength="9" type="text" id="maint_3" value=""  data-tb-index="26"/></td>
                                 <td class="pull-right"><span id="total_3"></span></td>
                               </tr> 
                               <tr>
-                                <td><input type="text" id="cat_4" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAYCO','19,4','#RCDDTL1');"/></td>
-                                <td><input type="text" id="mod_no_4" maxlength="20" value=""  class="f4" onfocus="_09('#DURTX','19,8','#RCDDTL1');"/></td>
-                                <td class="pull-right"><input maxlength="3" size="2" type="text" id="quantity_4" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="value_4" value="" /></td>
-                                <td class="pull-right"><input maxlength="9" type="text" id="maint_4" value="" /></td>
+                                <td><input type="text" id="cat_4" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAYCO','19,4','#RCDDTL1');" data-tb-index="27"/></td>
+                                <td><input type="text" id="mod_no_4" maxlength="20" value=""  class="f4" onfocus="_09('#DURTX','19,8','#RCDDTL1');" data-tb-index="28"/></td>
+                                <td class=""><input maxlength="3" size="2" type="text" id="quantity_4" value=""  data-tb-index="29"/></td>
+                                <td class=""><input maxlength="9" type="text" id="value_4" value="" data-tb-index="30" /></td>
+                                <td class=""><input maxlength="9" type="text" id="maint_4" value="" data-tb-index="31" /></td>
                                 <td class="pull-right"><span id="total_4"></span></td>
                               </tr> 
                               
@@ -291,13 +291,13 @@
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="13" event-data="F12">Previous</span>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="31" event-data="F12">Previous</span>
                             
                             </div>
                             <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop pull-right">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="14" event-data="F9">Get Customer</span>
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F4" data-tb-index="15">Prompt</span>
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter" data-tb-index="16">next</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="32" event-data="F9">Get Customer</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F4" data-tb-index="33">Prompt</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter" data-tb-index="34">next</span>
                             </div>
                         </div>
                     </div>
@@ -387,7 +387,8 @@
             var descriptions = ['Sales','Commercial','Builder'];
             makeSelectDescriptive("payment_methods",values,descriptions);*/
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-            $("#employee_id, #credit_account, #months").ForceNumericOnly();
+            $("#credit_account, #months").ForceNumericOnly();
+            //$("#employee_id").ForceAlphabetOnly();
             $("#balance, #down_payment").numericWithTwoDecimalPrecisions();
             if($("#CenPH__lb_RCDDTL1__lb_DCJVA").length==0){
               $("#lbl_with_payment_of").hide();
