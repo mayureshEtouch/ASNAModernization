@@ -38,7 +38,7 @@
                                  <span class="mdl-layout-title logo-icon"></span>
                                 <!--<span class="mdl-layout-heading">StoreFront</span>--> 
                                 <div class="mdl-layout-spacer"></div>
-                                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                                <span class="close-icon"  event-data="F12"><i class="material-icons md-15 close"></i></span>
                         </div>
                 </header>
             <main class="mdl-layout__content">
@@ -124,7 +124,7 @@
         <style>
         #__Page_Hidden{
             min-height: 800px !important;
-			height: 100% !important;
+			height: 1000px !important;
         }
         #__Page_PopUp {
           width: 650px !important;
