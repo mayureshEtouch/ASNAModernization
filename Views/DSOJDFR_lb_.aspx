@@ -114,7 +114,7 @@
 
         </main>
  <div id="modal1" class="simplePopup"></div>
-        <div id="Div1" style="display: none;">
+        <div id="Div1" style="display:none;">
             
       <%--  IN: DSP Expected PO       Display file                                          --%>
       <%--  CRTDSPF                                                                         --%>
@@ -771,7 +771,7 @@
                 "displayOnlyFields": {
                     "CenPH_DdsConstant14": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
-                    "CenPH__lb_SFLCTL__lb_2AXTX": "modelno",
+                    "CenPH__lb_SFLCTL__lb_2AXTX+CenPH__lb_SFLCTL__lb_CFJTX": "modelno",
                     "CenPH__lb_SFLCTL__lb_2AXCD+CenPH__lb_SFLCTL__lb_CFATX": "prdCategory",
                     "CenPH__lb_SFLCTL__lb_PBLNB": "vendor"
                 }

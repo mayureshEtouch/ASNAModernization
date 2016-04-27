@@ -22,7 +22,156 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+             <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <main class="mdl-layout__content">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <!-- Title -->
+                    <span class="heading-h1">Display Customer Accounts</span>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <!-- Navigation -->
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCGZDFR</span>
+                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time">19:00:20</span>
+                </div>
+            </div>
+        </section>
+        <section class="progress-bar">
+            <div class="progress-bar-wrapper">
+                <ul class="progress-bar-main">
+                    <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                    <li class="progress-bar-divider-first">
+
+                    <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                    <li class="progress-bar-divider">
+
+                    <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                    <li class="progress-bar-divider">
+
+                    <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                    <li class="progress-bar-divider">
+
+                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                </ul>
+            </div>
+        </section>
+        <section class="table-data-content-container filter-field-container">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container filter-search-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                <span class="summary-table-title">Filter by:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--10-col search-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--2-col" style="width: 80px;">
+                                        <span class="summary-table-title pull-right">Account</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--2-col" id="filter-by-co">
+                                        <input type="text" id="account" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col" style="width: 80px;">
+                                        <span class="summary-table-title pull-right">Ex</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
+                                        <input type="text" id="txtex" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="10">
+                                    </div>
+                                     <div class="mdl-cell mdl-cell--1-col">
+                                        <span class="summary-table-title pull-right" id="lbladd"></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--3-col">
+                                        <span class="summary-table-title pull-right">Home Phone:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--1-col">
+                                        <span class="summary-table-title pull-right" id="lblPhone"></span>
+                                    </div>
+                                   <%-- <div class="mdl-cell mdl-cell--4-col" id="filter-by-co">
+                                        <%--<input type="text" id="status" class="mdl-textfield__input" data-tb-index="2">--%>
+                                        <%--<select name="status" id="status" data-tb-index="2" style="margin: 2%"></select>
+                                    </div>--%>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                <div class="button-container">
+                                    <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="add-item">
+            <div class="add-item-wrapper">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col pull-right">
+                        <div class="icon-container">
+                           <%-- <span class="icon-txt display-select-details">Select</span><i class="material-icons md-15 md-light reserve-icon"></i>--%>
+                            <span class="icon-txt display-customer">Customer</span><i class="material-icons md-15 md-light customer-icon"></i>
+                            <span class="icon-txt display-links-details">Links</span><i class="material-icons md-15 md-light link-icon"></i>
+                            <span class="icon-txt display-insurance-details">Insurance</span><i class="material-icons md-15 md-light insurance-icon"></i>
+                            <span class="icon-txt display-payments-details">Payments</span><i class="material-icons md-15 md-light payments-icon"></i>
+                            <span class="icon-txt display-notes-details">Notes</span><i class="material-icons md-15 md-light notes-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="table-data-content-container spacer-container-bottom">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div style="overflow: auto;" class="table-container">
+                        <div>
+                            <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblCstAcc" data-upgraded=",MaterialDataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Account</th>
+                                        <th>Ex</th>
+                                        <th>Bank</th>
+                                        <th>Opn/LChg</th>
+                                        <th>Lpmt/Due</th>
+                                        <th>Term</th>
+                                        <th>#PD</th>
+                                        <th>Payment</th>
+                                        <th>Org/Bal</th>
+                                        <th>S</th>
+                                        <th>I</th>
+                                        <th>B</th>
+                                        <th>30</th>
+                                        <th>60</th>
+                                        <th>90</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <a class="next-icon" style="float: right; margin-right: 15px;" id="next-page" href="javascript:void(0);"></a>
+                        </div>
+
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <div id="modal1" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+
+        <div id="Div1" style="display: none;">
             
       <%--  CR: DSP Acct for Cust-Pub Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -2304,4 +2453,119 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant17": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_CA2TX": "lbladd",
+                    "CenPH__lb_SFLCTL__lb_CBXNB": "lblPhone"
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2REF_lb_": "account",
+                    "CenPH__lb_SFLCTL__lb_2CENB": "txtex"
+                }
+            }
+
+
+            $('body').on('keyup change', '#account', function (event) {
+                $('#CenPH__lb_SFLCTL__lb_2REF_lb_').val($(this).val());
+            });
+            // search box one keyup trigger 
+            $('body').on('focus', '#account', function (event) {
+                $('#CenPH__lb_SFLCTL__lb_2REF_lb_').val($(this).val());
+                _09('#2REF#', '4,3', '#SFLCTL');
+            });
+            $('#account').val($('#CenPH__lb_SFLCTL__lb_2REF_lb_').val());
+
+
+
+
+            $('body').on('keyup change', '#txtex', function (event) {
+                $('#CenPH__lb_SFLCTL__lb_2CENB').val($(this).val());
+            });
+            $('body').on('focus', '#txtex', function (event) {
+                $('#CenPH__lb_SFLCTL__lb_2CENB').val($(this).val());
+                _09('#2CENB', '4,14', '#SFLCTL');;
+            });
+            $('#txtex').val($('#CenPH__lb_SFLCTL__lb_2CENB').val());
+
+            $(document).ready(function () {
+                $('body').css({ "background-color": "white" });
+                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+                // display table for selected model number
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14]];
+                generateTableAndApplyInfiniteScroll("tblCstAcc", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                $("#next").click(function (event) {
+                    _00('Enter', event);
+                });
+                $("#search").click(function (event) {
+                    _00('Enter', event);
+                });
+
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    console.log("selectId " + selectId);
+                    a = selectId.split(".");
+                    console.log("a " + a);
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+                //Display Model details
+                //$(".display-select-details").click(function (event) {
+                //    if ($(".icon-container").hasClass("icon-disable")) {
+                //        alert("Please select the option");
+                //    } else {
+                //        var row = $("#tblCstAcc tbody tr.selected");
+                //        selectCusotmer(row, "1", event);
+                //    }
+                //});
+                $(".display-customer").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the option");
+                    } else {
+                        var row = $("#tblCstAcc tbody tr.selected");
+                        selectCusotmer(row, "5", event);
+                    }
+                });
+                $(".display-links-details").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the option");
+                    } else {
+                        var row = $("#tblCstAcc tbody tr.selected");
+                        selectCusotmer(row, "6", event);
+                    }
+                });
+                $(".display-insurance-details").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the option");
+                    } else {
+                        var row = $("#tblCstAcc tbody tr.selected");
+                        selectCusotmer(row, "7", event);
+                    }
+                });
+                $(".display-payments-details").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the option");
+                    } else {
+                        var row = $("#tblCstAcc tbody tr.selected");
+                        selectCusotmer(row, "8", event);
+                    }
+                });
+                $(".display-notes-details").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the option");
+                    } else {
+                        var row = $("#tblCstAcc tbody tr.selected");
+                        selectCusotmer(row, "9", event);
+                    }
+                });
+
+
+            });
+        </script>
     </asp:Content>
