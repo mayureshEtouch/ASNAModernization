@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DAW8DFR_lb_.aspx.cs" Inherits="conns.DAW8DFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 3/21/2016 at 6:05 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 4/27/2016 at 6:04 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DAW8DFR# --%>
 
     </asp:Content>
@@ -22,7 +22,199 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Order Details and Credits</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DAW8DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+						<section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Order Number</span>
+                            <span class="summary-txt" id="orderNumber"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Version Number</span>
+                            <span class="summary-txt" id="version" ></span>
+                        </div>
+						 <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Date</span>
+                            <span class="summary-txt" id="orderDate"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Location</span>
+                            <span class="summary-txt" id="location"></span>
+                        </div>
+						 
+                    </div>
+					<hr style="border-color: #c6c6c6; margin: 0px 0px; height: 1px;">
+					<div class="content-grid mdl-grid">   
+						  <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Customer Name</span>
+                            <span class="summary-txt" id="customerName"></span>
+                        </div>
+						<div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Address</span>
+                            <span class="summary-txt" id ="address"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">City</span>
+                            <span class="summary-txt" id="city"></span>
+                        </div>
+						 
+                    </div>
+            	</div>
+            </section>
+			
+			 <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+								
+								<span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			
+             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Version Number</th>
+														<th>Line</th>
+														<th>State</th>
+														<th>From</th>
+														<th>Quantity</th>
+														
+														<th>Model Number</th>
+														<th>Retail</th>
+														<th>Credit</th>
+														<th>W</th>
+														<th>P</th>
+														<th>CRC</th>
+													</tr>
+												</thead>
+												<tbody>
+																								
+												</tbody>
+										</table>
+										<a class="next-icon" style="float: right;margin-right: 15px;" id="next-page" href="javascript:void(0);"></a>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+<style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+
+</style>
+
+<script type="text/javascript">
+var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_2BANB": "orderNumber",
+					 "CenPH__lb_SFLCTL__lb_CFENB":"version",
+					
+					 "CenPH__lb_SFLCTL__lb_CCTCD+CenPH__lb_SFLCTL__lb_CASTX+CenPH__lb_SFLCTL__lb_CASTX":"location",
+					  "CenPH__lb_SFLCTL__lb_CALTX+CenPH__lb_SFLCTL__lb_CGBTX":"customerName",
+						"CenPH__lb_SFLCTL__lb_CANTX":"address",
+							"CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CADST+CenPH__lb_SFLCTL__lb_CAPTX":"city",
+							"CenPH_DdsConstant19":"date",
+							"CenPH__lb_SFLCTL__lb__lb_TME":"time"
+							
+                },
+                "inputFields": {
+                }
+            }
+			
+  $(document).ready(function() {
+		copyData(copyToAndFrom, "");
+		   var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+			 
+			  //Display customer details
+            $(".display-customer").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+            });
+			
+			 $("#orderDate").text($("ctl00\\$CenPH\\$_lb_SFLCTL_VCBMDT").html());
+			var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10]];
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLCTL", "NONE", "next", dataMergeIndices);
+		
+
+		   //Next button click handler
+            $("#next").click(function (event) {
+                var row = $("#displayData tbody tr.selected");
+                selectCusotmer(row, "1", event);
+            });
+		  
+   });
+</script>
+	   
+        <div id="Div1" style="display:none;">
             
       <%--  OE: DSP Models/Credits    Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -35,7 +227,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : COOL8                                                                                            --%>
-      <%--  Date          : 11/18/15  Time  : 06:48:12                                                                       --%>
+      <%--  Date          : 04/20/16  Time  : 08:28:19                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
