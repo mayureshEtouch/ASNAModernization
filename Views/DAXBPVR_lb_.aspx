@@ -68,7 +68,7 @@
                         <!-- 4 col starts here -->
                         <div class="mdl-cell mdl-cell--12-col">
                           <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--12-col"><span class="form-label" style="font-size: 15px;">Select Free Delivery OR a Free Item:</span></div>
+                            <div  class="mdl-cell mdl-cell--12-col"><span class="form-label" style="font-size: 15px;">Select Free Delivery OR a Free Item, and press Enter</span></div>
                             </div>
                         </div>
                         <!-- 4 col ends here -->

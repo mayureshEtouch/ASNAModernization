@@ -85,6 +85,10 @@
                             <span class="summary-title">Customer Name</span>
                             <span class="summary-txt" id="customerName"></span>
                         </div>
+						 <div class="mdl-cell mdl-cell--3-col">
+                            <span class="summary-title">Customer ID</span>
+                            <span class="summary-txt" id="customerId"></span>
+                        </div>
 						<div class="mdl-cell mdl-cell--3-col">
                             <span class="summary-title">Address</span>
                             <span class="summary-txt" id ="address"></span>
@@ -169,6 +173,7 @@ var copyToAndFrom = {
                     "CenPH__lb_SFLCTL__lb_2BANB": "orderNumber",
 					 "CenPH__lb_SFLCTL__lb_CFENB":"version",
 				  "CenPH__lb_SFLCTL__lb_CALTX+CenPH__lb_SFLCTL__lb_CGBTX+CenPH_DdsConstant24+CenPH__lb_SFLCTL__lb_CQ9ST+CenPH_DdsConstant26":"customerName",
+				  "CenPH__lb_SFLCTL__lb_CETNB":"customerId",
 						"CenPH__lb_SFLCTL__lb_CANTX":"address",
 							"CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CADST+CenPH__lb_SFLCTL__lb_CAPTX":"city",
 							"CenPH_DdsConstant19":"date",

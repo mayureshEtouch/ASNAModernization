@@ -117,6 +117,7 @@
                   <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
               </div>
           </div>
+		  <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     <!-- Modified HTML code ends here -->
 	
   <style>
@@ -178,24 +179,19 @@ var copyToAndFrom = {
 				
 			if($("#__Page_PopUp .simplePopupClose").length > 0) {
                $(".simplePopup").show();
+			    $(".simplePopupBackground1").show();
              } else {
                $(".simplePopup").hide();
+			   $(".simplePopupBackground1").hide();
              }
              $("body").on("click", ".simplePopupClose", function() {
                $(".simplePopup").hide();
+			   $(".simplePopupBackground1").hide();
 
              });
 				
 			 if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
-			 
-			 
-              copyData(copyToAndFrom, "");
-		 
-				var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
-				generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	 
-				
-               $(".confirmation-outer-conatiner").show();
-				
+			   $(".confirmation-outer-conatiner").show();
                $("#yes").click(function (event) {
                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                    // _00('Enter',event);
