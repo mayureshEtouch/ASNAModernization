@@ -4,7 +4,17 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 3/21/2016 at 5:26 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSSLDFR# --%>
-
+ <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,32 +32,34 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-	<div class="OverlayPopupBackground"></div>
-<div class="modal-dialog-container">
-		<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row"> 
-						<!-- Title --> 
-						 <span class="mdl-layout-title logo-icon"></span>
-						<!--<span class="mdl-layout-heading">StoreFront</span>--> 
-						<div class="mdl-layout-spacer"></div>
-						<span class="close-icon"><i class="material-icons md-15 close"></i></span>
-				</div>
-		</header>
-		<main class="mdl-layout__content">
-		<section class="time-date">
-				<div class="content-grid mdl-grid">
-						<div class="mdl-cell mdl-cell--9-col"> 
-								<!-- Title --> 
-								<span class="heading-h1">Display Order Line Credits</span> </div>
-						<div class="mdl-cell mdl-cell--3-col pull-right"> 
-								<!-- Navigation --> 
-								<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSSLDFR</span></div>
-				</div>
-		</section>
-		            <section class="order-summary">
-                <div class="order-summary-wrapper">
+	 <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title logo-icon"></span>
+                <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Order Line Credits</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSSLDFR</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="order-summary">
+                <div class="order-summary-wrapper" style="margin-top: 16px;">
+                    <%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-cell mdl-cell--6-col">
                             <span class="summary-title">Order</span>
                             <span class="summary-txt" id="orderNumber">6666666 666</span>
                         </div>
@@ -55,17 +67,18 @@
                             <span class="summary-title">Line</span>
                             <span class="summary-txt" id="orderLine"">666</span>
                         </div>
+
                     </div>
-            	</div>
+                </div>
             </section>
- <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+
+            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div style="overflow: auto;" class="table-container">
-                            <div>							  
-								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
-								 <thead>
-													<tr>
+                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="displayData">
+                                <thead>
+                                   	<tr>
 														<th>Code</th>
 														<th>Rsn</th>
 														<th>Amount</th>
@@ -76,38 +89,69 @@
 														<th>Date</th>
 														<th>Time</th>
 													</tr>
-												</thead>
-												<tbody>
-																									
-												</tbody>
-										</table>
-										<a id="next-page" class="next-icon" href="javascript:void(0);" style="float: right;margin-right: 15px;"></a>
-								</div>
-                                
-								<div class="button-container">
-										<div class="content-grid mdl-grid">
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span></div>
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Submit">Submit</span>
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-				</div>
-		</section>
-		
-		</main>
-		<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-        <div id="modal" class="simplePopup"></div>
-</div>
-<!-- Modified HTML code ends here -->
-<style>
-/* #Div1{display:block;} */
-#number2_toolTip{display: none;}
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
 
-</style>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+        
+    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+	
+ <style>
+        #__Page_PopUp {
+            min-width: 450px !important;
+            width: 450px !important;
+			left: 50% !important;
+			margin-left: -225px;
+        }
+		#__Page_PopUp > tr:first-child {
+			display: none;
+		}
+
+		#__Page_PopUp .DdsInlinePopUpTitle {
+			height: 0;
+		}
+        #displayData tbody tr td:last-child {
+            display: none;
+        }
+        .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+width: 100% !important;
+}
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 800px !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+    </style>
 
 <script type="text/javascript">
 var copyToAndFrom = {
@@ -125,7 +169,17 @@ var copyToAndFrom = {
 		 
 			var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
 			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLCTL", "NONE", "next", dataMergeIndices);
-		
+		 $('.close-icon').click(function (event) {
+                _00("F12", event);
+            });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
 		  
    });
 </script>

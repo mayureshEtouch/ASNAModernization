@@ -168,9 +168,7 @@ var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH__lb_SFLCTL__lb_2BANB": "orderNumber",
 					 "CenPH__lb_SFLCTL__lb_CFENB":"version",
-					
-					 "CenPH__lb_SFLCTL__lb_CCTCD+CenPH__lb_SFLCTL__lb_CASTX+CenPH__lb_SFLCTL__lb_CASTX":"location",
-					  "CenPH__lb_SFLCTL__lb_CALTX+CenPH__lb_SFLCTL__lb_CGBTX":"customerName",
+				  "CenPH__lb_SFLCTL__lb_CALTX+CenPH__lb_SFLCTL__lb_CGBTX+CenPH_DdsConstant24+CenPH__lb_SFLCTL__lb_CQ9ST+CenPH_DdsConstant26":"customerName",
 						"CenPH__lb_SFLCTL__lb_CANTX":"address",
 							"CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CADST+CenPH__lb_SFLCTL__lb_CAPTX":"city",
 							"CenPH_DdsConstant19":"date",
@@ -200,9 +198,11 @@ var copyToAndFrom = {
                 }
             });
 			
-			 $("#orderDate").text($("ctl00\\$CenPH\\$_lb_SFLCTL_VCBMDT").html());
+			 $("#location").text(($("#CenPH__lb_SFLCTL__lb_CCTCD").html())+"   "+($("#CenPH__lb_SFLCTL__lb_CASTX").html()));
+			 $("#orderDate").text($("#ctl00\\$CenPH\\$_lb_SFLCTL_VCBMDT").html());
+			
 			var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10]];
-			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLCTL", "NONE", "next", dataMergeIndices);
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 		
 
 		   //Next button click handler
@@ -214,7 +214,7 @@ var copyToAndFrom = {
    });
 </script>
 	   
-        <div id="Div1" style="display:none;">
+        <div id="Div1" >
             
       <%--  OE: DSP Models/Credits    Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
