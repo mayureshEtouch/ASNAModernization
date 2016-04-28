@@ -61,11 +61,11 @@
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col">
-                            <span class="summary-title">Customer name  :</span>
+                            <span class="summary-title">Customer Name:</span>
                             <span id="customerName" class="summary-txt"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col">
-                            <span class="summary-title">Order number . :</span>
+                            <span class="summary-title">Order Number:</span>
                             <span id="orderNumber" class="summary-txt"></span>
                         </div>
                         
