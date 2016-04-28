@@ -156,6 +156,7 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="contracts">Contracts</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
@@ -171,7 +172,7 @@
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
 
-        <div id="Div1" style="display: none;">
+        <div id="Div1" >
             
       <%--  CR: DSP Acct for Cust-Pub Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -2499,6 +2500,9 @@
           
                 $("#previous").click(function (event) {
                     _00('F12', event);
+                });
+                $("#contracts").click(function (event) {
+                    _00('F7', event);
                 });
                 $("#next").click(function (event) {
                     _00('Enter', event);
