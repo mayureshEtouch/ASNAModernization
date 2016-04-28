@@ -294,6 +294,7 @@
                  <thead>
                           <tr>
                             <th>Insurance</th>
+                            <th></th>
                             <th>Effective</th>
                             <th>Expiration</th>
                             <th>Canceled</th>
@@ -1582,7 +1583,7 @@
                 $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");
             });
-            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
+            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
             generateTableAndApplyInfiniteScroll("insuranceacc", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
             $("#insuranceacc tbody tr:first").css("background-color", "#d8d8d8");
             $('#exit').click(function (event) {
