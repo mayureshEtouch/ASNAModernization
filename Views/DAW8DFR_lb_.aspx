@@ -214,7 +214,8 @@ var copyToAndFrom = {
    });
 </script>
 	   
-        <div id="Div1" >
+        
+        <div id="Div1" style="display:none">
             
       <%--  OE: DSP Models/Credits    Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
