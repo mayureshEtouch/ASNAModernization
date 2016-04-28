@@ -32,34 +32,34 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-	 <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title logo-icon"></span>
-                <!--<span class="mdl-layout-heading">StoreFront</span>-->
-                <div class="mdl-layout-spacer"></div>
-                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
-            </div>
-        </header>
+	
+	  <header class="mdl-layout__header">
+                        <div class="mdl-layout__header-row"> 
+                                <!-- Title --> 
+                                 <span class="mdl-layout-title logo-icon"></span>
+                                <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+                                <div class="mdl-layout-spacer"></div>
+                                <span class="close-icon"  event-data="F12"><i class="material-icons md-15 close"></i></span>
+                        </div>
+                </header>
         <main class="mdl-layout__content">
-            <section class="time-date">
-                <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
-                        <!-- Title -->
-                        <span class="heading-h1">Display Order Line Credits</span>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
-                        <!-- Navigation -->
-                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSSLDFR</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="order-summary">
-                <div class="order-summary-wrapper" style="margin-top: 16px;">
-                    <%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
+                <section class="time-date">
                     <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--8-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Order Line Credits</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSSLDFR</span>
+                        </div>
+                    </div>
+                </section>
+				
+				<section class="order-summary">
+                <div class="order-summary-wrapper" style="margin-top:18px;">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col">
                             <span class="summary-title">Order</span>
                             <span class="summary-txt" id="orderNumber">6666666 666</span>
                         </div>
@@ -67,18 +67,19 @@
                             <span class="summary-title">Line</span>
                             <span class="summary-txt" id="orderLine"">666</span>
                         </div>
-
+                        
                     </div>
-                </div>
+            	</div>
             </section>
-
-            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
-                <div class="table-data-wrapper">
-                    <div class="table-data-maincontainer">
-                        <div style="overflow: auto;" class="table-container">
-                            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="displayData">
-                                <thead>
-                                   	<tr>
+         
+			
+          <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container" style="overflow: auto;" style="width:auto;">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="displayData">
+                            <thead>
+                             <tr>
 														<th>Code</th>
 														<th>Rsn</th>
 														<th>Amount</th>
@@ -89,69 +90,72 @@
 														<th>Date</th>
 														<th>Time</th>
 													</tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="button-container">
-                            <div class="content-grid mdl-grid">
-
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
-                                </div>
-                            </div>
-                        </div>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                     </div>
+                    <div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
+																							
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" >next</span>
+												</div>
+										</div>
+					</div>
                 </div>
-            </section>
-
-
-        </main>
-        
-    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+            </div>
+        </section>
+            </main>
+    
     <div id="modal" class="simplePopup"></div>
+	<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+              </div>
+          </div>
     <!-- Modified HTML code ends here -->
 	
- <style>
-        #__Page_PopUp {
-            min-width: 450px !important;
-            width: 450px !important;
-			left: 50% !important;
-			margin-left: -225px;
+  <style>
+        #__Page_Hidden{
+            min-height: 800px !important;
+			height: 1000px !important;
         }
-		#__Page_PopUp > tr:first-child {
-			display: none;
-		}
-
-		#__Page_PopUp .DdsInlinePopUpTitle {
-			height: 0;
-		}
-        #displayData tbody tr td:last-child {
-            display: none;
+        #__Page_PopUp {
+          width: 650px !important;
+		  left: 50% !important;
+		  margin-left: -325px !important;
+		 
+        }
+        #__Page_PopUp > tr:first-child {
+         display: none;
+        }
+        #__Page_PopUp .DdsInlinePopUpTitle {
+         height: 1px !important;
+        }
+        .modal-dialog-container, #main-content {
+          width: 100% !important;
         }
         .modal-dialog-container {
-            width: 100%;
-            margin-top: 0;
+          margin: 0 auto;
         }
         .mdl-layout__content {
-            height: auto !important;
-            overflow: hidden !important;
+          height: auto;
+          margin-bottom: 15px;
         }
-        #wrapper {
-width: 100% !important;
-}
-        #form1 {
-            margin-top: -20px;
-        }
-        #__Page_Hidden{
-            height: 800px !important;
+         /* form class ends here */
+        tr.selected {
+            background-color: #f1f1f1;
         }
         .simplePopup {
-                left: 30% !important;
-                top: 40% !important;
-              }
-    </style>
+              left: 28% !important;
+              top: 40% !important;
+
+            }
+        </style>
 
 <script type="text/javascript">
 var copyToAndFrom = {
@@ -165,27 +169,51 @@ var copyToAndFrom = {
             }
 			
   $(document).ready(function() {
-		copyData(copyToAndFrom, "");
+		
+				   
+			copyData(copyToAndFrom, "");
 		 
-			var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
-			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLCTL", "NONE", "next", dataMergeIndices);
-		 $('.close-icon').click(function (event) {
-                _00("F12", event);
-            });
-            if($(".simplePopupClose").length > 0) {
-                 $(".simplePopupBackground1").show();
-           } else {
-               $(".simplePopupBackground1").hide();
-           }
-           $("body").on("click", ".simplePopupClose", function() {
-               $(".simplePopupBackground1").hide();
-           });
+				var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
+				generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	  
+				
+			if($("#__Page_PopUp .simplePopupClose").length > 0) {
+               $(".simplePopup").show();
+             } else {
+               $(".simplePopup").hide();
+             }
+             $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopup").hide();
+
+             });
+				
+			 if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+			 
+			 
+              copyData(copyToAndFrom, "");
+		 
+				var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
+				generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	 
+				
+               $(".confirmation-outer-conatiner").show();
+				
+               $("#yes").click(function (event) {
+                   $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                   // _00('Enter',event);
+				   _16(event,this,1,'Enter');
+                   
+               });
+               $("#no").click(function (event) {
+                   $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                 _16(event,this,1,'Enter');
+                   
+               });
+
+             }
 		  
    });
 </script>
-	   
-        <div id="Div1" style="display:none;">
-      
+	      
+        <div id="Div1" style="display:none">    
             
       <%--  OE: DSW Credits           Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
