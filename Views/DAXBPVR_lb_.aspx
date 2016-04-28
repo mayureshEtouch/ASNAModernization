@@ -22,7 +22,177 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <main class="mdl-layout__content">
+      <section class="time-date">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--8-col">
+            <!-- Title -->
+            <span class="heading-h1">Prompt Free Delivery or Model</span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col pull-right">
+            <!-- Navigation -->
+            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DAXBPVR</span>
+            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
+            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+          </div>
+        </div>
+      </section>
+      <section class="progress-bar">
+        <div class="progress-bar-wrapper">
+          <ul class="progress-bar-main">
+            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+            <li class="progress-bar-divider-first">
+
+              <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+              <li class="progress-bar-divider">
+
+                <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                <li class="progress-bar-divider">
+
+                  <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                  <li class="progress-bar-divider">
+
+                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                  </ul>
+                </div>
+              </section>
+              <section class="table-data-content-container">
+                <div class="table-data-wrapper">
+                  <div class="table-data-maincontainer">
+                    <div class="table-container table-container-search">
+
+                      <!-- content-grid mdl-grid starts here -->
+                      <div class="content-grid mdl-grid" style="padding:0">
+                        <!-- 4 col starts here -->
+                        <div class="mdl-cell mdl-cell--12-col">
+                          <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--12-col"><span class="form-label" style="font-size: 15px;">Select Free Delivery OR a Free Item:</span></div>
+                            </div>
+                        </div>
+                        <!-- 4 col ends here -->
+                      </div>
+                      <!-- content-grid mdl-grid ends here -->
+
+                      <!-- content-grid mdl-grid starts here -->
+                      <div class="content-grid mdl-grid">
+                        <!-- 4 col starts here -->
+                        <div class="mdl-cell mdl-cell--12-col">
+                          <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--1-col">
+                              <span class="form-label">Free Delivery:</span>
+                            </div>
+                            <div  class="mdl-cell mdl-cell--2-col" style="margin:0"> 
+                              <span data-upgraded=",MaterialTextfield" class="form-text" id="free_delivery">
+                                <select id="CenPH__lb_RCDDTL1__lb_1RVS_lb_new">
+                                  <option value=" ">Please Choose</option>
+                                  <option value="Y">Y</option>
+                                  <option value="N">N</option>
+                                </select>
+                              </span> 
+                            </div>
+                            <div  class="mdl-cell mdl-cell--1-col" >
+                             <span class="form-label">Free Merchandise:</span>
+                           </div>
+                           <div  class="mdl-cell mdl-cell--2-col" style="margin:0"> 
+                            <span data-upgraded=",MaterialTextfield" class="form-text" id="free_merchandise">
+                            <select id="CenPH__lb_RCDDTL1__lb_1RWS_lb_new">
+                                <option value=" ">Please Choose</option>
+                                <option value="Y">Y</option>
+                                <option value="N">N</option>
+                              </select>
+                            </span> 
+                          </div>
+                        </div>
+                      </div>
+                       <!-- 4 col ends here -->
+
+                     </div>
+                     <!-- content-grid mdl-grid ends here -->
+
+
+                     <div class="button-container">
+                      <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop">
+                          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F3" id="previous">Previous</span>
+
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right">
+                          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="Submit">Submit</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <div id="modal1" class="simplePopup"></div>
+          <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+              </div>
+          </div>
+          <style type="text/css" media="screen">
+            .simplePopup {
+              left: 28% !important;
+              top: 40% !important;
+
+            }
+          </style>
+          <script type="text/javascript">
+          var copyToAndFromData = {
+              "displayOnlyFields": {
+                  "CenPH__lb_RCDDTL1__lb_1RVS_lb_": "free_delivery",
+                  "CenPH__lb_RCDDTL1__lb_1RWS_lb_": "free_merchandise",
+              },
+              "inputFields": {
+              }
+          };
+          
+            $(document).ready(function () {
+              $("#CenPH__lb_RCDDTL1__lb_1RVS_lb_new, #CenPH__lb_RCDDTL1__lb_1RWS_lb_new").change(function(){
+                var org_id = (this.id.replace('new',''));
+                $("#"+org_id).val($(this).val());
+              })
+              $("#CenPH__lb_RCDDTL1__lb_1RVS_lb_, #CenPH__lb_RCDDTL1__lb_1RWS_lb_").each(function(){
+                var new_id = this.id+"new";
+                $("#"+new_id).val($(this).val());
+              })
+              if($("#__Page_PopUp .simplePopupClose").length > 0) {
+               $(".simplePopup").show();
+             } else {
+               $(".simplePopup").hide();
+             }
+             $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopup").hide();
+
+             });
+             if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+               /*Pop up confirm box*/
+               $(".OverlayPopupBackground").show();
+               $(".confirmation-outer-conatiner").show();
+               $('select').hide();
+               copyData(copyToAndFromData,"");
+               $("#yes").click(function (event) {
+                   $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                   //_00('Enter', event);
+                   _16(event,this,1,'Enter');
+               });
+               $("#no").click(function (event) {
+                   $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                   //_00('Enter', event);
+                   _16(event,this,1,'Enter');
+               });
+
+             }
+           });
+         </script>
+         <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  OE: PMT Del Or Model      Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
