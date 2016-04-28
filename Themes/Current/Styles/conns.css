@@ -1084,14 +1084,60 @@ textarea {
 .completion-icon-disabled {
 	background: url(../Images/icons/completion-icon-disable.png) no-repeat;
 }
-
 .credit-icon {
 	background: url(../Images/icons/credit-icon.png) no-repeat;
 }
 .credit-icon-disabled {
 	background: url(../Images/icons/credit-icon-disable.png) no-repeat;
 }
-
+.customer-icon {
+	background: url(../Images/icons/customer-icon.png) no-repeat;
+}
+.customer-icon-disabled {
+	background: url(../Images/icons/customer-icon-disable.png) no-repeat;
+}
+.payments-icon {
+	background: url(../Images/icons/payments-icon.png) no-repeat;
+}
+.payments-icon-disabled {
+	background: url(../Images/icons/payments-icon-disable.png) no-repeat;
+}
+.notes-icon {
+	background: url(../Images/icons/notes-icon.png) no-repeat;
+}
+.notes-icon-disabled {
+	background: url(../Images/icons/notes-icon-disable.png) no-repeat;
+}
+.link-icon {
+	background: url(../Images/icons/link-icon.png) no-repeat;
+}
+.link-icon-disabled {
+	background: url(../Images/icons/link-icon-disable.png) no-repeat;
+}
+.insurance-icon {
+	background: url(../Images/icons/insurance-icon.png) no-repeat;
+}
+.insurance-icon-disabled {
+	background: url(../Images/icons/insurance-icon-disable.png) no-repeat;
+}
+.inventory-icon {
+	background: url(../Images/icons/inventory-icon.png) no-repeat;
+}
+.inventory-icon-disabled {
+	background: url(../Images/icons/inventory-icon-disable.png) no-repeat;
+}
+.account-icon {
+	background: url(../Images/icons/account-icon.png) no-repeat;
+}
+.account-icon-disabled {
+	background: url(../Images/icons/account-icon-disable.png) no-repeat;
+}
+.deselect-icon {
+	background: url(../Images/icons/deselect-icon.png) no-repeat;
+}
+.deselect-icon-disabled {
+	background: url(../Images/icons/deselect-icon-disable.png) no-repeat;
+}
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
  background: rgb(255, 255, 255);
  border: 1px solid #c5c5c5;

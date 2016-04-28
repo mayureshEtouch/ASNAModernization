@@ -22,7 +22,562 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Account detail</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCG0D1R</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            <section class="table-data-content-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer view_fields spacer-container-bottom" style="display: none;">
+                        <div class="table-container table-container-search">
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1A2TX_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Owner Name:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1A2TX_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_DE8CO_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Bank:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> 
+                              <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DE8CO_new"></span> 
+                              <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1REF_lb__new"></span> 
+                              <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CENB_new"></span> 
+                            </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label" id="CenPH__lb_RCDDTL1__lb_1CSCD_div">Type:</span> </div>
+                            <div  class="mdl-cell mdl-cell--2-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CSCD_new"></span> </div>
+                            <div style="margin:0 20px 0 20px;" class="mdl-cell mdl-cell--1-col" id="CenPH__lb_RCDDTL1__lb_1ATST_div"> <span class="form-label">Sts:</span> </div>
+                            <div style="margin:0" class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ATST_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1BXNB_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Home #:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                      
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1CDVA_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Orig:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CDVA_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1CLVA_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Current Balance:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CLVA_new"></span> </div>
+
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1C7VA_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">PayOff:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1C7VA_new"></span> </div>
+                            
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <hr style="border-color: #c6c6c6; margin: 5px 15px; height: 1px;">
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="ctl00$CenPH$_lb_RCDDTL1_V1AQDT_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Opened:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1AQDT_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1CJVA_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Payment:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CJVA_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1_V1A8DT_div">
+                                <div class="content-grid mdl-grid">
+                                  <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Date:</span> </div>
+                                  <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1A8DT_new"></span> </div>
+                                </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1_V1AUDT_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Last Pay:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1AUDT_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="ctl00$CenPH$_lb_RCDDTL1_V1AUDT_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Past Due:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1AUDT_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1B6VA_div">
+                                <div class="content-grid mdl-grid">
+                                  <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Chargeoff:</span> </div>
+                                  <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1B6VA_new"></span> </div>
+                                </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="ctl00$CenPH$_lb_RCDDTL1_V1ATDT_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Next Due:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1ATDT_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1AOVA_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Late Chg:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AOVA_new">.00</span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1A5VA_div">
+                                <div class="content-grid mdl-grid">
+                                  <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Additional:</span> </div>
+                                  <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1A5VA_new"></span> </div>
+                                </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1DVNB_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Paid:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1DVNB_new"></span> of 
+                            <span id="CenPH__lb_RCDDTL1__lb_1DUNB_new"></span>
+                            </span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1BSVA_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Current Due:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BSVA_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1CPVA_div">
+                                <div class="content-grid mdl-grid">
+                                  <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Recovered:</span> </div>
+                                  <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CPVA_new"></span> </div>
+                                </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_DB1TX_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Ins:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DB1TX_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1BKTX_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Description:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BKTX_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid"></div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <hr style="border-color: #c6c6c6; margin: 5px 15px; height: 1px;">
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--12-col" id="CenPH__lb_RCDDTL1__lb_1C2NB_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--1-col" style="margin:0"><span class="form-label">History:</span></div>
+                            <div  class="mdl-cell mdl-cell--10-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><span>30:</span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C2NB_new"></span><span>60:</span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C3NB_new"></span><span>90:</span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C4NB_new"></span>
+                            </span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 12 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">123456789012:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> 
+                            <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DVNTX_new"></span> <br />
+                            <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DVOTX_new"></span> 
+                            </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1CCCD_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Class:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CCCD_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1BDCD_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">P.C.:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BDCD_new"></span> </div>
+                            
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                        
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1C6NB_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Extensions:</span></div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1C6NB_new"></span> </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1_V1BHDT_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Last On:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1BHDT_new"></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1C0NB_div">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Returned Checks:</span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1C0NB_new"></span> </div>
+                            
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                        <!-- content-grid mdl-grid ends here -->
+                                            
+                        <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="previous">Previous</span>
+                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F6" id="Links">Links</span>
+                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F7" id="Insurance">Insurance</span>
+                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F8" id="customerData">Customer data</span>
+                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F9" id="allAccounts">All Accounts</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+                        
+                        </div>
+                    </div>
+                    
+                    <div class="table-data-maincontainer input_fields" style="display: none;">
+                        <div class="table-container table-container-search">
+                        <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                            <!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--3-col" style="margin:0"><span class="form-label">Customer ID:</span></div>
+                            <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> 
+                            <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_id" /></span> 
+                            </div>
+                        </div>
+                        
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Customer Ref:</span> </div>
+                            <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_ref" /></span> </div>
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                              
+                              <!-- 4 col starts here -->
+                              <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                            <div  class="mdl-cell mdl-cell--2-col" style="margin:0"> <span class="form-label">Type:</span> </div>
+                            <div  class="mdl-cell mdl-cell--10-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_type" /></span> </div>
+                            
+                        </div>
+                              </div>
+                              <!-- 4 col ends here -->
+                            
+                      </div>
+                      </div>
+
+                              <div class="button-container">
+                          <div class="content-grid mdl-grid">
+                              <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop">
+                                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F3" id="previous">Previous</span>
+                                                              
+                              </div>
+                              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right">
+                                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="">Submit</span>
+                              </div>
+                          </div>
+                      </div>
+
+
+                      </div>
+
+                </div>
+            </section>
+        </main>
+<div id="modal1" class="simplePopup"></div>
+    <style type="text/css" media="screen">
+     #products tbody > tr:hover {
+             cursor: pointer;
+           }
+     .filter-search-container .button-container .mdl-button {
+         height: 16px;
+       }
+    </style>    
+        <script type="text/javascript">
+          var copyToAndFromView = {
+               "displayOnlyFields": {
+                   "CenPH_DdsConstant9": "date",
+                   "CenPH__lb_RCDKEY__lb__lb_TME": "time",
+                   "CenPH__lb_RCDDTL1__lb_1A2TX": "CenPH__lb_RCDDTL1__lb_1A2TX_new",
+                   "CenPH__lb_RCDDTL1__lb_DE8CO": "CenPH__lb_RCDDTL1__lb_DE8CO_new",
+                   "CenPH__lb_RCDDTL1__lb_1REF_lb_": "CenPH__lb_RCDDTL1__lb_1REF_lb__new",
+                   "CenPH__lb_RCDDTL1__lb_1CENB": "CenPH__lb_RCDDTL1__lb_1CENB_new",
+                   "CenPH__lb_RCDDTL1__lb_1CSCD": "CenPH__lb_RCDDTL1__lb_1CSCD_new",
+                   "CenPH__lb_RCDDTL1__lb_1ATST": "CenPH__lb_RCDDTL1__lb_1ATST_new",
+                   "CenPH__lb_RCDDTL1__lb_1BXNB": "CenPH__lb_RCDDTL1__lb_1BXNB_new",
+                   "CenPH__lb_RCDDTL1__lb_1CDVA": "CenPH__lb_RCDDTL1__lb_1CDVA_new",
+                   "CenPH__lb_RCDDTL1__lb_1CLVA": "CenPH__lb_RCDDTL1__lb_1CLVA_new",
+                   "CenPH__lb_RCDDTL1__lb_1C7VA": "CenPH__lb_RCDDTL1__lb_1C7VA_new",
+                   "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AQDT": "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AQDT_new",
+                   "CenPH__lb_RCDDTL1__lb_1CJVA": "CenPH__lb_RCDDTL1__lb_1CJVA_new",
+                   "CenPH__lb_RCDDTL1_V1A8DT": "CenPH__lb_RCDDTL1_V1A8DT_new",//
+                   "CenPH__lb_RCDDTL1_V1AUDT": "CenPH__lb_RCDDTL1_V1AUDT_new",
+                   "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AUDT": "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AUDT_new",
+                   "CenPH__lb_RCDDTL1__lb_1B6VA": "CenPH__lb_RCDDTL1__lb_1B6VA_new",//
+                   "ctl00\\$CenPH\\$_lb_RCDDTL1_V1ATDT": "ctl00\\$CenPH\\$_lb_RCDDTL1_V1ATDT_new",
+                   "CenPH__lb_RCDDTL1__lb_1AOVA": "CenPH__lb_RCDDTL1__lb_1AOVA_new",
+                   "CenPH__lb_RCDDTL1__lb_1A5VA": "CenPH__lb_RCDDTL1__lb_1A5VA_new", //
+                   "CenPH__lb_RCDDTL1__lb_1DVNB": "CenPH__lb_RCDDTL1__lb_1DVNB_new",
+                   "CenPH__lb_RCDDTL1__lb_1DUNB": "CenPH__lb_RCDDTL1__lb_1DUNB_new",
+                   "CenPH__lb_RCDDTL1__lb_1BSVA": "CenPH__lb_RCDDTL1__lb_1BSVA_new",
+                   "CenPH__lb_RCDDTL1__lb_1CPVA": "CenPH__lb_RCDDTL1__lb_1CPVA_new",//
+                   "CenPH__lb_RCDDTL1__lb_DB1TX": "CenPH__lb_RCDDTL1__lb_DB1TX_new",
+                   "CenPH__lb_RCDDTL1__lb_1BKTX": "CenPH__lb_RCDDTL1__lb_1BKTX_new",
+                   "CenPH__lb_RCDDTL1__lb_1C6NB": "CenPH__lb_RCDDTL1__lb_1C6NB_new",
+                   "CenPH__lb_RCDDTL1_V1BHDT": "CenPH__lb_RCDDTL1_V1BHDT_new",
+                   "CenPH__lb_RCDDTL1__lb_1C0NB": "CenPH__lb_RCDDTL1__lb_1C0NB_new",
+                   "CenPH__lb_RCDDTL1__lb_1C2NB": "CenPH__lb_RCDDTL1__lb_1C2NB_new",
+                   "CenPH__lb_RCDDTL1__lb_1C3NB": "CenPH__lb_RCDDTL1__lb_1C3NB_new",
+                   "CenPH__lb_RCDDTL1__lb_1C4NB": "CenPH__lb_RCDDTL1__lb_1C4NB_new",
+                   "CenPH__lb_RCDDTL1__lb_DVNTX": "CenPH__lb_RCDDTL1__lb_DVNTX_new",
+                   "CenPH__lb_RCDDTL1__lb_DVOTX": "CenPH__lb_RCDDTL1__lb_DVOTX_new",
+                   "CenPH__lb_RCDDTL1__lb_1CCCD": "CenPH__lb_RCDDTL1__lb_1CCCD_new",
+                   "CenPH__lb_RCDDTL1__lb_1BDCD": "CenPH__lb_RCDDTL1__lb_1BDCD_new",
+               },
+               "inputFields":{
+               }
+             };
+               var copyToAndFromInput = {
+               "displayOnlyFields": {
+               },
+               "inputFields":{
+                   "CenPH__lb_RCDKEY__lb_1ALNB": "customer_id",
+                   "CenPH__lb_RCDKEY__lb_1REF_lb_": "customer_ref",
+                   "CenPH__lb_RCDKEY__lb_1CENB": "customer_type",
+               }
+          };
+          $(document).ready(function() {
+            if($("#CenPH__lb_RCDKEY__lb_1ALNB").length>0){
+              $(".input_fields").show();
+              copyData(copyToAndFromInput, "keyup keydown change blur mouseup mousedown");
+            }else{
+              $(".view_fields").show();
+              for(var i in copyToAndFromView.displayOnlyFields) {
+                  if(i.split("+").length > 1) {
+                      i = i.split("+")[0];
+                  }
+                  if($("#"+i).length === 0 || $("#"+i).html() === "&nbsp;") {
+                      $("#"+i+"_div").hide();
+                  }
+              }
+              copyData(copyToAndFromView);
+            }
+            //$("#order_number").ForceNumericOnly();
+          });
+          </script>
+    <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display: none;">
             
       <%--  CR: DS1 Install Acct-Pub  Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>

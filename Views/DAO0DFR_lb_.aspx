@@ -29,11 +29,11 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col">
                             <!-- Title -->
-                            <span class="heading-h1">Display Open Orders Against Model</span>
+                            <span class="heading-h1">Display SKU by Prod Category</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
-                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSEGDFR</span>
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DAO0DFR</span>
                             <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
                             <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                         </div>
@@ -161,7 +161,7 @@
              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
              var dataMergeIndices = [[0], [1], [2]];
              generateTableAndApplyInfiniteScroll("products", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-             $("#product_category").ForceNumericWithQuestionMarkOnly();
+             //$("#product_category").ForceNumericWithQuestionMarkOnly();
 
              var selectCusotmer = function (row, value, event) {
                  var selectId = $(row).data('selectid');

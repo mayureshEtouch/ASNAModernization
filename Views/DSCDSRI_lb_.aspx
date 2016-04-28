@@ -74,13 +74,13 @@
                                             <span class="summary-table-title pull-right">Zip Code</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col" id="filter-by-co">
-                                            <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1">
+                                            <input type="text" id="number1" maxlength="10" class="mdl-textfield__input" data-tb-index="1">
                                         </div> 
 																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
                                             <span class="summary-table-title pull-right">Address</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--5-col" id="filter-by-co">
-                                            <input type="text" id="number2" class="mdl-textfield__input" data-tb-index="2">
+                                            <input type="text" id="number2" maxlength="30" class="mdl-textfield__input" data-tb-index="2">
                                         </div>                       
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" >next</span>
 												</div>
 										</div>
 								</div>
