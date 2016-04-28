@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSSLDFR_lb_.aspx.cs" Inherits="conns.DSSLDFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 3/21/2016 at 5:26 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -22,7 +22,116 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+		<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row"> 
+						<!-- Title --> 
+						 <span class="mdl-layout-title logo-icon"></span>
+						<!--<span class="mdl-layout-heading">StoreFront</span>--> 
+						<div class="mdl-layout-spacer"></div>
+						<span class="close-icon"><i class="material-icons md-15 close"></i></span>
+				</div>
+		</header>
+		<main class="mdl-layout__content">
+		<section class="time-date">
+				<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--9-col"> 
+								<!-- Title --> 
+								<span class="heading-h1">Display Order Line Credits</span> </div>
+						<div class="mdl-cell mdl-cell--3-col pull-right"> 
+								<!-- Navigation --> 
+								<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSSLDFR</span></div>
+				</div>
+		</section>
+		            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Order</span>
+                            <span class="summary-txt" id="orderNumber">6666666 666</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <span class="summary-title">Line</span>
+                            <span class="summary-txt" id="orderLine"">666</span>
+                        </div>
+                    </div>
+            	</div>
+            </section>
+ <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Code</th>
+														<th>Rsn</th>
+														<th>Amount</th>
+														<th>Date</th>
+														<th>Version</th>
+														<th>User</th>
+														<th>Terminal</th>
+														<th>Date</th>
+														<th>Time</th>
+													</tr>
+												</thead>
+												<tbody>
+																									
+												</tbody>
+										</table>
+										<a id="next-page" class="next-icon" href="javascript:void(0);" style="float: right;margin-right: 15px;"></a>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span></div>
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Submit">Submit</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+		
+		</main>
+		<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+        <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+<style>
+/* #Div1{display:block;} */
+#number2_toolTip{display: none;}
+
+</style>
+
+<script type="text/javascript">
+var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_2BANB": "orderNumber",
+					 "CenPH__lb_SFLCTL__lb_2AZNB":"orderLine"
+							
+                },
+                "inputFields": {
+                }
+            }
+			
+  $(document).ready(function() {
+		copyData(copyToAndFrom, "");
+		 
+			var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLCTL", "NONE", "next", dataMergeIndices);
+		
+		  
+   });
+</script>
+	   
+        <div id="Div1" style="display:none;">
+      
             
       <%--  OE: DSW Credits           Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
