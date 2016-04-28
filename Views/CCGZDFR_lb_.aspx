@@ -172,7 +172,7 @@
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
 
-        <div id="Div1" >
+        <div id="Div1" style="display: none;">
             
       <%--  CR: DSP Acct for Cust-Pub Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
