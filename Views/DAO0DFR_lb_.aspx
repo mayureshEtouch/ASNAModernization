@@ -102,7 +102,7 @@
                                                     </div>
                                                 </div>
                                             </section>
-                 <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                 <section class="table-data-content-container spacer-container-bottom" >
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div style="overflow: auto;" class="table-container">
