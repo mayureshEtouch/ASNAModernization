@@ -28,7 +28,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Select Product Category</span>
+                        <span class="heading-h1">Credit Accounts links</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -150,7 +150,7 @@
                  <div class="button-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span></div>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span></div>
                         <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
                         </div> -->

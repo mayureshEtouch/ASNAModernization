@@ -77,7 +77,7 @@
                               <span class="form-label">Reference #:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col" style="margin:0 0 0 -3px">
-                              <span class="form-text"><input id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="9"  data-tb-index="2"/></span>
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new"><!-- <input id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="9"  data-tb-index="2"/> --></span>
                           </div>
                     </div>
                   </div>
@@ -179,7 +179,14 @@
     
     </main>
     <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-        <div id="modal" class="simplePopup"></div>
+        <div id="promptErrorMsg" class="simplePopup"></div>
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+          </div>
 </div>
         <div id="Div1" style="display:none;">
             
@@ -607,7 +614,7 @@
                 },
                 "inputFields": {
                    //"CenPH__lb_RCDDTL1__lb_1CGC_lb_": "CenPH__lb_RCDDTL1__lb_1CGC_lb_new",
-                    "CenPH__lb_RCDDTL1__lb_1P5N_lb_": "CenPH__lb_RCDDTL1__lb_1P5N_lb_new",
+                    //"CenPH__lb_RCDDTL1__lb_1P5N_lb_": "CenPH__lb_RCDDTL1__lb_1P5N_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1JZXT": "CenPH__lb_RCDDTL1__lb_1JZXT_new",
                     "CenPH__lb_RCDDTL1__lb_1P3N_lb_": "CenPH__lb_RCDDTL1__lb_1P3N_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1J0XT": "CenPH__lb_RCDDTL1__lb_1J0XT_new",
@@ -619,6 +626,7 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#CenPH__lb_RCDDTL1__lb_1CGC_lb_new").append($("#CenPH__lb_RCDDTL1__lb_1CGC_lb_"));
+              $("#CenPH__lb_RCDDTL1__lb_1P5N_lb_new").append($("#CenPH__lb_RCDDTL1__lb_1P5N_lb_"));
               $('.close-icon').click(function (event) {
                     _00("F12", event);
                 });
@@ -636,6 +644,27 @@
                $("body").on("click", ".simplePopupClose", function() {
                    $(".simplePopupBackground1").hide();
                });
+               if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                    $(".editable-data").show();
+                    $(".ro-data").hide();
+                    $(".confirmation-outer-conatiner").hide();
+                    $(".OverlayPopupBackground").hide();
+                } else {
+                    $(".editable-data").hide();
+                    $(".ro-data").show();
+                    $(".confirmation-outer-conatiner").show();
+                    $(".OverlayPopupBackground").show();
+                }
+                
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
+                
                $("#CenPH__lb_RCDDTL1__lb_1P5N_lb_new").ForceNumericOnly();
                $("#CenPH__lb_RCDDTL1__lb_1P3N_lb_new").ForceNumericOnly();
             });
@@ -646,7 +675,7 @@
             width: 40% !important;
             left: 50% !important;
             margin-left: -225px;
-                margin-top: 72px !important;
+                margin-top: -123px !important;
             }
             #__Page_PopUp > tr:first-child {
               display: none;
@@ -678,6 +707,12 @@
             left: 109px !important;
             top: 20px !important;
             width: 85px !important;
+           }
+           #CenPH__lb_RCDDTL1__lb_1P5N_lb_{
+            position: absolute;
+            left: 332px !important;
+            top: 20px !important;
+            width: 98px !important;
            }
         </style>
     </asp:Content>
