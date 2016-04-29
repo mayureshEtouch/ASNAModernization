@@ -273,7 +273,7 @@
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Property:</span></div>
-                  <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield" id="">Dummmmy Text</span> </div>
+                  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield" id=""><input type="text" data-tb-index="8" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_PRPSLD_new" maxlength="7" /></span> </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -287,7 +287,7 @@
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">SMA:</span> </div>
-                  <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="">Dummmmy Text</span> </div>
+                  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id=""><input type="text" data-tb-index="8" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_SMASLD_new" maxlength="7" /></span> </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -296,7 +296,7 @@
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Taxes:</span></div>
-                  <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield" id="">Dummmmy Text</span> </div>
+                  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield" id=""><input type="text" data-tb-index="8" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_TAXSLD_new" maxlength="5" /></span> </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -364,10 +364,13 @@
               
               <!-- 6 col starts here -->
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                <div class="content-grid mdl-grid">
+                <div class="content-grid mdl-grid" id="def-date">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Deferred Date:</span></div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text">
-                   Dummy Text
+                   <input class="editable-data" type="text" id="ctl00$CenPH$DSPFMT1_DFRPMT_new" size="15" readonly="true">
+                      <i id="ctl00$CenPH$DSPFMT1_DFRPMT_new_selectdate" class="material-icons calender-icon page-icons editable-data"></i>
+                      <span class="form-text vertical-top ro-data" id="ro-ctl00$CenPH$DSPFMT1_DFRPMT_new"></span>
+                    </span>
                     </span> </div>
                 </div>
               </div>
@@ -383,7 +386,7 @@
               <div class="mdl-cell mdl-cell--6-col">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Interest Rate:</span> </div>
-                  <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="">Dummmy Text</span> </div>
+                  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id=""><input type="text" data-tb-index="8" class="mdl-textfield__input" size="12" id="CenPH_DSPFMT1_CRPCTB_new" maxlength="5" /></span> </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -679,7 +682,7 @@
               <!-- 4 col ends here --> 
               
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-cell mdl-cell--4-col" style="display: none;">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-text" data-upgraded=",MaterialTextfield" id="">Dummmmmy Evidence of Property Insurance required</span></div>
                 </div>
@@ -701,7 +704,7 @@
               <!-- 4 col ends here --> 
               
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-cell mdl-cell--4-col" style="display: none;">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-text" data-upgraded=",MaterialTextfield" id="">Dummmmmy Signed IUI Authorization required</span></div>
                 </div>
@@ -2060,7 +2063,12 @@
                 "CenPH_DSPFMT1_CRDWNB": "CenPH_DSPFMT1_CRDWNB_new",
                 "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new_ro",
                 "CenPH_DSPFMT1_CRPHNB": "ro-CenPH_DSPFMT1_CRPHNB_new",
-                "CenPH_DSPFMT1_CRWRKB": "ro-CenPH_DSPFMT1_CRWRKB_new"
+                "CenPH_DSPFMT1_CRWRKB": "ro-CenPH_DSPFMT1_CRWRKB_new",
+                //"CenPH_DSPFMT1_CRPRPB": "ro-CenPH_DSPFMT1_CRPRPB_new",
+                "CenPH_DSPFMT1_PRPSLD": "ro-CenPH_DSPFMT1_PRPSLD_new",
+                "CenPH_DSPFMT1_SMASLD": "ro-CenPH_DSPFMT1_SMASLD_new",
+                "CenPH_DSPFMT1_TAXSLD": "ro-CenPH_DSPFMT1_TAXSLD_new",
+                "CenPH_DSPFMT1_CRPCTB": "ro-CenPH_DSPFMT1_CRPCTB_new"
             },
             "inputFields": {
               "CenPH_DSPFMT1_CRPHNB": "CenPH_DSPFMT1_CRPHNB_new",
@@ -2074,7 +2082,11 @@
               "CenPH_DSPFMT1_CRLIFB": "CenPH_DSPFMT1_CRLIFB_new",
               "CenPH_DSPFMT1_CRACHB": "CenPH_DSPFMT1_CRACHB_new",
               "CenPH_DSPFMT1_CRUEMB": "CenPH_DSPFMT1_CRUEMB_new",
-              "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new"
+              "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new",
+              "CenPH_DSPFMT1_PRPSLD": "CenPH_DSPFMT1_PRPSLD_new",
+              "CenPH_DSPFMT1_SMASLD": "CenPH_DSPFMT1_SMASLD_new",
+              "CenPH_DSPFMT1_TAXSLD": "CenPH_DSPFMT1_TAXSLD_new",
+              "CenPH_DSPFMT1_CRPCTB": "CenPH_DSPFMT1_CRPCTB_new"
             }
         };
         var copyToAndFromSecondView = {
@@ -2125,6 +2137,17 @@
                 //Copy data from original fields to modernized fields
                 $("#first-view").show();
                 $("#second-view").hide();
+                for(var i in copyToAndFromFirstView.displayOnlyFields) { 
+                    if($("#"+i).length === 0) {
+                        $("#"+i+"_new").parent().parent().parent().hide();
+                    }
+                }
+                debugger
+                if($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").length === 0) {
+                    $("#def-date").hide();
+                } else {
+                    $("#def-date").show();
+                }
                 copyData(copyToAndFromFirstView, "keyup keydown change blur mouseup mousedown");
 
                 if ($("#CenPH_DSPFMT1_CRPRPB").is('span')) {
@@ -2149,6 +2172,35 @@
                     $("#ro-CenPH_DSPFMT1_CRWRKB_new").hide();
                     $("#CenPH_DSPFMT1_CRWRKB_new").show();
                 }
+                //new
+                if ($("#CenPH_DSPFMT1_PRPSLD").is('span')) {
+                    $("#ro-CenPH_DSPFMT1_PRPSLD_new").show();
+                    $("#CenPH_DSPFMT1_PRPSLD_new").hide();
+                } else {
+                    $("#ro-CenPH_DSPFMT1_PRPSLD_new").hide();
+                    $("#CenPH_DSPFMT1_PRPSLD_new").show();
+                }
+                if ($("#CenPH_DSPFMT1_SMASLD").is('span')) {
+                    $("#ro-CenPH_DSPFMT1_SMASLD_new").show();
+                    $("#CenPH_DSPFMT1_SMASLD_new").hide();
+                } else {
+                    $("#ro-CenPH_DSPFMT1_SMASLD_new").hide();
+                    $("#CenPH_DSPFMT1_SMASLD_new").show();
+                }
+                if ($("#CenPH_DSPFMT1_TAXSLD").is('span')) {
+                    $("#ro-CenPH_DSPFMT1_TAXSLD_new").show();
+                    $("#CenPH_DSPFMT1_TAXSLD_new").hide();
+                } else {
+                    $("#ro-CenPH_DSPFMT1_TAXSLD_new").hide();
+                    $("#CenPH_DSPFMT1_TAXSLD_new").show();
+                }
+                if ($("#CenPH_DSPFMT1_CRPCTB").is('span')) {
+                    $("#ro-CenPH_DSPFMT1_CRPCTB_new").show();
+                    $("#CenPH_DSPFMT1_CRPCTB_new").hide();
+                } else {
+                    $("#ro-CenPH_DSPFMT1_CRPCTB_new").hide();
+                    $("#CenPH_DSPFMT1_CRPCTB_new").show();
+                }
 
                 //Set button click handlers
                 $('body').on('click', '#refresh', function(event) {
@@ -2169,7 +2221,6 @@
                     } else {
                         $("#CenPH_DSPFMT1_SS_lb_2").val($("#CenPH_DSPFMT1_SS_lb_2_new").val());
                     }
-                    //$("#CenPH_DSPFMT1_SS_lb_2_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
                     _00('Enter', event);
                 });
 
@@ -2223,6 +2274,7 @@
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val());
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val());
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val() || $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val());
+                $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").val($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_DateValue").val());
 
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/y', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
                 $("#cust-reqesdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").datepicker("show"); });
@@ -2231,32 +2283,25 @@
                 $("#cust-reqesdate1").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").datepicker("show"); });
 
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/y', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
-                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new_selectdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker("show"); });
+                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new_selectdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").datepicker("show"); });
+
+                $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/y', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
+                $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new_selectdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").datepicker("show"); });
 
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").on('change', function() {
-                    //var date = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").val().split("/");
                     $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").val());
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_new").val());
                 });
                 $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").on('change', function() {
-                    //var date = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val().split("/");
                     $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val());
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val());
-                    //var coDob = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val().split("/"); 
-                    //var coDobModified = coDob[2] + "-" + coDob[0] + "-" + coDob[1];
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val(coDobModified);
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val(coDobModified);
+
                 });
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").on('change', function() {
-                    //var date = $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").val().split("/");
                     $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val());
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val());
-                    //var coDob = $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").val().split("/"); 
-                    //var coDobModified = coDob[2] + "-" + coDob[0] + "-" + coDob[1];
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val(coDobModified);
-                    //$("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val(coDobModified);
                 });
 
+                $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").on('change', function() {
+                    $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").val($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").val());
+                });
                 //Set SSN# on enter key press
                 $(window).keydown(function(event) {
                     var keycode = (event.keyCode ? event.keyCode : event.which);
