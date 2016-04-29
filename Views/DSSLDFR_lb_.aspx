@@ -192,6 +192,9 @@ var copyToAndFrom = {
 				
 			 if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
 			   $(".confirmation-outer-conatiner").show();
+			   $(".time-date").hide();
+			   $(".order-summary").hide();
+			   $(".table-data-content-container").hide();
                $("#yes").click(function (event) {
                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                    // _00('Enter',event);
