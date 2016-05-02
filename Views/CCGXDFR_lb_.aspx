@@ -1592,6 +1592,14 @@
             $('#comments').click(function (event) {
                     _00("F7", event);
                 });
+				
+			$('#insuranceacc tr td:nth-child(6), #insuranceacc tr td:nth-child(7)').each(function (i, col )
+			{
+				$(col).text($(col).text().trim());
+				$(col).css("text-align","right");
+			});
             });
+			
       </script>
+	  
     </asp:Content>
