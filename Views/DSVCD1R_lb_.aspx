@@ -284,7 +284,9 @@
               "CenPH__lb_RCDDTL1__lb_DTTCD":"net",
               "CenPH__lb_RCDDTL1_VDHBP3":"commision",
               "CenPH__lb_RCDDTL1__lb_1AXST":"status",
-              "CenPH__lb_RCDDTL1__lb_DQ1TX":"ref"
+              "CenPH__lb_RCDDTL1__lb_DQ1TX":"ref",
+              "CenPH_DdsConstant25":"date",
+              "CenPH__lb_RCDDTL1__lb__lb_TME":"time"
               
 
             },
@@ -293,11 +295,7 @@
           };
 
           $(document).ready(function() {
-            $("[name='date']").text($("[id$=_DdsConstant25]").text());
-            $("[name='time']").text($("[id$=RCDDTL1__lb__lb_TME]").text());
-
-
-            if ($("#CenPH__lb_RCDDTL1").length > 0) {
+         if ($("#CenPH__lb_RCDDTL1").length > 0) {
 
               copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
 				}
