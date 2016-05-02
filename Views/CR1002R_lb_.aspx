@@ -95,6 +95,7 @@
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-text"> 
                     <!-- <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" /> -->
                     <input type="text" maxlength="9" data-tb-index="1" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_1_new" id="CenPH_DSPFMT1_SS_lb_1_new">
+                    <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_1_new_hidden" id="CenPH_DSPFMT1_SS_lb_1_new_hidden">
                     <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_1_new-show">Show</a> </span>
                     <input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT1_SS_lb_1_new">
                     <!-- <span></span> --> </div>
@@ -2133,6 +2134,23 @@
             }
         };
         $(document).ready(function() {
+          $('input:text[name="CenPH_DSPFMT1_SS_lb_1_new"]').keyup(function () {
+                $('input:hidden[name="CenPH_DSPFMT1_SS_lb_1_new_hidden"]').val($(this).val());
+                
+            });
+              document.onkeydown = keydown;
+            function keydown(evt) {
+                if (!evt) evt = event;
+                if (evt.keyCode == 115) {
+                    if ($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val().length > 0) {
+                        
+                        //console.log($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
+                        $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
+                        //console.log($("#CenPH_DSPFMT1_SS_lb_1").val());
+                        _00('F4', evt);
+                    }
+                }
+            }
             if ($("#CenPH_DSPFMT1_CRPHNB").length > 0) {
                 //Copy data from original fields to modernized fields
                 $("#first-view").show();
@@ -2142,7 +2160,7 @@
                         $("#"+i+"_new").parent().parent().parent().hide();
                     }
                 }
-                debugger
+                
                 if($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").length === 0) {
                     $("#def-date").hide();
                 } else {
@@ -2210,6 +2228,7 @@
                     _00('F6', event);
                 });
                 $('body').on('click', '#next', function(event) {
+                  debugger
                     if ($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val().length > 0) {
                         $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
                     } else {
@@ -2223,7 +2242,7 @@
                     }
                     _00('Enter', event);
                 });
-
+                
                 //Mask/Unmask SSN
                 $("#CenPH_DSPFMT1_SS_lb_2_new, #CenPH_DSPFMT1_SS_lb_1_new").ForceNumericOnly();
                 $("#CenPH_DSPFMT1_SS_lb_2_new").on("change keyup mouseup paste", function(event) {

@@ -210,6 +210,17 @@ var copyToAndFrom = {
 			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 		
 
+			$('#displayData tr td:nth-child(7)').each(function (i, col )
+			 {
+				$(col).text($(col).text().trim());
+				$(col).css("text-align","right");
+			 });
+			 $('#displayData tr td:nth-child(8)').each(function (i, col )
+			 {
+				$(col).text($(col).text().trim());
+				$(col).css("text-align","right");
+			 });
+				 
 		   //Next button click handler
             $("#next").click(function (event) {
                 var row = $("#displayData tbody tr.selected");
