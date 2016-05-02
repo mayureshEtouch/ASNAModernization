@@ -29,7 +29,7 @@
     <div class="content-grid mdl-grid">
       <div class="mdl-cell mdl-cell--8-col">
         <!-- Title -->
-        <span class="heading-h1">Display Account detail</span>
+        <span class="heading-h1">Display Account Detail</span>
       </div>
       <div class="mdl-cell mdl-cell--4-col pull-right">
         <!-- Navigation -->
@@ -340,7 +340,13 @@
                     <div class="mdl-cell mdl-cell--12-col" id="CenPH__lb_RCDDTL1__lb_1C2NB_div">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--1-col" style="margin:0"><span class="form-label">History:</span></div>
-                        <div  class="mdl-cell mdl-cell--10-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><span>30:</span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C2NB_new"></span><span>60:</span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C3NB_new"></span><span>90:</span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C4NB_new"></span>
+                        <div  class="mdl-cell mdl-cell--10-col" style="margin:0"> 
+                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                        <span>30: </span>
+                        <span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C2NB_new"></span>
+                        &nbsp;&nbsp;<span>60: </span>
+                        <span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C3NB_new"></span>
+                        &nbsp;&nbsp;<span>90: </span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C4NB_new"></span>
                         </span> </div>
                       </div>
 
@@ -568,7 +574,7 @@
                       i = i.split("+")[0];
                     }
                     if($("#"+i).length === 0 || $("#"+i).html() === "&nbsp;") {
-                      $("#"+i+"_div").hide();
+                      $("#"+i+"_new").hide();
                     }
                   }
                   copyData(copyToAndFromView);
