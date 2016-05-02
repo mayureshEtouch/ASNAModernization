@@ -78,7 +78,7 @@
                                         <span class="summary-table-title pull-right">Ex</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
-                                        <input type="text" id="txtex" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="10">
+                                        <input type="text" id="txtex" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
                                     </div>
                                      <div class="mdl-cell mdl-cell--1-col">
                                         <span class="summary-table-title pull-right" id="lbladd"></span>
