@@ -174,10 +174,26 @@
 		$("[name='date']").text($("[id$=_DdsConstant14]").text());
         $("[name='time']").text($("[id$=SFLCTL__lb__lb_TME]").text());
 		  
+		  var copyToAndFromData = {
+            "displayOnlyFields": {
+              "CenPH__lb_SFLCTL__lb_2ABCD": "number1",
+              "CenPH__lb_SFLCTL__lb_2AACD": "number2",
+             "CenPH__lb_SFLCTL__lb_PAXTX+CenPH__lb_SFLCTL__lb_PA2TX":"modelNumber",
+			 "CenPH__lb_SFLCTL__lb_PAXCD+CenPH__lb_SFLCTL__lb_CFATX":"productCat",
+			 "CenPH__lb_SFLCTL__lb_PBLNB+CenPH__lb_SFLCTL__lb_CECTX":"vendorNumber",
+			 "CenPH__lb_SFLCTL__lb_CA3QT":"totalAvail",
+			 "CenPH__lb_SFLCTL__lb_CDQQT":"excptn",
+			 "CenPH_DdsConstant14":"date",
+			 "CenPH__lb_SFLCTL__lb__lb_TME":"time"
+            },
+            "inputFields": {
+            }
+          };
+		  
 		  
 		if ($("#CenPH__lb_SFLCTL").length > 0) {
 		
-		
+			copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
 				// search box one keyup trigger 
 				$('body').on('keyup change', '#number1', function (event) {
 				  $('#CenPH__lb_SFLCTL__lb_2ABCD').val($(this).val());
@@ -201,28 +217,10 @@
 					
 				$('#number1').val($('#CenPH__lb_SFLCTL__lb_2ABCD').val());
 				$('#number2').val($('#CenPH__lb_SFLCTL__lb_2AACD').val());
-				
-			    var modelNumber = $("#CenPH__lb_SFLCTL").find("span:contains('Model Number')").next().html();
-				modelNumber += "&nbsp;&nbsp;" + $("#CenPH__lb_SFLCTL").find("span:contains('Model Number')").next().next().html();
-				
-				var productCat = $("#CenPH__lb_SFLCTL").find("span:contains('Product Category')").next().html();
-				 productCat += "&nbsp;&nbsp;" + $("#CenPH__lb_SFLCTL").find("span:contains('Product Category')").next().next().html();
-				
-				var vendorNumber = $("#CenPH__lb_SFLCTL").find("span:contains('Vendor Number')").next().html();
-					 vendorNumber += "&nbsp;&nbsp;" + $("#CenPH__lb_SFLCTL").find("span:contains('Vendor Number')").next().next().html();
-				
-				
-				$("#totalAvail").html($("#CenPH__lb_SFLCTL__lb_CA3QT").html());
-				$("#excptn").html($("#CenPH__lb_SFLCTL__lb_CDQQT").html());
-					
-				$("#modelNumber").html(modelNumber);
-			
-				$("#vendorNumber").html(vendorNumber);
-				$("#productCat").html(productCat);	
-			
+							
 				var dataMergeIndices = [[0], [1], [2], [3], [4]];
 				generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-			
+			  $('#displayData tbody tr').prop('tabindex',''); 
 
 		}
 		  
