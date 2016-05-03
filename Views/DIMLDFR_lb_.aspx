@@ -263,6 +263,8 @@ generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE
              $("#" + a[0] + "\\." + a[1]).val(value);
              _00('Enter', event);
            }
+		   
+		   $('table tbody tr').prop('tabindex','');
 
          });
        </script>

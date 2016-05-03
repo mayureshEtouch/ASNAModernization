@@ -39,26 +39,8 @@
                         </div>
                     </div>
                 </section>
-                <section class="progress-bar">
-                    <div class="progress-bar-wrapper">
-                        <ul class="progress-bar-main">
-                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                            <li class="progress-bar-divider-first">
-
-                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                            <li class="progress-bar-divider">
-
-                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                            <li class="progress-bar-divider">
-
-                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                            <li class="progress-bar-divider">
-
-                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
-                        </ul>
-                    </div>
-                </section>
-                <section class="table-data-content-container filter-field-container">
+                
+                <section class="table-data-content-container filter-field-container mrgnTp16">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div class="table-container filter-search-container">
@@ -71,7 +53,7 @@
                                             <div class="mdl-cell mdl-cell--1-col" >
                                                 <span class="summary-table-title pull-right" >To </span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co">
                                                 <input type="text" id="to" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="3">
                                             </div>
                                             <div class="mdl-cell mdl-cell--2-col">
@@ -84,13 +66,13 @@
                                             <div class="mdl-cell mdl-cell--1-col" style="margin-left: 4px;">
                                                 <span class="summary-table-title pull-right">From</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co">
                                                 <input type="text" id="from" class="mdl-textfield__input" data-tb-index="2" maxlength="3">
                                             </div>
-                                            <div class="mdl-cell mdl-cell--1-col" style="margin-left: 4px;">
+                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" >
                                                 <span class="summary-table-title pull-right">Location</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co" style="margin-left: 15px">
                                                 <input type="text" id="location" class="mdl-textfield__input" data-tb-index="3" maxlength="3">
                                             </div>                        
                                         </div>
@@ -106,10 +88,7 @@
                     </div>
                 </section>
 
-                <section class="add-item">
-                   
-                </section>
-                 <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                 <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
                             <div style="overflow: auto;" class="table-container">

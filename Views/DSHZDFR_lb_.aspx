@@ -39,26 +39,8 @@
                 </div>
             </div>
         </section>
-        <section class="progress-bar">
-            <div class="progress-bar-wrapper">
-                <ul class="progress-bar-main">
-                    <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                    <li class="progress-bar-divider-first">
-
-                    <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                    <li class="progress-bar-divider">
-
-                    <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                    <li class="progress-bar-divider">
-
-                    <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                    <li class="progress-bar-divider">
-
-                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
-                </ul>
-            </div>
-        </section>
-        <section class="table-data-content-container filter-field-container">
+       
+        <section class="table-data-content-container filter-field-container mrgnTp16">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container filter-search-container">
@@ -71,15 +53,15 @@
                                     <div class="mdl-cell mdl-cell--2-col" style="width: 120px;">
                                         <span class="summary-table-title pull-right">Model Number</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--4-col" id="filter-by-co">
+                                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col" id="filter-by-co">
                                         <input type="text" id="modelNumber" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span class="summary-table-title pull-right">Status</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--4-col" id="filter-by-co">
+                                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col" id="filter-by-co">
                                         <%--<input type="text" id="status" class="mdl-textfield__input" data-tb-index="2">--%>
-                                        <select name="status" id="status" data-tb-index="2" style="margin: 2%"></select>
+                                        <select name="status" id="status" data-tb-index="2" style="margin-top: 8px;" ></select>
                                     </div>
                                 </div>
                             </div>
@@ -517,7 +499,7 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-    <script type="text/javascript">
+   <script type="text/javascript">
 
         var copyToAndFrom = {
             "displayOnlyFields": {
@@ -540,7 +522,6 @@
             else if ($(new_fields[i]) && $(new_fields[i]).is('span')) {
                 $(new_fields[i]).text($.trim($(old_fields[i]).text()));
             } else if ($(new_fields[i]) && $(new_fields[i]).is('select')) {
-                console.log("hello");
                 if ($(old_fields[i]).is('select')) {
                     var $options = $(old_fields[i] + " > option").clone().map(function (index) {
                         if ($(this).val() != '?') {
@@ -594,7 +575,6 @@
 			if (idDiv){
 				count = idDiv.replace(/\D/g,"");
 			}
-			console.log("count "+count);
 			  var row = "";
                 var mNumberSelector = "#CenPH__lb_SFLRCD__lb_1AXTX\\.",
                     mDespSelector = "#CenPH__lb_SFLRCD__lb_1A2TX\\.",
@@ -603,12 +583,15 @@
                     statusSelector = "#CenPH__lb_SFLRCD__lb_1APST\\.",
                     quantitySelector = "#CenPH__lb_SFLRCD__lb_1A6NB\\.";
               var selectId ="";
-                var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
-				 selectId = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').children('select').attr('id');
+              var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
+                  var divid = $(this);
+                  var selectId = $(divid.children('select')).attr('id');
+				 //selectId = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').children('select').attr('id');
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         
                         row = '';
                         row += '<tr data-selectid=' + selectId + '>';
+                        //console.log(selectId);
 						row += '<td>' + (($(mNumberSelector + count).length > 0) ? $(mNumberSelector + count).html() : '&nbsp;') + '</td>';
 						row += '<td>' + (($(mDespSelector + count).length > 0) ? $(mDespSelector + count).html() : '&nbsp;') + '</td>';
 						row += '<td>' + (($(companySelector + count).length > 0) ? $(companySelector + count).html() : '&nbsp;') + '</td>';
@@ -632,6 +615,36 @@
                 $("#tblInventory tbody tr:even").css("background-color", "#fff");
                 $("#tblInventory tbody tr:odd").css("background-color", "#f9f9f9");
               
+                $('body').on('dblclick', '#tblInventory tbody tr', function (event) {
+                    selectCusotmer(this, "1", event);
+                });
+                var selectRowId = "";
+                $("#" + selectRowId).click(function (event) {
+                    var row = $("#tblInventory tbody tr.selected");
+                    selectCusotmer(row, "1", event);
+                });
+                $("#tblInventory tbody tr:first").css("background-color", "#d8d8d8");
+                jQuery.tableNavigation({
+                    "onRowChange": function (output) {
+                        if (output) {
+                            var selectId = $(output.row).data('selectid');
+                            if (output.r && output.keycode === "40") {
+                                _00("PgDn", event);
+                                generateTable("top-to-bottom");
+                            } else if (output.r && output.keycode === "38" && !selectId) {
+                                _00("PgUp", event);
+                                generateTable("bottom-to-top");
+                            } else {
+                                $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                                $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                                $(output.row).css({
+                                    "background-color": "#d8d8d8"
+                                });
+                            }
+                        }
+                    }
+                });
+
             }
 		
 			generateTable();
@@ -658,9 +671,7 @@
 	
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
-				console.log("selectId "+selectId);
                 a = selectId.split(".");
-				console.log("a "+a);
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }

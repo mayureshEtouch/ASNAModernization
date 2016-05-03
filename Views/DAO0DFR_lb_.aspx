@@ -39,26 +39,8 @@
                         </div>
                     </div>
                 </section>
-                <section class="progress-bar">
-                    <div class="progress-bar-wrapper">
-                        <ul class="progress-bar-main">
-                            <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                            <li class="progress-bar-divider-first">
-
-                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                            <li class="progress-bar-divider">
-
-                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                            <li class="progress-bar-divider">
-
-                            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                            <li class="progress-bar-divider">
-
-                            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
-                        </ul>
-                    </div>
-                </section>
-                <section class="table-data-content-container filter-field-container">
+                
+                <section class="table-data-content-container filter-field-container mrgnTp16">
                                     <div class="table-data-wrapper">
                                         <div class="table-data-maincontainer">
                                             <div class="table-container filter-search-container">
@@ -74,8 +56,8 @@
                                                             <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
                                                                 <input type="text" id="product_category" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="3">
                                                             </div>
-                                                            <div class="mdl-cell mdl-cell--9-col" id="">
-                                                                <span id="product_name" class="summary-txt" style="padding-top: 12px; padding-left: 5%;"></span>
+                                                            <div class="mdl-cell mdl-cell--5-col" id="">
+                                                                <span id="product_name" class="summary-txt" style="padding-top: 12px; padding-left: 4%;"></span>
                                                                 
                                                             </div>                        
                                                         </div>

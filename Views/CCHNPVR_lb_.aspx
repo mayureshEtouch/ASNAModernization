@@ -77,7 +77,7 @@
                                   <!-- 4 col starts here -->
                                   <div class="mdl-cell mdl-cell--4-col">
                                     <div class="content-grid mdl-grid">
-                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Employee:</span> </div>
+                                <div  class="mdl-cell mdl-cell--5-col"><span class="form-label">Employee:</span> </div>
                                 <div  class="mdl-cell mdl-cell--7-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input maxlength="5" type="text" class="mdl-textfield__input" id="employee_id" size="10" data-tb-index="1"/></span> </div>
                             </div>
                                   </div>
@@ -134,10 +134,10 @@
                                 <!-- 4 col starts here -->
                                 <div class="mdl-cell mdl-cell--4-col">
                                     <div class="content-grid mdl-grid">
-                                <div  class="mdl-cell mdl-cell--5-col"> <span class="form-label">Insurance A/H:</span> </div>
+                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"> <span class="form-label">Insurance A/H:</span> </div>
                                 <div  class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="insurance" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="5"/></span> </div>
-                                <div  class="mdl-cell mdl-cell--2-col"> <span class="form-label">C/L:</span> </div>
-                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="cl" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="6"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--2-col" style="padding-left: 20px;"> <span class="form-label">C/L:</span> </div>
+                                <div  class="mdl-cell mdl-cell--2-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="cl" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="6"/></span> </div>
                             </div>
                                   </div>
                                   <!-- 4 col ends here -->
@@ -145,9 +145,9 @@
                                   <!-- 4 col starts here -->
                                   <div class="mdl-cell mdl-cell--4-col">
                                     <div class="content-grid mdl-grid">
-                                <div  class="mdl-cell mdl-cell--2-col"> <span class="form-label">Prop:</span> </div>
-                                <div  class="mdl-cell mdl-cell--4-col"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="prop" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7"/></span> </div>
-                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0; padding-left: 5px;"> <span class="form-label">U-Emp:</span> </div>
+                                <div  class="mdl-cell mdl-cell--1-col" style="margin: 8px 5px 8px 0"> <span class="form-label">Prop:</span> </div>
+                                <div  class="mdl-cell mdl-cell--3-col"  style="margin: 8px 0;"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="prop" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7"/></span> </div>
+                                <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0; padding-left: 15px;"> <span class="form-label">U-Emp:</span> </div>
                                 <div  class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px -8px;"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="u_emp" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="8"/></span> </div>
                             </div>
                                   </div>

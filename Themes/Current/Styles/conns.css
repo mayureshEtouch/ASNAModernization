@@ -1422,6 +1422,12 @@ body div, body span, body textarea {
 
 /* New classes 13 April 2016 starts here */
 
+/* Margin top 16px class */
+.mrgnTp16 {
+	margin-top: 16px;
+}
+
+
 /* Media queries starts here */
 
 
