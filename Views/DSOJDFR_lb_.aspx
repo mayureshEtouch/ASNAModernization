@@ -84,7 +84,7 @@
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+														<%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>--%>
 												</div>
 										</div>
 								</div>
