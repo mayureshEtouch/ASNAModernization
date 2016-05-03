@@ -2147,10 +2147,17 @@
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
                         $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1").val());
-                        _00('F4', evt);
+                       
                     }
+                    else{
+                      $("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val($("#CenPH_DSPFMT1_SS_lb_1").val());
+                      $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
+
+                    }
+                     _00('F4', evt);
                 }
             }
+
             if ($("#CenPH_DSPFMT1_CRPHNB").length > 0) {
                 //Copy data from original fields to modernized fields
                 $("#first-view").show();
@@ -2228,7 +2235,7 @@
                     _00('F6', event);
                 });
                 $('body').on('click', '#next', function(event) {
-                  debugger
+                  
                     if ($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val().length > 0) {
                         $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
                     } else {
