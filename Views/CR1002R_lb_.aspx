@@ -94,7 +94,7 @@
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">S.S.#:</span> </div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-text"> 
                     <!-- <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking validateSSNLength" onkeyup="validateInput(this)" size="15" maxlength="9" style="width: 50% !important;" /> -->
-                    <input type="text" maxlength="9" data-tb-index="1" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_1_new" id="CenPH_DSPFMT1_SS_lb_1_new">
+                    <input type="text" maxlength="9" data-tb-index="1" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_1_new" id="CenPH_DSPFMT1_SS_lb_1_new" autocomplete="off">
                     <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_1_new_hidden" id="CenPH_DSPFMT1_SS_lb_1_new_hidden">
                     <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_1_new-show">Show</a> </span>
                     <input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT1_SS_lb_1_new">
@@ -138,7 +138,7 @@
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Co-Debtor:</span> </div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text">
-                    <input type="text" class="mdl-textfield__input" data-tb-index="3" size="12" id="CenPH_DSPFMT1_CRSPNB_new" maxlength="30" />
+                    <input type="text" class="mdl-textfield__input" data-tb-index="3" size="12" id="CenPH_DSPFMT1_CRSPNB_new" maxlength="30" autocomplete="off" />
                     </span> </div>
                 </div>
               </div>
