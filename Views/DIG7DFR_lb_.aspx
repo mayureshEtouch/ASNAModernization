@@ -174,6 +174,7 @@
              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
              generateTableAndApplyInfiniteScroll("model_details", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+             $('#model_details tbody tr').prop('tabindex',''); 
              $("#to, #location").ForceNumericOnly();
            });
            </script>  

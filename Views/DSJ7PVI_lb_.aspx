@@ -701,18 +701,17 @@
               left: 28% !important;
               top: 50% !important;
             }
+			#CenPH__lb_RCDDTL1__lb_1CGC_lb_,  #CenPH__lb_RCDDTL1__lb_1P5N_lb_ {
+				position: relative !important;
+				left: 0 !important;
+				top: 0 !important;
+			}
            #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
             text-transform: uppercase;
-            position: absolute;
-            left: 109px !important;
-            top: 20px !important;
             width: 85px !important;
            }
            #CenPH__lb_RCDDTL1__lb_1P5N_lb_{
-            position: absolute;
-            left: 332px !important;
-            top: 20px !important;
-            width: 98px !important;
+            width: 85px !important;
            }
         </style>
     </asp:Content>
