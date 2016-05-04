@@ -4,7 +4,20 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 5/4/2016 at 1:14 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH3BK, file QDDSSRC, member CCM9PVR# --%>
-
+ <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+		 
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+	    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+	    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/tooltips.js")%>"></script>
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+		
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +35,184 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+		<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row"> 
+						<!-- Title --> 
+						 <span class="mdl-layout-title logo-icon"></span>
+						<!--<span class="mdl-layout-heading">StoreFront</span>--> 
+						<div class="mdl-layout-spacer"></div>
+						 <span class="close-icon" event-data="F3"><i class="material-icons md-15 close "></i></span>
+						 
+				</div>
+		</header>
+		<main class="mdl-layout__content">
+		<section class="time-date">
+				<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--9-col"> 
+								<!-- Title --> 
+								<span class="heading-h1">Customer Has A Valid Application</span> </div>
+						<div class="mdl-cell mdl-cell--3-col pull-right"> 
+								<!-- Navigation --> 
+								<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCM9PVR</span></div>
+				</div>
+		</section>
+		<section class="form-data">
+                <div class="form-data-wrapper" style="padding-bottom:0;">
+								<!-- content-grid mdl-grid starts here -->
+							<div class="content-grid mdl-grid">
+				  			
+													<div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--4-col-tablet" style="margin:0 0 0 15px">
+                           		<span class="form-label">Application:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
+                           		<span class="form-text" id="application" ></span>
+                        	</div>
+                   	
+									
+													<div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet" style="margin:0">
+                           		<span class="form-label">(<span id="applicationId"></span> )</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="text-align:right;">
+                           		<span class="form-text"  id="date" ></span>
+                        	</div>
+                   	
+							</div>
+							<!-- content-grid mdl-grid ends here -->
+							
+							<!-- content-grid mdl-grid starts here -->
+							<div class="content-grid mdl-grid">
+							<!-- col starts here -->
+				  	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+													<div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                           		<span class="form-label">For:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet" style="margin:0 0 0 -4px">
+                           		<span class="form-text" id="for" ></span>
+                        	</div>
+                   	</div>
+                  </div>
+									<!-- col ends here -->
+				</div>
+							<!-- content-grid mdl-grid ends here -->
+							
+									<!-- content-grid mdl-grid starts here -->
+							<div class="content-grid mdl-grid">
+							<!-- col starts here -->
+				  	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                        	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="margin:0;">
+                           		<span class="form-text" id="message"></span>
+                        	</div>
+                   	</div>
+                  </div>
+									<!-- col ends here -->
+				</div>
+							<!-- content-grid mdl-grid ends here -->
+							
+							
+							
+
+				
+			
+				<div class="button-container" style="padding-bottom: 5px;">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop modal-button-container">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span>
+						</div>
+						<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right modal-button-container">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+						</div>
+					</div>
+				</div>
+		  </div>
+            </section>
+		
+		</main>
+		<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+        <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none">
+		<script type="text/javascript">
+		var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1ITNB": "application",
+					 "CenPH__lb_RCDDTL1__lb_1K0ST":"applicationId",
+					  "CenPH__lb_RCDDTL1_V1AGDT":"date",
+					  "CenPH__lb_RCDDTL1__lb_DALTX+CenPH__lb_RCDDTL1__lb_1ULTX":"for",
+					  "CenPH_DdsConstant3+CenPH_DdsConstant4":"message"
+
+                },
+                "inputFields": {  }
+            }
+
+			
+        $(document).ready(function () {
+			copyData(copyToAndFrom, "");
+            
+			if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
+		   
+		   $("#exit").click(function(event){
+				_00('F3',event);
+		   });
+		   
+		   $("#submit").click(function(event){
+				_00('Enter',event);
+		   });
+        });
+
+    </script>
+    <style>
+        #__Page_PopUp {
+            min-width: 450px !important;
+            width: 450px !important;
+			left: 50% !important;
+			margin-left: -225px;
+        }
+		#__Page_PopUp > tr:first-child {
+			display: none;
+		}
+
+		#__Page_PopUp .DdsInlinePopUpTitle {
+			height: 0;
+		}
+       
+        .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+width: 100% !important;
+}
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+		.heading-h1 {
+			font-size: 18px;
+		}
+    </style>
             
       <%--  CA: PMT Appl Being Worked Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
