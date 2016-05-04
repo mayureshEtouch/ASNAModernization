@@ -103,10 +103,10 @@
                                 <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Email:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-									<input type="text" id="cust-email" style="text-transform: lowercase;" name="cust-email" class="full-input" data-tb-index="8">
+									<input type="text" id="cust-email" style="text-transform: lowercase; width:500px; " name="cust-email" class="full-input" data-tb-index="9" maxlength="60">
 									</span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid content-row-height">
+                                <div class="content-grid mdl-grid content-row-height" style="display:none" id="additionalAddress">
                                     <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
@@ -120,9 +120,9 @@
                                     </div>
                                     
                                 </div>
-								<div class="content-grid mdl-grid content-row-height">
+								<div class="content-grid mdl-grid content-row-height" style="display:none" id="notesDisplay">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Notes ?</span> </div>
-                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="notes" data-upgraded=",MaterialTextfield"></span> </div>
+                                    <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="notesDetails" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
                                 <!-- <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">On:</span> </div>
@@ -145,12 +145,11 @@
                                                                 </span> </span>
                                     </div>
                                 </div>
-                                <div class="content-grid mdl-grid content-row-height">
-                                </div>
+                                
                                 <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Mailing List ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield"> 
-                                <select name="" id="mailing-list" data-tb-index="9">
+                                <select name="" id="mailing-list" data-tb-index="8">
                                     <option value=" " selected="selected"> Please Choose </option>
                                     <option value="Y"> Y - Yes </option>
                                     <option value="0"> 0 - 12 Months COP Ap </option>
@@ -184,6 +183,8 @@
                                     <option value="X"> X - Other </option>
                                 </select>
                              </span> </div>
+                                </div>
+								<div class="content-grid mdl-grid content-row-height">
                                 </div>
                                 
                                 <div class="content-grid mdl-grid content-row-height">
@@ -241,8 +242,10 @@
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
               </div>
           </div>
+		     <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
         </div>
     </div>
+	
     <!-- Modified HTML code ends here -->
 </body>
         <div id="Div1" style="display:none;">
@@ -1109,11 +1112,11 @@
             var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH__lb_RCDDTL1__lb_1ABST+CenPH__lb_RCDDTL1__lb_DDTTX": "cust-type",
-                    "CenPH__lb_RCDDTL1__lb_DDVTX+CenPH__lb_RCDDTL1__lb_DDXTX": "cust-name",
+                    "CenPH__lb_RCDDTL1__lb_DDVTX+CenPH__lb_RCDDTL1__lb_DDWTX+CenPH__lb_RCDDTL1__lb_DDXTX": "cust-name",
                     "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST": "cust-zipcode",
                     "CenPH__lb_RCDDTL1__lb_DBRST": "additional-add",
                     "CenPH__lb_RCDDTL1__lb_DTQST": "extra-phone",
-					"CenPH__lb_RCDDTL1__lb_DBQST": "notes",
+					"CenPH__lb_RCDDTL1__lb_DBQST": "notesDetails",
                     "CenPH__lb_RCDDTL1__lb_1AAVN": "last-changed-by",
                     "CenPH__lb_RCDDTL1_V1AGDT": "last-changed-on",
                     "CenPH__lb_RCDDTL1__lb_1ABTM": "last-changed-at"
@@ -1133,7 +1136,19 @@
             $(document).ready(function() {
 				$(".simplePopup").css({"left": "323px", "height": "30px;"});
 				
-
+				if($("CenPH__lb_RCDDTL1__lb_DBRST").length ==0 ){
+					//$("additional-add").text($("CenPH__lb_RCDDTL1__lb_DBRST").text());
+					$("additionalAddress").hide();
+					
+				}
+				
+				
+				if($("CenPH__lb_RCDDTL1__lb_DBQST").length == 0 ){
+					//$("notesDetails").text($("CenPH__lb_RCDDTL1__lb_DBQST").text());
+					$("notesDisplay").hide();
+					
+				}
+				
                 //Set page details
                 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                   $(".confirmation-outer-conatiner").hide();
@@ -1146,6 +1161,15 @@
                   $(".order-summary,.form-data,.time-date").hide();
                 }
                 
+				 if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+			   } else {
+				   $(".simplePopupBackground1").hide();
+			   }
+			   $("body").on("click", ".simplePopupClose", function() {
+				   $(".simplePopupBackground1").hide();
+			   });
+			   
 				$("#state").text($("[id$=CenPH__lb_RCDDTL1__lb_DAQTX]").text());
 				$("#city").text($("[id$=CenPH__lb_RCDDTL1__lb_DADST]").text());
                 $("#yes").click(function (event) {

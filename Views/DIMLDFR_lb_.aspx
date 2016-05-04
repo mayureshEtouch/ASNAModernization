@@ -244,7 +244,7 @@ $('#number2').ForceNumericOnly();
 /*setDateTime(dateFieldId,timeFieldId)*/
 setDateTime('CenPH_DdsConstant11','CenPH__lb_SFLCTL__lb__lb_TME');
 
-var dataMergeIndices = [[0], [1], [2], [3],[6, "<br>", 8],[4],[9],[5, "<br>", 7]];
+var dataMergeIndices = [[0], [1], [2], [3],[6, "<br>", 8, "<br>","<br>", 10],[4],[9],[5, "<br>", 7]];
 generateTableAndApplyInfiniteScroll("customerAddress", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 // Search by Customer data table record mapping
 //generateTableAddressess("top-to-bottom");
