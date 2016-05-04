@@ -76,7 +76,7 @@
                           <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                               <span class="form-label">Reference #:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col" style="margin:0 0 0 -3px">
+                          <div class="mdl-cell mdl-cell--6-col" style="margin:0 0 0 5px">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new"><!-- <input id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="9"  data-tb-index="2"/> --></span>
                           </div>
                     </div>
@@ -150,8 +150,14 @@
                           </div>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--6-col" style="padding:0">
+                  <div class="mdl-cell mdl-cell--4-col" style="padding:0">
                       <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                              <span class="form-label" style="font-weight: normal" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
+                          </div>
+						     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                              <!-- <span class="form-label" style="font-weight: normal" id="CenPH__lb_RCDDTL1__lb_DADST_new">TX</span> -->
+                          </div>
                     </div>
                   </div>
               </div>
@@ -610,7 +616,8 @@
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
-                    
+                    "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST":"CenPH__lb_RCDDTL1__lb_DAQTX_new"
+                    //"CenPH__lb_RCDDTL1__lb_DADST": "CenPH__lb_RCDDTL1__lb_DADST_new"
                 },
                 "inputFields": {
                    //"CenPH__lb_RCDDTL1__lb_1CGC_lb_": "CenPH__lb_RCDDTL1__lb_1CGC_lb_new",
@@ -707,11 +714,11 @@
               left: 28% !important;
               top: 50% !important;
             }
-			     #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
-				    position: relative !important;
-				    left: 0 !important;
-				    top: 0 !important;
-			     }
+           #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
+            position: relative !important;
+            left: 0 !important;
+            top: 0 !important;
+           }
            #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
             text-transform: uppercase;
             width: 85px !important;
