@@ -171,11 +171,14 @@
             </div>
           </div>
         </div> -->
-        <div class="button-container" style="padding-bottom: 5px;">
+       <div class="button-container" style="padding-bottom: 5px;">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-left modal-button-container">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop pull-left modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-tb-index="7" tabindex="7">Previous</span>
-            </div><div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right modal-button-container">
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-left modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt1" data-tb-index="7" tabindex="7">Prompt</span>
+            </div><div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-tb-index="7" tabindex="7">Submit</span>
             </div>
           </div>
@@ -642,6 +645,9 @@
                 });
               $('#exit').click(function (event) {
                     _00("F3", event);
+                });
+              $('#prompt1').click(function (event) {
+                    _00('F4', event);
                 });
               if($(".simplePopupClose").length > 0) {
                      $(".simplePopupBackground1").show();
