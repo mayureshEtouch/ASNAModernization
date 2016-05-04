@@ -34,8 +34,8 @@
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
                             <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCHNPVR</span>
-                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                            <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                         </div>
                     </div>
                 </section>
@@ -242,8 +242,7 @@
                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
                      <thead>
                               <tr>
-                                <th width="6%">Category</th>
-                                <th>Model Number</th>
+                                <th width="6%" colspan="2">Category OR Model Number</th>
                                 <th width="6%">Quantity</th>
                                 <th>Value $</th>
                                 <th>Maint $</th>

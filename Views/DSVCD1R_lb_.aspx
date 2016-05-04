@@ -217,15 +217,16 @@
 
                   <div class="button-container">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12" data-tb-index="4">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="globalAvail" event-data="F6" data-tb-index="5">GLOBAL AVAIL</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="subRpl" data-tb-index="6" event-data="F7">SUB/RPL</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Xfers" data-tb-index="7" event-data="F17" >XFERS</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="8" event-data="F19">PO'S</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="7" event-data="F13">Warranty</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Xfers" data-tb-index="8" event-data="F17" >XFERS</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="9" event-data="F19">PO'S</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);" id="next" data-tb-index="9">next</span>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop pull-right">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);" id="next" data-tb-index="10">next</span>
                       </div>
                     </div>
                   </div>

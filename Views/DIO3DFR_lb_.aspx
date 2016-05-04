@@ -626,10 +626,11 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 1000px !important;
+                height: 100% !important;
             }
             .simplePopup {
               left: 28% !important;
+			  top: 25% !important;
             }
             #previous-page, #next-page{
               margin-top:7px;
