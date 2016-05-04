@@ -677,14 +677,19 @@
             });
       </script>
       <style>
-           #__Page_PopUp {
+           /*#__Page_PopUp {
             min-width: 450px !important;
             width: 40% !important;
             left: 50% !important;
             margin-left: -225px;
-                margin-top: 72px !important;
+                margin-top: -123px !important;
+            }*/
+            #__Page_PopUp {
+            min-width: 450px !important;
+            width: 45% !important;
+            margin-left: 8% !important;
+            margin-top: -123px !important;
             }
-            
             #__Page_PopUp > tr:first-child {
               display: none;
             }
@@ -709,11 +714,11 @@
               left: 28% !important;
               top: 50% !important;
             }
-			     #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
-				    position: relative !important;
-				    left: 0 !important;
-				    top: 0 !important;
-			     }
+           #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
+            position: relative !important;
+            left: 0 !important;
+            top: 0 !important;
+           }
            #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
             text-transform: uppercase;
             width: 85px !important;
