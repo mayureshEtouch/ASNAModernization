@@ -106,7 +106,7 @@
 									<input type="text" id="cust-email" style="text-transform: lowercase; width:500px; " name="cust-email" class="full-input" data-tb-index="9" maxlength="60">
 									</span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid content-row-height" style="display:none" id="additionalAddress">
+                                <div class="content-grid mdl-grid content-row-height" id="additionalAddress">
                                     <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
@@ -120,7 +120,7 @@
                                     </div>
                                     
                                 </div>
-								<div class="content-grid mdl-grid content-row-height" style="display:none" id="notesDisplay">
+								<div class="content-grid mdl-grid content-row-height" id="notesDisplay">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Notes ?</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="notesDetails" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
@@ -1136,16 +1136,14 @@
             $(document).ready(function() {
 				$(".simplePopup").css({"left": "323px", "height": "30px;"});
 				
-				if($("CenPH__lb_RCDDTL1__lb_DBRST").length ==0 ){
-					//$("additional-add").text($("CenPH__lb_RCDDTL1__lb_DBRST").text());
-					$("additionalAddress").hide();
+				if($("#CenPH__lb_RCDDTL1__lb_DBRST").length ==0 ){
+					$("#additionalAddress").hide();
 					
 				}
 				
 				
-				if($("CenPH__lb_RCDDTL1__lb_DBQST").length == 0 ){
-					//$("notesDetails").text($("CenPH__lb_RCDDTL1__lb_DBQST").text());
-					$("notesDisplay").hide();
+				if($("#CenPH__lb_RCDDTL1__lb_DBQST").length == 0 ){
+					$("#notesDisplay").hide();
 					
 				}
 				
