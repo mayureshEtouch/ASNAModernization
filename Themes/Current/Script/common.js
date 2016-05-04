@@ -52,7 +52,7 @@ var generateTableWithoutSpanIndex = function(recordCount, tableId, direction, ig
             if($("#CenPH__lb_SFLRCD_0").length === 0) {
                 $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
             }
-            if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+            if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1  || $("#CenPH__lb_SFLRCD_End").html().indexOf("+") !== -1) {
                 $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
             }
             /*if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
@@ -98,7 +98,7 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
             if($("#CenPH__lb_SFLRCD_0").length === 0) {
                 $("#" + tableId).after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
             }
-            if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+            if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1 || $("#CenPH__lb_SFLRCD_End").html().indexOf("+") !== -1) {
                 $("#" + tableId).after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
             }
             /*if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
