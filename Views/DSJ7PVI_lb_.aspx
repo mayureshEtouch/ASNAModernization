@@ -670,19 +670,14 @@
             });
       </script>
       <style>
-           /*#__Page_PopUp {
+           #__Page_PopUp {
             min-width: 450px !important;
             width: 40% !important;
             left: 50% !important;
             margin-left: -225px;
-                margin-top: -123px !important;
-            }*/
-            #__Page_PopUp {
-            min-width: 450px !important;
-            width: 45% !important;
-            margin-left: 8% !important;
-            margin-top: -123px !important;
+                margin-top: 72px !important;
             }
+            
             #__Page_PopUp > tr:first-child {
               display: none;
             }
