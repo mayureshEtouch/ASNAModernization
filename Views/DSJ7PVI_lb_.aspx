@@ -76,7 +76,7 @@
                           <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                               <span class="form-label">Reference #:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col" style="margin:0 0 0 -3px">
+                          <div class="mdl-cell mdl-cell--6-col" style="margin:0 0 0 5px">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new"><!-- <input id="CenPH__lb_RCDDTL1__lb_1P5N_lb_new" type="text" class="mdl-textfield__input" size="15" maxlength="9"  data-tb-index="2"/> --></span>
                           </div>
                     </div>
@@ -150,8 +150,14 @@
                           </div>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--6-col" style="padding:0">
+                  <div class="mdl-cell mdl-cell--4-col" style="padding:0">
                       <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                              <span class="form-label" style="font-weight: normal">City</span>
+                          </div>
+						     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
+                              <span class="form-label" style="font-weight: normal">State</span>
+                          </div>
                     </div>
                   </div>
               </div>
