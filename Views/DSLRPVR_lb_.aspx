@@ -104,13 +104,18 @@
                   </div>
                   <div class="mdl-cell mdl-cell--12-col" style="padding:0"></div>
 				</div>
-				<div class="button-container" style="padding-bottom: 5px;">
-					<div class="content-grid mdl-grid">
-						<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</button>
-						</div>
-					</div>
-				</div>
+			
+				  <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                                </div>
+                            </div>
+                  </div>
+						
 		  </div>
             </section>
 		
@@ -165,7 +170,14 @@ var copyToAndFrom = {
 
 			
 		$('#password').val($('#CenPH__lb_RCDDTL1__lb_1Q2TX').val());
-		 
+		
+		$("#previous").click(function (event) {
+			_00('F12', event);
+		});
+		  
+		$("#submit").click(function (event){
+			_00('Enter',event);
+		});  
 		  
    });
 </script>
