@@ -117,11 +117,11 @@
                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="model_details" data-upgraded=",MaterialDataTable">
                      <thead>
                               <tr>
-                                <th>Location</th>
+                                <th>To Location</th>
                                 <th>Model Number</th>
                                 <th>Date</th>
-                                <th>From</th>
-                                <th>Location</th>
+                                <th>From Company</th>
+                                <th>From Location</th>
                                 <th>Type</th>
                                 <th>Req.</th>
                                 <th>OK'd</th>
