@@ -152,11 +152,11 @@
                   </div>
                   <div class="mdl-cell mdl-cell--4-col" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                              <span class="form-label" style="font-weight: normal">City</span>
+                          <div class="mdl-cell mdl-cell--12-col" style="margin:0">
+                              <span class="form-label" style="font-weight: normal" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
                           </div>
 						     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                              <span class="form-label" style="font-weight: normal">State</span>
+                              <!-- <span class="form-label" style="font-weight: normal" id="CenPH__lb_RCDDTL1__lb_DADST_new">TX</span> -->
                           </div>
                     </div>
                   </div>
@@ -616,7 +616,8 @@
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
-                    
+                    "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST":"CenPH__lb_RCDDTL1__lb_DAQTX_new"
+                    //"CenPH__lb_RCDDTL1__lb_DADST": "CenPH__lb_RCDDTL1__lb_DADST_new"
                 },
                 "inputFields": {
                    //"CenPH__lb_RCDDTL1__lb_1CGC_lb_": "CenPH__lb_RCDDTL1__lb_1CGC_lb_new",
