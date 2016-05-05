@@ -165,6 +165,7 @@
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">APR:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="apr"></span>
+                                        <span >%</span>
                                     </div>
                                 </div>
                             </div>
