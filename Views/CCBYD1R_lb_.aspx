@@ -1532,7 +1532,7 @@
                     "CenPH__lb_RCDDTL1__lb_1BFTX+CenPH__lb_RCDDTL1__lb_1BGTX": "CenPH__lb_RCDDTL1__lb_1BFTX_new",
                     "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DBLTX+CenPH__lb_RCDDTL1__lb_1BHTX": "CenPH__lb_RCDDTL1__lb_DAQTX_new",
                     "CenPH__lb_RCDDTL1__lb_DALTX": "CenPH__lb_RCDDTL1__lb_DALTX_new",
-                    "CenPH__lb_RCDDTL1__lb_DANTX+CenPH__lb_RCDDTL1__lb_DAOTX": "CenPH__lb_RCDDTL1__lb_DANTX_new",
+                    "CenPH__lb_RCDDTL1__lb_DALTX+CenPH__lb_RCDDTL1__lb_DANTX+CenPH__lb_RCDDTL1__lb_DAOTX": "CenPH__lb_RCDDTL1__lb_DANTX_new",
                     "CenPH__lb_RCDDTL1__lb_DBPTX+CenPH__lb_RCDDTL1__lb_DBMTX+CenPH__lb_RCDDTL1__lb_DAPTX": "CenPH__lb_RCDDTL1__lb_DBPTX_new",
                     "CenPH__lb_RCDDTL1__lb_1BXNB": "CenPH__lb_RCDDTL1__lb_1BXNB_new",
                     "CenPH__lb_RCDDTL1__lb_1APST": "CenPH__lb_RCDDTL1__lb_1APST_new",
@@ -1592,6 +1592,22 @@
                     }
                 }
                 copyData(copyToAndFrom, "");
+                if ($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1APDT").html().trim() === "00/00/0000") {
+                    console.log("helloo");
+                    $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1APDT_new").html("");
+
+                }
+                else {
+                    $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1APDT_new").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1APDT").html());
+                }
+
+                if ($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CHNB").html().trim() === "00/00/0000") {
+
+                    $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CHNB_new").html("");
+                }
+                else {
+                    $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CHNB_new").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CHNB_new").html());
+                }
             });
         </script>
     </asp:Content>
