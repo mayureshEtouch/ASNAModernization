@@ -58,47 +58,131 @@
                     </ul>
                 </div>
             </section>
-						<section class="order-summary">
-                <div class="order-summary-wrapper">
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Order Number</span>
-                            <span class="summary-txt" id="orderNumber"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Version Number</span>
-                            <span class="summary-txt" id="version" ></span>
-                        </div>
-						 <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Date</span>
-                            <span class="summary-txt" id="orderDate"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Location</span>
-                            <span class="summary-txt" id="location"></span>
-                        </div>
-						 
-                    </div>
-					<hr style="border-color: #c6c6c6; margin: 0px 0px; height: 1px;">
-					<div class="content-grid mdl-grid">   
-						  <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Customer Name</span>
-                            <span class="summary-txt" id="customerName"></span>
-                        </div>
-						 <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Customer ID</span>
-                            <span class="summary-txt" id="customerId"></span>
-                        </div>
-						<div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">Address</span>
-                            <span class="summary-txt" id ="address"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--3-col">
-                            <span class="summary-title">City</span>
-                            <span class="summary-txt" id="city"></span>
-                        </div>
-						 
-                    </div>
+						<section class="form-data">
+                <div class="form-data-wrapper">
+					 <div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Order Number</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="orderNumber"></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Version Number</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="version" ></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--4-col">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Date</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="orderDate"></span>
+								</div>
+							</div>
+						</div>
+					 </div>
+					 
+					 <div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Location</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="location"></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Customer Name</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="customerName" ></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--4-col">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Employee Name</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="employeeName"></span>
+								</div>
+							</div>
+						</div>
+					 </div>
+					 
+					 <div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Cash Option Time Status</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="status"></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Customer ID</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="customerId" ></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="mdl-cell mdl-cell--4-col">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">Address</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="address"></span>
+								</div>
+							</div>
+						</div>
+					 </div>
+					 
+					 <div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-label">City</span>
+								</div>
+								<div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+									<span class="form-text pull-right" id="city"></span>
+								</div>
+							</div>
+						</div>
+						<div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+						</div>
+						<div class="mdl-cell mdl-cell--4-col">
+						</div>
+						
+					 </div>
+					
             	</div>
             </section>
 			
@@ -125,7 +209,7 @@
 													<tr>
 														<th>Version Number</th>
 														<th>Line</th>
-														<th>State</th>
+														<th>Status</th>
 														<th>From</th>
 														<th>Quantity</th>
 														
@@ -172,7 +256,9 @@ var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH__lb_SFLCTL__lb_2BANB": "orderNumber",
 					 "CenPH__lb_SFLCTL__lb_CFENB":"version",
-				  "CenPH__lb_SFLCTL__lb_CALTX+CenPH__lb_SFLCTL__lb_CGBTX+CenPH_DdsConstant24+CenPH__lb_SFLCTL__lb_CQ9ST+CenPH_DdsConstant26":"customerName",
+				  "CenPH__lb_SFLCTL__lb_CALTX":"customerName",
+				  "CenPH__lb_SFLCTL__lb_CGBTX":"employeeName",
+				  "CenPH_DdsConstant24+CenPH__lb_SFLCTL__lb_CQ9ST+CenPH_DdsConstant26":"status",
 				  "CenPH__lb_SFLCTL__lb_CETNB":"customerId",
 						"CenPH__lb_SFLCTL__lb_CANTX":"address",
 							"CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CADST+CenPH__lb_SFLCTL__lb_CAPTX":"city",
