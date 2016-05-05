@@ -683,19 +683,14 @@
             });
       </script>
       <style>
-           /*#__Page_PopUp {
+           #__Page_PopUp {
             min-width: 450px !important;
-            width: 40% !important;
-            left: 50% !important;
-            margin-left: -225px;
-                margin-top: -123px !important;
-            }*/
-            #__Page_PopUp {
-            min-width: 450px !important;
-            width: 45% !important;
-            margin-left: 8% !important;
-            margin-top: -123px !important;
+            width: 600px !important;
+			left: 50% !important;
+			margin-left: -225px;
+			top: 10% !important;
             }
+           
             #__Page_PopUp > tr:first-child {
               display: none;
             }
@@ -714,11 +709,7 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 100% !important;
-            }
-            .simplePopup {
-              left: 28% !important;
-              top: 50% !important;
+                height: 750px !important;
             }
            #CenPH__lb_RCDDTL1__lb_1CGC_lb_{
             position: relative !important;
