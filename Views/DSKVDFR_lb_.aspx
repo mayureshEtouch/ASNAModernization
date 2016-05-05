@@ -81,7 +81,7 @@
 														<th>Ship Quantity</th>
 														<th>Date Shipped</th>
 														<th>Transfer Date</th>
-														<th>From Compnay</th>
+														<th>From Company</th>
 														<th>From Location</th>
 														<th>To Company</th>
 														<th>To Location</th>
