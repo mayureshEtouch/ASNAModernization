@@ -136,7 +136,7 @@
         <script type="text/javascript">
           $(document).ready(function () {
                // generate phone numbers
-               generateTableAndApplyInfiniteScroll("customerPhones", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+               generateTableAndApplyInfiniteScroll("customerPhones", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE"); 
                $(".icon-txt, .change-icon").click(function (event) {
                    var row = $("#customerPhones tbody tr.selected");
                    selectCusotmer(row, "2", event);

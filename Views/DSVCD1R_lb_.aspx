@@ -195,7 +195,7 @@
                     <!-- 4 col ends here -->
 
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col">
+                    <div class="mdl-cell mdl-cell--4-col" id="otcDetails">
                       <div class="content-grid mdl-grid">
 
 					  <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">OTC Exchange:</span> </div>
@@ -276,7 +276,12 @@
           $(document).ready(function() {
          if ($("#CenPH__lb_RCDDTL1").length > 0) {
 
-              copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+					copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+					
+					if($("#CenPH__lb_RCDDTL1__lb_DZKST").length == 0){
+						$("#otcDetails").hide();
+						
+					}
 				}
 
     });
