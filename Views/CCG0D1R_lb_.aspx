@@ -104,10 +104,10 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1BXNB_div">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Home #:</span></div>
-                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new"></span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0" id="CenPH__lb_RCDDTL1__lb_1BXNB_div"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new"></span> </div>
                       </div>
 
                     </div>
@@ -204,20 +204,20 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1_V1AUDT_div">
+                    <div class="mdl-cell mdl-cell--4-col" id="ctl00$CenPH$_lb_RCDDTL1_V1AUDT_div">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Last Pay:</span></div>
-                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1AUDT_new"></span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1AUDT_new"></span> </div>
                       </div>
 
                     </div>
                     <!-- 4 col ends here -->
 
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col" id="ctl00$CenPH$_lb_RCDDTL1_V1AUDT_div">
+                    <div class="mdl-cell mdl-cell--4-col" id="CenPH__lb_RCDDTL1__lb_1COVA_div">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Past Due:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1AUDT_new"></span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col pull-right" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1COVA_new"></span> </div>
                       </div>
                     </div>
                     <!-- 4 col ends here -->
@@ -337,16 +337,16 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--12-col" id="CenPH__lb_RCDDTL1__lb_1C2NB_div">
+                    <div class="mdl-cell mdl-cell--12-col" id="">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--1-col" style="margin:0"><span class="form-label">History:</span></div>
                         <div  class="mdl-cell mdl-cell--10-col" style="margin:0"> 
                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                        <span>30: </span>
+                        <span id="CenPH__lb_RCDDTL1__lb_1C2NB_div">30: </span>
                         <span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C2NB_new"></span>
-                        &nbsp;&nbsp;<span>60: </span>
+                        &nbsp;&nbsp;<span id="CenPH__lb_RCDDTL1__lb_1C3NB_div">60: </span>
                         <span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C3NB_new"></span>
-                        &nbsp;&nbsp;<span>90: </span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C4NB_new"></span>
+                        &nbsp;&nbsp;<span id="CenPH__lb_RCDDTL1__lb_1C4NB_div">90: </span><span style="padding:0 40px 0 20px; display:inline-block" id="CenPH__lb_RCDDTL1__lb_1C4NB_new"></span>
                         </span> </div>
                       </div>
 
@@ -454,7 +454,7 @@
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--3-col" style="margin:0"><span class="form-label">Customer ID:</span></div>
                         <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> 
-                          <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_id" maxlength="20" /></span> 
+                          <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_id" maxlength="7" /></span> 
                         </div>
                       </div>
 
@@ -465,7 +465,7 @@
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Customer Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_ref" maxlength="20" /></span> </div>
+                        <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_ref" maxlength="10" /></span> </div>
                       </div>
                     </div>
                     <!-- 4 col ends here -->
@@ -474,7 +474,7 @@
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                       <div  class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Account Extension:</span> </div>
-                        <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_type" maxlength="20" /></span> </div>
+                        <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_type" maxlength="2" /></span> </div>
 
                       </div>
                     </div>
@@ -529,6 +529,7 @@
            "CenPH__lb_RCDDTL1__lb_1CJVA": "CenPH__lb_RCDDTL1__lb_1CJVA_new",
                    "CenPH__lb_RCDDTL1_V1A8DT": "CenPH__lb_RCDDTL1_V1A8DT_new",//
                    "CenPH__lb_RCDDTL1_V1AUDT": "CenPH__lb_RCDDTL1_V1AUDT_new",
+                   "CenPH__lb_RCDDTL1__lb_1COVA": "CenPH__lb_RCDDTL1__lb_1COVA_new",
                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AUDT": "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AUDT_new",
                    "CenPH__lb_RCDDTL1__lb_1B6VA": "CenPH__lb_RCDDTL1__lb_1B6VA_new",//
                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1ATDT": "ctl00\\$CenPH\\$_lb_RCDDTL1_V1ATDT_new",
@@ -573,13 +574,13 @@
                     if(i.split("+").length > 1) {
                       i = i.split("+")[0];
                     }
-                    if($("#"+i).length === 0 || $("#"+i).html() === "&nbsp;") {
-                      $("#"+i+"_new").hide();
+                    if($("#"+i).length === 0) {
+                      $("#"+i+"_div").hide();
                     }
                   }
                   copyData(copyToAndFromView);
                 }
-            //$("#order_number").ForceNumericOnly();
+            $("#customer_id, #customer_ref, #customer_type").ForceNumericOnly();
           });
         </script>
         <!-- Modified HTML code ends here -->
