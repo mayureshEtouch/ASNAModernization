@@ -59,7 +59,7 @@
                     <div class="add-item-wrapper">
                         <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
-                            <div class="mdl-cell mdl-cell--6-col pull-right" style="margin-bottom:-10px;padding-top:0;">
+                            <div class="mdl-cell mdl-cell--6-col pull-right">
                                 <div class="icon-container">
                                 <span class="icon-txt">Change</span>
                                 <i class="material-icons md-15 md-light change-icon"></i>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </section>
-          <section class="table-data-content-container spacer-container-bottom">
+          <section class="table-data-content-container spacer-container-bottom ">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container" style="overflow: auto;" style="width:auto;">
@@ -108,7 +108,7 @@
 		  left: 50% !important;
 		  margin-left: -325px !important;
         }
-        #__Page_PopUp > tr:first-child {
+        #__Page_PopUp tbody > tr:first-child {
          display: none;
         }
         #__Page_PopUp .DdsInlinePopUpTitle {
