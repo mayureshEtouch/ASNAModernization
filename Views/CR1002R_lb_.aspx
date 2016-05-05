@@ -557,7 +557,7 @@
               <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">S.S.#:</span> </div>
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_1_new"></span> </div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_1_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_1_new-show">Show</a> </div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -2356,6 +2356,31 @@
                 $('body').on('click', '#print', function(event) {
                     _00('F7', event);
                 });
+
+                $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mousedown", function(event){
+                    var ssnValue = $("#CenPH_DSPFMT2_SS_lb_1").text();
+                    $("#CenPH_DSPFMT2_SS_lb_1_new").text(ssnValue);
+                });
+                
+                $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mouseup", function(event){
+                      maskSSN();
+                });
+                
+                function maskSSN() {
+                    var val = $("#CenPH_DSPFMT2_SS_lb_1").html().split('-');
+                    var s1, s2,s3;
+                    for (var i = 0; i < val.length; i++) {
+                      
+                        val[0] = "***";
+                        s1 = val[0];
+                     
+                        val[1] = "**";
+                        s2 = val[1];
+                        s3= val[2];
+                    }
+                    $("#CenPH_DSPFMT2_SS_lb_1_new").html(s1+s2+s3);
+                }
+                maskSSN();
             }
             //validations
             $("#CenPH_DSPFMT1_ADDON_usd_new,#CenPH_DSPFMT1_CRMTHB_new,#CenPH_DSPFMT1_FRCNTC_new").ForceNumericOnly();

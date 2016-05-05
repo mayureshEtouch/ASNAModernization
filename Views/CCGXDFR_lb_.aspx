@@ -77,7 +77,7 @@
                               <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                             <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">SSN:</span> </div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2B2NB_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2B2NB_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_SFLCTL__lb_2B2NB_new-show">Show</a> </div>
                         </div>
                               </div>
                               <!-- 4 col ends here -->
@@ -1592,6 +1592,30 @@
             $('#comments').click(function (event) {
                     _00("F7", event);
                 });
+
+            $("#CenPH__lb_SFLCTL__lb_2B2NB_new-show").on("mousedown", function(event){
+                    var ssnValue = $("#CenPH__lb_SFLCTL__lb_2B2NB").text();
+                    $("#CenPH__lb_SFLCTL__lb_2B2NB_new").text(ssnValue);
+                });
+                
+                $("#CenPH__lb_SFLCTL__lb_2B2NB_new-show").on("mouseup", function(event){
+                      maskSSN();
+                });
+            function maskSSN() {
+                    var val = $("#CenPH__lb_SFLCTL__lb_2B2NB").html().split('-');
+                    var s1, s2,s3;
+                    for (var i = 0; i < val.length; i++) {
+                      
+                        val[0] = "***";
+                        s1 = val[0];
+                     
+                        val[1] = "**";
+                        s2 = val[1];
+                        s3= val[2];
+                    }
+                    $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(s1+s2+s3);
+                }
+                maskSSN();
 				
 			$('#insuranceacc tr td:nth-child(6), #insuranceacc tr td:nth-child(7)').each(function (i, col )
 			{
