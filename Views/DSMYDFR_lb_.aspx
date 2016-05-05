@@ -141,6 +141,7 @@
                 copyData(copyToAndFrom);
                 var dataMergeIndices = [[0], [1], [2], [3]];
                 generateTableAndApplyInfiniteScroll("warrantyProduct", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+                $('.navigateable td:not(:first-child)').css("text-align","right");
               });
               </script>  
         <!-- Modified HTML code ends here -->
