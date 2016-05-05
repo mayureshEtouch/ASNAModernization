@@ -179,7 +179,7 @@
 			var dataMergeIndices = [[0], [1], [2], [3], [4]];
 			generateTableAndApplyInfiniteScroll("custAddressDetails", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 			
-
+			$('#custAddressDetails tbody tr').prop('tabindex','');
          });
        </script>
 
