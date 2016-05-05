@@ -125,7 +125,7 @@
 													<tr>
 														<th>Version Number</th>
 														<th>Line</th>
-														<th>State</th>
+														<th>Status</th>
 														<th>From</th>
 														<th>Quantity</th>
 														
