@@ -566,9 +566,11 @@
                };
                $(document).ready(function() {
                 if($("#CenPH__lb_RCDKEY__lb_1ALNB").length>0){
+                  $(".heading-h1").text("CR: DS1 Install Acct-Pub KEY SCREEN");
                   $(".input_fields").show();
                   copyData(copyToAndFromInput, "keyup keydown change blur mouseup mousedown");
                 }else{
+                  $(".heading-h1").text("Display Account Detail");
                   $(".view_fields").show();
                   for(var i in copyToAndFromView.displayOnlyFields) {
                     if(i.split("+").length > 1) {
