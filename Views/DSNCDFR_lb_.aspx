@@ -55,6 +55,22 @@
                             <span id="vendorNumber" class="summary-txt"></span>
                         </div>
                     </div>
+					
+					 <div class="content-grid mdl-grid">
+                       <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                            <span class="summary-title">Model Description</span>
+                            <span id="modelDesc" class="summary-txt"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                            <span class="summary-title">Product Description</span>
+                            <span id="productDesp" class="summary-txt"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                            <span class="summary-title">Vendor Description</span>
+                            <span id="vendorDesc" class="summary-txt"></span>
+                        </div>
+                    </div>
+					
             	</div>
             </section>
             <section class="table-data-content-container filter-field-container mrgnTp16">
@@ -159,9 +175,12 @@
             "displayOnlyFields": {
               "CenPH__lb_SFLCTL__lb_2ABCD": "number1",
               "CenPH__lb_SFLCTL__lb_2AACD": "number2",
-             "CenPH__lb_SFLCTL__lb_PAXTX+CenPH__lb_SFLCTL__lb_PA2TX":"modelNumber",
-			 "CenPH__lb_SFLCTL__lb_PAXCD+CenPH__lb_SFLCTL__lb_CFATX":"productCat",
-			 "CenPH__lb_SFLCTL__lb_PBLNB+CenPH__lb_SFLCTL__lb_CECTX":"vendorNumber",
+             "CenPH__lb_SFLCTL__lb_PAXTX":"modelNumber",
+			 "CenPH__lb_SFLCTL__lb_PA2TX":"modelDesc",
+			 "CenPH__lb_SFLCTL__lb_PAXCD":"productCat",
+			 "CenPH__lb_SFLCTL__lb_CFATX":"productDesp",
+			 "CenPH__lb_SFLCTL__lb_PBLNB":"vendorNumber",
+			 "CenPH__lb_SFLCTL__lb_CECTX":"vendorDesc",
 			 "CenPH__lb_SFLCTL__lb_CA3QT":"totalAvail",
 			 "CenPH__lb_SFLCTL__lb_CDQQT":"excptn",
 			 "CenPH_DdsConstant14":"date",
