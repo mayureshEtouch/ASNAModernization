@@ -61,11 +61,11 @@
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--6-col">
                             <span class="summary-title">Order</span>
-                            <span class="summary-txt" id="orderNumber">6666666 666</span>
+                            <span class="summary-txt" id="orderNumber"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col">
                             <span class="summary-title">Line</span>
-                            <span class="summary-txt" id="orderLine"">666</span>
+                            <span class="summary-txt" id="orderLine"></span>
                         </div>
                         
                     </div>
@@ -175,7 +175,7 @@ var copyToAndFrom = {
 			copyData(copyToAndFrom, "");
 		 
 				var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
-				generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	  
+				generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	  
 				
 			if($("#__Page_PopUp .simplePopupClose").length > 0) {
                $(".simplePopup").show();
