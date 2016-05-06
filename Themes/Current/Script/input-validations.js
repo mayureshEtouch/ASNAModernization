@@ -103,7 +103,9 @@ jQuery.fn.ForceNumericWithQuestionMarkOnly =
 
 // Numeric with two decimal precisions
 jQuery.fn.numericWithTwoDecimalPrecisions = function() {
+	
         return this.each(function() {
+		
             $(this).on("change keyup", function(e) {
                 if (/^[0-9]+(\.[0-9]{1,2})?$/.test($(this).val().replace(/\s/g, ""))) {
                     return true;
@@ -117,6 +119,26 @@ jQuery.fn.numericWithTwoDecimalPrecisions = function() {
             });
         });
     }
+	
+	// Numeric with two decimal precisions with minus
+jQuery.fn.numericWithTwoDecimalPrecisionsWithMinus = function() {
+        return this.each(function() {
+		
+            $(this).on("change keyup", function(e) {
+			
+                if (/^\-?([0-9]+(\.[0-9]{1,2})?)?$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else if (/^\-?([0-9]+(\.)?)$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else {
+                    $(this).val("");
+                    return;
+                }
+
+            });
+        });
+    }
+	
     //Allow only Y or N
 jQuery.fn.ForceYesOrNoOnly = function() {
     return this.each(function() {
