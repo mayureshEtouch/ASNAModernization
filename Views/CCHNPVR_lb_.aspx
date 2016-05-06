@@ -81,7 +81,7 @@
                                     <div class="mdl-cell mdl-cell--7-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
                                             <input maxlength="5" type="text" id="employee_id" size="10" data-tb-index="1" />
-                                            <span id="employee_name"></span>
+                                            <span id="employee_name" style="width:auto"></span>
                                         </span>
 
                                     </div>
