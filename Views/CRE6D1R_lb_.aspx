@@ -165,7 +165,7 @@
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">APR:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="apr"></span>
-                                        <span >%</span>
+                                        <span>%</span>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +294,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Filling Fee:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Filing Fee:</span> </div>
                                     <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="fillingFee"></span></div>
 
                                 </div>
@@ -1548,7 +1548,7 @@
                 "CenPH__lb_RCDDTL1__lb_1CBPC": "apr",
                 "CenPH__lb_RCDDTL1__lb_1KXVA": "payments",
                 "CenPH__lb_RCDDTL1__lb_1KYTX": "cosigner",
-                "CenPH__lb_RCDDTL1__lb_DDRXT+CenPH_DdsConstant47": "ssnum",
+                // "CenPH__lb_RCDDTL1__lb_DDRXT+CenPH_DdsConstant47": "ssnum",
                 "CenPH__lb_RCDDTL1__lb_1KZVA": "amtofpurchase",
                 "CenPH__lb_RCDDTL1_V1BTDT": "dob1",
                 "CenPH__lb_RCDDTL1_V1BUDT": "dob2",
@@ -1575,7 +1575,13 @@
             }
         }
         $(document).ready(function () {
+            var val = $("#CenPH__lb_RCDDTL1__lb_DDRXT").html().split('-');
+            var ssn;
+            for (var i = 0; i < val.length; i++) {
 
+                ssn = val[2];
+            }
+            $("#ssnum").html("XXX" + "-" + "XX" + "-" + ssn + " " + $("#CenPH_DdsConstant47").html());
 
             $('body').css({ "background-color": "white" });
             //$("#name").text($("#CenPH__lb_RCDDTL1__lb_1ALTX").html());

@@ -43,15 +43,19 @@
                 <section class="order-summary mrgnTp16">
                     <div class="order-summary-wrapper">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
                                 <span class="summary-title">Model Number</span>
                                 <span class="summary-txt" id="model_number"></span>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+							<div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
+                                <span class="summary-title">Model Description</span>
+                                <span class="summary-txt" id="model_descp"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Vendor Name</span>
                                 <span class="summary-txt" id="vendor_name"></span>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
                                 <span class="summary-title">Product Category</span>
                                 <span class="summary-txt" id="product_category"></span>
                             </div>
@@ -111,9 +115,10 @@
                 "displayOnlyFields": {
                     "CenPH_DdsConstant21": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
-                    "CenPH__lb_SFLCTL__lb_2AXTX+CenPH__lb_SFLCTL__lb_2A2TX": "model_number",
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "model_number",
                     "CenPH__lb_SFLCTL__lb_CECTX": "vendor_name",
                     "CenPH__lb_SFLCTL__lb_CFATX": "product_category",
+					"CenPH__lb_SFLCTL__lb_2A2TX":"model_descp"
                 }
            };
            $(document).ready(function() {
