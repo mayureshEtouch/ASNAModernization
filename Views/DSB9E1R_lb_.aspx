@@ -72,6 +72,7 @@
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <span id="firstName-span" class="hide"></span>
                                     <input type="text" maxlength="10" id="firstName" name="firstName" class="hide zip-code full-input" value="" data-tb-index="2">
+                                    <span class="input-side-gutter-space form-label" id="credit-customer" style="float:right; color:blue;">
                                     </span>
                                 </div>
                             </div>
@@ -396,7 +397,11 @@
                 });
               }
             }
-
+            /* If credit customer, show credit-customer div*/
+                    if($("span:contains('Credit Customer')").length>0){
+                        $("#credit-customer").text("(Credit Customer)");
+                    }
+                    /* End of If credit customer, show credit-customer div*/
           if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
             /*Pop up confirm box*/
             $(".OverlayPopupBackground").show();
