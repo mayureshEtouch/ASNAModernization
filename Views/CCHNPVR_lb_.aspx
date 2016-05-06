@@ -81,12 +81,21 @@
                                     <div class="mdl-cell mdl-cell--7-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
                                             <input maxlength="5" type="text" id="employee_id" size="10" data-tb-index="1" />
-                                            <span id="employee_name" style="width:auto"></span>
                                         </span>
 
                                     </div>
                                 </div>
                             </div>
+                              <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col"><span id="employee_name">:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col">
+   
+
+                                    </div>
+                                </div>
+                            </div>              
+
                             <!-- 4 col ends here -->
 
                             <!-- 4 col starts here -->
