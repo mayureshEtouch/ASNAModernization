@@ -1426,7 +1426,9 @@ body div, body span, body textarea {
 .mrgnTp16 {
 	margin-top: 16px;
 }
-
+#__Page_Hidden {
+	position: fixed;
+}
 
 /* Media queries starts here */
 
