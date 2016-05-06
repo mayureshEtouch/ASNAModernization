@@ -41,15 +41,25 @@
             <section class="order-summary mrgnTp16">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Model Number</span>
                             <span class="summary-txt" id="modelno"></span>
+                           
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet">
+                            <span class="summary-title">Model Description</span>
+                            
+                            <span class="summary-txt" id="model_description"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Product Category</span>
                             <span class="summary-txt" id="prdCategory"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet">
+                            <span class="summary-title">Product Description</span>
+                            <span class="summary-txt" id="prdCategory_description"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Vendor Number</span>
                             <span class="summary-txt" id="vendor"></span>
                         </div>
@@ -95,7 +105,7 @@
 
         </main>
  <div id="modal1" class="simplePopup"></div>
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display: none;">
             
       <%--  IN: DSP Expected PO       Display file                                          --%>
       <%--  CRTDSPF                                                                         --%>
@@ -752,8 +762,10 @@
                 "displayOnlyFields": {
                     "CenPH_DdsConstant14": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
-                    "CenPH__lb_SFLCTL__lb_2AXTX+CenPH__lb_SFLCTL__lb_CFJTX": "modelno",
-                    "CenPH__lb_SFLCTL__lb_2AXCD+CenPH__lb_SFLCTL__lb_CFATX": "prdCategory",
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "modelno",
+                    "CenPH__lb_SFLCTL__lb_CFJTX": "model_description",
+                    "CenPH__lb_SFLCTL__lb_2AXCD": "prdCategory",
+                    "CenPH__lb_SFLCTL__lb_CFATX": "prdCategory_description",
                     "CenPH__lb_SFLCTL__lb_PBLNB": "vendor"
                 }
             }
