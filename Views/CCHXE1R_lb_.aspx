@@ -1755,8 +1755,13 @@
             function keydown(evt) {
                 if (!evt) evt = event;
                 if (evt.keyCode == 13) {
-                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
-                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                    if($("#dummy-cust-ssn").val().lenght > 0) {
+                        $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                        $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                    } else {
+                        $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#cust-ssn").val());
+                        $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#sp-ssn").val());
+                    }
                     _00('Enter', evt);
                 }
             }
