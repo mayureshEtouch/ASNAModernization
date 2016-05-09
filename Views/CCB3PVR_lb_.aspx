@@ -96,7 +96,7 @@
                                     <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop" style="margin: 0">
                                         <span class="summary-label">Social Security</span>
                                         <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                            <input type="text" id="ssn" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="4" maxlength="10">
+                                            <input type="text" autocomplete="off" id="ssn" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="4" maxlength="10">
                                         </div>
                                     </div>
                                     
@@ -137,6 +137,7 @@
           $(document).ready(function() {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
             $("#number1, #credit_account, #ssn").ForceNumericOnly();
+			
           });
           </script>
     <!-- Modified HTML code ends here -->

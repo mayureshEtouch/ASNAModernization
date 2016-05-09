@@ -138,7 +138,7 @@
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Co-Debtor:</span> </div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text">
-                    <input type="text" class="mdl-textfield__input" data-tb-index="3" size="12" id="CenPH_DSPFMT1_CRSPNB_new" maxlength="30" autocomplete="off" />
+                    <input type="text" class="mdl-textfield__input" data-tb-index="3" size="12" id="CenPH_DSPFMT1_CRSPNB_new" maxlength="30" />
                     </span> </div>
                 </div>
               </div>
@@ -149,7 +149,7 @@
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Co-Debtor S.S.#:</span></div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-text">
-                    <input type="text" maxlength="9" data-tb-index="4" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_2_new" id="CenPH_DSPFMT1_SS_lb_2_new">
+                    <input type="text" maxlength="9" autocomplete="off"  data-tb-index="4" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_2_new" id="CenPH_DSPFMT1_SS_lb_2_new">
                     <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_2_new-show">Show</a> </span>
                     <input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT1_SS_lb_2_new">
                     <!-- <span></span> --> </div>

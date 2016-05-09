@@ -69,7 +69,7 @@
 					 <div class="mdl-cell mdl-cell--6-col" style="margin:0">
 						  <span class="form-text">
 						
-						  <input id="ssn" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking" size="15" maxlength="9" style="width: 50% !important;" />
+						  <input id="ssn" autocomplete="off" name="ssn" style="float: left;width: 67px !important;" type="text" class="mdl-textfield__input  masking" size="15" maxlength="9" style="width: 50% !important;" />
 						  <a id="ssn-show" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>
 						  </span>
 						  <input type="hidden" id="dummy-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
