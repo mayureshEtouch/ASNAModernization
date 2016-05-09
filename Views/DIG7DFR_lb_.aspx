@@ -50,8 +50,8 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--10-col search-container">
                                         <div class="content-grid mdl-grid">
-                                            <div class="mdl-cell mdl-cell--1-col" >
-                                                <span class="summary-table-title pull-right" >To </span>
+                                            <div class="mdl-cell mdl-cell--2-col" >
+                                                <span class="summary-table-title pull-right" >To Location</span>
                                             </div>
                                             <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co">
                                                 <input type="text" id="to" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="3">
@@ -63,16 +63,16 @@
                                                 <span id="model_number" class="summary-txt" style="padding-top: 12px;"></span>
                                                 
                                             </div> 
-                                            <div class="mdl-cell mdl-cell--1-col" style="margin-left: 4px;">
-                                                <span class="summary-table-title pull-right">From</span>
+                                            <div class="mdl-cell mdl-cell--2-col" style="margin-left: 4px;">
+                                                <span class="summary-table-title pull-right">From Company</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col" id="filter-by-co">
                                                 <input type="text" id="from" class="mdl-textfield__input" data-tb-index="2" maxlength="3">
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" >
-                                                <span class="summary-table-title pull-right">Location</span>
+                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col" >
+                                                <span class="summary-table-title pull-right">From Location</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co" style="margin-left: 15px">
+                                            <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col" id="filter-by-co" style="margin-left: 15px">
                                                 <input type="text" id="location" class="mdl-textfield__input" data-tb-index="3" maxlength="3">
                                             </div>                        
                                         </div>
