@@ -60,7 +60,20 @@
                                         <span class="summary-table-title pull-right">Status</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col" id="filter-by-co">
-                                        <select name="status" id="status" data-tb-index="2" style="margin-top: 8px;"></select>
+                                        <select name="status" id="status" data-tb-index="2" style="margin-top: 8px;">
+                                            <option selected="selected" value=" ">Please select</option>
+                                           <%-- <option value="*BLANK"></option>--%>
+                                            <option value="*ALL">ALL</option>
+                                            <option value="EXC">EXC - Exception Item</option>
+                                            <option value="NFS">NFS - Not For Sale</option>
+                                            <option value="ONH">ONH - On Hand</option>
+                                            <option value="ORD">ORD - On Order</option>
+                                            <option value="RSV">RSV - Reserved</option>
+                                            <option value="SUM">SUM - Summary</option>
+                                            <option value="TRI">TRI - Transfers In</option>
+                                            <option value="TRO">TRO - Transfers Out</option>
+                                            <option value="WHU">WHU - Warehouse Unavailable</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +140,7 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display:none;">
+    <div id="Div1" style="display: none;">
 
         <%--  IN: DSP Inv by Model      Display file                                          --%>
         <%--  CRTDSPF                                                                         --%>
@@ -508,40 +521,35 @@
                 "CenPH__lb_SFLCTL__lb_2AXTX": "modelNumber"
             }
         }
-        
-
-
-
-
         $(document).ready(function () {
-            var old_fields = ['#CenPH__lb_SFLCTL__lb_2APST'];
-            var new_fields = ['#status'];
-            /*Filling up text for modern screen fields*/
-            for (var i = 0; i < old_fields.length; i++) {
+            //var old_fields = ['#CenPH__lb_SFLCTL__lb_2APST'];
+            //var new_fields = ['#status'];
+            ///*Filling up text for modern screen fields*/
+            //for (var i = 0; i < old_fields.length; i++) {
 
-                if ($(new_fields[i]) && $(new_fields[i]).is('input')) {
-                    $(new_fields[i]).val($.trim($(old_fields[i]).val()) || $.trim($(old_fields[i]).text()));
-                }
-                else if ($(new_fields[i]) && $(new_fields[i]).is('span')) {
-                    $(new_fields[i]).text($.trim($(old_fields[i]).text()));
-                } else if ($(new_fields[i]) && $(new_fields[i]).is('select')) {
-                    if ($(old_fields[i]).is('select')) {
-                        var $options = $(old_fields[i] + " > option").clone().map(function (index) {
-                            if ($(this).val() != '?') {
-                                if ($(this).val().trim() == "") {
+            //    if ($(new_fields[i]) && $(new_fields[i]).is('input')) {
+            //        $(new_fields[i]).val($.trim($(old_fields[i]).val()) || $.trim($(old_fields[i]).text()));
+            //    }
+            //    else if ($(new_fields[i]) && $(new_fields[i]).is('span')) {
+            //        $(new_fields[i]).text($.trim($(old_fields[i]).text()));
+            //    } else if ($(new_fields[i]) && $(new_fields[i]).is('select')) {
+            //        if ($(old_fields[i]).is('select')) {
+            //            var $options = $(old_fields[i] + " > option").clone().map(function (index) {
+            //                if ($(this).val() != '?') {
+            //                    if ($(this).val().trim() == "") {
 
-                                    $(this).val(" ").text("Please Choose");
-                                }
-                                return this;
-                            }
-                        });
-                    } else {
-                        var $options = '<option value="' + $.trim($(old_fields[i]).text()) + '">' + $.trim($(old_fields[i]).text()) + '</option>';
-                    }
-                    $(new_fields[i]).append($options);
-                    $("#status option[value=' ']").insertBefore("#status  option:eq( 0 )");
-                }
-            };
+            //                        $(this).val(" ").text("Please Choose");
+            //                    }
+            //                    return this;
+            //                }
+            //            });
+            //        } else {
+            //            var $options = '<option value="' + $.trim($(old_fields[i]).text()) + '">' + $.trim($(old_fields[i]).text()) + '</option>';
+            //        }
+            //        $(new_fields[i]).append($options);
+            //        $("#status option[value=' ']").insertBefore("#status  option:eq( 0 )");
+            //    }
+            //};
 
             $('body').on('keyup change', '#modelNumber', function (event) {
                 $('#CenPH__lb_SFLCTL__lb_2AXTX').val($(this).val());
