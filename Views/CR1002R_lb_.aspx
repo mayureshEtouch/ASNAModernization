@@ -2126,8 +2126,8 @@
                 "CenPH_DSPFMT2_CRAH_usd_O": "CenPH_DSPFMT2_CRAH_usd_O_new",
                 "CenPH_DSPFMT2_CRUE_usd_O": "CenPH_DSPFMT2_CRUE_usd_O_new",
                 "CenPH_DSPFMT2_CRPR_usd_O": "CenPH_DSPFMT2_CRPR_usd_O_new",
-                "CenPH_DSPFMT2_PRDS_usd_": "CenPH_DSPFMT2_PRDS_usd_new",
-                "ctl00\\$CenPH\\$DSPFMT2_CRLPYO": "ctl00\\$CenPH\\$DSPFMT2_CRLPYO_new"
+                "CenPH_DSPFMT2_PRDS_usd_": "ctl00\\$CenPH\\$DSPFMT2_CRLPYO_new",
+                "ctl00\\$CenPH\\$DSPFMT2_CRLPYO": "CenPH_DSPFMT2_PRDS_usd_new"
 
             },
             "inputFields": {
