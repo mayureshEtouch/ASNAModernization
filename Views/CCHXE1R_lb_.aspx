@@ -122,7 +122,8 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">S.S.#:</span>
                                         <span class="form-text">
-                                        <input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="9" data-tb-index="4">
+                                        <input class="editable-data" type="text" id="cust-ssn" size="15" maxlength="9" data-tb-index="4" autocomplete="off">
+                                        <input type="hidden" maxlength="9" name="cust-ssn_new_hidden" id="cust-ssn_new_hidden">
                                         <span class="ssn-show" id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-cust-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9">
                                         <span class="ro-data" id="ro-cust-ssn" ></span></span>
@@ -363,7 +364,7 @@
         </div>
     
     <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display: none;"> 
             
       <%--  CU: ED1 Personal Detail   Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1745,7 +1746,20 @@
             }
         }
         $(document).ready(function() {
-            
+
+            $('input:text[name="cust-ssn"]').keyup(function () {
+                $('input:hidden[name="dummy-cust-ssn"]').val($(this).val());
+            });
+
+            document.onkeydown = keydown;
+            function keydown(evt) {
+                if (!evt) evt = event;
+                if (evt.keyCode == 13) {
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                    _00('Enter', evt);
+                }
+            }
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant42]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
@@ -1763,15 +1777,7 @@
                 $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
                 _00('F7', event);
             });
-            $(window).keydown(function(event){
-                //console.log('hiii preseed');
-                var keycode = (event.keyCode ? event.keyCode : event.which);
-                if(keycode == '13'){
-                    $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
-                    $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
-                }
-                
-            });
+            
             if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
               $(".editable-data").show();
               $(".ro-data").hide();
