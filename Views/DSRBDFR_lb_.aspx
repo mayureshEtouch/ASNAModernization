@@ -109,7 +109,7 @@
 		  margin-left: -325px !important;
         }
         #__Page_PopUp tbody > tr:first-child {
-         display: none;
+         /* display: none; */
         }
         #__Page_PopUp .DdsInlinePopUpTitle {
          height: 0;
