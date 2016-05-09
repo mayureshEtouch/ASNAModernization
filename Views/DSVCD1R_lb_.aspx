@@ -259,6 +259,8 @@
         <script type="text/javascript">
           var copyToAndFromData = {
             "displayOnlyFields": {
+              "CenPH_DdsConstant25": "date",
+              "CenPH__lb_RCDDTL1__lb__lb_TME": "modelNumber",
               "CenPH__lb_RCDDTL1__lb_1AXTX": "modelNumber",
               "CenPH__lb_RCDDTL1__lb_DN1TX": "modelTagDesc",
               "CenPH__lb_RCDDTL1__lb_1A2TX":"modelDesc",
@@ -301,7 +303,7 @@
 
     });
   </script>
-  <div id="Div1" style="display:none">
+  <div id="Div1" style="display:">
 
     <%--  IN: DR1 SKU (RST)         Display record(1 screen)                              --%>
     <%--  CRTDSPF                                                                         --%>
