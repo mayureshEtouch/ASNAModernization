@@ -206,7 +206,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
 															<span class="form-label clm-form-label">S.S.#:</span>
 										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-ssn" size="15" maxlength="9" data-tb-index="13">
+											<input class="editable-data" type="text" autocomplete="off" id="sp-ssn" size="15" maxlength="9" data-tb-index="13">
                                         <span class="ssn-sp-show" id="ssn-sp-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
 											<span class="ro-data" id="ro-sp-ssn"></span>
