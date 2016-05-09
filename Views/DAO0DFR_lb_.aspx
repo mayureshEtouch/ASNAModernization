@@ -77,8 +77,9 @@
                                                     <div class="content-grid mdl-grid">
                                                         <div class="mdl-cell mdl-cell--12-col pull-right">
                                                             <div class="icon-container">
+															 <span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
                                                 <span class="icon-txt inventory">Inventory</span><i class="material-icons md-15 md-light reserve-icon inventory"></i>
-                                                <span class="icon-txt display-customer">Display</span><i class="material-icons md-15 md-light display-customer display-icon display-icon"></i>
+                                               
                                               </div>
                                                         </div>
                                                     </div>
