@@ -97,9 +97,9 @@
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+												<!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
-												</div>
+												</div> -->
 										</div>
 								</div>
 						</div>
@@ -130,7 +130,7 @@
 	copyData(copyToAndFrom, "");
 	// Search by Customer data table record mapping
 	var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
-	generateTableAndApplyInfiniteScroll("poDetails", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+	generateTableAndApplyInfiniteScroll("poDetails", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 	//Next button click handler
 	$("#next").click(function (event) {
 		 _00('Enter', event);
