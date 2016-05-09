@@ -153,7 +153,7 @@
                                     <span class="form-label">Social Security #:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
-                                    <span class="form-text"><span type="text" id="ssn" class="full-input" name="socialSecurity"></span></span>
+                                    <span class="form-text"><span type="text" autocomplete="off" id="ssn" class="full-input" name="socialSecurity"></span></span>
                                 </div>
                             </div>
                         </div>

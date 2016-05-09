@@ -96,7 +96,7 @@
                                     <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop" >
                                         <span class="summary-label">Social Security</span>
                                         <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-                                            <input type="text" id="CenPH__lb_RCDDTL1__lb_1B2NB_new" class="mdl-textfield__input mdl-cell--12-col mdl-cell--8-col-desktop" maxlength="10">
+                                            <input type="text"  autocomplete="off" id="CenPH__lb_RCDDTL1__lb_1B2NB_new" class="mdl-textfield__input mdl-cell--12-col mdl-cell--8-col-desktop" maxlength="10">
                                         </div>
                                     </div>
 
