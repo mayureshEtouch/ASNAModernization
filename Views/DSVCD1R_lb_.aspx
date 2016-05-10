@@ -259,7 +259,6 @@
         <script type="text/javascript">
           var copyToAndFromData = {
             "displayOnlyFields": {
-              "CenPH_DdsConstant25": "date",
               "CenPH__lb_RCDDTL1__lb__lb_TME": "modelNumber",
               "CenPH__lb_RCDDTL1__lb_1AXTX": "modelNumber",
               "CenPH__lb_RCDDTL1__lb_DN1TX": "modelTagDesc",
