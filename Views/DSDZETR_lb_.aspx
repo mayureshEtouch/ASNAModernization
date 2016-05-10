@@ -192,20 +192,22 @@
                                     </span>
                                 </div>
                             </div>
-                        </div>
-                        <!-- <div class="mdl-cell mdl-cell--6-col">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--3-col">
-                                    <span class="form-label">Email:</span>
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <span class="form-label">eSign:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--9-col">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield" id="employee-info">
-                                        <span id="span_email" class="DdsCharField_OutputOnly"></span>
-                                        <input type="hidden" id="emaiil" name="emaiil">
+                                <div class="mdl-cell mdl-cell--8-col">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <select id="CenPH__lb_SFLCTL__lb_CIYS_lb_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" tabindex="6">
+                                            <option selected="selected" value=" ">Please select</option>
+                                            <option value="Y">Yes</option>
+                                            <option value="N">No</option>
+                                        </select>
+                                        <span id="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" class="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" style="display: none;"></span>
                                     </span>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
@@ -217,6 +219,7 @@
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop" style="margin-left:9px;">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('F11', event);">Edit Customer Details</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="esign" onclick="_00('F6', event);" data-upgraded=",MaterialButton,MaterialRipple">eSign T&amp;Cs<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                  
@@ -237,7 +240,7 @@
             </div>
         </div>
    
-    <div id="Div1" style="display:none;">
+    <div id="Div1" style="display: none;">
 
         <%--  OE: ETR Ent Ord Hdr       Edit transaction                                                                       --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -249,20 +252,20 @@
         <%--                                                                                                                   --%>
         <%--  Company       : DIS Development Model                                                                            --%>
         <%--  System        : DIS Development Model                                                                            --%>
-        <%--  User name     : COOL1                                                                                            --%>
-        <%--  Date          : 04/02/15  Time  : 19:10:38                                                                       --%>
+        <%--  User name     : PKUMAR                                                                                            --%>
+        <%--  Date          : 04/28/16  Time  : 06:22:38                                                                       --%>
         <%--  Copyright     : DIS Development Model                                                                            --%>
         <%-- ================================================================                                                  --%>
         <%--  Maintenance   :                                                                                                  --%>
         <%-- ================================================================                                                  --%>
         <%-- =========================================================================                                         --%>
         <mdf:DdsSubfileControl ID="_lb_SFLCTL" runat="server"
-            Style="position: relative; width: 765px; height: 480px"
+            style="position: relative; width: 774px; height: 480px"
             Alias="#SFLCTL"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;Home 'Reset.' 30;"
-            FuncKeys="F4 'Prompt.' 04;F9 'Change mode.' 09;F11 'CF11.' 11;PageDown 'Next page.' 27 : !88;"
-            SetOfInds="98 99 31 32 33 34 35 36 37 38 "
+            FuncKeys="F4 'Prompt.' 04;F6 'CF06.' 06;F9 'Change mode.' 09;F11 'CF11.' 11;PageDown 'Next page.' 27 : !88;"
+            SetOfInds="98 99 31 32 33 34 35 36 37 38 39 "
             CommandKeyInd="29"
             ClearRecords="80"
             DisplayFields="!80"
@@ -348,6 +351,9 @@
             <%--  Code: Delivery                                                                                                   --%>
             <%--  Code: Delivery                                                                                                   --%>
             <%--  Condition: *ALL values                                                                                           --%>
+            <%--  STS: Yes/No                                                                                                      --%>
+            <%--  STS: Yes/No                                                                                                      --%>
+            <%--  Condition: Yes/No/Blank                                                                                          --%>
             <%--  Nbr: Phone Work                                                                                                  --%>
             <%--  Nbr: Phone Work                                                                                                  --%>
             <%--  Phone: Bus Extension.                                                                                            --%>
@@ -404,7 +410,7 @@
                 Style="position: absolute; left: 559px; top: 3px;"
                 Text="*DATE"
                 CssClass="DdsConstant" />
-            <mdf:DdsCharField ID="_lb_SFLCTL__lb__lb_PGM" runat="server" Style="position: absolute; left: 649px; top: 0px; width: 91px"
+            <mdf:DdsCharField ID="_lb_SFLCTL__lb__lb_PGM" runat="server" Style="position: absolute; left: 676px; top: 0px; width: 91px"
                 CssClass="DdsCharField"
                 Length="10"
                 Alias="##PGM"
@@ -429,13 +435,13 @@
                 Usage="OutputOnly"
                 VirtualRowCol="2,59"
                 EditWord="0 :  :  " />
-            <mdf:DdsConstant ID="DdsConstant17" runat="server"
+            <mdf:DdsConstant ID="DdsConstant19" runat="server"
                 Style="position: absolute; left: 649px; top: 27px;"
                 Text="ADD    "
                 VisibleCondition="89"
                 CssClass="DdsConstant" />
             <mdf:DdsConstant ID="DdsConstant18" runat="server"
-                Style="position: absolute; left: 649px; top: 27px;"
+                Style="position: absolute; left: 676px; top: 27px;"
                 Text="CHANGE "
                 VisibleCondition="!89"
                 CssClass="DdsConstant" />
@@ -747,7 +753,7 @@
                 VisibleCondition="!88"
                 Usage="OutputOnly"
                 VirtualRowCol="8,55" />
-            <mdf:DdsCharField ID="_lb_SFLCTL__lb_CCXST" runat="server" Style="position: absolute; left: 712px; top: 168px; width: 19px"
+            <mdf:DdsCharField ID="_lb_SFLCTL__lb_CCXST" runat="server" Style="position: absolute; left: 739px; top: 168px; width: 19px"
                 CssClass="DdsCharField"
                 Length="2"
                 Alias="#CCXST"
@@ -796,6 +802,23 @@
                 ValuesStyle="DropdownBoth"
                 Values="'P' 'N' 'H' 'X' 'L' ' ' 'Y' '?' "
                 TabIndex="6" />
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+              style="position: absolute; left: 586px; top: 219px;"
+              Text="eSign" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant" />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIYS_lb_" runat="server" style="position: absolute; left: 640px; top: 216px; width: 37px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#CIYS#" 
+              VisibleCondition="!88 & !( 76 & !37 )"
+              Usage="Both" 
+              VirtualRowCol="10,68" 
+              Protect="76" 
+              PositionCursor="37 & !76" 
+              ValuesStyle="DropdownBoth" 
+              Values="' ' 'N' 'Y' '?' " 
+              TabIndex="7"  />
             <mdf:DdsConstant ID="DdsConstant4" runat="server"
                 Style="position: absolute; left: 19px; top: 243px;"
                 Text="Work Phone"
@@ -820,7 +843,7 @@
                 Length="4"
                 Decimals="0"
                 Alias="#CEONB"
-                VisibleCondition="!88 & !( 76 )"
+                VisibleCondition="!88 & !( 75 )"
                 Usage="OutputOnly"
                 VirtualRowCol="11,28" />
             <mdf:DdsConstant ID="DdsConstant13" runat="server"
@@ -843,10 +866,10 @@
                 VisibleCondition="!88"
                 Usage="Both"
                 VirtualRowCol="11,63"
-                PositionCursor="37"
+                PositionCursor="38"
                 EditWord="  /  /  "
                 Compare="GE 0"
-                TabIndex="7" />
+                TabIndex="8" />
             <mdf:DdsConstant ID="DdsConstant5" runat="server"
                 Style="position: absolute; left: 19px; top: 267px;"
                 Text="Promotion Code"
@@ -859,8 +882,8 @@
                 VisibleCondition="!88"
                 Usage="Both"
                 VirtualRowCol="12,19"
-                PositionCursor="38"
-                TabIndex="8" />
+                PositionCursor="39"
+                TabIndex="9" />
             <mdf:DdsConstant ID="DdsConstant14" runat="server"
                 Style="position: absolute; left: 397px; top: 267px;"
                 Text="Expected Del Date"
@@ -877,7 +900,7 @@
                 Length="6"
                 Decimals="0"
                 Alias="V1AXDT"
-                VisibleCondition="!88 & !( 75 )"
+                VisibleCondition="!88 & !( 74 )"
                 Usage="OutputOnly"
                 VirtualRowCol="12,63"
                 EditWord="  /  /  " />
@@ -899,7 +922,8 @@
                 VirtualRowsPerRecord="1"
                 RowsCssClasses="DefaultRow AlternateRow">
                 &nbsp;
-          <%--  Number: Order                                                                                                    --%>
+                <%--  STS: Yes/No                                                                                                      --%>
+                <%--  Number: Order                                                                                                    --%>
                 <%--  Code: Order Type                                                                                                 --%>
                 <%--  Date: Original Order                                                                                             --%>
                 <%--  Code: Advertising Media                                                                                          --%>
@@ -927,6 +951,11 @@
                     Length="67"
                     Alias="#2DBRC"
                     Usage="Hidden" />
+                <mdf:DdsCharField id="_lb_SFLRCD__lb_RIYS_lb_" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
+                    CssClass="DdsCharField"
+                    Length="1" 
+                    Alias="#RIYS#" 
+                    Usage="Hidden"  />
                 <mdf:DdsDecField ID="_lb_SFLRCD__lb_2BANB" runat="server" Style="position: absolute; left: 1px; top: 0px; width: 82px"
                     CssClass="DdsDecField"
                     Length="9"
@@ -1022,30 +1051,27 @@
                     Alias="#2AQNA"
                     Usage="Both"
                     VirtualRowCol="14,3"
-                    PositionCursor="39"
+                    PositionCursor="40"
                     TabIndex="1" />
             </mdf:DdsSubfile>
         </mdf:DdsSubfileControl>
         <mdf:DdsRecord ID="_lb_CMDTXT1" runat="server"
-            Style="position: relative; width: 720px; height: 48px"
+            Style="position: relative; width: 648px; height: 24px"
             Alias="#CMDTXT1"
             CssClass="DdsRecord">
             &nbsp;
-          <%--  Command key text                                                                                                 --%>
+            
             <%--  Command key text 2                                                                                               --%>
             <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant ID="DdsConstant19" runat="server"
-                Style="position: absolute; left: 19px; top: 3px;"
-                Text=" "
-                CssClass="DdsConstant" />
+            
             <mdf:DdsConstant ID="DdsConstant20" runat="server"
-                Style="position: absolute; left: 19px; top: 27px;"
-                Text="F3=Exit                                                            F12=Return"
+                Style="position: absolute; left: 19px; top: 3px;"
+                Text=" F3=Exit   F6=eSign T&amp;Cs                                  F12=Return"
                 VisibleCondition="89"
                 CssClass="DdsConstant" />
             <mdf:DdsConstant ID="DdsConstant21" runat="server"
-                Style="position: absolute; left: 19px; top: 27px;"
-                Text="F3=Exit                                                           F12=Return"
+                style="position: absolute; left: 19px; top: 3px;"
+                Text=" F3=Exit   F6=eSign T&amp;Cs                                   F12=Return" 
                 VisibleCondition="!89"
                 CssClass="DdsConstant" />
         </mdf:DdsRecord>
@@ -1075,7 +1101,7 @@
                 Usage="Both"
                 VirtualRowCol="24,73"
                 ErrorMessageId="Y2U0014 Y2USRMSG : 96"
-                TabIndex="9" />
+                TabIndex="10" />
             <mdf:DdsConstant ID="DdsConstant23" runat="server"
                 Style="position: absolute; left: 676px; top: 3px;"
                 Text="(Y/N)"
@@ -1226,6 +1252,21 @@
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
             $("#requestdate, #pcode").css("width", "166px");
+            //Set esign
+            if($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").is("span")) {
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").text($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").text());
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").hide();
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").show();
+            } else {
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val());
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").hide();
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").show();
+            }
+            
+            $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").on('change', function () {
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val());
+            });
+            
             //$("#expectedDate").text($("#CenPH__lb_SFLCTL_V1AXDT").text());
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
