@@ -150,27 +150,32 @@
                           </div>
                     </div>
                   </div>
-                  <div class="mdl-cell mdl-cell--4-col" style="padding:0">
+              </div>
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--12-col" style="margin:0">
-                              <span class="form-label" style="font-weight: normal" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
+                          <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                              <span class="form-label">City:</span>
                           </div>
-						     <div class="mdl-cell mdl-cell--4-col" style="margin:0">
-                              <!-- <span class="form-label" style="font-weight: normal" id="CenPH__lb_RCDDTL1__lb_DADST_new">TX</span> -->
+                          <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                              <span class="form-label">State:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col" style="margin:0">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DADST_new"></span>
                           </div>
                     </div>
                   </div>
               </div>
               <!-- content-grid mdl-grid ends here -->
-        
-      
-       <!--  <div class="button-container" style="padding-bottom: 5px;">
-          <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-desktop pull-right modal-button-container">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-tb-index="7">Submit</button>
-            </div>
-          </div>
-        </div> -->
        <div class="button-container" style="padding-bottom: 5px;">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop pull-left modal-button-container">
@@ -618,12 +623,10 @@
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
-                    "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST":"CenPH__lb_RCDDTL1__lb_DAQTX_new"
-                    //"CenPH__lb_RCDDTL1__lb_DADST": "CenPH__lb_RCDDTL1__lb_DADST_new"
+                    "CenPH__lb_RCDDTL1__lb_DAQTX":"CenPH__lb_RCDDTL1__lb_DAQTX_new",
+                    "CenPH__lb_RCDDTL1__lb_DADST":"CenPH__lb_RCDDTL1__lb_DADST_new"
                 },
                 "inputFields": {
-                   //"CenPH__lb_RCDDTL1__lb_1CGC_lb_": "CenPH__lb_RCDDTL1__lb_1CGC_lb_new",
-                    //"CenPH__lb_RCDDTL1__lb_1P5N_lb_": "CenPH__lb_RCDDTL1__lb_1P5N_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1JZXT": "CenPH__lb_RCDDTL1__lb_1JZXT_new",
                     "CenPH__lb_RCDDTL1__lb_1P3N_lb_": "CenPH__lb_RCDDTL1__lb_1P3N_lb_new",
                     "CenPH__lb_RCDDTL1__lb_1J0XT": "CenPH__lb_RCDDTL1__lb_1J0XT_new",

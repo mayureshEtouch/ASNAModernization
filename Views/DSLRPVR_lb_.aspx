@@ -37,8 +37,8 @@
                         <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
-            </section>
-					<section class="order-summary">
+            </section>            
+			<section class="order-summary mrgnTp16">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col">
