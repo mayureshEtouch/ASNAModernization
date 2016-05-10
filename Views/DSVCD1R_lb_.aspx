@@ -217,7 +217,7 @@
                     </div>
                     <!-- 4 col ends here -->
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 0;">
+                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 0 8px;">
                       <div class="content-grid mdl-grid">	
 						<div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
                         <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span> </div>				  

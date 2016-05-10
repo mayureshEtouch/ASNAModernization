@@ -132,7 +132,7 @@
 		 
         }
         #__Page_PopUp > tr:first-child {
-         display: none;
+         /* display: none; */
         }
         #__Page_PopUp .DdsInlinePopUpTitle {
          height: 1px !important;
@@ -175,7 +175,7 @@ var copyToAndFrom = {
 			copyData(copyToAndFrom, "");
 		 
 				var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8]];
-				generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	  
+				generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);	  
 				
 			if($("#__Page_PopUp .simplePopupClose").length > 0) {
                $(".simplePopup").show();
