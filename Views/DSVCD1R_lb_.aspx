@@ -303,7 +303,7 @@
 
     });
   </script>
-  <div id="Div1" style="display:">
+  <div id="Div1" style="display:none;">
 
     <%--  IN: DR1 SKU (RST)         Display record(1 screen)                              --%>
     <%--  CRTDSPF                                                                         --%>
