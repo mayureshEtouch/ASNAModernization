@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </section>
-            <section style="margin-left: 21px;"><span style="display: block;" class="summary-title">Replacement Models</span></section>
+            <section style="margin-left: 21px;"><span style="display: block;" class="summary-title" id="CenPH__lb_SFLCTL__lb_CX0TX_new"></span></section>
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
@@ -436,6 +436,7 @@
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#CenPH__lb_SFLCTL__lb_CX0TX_new").html($("#CenPH__lb_SFLCTL__lb_CX0TX").html());
             $("body").css({"background-color" : "#fffff"});
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant3]").text());

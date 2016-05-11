@@ -315,9 +315,9 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comments">Comments</span>
                         
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+                        <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
