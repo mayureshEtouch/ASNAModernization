@@ -32,7 +32,6 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 <!-- Modified HTML code starts here -->
-<div class="OverlayPopupBackground"></div>
 <div class="modal-dialog-container">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row"> 
@@ -59,7 +58,7 @@
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                   <p>
-                    "Forms Print Selection "From time to time, Conn's Home Plus may be required by law to provide to you certain written notices or disclosures through the DocuSign, Inc. (DocuSign) electronic signing system. If you can access this information electronically to your satisfaction and agree to these terms and conditions, please confirm your agreement by clicking the 'I agree' check box during the signing process.
+                    "From time to time, Conn's Home Plus may be required by law to provide to you certain written notices or disclosures through the DocuSign, Inc. (DocuSign) electronic signing system. If you can access this information electronically to your satisfaction and agree to these terms and conditions, please confirm your agreement by clicking the 'I agree' check box during the signing process.
                   </p>
                   <p>
                     If you elect to receive required notices and disclosures only in paper format, it will slow the speed at which we can complete certain steps in transactions with you and delivering services to you because we will need first to send the required notices or disclosures to you in paper format, and then wait until we receive back from you your acknowledgment of your receipt of such paper notices or disclosures."
@@ -74,8 +73,7 @@
             </div>
           </section>
         </main>
-        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-        <div id="modal" class="simplePopup"></div>
+        
       </div>
       <style>
         #__Page_Hidden{
@@ -85,7 +83,7 @@
           left: 50% !important;
           margin-left: -250px;
           min-width: 550px !important;
-          min-height: 450px !important;
+          min-height: 400px !important;
           height: auto !important;
         }
         #__Page_PopUp tbody tr:first-child {
@@ -95,7 +93,13 @@
        .modal-dialog-container {
         width: 100%;
         margin-top: 0;
+        margin-bottom: 3%;
       }
+      
+      #__Page_Hidden {
+        height: 100% !important;
+       }
+      
     </style>
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display: none;">
