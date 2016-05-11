@@ -199,10 +199,10 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
-									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum"></span> </div>
-									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 10px;"><span data-upgraded=",MaterialTextfield" class="form-text" > / </span> </div>
-									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 -15px;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2">111-11-1234</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
+									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum"></span> </div>
+									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0 0 10px;"><span data-upgraded=",MaterialTextfield" class="form-text" > </span> </div>
+									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0 0 -15px;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2"></span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="ssnum_new-show">Show</a> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -484,7 +484,7 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display: none;">
+    <div id="Div1" style="display:none;">
 
         <%--  CR: DS1 Contract          Display record(1 screen)                                                               --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -1549,7 +1549,7 @@
                 "CenPH__lb_RCDDTL1__lb_1CBPC": "apr",
                 "CenPH__lb_RCDDTL1__lb_1KXVA": "payments",
                 "CenPH__lb_RCDDTL1__lb_1KYTX": "cosigner",
-                // "CenPH__lb_RCDDTL1__lb_DDRXT+CenPH_DdsConstant47": "ssnum",
+                //"CenPH__lb_RCDDTL1__lb_DDRXT+CenPH_DdsConstant47+CenPH__lb_RCDDTL1__lb_DDQXT": "ssnum",
                 "CenPH__lb_RCDDTL1__lb_1KZVA": "amtofpurchase",
                 "CenPH__lb_RCDDTL1_V1BTDT": "dob1",
                 "CenPH__lb_RCDDTL1_V1BUDT": "dob2",
@@ -1576,13 +1576,39 @@
             }
         }
         $(document).ready(function () {
-            var val = $("#CenPH__lb_RCDDTL1__lb_DDRXT").html().split('-');
-            var ssn;
-            for (var i = 0; i < val.length; i++) {
+            
 
-                ssn = val[2];
+            $("#ssnum_new-show").on("mousedown", function(event){
+                var ssnValue = $("#CenPH__lb_RCDDTL1__lb_DDRXT").html();
+                var ssnValue2 = $("#CenPH__lb_RCDDTL1__lb_DDQXT").html();
+                $("#ssnum").html(ssnValue+" / " + ssnValue2);
+            });
+
+            $("#ssnum_new-show").on("mouseup", function(event){
+                
+                 getMaskedSSN();
+            });
+
+            function getMaskedSSN() {
+              var ssn1 = maskSSN($("#CenPH__lb_RCDDTL1__lb_DDRXT").html());
+              var ssn2 = maskSSN($("#CenPH__lb_RCDDTL1__lb_DDQXT").html());
+              $("#ssnum").html(ssn1+" / " +ssn2);
             }
-            $("#ssnum").html("XXX" + "-" + "XX" + "-" + ssn + " " + $("#CenPH_DdsConstant47").html());
+            getMaskedSSN();
+            function maskSSN(ssn) {
+              var val = ssn.split('-');
+              var s1, s2,s3;
+              for (var i = 0; i < val.length; i++) {
+                val[0] = "***";
+                s1 = val[0];
+
+                val[1] = "**";
+                s2 = val[1];
+                s3= val[2];
+              }
+              return(s1+s2+s3);
+            }
+                
 
             $('body').css({ "background-color": "white" });
             //$("#name").text($("#CenPH__lb_RCDDTL1__lb_1ALTX").html());
