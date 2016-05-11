@@ -119,7 +119,7 @@
                     <!-- 4 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
-                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Product Group Description:</span> </div>
+                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Product Group <br>Description:</span> </div>
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="productGroupDesc" class="form-text"></span> </div>
                       </div>
                     </div>
@@ -207,20 +207,21 @@
                     <!-- 4 col ends here -->
 
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col" id="otcDetails">
+                    <div class="mdl-cell mdl-cell--4-col" style="margin: 8px 0 0 8px;">
+					<div class="content-grid mdl-grid">	
+						<div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span> </div>				  
+                      </div>
+                      
+                    </div>
+                    <!-- 4 col ends here -->
+                    <!-- 4 col starts here -->
+                    <div class="mdl-cell mdl-cell--3-col" id="otcDetails">
                       <div class="content-grid mdl-grid">
 
 					  <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">OTC Exchange:</span> </div>
 						<div  class="mdl-cell mdl-cell--6-col"><span style="padding-right: 20px;" id="otcExchange" ></span> 
 						</div>	
-                      </div>
-                    </div>
-                    <!-- 4 col ends here -->
-                    <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 0 8px;">
-                      <div class="content-grid mdl-grid">	
-						<div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span> </div>				  
                       </div>
                     </div>
                     <!-- 4 col ends here -->																					
@@ -276,7 +277,7 @@
               "CenPH__lb_RCDDTL1__lb_DTTCD":"net",
               "CenPH__lb_RCDDTL1_VDHBP3":"commision",
               "CenPH__lb_RCDDTL1__lb_1AXST":"status",
-              "CenPH__lb_RCDDTL1__lb_DQ1TX":"ref",
+              "CenPH__lb_RCDDTL1__lb_DQ1TX+CenPH__lb_RCDDTL1__lb_DX0TX":"ref",
               "CenPH_DdsConstant25":"date",
               "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
 			  "CenPH__lb_RCDDTL1__lb_PBBTX	":"vendorDescription",
