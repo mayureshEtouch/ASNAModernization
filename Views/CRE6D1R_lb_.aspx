@@ -199,8 +199,10 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum">/</span> </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
+									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum"></span> </div>
+									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 10px;"><span data-upgraded=",MaterialTextfield" class="form-text" > / </span> </div>
+									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 -15px;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2">111-11-1234</span> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
