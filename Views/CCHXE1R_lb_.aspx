@@ -1746,7 +1746,7 @@
             }
         }
         $(document).ready(function() {
-
+           
             $('input:text[name="cust-ssn"]').keyup(function () {
                 $('input:hidden[name="dummy-cust-ssn"]').val($(this).val());
             });
@@ -1755,16 +1755,30 @@
             function keydown(evt) {
                 if (!evt) evt = event;
                 if (evt.keyCode == 13) {
-                    //if($("#dummy-cust-ssn").val().lenght > 0) {
+                    if($("#dummy-cust-ssn").val().lenght > 0) {
                         $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                        //$("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                    } else {
+                        if($("#dummy-cust-ssn").val()!="")
+                        {
+                            $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-cust-ssn").val());
+                        }else {
+                            $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#cust-ssn").val());
+                        }
+                       //$("#dummy-cust-ssn").val($("#CenPH__lb_RCDDTL1__lb_1A4NB").val());
+                       
+                        
+                        //$("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                    }
+                    if($("#dummy-sp-ssn").val().length > 0) {
                         $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
-                    //} else {
-                        //$("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#cust-ssn").val());
-                        //$("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#sp-ssn").val());
-                    //}
+                    } else {
+                        $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
+                    }
                     _00('Enter', evt);
                 }
             }
+
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant42]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
@@ -1783,7 +1797,7 @@
                 _00('F7', event);
             });
             
-            if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+           if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
               $(".editable-data").show();
               $(".ro-data").hide();
               $(".confirmation-outer-conatiner").hide();
