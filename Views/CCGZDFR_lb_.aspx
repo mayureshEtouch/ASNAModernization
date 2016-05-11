@@ -72,13 +72,13 @@
                                         <span class="summary-table-title pull-right">Account</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col" id="filter-by-co">
-                                        <input type="text" id="account" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
+                                        <input type="text" id="account" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="10">
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col" style="width: 80px;">
                                         <span class="summary-table-title pull-right">Ex</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
-                                        <input type="text" id="txtex" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
+                                        <input type="text" id="txtex" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="2">
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col">
                                         <span class="summary-table-title pull-right" id="lbladd"></span>
@@ -2228,6 +2228,14 @@
             // display table for selected model number
             var dataMergeIndices = [[0], [1], [2, "<br>", 15], [3, "<br>", 16], [4, "<br>", 17], [5], [6], [7], [8, "<br>", 20], [9], [10], [11], [12], [13], [14], [19], [22], [24]];
             generateTableAndApplyInfiniteScroll("tblCstAcc", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            $("#account, #txtex").ForceNumericOnly();
+            $('#tblCstAcc tr td').each(function (i, col) {
+
+                if ($(col).text().indexOf('undefined') > 0) {
+
+                    $(col).text($(col).text().replace('undefined', ''));
+                }
+            });
 
             $("#previous").click(function (event) {
                 _00('F12', event);
@@ -2244,21 +2252,10 @@
 
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
-                console.log("selectId " + selectId);
                 a = selectId.split(".");
-                console.log("a " + a);
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-            //Display Model details
-            //$(".display-select-details").click(function (event) {
-            //    if ($(".icon-container").hasClass("icon-disable")) {
-            //        alert("Please select the option");
-            //    } else {
-            //        var row = $("#tblCstAcc tbody tr.selected");
-            //        selectCusotmer(row, "1", event);
-            //    }
-            //});
             $(".display-customer").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the option");
