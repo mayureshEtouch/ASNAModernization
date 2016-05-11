@@ -37,27 +37,8 @@
                         <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
-            </section>
-            <section class="progress-bar">
-                <div class="progress-bar-wrapper">
-                    <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                        <li class="progress-bar-divider-first">
-
-                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
-                    </ul>
-                </div>
-            </section>
-					<section class="order-summary">
+            </section>            
+			<section class="order-summary mrgnTp16">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col">
