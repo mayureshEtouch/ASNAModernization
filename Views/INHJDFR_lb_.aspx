@@ -42,8 +42,8 @@
             <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                        <li class="progress-bar-divider-first">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
 
                         <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
                         <li class="progress-bar-divider">
@@ -52,9 +52,9 @@
                         <li class="progress-bar-divider">
 
                         <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                        <li class="progress-bar-divider">
+                        <li class="progress-bar-divider white-to-gray-bullet">
 
-                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>                        
+                        <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>                        
                     </ul>
                 </div>
             </section>
@@ -75,8 +75,10 @@
 						
 					<div class="error-msg-container" style="margin-top: 5px;">
 					<div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col">
-						<div class="error-message" id="error-message">Press F5 if the flags are N-if still N contact support or print manually</div>
+                        <div class="mdl-cell mdl-cell--12-col" style="text-align: right;">
+						 
+						<span class="error-message" id="error-message">Press F5 to flip 'N'to'Y'.Proceed with eSign F6 for all 'Y',else Re-print F8.</span>
+						
 						</div>
 						</div>
 						</div>
@@ -136,6 +138,7 @@
 							"CenPH__lb_SFLCTL__lb__lb_TME":"time",
 							"CenPH__lb_SFLCTL__lb_2BANB":"orderNumber",
 							"CenPH__lb_SFLCTL__lb_2PB_lb_N":"versionNumber"
+							//,"CenPH_DdsConstant2":"error-message"
 							
 
 						},

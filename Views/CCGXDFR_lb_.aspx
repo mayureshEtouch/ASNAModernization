@@ -101,7 +101,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                             <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Customer:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span><br><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BFTX_new"></span><br><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAQTX_new"></span> </div>
                         </div>
                         
                               </div>
@@ -1550,7 +1550,10 @@
                     "CenPH__lb_SFLCTL__lb_2REF_lb_+CenPH__lb_SFLCTL__lb_2CENB": "CenPH__lb_SFLCTL__lb_2REF_lb_new",
                     "CenPH__lb_SFLCTL__lb_2B2NB": "CenPH__lb_SFLCTL__lb_2B2NB_new",
                     "CenPH__lb_SFLCTL__lb_2C0CD": "CenPH__lb_SFLCTL__lb_2C0CD_new",
-                    "CenPH__lb_SFLCTL__lb_2A2TX+CenPH__lb_SFLCTL__lb_2BFTX+CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CBMTX+CenPH__lb_SFLCTL__lb_2BHTX":"CenPH__lb_SFLCTL__lb_2A2TX_new",
+					"CenPH__lb_SFLCTL__lb_2A2TX":"CenPH__lb_SFLCTL__lb_2A2TX_new",
+					"CenPH__lb_SFLCTL__lb_2BFTX":"CenPH__lb_SFLCTL__lb_2BFTX_new",
+					"CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CBMTX+CenPH__lb_SFLCTL__lb_2BHTX":"CenPH__lb_SFLCTL__lb_CAQTX_new",
+				   
                     "CenPH__lb_SFLCTL__lb_2BXNB": "CenPH__lb_SFLCTL__lb_2BXNB_new",
                     "CenPH__lb_SFLCTL__lb_2CSCD": "CenPH__lb_SFLCTL__lb_2CSCD_new",
                     "CenPH__lb_SFLCTL__lb_2BZNB": "CenPH__lb_SFLCTL__lb_2BZNB_new",
