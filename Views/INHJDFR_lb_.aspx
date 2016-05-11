@@ -75,8 +75,10 @@
 						
 					<div class="error-msg-container" style="margin-top: 5px;">
 					<div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col">
-						<div class="error-message" id="error-message">Press F5 if the flags are N-if still N contact support or print manually</div>
+                        <div class="mdl-cell mdl-cell--12-col" style="text-align: right;">
+						 
+						<span class="error-message" id="error-message">Press F5 to flip 'N'to'Y'.Proceed with eSign F6 for all 'Y',else Re-print F8.</span>
+						
 						</div>
 						</div>
 						</div>
@@ -136,6 +138,7 @@
 							"CenPH__lb_SFLCTL__lb__lb_TME":"time",
 							"CenPH__lb_SFLCTL__lb_2BANB":"orderNumber",
 							"CenPH__lb_SFLCTL__lb_2PB_lb_N":"versionNumber"
+							//,"CenPH_DdsConstant2":"error-message"
 							
 
 						},
