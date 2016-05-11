@@ -66,8 +66,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Account:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2REF_lb_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--5-col" style="margin:0"><span class="form-label">Account:</span></div>
+                            <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2REF_lb_new"></span> </div>
                         </div>
                         
                               </div>
@@ -100,8 +100,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Customer:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span><br><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BFTX_new"></span><br><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAQTX_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--5-col" style="margin:0"><span class="form-label">Customer:</span></div>
+                            <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span><br><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BFTX_new"></span><br><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAQTX_new"></span> </div>
                         </div>
                         
                               </div>
@@ -134,8 +134,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Office Phone:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BZNB_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--5-col" style="margin:0"><span class="form-label">Office Phone:</span></div>
+                            <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BZNB_new"></span> </div>
                         </div>
                         
                               </div>
@@ -168,8 +168,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Loan:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2CDVA_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--5-col" style="margin:0"><span class="form-label">Loan:</span></div>
+                            <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2CDVA_new"></span> </div>
                         </div>
                         
                               </div>
@@ -202,8 +202,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Age at Pur:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CETNB_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--5-col" style="margin:0"><span class="form-label">Age at Pur:</span></div>
+                            <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CETNB_new"></span> </div>
                         </div>
                         
                               </div>
@@ -236,8 +236,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Co-Borw:</span></div>
-                            <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2A3TX_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--5-col" style="margin:0"><span class="form-label">Co-Borw:</span></div>
+                            <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2A3TX_new"></span> </div>
                         </div>
                         
                               </div>
@@ -268,10 +268,10 @@
                         <!-- content-grid mdl-grid starts here -->
                             <div class="content-grid mdl-grid" style="padding:0">
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col">
+                            <div class="mdl-cell mdl-cell--5-col">
                                 <div class="content-grid mdl-grid">
-                            <div  class="mdl-cell mdl-cell--2-col" style="margin:0"><span class="form-label">Col Desc:</span></div>
-                            <div  class="mdl-cell mdl-cell--9-col" style="margin:0 0 0 -11px"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BKTX_new"></span> </div>
+                            <div  class="mdl-cell mdl-cell--4-col" style="margin:0"><span class="form-label">Col Desc:</span></div>
+                            <div  class="mdl-cell mdl-cell--8-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BKTX_new"></span> </div>
                         </div>
                         
                               </div>
