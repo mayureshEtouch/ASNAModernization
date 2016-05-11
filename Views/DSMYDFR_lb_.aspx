@@ -40,7 +40,7 @@
             </div>
           </section>
           <section class="form-data">
-                          <div class="form-data-wrapper">
+    		<div class="form-data-wrapper">
                 <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
                  <div class="content-grid mdl-grid">
@@ -56,17 +56,6 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
                  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-label">Model Description</span>
-                  </div>
-                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-text pull-right" id="model_description" ></span>
-                  </div>
-                 </div>
-                </div>
-                
-                <div class="mdl-cell mdl-cell--4-col">
-                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
                    <span class="form-label">Vendor Number</span>
                   </div>
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
@@ -74,41 +63,55 @@
                   </div>
                  </div>
                 </div>
+                
+                <div class="mdl-cell mdl-cell--4-col">
+                  <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+				  <span class="form-label">Parts Warranty</span>
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+				  <span class="form-text pull-right" id="parts_warranty"></span>&nbsp;<span class="form-text pull-right" id="period_1"></span>
+                  </div>
+                 </div>
+                </div>
                 </div>
                 
                 <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
-                 <div class="content-grid mdl-grid">
+				  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-label">Parts Warranty</span>
+                   <span class="form-label">Model Description</span>
                   </div>
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                  <span class="form-text pull-right" id="parts_warranty"></span>&nbsp;<span class="form-text pull-right" id="period_1"></span>
-                   
+                   <span class="form-text pull-right" id="model_description" ></span>
                   </div>
                  </div>
+				
                 </div>
                 
                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
-                 <div class="content-grid mdl-grid">
+				<div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-label">Labor Warranty</span>
+                   <span class="form-label">Vendor Number Description</span>
                   </div>
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                  <span class="form-text pull-right" id="labor_warranty"></span>&nbsp;<span class="form-text pull-right" id="period_2"></span>
+                  <span class="form-text pull-right" id="vendor_number_decp"></span>&nbsp;<span class="form-text pull-right" id="period_1"></span>
                    
                   </div>
                  </div>
+				 
+                
                 </div>
                 
                 <div class="mdl-cell mdl-cell--4-col">
                  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-label">Components Warranty</span>
+				   <span class="form-label">Labor Warranty</span>
+                  
                   </div>
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                     <span class="form-text pull-right" id ="component_warranty"></span>&nbsp;<span class="form-text pull-right" id="period_3"></span>
-                   
+				    <span class="form-text pull-right" id="labor_warranty"></span>&nbsp;<span class="form-text pull-right" id="period_2"></span>
+                  
                   </div>
                  </div>
                 </div>
@@ -116,26 +119,48 @@
                 
                 <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
-                 <div class="content-grid mdl-grid">
+                <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-label">Product Group</span>
+				  <span class="form-label">Product Group</span>
+                  
                   </div>
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
-                   <span class="form-text pull-right" id="product_group"></span>
+				      <span class="form-text pull-right" id="product_group"></span>	
                   </div>
                  </div>
+				 
                 </div>
                  <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
-                     
+				 
+				      <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+				   <span class="form-label">Product Group Description</span>
+                  
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+				     <span class="form-text pull-right" id="product_group_decp"></span>	
+                  </div>
+                 </div>
+				 
+                
                  </div>
                   <div class="mdl-cell mdl-cell--4-col">
-                     
+				   <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+				   <span class="form-label">Components Warranty</span>
+                   
+                  </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
+				  <span class="form-text pull-right" id ="component_warranty"></span>&nbsp;<span class="form-text pull-right" id="period_3"></span>
+            
+                  </div>
+                 </div>
                  </div>
                 
                 </div>
                
                
-                       </div>
+            </div>
                       </section>
           <section class="table-data-content-container spacer-container-bottom mrgnTp16">
             <div class="table-data-wrapper">
@@ -186,14 +211,16 @@
                        "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                        "CenPH__lb_SFLCTL__lb_PAXTX": "model_number",
                        "CenPH__lb_SFLCTL__lb_PA2TX": "model_description",
-                       "CenPH__lb_SFLCTL__lb_PBLNB+CenPH__lb_SFLCTL__lb_CECTX": "vendor_number",
+                       "CenPH__lb_SFLCTL__lb_PBLNB": "vendor_number",
+					   "CenPH__lb_SFLCTL__lb_CECTX":"vendor_number_decp",
                        "CenPH__lb_SFLCTL__lb_PATCD": "parts_warranty",
                        "CenPH__lb_SFLCTL__lb_PASCD": "labor_warranty",
                        "CenPH__lb_SFLCTL__lb_PAUCD": "component_warranty",
                        "CenPH_DdsConstant15": "period_1",
                        "CenPH_DdsConstant16": "period_2",
                        "CenPH_DdsConstant17": "period_3",
-                       "CenPH__lb_SFLCTL__lb_2AWCD+CenPH__lb_SFLCTL__lb_CJ1TX": "product_group",
+                       "CenPH__lb_SFLCTL__lb_2AWCD": "product_group",
+					   "CenPH__lb_SFLCTL__lb_CJ1TX":"product_group_decp"
                    },
                    "inputFields":{
                    }
