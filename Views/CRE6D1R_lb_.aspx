@@ -222,12 +222,11 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">DOB #1:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="dob1"></span>
-                                        <span class="form-label" style="margin-left: 10px;">#2:</span>
-                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="dob2"></span>
-                                    </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span class="form-label">DOB #1:</span> </div>
+									<div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="dob1"></span></div>
+									<div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 10px;"><span class="form-label" style="margin-left: 10px;">#2:</span></div>
+									<div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 -15px;"><span data-upgraded=",MaterialTextfield" class="form-text" id="dob2"></span> </div>
+                                    
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
