@@ -80,7 +80,7 @@
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Employee:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                                            <input maxlength="5" type="text" id="employee_id" size="10" data-tb-index="1" />
+                                            <input maxlength="5" onfocus="_09('#DAJCD','4,33','#RCDDTL1');" type="text" id="employee_id" size="10" data-tb-index="1" />
                                         </span>
 
                                     </div>
@@ -140,7 +140,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Balance:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" class="mdl-textfield__input" id="balance" maxlength="8" size="10" data-tb-index="4" /></span> </div>
+                                        <input type="text" class="mdl-textfield__input" onfocus="_09('#DCLVA','6,59','#RCDDTL1');" id="balance" maxlength="8" size="10" data-tb-index="4" /></span> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -155,10 +155,10 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span class="form-label">Insurance A/H:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="insurance" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="5" /></span> </div>
+                                        <input type="text" id="insurance" maxlength="1" onfocus="_09('#DLEST','8,19','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="5" /></span> </div>
                                     <div class="mdl-cell mdl-cell--2-col" style="padding-left: 20px;"><span class="form-label">C/L:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="cl" maxlength="1" class="mdl-textfield__input" size="2" data-tb-index="6" /></span> </div>
+                                        <input type="text" id="cl" maxlength="1" onfocus="_09('#DLFST','8,25','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="6" /></span> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -168,10 +168,10 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--1-col" style="margin: 8px 5px 8px 0"><span class="form-label">Prop:</span> </div>
                                     <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="prop" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7" /></span> </div>
+                                        <input type="text" id="prop" onfocus="_09('#DLGST','8,32','#RCDDTL1');" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7" /></span> </div>
                                     <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0; padding-left: 15px;"><span class="form-label">U-Emp:</span> </div>
                                     <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px -8px;"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="u_emp" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="8" /></span> </div>
+                                        <input type="text" id="u_emp" maxlength="1" onfocus="_09('#DLHST','8,40','#RCDDTL1');" class="mdl-textfield__input" size="10" data-tb-index="8" /></span> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -181,7 +181,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Down Payment:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="down_payment" maxlength="10" class="mdl-textfield__input" size="10" data-tb-index="9" /></span> </div>
+                                        <input type="text" onfocus="_09('#DGEVA','8,57','#RCDDTL1');" id="down_payment" maxlength="10" class="mdl-textfield__input" size="10" data-tb-index="9" /></span> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -233,7 +233,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--2-col"><span class="form-label">For:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width: 40%" /></span> </div>
+                                        <input type="text" onfocus="_09('#DDUNB','12,31','#RCDDTL1');" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width: 40%" /></span> </div>
                                     <div class="mdl-cell mdl-cell--2-col" style=""><span class="form-label">Months</span> </div>
                                     <div class="mdl-cell mdl-cell--4-col" style="">
                                         <span data-upgraded=",MaterialTextfield" class="form-label" id="lbl_with_payment_of">With Payment of
@@ -282,11 +282,11 @@
                                         <td>
                                             <input type="text" id="mod_no_1" maxlength="20" value="" class="f4" onfocus="_09('#DA6TX','16,8','#RCDDTL1');" data-tb-index="13" /></td>
                                         <td class="">
-                                            <input maxlength="3" size="2" type="text" id="quantity_1" value="" data-tb-index="14" /></td>
+                                            <input maxlength="3" size="2" type="text" onfocus="_09('#1PRDQ','16,29','#RCDDTL1');" id="quantity_1" value="" data-tb-index="14" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="value_1" value="" data-tb-index="15" /></td>
+                                            <input maxlength="9" type="text" id="value_1" onfocus="_09('#1GFVA','16,33','#RCDDTL1');" value="" data-tb-index="15" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="maint_1" value="" data-tb-index="16" /></td>
+                                            <input maxlength="9" type="text" id="maint_1" onfocus="_09('#1PRDM','16,44','#RCDDTL1');" value="" data-tb-index="16" /></td>
                                         <td class="pull-right"><span id="total_1"></span></td>
                                     </tr>
                                     <tr>
@@ -295,11 +295,11 @@
                                         <td>
                                             <input type="text" id="mod_no_2" maxlength="20" value="" class="f4" onfocus="_09('#DUPTX','17,8','#RCDDTL1');" data-tb-index="18" /></td>
                                         <td class="">
-                                            <input maxlength="3" size="2" type="text" id="quantity_2" value="" data-tb-index="19" /></td>
+                                            <input maxlength="3" size="2" onfocus="_09('#DI2NB','17,29','#RCDDTL1');" type="text" id="quantity_2" value="" data-tb-index="19" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="value_2" value="" data-tb-index="20" /></td>
+                                            <input maxlength="9" onfocus="_09('#DGIVA','17,33','#RCDDTL1');" type="text" id="value_2" value="" data-tb-index="20" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="maint_2" value="" data-tb-index="21" /></td>
+                                            <input maxlength="9" type="text" onfocus="_09('#DGLVA','17,44','#RCDDTL1');" id="maint_2" value="" data-tb-index="21" /></td>
                                         <td class="pull-right"><span id="total_2"></span></td>
                                     </tr>
                                     <tr>
@@ -308,11 +308,11 @@
                                         <td>
                                             <input type="text" id="mod_no_3" maxlength="20" value="" class="f4" onfocus="_09('#DUQTX','18,8','#RCDDTL1');" data-tb-index="23" /></td>
                                         <td class="">
-                                            <input maxlength="3" size="2" type="text" id="quantity_3" value="" data-tb-index="24" /></td>
+                                            <input maxlength="3" onfocus="_09('#DI3NB','18,29','#RCDDTL1');" size="2" type="text" id="quantity_3" value="" data-tb-index="24" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="value_3" value="" data-tb-index="25" /></td>
+                                            <input maxlength="9" onfocus="_09('#DGJVA','18,33','#RCDDTL1');" type="text" id="value_3" value="" data-tb-index="25" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="maint_3" value="" data-tb-index="26" /></td>
+                                            <input maxlength="9" onfocus="_09('#DGMVA','18,44','#RCDDTL1');" type="text" id="maint_3" value="" data-tb-index="26" /></td>
                                         <td class="pull-right"><span id="total_3"></span></td>
                                     </tr>
                                     <tr>
@@ -321,11 +321,11 @@
                                         <td>
                                             <input type="text" id="mod_no_4" maxlength="20" value="" class="f4" onfocus="_09('#DURTX','19,8','#RCDDTL1');" data-tb-index="28" /></td>
                                         <td class="">
-                                            <input maxlength="3" size="2" type="text" id="quantity_4" value="" data-tb-index="29" /></td>
+                                            <input maxlength="3" onfocus="_09('#DI4NB','19,29','#RCDDTL1');" size="2" type="text" id="quantity_4" value="" data-tb-index="29" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="value_4" value="" data-tb-index="30" /></td>
+                                            <input maxlength="9" onfocus="_09('#DGKVA','19,33','#RCDDTL1');" type="text" id="value_4" value="" data-tb-index="30" /></td>
                                         <td class="">
-                                            <input maxlength="9" type="text" id="maint_4" value="" data-tb-index="31" /></td>
+                                            <input maxlength="9" onfocus="_09('#DGNVA','19,44','#RCDDTL1');" type="text" id="maint_4" value="" data-tb-index="31" /></td>
                                         <td class="pull-right"><span id="total_4"></span></td>
                                     </tr>
 

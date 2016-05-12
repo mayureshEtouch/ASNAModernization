@@ -53,7 +53,7 @@
                                             <span class="summary-table-title pull-right">Model Description</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--10-col-desktop" id="filter-by-product-category">
-                                            <input type="text" id="number1" class="mdl-textfield__input">
+                                            <input type="text" maxlength="25" onfocus="_09('#2A2TX','5,4','#SFLCTL');" id="number1" class="mdl-textfield__input">
                                         </div>                        
                                     </div>
                                 </div>

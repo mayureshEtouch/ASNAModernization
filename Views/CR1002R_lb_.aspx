@@ -150,6 +150,7 @@
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Co-Debtor S.S.#:</span></div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-text">
                     <input type="text" maxlength="9" autocomplete="off"  data-tb-index="4" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_2_new" id="CenPH_DSPFMT1_SS_lb_2_new">
+                    <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_2_new_hidden" id="CenPH_DSPFMT1_SS_lb_2_new_hidden">
                     <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_2_new-show">Show</a> </span>
                     <input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT1_SS_lb_2_new">
                     <!-- <span></span> --> </div>
@@ -589,7 +590,7 @@
               <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Co-Debtor S.S.#:</span> </div>
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_2_new"></span> </div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_2_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_2_new-show">Show</a> </div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -2138,6 +2139,10 @@
                 $('input:hidden[name="CenPH_DSPFMT1_SS_lb_1_new_hidden"]').val($(this).val());
                 
             });
+          $('input:text[name="CenPH_DSPFMT1_SS_lb_2_new"]').keyup(function () {
+                $('input:hidden[name="dummy-CenPH_DSPFMT1_SS_lb_2_new"]').val($(this).val());
+                
+            });
               document.onkeydown = keydown;
             function keydown(evt) {
                 if (!evt) evt = event;
@@ -2146,14 +2151,23 @@
                         
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
                         $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
+                        $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1").val());
                        
                     }
                     else{
                       $("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val($("#CenPH_DSPFMT1_SS_lb_1").val());
                       $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
+                      $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
 
                     }
+                    /*if($("dummy-CenPH_DSPFMT1_SS_lb_2_new").val().length > 0) {
+                      $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                    }
+                    else {
+                      //$("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val($("#CenPH_DSPFMT1_SS_lb_2").val());
+                      $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                    }*/
                      _00('F4', evt);
                 }
             }
@@ -2366,6 +2380,15 @@
                   maskSSN();
                 });
 
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){
+                  var ssnValue = $("#CenPH_DSPFMT2_SS_lb_2").text();
+                  $("#CenPH_DSPFMT2_SS_lb_2_new").text(ssnValue);
+                });
+
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mouseup", function(event){
+                  maskSSN1();
+                });
+
                 function maskSSN() {
                   var val = $("#CenPH_DSPFMT2_SS_lb_1").html().split('-');
                   var s1, s2,s3;
@@ -2379,7 +2402,22 @@
                   }
                   $("#CenPH_DSPFMT2_SS_lb_1_new").html(s1+s2+s3);
                 }
+
+                function maskSSN1() {
+                  var val = $("#CenPH_DSPFMT2_SS_lb_2").html().split('-');
+                  var s1, s2,s3;
+                  for (var i = 0; i < val.length; i++) {
+                    val[0] = "***";
+                    s1 = val[0];
+
+                    val[1] = "**";
+                    s2 = val[1];
+                    s3= val[2];
+                  }
+                  $("#CenPH_DSPFMT2_SS_lb_2_new").html(s1+s2+s3);
+                }
                 maskSSN();
+                maskSSN1();
             }
             //validations
             $("#CenPH_DSPFMT1_ADDON_usd_new,#CenPH_DSPFMT1_CRMTHB_new,#CenPH_DSPFMT1_FRCNTC_new").ForceNumericOnly();
