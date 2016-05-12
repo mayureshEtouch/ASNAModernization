@@ -61,11 +61,11 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Order Number</span>
                             <span class="summary-txt" id="orderNumber"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Version Number</span>
                             <span class="summary-txt" id="versionNumber"></span>
                         </div>
@@ -106,13 +106,13 @@
                                 
 								<div class="button-container">
 										<div class="content-grid mdl-grid">
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop mdl-cell--6-col-tablet">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh" onclick="_00('F5',event);" >Refresh</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="continueeSign" onclick="_00('F6',event);">Continue eSign</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="manualPrint" onclick="_00('F8',event);" >Manual Print</span>
 												</div>
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop pull-right">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--2-col-tablet pull-right">
 	
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter',event);" id="next">next</span>
 												</div>

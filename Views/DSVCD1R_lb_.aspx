@@ -207,16 +207,23 @@
                     <!-- 4 col ends here -->
 
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col" style="margin: 8px 0 0 8px;">
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 8px 0 0 8px;">
 					<div class="content-grid mdl-grid">	
-						<div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span> </div>				  
+						<div  class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
+                        <div  class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin-left: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span>
+						<span data-upgraded=",MaterialTextfield" class="form-text" id="refDesc" style="margin-left: 15px;"></span>
+						</div>				  
                       </div>
                       
                     </div>
                     <!-- 4 col ends here -->
-                    <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" id="otcDetails">
+                    																					
+                  </div>
+                  <!-- content-grid mdl-grid ends here -->
+				   <!-- content-grid mdl-grid starts here -->
+                  <div class="content-grid mdl-grid" style="padding:0">
+				  <!-- 4 col starts here -->
+                    <div class="mdl-cell mdl-cell--5-col" id="otcDetails">
                       <div class="content-grid mdl-grid">
 
 					  <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">OTC Exchange:</span> </div>
@@ -224,8 +231,8 @@
 						</div>	
                       </div>
                     </div>
-                    <!-- 4 col ends here -->																					
-                  </div>
+                    <!-- 4 col ends here -->
+					 </div>
                   <!-- content-grid mdl-grid ends here -->
 
                   <div class="button-container">
@@ -277,7 +284,8 @@
               "CenPH__lb_RCDDTL1__lb_DTTCD":"net",
               "CenPH__lb_RCDDTL1_VDHBP3":"commision",
               "CenPH__lb_RCDDTL1__lb_1AXST":"status",
-              "CenPH__lb_RCDDTL1__lb_DQ1TX+CenPH__lb_RCDDTL1__lb_DX0TX":"ref",
+              "CenPH__lb_RCDDTL1__lb_DQ1TX":"ref",
+			  "CenPH__lb_RCDDTL1__lb_DX0TX":"refDesc",
               "CenPH_DdsConstant25":"date",
               "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
 			  "CenPH__lb_RCDDTL1__lb_PBBTX	":"vendorDescription",

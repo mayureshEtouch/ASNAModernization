@@ -68,7 +68,7 @@
                                 <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
                                     <span class="summary-table-title">Filter by:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--1-col" style="width: 72px;">
                                             <span class="summary-table-title pull-right">Zip Code</span>
