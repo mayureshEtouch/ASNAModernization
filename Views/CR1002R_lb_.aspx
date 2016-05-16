@@ -2383,7 +2383,7 @@
                   maskSSN();
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){debugger
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){
                   //$("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text($("#CenPH_DSPFMT2_SS_lb_2_new").text());
                   var ssnValue = $("#CenPH_DSPFMT2_SS_lb_2").text();
                   //var dummyValue1 = $("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text();
@@ -2391,7 +2391,7 @@
                   $("#CenPH_DSPFMT2_SS_lb_2_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show,#CenPH_DSPFMT2_SS_lb_2_new").on("mouseup", function(event){debugger
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show,#CenPH_DSPFMT2_SS_lb_2_new").on("mouseup", function(event){
                   maskSSN1();
                 });
 
