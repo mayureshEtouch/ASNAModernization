@@ -207,16 +207,23 @@
                     <!-- 4 col ends here -->
 
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--4-col" style="margin: 8px 0 0 8px;">
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 8px 0 0 8px;">
 					<div class="content-grid mdl-grid">	
-						<div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span> </div>				  
+						<div  class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
+                        <div  class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin-left: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span>
+						<span data-upgraded=",MaterialTextfield" class="form-text" id="refDesc" style="margin-left: 15px;"></span>
+						</div>				  
                       </div>
                       
                     </div>
                     <!-- 4 col ends here -->
-                    <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" id="otcDetails">
+                    																					
+                  </div>
+                  <!-- content-grid mdl-grid ends here -->
+				   <!-- content-grid mdl-grid starts here -->
+                  <div class="content-grid mdl-grid" style="padding:0">
+				  <!-- 4 col starts here -->
+                    <div class="mdl-cell mdl-cell--5-col" id="otcDetails">
                       <div class="content-grid mdl-grid">
 
 					  <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">OTC Exchange:</span> </div>
@@ -224,21 +231,21 @@
 						</div>	
                       </div>
                     </div>
-                    <!-- 4 col ends here -->																					
-                  </div>
+                    <!-- 4 col ends here -->
+					 </div>
                   <!-- content-grid mdl-grid ends here -->
 
                   <div class="button-container">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12" data-tb-index="4">Previous</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="globalAvail" event-data="F6" data-tb-index="5">GLOBAL AVAIL</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="subRpl" data-tb-index="6" event-data="F7">SUB/RPL</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="7" event-data="F13">Prod Warr</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Xfers" data-tb-index="8" event-data="F17" >XFERS</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="9" event-data="F19">PO'S</span>
+                      <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop mdl-cell--7-col-tablet" style="margin-right:0;">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12" data-tb-index="4" style="margin-left: 3px;">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="globalAvail" event-data="F6" data-tb-index="5" style="margin-left: 3px;">GLOBAL AVAIL</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="subRpl" data-tb-index="6" event-data="F7" style="margin-left: 3px;">SUB/RPL</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="7" event-data="F13" style="margin-left: 3px;">Prod Warr</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Xfers" data-tb-index="8" event-data="F17" style="margin-left: 3px;">XFERS</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="9" event-data="F19" style="margin-left: 3px;">PO'S</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop pull-right">
+                      <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop mdl-cell--1-col-tablet pull-right" style="margin-left:0">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);" id="next" data-tb-index="10">next</span>
                       </div>
                     </div>
@@ -277,7 +284,8 @@
               "CenPH__lb_RCDDTL1__lb_DTTCD":"net",
               "CenPH__lb_RCDDTL1_VDHBP3":"commision",
               "CenPH__lb_RCDDTL1__lb_1AXST":"status",
-              "CenPH__lb_RCDDTL1__lb_DQ1TX+CenPH__lb_RCDDTL1__lb_DX0TX":"ref",
+              "CenPH__lb_RCDDTL1__lb_DQ1TX":"ref",
+			  "CenPH__lb_RCDDTL1__lb_DX0TX":"refDesc",
               "CenPH_DdsConstant25":"date",
               "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
 			  "CenPH__lb_RCDDTL1__lb_PBBTX	":"vendorDescription",

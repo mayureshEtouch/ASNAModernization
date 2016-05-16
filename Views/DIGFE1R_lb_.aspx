@@ -188,9 +188,9 @@
 								<div class="content-grid mdl-grid content-row-height">
                                 </div>
                                 
-                                <div class="content-grid mdl-grid content-row-height">
+                                <div class="content-grid mdl-grid content-row-height" id="extra-phone-div">
                                     <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Extra Phone #s:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield"> Y </span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="extra-phone" data-upgraded=",MaterialTextfield">  </span> </div>
                                 </div>
 								
 								
@@ -1145,6 +1145,11 @@
 				
 				if($("#CenPH__lb_RCDDTL1__lb_DBQST").length == 0 ){
 					$("#notesDisplay").hide();
+					
+				}
+				
+				if($("#CenPH__lb_RCDDTL1__lb_DTQST").length == 0 ){
+					$("#extra-phone-div").hide();
 					
 				}
 				

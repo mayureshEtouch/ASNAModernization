@@ -1613,10 +1613,12 @@
                         s1 = val[0];
                      
                         val[1] = "**";
-                        s2 = val[1];
+                       s2 = val[1];
                         s3= val[2];
                     }
-                    $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(s1+s2+s3);
+                    var s4=s3.substring(1);
+                    s4 = "*" + s4;
+                    $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(s1+s2+s4);
                 }
                 maskSSN();
 				
