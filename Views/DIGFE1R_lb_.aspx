@@ -107,8 +107,8 @@
 									</span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height" id="additionalAddress">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid content-row-height">
                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
@@ -140,7 +140,7 @@
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--1-col-tablet" style="margin:0"> <span class="form-label">Work Phone:</span> </div>
                                     <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                                                 <input type="text" id="work-phone" name="work-phone" maxlength="10" class="mdl-cell--5-col" data-tb-index="5">
-                                                                <span class="input-side-gutter-space form-label mdl-cell--7-col">Extension:
+                                                                <span class="input-side-gutter-space form-label mdl-cell--7-col">Ext:
                                                                 <input type="text" id="extension" name="extension" class="extension" maxlength="4" data-tb-index="6">
                                                                 </span> </span>
                                     </div>

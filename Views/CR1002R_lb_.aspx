@@ -470,11 +470,11 @@
             </div>
             <div class="button-container">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="refresh">refresh</span> 
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="refresh">refresh</span> 
                 <span data-tb-index="14" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg">Display Messages</span> 
                 <span data-tb-index="14" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> 
                 </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span data-tb-index="15" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--2-col-tablet pull-right"> <span data-tb-index="15" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
               </div>
             </div>
           </div>
@@ -904,7 +904,7 @@
             </div>
             <div class="button-container">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> 
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> 
                   <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Previous</span> --> 
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise1">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg1">Display Messages</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">Print</span> </div>
                 <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">

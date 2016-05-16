@@ -93,7 +93,7 @@
                                             <div style="margin-right:2%;">
                                         <span class="circle-separator" style="margin: 13px 0;"><span>OR</span></span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop" style="margin: 0">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop">
                                         <span class="summary-label">Social Security</span>
                                         <div class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                             <input type="text" autocomplete="off" id="ssn" class="mdl-textfield__input mdl-cell--8-col mdl-cell--12-col-desktop" data-tb-index="4" maxlength="10">
@@ -105,9 +105,9 @@
                             </div>
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--9-col-desktop">
+                                    <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3" data-tb-index="5">Previous</span></div>                        
-                                    <div class="mdl-cell mdl-cell--3-col pull-right">
+                                    <div class="mdl-cell mdl-cell--2-col pull-right">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" event-data="Enter" data-tb-index="6">NEXT</span>
                                     </div>
                                 </div>

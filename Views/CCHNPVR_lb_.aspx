@@ -65,7 +65,7 @@
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col"><span class="form-label">Contract State of:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col"><span data-upgraded=",MaterialTextfield" class="form-text" id="contract_state_of"></span></div>
@@ -75,7 +75,7 @@
                             <!-- 4 col ends here -->
 
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Employee:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col">
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                             </div>
-                              <div class="mdl-cell mdl-cell--4-col">
+                              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span id="employee_name">:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col">
@@ -98,20 +98,13 @@
 
                             <!-- 4 col ends here -->
 
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
-                                <div class="content-grid mdl-grid">
-                                </div>
-                            </div>
-                            <!-- 4 col ends here -->
-
                         </div>
                         <!-- content-grid mdl-grid ends here -->
 
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col"><span class="form-label">Payment Method:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col">
@@ -126,7 +119,7 @@
                             <!-- 4 col ends here -->
 
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Credit Account:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
@@ -136,7 +129,7 @@
                             <!-- 4 col ends here -->
 
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Balance:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
