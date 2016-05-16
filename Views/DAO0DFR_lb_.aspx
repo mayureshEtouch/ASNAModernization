@@ -122,9 +122,9 @@
             </main>
      <div id="modal1" class="simplePopup"></div>
      <style type="text/css" media="screen">
-      #products tbody > tr:hover {
+      /*#products tbody > tr:hover {
               cursor: pointer;
-            }
+            }*/
       .filter-search-container .button-container .mdl-button {
           height: 16px;
         }
