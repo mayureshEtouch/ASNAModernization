@@ -73,13 +73,13 @@
                                         <div class="mdl-cell mdl-cell--1-col" style="width: 72px;">
                                             <span class="summary-table-title pull-right">Zip Code</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--5-col" id="filter-by-co">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet" id="filter-by-co">
                                             <input type="text" id="number1" maxlength="10" class="mdl-textfield__input" data-tb-index="1">
                                         </div> 
 																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
                                             <span class="summary-table-title pull-right">Address</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--5-col" id="filter-by-co">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" id="filter-by-co">
                                             <input type="text" id="number2" maxlength="30" class="mdl-textfield__input" data-tb-index="2">
                                         </div>                       
                                     </div>
