@@ -590,7 +590,7 @@
               <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Co-Debtor S.S.#:</span> </div>
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_2_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_2_new-show">Show</a> </div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_2_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_2_new-show">Show</a><input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT2_SS_lb_2_new"> </div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -2376,16 +2376,19 @@
                   $("#CenPH_DSPFMT2_SS_lb_1_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mouseup", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_1_new-show, #CenPH_DSPFMT2_SS_lb_1_new").on("mouseup", function(event){
                   maskSSN();
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){debugger
+                  //$("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text($("#CenPH_DSPFMT2_SS_lb_2_new").text());
                   var ssnValue = $("#CenPH_DSPFMT2_SS_lb_2").text();
+                  //var dummyValue1 = $("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text();
+                  //$("#CenPH_DSPFMT2_SS_lb_2").text($("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text());
                   $("#CenPH_DSPFMT2_SS_lb_2_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mouseup", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show,#CenPH_DSPFMT2_SS_lb_2_new").on("mouseup", function(event){debugger
                   maskSSN1();
                 });
 
