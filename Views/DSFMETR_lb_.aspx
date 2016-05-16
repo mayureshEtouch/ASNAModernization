@@ -1725,6 +1725,11 @@
            },100)
            
         function copyData(){
+            //var tindex=0;
+           if($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id")!=undefined){
+                 tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+           }
+            //console.log('tindex is: '+tindex);
 			//tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             $("#datatableValueInsert tbody").find("tr").each(function(i){
@@ -1772,8 +1777,7 @@
 					$(this).find("td:eq(6) input").css("border","none");
 					
 				}
-								
-                $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(14) select").val("Cancel"):$(this).find("td:eq(14) select").val("Active"); 
+                $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(15) select").val("Cancel"):$(this).find("td:eq(15) select").val("Active"); 
                 $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(13) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(14) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
@@ -1789,7 +1793,7 @@
                 }
                 else 
                 {       
-                    $(this).find("td:eq(7) input").val("");  
+                    //$(this).find("td:eq(7) input").val("");  
                     $(this).find("td:eq(7) input").prop('disabled', true);
                     $(this).find("td:eq(7) div").addClass("is-disabled");
                 }
@@ -1855,7 +1859,7 @@
                         $(this).find("td:eq(7) div").removeClass("is-disabled");
                      }else 
                      {       
-                        $(this).find("td:eq(7) input").val("");  
+                        //$(this).find("td:eq(7) input").val("");  
                         $(this).find("td:eq(7) input").prop('disabled', true);
                         $(this).find("td:eq(7) div").addClass("is-disabled");
                      }
