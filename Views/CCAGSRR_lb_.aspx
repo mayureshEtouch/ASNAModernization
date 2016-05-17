@@ -71,7 +71,7 @@
                                             <div class="mdl-cell mdl-cell--2-col" style="width: 100px;">
                                                 <span class="summary-table-title pull-right">Reference</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--10-col" id="filter-by-co">
+                                            <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet" id="filter-by-co">
                                                 <input type="text" id="reference" class="mdl-textfield__input" maxlength="10">
                                             </div>                        
                                         </div>

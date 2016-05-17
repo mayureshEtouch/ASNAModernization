@@ -470,11 +470,11 @@
             </div>
             <div class="button-container">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="refresh">refresh</span> 
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="refresh">refresh</span> 
                 <span data-tb-index="14" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg">Display Messages</span> 
                 <span data-tb-index="14" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> 
                 </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span data-tb-index="15" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--2-col-tablet pull-right"> <span data-tb-index="15" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
               </div>
             </div>
           </div>
@@ -593,7 +593,7 @@
               <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Co-Debtor S.S.#:</span> </div>
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_2_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_2_new-show">Show</a> </div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_2_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_2_new-show">Show</a><input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT2_SS_lb_2_new"> </div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -904,7 +904,7 @@
             </div>
             <div class="button-container">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> 
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> 
                   <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Previous</span> --> 
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise1">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg1">Display Messages</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">Print</span> </div>
                 <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
@@ -920,7 +920,8 @@
   <div id="modal" class="simplePopup"></div>
   
   <!-- Modified HTML code ends here -->
-  <div id="Div1" style="display: none;">
+  <div id="Div1" 
+        <div id="Div1" style="display: none;">
     <%-- %%TS  SD  20000505  122847  COOL3       REL-V4R2M0  5769-PW1                                                      --%>
     <%-- ===============================================================                                                   --%>
     <%--   PROGRAM : CR1002R#        WRITTEN  05/04/89                                                                     --%>
@@ -2379,7 +2380,7 @@
                   $("#CenPH_DSPFMT2_SS_lb_1_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mouseup", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_1_new-show, #CenPH_DSPFMT2_SS_lb_1_new").on("mouseup", function(event){
                   maskSSN();
                 });
 
@@ -2388,11 +2389,11 @@
                   $("#CenPH_DSPFMT2_SS_lb_2_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mouseup", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show,#CenPH_DSPFMT2_SS_lb_2_new").on("mouseup", function(event){
                   maskSSN1();
                 });
 
-                function maskSSN() {
+                 function maskSSN() {
                   var val = $("#CenPH_DSPFMT2_SS_lb_1").html().split('-');
                   var s1, s2,s3;
                   for (var i = 0; i < val.length; i++) {
@@ -2407,7 +2408,8 @@
                 }
 
                 function maskSSN1() {
-                  var val = $("#CenPH_DSPFMT2_SS_lb_2").html().split('-');
+                                    var val = $("#CenPH_DSPFMT2_SS_lb_2").html().split('-');
+                                    
                   var s1, s2,s3;
                   for (var i = 0; i < val.length; i++) {
                     val[0] = "***";
@@ -2417,7 +2419,14 @@
                     s2 = val[1];
                     s3= val[2];
                   }
-                  $("#CenPH_DSPFMT2_SS_lb_2_new").html(s1+s2+s3);
+                  if(($("#CenPH_DSPFMT2_SS_lb_2").html() !="") && ($("#CenPH_DSPFMT2_SS_lb_2").html() !="undefined") && ($("#CenPH_DSPFMT2_SS_lb_2").html() !="&nbsp;")){
+                    $("#CenPH_DSPFMT2_SS_lb_2_new").html(s1+s2+s3);
+                    $("#CenPH_DSPFMT2_SS_lb_2_new-show").show();
+                 }
+                 else{
+                    $("#CenPH_DSPFMT2_SS_lb_2_new").html("");
+                    $("#CenPH_DSPFMT2_SS_lb_2_new-show").hide();
+                 }
                 }
                 maskSSN();
                 maskSSN1();

@@ -114,7 +114,7 @@
 												</div>
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--2-col-tablet pull-right">
 	
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter',event);" id="next">next</span>
+														<span style="display:none" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter',event);" id="next">next</span>
 												</div>
 										</div>
 								</div>
