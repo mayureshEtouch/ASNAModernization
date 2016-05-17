@@ -920,7 +920,8 @@
   <div id="modal" class="simplePopup"></div>
   
   <!-- Modified HTML code ends here -->
-  <div id="Div1" style="display: none;">
+  <div id="Div1" 
+        <div id="Div1" style="display: none;">
     <%-- %%TS  SD  20000505  122847  COOL3       REL-V4R2M0  5769-PW1                                                      --%>
     <%-- ===============================================================                                                   --%>
     <%--   PROGRAM : CR1002R#        WRITTEN  05/04/89                                                                     --%>
@@ -2384,10 +2385,7 @@
                 });
 
                 $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){
-                  //$("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text($("#CenPH_DSPFMT2_SS_lb_2_new").text());
                   var ssnValue = $("#CenPH_DSPFMT2_SS_lb_2").text();
-                  //var dummyValue1 = $("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text();
-                  //$("#CenPH_DSPFMT2_SS_lb_2").text($("#dummy-CenPH_DSPFMT2_SS_lb_2_new").text());
                   $("#CenPH_DSPFMT2_SS_lb_2_new").text(ssnValue);
                 });
 
@@ -2395,7 +2393,7 @@
                   maskSSN1();
                 });
 
-                function maskSSN() {
+                 function maskSSN() {
                   var val = $("#CenPH_DSPFMT2_SS_lb_1").html().split('-');
                   var s1, s2,s3;
                   for (var i = 0; i < val.length; i++) {
@@ -2410,7 +2408,8 @@
                 }
 
                 function maskSSN1() {
-                  var val = $("#CenPH_DSPFMT2_SS_lb_2").html().split('-');
+                                    var val = $("#CenPH_DSPFMT2_SS_lb_2").html().split('-');
+                                    
                   var s1, s2,s3;
                   for (var i = 0; i < val.length; i++) {
                     val[0] = "***";
@@ -2420,7 +2419,14 @@
                     s2 = val[1];
                     s3= val[2];
                   }
-                  $("#CenPH_DSPFMT2_SS_lb_2_new").html(s1+s2+s3);
+                  if(($("#CenPH_DSPFMT2_SS_lb_2").html() !="") && ($("#CenPH_DSPFMT2_SS_lb_2").html() !="undefined") && ($("#CenPH_DSPFMT2_SS_lb_2").html() !="&nbsp;")){
+                    $("#CenPH_DSPFMT2_SS_lb_2_new").html(s1+s2+s3);
+                    $("#CenPH_DSPFMT2_SS_lb_2_new-show").show();
+                 }
+                 else{
+                    $("#CenPH_DSPFMT2_SS_lb_2_new").html("");
+                    $("#CenPH_DSPFMT2_SS_lb_2_new-show").hide();
+                 }
                 }
                 maskSSN();
                 maskSSN1();
