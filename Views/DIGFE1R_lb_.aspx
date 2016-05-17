@@ -110,16 +110,6 @@
                                     <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Additional Address ?:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-text" id="additional-add" data-upgraded=",MaterialTextfield"></span> </div>
                                 </div>
-                                <div class="content-grid mdl-grid content-row-height">
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                                          <span id="last-changed-by"></span>
-                                            <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
-                                        </span>
-                                    </div>
-                                    
-                                </div>
 								<div class="content-grid mdl-grid content-row-height" id="notesDisplay">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Notes ?</span> </div>
                                     <div class="mdl-cell mdl-cell--9-col" style="margin:0"> <span class="form-text" id="notesDetails" data-upgraded=",MaterialTextfield"></span> </div>
@@ -194,30 +184,45 @@
                                 </div>
 								
 								
-								<div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
+                            </div>
+                        </div>
+						<div class="content-grid mdl-grid" style="padding:0">
+							<div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet">
+								<div class="content-grid mdl-grid">
+								  <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-label">Last Changed by User:</span> </div>
+								  <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                          <span id="last-changed-by"></span> 
+										   <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> --></span>
+										  </div>
+								</div>
+							</div>
+							<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+								<div class="content-grid mdl-grid">
+								  <div  class="mdl-cell mdl-cell--2-col" style="margin: 0;"> <span class="form-label">On:</span> </div>
+								  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield">
                                         <span style="position:relative">
                                             <span id="last-changed-on"></span>
                                             <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
                                             <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
                                             <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
                                             </span>
-                                        </span>
-                                            <span>
-                                            <span class="input-side-gutter-space form-label">At:</span>
-                                            <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
+                                        </span> </div>
+										
+								 <div  class="mdl-cell mdl-cell--2-col" style="margin: 0;"> <span class="form-label">At:</span> </div>
+								  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0;"> <span class="form-text" data-upgraded=",MaterialTextfield">
+                                       <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
                                               <span id="last-changed-at"></span>
                                             <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
                                         </span>
-                                        </span> </span>
-                                        
-                                    </div>
-								</div>	
-                                
-                            </div>
-                        </div>
+                                        </span>  </div>
+								 
+								 
+								</div>
+							</div>
+						</div>
+						
+						
+						
                         <div class="button-container">
                           <div class="content-grid mdl-grid">
                               <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitpage" data-tb-index="10">Previous</span>
@@ -1073,8 +1078,8 @@
             }
 
             #__Page_PopUp {
-                left: 13% !important;
-                min-width: 75% !important;
+                left: 8% !important;
+                min-width: 80% !important;
                 top: 50px !important;
             }
 
