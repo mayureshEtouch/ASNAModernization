@@ -459,14 +459,14 @@
 
                   <div class="button-container">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop mdl-cell--6-col-tablet account-buttons">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F6" id="Links">Links</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F7" id="Insurance">Insurance</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F8" id="customerData">Customer data</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F9" id="allAccounts">All Accounts</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop pull-right">
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="next">next</span>
                       </div>
                     </div>
@@ -539,6 +539,14 @@
          .filter-search-container .button-container .mdl-button {
            height: 16px;
          }
+		 .account-buttons .mdl-button {
+			margin: 0 2px !important;
+			padding: 6px 10px !important;
+		 }
+		  #main-content {
+            width: 100%;
+			min-height: 1000px;
+        }
        </style>    
        <script type="text/javascript">
         var copyToAndFromView = {

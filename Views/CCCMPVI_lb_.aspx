@@ -158,7 +158,7 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
-       $("#ssn-show").on("mousedown taphold", function() {
+       $("#ssn-show").on("mousedown taphold touchstart", function() {
           setTimeout(function() {
               var ssnValue = $("#ssn").val();
               var dummyValue = $("#dummy-ssn").val();
@@ -166,7 +166,7 @@
               $("#dummy-ssn").val(ssnValue);
           },0);
         });
-        $("#ssn-show").on("mouseup dragend", function() {
+        $("#ssn-show").on("mouseup dragend touchend", function() {
             var ssnValue = $("#ssn").val();
             var dummyValue = $("#dummy-ssn").val();
             $("#ssn").val($("#dummy-ssn").val());
@@ -184,7 +184,7 @@
         });
 
         $("#ssn").ForceNumericOnly();
-        $("#ssn").on("change keyup mouseup paste", function(event) {
+        $("#ssn").on("change keyup mouseup paste touchend", function(event) {
             maskUnmaskSSN("ssn", event);
         });
 		

@@ -58,7 +58,23 @@
                 </ul>
             </div>
         </section>
-        <section class="table-data-content-container filter-field-container">
+		
+		<section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Customer</span>
+                            <span class="summary-txt" id="lbladd"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Home Phone:</span>
+                            <span class="summary-txt" id="lblPhone"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		
+        <section class="table-data-content-container filter-field-container mrgnTp16">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div class="table-container filter-search-container">
@@ -71,28 +87,15 @@
                                     <div class="mdl-cell mdl-cell--2-col" style="width: 80px;">
                                         <span class="summary-table-title pull-right">Account</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col" id="filter-by-co">
+                                    <div class="mdl-cell mdl-cell--3-col" id="filter-by-co">
                                         <input type="text" id="account" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="10">
                                     </div>
-                                    <div class="mdl-cell mdl-cell--1-col" style="width: 80px;">
+                                    <div class="mdl-cell mdl-cell--2-col" style="width: 80px;">
                                         <span class="summary-table-title pull-right">Ex</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
                                         <input type="text" id="txtex" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="2">
                                     </div>
-                                    <div class="mdl-cell mdl-cell--1-col">
-                                        <span class="summary-table-title pull-right" id="lbladd"></span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--3-col">
-                                        <span class="summary-table-title pull-right">Home Phone:</span>
-                                    </div>
-                                    <div class="mdl-cell mdl-cell--1-col">
-                                        <span class="summary-table-title pull-right" id="lblPhone"></span>
-                                    </div>
-                                    <%-- <div class="mdl-cell mdl-cell--4-col" id="filter-by-co">
-                                        <%--<input type="text" id="status" class="mdl-textfield__input" data-tb-index="2">--%>
-                                    <%--<select name="status" id="status" data-tb-index="2" style="margin: 2%"></select>
-                                    </div>--%>
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--1-col button-cnt-container">

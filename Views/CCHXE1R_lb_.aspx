@@ -1869,7 +1869,7 @@
                 $(this).val($(this).val().replace(/\D/g,''));
                 $(this).trigger('change');
             })
-            $("#ssn-show").on("mousedown", function() {
+            $("#ssn-show").on("mousedown touchstart", function() {
                 setTimeout(function() {
                     var ssnValue = $("#cust-ssn").val();
                     var dummyValue = $("#dummy-cust-ssn").val();
@@ -1877,19 +1877,19 @@
                     $("#dummy-cust-ssn").val(ssnValue);
                 },0);
             });
-            $("#ssn-sp-show").on("mouseup", function() {
+            $("#ssn-sp-show").on("mouseup touchend", function() {
                   var ssnValue = $("#sp-ssn").val();
                   var dummyValue = $("#dummy-sp-ssn").val();
                   $("#sp-ssn").val($("#dummy-sp-ssn").val());
                   $("#dummy-sp-ssn").val(ssnValue);
             });
-            $("#ssn-show").on("mouseup", function() {
+            $("#ssn-show").on("mouseup touchend", function() {
                   var ssnValue = $("#cust-ssn").val();
                   var dummyValue = $("#dummy-cust-ssn").val();
                   $("#cust-ssn").val($("#dummy-cust-ssn").val());
                   $("#dummy-cust-ssn").val(ssnValue);
             });
-            $("#ssn-sp-show").on("mousedown", function() {
+            $("#ssn-sp-show").on("mousedown touchstart", function() {
                 setTimeout(function() {
                     var ssnValue = $("#sp-ssn").val();
                     var dummyValue = $("#dummy-sp-ssn").val();

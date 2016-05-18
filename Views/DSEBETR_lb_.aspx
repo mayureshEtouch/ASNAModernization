@@ -159,7 +159,7 @@
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom">
+            <section class="table-data-content-container spacer-container-bottom" style="margin-bottom: 70px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;" id="enterPayment">
