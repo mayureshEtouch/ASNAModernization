@@ -77,5 +77,37 @@
     $("#go-to-home").click(function(event) {
         _00("F3", event);
     });
+	
+	//stick the footer at the bottom of the page if we're on an iPad/iPhone due to viewport/page bugs in mobile webkit 
+	if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod') 
+	{ 
+		 var orientationchange=false;
+		  if (($(document).height() > $(window).height())) { 
+					$(".copyright").css({"position": "static", "clear": "both"});
+		
+				}
+		 $(window).on('orientationchange', function(event) {
+			 
+			 setTimeout(function(){
+				 if (($(document).height() > $(window).height())) { 
+					$(".copyright").css({"position": "static", "clear": "both"});
+		
+				}else{
+					$(".copyright").css({"position": "absolute", "clear": "both"});
+					
+				}
+				 
+				 
+			 },100);
+				
+			//	orientationchange=true;
+		});
+		//alert(orientationchange);
+		 
+			
+		
+		 
+	};
+	
 });
 

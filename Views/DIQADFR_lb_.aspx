@@ -110,8 +110,8 @@
           <section class="add-item">
                     <div class="add-item-wrapper">
                         <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;"></div>
-                            <div class="mdl-cell mdl-cell--6-col pull-right">
+                    
+                            <div class="mdl-cell mdl-cell--12-col pull-right">
                                 <div class="icon-container">
                                   <span class="icon-txt display-customer">Display</span>
                                   <i class="material-icons md-15 md-light display-customer display-icon"></i></div>
