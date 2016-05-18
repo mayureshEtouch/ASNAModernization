@@ -66,20 +66,20 @@
                             <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
                                 <span class="summary-table-title">Filter by:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--10-col search-container">
+                            <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
                                 <div class="content-grid mdl-grid">
 
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span class="summary-table-title pull-right">Customer </span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--4-col" id="">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" id="">
                                         <span id="customer" class="summary-txt" style="padding-top: 12px; padding-left: 5%;"></span>
 
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                                         <span class="summary-table-title pull-right">Order Number </span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--4-col" id="filter-by-co">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" id="filter-by-co">
                                         <input type="text" id="order_number" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="10" style="text-align left;">
                                     </div>
 

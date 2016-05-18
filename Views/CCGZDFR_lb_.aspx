@@ -67,7 +67,7 @@
                             <span class="summary-txt" id="lbladd"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                            <span class="summary-title">Home Phone:</span>
+                            <span class="summary-title">Home Phone</span>
                             <span class="summary-txt" id="lblPhone"></span>
                         </div>
                     </div>
