@@ -33,7 +33,7 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CRE6D1R</span> <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span><i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CRE6D1R</span> <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span><i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -1577,22 +1577,22 @@
         }
         $(document).ready(function () {
             
-
-            $("#ssnum_new-show").on("mousedown", function(event){
-                var ssnValue = $("#CenPH__lb_RCDDTL1__lb_DDRXT").html();
-                var ssnValue2 = $("#CenPH__lb_RCDDTL1__lb_DDQXT").html();
+            $("#ssnum_new-show").on("mousedown touchstart", function(event){
+                var ssnValue = $("#CenPH__lb_RCDDTL1__lb_DDRXT").html()  == undefined ? '' : $("#CenPH__lb_RCDDTL1__lb_DDRXT").html();
+                var ssnValue2 = $("#CenPH__lb_RCDDTL1__lb_DDQXT").html()  == undefined ? '' : $("#CenPH__lb_RCDDTL1__lb_DDQXT").html();;
                 $("#ssnum").html(ssnValue+" / " + ssnValue2);
             });
 
-            $("#ssnum_new-show").on("mouseup", function(event){
+            $("#ssnum_new-show").on("mouseup touchend", function(event){
                 
                  getMaskedSSN();
             });
 
             function getMaskedSSN() {
-              var ssn1 = maskSSN($("#CenPH__lb_RCDDTL1__lb_DDRXT").html());
-              var ssn2 = maskSSN($("#CenPH__lb_RCDDTL1__lb_DDQXT").html());
-              $("#ssnum").html(ssn1+" / " +ssn2);
+              var ssn1 = ($("#CenPH__lb_RCDDTL1__lb_DDRXT").html() == undefined ? "": (maskSSN($("#CenPH__lb_RCDDTL1__lb_DDRXT").html())));
+              var ssn2 = ($("#CenPH__lb_RCDDTL1__lb_DDQXT").html() == undefined ? "": (maskSSN($("#CenPH__lb_RCDDTL1__lb_DDQXT").html())));
+             
+			  $("#ssnum").html(ssn1+" / " +ssn2);
             }
             getMaskedSSN();
             function maskSSN(ssn) {

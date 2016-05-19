@@ -27,7 +27,10 @@
           <span class="heading-h1">Time Payment Contract Print</span> </div>
         <div class="mdl-cell mdl-cell--4-col pull-right"> 
           <!-- Navigation --> 
-          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CR1002RI</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date1"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time1"></span> </div>
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CR1002RI</span> 
+		  <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date1"></span>
+		  <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time1"></span>
+		  </div>
       </div>
     </section>
     <section class="progress-bar">
@@ -561,7 +564,9 @@
               <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
                   <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">S.S.#:</span> </div>
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-text" id="CenPH_DSPFMT2_SS_lb_1_new"></span>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_1_new-show">Show</a> </div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> 
+				  <span class="form-text" id="CenPH_DSPFMT2_SS_lb_1_new"></span>&nbsp;&nbsp;&nbsp;
+				  <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT2_SS_lb_1_new-show">Show</a> </div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -2376,21 +2381,21 @@
                     _00('F7', event);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mousedown", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mousedown touchstart", function(event){
                   var ssnValue = $("#CenPH_DSPFMT2_SS_lb_1").text();
                   $("#CenPH_DSPFMT2_SS_lb_1_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_1_new-show, #CenPH_DSPFMT2_SS_lb_1_new").on("mouseup", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_1_new-show, #CenPH_DSPFMT2_SS_lb_1_new").on("mouseup touchend", function(event){
                   maskSSN();
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show").on("mousedown touchstart", function(event){
                   var ssnValue = $("#CenPH_DSPFMT2_SS_lb_2").text();
                   $("#CenPH_DSPFMT2_SS_lb_2_new").text(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT2_SS_lb_2_new-show,#CenPH_DSPFMT2_SS_lb_2_new").on("mouseup", function(event){
+                $("#CenPH_DSPFMT2_SS_lb_2_new-show,#CenPH_DSPFMT2_SS_lb_2_new").on("mouseup touchend", function(event){
                   maskSSN1();
                 });
 
