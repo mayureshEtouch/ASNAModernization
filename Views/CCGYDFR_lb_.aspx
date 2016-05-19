@@ -67,12 +67,12 @@
                                 <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
                                     <span class="summary-table-title">Filter by:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--2-col">
                                             <span class="summary-table-title pull-right">Account</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--10-col" id="filter-by-product-category">
+                                        <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet" id="filter-by-product-category">
                                             <input type="text" id="CenPH__lb_SFLCTL__lb_2ACCT_new" class="mdl-textfield__input" maxlength="12">
                                         </div>                        
                                     </div>

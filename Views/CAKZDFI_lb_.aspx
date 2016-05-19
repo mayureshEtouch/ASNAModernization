@@ -124,7 +124,7 @@
         <style>
         #__Page_Hidden{
             min-height: 800px !important;
-			height: 1000px !important;
+			height: 100% !important;
         }
         #__Page_PopUp {
           width: 650px !important;
@@ -138,9 +138,14 @@
         #__Page_PopUp .DdsInlinePopUpTitle {
          height: 0;
         }
-        .modal-dialog-container, #main-content {
+        .modal-dialog-container, #__Page_PopUp #main-content {
           width: 100% !important;
         }
+		#__Page_PopUp #wrapper {
+		}
+		#__Page_PopUp #main-content {
+			min-height: 500px !important;
+		}
         .modal-dialog-container {
           margin: 0 auto;
         }

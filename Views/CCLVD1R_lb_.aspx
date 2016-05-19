@@ -951,10 +951,10 @@
                 $("#CenPH__lb_RCDDTL1_V1AGP3_new").html($("#CenPH__lb_RCDDTL1_V1AGP3").html().replace(/&nbsp;/g, ""));
             }
             //handle F12 event
-            $("#ok,.close-icon").on("click", function (event) {
+            $("#ok,.close-icon").on("click touchstart", function (event) {
                 _00('F12', event);
             });
-            $("#exit").on("click", function (event) {
+            $("#exit").on("click touchstart", function (event) {
                 _00('F3', event);
             });
         });
@@ -967,8 +967,8 @@
         }
 
         #__Page_PopUp {
-            left: 25% !important;
-            min-width: 50% !important;
+            left: 20% !important;
+            min-width: 60% !important;
             top: 50px !important;
         }
 

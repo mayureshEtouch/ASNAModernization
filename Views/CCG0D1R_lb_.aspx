@@ -33,9 +33,10 @@
       </div>
       <div class="mdl-cell mdl-cell--4-col pull-right">
         <!-- Navigation -->
-        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCG0D1R</span>
-        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+		<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCG0D1R</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+
       </div>
     </div>
   </section>
@@ -459,14 +460,14 @@
 
                   <div class="button-container">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop mdl-cell--6-col-tablet account-buttons">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F12" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F6" id="Links">Links</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F7" id="Insurance">Insurance</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F8" id="customerData">Customer data</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F9" id="allAccounts">All Accounts</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop pull-right">
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop mdl-cell--2-col-tablet pull-right">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="Enter" id="next">next</span>
                       </div>
                     </div>
@@ -482,8 +483,8 @@
                     <!-- 4 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
-                        <div  class="mdl-cell mdl-cell--3-col" style="margin:0"><span class="form-label">Customer ID:</span></div>
-                        <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> 
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"><span class="form-label">Customer ID:</span></div>
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> 
                           <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_id" maxlength="7" /></span> 
                         </div>
                       </div>
@@ -494,8 +495,8 @@
                     <!-- 4 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
-                        <div  class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Customer Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--9-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_ref" maxlength="10" /></span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Customer Ref:</span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_ref" maxlength="10" /></span> </div>
                       </div>
                     </div>
                     <!-- 4 col ends here -->
@@ -503,8 +504,8 @@
                     <!-- 4 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
-                      <div  class="mdl-cell mdl-cell--5-col" style="margin:0"> <span class="form-label">Account Extension:</span> </div>
-                        <div  class="mdl-cell mdl-cell--7-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_type" maxlength="2" /></span> </div>
+                      <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span class="form-label">Account Extension:</span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col" style="margin:0"> <span data-upgraded=",MaterialTextfield" class="form-text"><input type="text" id="customer_type" maxlength="2" /></span> </div>
 
                       </div>
                     </div>
@@ -539,12 +540,20 @@
          .filter-search-container .button-container .mdl-button {
            height: 16px;
          }
+		 .account-buttons .mdl-button {
+			margin: 0 2px !important;
+			padding: 6px 10px !important;
+		 }
+		  #main-content {
+            width: 100%;
+			min-height: 1000px;
+        }
        </style>    
        <script type="text/javascript">
         var copyToAndFromView = {
          "displayOnlyFields": {
-           "CenPH_DdsConstant9": "date",
-           "CenPH__lb_RCDKEY__lb__lb_TME": "time",
+           //"CenPH_DdsConstant9": "date",
+           //"CenPH__lb_RCDKEY__lb__lb_TME": "time",
            "CenPH__lb_RCDDTL1__lb_1A2TX": "CenPH__lb_RCDDTL1__lb_1A2TX_new",
            "CenPH__lb_RCDDTL1__lb_DE8CO": "CenPH__lb_RCDDTL1__lb_DE8CO_new",
            "CenPH__lb_RCDDTL1__lb_1REF_lb_": "CenPH__lb_RCDDTL1__lb_1REF_lb__new",
@@ -597,11 +606,14 @@
                $(document).ready(function() {
                 if($("#CenPH__lb_RCDKEY__lb_1ALNB").length>0){
                   $(".heading-h1").text("CR: DS1 Install Acct-Pub KEY SCREEN");
+				   setDateTime('CenPH_DdsConstant9','CenPH__lb_RCDKEY__lb__lb_TME');
                   $(".input_fields").show();
                   copyData(copyToAndFromInput, "keyup keydown change blur mouseup mousedown");
                 }else{
                   $(".heading-h1").text("Display Account Detail");
                   $(".view_fields").show();
+				  setDateTime('CenPH_DdsConstant43','CenPH__lb_RCDDTL1__lb__lb_TME');
+				  
                   for(var i in copyToAndFromView.displayOnlyFields) {
                     if(i.split("+").length > 1) {
                       i = i.split("+")[0];

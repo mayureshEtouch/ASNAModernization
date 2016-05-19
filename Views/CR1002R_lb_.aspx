@@ -19,7 +19,7 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH"> 
   <!-- Modified HTML code starts here -->
   
-  <main class="mdl-layout__content" id="first-view" style="display: none;margin-bottom: 50px;">
+  <main class="mdl-layout__content " id="first-view" style="display: none;margin-bottom: 50px;">
     <section class="time-date">
       <div class="content-grid mdl-grid">
         <div class="mdl-cell mdl-cell--8-col"> 
@@ -2004,6 +2004,7 @@
         }
         #main-content {
             width: 100%;
+			min-height: 1000px;
         }
         .clm-form-label{
             display: inline-block;
@@ -2270,10 +2271,10 @@
                 
                 //Mask/Unmask SSN
                 $("#CenPH_DSPFMT1_SS_lb_2_new, #CenPH_DSPFMT1_SS_lb_1_new").ForceNumericOnly();
-                $("#CenPH_DSPFMT1_SS_lb_2_new").on("change keyup mouseup paste", function(event) {
+                $("#CenPH_DSPFMT1_SS_lb_2_new").on("change keyup mouseup paste touchend", function(event) {
                     maskUnmaskSSN("CenPH_DSPFMT1_SS_lb_2_new", event);
                 });
-                $("#CenPH_DSPFMT1_SS_lb_1_new").on("change keyup mouseup paste", function(event) {
+                $("#CenPH_DSPFMT1_SS_lb_1_new").on("change keyup mouseup paste touchend", function(event) {
                     maskUnmaskSSN("CenPH_DSPFMT1_SS_lb_1_new", event);
                 });
 
@@ -2284,7 +2285,7 @@
                     $(this).trigger('change');
                 });
 
-                $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mousedown", function() {
+                $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mousedown touchstart", function() {
                     setTimeout(function() {
                         var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
                         var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
@@ -2292,14 +2293,14 @@
                         $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val(ssnValue);
                     }, 0);
                 });
-                $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mouseup", function() {
+                $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mouseup touchend", function() {
                     var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
                     var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
                     $("#CenPH_DSPFMT1_SS_lb_1_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
                     $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val(ssnValue);
                 });
 
-                $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown", function() {
+                $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown touchstart", function() {
                     setTimeout(function() {
                         var ssnValue = $("#CenPH_DSPFMT1_SS_lb_2_new").val();
                         var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val();
@@ -2307,7 +2308,7 @@
                         $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val(ssnValue);
                     }, 0);
                 });
-                $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mouseup", function() {
+                $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mouseup touchend", function() {
                     var ssnValue = $("#CenPH_DSPFMT1_SS_lb_2_new").val();
                     var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val();
                     $("#CenPH_DSPFMT1_SS_lb_2_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
