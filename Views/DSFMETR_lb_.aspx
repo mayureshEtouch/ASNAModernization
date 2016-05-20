@@ -241,7 +241,7 @@
    
     
     
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display: none;">
             
       <%--  OE: ETR Ent Ord Dtl       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1731,6 +1731,7 @@
            }
             //console.log('tindex is: '+tindex);
 			//tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+            tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             $("#datatableValueInsert tbody").find("tr").each(function(i){
                 $(this).find("td:eq(0) span").text($("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(1) select").val($("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val()); 
@@ -1937,44 +1938,6 @@
 				
 			}		
         
-        
-       /* $("#reset").click(function(e) {
-            $("[id^='CenPH__lb_SFLRCD']").find("input,select").each(function(i){
-                // alert(" VALUEEE == ", $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']"));
-                    $("[id$='lb_SFLRCD__lb_2AUST."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AIST."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AACD."+(i + tindex)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A1NB."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AXTX."+(i + tindex)+"']").val("");
-                    $("[id$='lb_SFLRCD__lb_2A8TX."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val(""); 
-                    $("[id$='lb_SFLRCD__lb_2AECD."+(i+ tindex)+"']").val("");
-                     $("[id$='lb_SFLRCD__lb_2A2TX."+(i+tindex)+"']").val("");
-                     $("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").val(" ");
-                    $("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").val(" ");
-                    $("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").val(" ")
-                });
-                 
-             $("#datatableValueInsert tbody").find("tr").each(function(i){
-                    $(this).find("td:eq(0) span").text("");
-                    $(this).find("td:eq(15) select").val("Active");
-                    $(this).find("td:eq(1) select").val("");
-                     $(this).find("td:eq(2) input").val("");
-                     $(this).find("td:eq(3) input").val("");
-                     $(this).find("td:eq(4) input").val("");
-                     $(this).find("td:eq(5) span").text("");
-                     $(this).find("td:eq(6) input").val("");
-                     $(this).find("td:eq(7) input").val("");
-                     $(this).find("td:eq(8) span").text("");
-                     $(this).find("td:eq(9) span").text("");
-                     $(this).find("td:eq(10) span").text("");
-                     $(this).find("td:eq(11) span").text("");
-                     $(this).find("td:eq(12) span").text("");
-                      $(this).find("td:eq(13) span").text("");
-                      $(this).find("td:eq(14) span").text("");
-                        
-                     
-             });  
-        });*/
+
     </script>  
     </asp:Content>
