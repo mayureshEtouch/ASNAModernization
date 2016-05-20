@@ -1210,7 +1210,16 @@
 		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
 			font-weight: normal !important;
 		}
-		
+		@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.mdl-layout__content {
+		height: 920px;
+	}
+
+}
     </style>
     <script>
         $(document).ready(function() {

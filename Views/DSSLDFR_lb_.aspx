@@ -123,7 +123,7 @@
   <style>
         #__Page_Hidden{
             min-height: 800px !important;
-			height: 1000px !important;
+			height: 100% !important;
         }
         #__Page_PopUp {
           width: 650px !important;

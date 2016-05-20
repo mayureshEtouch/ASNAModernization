@@ -57,7 +57,7 @@
                 </div>
             </section>
 
-            <section class="order-summary">
+            <section class="order-summary mrgnTp16">
                 <div class="order-summary-wrapper">
                     <%--<span class="order-summary-edit mdl-js-ripple-effect"><i title="Edit" class="material-icons">edit</i></span>--%>
                     <div class="content-grid mdl-grid">
@@ -74,7 +74,7 @@
                 </div>
             </section>
 
-            <section class="table-data-content-container spacer-container-bottom">
+            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container" style="overflow: auto;">
@@ -593,7 +593,7 @@ width: 100% !important;
             margin-top: -20px;
         }
         #__Page_Hidden{
-            height: 800px !important;
+            height: 100% !important;
         }
         .simplePopup {
                 left: 30% !important;

@@ -83,38 +83,31 @@
 	{ 
 //alert($(document).height());
 //alert($(window).height());
-		 
+		  setTimeout(function(){
 		  if (($(document).height() > $(window).height())) {
 				
-					$(".copyright").css({"position": "static", "clear": "both"});
+					$(".copyright").css({"position": "static", "clear": "both", "marginBottom": "-2px"});
 		
 				}else{
 					
 					$(".copyright").css({"position": "absolute", "clear": "both"});
 					
 				}
+			},100);
 		 $(window).on('orientationchange', function(event) {
 			 
 			 setTimeout(function(){
 				 if (($(document).height() > $(window).height())) { 
 				
-					$(".copyright").css({"position": "static", "clear": "both"});
+					$(".copyright").css({"position": "static", "clear": "both", "marginBottom": "-2px"});
 		
-				}else{
-					
+				}else{		
 					$(".copyright").css({"position": "absolute", "clear": "both"});
-					
 				}
 				 
-				 
 			 },100);
-				
 			 
 		});
-		 
-		
-			
-		
 		 
 	};
 	

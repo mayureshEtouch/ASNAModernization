@@ -24,7 +24,7 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 <!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
-<main class="mdl-layout__content">
+<main class="mdl-layout__content" style="height: 920px;">
 	<section class="time-date">
 		<div class="content-grid mdl-grid">
 			<div class="mdl-cell mdl-cell--8-col">

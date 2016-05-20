@@ -947,8 +947,8 @@
             $("#CenPH_2AQNA").val(notes);
             if($("#CenPH__lb_RCDDTL1__lb_1G5VA").length > 0) {
                 $("#appr-for").show();
-                $("#CenPH__lb_RCDDTL1__lb_1G5VA_new").html($("#CenPH__lb_RCDDTL1__lb_1G5VA").html().replace(/&nbsp;/g, ""));
-                $("#CenPH__lb_RCDDTL1_V1AGP3_new").html($("#CenPH__lb_RCDDTL1_V1AGP3").html().replace(/&nbsp;/g, ""));
+                $("#CenPH__lb_RCDDTL1__lb_1G5VA_new").html($("#CenPH__lb_RCDDTL1__lb_1G5VA").html()== undefined ? '' : ($("#CenPH__lb_RCDDTL1__lb_1G5VA").html().replace(/&nbsp;/g, "")));
+                $("#CenPH__lb_RCDDTL1_V1AGP3_new").html($("#CenPH__lb_RCDDTL1_V1AGP3").html()== undefined ? '' : ($("#CenPH__lb_RCDDTL1_V1AGP3").html().replace(/&nbsp;/g, "")));
             }
             //handle F12 event
             $("#ok,.close-icon").on("click touchstart", function (event) {
