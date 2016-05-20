@@ -24,7 +24,7 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 <!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
-<main class="mdl-layout__content" style="height: 920px;">
+<main class="mdl-layout__content">
 	<section class="time-date">
 		<div class="content-grid mdl-grid">
 			<div class="mdl-cell mdl-cell--8-col">
@@ -261,7 +261,14 @@
 				<style>
 					/* #Div1{display:block;} */
 					#number2_toolTip{display: none;}
-
+					@media only screen 
+					  and (min-device-width: 768px) 
+					  and (max-device-width: 1024px) 
+					  and (orientation: portrait) 
+					  and (-webkit-min-device-pixel-ratio: 1) {
+						.mdl-layout__content {
+							height: 920px;
+						}
 				</style>
 
 				<script type="text/javascript">
