@@ -56,7 +56,7 @@
                                     <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col" id="filter-by-co">
                                         <input type="text" id="modelNumber" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="20">
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col">
+                                    <div class="mdl-cell mdl-cell--2-col" style="margin-left: -35px;">
                                         <span class="summary-table-title pull-right">Status</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--2-col" id="filter-by-co">
