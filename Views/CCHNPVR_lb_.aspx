@@ -147,7 +147,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span class="form-label">Insurance A/H:</span> </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span class="form-label">Insurances A/H:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
                                         <input type="text" id="insurance" maxlength="1" onfocus="_09('#DLEST','8,19','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="5" /></span> </div>
                                     <div class="mdl-cell mdl-cell--2-col" style="padding-left: 20px;"><span class="form-label">C/L:</span> </div>
@@ -336,7 +336,7 @@
                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="32" event-data="F9">Get Customer</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F4" data-tb-index="33">Prompt</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter" data-tb-index="34">next</span>
+                                    <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter" data-tb-index="34">next</span> -->
                                 </div>
                             </div>
                         </div>
