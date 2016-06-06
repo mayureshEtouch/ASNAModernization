@@ -692,9 +692,9 @@
               <!-- 4 col ends here --> 
               
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col" style="display: none;">
+              <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-text" data-upgraded=",MaterialTextfield" id="">Dummmmmy Evidence of Property Insurance required</span></div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DdsConstant62_new"></span></div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -714,9 +714,9 @@
               <!-- 4 col ends here --> 
               
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col" style="display: none;">
+              <div class="mdl-cell mdl-cell--4-col">
                 <div class="content-grid mdl-grid">
-                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-text" data-upgraded=",MaterialTextfield" id="">Dummmmmy Signed IUI Authorization required</span></div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DdsConstant63_new"></span></div>
                 </div>
               </div>
               <!--4 col ends here --> 
@@ -2363,6 +2363,20 @@
             } else if ($("#CenPH_DSPFMT2_CRPHNB").length > 0) {
                 $("#first-view").hide();
                 $("#second-view").show();
+
+                if($("#CenPH_DdsConstant62").length > 0) {
+                    $("#CenPH_DdsConstant62_new").html($("#CenPH_DdsConstant62").html());
+                } else {
+                    $("#CenPH_DdsConstant62_new").hide();
+                }
+
+                if($("#CenPH_DdsConstant63").length > 0) {
+                    $("#CenPH_DdsConstant63_new").html($("#CenPH_DdsConstant63").html());
+                } else {
+                    $("#CenPH_DdsConstant63_new").hide();
+                }
+                
+
                 copyData(copyToAndFromSecondView, "keyup keydown change blur mouseup mousedown");
                 //Set button click handlers
                 $('body').on('click', '#previous1', function(event) {
