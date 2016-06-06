@@ -148,7 +148,7 @@
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+												<div style="display:none;" class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00('Enter', event);">next</span>
 												</div>
 										</div>

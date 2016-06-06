@@ -192,7 +192,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
+                            <div class="content-grid mdl-grid" id="esign-container">
                                 <div class="mdl-cell mdl-cell--4-col">
                                     <span class="form-label">eSign:</span>
                                 </div>
@@ -1253,20 +1253,23 @@
             });
             $("#requestdate, #pcode").css("width", "166px");
             //Set esign
-            if($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").is("span")) {
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").text($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").text());
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").hide();
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").show();
+            if($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").length) {
+                if($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").is("span")) {
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").text($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").text());
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").hide();
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").show();
+                } else {
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val());
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").hide();
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").show();
+                }
+                
+                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").on('change', function () {
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val());
+                });
             } else {
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val());
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").hide();
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").show();
+                $("#esign-container").hide();
             }
-            
-            $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").on('change', function () {
-                $("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val());
-            });
-            
             //$("#expectedDate").text($("#CenPH__lb_SFLCTL_V1AXDT").text());
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only

@@ -91,10 +91,10 @@
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span></div>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span></div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="requested" event-data="F9">REQUESTED</span>
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                <span style="display:none;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="requested" event-data="F9">REQUESTED</span>
                             </div>
                         </div>
                     </div>

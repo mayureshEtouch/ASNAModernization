@@ -245,7 +245,7 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Xfers" data-tb-index="8" event-data="F17" style="margin-left: 3px;">XFERS</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Pos" data-tb-index="9" event-data="F19" style="margin-left: 3px;">PO'S</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop mdl-cell--1-col-tablet pull-right" style="margin-left:0">
+                      <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop mdl-cell--1-col-tablet pull-right" style="margin-left:0;display:none;">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);" id="next" data-tb-index="10">next</span>
                       </div>
                     </div>
