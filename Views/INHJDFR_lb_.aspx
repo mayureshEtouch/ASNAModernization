@@ -77,7 +77,7 @@
 					<div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col" style="text-align: right;">
 						 
-						<span class="error-message" id="error-message">Press F5 to flip 'N'to'Y'.Proceed with eSign F6 for all 'Y',else Re-print F8.</span>
+						<span class="error-message" id="error-message"></span>
 						
 						</div>
 						</div>
@@ -148,6 +148,11 @@
 					
 		$(document).ready(function() {
 			copyData(copyToAndFrom, "");
+      if($("#CenPH_DdsConstant2").length > 0) {
+          $("#error-message").html($("#CenPH_DdsConstant2").html());
+      } else {
+          $("#error-message").hide();
+      }
 			
 			var dataMergeIndices = [[0], [1], [2], [3]];
 			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
