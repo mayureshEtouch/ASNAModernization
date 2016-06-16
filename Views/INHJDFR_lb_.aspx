@@ -34,8 +34,8 @@
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">INHJDFR</span>
-                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
@@ -110,7 +110,7 @@
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh" onclick="_00('F5',event);" >Refresh</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="continueeSign" onclick="_00('F6',event);">Continue eSign</span>
-												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="manualPrint" onclick="_00('F8',event);" >Manual Print</span>
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="manualPrint" onclick="_00('F8',event);" >Paper Print</span>
 												</div>
 												<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--2-col-tablet pull-right">
 	
