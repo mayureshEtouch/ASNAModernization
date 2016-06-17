@@ -22,7 +22,137 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Completed Sales Orders</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSU3DFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="white-to-gray-bullet"></li>
+                        <li class="progress-bar-step2 gray-bg step-width"><span class="step-title-selected">Step 2</span> <span class="step-txt-selected">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider-first">
+                            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                            <li class="progress-bar-divider">
+                                <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                                <li class="progress-bar-divider">
+                                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Name</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_PALTX_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">Home Phone</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CHPH_lb_new"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--1-col" style="width: 50px;">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">#</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--11-col mdl-cell mdl-cell--7-col-tablet" id="number">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2BANB_new" class="mdl-textfield__input" data-tb-index="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                            <span data-code="34" class="add-item-title">*These are Completed Orders Only *</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+                            <div class="icon-container">
+                                <span class="icon-txt display">Display</span><i class="material-icons md-15 md-light display display-icon"></i>
+                                <span class="icon-txt print">Print</span><i class="material-icons md-15 md-light print print-icon"></i>
+                                <span class="icon-txt move">Move</span><i class="material-icons md-15 md-light move move-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="navigateable mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="sales-orders" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Version</th>
+                                            <th>Entered</th>
+                                            <th>Delivered</th>
+                                            <th>Sld</th>
+                                            <th>Salesman</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Prompt</span> -->
+                                    </div>
+
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop pull-right">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Next<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
+                                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Prompt</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  OE: DSP CMP Ord Hdr Sel   Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -699,4 +829,56 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant14": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_PALTX": "CenPH__lb_SFLCTL__lb_PALTX_new",
+                    "CenPH__lb_SFLCTL__lb_CHPH_lb_": "CenPH__lb_SFLCTL__lb_CHPH_lb_new"
+                },
+               "inputFields": {
+                 "CenPH__lb_SFLCTL__lb_2BANB": "CenPH__lb_SFLCTL__lb_2BANB_new",
+               }
+           };
+        $(document).ready(function () {
+
+            $("body").css({ "background-color": "#FFFFFF" });
+            copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+            $("#time").html("&nbsp;" + $("#time").html());
+            /* script for table row starts here */
+            var dataMergeIndices = [ [0], [1], [2], [3], [4], [5] ];
+            generateTableAndApplyInfiniteScroll("sales-orders", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+
+            $("#previous").click(function (event) {
+               _00('F12', event);
+            });
+
+            var doAction = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+
+            //Display order details
+            $(".display").click(function (event) {
+                var row = $("#sales-orders tbody tr.selected");
+                doAction(row, "5", event)
+            });
+
+            //Print order details
+            $(".print").click(function (event) {
+                var row = $("#sales-orders tbody tr.selected");
+                doAction(row, "7", event)
+            });
+
+            $(".move").click(function (event) {
+                var row = $("#sales-orders tbody tr.selected");
+                doAction(row, "8", event)
+            });
+
+        });
+
+    </script>
     </asp:Content>

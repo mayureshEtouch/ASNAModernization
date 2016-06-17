@@ -1138,6 +1138,45 @@ textarea {
 .deselect-icon-disabled {
 	background: url(../Images/icons/deselect-icon-disable.png) no-repeat;
 }
+.returns-icon {
+	background: url(../Images/icons/ic_assignment_return_black_24dp_1x.png) no-repeat;
+}
+.status-icon {
+	background: url(../Images/icons/ic_update_black_24dp_1x.png) no-repeat;
+}
+.exchanges-icon {
+	background: url(../Images/icons/ic_import_export_black_24dp_1x.png) no-repeat;
+}
+.print-icon {
+	background: url(../Images/icons/ic_print_black_24dp_1x.png) no-repeat;
+}
+.move-icon {
+	background: url(../Images/icons/ic_move_to_inbox_black_24dp_1x.png) no-repeat;
+}
+.Prt-rac-certf-icon {
+	background: url(../Images/icons/print-rac-cert.png) no-repeat;
+}
+.appeal-icon {
+	background: url(../Images/icons/ic_touch_app_black_24dp_1x.png) no-repeat;
+}
+.decision-icon {
+	background: url(../Images/icons/decision-24.png) no-repeat;
+}
+.sbm-to-rac-icon {
+	background: url(../Images/icons/ic_playlist_add_black_24dp_1x.png) no-repeat;
+}
+.work-icon {
+	background: url(../Images/icons/ic_work_black_24dp_1x.png) no-repeat;
+}
+.enter-invoice-icon {
+	background: url(../Images/icons/ic_format_indent_increase_black_24dp_1x.png) no-repeat;
+}
+.exceptions-icon {
+	background: url(../Images/icons/exception-icon.png) no-repeat;
+}
+.change-address-icon{
+	background: url(../Images/icons/ic_edit_location_black_24dp_1x.png) no-repeat;
+}
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
  background: rgb(255, 255, 255);
  border: 1px solid #c5c5c5;
