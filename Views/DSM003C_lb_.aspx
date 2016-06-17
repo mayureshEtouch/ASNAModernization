@@ -100,7 +100,7 @@
                         <h2 class="_title">Inventory & Delivery Schedule</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                        <li class="_item"><a href="#" data-menu="4" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
