@@ -22,7 +22,99 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+     <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Customer/Order</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSZGPVR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="table-data-content-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container table-container-search">
+                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                                <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
+                                    <span class="summary-label">Customer Phone Number :</span>
+                                    <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="1" id="CenPH__lb_RCDDTL1__lb_PAVNB_new" maxlength="3" style="width: calc(16.6667% - 16px) !important;">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_PBMNB_new" maxlength="3" style="width: calc(16.6667% - 16px) !important;">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_PAXNB_new" maxlength="4" style="width: calc(66.6667% - 16px) !important;">
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col">
+                                    <span class="circle-separator"><span>OR</span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                    <span class="summary-label">Customer Name/Partial Name :</span>
+                                    <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                    <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1ALTX_new" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col">
+                                    <span class="circle-separator"><span>OR</span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                    <span class="summary-label">Order Number :</span>
+                                    <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                    <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="5" id="CenPH__lb_RCDDTL1__lb_PBANB_new" maxlength="9">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry">Customer id card entry</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchExtraPhoneNumbers">Search Extra Phone Numbers</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">SEARCH</span>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+ <div id="modal" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  CU: PMT Cust/Name/Ord Num Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -370,4 +462,54 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant10": "date",
+                    "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
+                    
+                },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_PAVNB": "CenPH__lb_RCDDTL1__lb_PAVNB_new",
+                    "CenPH__lb_RCDDTL1__lb_PBMNB": "CenPH__lb_RCDDTL1__lb_PBMNB_new",
+                    "CenPH__lb_RCDDTL1__lb_PAXNB": "CenPH__lb_RCDDTL1__lb_PAXNB_new",
+                    "CenPH__lb_RCDDTL1__lb_1ALTX": "CenPH__lb_RCDDTL1__lb_1ALTX_new",
+                    "CenPH__lb_RCDDTL1__lb_PBANB": "CenPH__lb_RCDDTL1__lb_PBANB_new"
+                }
+            }
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+              $("#CenPH__lb_RCDDTL1__lb_PAVNB_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDDTL1__lb_PBMNB_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDDTL1__lb_PAXNB_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDDTL1__lb_PBANB_new").ForceNumericOnly();
+              $("#search").click(function (event) {
+                     _00('Enter', event);
+                });
+              $("#searchExtraPhoneNumbers").click(function (event) {
+                _00('F8', event);
+              });
+              $("#customerIdCardEntry").click(function (event) {
+                _00('F7', event);
+              });
+              $("#prompt").click(function (event) {
+                _00('F4', event);
+              });
+              $("#previous").click(function (event) {
+                _00('F12', event);
+              });
+
+              $("form input[type=text]").on('input',function () {
+                var tab = $(this).attr("tabindex");
+                if($(this).val().length == $(this).attr('maxlength')) {
+                  //$(this).next("input").focus();
+                  tab++;
+                  $("[tabindex='"+tab+"']").focus();
+          
+                }
+              });
+            });
+      </script>
     </asp:Content>
