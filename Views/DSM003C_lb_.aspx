@@ -70,7 +70,7 @@
                     <ul class="_list">
                         <li class="_item" id="enter-sales-order"><a data-menu="1" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Edit Sales Order</p>
+                        <li class="_item"><a href="#" data-menu="2" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Edit Sales Order</p>
                         </a></li>
                         <li class="_item"><a data-menu="3" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Sales Order</p>
                         </a></li>
