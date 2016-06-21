@@ -1118,7 +1118,7 @@
               }
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                 $("#time").html("&nbsp;" + $("#time").html());
-                $("#CenPH__lb_RCDDTL1__lb_1AACD_new,#CenPH__lb_RCDDTL1__lb_DCUCD_new,#CenPH__lb_RCDDTL1__lb_DE0NB_new").ForceNumericOnly();
+                $("#CenPH__lb_RCDDTL1__lb_1AACD_new").ForceNumericOnly();
                 
                 $("#previous").click(function (event) {
                    _00('F12', event);
