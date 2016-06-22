@@ -22,7 +22,194 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Exchange Product</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSS1E1R</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+                            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                            <li class="white-to-gray-bullet"></li>
+                            <li class="progress-bar-step3 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Edit Order Details</span> </li>
+                            <li class="progress-bar-divider-first">
+                                <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                                <li class="progress-bar-divider">
+                                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet">
+                            <span class="summary-title">Customer Name</span>
+                            <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_PALTX_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet">
+                            <span class="summary-title">Order Number</span>
+                            <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1BANB_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet">
+                            <span class="summary-title">Version Number</span>
+                            <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1EXNB_new"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                                <span class="icon-txt exception">Exceptions</span><i class="exception material-icons md-15 md-light exceptions-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="exchange-records" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Delivery
+                                                <br/>Status</th>
+                                            <th>From
+                                                <br/>Location</th>
+                                            <th>Quantity</th>
+                                            <th>Model
+                                                <br/>Number</th>
+                                            <th width="25%">Model
+                                                <br/>Description</th>
+                                            <th>Serial
+                                                <br/>Number</th>
+                                            <th>Warranty</th>
+                                            <th>Credit</th>
+                                            <th>Ref
+                                                <br/>Line #</th>
+                                            <th>Actual
+                                                <br/>Price</th>
+                                            <th>Extended
+                                                <br/>Price</th>
+                                            <th class="inst-code">Installation
+                                                <br/>Code</th>
+                                            <th class="inst-price">Installation
+                                                <br/>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="exchange-prod-row selected" data-selectid="CenPH__lb_RCDDTL1__lb_DI2TX">
+                                            <td id="CenPH__lb_RCDDTL1__lb_1AUST_new"></td>
+                                            <td class="editable-field">
+                                                <select name="" style="width: 50px;" id="CenPH__lb_RCDDTL1__lb_1AIST_new">
+                                                    <option selected="selected" value=" ">   </option>
+                                                    <option value="EX">EX - Warehouse to pickup</option>
+                                                    <option value="RT">RT - Returned to store</option>
+                                                </select>
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_1AIST_new_ro" class="ro-field"></td>
+                                            <td class="editable-field">
+                                                <input name="" type="text" style="width: 40px;" id="CenPH__lb_RCDDTL1__lb_1AACD_new" maxlength="3" class="editable-field">
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_1AACD_new_ro" class="ro-field"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_1A1NB_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_1AXTX_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_PA2TX_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_1A8TX_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DC2ST_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DC3ST_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_1BHNB_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AMVA_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DBZVA_new"></td>
+                                            <td class="pull-right inst-code" id="CenPH__lb_RCDDTL1__lb_1AECD_new"></td>
+                                            <td class="pull-right inst-price" id="CenPH__lb_RCDDTL1__lb_1AJPR_new"></td>
+                                        </tr>
+                                        <tr class="exchange-prod-row" data-selectid="CenPH__lb_RCDDTL1__lb_DI3TX">
+                                            <td id="CenPH__lb_RCDDTL1__lb_DC4ST_new"></td>
+                                            <td class="editable-field">
+                                                <select name="" style="width: 50px;" id="CenPH__lb_RCDDTL1__lb_DC5ST_new" class="editable-field">
+                                                    <option selected="selected" value=" ">   </option>
+                                                    <option value="PU">PU - Customer pickup</option>
+                                                    <option value="TK">TK - Taken from store</option>
+                                                    <option value="DL">DL - Warehouse delivery</option>
+                                                </select>
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DC5ST_new_ro" class="ro-field"></td>
+                                            <td class="editable-field">
+                                                <input name="" type="text" style="width: 40px;" id="CenPH__lb_RCDDTL1__lb_DCUCD_new" maxlength="3" class="editable-field">
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DCUCD_new_ro" class="ro-field"></td>
+                                            <td class="editable-field">
+                                                <input name="" type="text" style="width: 40px;" id="CenPH__lb_RCDDTL1__lb_DE0NB_new" maxlength="3" class="editable-field">
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DE0NB_new_ro" class="ro-field"></td>
+                                            <td class="editable-field">
+                                                <input name="" type="text" style="width: 60px; text-align:right; margin-right:0;" id="CenPH__lb_RCDDTL1__lb_DE6TX_new" maxlength="20" class="editable-field">
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DE6TX_new_ro" class="ro-field"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DFJTX_new"></td>
+                                            <td class="editable-field">
+                                                <input name="" type="text" style="width: 40px;" id="CenPH__lb_RCDDTL1__lb_DIDTX_new" maxlength="20" class="editable-field">
+                                            </td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DIDTX_new_ro" class="ro-field"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DICST_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DIDST_new"></td>
+                                            <td class="pull-right" id=""></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DHOVA_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DHPVA_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DD7CD_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DA6PR_new"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="emr">Edit Multiple Returns</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  OE: ER1 Ent Ord Exch      Edit record(1 screen)                                                      --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -1178,4 +1365,115 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant34": "date",
+                    "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
+                    "CenPH__lb_RCDDTL1__lb_PALTX": "CenPH__lb_RCDDTL1__lb_PALTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1BANB": "CenPH__lb_RCDDTL1__lb_1BANB_new",
+                    "CenPH__lb_RCDDTL1__lb_1EXNB": "CenPH__lb_RCDDTL1__lb_1EXNB_new"
+                },
+               "inputFields": {
+                 
+               }
+           };
+           var copyToAndFromTableData = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1AUST": "CenPH__lb_RCDDTL1__lb_1AUST_new",
+                    "CenPH__lb_RCDDTL1__lb_1A1NB": "CenPH__lb_RCDDTL1__lb_1A1NB_new",
+                    "CenPH__lb_RCDDTL1__lb_1AXTX": "CenPH__lb_RCDDTL1__lb_1AXTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1A8TX": "CenPH__lb_RCDDTL1__lb_1A8TX_new",
+                    "CenPH__lb_RCDDTL1__lb_DC2ST": "CenPH__lb_RCDDTL1__lb_DC2ST_new",
+                    "CenPH__lb_RCDDTL1__lb_DC3ST": "CenPH__lb_RCDDTL1__lb_DC3ST_new",
+                    "CenPH__lb_RCDDTL1__lb_1BHNB": "CenPH__lb_RCDDTL1__lb_1BHNB_new",
+                    "CenPH__lb_RCDDTL1__lb_PA2TX": "CenPH__lb_RCDDTL1__lb_PA2TX_new",
+                    "CenPH__lb_RCDDTL1__lb_1AMVA": "CenPH__lb_RCDDTL1__lb_1AMVA_new",
+                    "CenPH__lb_RCDDTL1__lb_DBZVA": "CenPH__lb_RCDDTL1__lb_DBZVA_new",
+                    "CenPH__lb_RCDDTL1__lb_DC4ST": "CenPH__lb_RCDDTL1__lb_DC4ST_new",
+                    "CenPH__lb_RCDDTL1__lb_1AECD": "CenPH__lb_RCDDTL1__lb_1AECD_new",
+                    "CenPH__lb_RCDDTL1__lb_1AJPR": "CenPH__lb_RCDDTL1__lb_1AJPR_new",
+                    "CenPH__lb_RCDDTL1__lb_DICST": "CenPH__lb_RCDDTL1__lb_DICST_new",
+                    "CenPH__lb_RCDDTL1__lb_DIDST": "CenPH__lb_RCDDTL1__lb_DIDST_new",
+                    "CenPH__lb_RCDDTL1__lb_DFJTX": "CenPH__lb_RCDDTL1__lb_DFJTX_new",
+                    "CenPH__lb_RCDDTL1__lb_DHOVA": "CenPH__lb_RCDDTL1__lb_DHOVA_new",
+                    "CenPH__lb_RCDDTL1__lb_DHPVA": "CenPH__lb_RCDDTL1__lb_DHPVA_new",
+                    "CenPH__lb_RCDDTL1__lb_DD7CD": "CenPH__lb_RCDDTL1__lb_DD7CD_new",
+                    "CenPH__lb_RCDDTL1__lb_DA6PR": "CenPH__lb_RCDDTL1__lb_DA6PR_new",
+                    "CenPH__lb_RCDDTL1__lb_1AIST": "CenPH__lb_RCDDTL1__lb_1AIST_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_DC5ST": "CenPH__lb_RCDDTL1__lb_DC5ST_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_DCUCD": "CenPH__lb_RCDDTL1__lb_DCUCD_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_DE0NB": "CenPH__lb_RCDDTL1__lb_DE0NB_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_DE6TX": "CenPH__lb_RCDDTL1__lb_DE6TX_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_DIDTX": "CenPH__lb_RCDDTL1__lb_DIDTX_new_ro"
+                },
+               "inputFields": {
+                "CenPH__lb_RCDDTL1__lb_1AIST": "CenPH__lb_RCDDTL1__lb_1AIST_new",
+                "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new",
+                "CenPH__lb_RCDDTL1__lb_DC5ST": "CenPH__lb_RCDDTL1__lb_DC5ST_new",
+                "CenPH__lb_RCDDTL1__lb_DCUCD": "CenPH__lb_RCDDTL1__lb_DCUCD_new",
+                "CenPH__lb_RCDDTL1__lb_DE0NB": "CenPH__lb_RCDDTL1__lb_DE0NB_new",
+                "CenPH__lb_RCDDTL1__lb_DE6TX": "CenPH__lb_RCDDTL1__lb_DE6TX_new",
+                "CenPH__lb_RCDDTL1__lb_DIDTX": "CenPH__lb_RCDDTL1__lb_DIDTX_new"
+                 
+               }
+           };
+        $(document).ready(function () {
+          if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
+          } else {
+              $(".confirmation-outer-conatiner").hide();
+              $(".OverlayPopupBackground").hide();
+          }
+          $("#yes").click(function (event) {
+              $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+              _00('Enter', event);
+          });
+          $("#no").click(function (event) {
+              $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+              _00('Enter', event);
+          });
+          if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+              $(".editable-field").hide();
+              $(".ro-field").show();
+          } else {
+              $(".editable-field").show();
+              $(".ro-field").hide();
+          }
+            copyData(copyToAndFrom, "");
+            $("#time").html("&nbsp;" + $("#time").html());
+            copyData(copyToAndFromTableData, "keyup keydown change blur mouseup mousedown");
+            $("#CenPH__lb_RCDDTL1__lb_1AACD_new,#CenPH__lb_RCDDTL1__lb_DCUCD_new,#CenPH__lb_RCDDTL1__lb_DE0NB_new").ForceNumericOnly();
+            var doAction = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                $("#" + selectId).val(value);
+                _00('Enter', event);
+            }
+            $(".exception").click(function (event) {
+                var row = $("#exchange-records tbody tr.selected");
+                doAction(row, "8", event);
+            });
+            //Set selected row
+            $(".exchange-prod-row").click(function (event) {
+                $(".exchange-prod-row").removeClass("selected");
+                $(this).addClass("selected");
+            });
+
+            $("#previous").click(function (event) {
+               _00('F12', event);
+            });
+
+            $("#emr").click(function (event) {
+               _00('F7', event);
+            });
+
+            $("#next").click(function (event) {
+              _00('Enter', event);
+            });
+
+        });
+
+    </script>
     </asp:Content>
