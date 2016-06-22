@@ -118,6 +118,9 @@
                                         <th>Credit</th>
                                         <th>Ref<br />
                                             Line #</th>
+                                        <th>Actual
+                                            <br />
+                                            Price</th>
                                         <th>Exted<br />
                                             Price ($)</th>
                                         <th>Inst<br />
@@ -161,7 +164,7 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display:none">
+    <div id="Div1">
 
         <%--  OE: ETR Upd Ord Dtl       Edit transaction                                                           --%>
         <%--  CRTDSPF                                                                                              --%>
@@ -1269,10 +1272,15 @@
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
-            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15]];
+            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [12], [14], [21], [16], [17], [19]];
             generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             AddRow();
-
+            $("#tblOdrDtls tbody tr").each(function () {
+                var selectId = $(this).data('selectid');
+                if (selectId === 'undefined') {
+                    $(this).find("td:eq(17) select").remove();
+                }
+            });
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -1280,7 +1288,7 @@
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-           
+
             var tindex = 0;
             if ($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id") != undefined) {
                 tindex = parseInt($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id").split("T.")[1]);
@@ -1289,8 +1297,8 @@
             $('body').on("change", $("select"), function () {
                 $("#tblOdrDtls tbody").find("tr").each(function (i) {
                     console.log($(this).find("td:eq(16) select").val());
-                    console.log('CenPH__lb_SFLRCD__lb_2SEL.'+(i + tindex));
-                    $("[id$='CenPH__lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val($(this).find("td:eq(16) select").val() == "4" ? 4 : " ");
+                    console.log('CenPH__lb_SFLRCD__lb_2SEL.' + (i + tindex));
+                    $("[id$='CenPH__lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val($(this).find("td:eq(17) select").val() == "4" ? 4 : " ");
                 });
             });
 
@@ -1320,7 +1328,7 @@
                     selectCusotmer(row, "9", event);
                 }
             });
-           
+
 
         });
     </script>
