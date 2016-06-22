@@ -84,7 +84,7 @@
                     <div class="content-grid mdl-grid">
                       <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Employee ID:</span> </div>
                       <div  class="mdl-cell mdl-cell--2-col  mdl-cell--3-col-tablet" style="margin: 0"> 
-                      <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_SFLCTL__lb_1AJCD_new" maxlength="5">
+                      <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_SFLCTL__lb_1AJCD_new" style="display:none;" maxlength="5">
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_1AJCD_new_readonly"></span> 
                       </div>
                       
@@ -268,7 +268,6 @@
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#CenPH__lb_SFLCTL__lb_1AJCD_new").ForceNumericOnly();
               function generateSpecialInstructionsSection() {
-                console.log('caling fun...');
                   //Create copyToAndFrom JSON object for special instructions
                   var copyToAndFrom = {
                       "displayOnlyFields": {},
@@ -348,11 +347,17 @@
                 });
               }else{
                 generateSpecialInstructionsSection();
+                $("#CenPH__lb_SFLCTL__lb_1AJCD_new").hide();
+                if($("#CenPH__lb_SFLCTL__lb_1AJCD").val()!=""){
+                  $("#CenPH__lb_SFLCTL__lb_1AJCD_new").val($("#CenPH__lb_SFLCTL__lb_1AJCD").val()).show()
+                }else if($("#CenPH__lb_SFLCTL__lb_1AJCD").html()!=""){
+                  $("#CenPH__lb_SFLCTL__lb_1AJCD_new_readonly").val($("#CenPH__lb_SFLCTL__lb_1AJCD").html()).show()
+                }
               }
 
             });
           </script>
-          <div id="Div1" style="display:none;">
+          <div id="Div1" style="display:block;">
 
             <%--  OE: ETR Upd Ord Hdr       Edit transaction                                                           --%>
             <%--  CRTDSPF                                                                                              --%>
