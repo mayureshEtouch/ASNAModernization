@@ -357,7 +357,7 @@
 
             });
           </script>
-          <div id="Div1" style="display:block;">
+          <div id="Div1" style="display:none;">
 
             <%--  OE: ETR Upd Ord Hdr       Edit transaction                                                           --%>
             <%--  CRTDSPF                                                                                              --%>
