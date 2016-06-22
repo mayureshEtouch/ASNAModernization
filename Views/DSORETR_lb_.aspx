@@ -35,7 +35,7 @@
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSORETR</span>
                     <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date1"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time1"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time1"></span>
                 </div>
             </div>
         </section>
