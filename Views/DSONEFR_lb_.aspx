@@ -110,8 +110,8 @@
 						<div class="button-container">
 						
 						<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop">
-									<a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a>	
+								<div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right">
+									<a href="javascript:void(0);" id="sp-next-page" class="next-icon"></a>	
 								</div>
 							</div>
 							
@@ -976,6 +976,12 @@
 				}
 				
 				generateTable();
+				
+				$('#displayData tr td:nth-child(6)').each(function (i, col )
+				{
+					$(col).text($(col).text().trim());
+					$(col).css("text-align","right");
+				});
 				
                 $("#previous").click(function (event) {
                     _00('F12', event);
