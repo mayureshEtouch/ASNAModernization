@@ -462,6 +462,14 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style type="text/css">
+@media (min-width: 768px) and (max-width: 1025px) { 
+	.table-data-content-container .button-container .mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button {
+		padding: 6px 8px;
+		margin: 0 4px;
+	}
+}
+</style>
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {

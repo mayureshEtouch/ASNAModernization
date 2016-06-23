@@ -22,7 +22,265 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+  <section class="time-date">
+    <div class="content-grid mdl-grid">
+      <div class="mdl-cell mdl-cell--8-col"> 
+        <!-- Title --> 
+        <span class="heading-h1">Edit Order Payments</span> </div>
+      <div class="mdl-cell mdl-cell--4-col pull-right"> 
+        <!-- Navigation --> 
+        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSSTETR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+    </div>
+  </section>
+  
+	<section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                        <li class="white-to-gray-bullet">
+
+                        <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Edit Order Payments</span> </li>                       
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </section>
+	
+	
+  <section class="table-data-content-container mrgnTp16">
+    <div class="table-data-wrapper">
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Customer Name:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id = "customerName"></div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+          
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--2-col-tablet"> <span class="form-label">Order #:</span> </div>
+                <div  class="mdl-cell mdl-cell--2-col  mdl-cell--3-col-tablet"  style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id ="order"></span> </div>
+								<div  class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet"  style=" width: 75px;"> <span class="form-label">Version #:</span> </div>
+                <div  class="mdl-cell mdl-cell--2-col  mdl-cell--1-col-tablet"  style="margin-top: 8px; width: 16px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="version"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Total Receivables:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="totalReceivables"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+		  
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Purchase Total:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="purchaseTotal"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Payment Total:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="paymentTotal"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+		  
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Miscellaneous:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="miscellaneous"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Balance Due:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="balanceDue"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+		  
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Tax Rate:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="taxRate"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Delivery Code:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text">
+					<select name="select" id="select_prompt" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 121px; margin-right:0">
+							<option value=" ">Please Choose</option>
+							<option value="X">X</option>
+							<option value="Y">Y</option>
+							<option value="H">H</option>
+							<option value="N">N</option>
+							<option value="P">P</option>
+					</select>
+				</span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+		  
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Tax Amount:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="taxAmount"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Requested Delivery Date:</span> </div>
+                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;">
+				<span class="form-text pull-right" data-upgraded=",MaterialTextfield">
+								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="requestdate" name="date" size="13" readonly="true">
+                                <i id="requestcal" class="material-icons calender-icon page-icons editable-data" ></i>
+                                <span id="reqdate" class="DdsCharField_OutputOnly"></span>
+                  </span>
+						
+				 </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+		  
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Order Total:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="orderTotal"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Expected Delivery Date:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="exp-del-date"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+          
+        </div>
+      </div>
+    </div>
+  </section>
+	<section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid" style="display:none">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+								<span class="icon-txt">Delete</span><i class="material-icons md-15 md-light delete-icon"></i>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+  <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+    <div class="table-data-wrapper">
+      <div class="table-data-maincontainer">
+        <div style="overflow: auto;" class="table-container" id="enterPayment" >
+		  
+              <div class="header-grey-background">
+				<span style="width: 4.35%;" class="heading-row">Type</span>
+				<span style="width: 4.8%;" class="heading-row">Method</span>
+				<span style="width: 18.5%;" class="heading-row">Amount</span>
+				<span style="width: 24.2%;" class="heading-row">Reference</span>
+				<span style="width: 24.1%;" class="heading-row">Approval</span>
+				<span style="width: 9.2%;" class="heading-row">Version</span>
+				<span style="width: 5%;" class="heading-row">Status</span>
+			  </div>
+            
+						<a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+         
+          
+        </div>
+		<div class="button-container">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>  </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="modal1" class="simplePopup"></div>
+<div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i>
+            <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:block;">
             
       <%--  OE: ETR Upd Ord Pymts     Edit transaction                                                           --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -1105,4 +1363,402 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	 <style>
+	    .table-data-content-container .mdl-data-table td{
+			padding: 6px 10px 6px;
+			line-height:normal;
+		}
+		.mdl-layout__content .DdsDecField {
+			font-weight: normal;
+		}
+        .even-row-read-only-data {
+            text-transform: uppercase !important;
+            position: relative !important;
+            left: 0px !important;
+            top: 0px !important;
+            width: auto !important;
+            border: 0px solid #ffffff !important;
+        }
+        .odd-row-read-only-data {
+            text-transform: uppercase !important;
+            position: relative !important;
+            left: 0px !important;
+            top: 0px !important;
+            width: auto !important;
+            border: 0px !important;
+            background-color: rgb(249, 249, 249) !important;
+        }
+        #CenPH__lb_SFLRCD{
+			display: table;
+            height: 125px !important;
+        }
+        #CenPH__lb_SFLRCD, #CenPH__lb_SFLRCD * {
+            position: static !important;
+        }
+        .DdsSubfileSBar {
+            display: none !important;
+        }
+		.table-data-content-container .mdl-data-table {
+			margin-bottom: 0;
+		}
+		.AlternateRow, .DefaultRow {
+			display: table-row;
+			width: 100% !important;
+			height: 32px !important;
+			border-left: none !important;
+			border-right: none !important;
+			border-bottom:1px solid #c5c5c5;
+		}
+		.AlternateRow {
+			background-color: rgb(249, 249, 249) !important;
+		}
+		.DefaultRow {
+			background-color: #FFF !important;
+		}
+        #CenPH__lb_SFLRCD__End {
+            background-color: #FFF !important;
+        }
+        #CenPH__lb_SFLRCD > div input,  #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
+			
+            display: table-cell;
+			float: left;
+            padding: 5px 1px 0 !important;
+			height: 25px !important;
+        }
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
+			width: 4.8% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+			width: 5% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+			width: 4.7% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(6) {
+			width: 18.65% !important;
+			text-align: right;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
+			width: 18.3% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(8) {
+			width: 24.3% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(8) {
+			width: 24% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
+			width: 24.25% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
+			width: 24% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+			width: 10% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
+			width: 5% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(4), [id^='CenPH__lb_SFLRCD_'] :nth-child(6), [id^='CenPH__lb_SFLRCD_'] :nth-child(8), [id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
+			
+			margin: 3px 4px !important;
+		}
+		 #CenPH__lb_SFLRCD > div input {
+			height: 18px !important;
+			}
+		#CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
+			padding: 0 !important;
+		}
+		#CenPH__lb_SFLRCD span.blank-space {
+			border-right: 1px solid #c5c5c5;
+			display: inline-block;
+			float: left;
+			height: 31px;
+			margin-top: 0;
+			padding: 0 !important;
+			margin-left: 0;
+			margin-right: 0 !important;
+		}
+        .DdsSubfileCurrentRecord {
+            background-color: #d8d8d8 !important;
+        }
+        #CenPH__lb_SFLRCD > div span[id*="2SEL"] {
+            float: right;
+        }
+		.DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
+			
+			float: left;
+			text-align: left !important;
+		}
+		#CenPH__lb_SFLRCD > div > #CenPH__lb_SFLRCD_End {
+			margin-left:10px !important;
+		}
+        #CenPH__lb_SFLRCD {
+            border-collapse: collapse;
+        }
+		.header-grey-background {
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top, #F7F7F7 30%, #D6D9DC 99%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #F7F7F7 30%, #D6D9DC 99%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #F7F7F7 30%, #D6D9DC 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#D6D9DC', GradientType=0 ); /* IE6-9 */
+			height: 28px;
+		}
+		.heading-row {
+			border-right: 1px solid #c5c5c5;
+			display: table-cell;
+			float: left;
+			font-size: 12px;
+			font-weight: bold;
+			margin: 0 4px !important;
+            padding: 4px 1px 5px !important;
+		}
+		.heading-row:last-child {
+			border-right: none;
+		}
+		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
+			font-weight: normal !important;
+		}
+		@media only screen 
+		  and (min-device-width: 768px) 
+		  and (max-device-width: 1024px) 
+		  and (orientation: portrait) 
+		  and (-webkit-min-device-pixel-ratio: 1) {
+				.mdl-layout__content {
+					height: 920px;
+				}
+				.header-grey-background :nth-child(2) {
+					width: 8% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+					width: 8.8% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+					width: 8.3% !important;
+				}
+				.header-grey-background :nth-child(4), .header-grey-background :nth-child(5) {
+					width: 21% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(8), [id^='CenPH__lb_SFLRCD_'] span:nth-child(10) {
+					width: 21.3% !important;
+				}
+				 [id^='CenPH__lb_SFLRCD_'] input:nth-child(8), [id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
+					width: 20.7% !important;
+				}
+				.header-grey-background :nth-child(6) {
+					width: 8.5% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+					width: 10% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
+					width: 5% !important;
+				}
+
+			}
+    </style>
+    <script>
+      var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant25": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+					"CenPH__lb_SFLCTL__lb_1ALTX":"customerName",
+					"CenPH__lb_SFLCTL__lb_1BANB":"order",
+					"CenPH__lb_SFLCTL__lb_1EXNB":"version",
+					"CenPH__lb_SFLCTL__lb_CHRVA":"totalReceivables",
+					"CenPH__lb_SFLCTL__lb_CEFVA":"purchaseTotal",
+					"CenPH__lb_SFLCTL__lb_CBMVA":"paymentTotal",
+					"CenPH__lb_SFLCTL__lb_1ANPR":"miscellaneous",
+					"CenPH__lb_SFLCTL__lb_CBNVA":"balanceDue",
+					"CenPH__lb_SFLCTL__lb_CBLVA":"taxAmount",
+					
+					"CenPH__lb_SFLCTL_V1AXDT":"exp-del-date",
+					"CenPH__lb_SFLCTL__lb_CAQPR":"orderTotal"
+					
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL_VCBQDT": "requestdate",
+					"CenPH__lb_SFLCTL__lb_1FLST":"select_prompt",
+                }
+            }
+            $(document).ready(function () {
+                $('body').on('keyup change', '#requestdate', function (event) {
+                    $('#CenPH__lb_SFLCTL_VCBQDT').val($(this).val());
+                });
+                              
+               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+			   
+			   var $options = $("#CenPH__lb_SFLCTL__lb_1FLST > option").clone().map(function (index) {
+					if ($(this).val() != '?') {
+						if ($(this).val().trim() == "") {
+							$(this).val(" ").text("Please Choose");
+						}
+						return this;
+					} else {
+						var $options = '<option value="' + $.trim($("#CenPH__lb_SFLCTL__lb_1FLST").text()) + '">' + $.trim($("#CenPH__lb_SFLCTL__lb_1FLST").text()) + '</option>';
+					}
+					 
+				});
+				
+			   $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
+				$("#requestcal").click(function() {
+					$("#requestdate").datepicker("show");
+				});
+				$("#requestdate").on('keyup change', function() {
+					var date = $("#requestdate").val().split("/");
+					$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
+				});
+
+				$("#CenPH__lb_SFLRCD").appendTo("#enterPayment");
+				
+				$("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
+					$($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
+				});
+				$("body").on('hover', "div#CenPH__lb_SFLRCD:even input,div#CenPH__lb_SFLRCD:even span", function() {
+					$($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
+				});
+                
+               // var dataMergeIndices = [[1], [2], [3], [4] ,[5], [6]];
+                //generateTableAndApplyInfiniteScroll("enterPayment", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+				
+				if ($("#CenPH__lb_SFLCTL_VCBQDT").length > 0) {
+					$("#exp-date-val").html($("#CenPH__lb_SFLCTL_V1AXDT").html());
+					$("#exp-date-label,#exp-date-val").show();
+				}
+				  
+				// Handle the confirm prompt
+            if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+
+                $("#requestdate,#requestcal").hide();
+                $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
+                $("#reqdate").show();
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
+				
+				
+				$('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function(i){
+				
+					$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text()=="4"?"Cancel":"Active");
+					//$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+				});
+				
+			
+				  
+            } else {
+                //$("#exp-date-label,#exp-date-val").hide();
+                $("#reqdate").hide();
+                $("#requestdate,#requestcal").show();
+                $(".OverlayPopupBackground").hide();
+                $(".confirmation-outer-conatiner").hide();
+            }
+            $("#yes").click(function(event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
+            });
+            $("#no").click(function(event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                _00('Enter', event);
+            });
+			
+				
+			  
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align", "right");
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
+				$('[id^="CenPH__lb_SFLRCD__lb_RNICD"]').addClass("payment");
+				$('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').addClass("reference");
+				$('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
+			
+				function renderPage(addSpace) {
+                if (addSpace) {
+                    $("div#CenPH__lb_SFLRCD__End").remove();
+                    $("#sp-previous-page,#sp-next-page").remove();
+                    if ($("#CenPH__lb_SFLRCD_0").length === 0) {
+                        $("div#CenPH__lb_SFLRCD__End").remove();
+                        $("#enterPayment").
+                        after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+                    }
+                    $("#enterPayment").after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+					 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2FSST"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
+					 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2EXNB"]');
+
+                    $("#CenPH__lb_SFLRCD select").empty();
+                    $("#CenPH__lb_SFLRCD select").css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+                    $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+                }
+                //var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
+               // var blankWidth = mainWidth - inputWidth + 2;
+			     /*$("[id^='CenPH__lb_SFLRCD__lb_2FSST']").css("width", $("#payment-method th:first-child").innerWidth()-7);
+				 $(".payment").css("width", $("#payment-method th:nth-child(2)").width()+11);
+				 $("span.payment").css("width", $("#payment-method th:nth-child(2)").width()+17);
+				 $(".amount").css("width", $("#payment-method th:nth-child(3)").width()+3);
+				 $("span.amount").css("width", $("#payment-method th:nth-child(3)").width()+9);
+				 $(".reference").css("width", $("#payment-method th:nth-child(4)").innerWidth()-14);
+				 $("span.reference").css("width", $("#payment-method th:nth-child(4)").innerWidth()-8);
+				 $(".approval-code").css("width", $("#payment-method th:nth-child(5)").innerWidth()-16);
+				 $("span.approval-code").css("width", $("#payment-method th:nth-child(5)").innerWidth()-10);
+				 $("[id^='CenPH__lb_SFLRCD__lb_2EXNB']").css("width", $("#payment-method th:nth-child(6)").innerWidth()-11);
+				 $("[id^='CenPH__lb_SFLRCD__lb_2SEL']").css("width", $("#payment-method th:nth-child(7)").innerWidth()-10);*/
+                //$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("width", mainWidth);
+              //  $("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("width", mainWidth);
+				
+            }
+			
+
+				//DdsSubfileRecord tabindex
+				setTimeout(function() {
+					$(".DdsCharField").attr("tabindex", "0");
+					$(".DdsSubfileRecord input").each(function() {
+						if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
+					});
+				}, 100)
+				setTimeout(function() {
+						$(".DdsDecField").attr("tabindex", "0");
+						$(".DdsSubfileRecord input").each(function() {
+							if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
+						});
+					}, 100)
+					
+				renderPage(true);
+				$('body').on('keyup keydown', function(event) {
+					var keycode = event.keycode || event.which;
+					if (keycode === 33) {
+						renderPage(true);
+					} else if (keycode === 34) {
+						renderPage(true);
+					}
+					return;
+				});
+				$('body').on("click", "#sp-next-page", function(event) {
+					_00("PgDn", event);
+					renderPage(true);
+				});
+				$('body').on("click", "#sp-previous-page", function(event) {
+					_00("PgUp", event);
+					renderPage(true);
+				});
+				$(window).resize(function() {
+					renderPage(false);
+				})
+			
+			   $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                $("#next").click(function (event) {
+                    _00('Enter', event);
+                });
+				
+				$("#prompt").click(function (event) {
+                   _00('F4',event);
+                });
+            });
+            
+    </script>
     </asp:Content>

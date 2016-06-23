@@ -1177,6 +1177,15 @@ textarea {
 .change-address-icon{
 	background: url(../Images/icons/ic_edit_location_black_24dp_1x.png) no-repeat;
 }
+.verified-icon{
+	background: url(../Images/icons/ic_verified_user_black_24dp_1x.png) no-repeat;
+}
+.duplicates-icon{
+	background: url(../Images/icons/ic_content_cduplicates_black_24dp_1x.png) no-repeat;
+}
+.invoice-icon{
+ background: url(../Images/icons/invoice-icon.png) no-repeat;
+}
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
  background: rgb(255, 255, 255);
  border: 1px solid #c5c5c5;
@@ -1461,10 +1470,25 @@ body div, body span, body textarea {
 
 /* New classes 13 April 2016 starts here */
 
+.invoice-icon{
+ background: url(../Images/icons/invoice-icon.png) no-repeat;
+}
+
 /* Margin top 16px class */
 .mrgnTp16 {
 	margin-top: 16px;
 }
+
+/* Margin right 8px */
+.form-data-wrapper .button-container .mrgnRgt8, .mrgnRgt8 {
+	margin-right: 8px;
+}
+
+/* Margin left 20px */
+.mrgnLft20 {
+	margin-left: 20px;
+}
+
 #__Page_Hidden {
 	position: fixed;
 }
