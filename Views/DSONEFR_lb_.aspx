@@ -976,11 +976,45 @@
 				}
 				
 				generateTable();
+
+         $('body').on('click', '#displayData tbody tr', function() {
+            if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+                $("#displayData tbody tr:even").css("background-color", "#fff");
+                $("#displayData tbody tr:odd").css("background-color", "#f9f9f9");
+                $("#displayData tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            }
+        });
 				
 				$('#displayData tr td:nth-child(6)').each(function (i, col )
 				{
 					$(col).text($(col).text().trim());
 					$(col).css("text-align","right");
+				});
+				
+				 $('body').on("click", "#next-page", function(event) {
+					$("#displayData tbody").empty();
+					_00("PgDn", event);
+			
+					generateTable();
+				});
+				$('body').on("click", "#previous-page", function(event) {
+					$("#displayData tbody").empty();
+						
+						_00("PgUp", event);
+						 generateTable();
+			   });
+			     $('body').on('keyup keydown', function(event) {
+					var keycode = event.keycode || event.which;
+					if (keycode === 33) {
+					$("#displayData tbody").empty();
+						generateTable();
+					} else if (keycode === 34) {
+					$("#displayData tbody").empty();
+						generateTable();
+					}
+					return;
 				});
 				
                 $("#previous").click(function (event) {
