@@ -23,17 +23,17 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
-     <div class="OverlayPopupBackground"></div>
+      <div class="OverlayPopupBackground"></div>
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-cell mdl-cell--8-col"> 
                         <!-- Title -->
-                        <span class="heading-h1">Select Customer/Order</span>
+                         <span class="heading-h1">Select Customer/Order</span>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <div class="mdl-cell mdl-cell--4-col pull-right"> 
                         <!-- Navigation -->
-                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSZGPVR</span>
+                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSZGPVR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
                         <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
                     </div>
@@ -113,8 +113,8 @@
             </section>
 
         </main>
- <div id="modal" class="simplePopup"></div>
-        <div id="Div1" style="display:none;">
+ <div id="modal" class="simplePopup"></div> 
+        <div id="Div1" style="display: none;">
             
       <%--  CU: PMT Cust/Name/Ord Num Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -520,4 +520,9 @@
               });
             });
       </script>
+      <style>
+        #modal{
+          text-align: left;
+        }
+      </style>
     </asp:Content>
