@@ -153,7 +153,10 @@
                       <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
                         <div class="content-grid mdl-grid">
                           <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Work Phone:</span> </div>
-                          <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CWPH_lb__new"></span> </div>
+                          <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> 
+                          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CWPH_lb__new"></span> /
+                          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CEONB_new">/</span> 
+                          </div>
                         </div>
                       </div>
                       <!-- 6 col ends here -->                                      
@@ -245,6 +248,7 @@
                 "CenPH__lb_SFLCTL__lb_1AACD": "CenPH__lb_SFLCTL__lb_1AACD_new",
                 "CenPH__lb_SFLCTL__lb_CHPH_lb_": "CenPH__lb_SFLCTL__lb_CHPH_lb__new",
                 "CenPH__lb_SFLCTL__lb_CWPH_lb_": "CenPH__lb_SFLCTL__lb_CWPH_lb__new",
+                "CenPH__lb_SFLCTL__lb_CEONB": "CenPH__lb_SFLCTL__lb_CEONB_new", //Work Ext.
                 "CenPH__lb_SFLCTL__lb_1AJCD": "CenPH__lb_SFLCTL__lb_1AJCD_new_readonly",//readonly
                 "CenPH__lb_SFLCTL__lb_PALTX": "CenPH__lb_SFLCTL__lb_PALTX_new",// address line 1
                 "CenPH__lb_SFLCTL__lb_PANTX": "CenPH__lb_SFLCTL__lb_PANTX_new",// address line 1

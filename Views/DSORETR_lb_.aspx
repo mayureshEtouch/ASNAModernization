@@ -85,8 +85,8 @@
                     <div class="mdl-cell mdl-cell--12-col pull-right">
                         <div class="icon-container">
                             <%--<span class="icon-txt">Status</span><i class="material-icons md-15 md-light status-icon"></i>--%>
-                            <span class="icon-txt">Returns</span><i class="material-icons md-15 md-light returns-icon"></i>
-                            <span class="icon-txt">Exchanges</span><i class="material-icons md-15 md-light exchanges-icon"></i>
+                           <span id="returns"><span class="icon-txt">Returns</span><i class="material-icons md-15 md-light returns-icon"></i></span>
+                            <span id="exchange"><span class="icon-txt">Exchanges</span><i class="material-icons md-15 md-light exchanges-icon"></i></span>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">Help</span>
+                                <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">Help</span>--%>
                             </div>
                             <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
@@ -1289,11 +1289,14 @@
                     $(this).find("td:eq(10)").empty();
                     $(this).find("td:eq(17) select").remove();
                 }
+                if ($(this).find("td:eq(14)").text() == 'Inst price') {
+                    $(this).find("td:eq(14)").empty();
+                    //$(this).find("td:eq(17) select").remove();
+                }
             });
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
-                console.log(a);
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
@@ -1305,8 +1308,6 @@
             }
             $('body').on("change", $("select"), function () {
                 $("#tblOdrDtls tbody").find("tr").each(function (i) {
-                    console.log($(this).find("td:eq(16) select").val());
-                    console.log('CenPH__lb_SFLRCD__lb_2SEL.' + (i + tindex));
                     $("[id$='CenPH__lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val($(this).find("td:eq(17) select").val() == "4" ? 4 : " ");
                 });
             });
@@ -1317,10 +1318,10 @@
             $("#next").click(function (event) {
                 _00('Enter', event);
             });
-            $("#help").click(function (event) {
-                _00('F1', event);
-            });
-            $(".returns-icon").click(function (event) {
+            //$("#help").click(function (event) {
+            //    _00('F1', event);
+            //});
+            $("#returns").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the Order");
                 } else {
@@ -1329,7 +1330,7 @@
                 }
             });
 
-            $(".exchanges-icon").click(function (event) {
+            $("#exchange").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the Order");
                 } else {
@@ -1361,4 +1362,9 @@
 
         });
     </script>
+		<style>
+		#tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5), #tblOdrDtls tr td:nth-child(7), #tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13){
+			text-align: right !important;
+			}
+		</style>
 </asp:Content>

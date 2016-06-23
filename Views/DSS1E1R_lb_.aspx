@@ -128,8 +128,8 @@
                                                 </select>
                                             </td>
                                             <td id="CenPH__lb_RCDDTL1__lb_1AIST_new_ro" class="ro-field"></td>
-                                            <td class="editable-field">
-                                                <input name="" type="text" style="width: 40px;" id="CenPH__lb_RCDDTL1__lb_1AACD_new" maxlength="3" class="editable-field">
+                                            <td class="editable-field" id="location-code">
+                                                <!-- <input name="" type="text" style="width: 40px;" id="CenPH__lb_RCDDTL1__lb_1AACD_new" maxlength="3" class="editable-field"> -->
                                             </td>
                                             <td id="CenPH__lb_RCDDTL1__lb_1AACD_new_ro" class="ro-field"></td>
                                             <td id="CenPH__lb_RCDDTL1__lb_1A1NB_new"></td>
@@ -188,7 +188,7 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                    <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
+                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="emr">Edit Multiple Returns</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
@@ -1365,6 +1365,18 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #CenPH__lb_RCDDTL1__lb_1AACD {
+                position: static !important;
+                width: 40px !important;
+            }
+						#exchange-records tr td:nth-child(4) input, #exchange-records tr td:nth-child(6),  #exchange-records tr td:nth-child(6) input, #exchange-records tr td:nth-child(12), #exchange-records tr td:nth-child(13), #exchange-records tr td:nth-child(14), #exchange-records tr td:nth-child(16){
+			text-align: right !important;
+			}
+		#exchange-records tr td:nth-child(8) input{
+			text-align: left !important;
+			}
+        </style>
         <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -1445,7 +1457,9 @@
             copyData(copyToAndFrom, "");
             $("#time").html("&nbsp;" + $("#time").html());
             copyData(copyToAndFromTableData, "keyup keydown change blur mouseup mousedown");
-            $("#CenPH__lb_RCDDTL1__lb_1AACD_new,#CenPH__lb_RCDDTL1__lb_DCUCD_new,#CenPH__lb_RCDDTL1__lb_DE0NB_new").ForceNumericOnly();
+            $("#CenPH__lb_RCDDTL1__lb_DCUCD_new,#CenPH__lb_RCDDTL1__lb_DE0NB_new").ForceNumericOnly();
+            $("#location-code").append($("#CenPH__lb_RCDDTL1__lb_1AACD"));
+            $("#CenPH__lb_RCDDTL1__lb_1AACD").ForceNumericWithQuestionMarkAndF4Only();
             var doAction = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 $("#" + selectId).val(value);
@@ -1472,6 +1486,10 @@
             $("#next").click(function (event) {
               _00('Enter', event);
             });
+
+            $("#prompt").click(function (event) {
+                 _00('F4', event);
+              });
 
         });
 

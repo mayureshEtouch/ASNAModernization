@@ -110,15 +110,15 @@
 						<div class="button-container">
 						
 						<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop">
-									<a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a>	
+								<div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right">
+									<a href="javascript:void(0);" id="sp-next-page" class="next-icon"></a>	
 								</div>
 							</div>
 							
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+												
 												</div>
 												<div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
@@ -976,6 +976,46 @@
 				}
 				
 				generateTable();
+
+         $('body').on('click', '#displayData tbody tr', function() {
+            if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+                $("#displayData tbody tr:even").css("background-color", "#fff");
+                $("#displayData tbody tr:odd").css("background-color", "#f9f9f9");
+                $("#displayData tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            }
+        });
+				
+				$('#displayData tr td:nth-child(6)').each(function (i, col )
+				{
+					$(col).text($(col).text().trim());
+					$(col).css("text-align","right");
+				});
+				
+				 $('body').on("click", "#next-page", function(event) {
+					$("#displayData tbody").empty();
+					_00("PgDn", event);
+			
+					generateTable();
+				});
+				$('body').on("click", "#previous-page", function(event) {
+					$("#displayData tbody").empty();
+						
+						_00("PgUp", event);
+						 generateTable();
+			   });
+			     $('body').on('keyup keydown', function(event) {
+					var keycode = event.keycode || event.which;
+					if (keycode === 33) {
+					$("#displayData tbody").empty();
+						generateTable();
+					} else if (keycode === 34) {
+					$("#displayData tbody").empty();
+						generateTable();
+					}
+					return;
+				});
 				
                 $("#previous").click(function (event) {
                     _00('F12', event);
@@ -983,9 +1023,12 @@
                 $("#next").click(function (event) {
                     _00('Enter', event);
                 });
-				$("#prompt").click(function (event) {
-                   _00('F4',event);
-                });
+			 
             });
         </script>
+				<style type="text/css">
+				#displayData tr td:nth-child(2),  #displayData tr td:nth-child(5), #displayData tr td:nth-child(6), #displayData tr td:nth-child(8) {
+					text-align: right !important;
+				}
+				</style>
     </asp:Content>
