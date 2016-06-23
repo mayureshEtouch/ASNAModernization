@@ -120,8 +120,8 @@
                                                 </select>
                                             </td>
                                             <td class="ro-field" id="CenPH__lb_RCDDTL1__lb_1AIST_new_ro"></td>
-                                            <td class="editable-field">
-                                                <input name="" type="text" id="CenPH__lb_RCDDTL1__lb_1AACD_new" style="width: 40px;" maxlength="3">
+                                             <td class="editable-field" id="location-code">
+                                               <!--  <input name="" type="text" id="CenPH__lb_RCDDTL1__lb_1AACD_new" style="width: 40px;" maxlength="3"> -->
                                             </td>
                                             <td class="ro-field" id="CenPH__lb_RCDDTL1__lb_1AACD_new_ro"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1A1NB_new"></td>
@@ -142,8 +142,8 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                    <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
-                                                                         -->                
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                                                                                        
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="emr">Edit Multiple Returns</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
@@ -1066,6 +1066,12 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #CenPH__lb_RCDDTL1__lb_1AACD {
+                position: static !important;
+                width: 40px !important;
+            }
+        </style>
         <script type="text/javascript">
             var copyToAndFrom = {
                     "displayOnlyFields": {
@@ -1117,8 +1123,10 @@
                   $(".ro-field").hide();
               }
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                $("#location-code").append($("#CenPH__lb_RCDDTL1__lb_1AACD"));
+                //$("#CenPH__lb_RCDDTL1__lb_1AACD").css()
                 $("#time").html("&nbsp;" + $("#time").html());
-                $("#CenPH__lb_RCDDTL1__lb_1AACD_new").ForceNumericOnly();
+                $("#CenPH__lb_RCDDTL1__lb_1AACD").ForceNumericWithQuestionMarkAndF4Only();
                 
                 $("#previous").click(function (event) {
                    _00('F12', event);
@@ -1126,6 +1134,10 @@
 
                 $("#emr").click(function (event) {
                    _00('F7', event);
+                });
+
+                $("#prompt").click(function (event) {
+                   _00('F4', event);
                 });
 
                 $("#next").click(function (event) {
