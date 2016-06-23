@@ -190,14 +190,20 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Requested Delivery Date:</span> </div>
-                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;">
+                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="inputDate">
 				<span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="requestdate" name="date" size="15" readonly="true">
+								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="inputRequestDate" name="date" size="15" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data" ></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                   </span>
 						
 				 </div>
+				 
+				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="spanDate">
+					<span data-upgraded=",MaterialTextfield" class="form-text" id="spanRequestDate"></span>
+						
+				 </div>
+				 
               </div>
             </div>
             <!-- 6 col ends here --> 
@@ -268,7 +274,7 @@
         </div>
 		<div class="button-container">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>  </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ctl00$FKeyPH$DSSTETR_lb_Control_F4" id="ctl00$FKeyPH$DSSTETR_lb_Control_F4">Prompt</span>  </div>
               <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
             </div>
           </div>
@@ -286,7 +292,7 @@
             </div>
         </div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display:block;">
             
       <%--  OE: ETR Upd Ord Pymts     Edit transaction                                                           --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -1469,6 +1475,9 @@
 		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
 			font-weight: normal !important;
 		}
+		.amount {
+			text-align:right !important;
+		}
 		@media only screen 
 		  and (min-device-width: 768px) 
 		  and (max-device-width: 1024px) 
@@ -1496,17 +1505,19 @@
 					"CenPH__lb_SFLCTL__lb_CBLVA":"taxAmount",
 					
 					"CenPH__lb_SFLCTL_V1AXDT":"exp-del-date",
-					"CenPH__lb_SFLCTL__lb_CAQPR":"orderTotal"
+					"CenPH__lb_SFLCTL__lb_CAQPR":"orderTotal",
+					//"CenPH__lb_SFLCTL_VCBQDT": "spanDate"
 					
                 },
                 "inputFields": {
-                    "CenPH__lb_SFLCTL_VCBQDT": "requestdate",
+                    //"CenPH__lb_SFLCTL_VCBQDT": "inputRequestDate",
 					"CenPH__lb_SFLCTL__lb_1FLST":"select_prompt",
                 }
             }
             $(document).ready(function () {
-                $('body').on('keyup change', '#requestdate', function (event) {
+                $('body').on('keyup change', '#inputRequestDate', function (event) {
                     $('#CenPH__lb_SFLCTL_VCBQDT').val($(this).val());
+					 $('#CenPH__lb_SFLCTL_VCBQDT').val($(this).val());
                 });
                               
                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
@@ -1523,12 +1534,22 @@
 					 
 				});
 				
-			   $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
+			   if ($("#CenPH__lb_SFLCTL_VCBQDT").is('span')) {
+                    $("#spanDate").show();
+                    $("#inputDate").hide();
+					$("#spanRequestDate").text($("#CenPH__lb_SFLCTL_VCBQDT").text().trim());
+                } else {
+                    $("#ro-spanDate").hide();
+                    $("#inputDate").show();
+					$("#inputRequestDate").val($("#CenPH__lb_SFLCTL_VCBQDT").val().trim());
+                }
+				
+			   $("#inputRequestDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
 				$("#requestcal").click(function() {
-					$("#requestdate").datepicker("show");
+					$("#inputRequestDate").datepicker("show");
 				});
-				$("#requestdate").on('keyup change', function() {
-					var date = $("#requestdate").val().split("/");
+				$("#inputRequestDate").on('keyup change', function() {
+					var date = $("#inputRequestDate").val().split("/");
 					$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
 				});
 
@@ -1552,7 +1573,7 @@
 				// Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
 
-                $("#requestdate,#requestcal").hide();
+                $("#inputRequestDate,#requestcal").hide();
                 $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
                 $("#reqdate").show();
                 $(".OverlayPopupBackground").show();
@@ -1570,7 +1591,7 @@
             } else {
                 //$("#exp-date-label,#exp-date-val").hide();
                 $("#reqdate").hide();
-                $("#requestdate,#requestcal").show();
+                $("#inputRequestDate,#requestcal").show();
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
@@ -1677,7 +1698,7 @@
                     _00('Enter', event);
                 });
 				
-				$("#prompt").click(function (event) {
+				$("#ctl00\\$FKeyPH\\$DSSTETR_lb_Control_F4").click(function (event) {
                    _00('F4',event);
                 });
             });
