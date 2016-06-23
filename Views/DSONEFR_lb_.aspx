@@ -86,15 +86,14 @@
 								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
 								 <thead>
 													<tr>
-														<th>Order<br/>Line Type</th>
-														<th>Version<br/>Number</th>
-														<th>Model<br/>Number</th>
-														
-														<th>Mfg Warr<br/>Exp Date</th>
-														<th>SMA<br/>Months</th>
-														<th>Warranty<br/>Price</th>
-														<th>Ext Warr<br/>Exp date</th>
-														<th>Ref Line<br/>Number</th>
+														<th>Order Line Type</th>
+														<th>Version Number</th>
+														<th>Model Number</th>
+														<th>Manufacturing Warranty Expiry Date</th>
+														<th>SMA Months</th>
+														<th>Warranty Price</th>
+														<th>Extended Warranty Expiry Date</th>
+														<th>Reference Line Number</th>
 													</tr>
 												</thead>
 												<tbody>
