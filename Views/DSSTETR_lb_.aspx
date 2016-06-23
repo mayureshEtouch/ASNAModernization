@@ -84,7 +84,7 @@
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--2-col-tablet"> <span class="form-label">Order #:</span> </div>
                 <div  class="mdl-cell mdl-cell--2-col  mdl-cell--3-col-tablet"  style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id ="order"></span> </div>
 								<div  class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet"  style=" width: 75px;"> <span class="form-label">Version #:</span> </div>
-                <div  class="mdl-cell mdl-cell--2-col  mdl-cell--1-col-tablet"  style="margin-top: 8px; width: 20px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="version"></span> </div>
+                <div  class="mdl-cell mdl-cell--2-col  mdl-cell--1-col-tablet"  style="margin-top: 8px; width: 16px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="version"></span> </div>
               </div>
             </div>
             <!-- 6 col ends here --> 
@@ -190,14 +190,20 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Requested Delivery Date:</span> </div>
-                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;">
+                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="inputDate">
 				<span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="requestdate" name="date" size="15" readonly="true">
+								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="inputRequestDate" name="date" size="15" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data" ></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                   </span>
 						
 				 </div>
+				 
+				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="spanDate">
+					<span data-upgraded=",MaterialTextfield" class="form-text" id="spanRequestDate"></span>
+						
+				 </div>
+				 
               </div>
             </div>
             <!-- 6 col ends here --> 
@@ -245,30 +251,24 @@
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div style="overflow: auto;" class="table-container" id="enterPayment" >
-      
-            <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="payment-method"  data-upgraded=",MaterialDataTable">
-              <thead>
-                <tr>
-                  <th width="5%">Type</th>
-                  <th width="5%">Method</th>
-                  <th width="20%">Amount</th>
-                  <th width="25%">Reference</th>
-                  <th width="25%">Approval</th>
-                  <th width="10%">Version</th>
-				  <th width="10%">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                
-              </tbody>
-            </table>
+		  
+              <div class="header-grey-background">
+				<span style="width: 4.35%;" class="heading-row">Type</span>
+				<span style="width: 4.8%;" class="heading-row">Method</span>
+				<span style="width: 18.5%;" class="heading-row">Amount</span>
+				<span style="width: 24.2%;" class="heading-row">Reference</span>
+				<span style="width: 24.1%;" class="heading-row">Approval</span>
+				<span style="width: 9.2%;" class="heading-row">Version</span>
+				<span style="width: 5%;" class="heading-row">Status</span>
+			  </div>
+            
 						<a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
          
           
         </div>
 		<div class="button-container">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>  </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ctl00$FKeyPH$DSSTETR_lb_Control_F4" id="ctl00$FKeyPH$DSSTETR_lb_Control_F4">Prompt</span>  </div>
               <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
             </div>
           </div>
@@ -1429,15 +1429,53 @@
             display: table-cell;
 			float: left;
             padding: 5px 1px 0 !important;
-            margin-left: 0 !important;
-			height: 27px !important;
+			height: 25px !important;
         }
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
+			width: 4.8% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+			width: 5% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+			width: 4.7% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(6) {
+			width: 18.65% !important;
+			text-align: right;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
+			width: 18.3% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(8) {
+			width: 24.3% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(8) {
+			width: 24% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
+			width: 24.25% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
+			width: 24% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+			width: 9.25% !important;
+			text-align: right !important;
+			margin-right: 10px;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
+			width: 5% !important;
+		}
+		[id^='CenPH__lb_SFLRCD_'] :nth-child(4), [id^='CenPH__lb_SFLRCD_'] :nth-child(6), [id^='CenPH__lb_SFLRCD_'] :nth-child(8), [id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
+			
+			margin: 3px 4px !important;
+		}
 		 #CenPH__lb_SFLRCD > div input {
-            margin: 3px 5px !important;
-			height: 19px !important;
+			height: 18px !important;
 			}
 		#CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
-			padding: 1px 4px 2px !important;
+			padding: 0 !important;
 		}
 		#CenPH__lb_SFLRCD span.blank-space {
 			border-right: 1px solid #c5c5c5;
@@ -1456,9 +1494,11 @@
             float: right;
         }
 		.DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
-			margin-left: 10px;
 			float: left;
 			text-align: left !important;
+		}
+		.AlternateRow.DdsSubfileCurrentRecord .DdsDecField_OutputOnly, .DefaultRow.DdsSubfileCurrentRecord .DdsDecField_OutputOnly {
+			color: #666 !important;
 		}
 		#CenPH__lb_SFLRCD > div > #CenPH__lb_SFLRCD_End {
 			margin-left:10px !important;
@@ -1466,16 +1506,66 @@
         #CenPH__lb_SFLRCD {
             border-collapse: collapse;
         }
-		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
+		.header-grey-background {
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top, #F7F7F7 30%, #D6D9DC 99%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #F7F7F7 30%, #D6D9DC 99%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #F7F7F7 30%, #D6D9DC 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#D6D9DC', GradientType=0 ); /* IE6-9 */
+			height: 28px;
+		}
+		.heading-row {
+			border-right: 1px solid #c5c5c5;
+			display: table-cell;
+			float: left;
+			font-size: 12px;
+			font-weight: bold;
+			margin: 0 4px !important;
+            padding: 4px 1px 5px !important;
+		}
+		.heading-row:last-child {
+			border-right: none;
+		}	
+			.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
 			font-weight: normal !important;
 		}
-		@media only screen 
+		.amount {
+			text-align:right !important;
+		}
+	@media only screen 
 		  and (min-device-width: 768px) 
 		  and (max-device-width: 1024px) 
 		  and (orientation: portrait) 
 		  and (-webkit-min-device-pixel-ratio: 1) {
 				.mdl-layout__content {
 					height: 920px;
+				}
+				.header-grey-background :nth-child(2) {
+					width: 8% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+					width: 8.8% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+					width: 8.3% !important;
+				}
+				.header-grey-background :nth-child(4), .header-grey-background :nth-child(5) {
+					width: 21% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(8), [id^='CenPH__lb_SFLRCD_'] span:nth-child(10) {
+					width: 21.3% !important;
+				}
+				 [id^='CenPH__lb_SFLRCD_'] input:nth-child(8), [id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
+					width: 20.7% !important;
+				}
+				.header-grey-background :nth-child(6) {
+					width: 8.5% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+					width: 8.5% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
+					width: 5% !important;
 				}
 
 			}
@@ -1496,17 +1586,19 @@
 					"CenPH__lb_SFLCTL__lb_CBLVA":"taxAmount",
 					
 					"CenPH__lb_SFLCTL_V1AXDT":"exp-del-date",
-					"CenPH__lb_SFLCTL__lb_CAQPR":"orderTotal"
+					"CenPH__lb_SFLCTL__lb_CAQPR":"orderTotal",
+					//"CenPH__lb_SFLCTL_VCBQDT": "spanDate"
 					
                 },
                 "inputFields": {
-                    "CenPH__lb_SFLCTL_VCBQDT": "requestdate",
+                    //"CenPH__lb_SFLCTL_VCBQDT": "inputRequestDate",
 					"CenPH__lb_SFLCTL__lb_1FLST":"select_prompt",
                 }
             }
             $(document).ready(function () {
-                $('body').on('keyup change', '#requestdate', function (event) {
+                $('body').on('keyup change', '#inputRequestDate', function (event) {
                     $('#CenPH__lb_SFLCTL_VCBQDT').val($(this).val());
+					 $('#CenPH__lb_SFLCTL_VCBQDT').val($(this).val());
                 });
                               
                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
@@ -1523,12 +1615,22 @@
 					 
 				});
 				
-			   $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
+			   if ($("#CenPH__lb_SFLCTL_VCBQDT").is('span')) {
+                    $("#spanDate").show();
+                    $("#inputDate").hide();
+					$("#spanRequestDate").text($("#CenPH__lb_SFLCTL_VCBQDT").text().trim());
+                } else {
+                    $("#ro-spanDate").hide();
+                    $("#inputDate").show();
+					$("#inputRequestDate").val($("#CenPH__lb_SFLCTL_VCBQDT").val().trim());
+                }
+				
+			   $("#inputRequestDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
 				$("#requestcal").click(function() {
-					$("#requestdate").datepicker("show");
+					$("#inputRequestDate").datepicker("show");
 				});
-				$("#requestdate").on('keyup change', function() {
-					var date = $("#requestdate").val().split("/");
+				$("#inputRequestDate").on('keyup change', function() {
+					var date = $("#inputRequestDate").val().split("/");
 					$("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
 				});
 
@@ -1552,7 +1654,7 @@
 				// Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
 
-                $("#requestdate,#requestcal").hide();
+                $("#inputRequestDate,#requestcal").hide();
                 $("#reqdate").html($("#CenPH__lb_SFLCTL_VCBQDT").html());
                 $("#reqdate").show();
                 $(".OverlayPopupBackground").show();
@@ -1570,7 +1672,7 @@
             } else {
                 //$("#exp-date-label,#exp-date-val").hide();
                 $("#reqdate").hide();
-                $("#requestdate,#requestcal").show();
+                $("#inputRequestDate,#requestcal").show();
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
@@ -1618,7 +1720,7 @@
                 }
                 //var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
                // var blankWidth = mainWidth - inputWidth + 2;
-			     $("[id^='CenPH__lb_SFLRCD__lb_2FSST']").css("width", $("#payment-method th:first-child").innerWidth()-7);
+			     /*$("[id^='CenPH__lb_SFLRCD__lb_2FSST']").css("width", $("#payment-method th:first-child").innerWidth()-7);
 				 $(".payment").css("width", $("#payment-method th:nth-child(2)").width()+11);
 				 $("span.payment").css("width", $("#payment-method th:nth-child(2)").width()+17);
 				 $(".amount").css("width", $("#payment-method th:nth-child(3)").width()+3);
@@ -1628,7 +1730,7 @@
 				 $(".approval-code").css("width", $("#payment-method th:nth-child(5)").innerWidth()-16);
 				 $("span.approval-code").css("width", $("#payment-method th:nth-child(5)").innerWidth()-10);
 				 $("[id^='CenPH__lb_SFLRCD__lb_2EXNB']").css("width", $("#payment-method th:nth-child(6)").innerWidth()-11);
-				 $("[id^='CenPH__lb_SFLRCD__lb_2SEL']").css("width", $("#payment-method th:nth-child(7)").innerWidth()-10);
+				 $("[id^='CenPH__lb_SFLRCD__lb_2SEL']").css("width", $("#payment-method th:nth-child(7)").innerWidth()-10);*/
                 //$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("width", mainWidth);
               //  $("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("width", mainWidth);
 				
@@ -1677,7 +1779,7 @@
                     _00('Enter', event);
                 });
 				
-				$("#prompt").click(function (event) {
+				$("#ctl00\\$FKeyPH\\$DSSTETR_lb_Control_F4").click(function (event) {
                    _00('F4',event);
                 });
             });

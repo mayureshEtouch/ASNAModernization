@@ -92,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <section class="table-data-content-container spacer-container-bottom">
+        <section class="table-data-content-container order-detail-table-data spacer-container-bottom">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div style="overflow: auto;" class="table-container">
@@ -101,31 +101,29 @@
                                 <thead>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <th>Line<br />
-                                            #</th>
-                                        <th>Delivery<br />
+                                        <th>Line Number</th>
+                                        <th>Delivery
                                             Status</th>
-                                        <th>From<br />
+                                        <th>From
                                             Location</th>
                                         <th>Quantity</th>
-                                        <th>Model<br />
-                                            #</th>
-                                        <th>Model<br />
+                                        <th>Model
+                                            Number</th>
+                                        <th>Model
                                             Description</th>
-                                        <th>Serial<br />
-                                            #</th>
+                                        <th>Serial 
+                                            Number</th>
                                         <th>Warranty</th>
                                         <th>Credit</th>
-                                        <th>Ref<br />
-                                            Line #</th>
+                                        <th>Reference 
+                                            Line Number</th>
                                         <th>Actual
-                                            <br />
                                             Price</th>
-                                        <th>Exted<br />
+                                        <th>Extended
                                             Price ($)</th>
-                                        <th>Inst<br />
+                                        <th>Installation
                                             Price ($)</th>
-                                        <th>Inst<br />
+                                        <th>Installation
                                             Code</th>
                                         <th>Instructions</th>
                                         <th>Level</th>
@@ -1256,6 +1254,11 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
+	<style>
+		.table-data-content-container .mdl-data-table th {
+			padding: 7px 6px 3px 5px;
+		}
+	</style>
     <script type="text/javascript">
         function AddRow() {
             $('#tblOdrDtls > tbody > tr').append(
