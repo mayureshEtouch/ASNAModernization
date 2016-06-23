@@ -1361,4 +1361,9 @@
 
         });
     </script>
+		<style>
+		#tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5), #tblOdrDtls tr td:nth-child(7), #tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13){
+			text-align: right !important;
+			}
+		</style>
 </asp:Content>

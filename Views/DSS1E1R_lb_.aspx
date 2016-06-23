@@ -1370,6 +1370,12 @@
                 position: static !important;
                 width: 40px !important;
             }
+						#exchange-records tr td:nth-child(4) input, #exchange-records tr td:nth-child(6),  #exchange-records tr td:nth-child(6) input, #exchange-records tr td:nth-child(12), #exchange-records tr td:nth-child(13), #exchange-records tr td:nth-child(14), #exchange-records tr td:nth-child(16){
+			text-align: right !important;
+			}
+		#exchange-records tr td:nth-child(8) input{
+			text-align: left !important;
+			}
         </style>
         <script type="text/javascript">
         var copyToAndFrom = {

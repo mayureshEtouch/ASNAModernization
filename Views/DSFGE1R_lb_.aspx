@@ -78,7 +78,7 @@
                     <div class="table-data-maincontainer">
                         <div style="overflow: auto;" class="table-container">
                             <div>
-                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tableData1" data-upgraded=",MaterialDataTable">
                                     <thead>
                                         <tr>
                                             <th>Line
@@ -1071,6 +1071,9 @@
                 position: static !important;
                 width: 40px !important;
             }
+						#tableData1 tr td:nth-child(5) input{
+			text-align: right !important;
+			}
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {
