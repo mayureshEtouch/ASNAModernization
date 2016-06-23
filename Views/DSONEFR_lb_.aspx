@@ -1026,4 +1026,9 @@
 			 
             });
         </script>
+				<style type="text/css">
+				#displayData tr td:nth-child(2),  #displayData tr td:nth-child(5), #displayData tr td:nth-child(6), #displayData tr td:nth-child(8) {
+					text-align: right !important;
+				}
+				</style>
     </asp:Content>
