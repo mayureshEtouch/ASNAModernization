@@ -35,8 +35,8 @@
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
                             <i class="material-icons md-15 md-light">computer</i> <span class="date-time-txt">DSHQDFR</span> 
-                <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date">24th October 2015</span>
-                <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time">19:00:20</span>
+                <i class="material-icons md-15 md-light">event_available</i> <span class="date-time-txt" name="date" id="date"></span>
+                <i class="material-icons md-15 md-light">access_time</i> <span class="date-time-txt" name="time" id="time"></span>
                         </div>
                     </div>
                 </section>
@@ -155,7 +155,7 @@
                 },
                 "inputFields": {
                 }
-            };
+            }
                 $(document).ready(function () {
                     copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
                     var dataMergeIndices = [[0], [1], [2],[3], [4]];
@@ -181,7 +181,7 @@
                 });
             </script>
     <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;"> 
+        <div id="Div1" style="display:none;"> 
       <%--  OE: DSP Order Header Sel  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
       <%--  RSTDSP(*YES)                                                                                                     --%>
