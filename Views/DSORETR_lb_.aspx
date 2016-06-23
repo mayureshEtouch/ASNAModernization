@@ -101,8 +101,7 @@
                                 <thead>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <th>Line<br />
-                                            #</th>
+                                        <th>Line #</th>
                                         <th>Delivery<br />
                                             Status</th>
                                         <th>From<br />
@@ -116,7 +115,7 @@
                                             #</th>
                                         <th>Warranty</th>
                                         <th>Credit</th>
-                                        <th>Ref<br />
+                                        <th style="width:7%">Ref<br />
                                             Line #</th>
                                         <th>Actual
                                             <br />
