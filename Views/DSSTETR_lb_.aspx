@@ -159,7 +159,7 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Delivery Code:</span> </div>
-                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text">
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text">
 					<select name="select" id="select_prompt" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 121px; margin-right:0">
 							<option value=" ">Please Choose</option>
 							<option value="X">X</option>
@@ -190,16 +190,16 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Requested Delivery Date:</span> </div>
-                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="inputDate">
+                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin-top: 8px; margin-left: 0;display:none" id="inputDate">
 				<span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="inputRequestDate" name="date" size="15" readonly="true">
+								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="inputRequestDate" name="date" size="13" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data" ></i>
                                 <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                   </span>
 						
 				 </div>
 				 
-				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="spanDate">
+				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;display:none" id="spanDate">
 					<span data-upgraded=",MaterialTextfield" class="form-text" id="spanRequestDate"></span>
 						
 				 </div>
@@ -236,17 +236,6 @@
       </div>
     </div>
   </section>
-	<section class="add-item">
-                <div class="add-item-wrapper">
-                    <div class="content-grid mdl-grid" style="display:none">
-                        <div class="mdl-cell mdl-cell--12-col pull-right">
-                            <div class="icon-container">
-								<span class="icon-txt">Delete</span><i class="material-icons md-15 md-light delete-icon"></i>
-							</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
   <section class="table-data-content-container spacer-container-bottom mrgnTp16">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
