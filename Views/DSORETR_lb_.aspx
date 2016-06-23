@@ -163,6 +163,14 @@
 
     </main>
     <div id="modal1" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i>
+            <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display:none">
 
@@ -1278,6 +1286,7 @@
             $("#tblOdrDtls tbody tr").each(function () {
                 var selectId = $(this).data('selectid');
                 if (selectId === 'undefined') {
+                    $(this).find("td:eq(10)").empty();
                     $(this).find("td:eq(17) select").remove();
                 }
             });
@@ -1329,6 +1338,26 @@
                 }
             });
 
+            // Handle the confirm prompt
+            if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                
+                  $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
+
+            } else {
+              
+                $(".OverlayPopupBackground").hide();
+                $(".confirmation-outer-conatiner").hide();
+            }
+
+            $("#yes").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
+            });
+            $("#no").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                _00('Enter', event);
+            });
 
         });
     </script>

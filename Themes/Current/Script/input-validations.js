@@ -101,6 +101,33 @@ jQuery.fn.ForceNumericWithQuestionMarkOnly =
         });
     };
 
+// Numeric with question mark and F4
+jQuery.fn.ForceNumericWithQuestionMarkAndF4Only = function(maxlength, minlength) {
+        return this.each(function() {
+            $(this).keydown(function(e) {
+                if (e.keyCode === 115) {
+                    return true;
+                }
+                else if ((e.shiftKey && e.which === 191) || e.keyCode === 191) {
+                    $(this).attr("maxlength", "1");
+                    return true;
+                } else if (e.ctrlKey || e.altKey) {
+                    return false;
+                } else if (e.shiftKey) {
+                    return false;
+                } else {
+                    if (maxlength && $(this).val().indexOf("?") === -1) {
+                        $(this).attr("maxlength", maxlength);
+                    }
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        return false;
+                    }
+                }
+            });
+        });
+    };
+
 // Numeric with two decimal precisions
 jQuery.fn.numericWithTwoDecimalPrecisions = function() {
 	
