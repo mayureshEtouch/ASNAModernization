@@ -81,7 +81,7 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">#</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--11-col mdl-cell mdl-cell--7-col-tablet" id="number">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2BANB_new" class="mdl-textfield__input" data-tb-index="1">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2BANB_new" class="mdl-textfield__input" data-tb-index="1" maxlength="9">
                                         </div>
                                     </div>
                                 </div>

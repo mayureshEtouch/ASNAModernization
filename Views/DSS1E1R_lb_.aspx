@@ -1490,6 +1490,13 @@
             $("#prompt").click(function (event) {
                  _00('F4', event);
               });
+			  
+			    setTimeout(function(){   
+				   $("input").attr("tabindex","0");      
+				   $("input").each(function(){
+					 if($(this).is('[tab-index]')){$(this).attr('tabindex',$(this).attr('tab-index'))}
+				   });   
+				   },100)
 
         });
 
