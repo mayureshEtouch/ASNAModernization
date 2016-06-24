@@ -85,7 +85,7 @@
                     <div class="mdl-cell mdl-cell--12-col pull-right">
                         <div class="icon-container">
                             <%--<span class="icon-txt">Status</span><i class="material-icons md-15 md-light status-icon"></i>--%>
-                           <span id="returns"><span class="icon-txt">Returns</span><i class="material-icons md-15 md-light returns-icon"></i></span>
+                            <span id="returns"><span class="icon-txt">Returns</span><i class="material-icons md-15 md-light returns-icon"></i></span>
                             <span id="exchange"><span class="icon-txt">Exchanges</span><i class="material-icons md-15 md-light exchanges-icon"></i></span>
                         </div>
                     </div>
@@ -140,11 +140,7 @@
                     </div>
 
                     <div class="button-container">
-                        <div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop">
-                                <a class="next-icon" style="float: right; margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
-                            </div>
-                        </div>
+
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -162,15 +158,15 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-            <i class="material-icons md-15 md-light help-icon"></i>
-            <span class="confirmation-text">Do you want to continue</span>
-            <div class="button-container">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
-            </div>
+        <i class="material-icons md-15 md-light help-icon"></i>
+        <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
         </div>
+    </div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display:none">
+    <div id="Div1" style="display: none">
 
         <%--  OE: ETR Upd Ord Dtl       Edit transaction                                                           --%>
         <%--  CRTDSPF                                                                                              --%>
@@ -1254,13 +1250,14 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-	<style>
-		.table-data-content-container .mdl-data-table th {
-			padding: 7px 6px 3px 5px;
-		}
-	</style>
+    <style>
+        .table-data-content-container .mdl-data-table th {
+            padding: 7px 6px 3px 5px;
+        }
+    </style>
     <script type="text/javascript">
         function AddRow() {
+            console.log('hello');
             $('#tblOdrDtls > tbody > tr').append(
        '<td>' +
 
@@ -1269,6 +1266,110 @@
                '</select>' +
        '</td>');
         }
+
+        function generateTableAndApplyInfiniteScrollDSOR(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices) {
+            $("body").css({
+                "background-color": "#FFFFFF"
+            });
+            $('body').on('click', '#' + tableId + ' tbody tr', function () {
+                if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+                    $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                    $("#" + tableId + " tbody tr").removeClass("selected");
+                    $(this).addClass("selected");
+                    $("div.icon-container").removeClass("icon-disable");
+                }
+            });
+            /* script for table row starts here */
+            var generateTable = function (direction) {
+                $("#" + tableId + " tbody").empty();
+                var tableSelector = "";
+                if ($('table#' + recordConatainer).length > 0) {
+                    tableSelector = 'table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+                } else {
+                    tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+                }
+                var recordCount = $(tableSelector).length - 1;
+                if (spanIndices) {
+                    generateTableWithSpanIndex(recordCount, tableId, direction, tableSelector, spanIndices);
+                } else {
+                    generateTableWithoutSpanIndex(recordCount, tableId, direction, ignoreSapn, tableSelector);
+                }
+                $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                AddRow();
+            }
+
+            $('body').on("click", "#next-page", function (event) {
+                _00("PgDn", event);
+                generateTable("top-to-bottom");
+            });
+            $('body').on("click", "#previous-page", function (event) {
+                _00("PgUp", event);
+                generateTable("top-to-bottom");
+            });
+            generateTable("top-to-bottom");
+            //Handle Page Up and Page Down events
+            $('body').on('keyup', function (event) {
+                var keycode = event.keycode || event.which;
+                if (keycode === 33) {
+                    //_00("PgUp", event);
+                    generateTable("bottom-to-top");
+                } else if (keycode === 34) {
+                    //_00("PgDn", event);
+                    generateTable("top-to-bottom");
+                }
+                return;
+            });
+            var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                if (selectId) {
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                } else {
+                    return;
+                }
+            }
+
+            //Select customer on double click
+            $('body').on('dblclick', '#' + tableId + ' tbody tr', function (event) {
+                selectCusotmer(this, "1", event);
+            });
+            $("#" + selectRowId).click(function (event) {
+                var row = $("#" + tableId + " tbody tr.selected");
+                selectCusotmer(row, "1", event);
+            });
+            // Set first record as default selected
+            $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+            jQuery.tableNavigation({
+                "onRowChange": function (output) {
+                    if (output) {
+                        var selectId = $(output.row).data('selectid');
+                        if (output.r && output.keycode === "40") {
+                            _00("PgDn", event);
+                            generateTable("top-to-bottom");
+                        } else if (output.r && output.keycode === "38" && !selectId) {
+                            _00("PgUp", event);
+                            generateTable("bottom-to-top");
+                        } else {
+                            $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                            $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                            $(output.row).css({
+                                "background-color": "#d8d8d8"
+                            });
+                        }
+                    }
+                }
+            });
+            // To fixed table header
+            $(".fixed-table-container-inner .th-inner").animate({
+                width: "300px"
+            }, 500);
+        }
+
+
+
 
         var copyToAndFrom = {
             "displayOnlyFields": {
@@ -1284,8 +1385,8 @@
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [12], [14], [21], [16], [17], [19]];
-            generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            AddRow();
+            generateTableAndApplyInfiniteScrollDSOR("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            //AddRow();
             $("#tblOdrDtls tbody tr").each(function () {
                 var selectId = $(this).data('selectid');
                 if (selectId === 'undefined') {
@@ -1344,12 +1445,12 @@
 
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-                
-                  $(".OverlayPopupBackground").show();
+
+                $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
 
             } else {
-              
+
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
@@ -1363,11 +1464,40 @@
                 _00('Enter', event);
             });
 
+            //$('body').on("click", "#next-page", function (event) {
+            //    $("#tblOdrDtls tbody").empty();
+            //    _00("PgDn", event);
+            //    generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            //    console.log('1');
+            //    AddRow();
+            //    console.log('2');
+            //});
+            //$('body').on("click", "#previous-page", function (event) {
+            //    $("#tblOdrDtls tbody").empty();
+
+            //    _00("PgUp", event);
+            //    generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            //    AddRow();
+            //});
+            //$('body').on('keyup keydown', function (event) {
+            //    var keycode = event.keycode || event.which;
+            //    if (keycode === 33) {
+            //        $("#tblOdrDtls tbody").empty();
+            //        generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            //        AddRow();
+            //    } else if (keycode === 34) {
+            //        $("#tblOdrDtls tbody").empty();
+            //        generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            //        AddRow();
+            //    }
+            //    return;
+            //});
+
         });
     </script>
-		<style>
-		#tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5), #tblOdrDtls tr td:nth-child(7), #tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13){
-			text-align: right !important;
-			}
-		</style>
+    <style>
+        #tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5), #tblOdrDtls tr td:nth-child(7), #tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13) {
+            text-align: right !important;
+        }
+    </style>
 </asp:Content>
