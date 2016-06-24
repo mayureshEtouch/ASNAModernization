@@ -95,9 +95,9 @@
                             <th>Actual<br/>Price</th>
                             <th>Extended<br/>Price</th>
                             <th>Reference<br/>Line Number</th>
-                            <th>Install<br/> code</th>
+                            <th>Installation<br/> code</th>
                             <th>Lvl</th>
-                            <th>Install<br/> Price</th>
+                            <th>Installation<br/> Price</th>
                           </tr>
                         </thead>
                         <tbody>
