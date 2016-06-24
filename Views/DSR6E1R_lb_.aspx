@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSR6E1R_lb_.aspx.cs" Inherits="conns.DSR6E1R_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 6/23/2016 at 6:36 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -106,8 +106,8 @@
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AZNB_new"></td>
                             <td id="CenPH__lb_RCDDTL1__lb_1AIST_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AACD_new"></td>
-                            <td class="editable-field" id="quantity" maxlength="3"><!-- <input class="mdl-textfield__input" type="text" size="10" data-tb-index="1" value="1" id="CenPH__lb_RCDDTL1__lb_1A1NB_new" style="width: 60px;"> --></td>
-                            <td class="ro-field" id="CenPH__lb_RCDDTL1__lb_1A1NB_new_ro" maxlength="3"></td>
+                            <td class="editable-field" id="quantity"><!-- <input class="mdl-textfield__input" type="text" size="10" data-tb-index="1" value="1" id="CenPH__lb_RCDDTL1__lb_1A1NB_new" style="width: 60px;"> --></td>
+                            <td class="ro-field" id="CenPH__lb_RCDDTL1__lb_1A1NB_new_ro"></td>
                             <td id="CenPH__lb_RCDDTL1__lb_1AXTX_new"></td>
                             <td id="CenPH__lb_RCDDTL1__lb_PA2TX_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AMVA_new"></td>
