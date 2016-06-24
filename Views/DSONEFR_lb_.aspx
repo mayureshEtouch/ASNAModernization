@@ -108,11 +108,7 @@
 						
 						<div class="button-container">
 						
-						<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right">
-									<a href="javascript:void(0);" id="sp-next-page" class="next-icon"></a>	
-								</div>
-							</div>
+						
 							
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
