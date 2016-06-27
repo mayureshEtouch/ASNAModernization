@@ -117,6 +117,7 @@
                       <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="">
                       <span id="CenPH__lb_SFLCTL__lb_PALTX_new"></span><br>
                       <span id="CenPH__lb_SFLCTL__lb_PANTX_new"></span><br/>
+					  <span id="CenPH__lb_SFLCTL__lb_PAOTX_new"></span><br/>
                       <span id="CenPH__lb_SFLCTL__lb_PAQTX_new"></span> <span id="CenPH__lb_SFLCTL__lb_PADST_new"></span>,
                       <span id="CenPH__lb_SFLCTL__lb_PAPTX_new"></span>
                         </div>
@@ -132,6 +133,7 @@
                         <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text">
                           <span id="CenPH__lb_SFLCTL__lb_PBDTX_new"></span><br>
                           <span id="CenPH__lb_SFLCTL__lb_CETTX_new"></span><br/>
+						  <span id="CenPH__lb_SFLCTL__lb_CEUTX_new"></span><br/>
                           <span id="CenPH__lb_SFLCTL__lb_CEVTX_new"></span> <span id="CenPH__lb_SFLCTL__lb_CCXST_new"></span>,
                           <span id="CenPH__lb_SFLCTL__lb_CEWTX_new"></span>
                           </div>
@@ -265,6 +267,8 @@
                 "CenPH__lb_SFLCTL__lb_CEVTX": "CenPH__lb_SFLCTL__lb_CEVTX_new",// city
                 "CenPH__lb_SFLCTL__lb_CCXST": "CenPH__lb_SFLCTL__lb_CCXST_new",// state
                 "CenPH__lb_SFLCTL__lb_CEWTX": "CenPH__lb_SFLCTL__lb_CEWTX_new",// Pin
+				"CenPH__lb_SFLCTL__lb_PAOTX":"CenPH__lb_SFLCTL__lb_PAOTX_new",
+				"CenPH__lb_SFLCTL__lb_CEUTX":"CenPH__lb_SFLCTL__lb_CEUTX_new"
               },
               "inputFields": {
                 "CenPH__lb_SFLCTL__lb_1AJCD": "CenPH__lb_SFLCTL__lb_1AJCD_new"
