@@ -98,7 +98,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span> -->
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry">Customer id card entry</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchExtraPhoneNumbers">Search Extra Phone Numbers</span>
                         </div>
@@ -502,9 +502,9 @@
               $("#customerIdCardEntry").click(function (event) {
                 _00('F7', event);
               });
-              $("#prompt").click(function (event) {
+              /*$("#prompt").click(function (event) {
                 _00('F4', event);
-              });
+              });*/
               $("#previous").click(function (event) {
                 _00('F12', event);
               });
