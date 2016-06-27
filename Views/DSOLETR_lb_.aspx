@@ -352,7 +352,7 @@
               }else{
                 generateSpecialInstructionsSection();
                 $("#CenPH__lb_SFLCTL__lb_1AJCD_new").hide();
-                if($("#CenPH__lb_SFLCTL__lb_1AJCD").val()!=""){
+                if($("#CenPH__lb_SFLCTL__lb_1AJCD").is('input')){
                   $("#CenPH__lb_SFLCTL__lb_1AJCD_new").val($("#CenPH__lb_SFLCTL__lb_1AJCD").val()).show()
                 }else if($("#CenPH__lb_SFLCTL__lb_1AJCD").html()!=""){
                   $("#CenPH__lb_SFLCTL__lb_1AJCD_new_readonly").val($("#CenPH__lb_SFLCTL__lb_1AJCD").html()).show()
