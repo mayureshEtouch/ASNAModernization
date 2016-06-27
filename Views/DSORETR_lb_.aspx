@@ -22,7 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <!-- Modified HTML code starts here -->
+   <!-- Modified HTML code starts here -->
     <div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content">
         <section class="time-date">
@@ -118,7 +118,7 @@
                                         <th>Reference 
                                             Line Number</th>
                                         <th>Actual
-                                            Price</th>
+                                            Price ($)</th>
                                         <th>Extended
                                             Price ($)</th>
                                         <th>Installation
@@ -1257,7 +1257,6 @@
     </style>
     <script type="text/javascript">
         function AddRow() {
-            console.log('hello');
             $('#tblOdrDtls > tbody > tr').append(
        '<td>' +
 
@@ -1281,7 +1280,7 @@
                 }
             });
             /* script for table row starts here */
-            var generateTable = function (direction) {
+            var generateTableDSOR = function (direction) {
                 $("#" + tableId + " tbody").empty();
                 var tableSelector = "";
                 if ($('table#' + recordConatainer).length > 0) {
@@ -1313,22 +1312,22 @@
 
             $('body').on("click", "#next-page", function (event) {
                 _00("PgDn", event);
-                generateTable("top-to-bottom");
+                generateTableDSOR("top-to-bottom");
             });
             $('body').on("click", "#previous-page", function (event) {
                 _00("PgUp", event);
-                generateTable("top-to-bottom");
+                generateTableDSOR("top-to-bottom");
             });
-            generateTable("top-to-bottom");
+            generateTableDSOR("top-to-bottom");
             //Handle Page Up and Page Down events
             $('body').on('keyup', function (event) {
                 var keycode = event.keycode || event.which;
                 if (keycode === 33) {
                     //_00("PgUp", event);
-                    generateTable("bottom-to-top");
+                    generateTableDSOR("bottom-to-top");
                 } else if (keycode === 34) {
                     //_00("PgDn", event);
-                    generateTable("top-to-bottom");
+                    generateTableDSOR("top-to-bottom");
                 }
                 return;
             });
@@ -1416,12 +1415,16 @@
                 _00('Enter', event);
             }
 
-            var tindex = 0;
-            if ($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id") != undefined) {
-                tindex = parseInt($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id").split("T.")[1]);
+            //var tindex = 0;
+            //if ($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id") != undefined) {
+            //    tindex = parseInt($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id").split("T.")[1]);
 
-            }
+            //}
             $('body').on("change", $("select"), function () {
+                var tindex = 0;
+                if ($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id") != undefined) {
+                    tindex = parseInt($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id").split("T.")[1]);
+                }
                 $("#tblOdrDtls tbody").find("tr").each(function (i) {
                     $("[id$='CenPH__lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val($(this).find("td:eq(17) select").val() == "4" ? 4 : " ");
                 });
@@ -1459,6 +1462,11 @@
 
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+                $('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function (i) {
+
+                    $("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text() == "4" ? "Cancel" : "Active");
+                    //$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+                });
 
             } else {
 
