@@ -193,7 +193,7 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Requested Delivery Date:</span> </div>
-                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin-top: 8px; margin-left: 0;display:none" id="inputDate">
+                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px; margin-left: 0;display:none" id="inputDate">
 				<span class="form-text pull-right" data-upgraded=",MaterialTextfield">
 								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="inputRequestDate" name="date" size="13" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data" ></i>
@@ -202,7 +202,7 @@
 						
 				 </div>
 				 
-				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;display:none" id="spanDate">
+				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="spanDate">
 					<span data-upgraded=",MaterialTextfield" class="form-text" id="spanRequestDate"></span>
 						
 				 </div>
