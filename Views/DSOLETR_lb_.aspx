@@ -34,8 +34,8 @@
       <div class="mdl-cell mdl-cell--4-col pull-right">
         <!-- Navigation -->
         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSOLETR</span>
-        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
       </div>
     </div>
   </section>
@@ -62,13 +62,17 @@
         <section class="order-summary">
           <div class="order-summary-wrapper">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <span class="summary-title">Order Number</span>
                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_1BANB_new"></span>
               </div>
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <span class="summary-title">Version Number</span>
                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_1EXNB_new"></span>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <span class="summary-title">Order Date</span>
+                <span class="summary-txt" id="CenPH__lb_SFLCTL_V1AIDT_new"></span>
               </div>
             </div>
           </div>
@@ -165,13 +169,13 @@
                     <!-- content-grid mdl-grid starts here -->
                     <div class="content-grid mdl-grid" style="padding:0">
                       <!-- 6 col starts here -->
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                      <!-- <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
                         <div class="content-grid mdl-grid">
                           <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Order Date:</span> </div>
                           <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL_V1AIDT_new"></span> </div>
                         </div>
-
-                      </div>
+                      
+                      </div> -->
                       <!-- 6 col ends here -->
 
                       <!-- 6 col starts here -->
@@ -352,7 +356,7 @@
               }else{
                 generateSpecialInstructionsSection();
                 $("#CenPH__lb_SFLCTL__lb_1AJCD_new").hide();
-                if($("#CenPH__lb_SFLCTL__lb_1AJCD").val()!=""){
+                if($("#CenPH__lb_SFLCTL__lb_1AJCD").is('input')){
                   $("#CenPH__lb_SFLCTL__lb_1AJCD_new").val($("#CenPH__lb_SFLCTL__lb_1AJCD").val()).show()
                 }else if($("#CenPH__lb_SFLCTL__lb_1AJCD").html()!=""){
                   $("#CenPH__lb_SFLCTL__lb_1AJCD_new_readonly").val($("#CenPH__lb_SFLCTL__lb_1AJCD").html()).show()
