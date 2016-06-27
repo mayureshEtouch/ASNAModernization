@@ -161,7 +161,7 @@
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Delivery Code:</span> </div>
                 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text">
 					
-					  <select id="CenPH_1FLST" name="CenPH_1FLST" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 121px; margin-right:0" >
+					  <select id="CenPH_1FLST" name="CenPH_1FLST" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 170px;  padding: 0 2px; margin-right:0" >
 							<option selected="selected" value=" ">Please Choose</option>
 							<option value="H">H - Held Delivery</option>
 							<option value="L">L - Layaway</option>
