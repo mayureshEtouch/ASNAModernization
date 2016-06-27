@@ -160,14 +160,17 @@
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Delivery Code:</span> </div>
                 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text">
-					<select name="select" id="select_prompt" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 121px; margin-right:0">
-							<option value=" ">Please Choose</option>
-							<option value="X">X</option>
-							<option value="Y">Y</option>
-							<option value="H">H</option>
-							<option value="N">N</option>
-							<option value="P">P</option>
-					</select>
+					
+					  <select id="CenPH_1FLST" name="CenPH_1FLST" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 121px; margin-right:0" >
+							<option selected="selected" value=" ">Please Choose</option>
+							<option value="H">H - Held Delivery</option>
+							<option value="L">L - Layaway</option>
+							<option value="X">X - Non-Delivery</option>
+							<option value="N">N - Non-Partial Delivery</option>
+							<option value="P">P - Partial Delivery</option>
+							
+                      </select>
+										
 				</span> </div>
               </div>
             </div>
@@ -1581,7 +1584,7 @@
                 },
                 "inputFields": {
                     //"CenPH__lb_SFLCTL_VCBQDT": "inputRequestDate",
-					"CenPH__lb_SFLCTL__lb_1FLST":"select_prompt",
+					"CenPH__lb_SFLCTL__lb_1FLST":"CenPH_1FLST",
                 }
             }
             $(document).ready(function () {
@@ -1592,6 +1595,12 @@
                               
                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 			   
+			   $("#CenPH_1FLST").val($("#CenPH__lb_SFLCTL__lb_1FLST").val());
+			   $("#CenPH_1FLST").on('change', function () {
+					$("#CenPH__lb_SFLCTL__lb_1FLST").val($("#CenPH_1FLST").val());
+               });
+			   
+				/*
 			   var $options = $("#CenPH__lb_SFLCTL__lb_1FLST > option").clone().map(function (index) {
 					if ($(this).val() != '?') {
 						if ($(this).val().trim() == "") {
@@ -1603,7 +1612,7 @@
 					}
 					 
 				});
-				
+				*/
 			   if ($("#CenPH__lb_SFLCTL_VCBQDT").is('span')) {
                     $("#spanDate").show();
                     $("#inputDate").hide();
@@ -1648,12 +1657,10 @@
                 $("#reqdate").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
-				
+				$("#CenPH_1FLST").hide();
 				
 				$('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function(i){
-				
 					$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text()=="4"?"Cancel":"Active");
-					//$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
 				});
 				
 			
@@ -1671,10 +1678,12 @@
             });
             $("#no").click(function(event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+				$("#CenPH_1FLST").show();
+				
                 _00('Enter', event);
             });
 			
-				
+				$("#CenPH_1FLST").attr("tabindex","1");
 			  
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
