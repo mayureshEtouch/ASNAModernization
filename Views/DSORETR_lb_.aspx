@@ -1298,6 +1298,17 @@
                 $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
                 $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
                 AddRow();
+                $("#tblOdrDtls tbody tr").each(function () {
+                    var selectId = $(this).data('selectid');
+                    if (selectId === 'undefined') {
+                        $(this).find("td:eq(10)").empty();
+                        $(this).find("td:eq(17) select").remove();
+                    }
+                    if ($(this).find("td:eq(14)").text() == 'Inst price') {
+                        $(this).find("td:eq(14)").empty();
+                        //$(this).find("td:eq(17) select").remove();
+                    }
+                });
             }
 
             $('body').on("click", "#next-page", function (event) {
