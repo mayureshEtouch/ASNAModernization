@@ -202,7 +202,7 @@
 						
 				 </div>
 				 
-				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;display:none" id="spanDate">
+				 <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet " style="margin-top: 8px;display:none" id="spanDate">
 					<span data-upgraded=",MaterialTextfield" class="form-text" id="spanRequestDate"></span>
 						
 				 </div>
@@ -228,7 +228,7 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Expected Delivery Date:</span> </div>
-                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet pull-right" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="exp-del-date"></span> </div>
+                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="exp-del-date"></span> </div>
               </div>
             </div>
             <!-- 6 col ends here --> 
