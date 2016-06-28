@@ -92,12 +92,12 @@
                             <th>Quantity</th>
                             <th>Model<br/>Number</th>
                             <th width="18%">Model<br/>Description</th>
-                            <th>Actual<br/>Price</th>
-                            <th>Extended<br/>Price</th>
+                            <th>Actual<br/>Price ($)</th>
+                            <th>Extended<br/>Price ($)</th>
                             <th>Reference<br/>Line Number</th>
                             <th>Installation<br/> code</th>
                             <th>Lvl</th>
-                            <th>Installation<br/> Price</th>
+                            <th>Installation<br/> Price ($)</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -106,7 +106,7 @@
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AZNB_new"></td>
                             <td id="CenPH__lb_RCDDTL1__lb_1AIST_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AACD_new"></td>
-                            <td class="editable-field" id="quantity"><!-- <input class="mdl-textfield__input" type="text" size="10" data-tb-index="1" value="1" id="CenPH__lb_RCDDTL1__lb_1A1NB_new" style="width: 60px;"> --></td>
+                            <td class="editable-field" id="quantity"><!-- <input class="mdl-textfield__input" type="text" size="10" data-tb-index="1" value="1" id="CenPH__lb_RCDDTL1__lb_1A1NB_new" maxlength="3" style="width: 60px;"> --></td>
                             <td class="ro-field" id="CenPH__lb_RCDDTL1__lb_1A1NB_new_ro"></td>
                             <td id="CenPH__lb_RCDDTL1__lb_1AXTX_new"></td>
                             <td id="CenPH__lb_RCDDTL1__lb_PA2TX_new"></td>
@@ -1086,7 +1086,10 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#quantity").append($("#CenPH__lb_RCDDTL1__lb_1A1NB"));
-              
+              if($("#CenPH__lb_RCDDTL1__lb_1A1NB").val().length > 0) {
+                $("#CenPH__lb_RCDDTL1__lb_1A1NB").val($("#CenPH__lb_RCDDTL1__lb_1A1NB").val().replace(/\s/g, ""));
+              }
+              $("#CenPH__lb_RCDDTL1__lb_1A1NB").attr("maxlength", 3);
               $("#CenPH__lb_RCDDTL1__lb_1A1NB").ForceNumericOnly();
               $("#time").html("&nbsp;" + $("#time").html());
               $("#previous").click(function (event) {
