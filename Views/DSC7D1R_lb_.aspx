@@ -97,8 +97,13 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_mailinglist" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Additional Address ?:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet" id="cus_additionaladdress_div" style="padding-top: 0 !important;">
+                                	<div class="mdl-grid"  style="margin: 0">
+                                		<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin: 0 !important;"><span class="input-label"  >Additional Address ?:</span></div>
+                                		<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
+                                		</div>
+                                	</div>
+                                
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Last Changed by User:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                     <span id="cus_changedby" class="input-label-text" style="display:inline-block"></span>
@@ -106,14 +111,14 @@
                                     <span id="cus_on" class="input-label-text" style="display:inline-block"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Notes ? :</span></div>
+                            <div class="content-grid mdl-grid" id="note_n_tax_container_div">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" id="cus_notes_div"><span class="input-label">Notes ? :</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_notes" class="input-label-text"></span></div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Tax Exempt ? :</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" id="cus_taxExempt_div"><span class="input-label">Tax Exempt ? :</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_taxExempt" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Email Address:</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label" id="cus_email_div">Email Address:</span></div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_email" class="input-label-text"></span></div>
                             </div>
                         </div>
@@ -822,13 +827,21 @@
                 }
                 $("#cus_cellnumber").html(cellPhoneNumber || "Not Available");
                 $("#cus_mailinglist").html(mailingList || "Not Available");
-                $("#cus_additionaladdress").html(additionalAddresses || "Not Available");
+                $("#cus_additionaladdress").html(additionalAddresses);
                 $("#cus_changedby").html(lastChangedBy);
                 $("#cus_on").html(on);
                 $("#cus_email").html(emailAddress);
                 
-                $("#cus_notes").html(cus_notes || "Not Available");
-                $("#cus_taxExempt").html(cus_taxExempt || "Not Available");
+                $("#cus_notes").html(cus_notes);
+                $("#cus_taxExempt").html(cus_taxExempt);
+                $(['cus_email','cus_notes','cus_taxExempt','cus_additionaladdress']).each(function(i,el){
+
+                	if($("#"+el).html()=='' || $("#"+el).html()==undefined){$("#"+el).hide();$("#"+el+"_div").hide()}
+                });
+                if($('#cus_notes').html()=='' && $('#cus_taxExempt').html()==''){
+                	$('#note_n_tax_container_div').hide();
+
+                }
             }
             /*$("#addresses").on('click', function(event) {
                 _00('F7',event);
