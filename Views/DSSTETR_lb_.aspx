@@ -1779,7 +1779,7 @@
 				
 				 $('body').on('dblclick', '#enterPayment', function (event) {
 					
-					if ($("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord").has('select').length == 0)
+					if ($("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord").length > 0)
 						{	
 							_00('Enter', event);
 						}
