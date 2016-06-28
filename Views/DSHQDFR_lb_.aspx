@@ -95,10 +95,10 @@
                             <thead>
                                 <tr>
                                     <th>Order #</th>
-                                    <th>Ver</th>
-                                    <th>T</th>
+                                    <th>Version #</th>
+                                    <th>Order Type</th>
                                     <th>Ordered</th>
-                                    <th>Loc</th>
+                                    <th>Location</th>
                                 </tr>
                             </thead>
                             <tbody>
