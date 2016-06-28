@@ -661,7 +661,10 @@
 			.filter-search-container .search-container .mdl-cell--11-col{
 				width: calc(73% - 0px);
 			}
-		}
+        }
+        #next-page, #previous-page{
+            margin-top: 7px !important;
+        }
 		
     </style>
     <script type="text/javascript">
