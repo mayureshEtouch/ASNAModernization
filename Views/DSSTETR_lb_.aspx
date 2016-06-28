@@ -1777,6 +1777,15 @@
                     _00('Enter', event);
                 });
 				
+				 $('body').on('dblclick', '#enterPayment', function (event) {
+					
+					if ($("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord").has('select').length == 0)
+						{	
+							_00('Enter', event);
+						}
+					});
+			
+				
 				$("#ctl00\\$FKeyPH\\$DSSTETR_lb_Control_F4").click(function (event) {
                    _00('F4',event);
                 });
