@@ -135,7 +135,7 @@
                                     <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="completed-orders" data-upgraded=",MaterialDataTable">
                                         <thead>
                                             <tr>
-                                                <th width="100%" style="text-align: center;">Orders</th>
+                                                <th width="100%" style="text-align: center;">Special Instructions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -877,6 +877,8 @@
                 copyData(copyToAndFrom);
                 $("#time").prepend("&nbsp;");
                 generateTableAndApplyInfiniteScroll("completed-orders", "CenPH__lb_SFLRCD", "NONE", "NONE"); 
+			
+				$("#completed-orders tbody tr").removeAttr('data-selectid');
             });
         </script>
     </asp:Content>
