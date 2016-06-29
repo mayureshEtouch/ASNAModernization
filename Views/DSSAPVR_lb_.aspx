@@ -670,6 +670,7 @@
             $(document).ready(function () {
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("body").css({ "background-color": "#FFFFFF" });
               $("#time").html("&nbsp;" + $("#time").html());
               $("body").css({ "background-color": "#FFFFFF" });
               $('body').on('click', '#canceldetail tbody tr', function () {
@@ -688,6 +689,10 @@
                   $("#CenPH__lb_RCDDTL1__lb_DI2TX").val(" ");
                 }
             });
+
+              $(document).on('hover','#canceldetail tr', function() {
+                     $(this).css("cursor","pointer");
+              });
               var tr="<tr>";
               var td1="<td>"+$("#CenPH_DdsConstant6").text()+"</td></tr>";
               var td2 = "<td>"+$("#CenPH_DdsConstant7").text()+"</td></tr>";
