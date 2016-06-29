@@ -147,15 +147,33 @@ jQuery.fn.numericWithTwoDecimalPrecisions = function() {
         });
     }
 	
-	// Numeric with two decimal precisions with minus
+    // Numeric with two decimal precisions with minus
 jQuery.fn.numericWithTwoDecimalPrecisionsWithMinus = function() {
+        return this.each(function() {
+        
+            $(this).on("change keyup", function(e) {
+            
+                if (/^\-?([0-9]+(\.[0-9]{1,2})?)?$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else if (/^\-?([0-9]+(\.)?)$/.test($(this).val().replace(/\s/g, ""))) {
+                    return true;
+                } else {
+                    $(this).val("");
+                    return;
+                }
+
+            });
+        });
+    }
+    	// Numeric with two decimal precisions with minus
+jQuery.fn.numericWithTwoDecimalPrecisionsWithTrailingMinus = function() {
         return this.each(function() {
 		
             $(this).on("change keyup", function(e) {
 			
-                if (/^\-?([0-9]+(\.[0-9]{1,2})?)?$/.test($(this).val().replace(/\s/g, ""))) {
+                if (/^([0-9]+(\.[0-9]{1,2})?)?\-?$/.test($(this).val().replace(/\s/g, ""))) {
                     return true;
-                } else if (/^\-?([0-9]+(\.)?)$/.test($(this).val().replace(/\s/g, ""))) {
+                } else if (/^([0-9]+(\.)?\-?)$/.test($(this).val().replace(/\s/g, ""))) {
                     return true;
                 } else {
                     $(this).val("");
@@ -317,10 +335,25 @@ jQuery.fn.ForceTwoDecimalPoints = function() {
         });
     });
 };
+// Force 2 decimal points
+jQuery.fn.ForceTwoDecimalPointsWithTrailingMinus = function() {
+    return this.each(function() {
+        $(this).on("blur", function(e) {
+
+            if ($(this).val() != '') {
+                if($(this).val().slice(-1)=='-'){
+                    $(this).val(parseFloat($(this).val()).toFixed(2)+'-');
+                }else{
+                    $(this).val(parseFloat($(this).val()).toFixed(2));
+                }
+            }
+        });
+    });
+};
 
 jQuery.fn.ForceNumericMaxlength = function() {
     return this.each(function() {
-        $(this).attr('maxlength', '8');
+        $(this).attr('maxlength', 8);
     });
 };
 

@@ -260,7 +260,7 @@
         </div>
 		<div class="button-container">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <input type="button" class="mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ctl00$FKeyPH$DSSTETR_lb_Control_F4" id="ctl00$FKeyPH$DSSTETR_lb_Control_F4" value="Prompt">  </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <input type="button" class="mdl-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" name="ctl00$FKeyPH$DSSTETR_lb_Control_F4" id="ctl00$FKeyPH$DSSTETR_lb_Control_F4" value="Prompt" style="width:85px; text-decoration: none; border: none;">  </div>
               <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
             </div>
           </div>
@@ -1685,9 +1685,9 @@
 			
 				$("#CenPH_1FLST").attr("tabindex","1");
 			  
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisions();
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPoints();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisionsWithTrailingMinus();
+				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPointsWithTrailingMinus();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align", "right");
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
