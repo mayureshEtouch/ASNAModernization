@@ -22,7 +22,7 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-   <!-- Modified HTML code starts here -->
+    <!-- Modified HTML code starts here -->
     <div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content">
         <section class="time-date">
@@ -1307,6 +1307,10 @@
                         $(this).find("td:eq(14)").empty();
                         //$(this).find("td:eq(17) select").remove();
                     }
+                    if ($(this).find("td:eq(6)").text() == 'Actl price') {
+                        $(this).find("td:eq(6)").empty();
+                        //$(this).find("td:eq(17) select").remove();
+                    }
                 });
             }
 
@@ -1394,7 +1398,7 @@
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
-            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [12], [14], [21], [16], [17], [19]];
+            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [10], [6], [7], [8], [9], [12], [14], [21], [16], [17], [19]];
             generateTableAndApplyInfiniteScrollDSOR("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             //AddRow();
             $("#tblOdrDtls tbody tr").each(function () {
@@ -1405,6 +1409,10 @@
                 }
                 if ($(this).find("td:eq(14)").text() == 'Inst price') {
                     $(this).find("td:eq(14)").empty();
+                    //$(this).find("td:eq(17) select").remove();
+                }
+                if ($(this).find("td:eq(6)").text() == 'Actl price') {
+                    $(this).find("td:eq(6)").empty();
                     //$(this).find("td:eq(17) select").remove();
                 }
             });
@@ -1515,8 +1523,11 @@
         });
     </script>
     <style>
-        #tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5), #tblOdrDtls tr td:nth-child(7), #tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13) {
+        #tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5) ,#tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13) {
             text-align: right !important;
+        }
+        #tblOdrDtls tr td:nth-child(7) {
+            text-align: left !important;
         }
     </style>
 </asp:Content>
