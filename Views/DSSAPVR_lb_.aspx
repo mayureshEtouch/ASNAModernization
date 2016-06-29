@@ -115,7 +115,7 @@
     </section>
 
         </main>
- <div id="modal1" class="simplePopup"></div>
+ <div id="modal" class="simplePopup"></div>
  <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
               <div class="button-container">
@@ -693,6 +693,10 @@
               var td2 = "<td>"+$("#CenPH_DdsConstant7").text()+"</td></tr>";
               $("#canceldetail").append(tr+td1+td2);
               $("#canceldetail tbody tr:first").css("background-color", "#d8d8d8");
+
+              $("#canceldetail tbody tr").dblclick(function (event) {
+                 _00("Enter", event);
+              });
 
               $('#Submit').click(function (event) {
                 _00("Enter", event);
