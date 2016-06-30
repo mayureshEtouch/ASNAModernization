@@ -99,7 +99,7 @@
                                             <th>Quantity</th>
                                             <th>Model
                                                 <br/>Number</th>
-                                            <th width="25%">Model
+                                            <th>Model
                                                 <br/>Description</th>
                                             <th>Serial
                                                 <br/>Number</th>
@@ -112,6 +112,8 @@
                                             <th>Extended
                                                 <br/>Price</th>
                                             <th class="inst-code">Installation
+                                                <br/>Code</th>
+                                            <th class="level">Level
                                                 <br/>Code</th>
                                             <th class="inst-price">Installation
                                                 <br/>Price</th>
@@ -142,6 +144,7 @@
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AMVA_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DBZVA_new"></td>
                                             <td class="pull-right inst-code" id="CenPH__lb_RCDDTL1__lb_1AECD_new"></td>
+                                            <td class="level" id="CenPH__lb_RCDDTL1__lb_PAJST_new"></td>
                                             <td class="pull-right inst-price" id="CenPH__lb_RCDDTL1__lb_1AJPR_new"></td>
                                         </tr>
                                         <tr class="exchange-prod-row" data-selectid="CenPH__lb_RCDDTL1__lb_DI3TX">
@@ -179,10 +182,12 @@
                                                 
                                             </td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DHPVA_new"></td>
-                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DD7CD_new">
-												<input id="CenPH__lb_RCDDTL1__lb_DD7CD_input" maxlength="3" type="text" value="" onfocus="_09('#DD7CD','18,15','#RCDDTL1');" style="display:none" >
-												<span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_DD7CD_span" style="display:none"></span>
-											</td>
+                                            <td class="" id="CenPH__lb_RCDDTL1__lb_DD7CD_new">
+                                                <input id="CenPH__lb_RCDDTL1__lb_DD7CD_input" maxlength="3" type="text" value="" onfocus="_09('#DD7CD','18,15','#RCDDTL1');" style="display:none;width:28px;" >
+                                                <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_DD7CD_span" style="display:none"></span>
+                                                <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_DFMTX_span" style="display:none"></span>
+                                            </td>
+                                            <td class="level" id="CenPH__lb_RCDDTL1__lb_DCWST_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DA6PR_new"></td>
                                         </tr>
                                     </tbody>
@@ -1416,7 +1421,8 @@
                     //"CenPH__lb_RCDDTL1__lb_DHOVA": "CenPH__lb_RCDDTL1__lb_DHOVA_new",
                     "CenPH__lb_RCDDTL1__lb_DHPVA": "CenPH__lb_RCDDTL1__lb_DHPVA_new",
                    // "CenPH__lb_RCDDTL1__lb_DD7CD": "CenPH__lb_RCDDTL1__lb_DD7CD_new",
-				    "CenPH__lb_RCDDTL1__lb_DD7CD":"CenPH__lb_RCDDTL1__lb_DD7CD_span",
+                    "CenPH__lb_RCDDTL1__lb_DD7CD":"CenPH__lb_RCDDTL1__lb_DD7CD_span",
+				    "CenPH__lb_RCDDTL1__lb_DFMTX":"CenPH__lb_RCDDTL1__lb_DFMTX_span",
                     "CenPH__lb_RCDDTL1__lb_DA6PR": "CenPH__lb_RCDDTL1__lb_DA6PR_new",
                     "CenPH__lb_RCDDTL1__lb_1AIST": "CenPH__lb_RCDDTL1__lb_1AIST_new_ro",
                     "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new_ro",
@@ -1424,7 +1430,9 @@
                     "CenPH__lb_RCDDTL1__lb_DCUCD": "CenPH__lb_RCDDTL1__lb_DCUCD_new_ro",
                     "CenPH__lb_RCDDTL1__lb_DE0NB": "CenPH__lb_RCDDTL1__lb_DE0NB_new_ro",
                     "CenPH__lb_RCDDTL1__lb_DE6TX": "CenPH__lb_RCDDTL1__lb_DE6TX_new_ro",
-                    "CenPH__lb_RCDDTL1__lb_DIDTX": "CenPH__lb_RCDDTL1__lb_DIDTX_new_ro"
+                    "CenPH__lb_RCDDTL1__lb_DIDTX": "CenPH__lb_RCDDTL1__lb_DIDTX_new_ro",
+                    "CenPH__lb_RCDDTL1__lb_PAJST": "CenPH__lb_RCDDTL1__lb_PAJST_new",
+                    "CenPH__lb_RCDDTL1__lb_DCWST": "CenPH__lb_RCDDTL1__lb_DCWST_new",
                 },
                "inputFields": {
                 "CenPH__lb_RCDDTL1__lb_1AIST": "CenPH__lb_RCDDTL1__lb_1AIST_new",
@@ -1477,15 +1485,19 @@
             $("#CenPH__lb_RCDDTL1__lb_DCUCD_new,#CenPH__lb_RCDDTL1__lb_DE0NB_new").ForceNumericOnly();
             $("#location-code").append($("#CenPH__lb_RCDDTL1__lb_1AACD"));
             $("#CenPH__lb_RCDDTL1__lb_1AACD").ForceNumericWithQuestionMarkAndF4Only();
-			
+            if($("#CenPH__lb_RCDDTL1__lb_DFMTX").length>0 && $("#CenPH__lb_RCDDTL1__lb_DFMTX").text()!= ''){
+                $("#CenPH__lb_RCDDTL1__lb_DFMTX_span").show();
+            }
 			if ($("#CenPH__lb_RCDDTL1__lb_DD7CD").is('input')){
 				$("#CenPH__lb_RCDDTL1__lb_DD7CD_input").show();
 				$("#CenPH__lb_RCDDTL1__lb_DD7CD_input").val($("#CenPH__lb_RCDDTL1__lb_DD7CD").val());
+                
 			
 			}
 			else if ($("#CenPH__lb_RCDDTL1__lb_DD7CD").is('span')){
 				$("#CenPH__lb_RCDDTL1__lb_DD7CD_span").show();
 				$("#CenPH__lb_RCDDTL1__lb_DD7CD_span").text($("#CenPH__lb_RCDDTL1__lb_DD7CD").text());
+
 			}
             var doAction = function (row, value, event) {
                 var selectId = $(row).data('selectid');
