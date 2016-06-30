@@ -1254,6 +1254,9 @@
         .table-data-content-container .mdl-data-table th {
             padding: 7px 6px 3px 5px;
         }
+		#tblOdrDtls tbody tr td:nth-child(11)  {
+        text-align: right;
+    }
     </style>
     <script type="text/javascript">
         function AddRow() {

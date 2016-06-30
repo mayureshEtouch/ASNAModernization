@@ -1403,11 +1403,11 @@
                 }
                 return;
             });
-            $('body').on("click", "#sp-next-page", function(event) {
+            $('body').on("click touchstart touchend", "#sp-next-page", function(event) {
                 _00("PgDn", event);
                 renderPage(true);
             });
-            $('body').on("click", "#sp-previous-page", function(event) {
+            $('body').on("click touchstart touchend", "#sp-previous-page", function(event) {
                 _00("PgUp", event);
                 renderPage(true);
             });

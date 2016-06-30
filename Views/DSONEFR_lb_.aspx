@@ -972,7 +972,7 @@
 				
 				generateTable();
 
-         $('body').on('click', '#displayData tbody tr', function() {
+         $('body').on('click touchstart', '#displayData tbody tr', function() {
             if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
                 $("#displayData tbody tr:even").css("background-color", "#fff");
                 $("#displayData tbody tr:odd").css("background-color", "#f9f9f9");
