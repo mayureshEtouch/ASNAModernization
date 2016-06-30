@@ -23,7 +23,6 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
             <main class="mdl-layout__content">
                 <section class="time-date">
@@ -64,11 +63,11 @@
                 <section class="order-summary order-summary-container">
                         <div class="order-summary-wrapper">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="summary-title">Name:</span>
                                     <span class="summary-txt" id="name"></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="summary-title">Telephone:</span>
                                     <span class="summary-txt" id="telephone"></span>
                                 </div>
@@ -124,18 +123,15 @@
         
             </main>
             <div id="modal" class="simplePopup"></div>
-            <section class="copyright">
-                <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
-            </section>
-        </div>
+           
             <style>
         
         #orders tbody > tr:hover {
           cursor: pointer;
         }
-        tr.selected {
+        /*tr.selected {
           background-color: #d8d8d8 !important;
-        }
+        }*/
 
         @media (min-width: 768px) and (max-width: 1023px) {
         .summary-label {
@@ -160,6 +156,10 @@
               
                     generateTableAndApplyInfiniteScroll("orders", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
               
+					$('#orders').on("click touchstart", function() {
+
+					});
+
                     var selectCusotmer = function (row, value, event) {
                         var selectId = $(row).data('selectid');
                         a = selectId.split(".");
