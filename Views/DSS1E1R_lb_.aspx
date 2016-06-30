@@ -143,7 +143,7 @@
                                             <td id="CenPH__lb_RCDDTL1__lb_1BHNB_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AMVA_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DBZVA_new"></td>
-                                            <td class="pull-right inst-code" id="CenPH__lb_RCDDTL1__lb_1AECD_new"></td>
+                                            <td class="inst-code" id="CenPH__lb_RCDDTL1__lb_1AECD_new"></td>
                                             <td class="level" id="CenPH__lb_RCDDTL1__lb_PAJST_new"></td>
                                             <td class="pull-right inst-price" id="CenPH__lb_RCDDTL1__lb_1AJPR_new"></td>
                                         </tr>
