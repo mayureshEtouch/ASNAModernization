@@ -56,39 +56,34 @@
                     </ul>
                 </div>
             </section>
-	
+	<section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet">
+                            <span class="summary-title">Customer Name</span>
+                            <span class="summary-txt" id="customerName"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet">
+                            <span class="summary-title">Order Number</span>
+                            <span class="summary-txt" id="order"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet">
+                            <span class="summary-title">Version Number</span>
+                            <span class="summary-txt" id="version"></span>
+                        </div>
+ 
+                    </div>
+            	</div>
+            </section>
 	
   <section class="table-data-content-container mrgnTp16">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
+         
           <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
-              <div class="content-grid mdl-grid">
-                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Customer Name:</span> </div>
-                <div  class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id = "customerName"></div>
-              </div>
-            </div>
-            <!-- 6 col ends here --> 
-            
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-          
-          <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
-              <div class="content-grid mdl-grid">
-                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--2-col-tablet"> <span class="form-label">Order #:</span> </div>
-                <div  class="mdl-cell mdl-cell--2-col  mdl-cell--3-col-tablet"  style="margin-top: 8px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id ="order"></span> </div>
-								<div  class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet"  style=" width: 75px;"> <span class="form-label">Version #:</span> </div>
-                <div  class="mdl-cell mdl-cell--2-col  mdl-cell--1-col-tablet"  style="margin-top: 8px; width: 16px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="version"></span> </div>
-              </div>
-            </div>
-            <!-- 6 col ends here --> 
-            
+                   
             <!-- 6 col starts here -->
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
