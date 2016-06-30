@@ -175,7 +175,9 @@
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DICST_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DIDST_new"></td>
                                             <td class="pull-right" id=""></td>
-                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DHOVA_new"></td>
+                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DHOVA_new_ro">
+                                                
+                                            </td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DHPVA_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DD7CD_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DA6PR_new"></td>
@@ -1408,7 +1410,7 @@
                     "CenPH__lb_RCDDTL1__lb_DICST": "CenPH__lb_RCDDTL1__lb_DICST_new",
                     "CenPH__lb_RCDDTL1__lb_DIDST": "CenPH__lb_RCDDTL1__lb_DIDST_new",
                     "CenPH__lb_RCDDTL1__lb_DFJTX": "CenPH__lb_RCDDTL1__lb_DFJTX_new",
-                    "CenPH__lb_RCDDTL1__lb_DHOVA": "CenPH__lb_RCDDTL1__lb_DHOVA_new",
+                    //"CenPH__lb_RCDDTL1__lb_DHOVA": "CenPH__lb_RCDDTL1__lb_DHOVA_new",
                     "CenPH__lb_RCDDTL1__lb_DHPVA": "CenPH__lb_RCDDTL1__lb_DHPVA_new",
                     "CenPH__lb_RCDDTL1__lb_DD7CD": "CenPH__lb_RCDDTL1__lb_DD7CD_new",
                     "CenPH__lb_RCDDTL1__lb_DA6PR": "CenPH__lb_RCDDTL1__lb_DA6PR_new",
@@ -1454,6 +1456,16 @@
               $(".editable-field").show();
               $(".ro-field").hide();
           }
+          /* If actual price is input or span*/
+          if($("#CenPH__lb_RCDDTL1__lb_DHOVA").is('input')){
+
+            $('<input name="CenPH__lb_RCDDTL1__lb_DHOVA_new" type="text" style="width: 60px;" id="CenPH__lb_RCDDTL1__lb_DHOVA_new" maxlength="8" class="editable-field">').appendTo($("#CenPH__lb_RCDDTL1__lb_DHOVA_new_ro"));
+                copyToAndFromTableData["inputFields"]["CenPH__lb_RCDDTL1__lb_DHOVA"] = "CenPH__lb_RCDDTL1__lb_DHOVA_new";
+                $('#CenPH__lb_RCDDTL1__lb_DHOVA_new').numericWithTwoDecimalPrecisionsWithTrailingMinus().ForceTwoDecimalPointsWithTrailingMinus();
+          }else{
+            copyToAndFromTableData["displayOnlyFields"]["CenPH__lb_RCDDTL1__lb_DHOVA"] = "CenPH__lb_RCDDTL1__lb_DHOVA_new_ro";
+          }
+
             copyData(copyToAndFrom, "");
             $("#time").html("&nbsp;" + $("#time").html());
             copyData(copyToAndFromTableData, "keyup keydown change blur mouseup mousedown");
