@@ -129,9 +129,9 @@
         #orders tbody > tr:hover {
           cursor: pointer;
         }
-        /*tr.selected {
-          background-color: #d8d8d8 !important;
-        }*/
+        #orders tbody tr td:nth-child(1), #orders tbody tr td:nth-child(2), #orders tbody tr td:nth-child(5)  {
+			text-align: right;
+		}
 
         @media (min-width: 768px) and (max-width: 1023px) {
         .summary-label {
