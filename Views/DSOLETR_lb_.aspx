@@ -62,15 +62,15 @@
         <section class="order-summary">
           <div class="order-summary-wrapper">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <span class="summary-title">Order Number</span>
                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_1BANB_new"></span>
               </div>
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                 <span class="summary-title">Version Number</span>
                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_1EXNB_new"></span>
               </div>
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <span class="summary-title">Order Date</span>
                 <span class="summary-txt" id="CenPH__lb_SFLCTL_V1AIDT_new"></span>
               </div>

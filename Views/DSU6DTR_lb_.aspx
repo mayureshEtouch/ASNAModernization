@@ -62,7 +62,8 @@
         <section class="order-summary">
             <div class="order-summary-wrapper">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col"><span class="summary-title">Order #/Version #</span> <span name="order" class="summary-txt" id="order-version"></span></div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span class="summary-title">Order Number</span> <span name="order" class="summary-txt" id="order"></span></div>
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span class="summary-title">Version Number</span> <span name="order" class="summary-txt" id="version"></span></div>
                 </div>
             </div>
         </section>
@@ -82,94 +83,93 @@
         <section class="table-data-content-container spacer-container-bottom">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
-                    <div class="fixed-table-container">
-                        <div class="header-background"></div>
-                        <div class="fixed-table-container-inner">
-                            <table cellspacing="0" cellpadding="0" border="0" id="completed-orders-detail" class="navigateable">
+						 <div class="table-container" style="overflow: auto;">
+                            <div>							  
+                            <table cellspacing="0" cellpadding="0" border="0" id="completed-orders-detail" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                 <thead>
                                     <tr>
                                         <th style="width: 8%">
                                             <div class="th-inner">
-                                                Del
+                                                <span>Delivery
                                                 <br />
-                                                type
+                                                Type</span>
                                             </div>
                                         </th>
                                         <th style="width: 7%">
                                             <div class="th-inner">
-                                                Del
+                                                <span>Delivery
                                                 <br />
-                                                Status
+                                                Status</span>
                                             </div>
                                         </th>
                                         <th style="width: 7%">
                                             <div class="th-inner">
-                                                From<br />
-                                                Loc
+                                                <span>From<br />
+                                                Location</span>
                                             </div>
                                         </th>
-                                        <th style="width: 7%">
+                                        <th style="width: 5%">
                                             <div class="th-inner">
-                                                Qty<br />
-                                                &nbsp;
+                                                <span>Quantity<br />
+                                                &nbsp;</span>
                                             </div>
                                         </th>
                                         <th style="width: 6%">
                                             <div class="th-inner">
-                                                Typ<br />
-                                                &nbsp;
+                                                <span>Type<br />
+                                                &nbsp;</span>
                                             </div>
                                         </th>
                                         <th style="width: 10%">
                                             <div class="th-inner">
-                                                Model
+                                                <span>Model
                                                 <br />
-                                                Number
+                                                Number</span>
                                             </div>
                                         </th>
                                         <th style="width: 9%">
                                             <div class="th-inner">
-                                                Serial
+                                                <span>Serial
                                                 <br />
-                                                Number
+                                                Number</span>
                                             </div>
                                         </th>
                                         <th style="width: 7%">
                                             <div class="th-inner">
-                                                Warranty<br />
-                                                &nbsp;
+                                                <span>Warranty<br />
+                                                &nbsp;</span>
                                             </div>
                                         </th>
                                         <th style="width: 6%">
                                             <div class="th-inner">
-                                                Credit<br />
-                                                &nbsp;
+                                                <span>Credit<br />
+                                                &nbsp;</span>
                                             </div>
                                         </th>
                                         <th style="width: 7%">
                                             <div class="th-inner">
-                                                Price $<br />
-                                                &nbsp;
+                                                <span>Price $<br />
+                                                &nbsp;</span>
                                             </div>
                                         </th>
-                                        <th style="width: 8%">
+                                        <th style="width: 10%">
                                             <div class="th-inner">
-                                                Price:
+                                                <span>Price:
                                                 <br />
-                                                Installation $
+                                                Installation $</span>
                                             </div>
                                         </th>
                                         <th style="width: 7%">
                                             <div class="th-inner">
-                                                Delivered<br />
-                                                &nbsp;
+                                                <span>Delivered<br />
+                                                &nbsp;</span>
                                             </div>
                                         </th>
                                         <th style="width: 13%">
                                             <div class="th-inner">
-                                                Model
+                                                <span>Model
                                                 <br />
-                                                Description
+                                                Description</span>
                                             </div>
                                         </th>
                                     </tr>
@@ -177,8 +177,9 @@
                                 <tbody>
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
+							</div>
+						</div>
+                  
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
@@ -988,108 +989,18 @@
         #main-content {
             width: 100%;
         }
-
-        .fixed-table-container td {
-            font-size: 12px;
-        }
-
-        .fixed-table-container th {
-            font-size: 13px;
-        }
-
-        td {
-            border-bottom: 1px solid #e5e5e5;
-            padding: 5px 10px;
-        }
-
-            td + td {
-                border-left: 1px solid #e5e5e5;
-            }
-
-        th {
-            padding: 0 10px;
-        }
-
-        .header-background {
-            background: #ffffff;
-            /* Old browsers */
-            background: -moz-linear-gradient(top, #ffffff 57%, #eff0f1 99%);
-            /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #ffffff 57%, #eff0f1 99%);
-            /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, #ffffff 57%, #eff0f1 99%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eff0f1', GradientType=0);
-            /* IE6-9 */
-        }
-
-        .fixed-table-container {
-            width: 100%;
-            height: 200px;
-            margin: 0px auto 10px;
-            background-color: white;
-            /* above is decorative or flexible */
-            position: relative;
-            /* could be absolute or relative */
-            padding-top: 30px;
-            /* height of header */
-        }
-
-        .fixed-table-container-inner {
-            overflow-x: hidden;
-            overflow-y: auto;
-            height: 100%;
-        }
-
-        .header-background {
-            background-color: #D5ECFF;
-            height: 30px;
-            /* height of header */
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-        }
-
-        table {
-            background-color: white;
-            width: 100%;
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
-        .fixed-table-container .th-inner {
-            position: absolute;
-            top: 0;
-            line-height: 30px;
-            /* height of header */
-            text-align: left;
-            /**/
-            border-left: 1px solid #e5e5e5;
-            padding-left: 10px;
-            margin-left: -10px;
-        }
-
-        .first .th-inner {
-            border-left: none;
-        }
-        /* classes required for this page starts here */
-
-        .fixed-table-container {
-            padding-top: 60px;
-        }
-
-        .header-background {
-            height: 60px;
-        }
-        /* classes required for this page ends here */
+		#completed-orders-detail tbody tr td:nth-child(4), #completed-orders-detail tbody tr td:nth-child(10), #completed-orders-detail tbody tr td:nth-child(11)  {
+        text-align: right;
+    }
+       
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH_DdsConstant14": "date",
                 "CenPH__lb_SFLCTL__lb__lb_TME": "time",
-                "CenPH__lb_SFLCTL__lb_2BANB+custom_slash+CenPH__lb_SFLCTL__lb_2EXNB": "order-version"
+                "CenPH__lb_SFLCTL__lb_2BANB": "order",
+				"CenPH__lb_SFLCTL__lb_2EXNB": "version"
             },
             "inputFields": {
             }
