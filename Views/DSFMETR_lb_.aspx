@@ -1709,7 +1709,7 @@
                 $('<td><span></span></td>').appendTo(row);
                 $('<td><i class="material-icons"></i></td>').appendTo(row);
                 $('<td><i class="material-icons"></i></td>').appendTo(row);
-                $('<td><span></span></td>').appendTo(row);
+                $('<td><span></span><input class="mdl-textfield__input serial-number" type="text" maxlength="8"></td>').appendTo(row);
                 $('<td><span></span></td>').appendTo(row);
                 $('<td><span></span></td>').appendTo(row);
                 $('<td class="status"> <select> <option>Active</option><option>Cancel</option> </select></td>').appendTo(row);
@@ -1777,8 +1777,18 @@
 					$(this).find("td:eq(6) input").css("border","none");
 					
 				}
-                $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(15) select").val("Cancel"):$(this).find("td:eq(15) select").val("Active"); 
-                $(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text()); 
+                $("[id$='lb_SFLRCD__lb_2SEL."+(i + tindex)+"']").val()=="4"?$(this).find("td:eq(15) select").val("Cancel"):$(this).find("td:eq(15) select").val("Active");
+                /* If actual price field is input or span type */
+                if($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").is('input')){
+                	$(this).find("td:eq(12) input").show();
+                	$(this).find("td:eq(12) span").hide();
+                	$(this).find("td:eq(12) input").val($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").val());
+                	$(this).find("td:eq(12) input").numericWithTwoDecimalPrecisions().ForceTwoDecimalPoints().ForceAmountOnly();
+                }else if($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").is('span')){
+                	$(this).find("td:eq(12) input").hide();
+                	$(this).find("td:eq(12) span").show();
+                	$(this).find("td:eq(12) span").text($("[id$='lb_SFLRCD__lb_2AMVA."+(i + tindex)+"']").text());
+                }
                 $(this).find("td:eq(13) span").text($("[id$='lb_SFLRCD__lb_RBIVA."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(14) span").text($("[id$='lb_SFLRCD__lb_2AJPR."+(i + tindex)+"']").text()); 
                 $(this).find("td:eq(7) input").val($("[id$='lb_SFLRCD__lb_2AECD."+(i + tindex)+"']").val());
@@ -1854,6 +1864,7 @@
                     $("[id$='lb_SFLRCD__lb_2A8TX."+(i+tindex)+"']").val($(this).find("td:eq(6) input").val());
                     $("[id$='lb_SFLRCD__lb_RCWST."+(i+tindex)+"']").text($(this).find("td:eq(8) input").val());
                     $("[id$='lb_SFLRCD__lb_2SEL."+(i+tindex)+"']").val($(this).find("td:eq(15) select").val()=="Active"?" ":4); 
+                    $("[id$='lb_SFLRCD__lb_2AMVA."+(i+tindex)+"']").val($(this).find("td:eq(12) input").val());
                     if($(this).find("td:eq(1) select").val()=="DL"){
                         $(this).find("td:eq(7) input").prop('disabled', false);
                         $(this).find("td:eq(7) div").removeClass("is-disabled");
