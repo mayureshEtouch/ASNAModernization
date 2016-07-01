@@ -106,6 +106,12 @@
                                                 <br/>months</th>
                                             <th>Warranty
                                                 <br/>Price</th>
+                                            <th class="inst-desc">Installation
+                                                <br/>Description</th>
+                                            <th class="level">Level
+                                                <br/>Code</th>
+                                            <th class="inst-price">Installation
+                                                <br/>Price</th>    
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -133,6 +139,9 @@
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1BHNB_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1A0CD_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AIPR_new"></td>
+                                            <td class="inst-desc" id="CenPH__lb_RCDDTL1__lb_PAYTX_new"></td>
+                                            <td class="level" id="CenPH__lb_RCDDTL1__lb_PAJST_new"></td>
+                                            <td class="pull-right inst-price" id="CenPH__lb_RCDDTL1__lb_1AJPR_new">
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1095,7 +1104,10 @@
                         "CenPH__lb_RCDDTL1__lb_1A0CD": "CenPH__lb_RCDDTL1__lb_1A0CD_new",
                         "CenPH__lb_RCDDTL1__lb_1AIPR": "CenPH__lb_RCDDTL1__lb_1AIPR_new",
                         "CenPH__lb_RCDDTL1__lb_1AIST": "CenPH__lb_RCDDTL1__lb_1AIST_new_ro",
-                        "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new_ro"
+                        "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new_ro",
+                        "CenPH__lb_RCDDTL1__lb_PAYTX": "CenPH__lb_RCDDTL1__lb_PAYTX_new",
+                        "CenPH__lb_RCDDTL1__lb_PAJST": "CenPH__lb_RCDDTL1__lb_PAJST_new",
+                        "CenPH__lb_RCDDTL1__lb_1AJPR": "CenPH__lb_RCDDTL1__lb_1AJPR_new"  
                     },
                    "inputFields": {
                       "CenPH__lb_RCDDTL1__lb_1AIST": "CenPH__lb_RCDDTL1__lb_1AIST_new",
