@@ -54,7 +54,7 @@
         <div class="order-summary-wrapper">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet"> <span class="summary-title">Model Number</span> <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2AXTX_new"></span> </div>
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet"> <span class="summary-title">Description</span> <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span> </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet"> <span class="summary-title">Model Description</span> <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span> </div>
           </div>
         </div>
       </section>
@@ -112,6 +112,13 @@
             // Search by Customer data table record mapping
             var dataMergeIndices = [[0], [1], [2], [3]];
             generateTableAndApplyInfiniteScroll("exception-items", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+			
+			$('#exception-items tr td:nth-child(3)').each(function (i, col )
+			{
+				$(col).text($(col).text().trim());
+				$(col).css("text-align","right");
+			});
+	
             //Error message
             if($("#__Page_PopUp .simplePopupClose").length > 0) {
                 $(".simplePopupBackground1").show();
