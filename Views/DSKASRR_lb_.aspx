@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSKASRR_lb_.aspx.cs" Inherits="conns.DSKASRR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 6/30/2016 at 5:45 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -22,7 +22,108 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <main class="mdl-layout__content">
+      <section class="time-date">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--8-col"> 
+            <!-- Title --> 
+            <span class="heading-h1">Select Exception Item</span> </div>
+          <div class="mdl-cell mdl-cell--4-col pull-right"> 
+            <!-- Navigation --> 
+            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSKASRR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+        </div>
+      </section>
+      <section class="progress-bar">
+        <div class="progress-bar-wrapper">
+          <ul class="progress-bar-main">
+            <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+            <li class="progress-bar-divider">
+            <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+            <li class="white-to-gray-bullet"></li>
+            <li class="progress-bar-step3 gray-bg step-width"><span class="step-title-selected">Step 3</span> <span class="step-txt-selected">Edit Order Details</span> </li>
+            <li class="progress-bar-divider-first">
+            <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+            <li class="progress-bar-divider">
+            <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>
+          </ul>
+        </div>
+      </section>
+      <section class="order-summary">
+        <div class="order-summary-wrapper">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet"> <span class="summary-title">Model Number</span> <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2AXTX_new"></span> </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet"> <span class="summary-title">Description</span> <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2A2TX_new"></span> </div>
+          </div>
+        </div>
+      </section>
+      <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+        <div class="table-data-wrapper">
+          <div class="table-data-maincontainer">
+            <div style="overflow: auto;" class="table-container">
+              <div>
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="exception-items" data-upgraded=",MaterialDataTable">
+                  <thead>
+                    <tr>
+                      <th>Location Code</th>
+                      <th>Exception Description</th>
+                      <th>Markdown Price</th>
+                      <th>Serial Number</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="button-container">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span>  </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="modal1" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+    <style>
+        #exception-items tbody > tr:hover {
+          cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant14": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_2AXTX": "CenPH__lb_SFLCTL__lb_2AXTX_new",
+                "CenPH__lb_SFLCTL__lb_2A2TX": "CenPH__lb_SFLCTL__lb_2A2TX_new",
+            },
+            "inputFields": {
+                //"CenPH__lb_SFLCTL__lb_2EONB": "CenPH__lb_SFLCTL__lb_2EONB_new"
+            }
+        }
+        $(document).ready(function () {
+            $('body').css({ "background-color": "white" });
+            copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            // Search by Customer data table record mapping
+            var dataMergeIndices = [[0], [1], [2], [3]];
+            generateTableAndApplyInfiniteScroll("exception-items", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+            //Error message
+            if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                $(".simplePopupBackground1").show();
+            } else {
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function() {
+                $(".simplePopupBackground1").hide();
+            });
+        });
+    </script>
+        <div id="Div1" style="display:none;">
             
       <%--  OE: SEL Exception Item    Select record                                                              --%>
       <%--  CRTDSPF                                                                                              --%>
