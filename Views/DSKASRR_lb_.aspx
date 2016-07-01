@@ -112,6 +112,13 @@
             // Search by Customer data table record mapping
             var dataMergeIndices = [[0], [1], [2], [3]];
             generateTableAndApplyInfiniteScroll("exception-items", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+			
+			$('#exception-items tr td:nth-child(3)').each(function (i, col )
+			{
+				$(col).text($(col).text().trim());
+				$(col).css("text-align","right");
+			});
+	
             //Error message
             if($("#__Page_PopUp .simplePopupClose").length > 0) {
                 $(".simplePopupBackground1").show();
