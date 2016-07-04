@@ -96,7 +96,8 @@
                             <th>Extended<br/>Price ($)</th>
                             <th>Reference<br/>Line Number</th>
                             <th>Installation<br/> code</th>
-                            <th>Lvl</th>
+                            <th>Installation<br/> Description</th>
+                            <th>Level<br/> Code</th>
                             <th>Installation<br/> Price ($)</th>
                           </tr>
                         </thead>
@@ -114,6 +115,7 @@
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DBZVA_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1BHNB_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AECD_new"></td>
+                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_PAYTX_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_PAJST_new"></td>
                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AJPR_new"></td>
                           </tr> 
@@ -1072,7 +1074,8 @@
                     "CenPH__lb_RCDDTL1__lb_1AMVA": "CenPH__lb_RCDDTL1__lb_1AMVA_new",
                     "CenPH__lb_RCDDTL1__lb_DBZVA": "CenPH__lb_RCDDTL1__lb_DBZVA_new",
                     "CenPH__lb_RCDDTL1__lb_1BHNB": "CenPH__lb_RCDDTL1__lb_1BHNB_new",
-                    "CenPH__lb_RCDDTL1__lb_1AECD+CenPH__lb_RCDDTL1__lb_PAYTX": "CenPH__lb_RCDDTL1__lb_1AECD_new",
+                    "CenPH__lb_RCDDTL1__lb_1AECD": "CenPH__lb_RCDDTL1__lb_1AECD_new",
+                    "CenPH__lb_RCDDTL1__lb_PAYTX": "CenPH__lb_RCDDTL1__lb_PAYTX_new",
                     "CenPH__lb_RCDDTL1__lb_PAJST": "CenPH__lb_RCDDTL1__lb_PAJST_new",
                     "CenPH__lb_RCDDTL1__lb_1AJPR": "CenPH__lb_RCDDTL1__lb_1AJPR_new"
                     
