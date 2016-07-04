@@ -1254,140 +1254,12 @@
         .table-data-content-container .mdl-data-table th {
             padding: 7px 6px 3px 5px;
         }
-		#tblOdrDtls tbody tr td:nth-child(11)  {
-        text-align: right;
-    }
+
+        #tblOdrDtls tbody tr td:nth-child(11) {
+            text-align: right;
+        }
     </style>
     <script type="text/javascript">
-        function AddRow() {
-            $('#tblOdrDtls > tbody > tr').append(
-       '<td>' +
-
-         '<select><option value="">Active</option>' +
-               '<option value="4">Cancel</option>' +
-               '</select>' +
-       '</td>');
-        }
-
-        function generateTableAndApplyInfiniteScrollDSOR(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices) {
-            $("body").css({
-                "background-color": "#FFFFFF"
-            });
-            $('body').on('click', '#' + tableId + ' tbody tr', function () {
-                if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
-                    $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                    $("#" + tableId + " tbody tr").removeClass("selected");
-                    $(this).addClass("selected");
-                    $("div.icon-container").removeClass("icon-disable");
-                }
-            });
-            /* script for table row starts here */
-            var generateTableDSOR = function (direction) {
-                $("#" + tableId + " tbody").empty();
-                var tableSelector = "";
-                if ($('table#' + recordConatainer).length > 0) {
-                    tableSelector = 'table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
-                } else {
-                    tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
-                }
-                var recordCount = $(tableSelector).length - 1;
-                if (spanIndices) {
-                    generateTableWithSpanIndex(recordCount, tableId, direction, tableSelector, spanIndices);
-                } else {
-                    generateTableWithoutSpanIndex(recordCount, tableId, direction, ignoreSapn, tableSelector);
-                }
-                $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                AddRow();
-                $("#tblOdrDtls tbody tr").each(function () {
-                    var selectId = $(this).data('selectid');
-                    if (selectId === 'undefined') {
-                        $(this).find("td:eq(10)").empty();
-                        $(this).find("td:eq(17) select").remove();
-                    }
-                    if ($(this).find("td:eq(14)").text() == 'Inst price') {
-                        $(this).find("td:eq(14)").empty();
-                        //$(this).find("td:eq(17) select").remove();
-                    }
-                    if ($(this).find("td:eq(6)").text() == 'Actl price') {
-                        $(this).find("td:eq(6)").empty();
-                        //$(this).find("td:eq(17) select").remove();
-                    }
-                });
-            }
-
-            $('body').on("click", "#next-page", function (event) {
-                _00("PgDn", event);
-                generateTableDSOR("top-to-bottom");
-            });
-            $('body').on("click", "#previous-page", function (event) {
-                _00("PgUp", event);
-                generateTableDSOR("top-to-bottom");
-            });
-            generateTableDSOR("top-to-bottom");
-            //Handle Page Up and Page Down events
-            $('body').on('keyup', function (event) {
-                var keycode = event.keycode || event.which;
-                if (keycode === 33) {
-                    //_00("PgUp", event);
-                    generateTableDSOR("bottom-to-top");
-                } else if (keycode === 34) {
-                    //_00("PgDn", event);
-                    generateTableDSOR("top-to-bottom");
-                }
-                return;
-            });
-            var selectCusotmer = function (row, value, event) {
-                var selectId = $(row).data('selectid');
-                if (selectId) {
-                    a = selectId.split(".");
-                    $("#" + a[0] + "\\." + a[1]).val(value);
-                    _00('Enter', event);
-                } else {
-                    return;
-                }
-            }
-
-            //Select customer on double click
-            $('body').on('dblclick', '#' + tableId + ' tbody tr', function (event) {
-                selectCusotmer(this, "1", event);
-            });
-            $("#" + selectRowId).click(function (event) {
-                var row = $("#" + tableId + " tbody tr.selected");
-                selectCusotmer(row, "1", event);
-            });
-            // Set first record as default selected
-            $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
-            jQuery.tableNavigation({
-                "onRowChange": function (output) {
-                    if (output) {
-                        var selectId = $(output.row).data('selectid');
-                        if (output.r && output.keycode === "40") {
-                            _00("PgDn", event);
-                            generateTable("top-to-bottom");
-                        } else if (output.r && output.keycode === "38" && !selectId) {
-                            _00("PgUp", event);
-                            generateTable("bottom-to-top");
-                        } else {
-                            $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-                            $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-                            $(output.row).css({
-                                "background-color": "#d8d8d8"
-                            });
-                        }
-                    }
-                }
-            });
-            // To fixed table header
-            $(".fixed-table-container-inner .th-inner").animate({
-                width: "300px"
-            }, 500);
-        }
-
-
-
-
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH_DdsConstant15": "date1",
@@ -1400,25 +1272,198 @@
         $(document).ready(function () {
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [10], [6], [7], [8], [9], [12], [14], [21], [16], [17], [19]];
             generateTableAndApplyInfiniteScrollDSOR("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            function generateTableAndApplyInfiniteScrollDSOR(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices) {
+                $("body").css({
+                    "background-color": "#FFFFFF"
+                });
+                $('body').on('click', '#' + tableId + ' tbody tr', function () {
+                    if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+                        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                        $("#" + tableId + " tbody tr").removeClass("selected");
+                        $(this).addClass("selected");
+                        $("div.icon-container").removeClass("icon-disable");
+                    }
+                });
+                $("#time").html("&nbsp;" + $("#time").html())
+                /* script for table row starts here */
+                var generateTableDSOR = function (direction) {
+                    $("#" + tableId + " tbody").empty();
+                    var tableSelector = "";
+                    if ($('table#' + recordConatainer).length > 0) {
+                        tableSelector = 'table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+                    } else {
+                        tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+                    }
+                    var recordCount = $(tableSelector).length - 1;
+                    if (spanIndices) {
+                        console.log("q");
+                        generateTableWithSpanIndexDSOR(recordCount, tableId, direction, tableSelector, spanIndices);
+                    }
+                    $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                    $("#tblOdrDtls tbody tr").each(function () {
+                        var selectId = $(this).data('selectid');
+                        if (selectId === 'undefined') {
+                            $(this).find("td:eq(10)").empty();
+                            $(this).find("td:eq(17) select").remove();
+                        }
+                        if ($(this).find("td:eq(14)").text() == 'Inst price') {
+                            $(this).find("td:eq(14)").empty();
+                        }
+                        if ($(this).find("td:eq(6)").text() == 'Actl price') {
+                            $(this).find("td:eq(6)").empty();
+                        }
+                    });
+                }
+
+                $('body').on("click", "#next-page", function (event) {
+                    _00("PgDn", event);
+                    generateTableDSOR("top-to-bottom");
+                });
+                $('body').on("click", "#previous-page", function (event) {
+                    _00("PgUp", event);
+                    generateTableDSOR("top-to-bottom");
+                });
+                generateTableDSOR("top-to-bottom");
+                //Handle Page Up and Page Down events
+                $('body').on('keyup', function (event) {
+                    var keycode = event.keycode || event.which;
+                    if (keycode === 33) {
+                        //_00("PgUp", event);
+                        generateTableDSOR("bottom-to-top");
+                    } else if (keycode === 34) {
+                        //_00("PgDn", event);
+                        generateTableDSOR("top-to-bottom");
+                    }
+                    return;
+                });
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    if (selectId) {
+                        a = selectId.split(".");
+                        $("#" + a[0] + "\\." + a[1]).val(value);
+                        _00('Enter', event);
+                    } else {
+                        return;
+                    }
+                }
+
+                //Select customer on double click
+                $('body').on('dblclick', '#' + tableId + ' tbody tr', function (event) {
+                    selectCusotmer(this, "1", event);
+                });
+                $("#" + selectRowId).click(function (event) {
+                    var row = $("#" + tableId + " tbody tr.selected");
+                    selectCusotmer(row, "1", event);
+                });
+                // Set first record as default selected
+                $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+                jQuery.tableNavigation({
+                    "onRowChange": function (output) {
+                        if (output) {
+                            var selectId = $(output.row).data('selectid');
+                            if (output.r && output.keycode === "40") {
+                                _00("PgDn", event);
+                                generateTableDSOR("top-to-bottom");
+                            } else if (output.r && output.keycode === "38" && !selectId) {
+                                _00("PgUp", event);
+                                generateTableDSOR("bottom-to-top");
+                            } else {
+                                $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                                $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                                $(output.row).css({
+                                    "background-color": "#d8d8d8"
+                                });
+                            }
+                        }
+                    }
+                });
+                // To fixed table header
+                $(".fixed-table-container-inner .th-inner").animate({
+                    width: "300px"
+                }, 500);
+            }
+            //////////////////*****************************/////////////////////////////////
+            function generateTableWithSpanIndexDSOR(recordCount, tableId, direction, tableSelector, spanIndices) {
+                var count = 1;
+                var counterDS = 0;
+                var idDiv = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').attr("id");
+                if (idDiv) {
+                    counterDS = idDiv.replace(/\D/g, "");
+                }
+                var row = "";
+                var mFirst = "#CenPH__lb_SFLRCD__lb_2AUST\\.",
+                    mLineNumber = "#CenPH__lb_SFLRCD__lb_2AZNB\\.",
+                    mDlvSts = "#CenPH__lb_SFLRCD__lb_2AIST\\.",
+                    mFromLoc = "#CenPH__lb_SFLRCD__lb_2AACD\\.",
+                    mQuantity = "#CenPH__lb_SFLRCD__lb_2A1NB\\.",
+                    mModelNo = "#CenPH__lb_SFLRCD__lb_2AXTX\\.",
+                    mModelDesc = "#CenPH__lb_SFLRCD__lb_2A2TX\\.",
+                    mSerialNo = "#CenPH__lb_SFLRCD__lb_2A8TX\\.",
+                    mWarrenty = "#CenPH__lb_SFLRCD__lb_RC2ST\\.",
+                    mCredit = "#CenPH__lb_SFLRCD__lb_RC3ST\\.",
+                    mRefLnNo = "#CenPH__lb_SFLRCD__lb_2BHNB\\.",
+                    mActualPrice = "#CenPH__lb_SFLRCD__lb_2AMVA\\.",
+                    mExtentedPrice = "#CenPH__lb_SFLRCD__lb_RBIVA\\.",
+                    mInstallaionPrice = "#CenPH__lb_SFLRCD__lb_2AJPR\\.",
+                    mInstallationCode = "#CenPH__lb_SFLRCD__lb_2AECD\\.",
+                    mInstruction = "#CenPH__lb_SFLRCD__lb_RGLTX\\.",
+                    mLevel = "#CenPH__lb_SFLRCD__lb_RCWST\\.";
+                var selectId = "";
+                var dataArray = "";
+                var data = "";
+                $(tableSelector).each(function () {
+                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                        var divid = $(this);
+                        var selectId = $(divid.children('select')).attr('id');
+                        var tr = "";
+                        if (count === 1 && direction === "top-to-bottom") {
+                            tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                        } else if (count === recordCount && direction === "bottom-to-top") {
+                            tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                        } else {
+                            tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
+                        }
+
+                        data += '<td>' + (($(mFirst + counterDS).length > 0) ? $(mFirst + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mLineNumber + counterDS).length > 0) ? $(mLineNumber + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mDlvSts + counterDS).length > 0) ? $(mDlvSts + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mFromLoc + counterDS).length > 0) ? $(mFromLoc + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mQuantity + counterDS).length > 0) ? $(mQuantity + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mModelNo + counterDS).length > 0) ? $(mModelNo + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mModelDesc + counterDS).length > 0) ? $(mModelDesc + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mSerialNo + counterDS).length > 0) ? $(mSerialNo + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mWarrenty + counterDS).length > 0) ? $(mWarrenty + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mCredit + counterDS).length > 0) ? $(mCredit + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mRefLnNo + counterDS).length > 0) ? $(mRefLnNo + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mActualPrice + counterDS).length > 0) ? $(mActualPrice + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mExtentedPrice + counterDS).length > 0) ? $(mExtentedPrice + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mInstallaionPrice + counterDS).length > 0) ? $(mInstallaionPrice + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mInstallationCode + counterDS).length > 0) ? $(mInstallationCode + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mInstruction + counterDS).length > 0) ? $(mInstruction + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mLevel + counterDS).length > 0) ? $(mLevel + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + '<select><option value="">Active</option>' + '<option value="4">Cancel</option>' + '</select>' + '</td>';
+                        $("#" + tableId + " tbody").append(tr + data + "</tr>");
+                        data = "";
+                        counterDS++;
+                    } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+                        $("#previous-page,#next-page").remove();
+                        if ($("#CenPH__lb_SFLRCD_0").length === 0) {
+                            $("#tblOdrDtls").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                        }
+                        if ($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                            $("#tblOdrDtls").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                        }
+
+                    }
+                });
+            }
+
             //AddRow();
-            $("#tblOdrDtls tbody tr").each(function () {
-                var selectId = $(this).data('selectid');
-                if (selectId === 'undefined') {
-                    $(this).find("td:eq(10)").empty();
-                    $(this).find("td:eq(17) select").remove();
-                }
-                if ($(this).find("td:eq(14)").text() == 'Inst price') {
-                    $(this).find("td:eq(14)").empty();
-                    //$(this).find("td:eq(17) select").remove();
-                }
-                if ($(this).find("td:eq(6)").text() == 'Actl price') {
-                    $(this).find("td:eq(6)").empty();
-                    //$(this).find("td:eq(17) select").remove();
-                }
-            });
+            
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -1426,11 +1471,6 @@
                 _00('Enter', event);
             }
 
-            //var tindex = 0;
-            //if ($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id") != undefined) {
-            //    tindex = parseInt($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id").split("T.")[1]);
-
-            //}
             $('body').on("change", $("select"), function () {
                 var tindex = 0;
                 if ($("[id*='CenPH__lb_SFLRCD__lb_2AUST.']").eq(0).attr("id") != undefined) {
@@ -1447,9 +1487,7 @@
             $("#next").click(function (event) {
                 _00('Enter', event);
             });
-            //$("#help").click(function (event) {
-            //    _00('F1', event);
-            //});
+
             $("#returns").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the Order");
@@ -1476,7 +1514,6 @@
                 $('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function (i) {
 
                     $("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text() == "4" ? "Cancel" : "Active");
-                    //$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
                 });
 
             } else {
@@ -1493,42 +1530,13 @@
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 _00('Enter', event);
             });
-
-            //$('body').on("click", "#next-page", function (event) {
-            //    $("#tblOdrDtls tbody").empty();
-            //    _00("PgDn", event);
-            //    generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            //    console.log('1');
-            //    AddRow();
-            //    console.log('2');
-            //});
-            //$('body').on("click", "#previous-page", function (event) {
-            //    $("#tblOdrDtls tbody").empty();
-
-            //    _00("PgUp", event);
-            //    generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            //    AddRow();
-            //});
-            //$('body').on('keyup keydown', function (event) {
-            //    var keycode = event.keycode || event.which;
-            //    if (keycode === 33) {
-            //        $("#tblOdrDtls tbody").empty();
-            //        generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            //        AddRow();
-            //    } else if (keycode === 34) {
-            //        $("#tblOdrDtls tbody").empty();
-            //        generateTableAndApplyInfiniteScroll("tblOdrDtls", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            //        AddRow();
-            //    }
-            //    return;
-            //});
-
         });
     </script>
     <style>
-        #tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5) ,#tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13) {
+        #tblOdrDtls tr td:nth-child(2), #tblOdrDtls tr td:nth-child(4), #tblOdrDtls tr td:nth-child(5), #tblOdrDtls tr td:nth-child(12), #tblOdrDtls tr td:nth-child(13) {
             text-align: right !important;
         }
+
         #tblOdrDtls tr td:nth-child(7) {
             text-align: left !important;
         }
