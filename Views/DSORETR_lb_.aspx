@@ -1299,7 +1299,6 @@
                     }
                     var recordCount = $(tableSelector).length - 1;
                     if (spanIndices) {
-                        console.log("q");
                         generateTableWithSpanIndexDSOR(recordCount, tableId, direction, tableSelector, spanIndices);
                     }
                     $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
