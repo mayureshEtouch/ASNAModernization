@@ -190,7 +190,7 @@
                                                 <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_DD7CD_span" style="display:none"></span>
                                                 <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_DFMTX_span" style="display:none"></span>
                                             </td>
-                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DFMTX_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_DFMTX_new"></td>
                                             <td class="level" id="CenPH__lb_RCDDTL1__lb_DCWST_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DA6PR_new"></td>
                                         </tr>
