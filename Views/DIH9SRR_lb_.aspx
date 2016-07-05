@@ -887,7 +887,8 @@
             #__Page_PopUp {
                 min-width: 450px !important;
                 width: 568px !important;
-                left: 20% !important;
+                left: 30% !important;
+                top: 10% !important;
             }
             #__Page_PopUp > tr:first-child {
               display: none;
