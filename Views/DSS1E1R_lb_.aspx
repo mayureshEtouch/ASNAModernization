@@ -146,7 +146,7 @@
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_1AMVA_new"></td>
                                             <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_DBZVA_new"></td>
                                             <td class="inst-code" id="CenPH__lb_RCDDTL1__lb_1AECD_new"></td>
-                                            <td class="pull-right" id="CenPH__lb_RCDDTL1__lb_PAYTX_new"></td>
+                                            <td id="CenPH__lb_RCDDTL1__lb_PAYTX_new"></td>
                                             <td class="level" id="CenPH__lb_RCDDTL1__lb_PAJST_new"></td>
                                             <td class="pull-right inst-price" id="CenPH__lb_RCDDTL1__lb_1AJPR_new"></td>
                                         </tr>
@@ -1384,7 +1384,7 @@
                 position: static !important;
                 width: 40px !important;
             }
-						#exchange-records tr td:nth-child(4) input, #exchange-records tr td:nth-child(6),  #exchange-records tr td:nth-child(6) input, #exchange-records tr td:nth-child(12), #exchange-records tr td:nth-child(13), #exchange-records tr td:nth-child(14), #exchange-records tr td:nth-child(16){
+						#exchange-records tr td:nth-child(4) input, #exchange-records tr td:nth-child(6),  #exchange-records tr td:nth-child(6) input, #exchange-records tr td:nth-child(12), #exchange-records tr td:nth-child(13), #exchange-records tr td:nth-child(16){
 			text-align: right !important;
 			}
 		#exchange-records tr td:nth-child(8) input{
