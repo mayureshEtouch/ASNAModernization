@@ -1,9 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CR1002R_lb_.aspx.cs" Inherits="conns.CR1002R_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
-<asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-  <%-- Migrated on 3/21/2016 at 5:35 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-  <%-- Legacy location: library ASNATSRC, file QDDSSRC, member CR1002R# --%>
-</asp:Content>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+
+    <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
+        <%-- Migrated on 7/4/2016 at 5:54 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Legacy location: library ASNAPH2BK, file QDDSSRC, member CR1002R# --%>
+
+    </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
   <div id="Div0">
@@ -1219,7 +1221,7 @@
               VirtualRowCol="13,17" 
               Protect="!77" 
               EditCode="3" 
-              ErrorMessageId="UCR0020 ASMSGF0 : 49 , UCR0003 ASMSGF0 : 81 , UCR0004 ASMSGF0 : 82 , UCR0019 ASMSGF0 : 68 , UCR0024 ASMSGF0 : 71" 
+              ErrorMessageId="UCR0037 ASMSGF0 : 47 , UCR0020 ASMSGF0 : 49 , UCR0003 ASMSGF0 : 81 , UCR0004 ASMSGF0 : 82 , UCR0019 ASMSGF0 : 68 , UCR0024 ASMSGF0 : 71" 
               TabIndex="11"  />
       <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 28px; top: 315px;"
