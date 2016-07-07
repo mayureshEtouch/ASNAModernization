@@ -143,7 +143,7 @@
           <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
             <div class="content-grid mdl-grid">
               <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Location:</span> </div>
-              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_PCFCD_new"></span> </div>
+              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;padding-left: 10px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_PCFCD_new"></span> </div>
             </div>
 
           </div>
@@ -153,7 +153,7 @@
           <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
             <div class="content-grid mdl-grid">
               <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Order:</span> </div>
-              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BANB_new"></span> </div>
+              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;padding-left: 10px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BANB_new"></span> </div>
             </div>
           </div>
           <!-- 6 col ends here -->                                      
@@ -166,7 +166,7 @@
           <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
             <div class="content-grid mdl-grid">
               <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Delivery Date:</span> </div>
-              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL_V2B6DT_new"></span>  </div>
+              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;padding-left: 10px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL_V2B6DT_new"></span>  </div>
             </div>
 
           </div>
@@ -176,7 +176,7 @@
           <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
             <div class="content-grid mdl-grid">
               <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Zone:</span> </div>
-              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2AHCD_new"></span>  </div>
+              <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;padding-left: 10px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2AHCD_new"></span>  </div>
             </div>
           </div>
           <!-- 6 col ends here -->                                      
@@ -270,6 +270,7 @@
   };
   $(document).ready(function () {
     copyData(copyToAndFrom, "");
+    $("#time").html("&nbsp;" + $("#time").html());
     var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
     var li_data_count = 0;
     $.each(["CenPH__lb_SFLCTL__lb_CAHNA_new", "CenPH__lb_SFLCTL__lb_CAINA_new", "CenPH__lb_SFLCTL__lb_CAJNA_new", "CenPH__lb_SFLCTL__lb_CAKNA_new", "CenPH__lb_SFLCTL__lb_CALNA_new"],function(index, el) {

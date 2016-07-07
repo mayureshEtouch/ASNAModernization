@@ -475,6 +475,7 @@
         $(document).ready(function () {
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            $("#time").html("&nbsp;" + $("#time").html());
             var dataMergeIndices = [[0],[1], [2], [3], [4], [5],[6]];
             generateTableAndApplyInfiniteScroll("tblDispActivity", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             $("#previous").click(function (event) {
