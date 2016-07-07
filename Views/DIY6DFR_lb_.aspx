@@ -66,11 +66,13 @@
                             <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblDispActivity" data-upgraded=",MaterialDataTable">
                                 <thead>
                                     <tr>
-                                        <th>On File</th>
+                                        <th>On File Date</th>
+                                        <th>On File Time</th>
+                                        <th>Customer Activity</th>
+                                        <th>Referenced Number</th>
+                                        <th>Scheduled Date</th>
+                                        <th>Employee Code</th>
                                         <th>Activity Note</th>
-                                        <th>Number</th>
-                                        <th>Scheduled</th>
-                                        <th>Employee</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -492,7 +494,7 @@
         $(document).ready(function () {
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-            var dataMergeIndices = [[0, "&nbsp;&nbsp;", 1], [2, "</br>", 6], [3], [4], [5]];
+            var dataMergeIndices = [[0],[1], [2], [3], [4], [5],[6]];
             generateTableAndApplyInfiniteScroll("tblDispActivity", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             $("#previous").click(function (event) {
                 _00('F12', event);
