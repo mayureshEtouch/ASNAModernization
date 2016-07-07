@@ -86,7 +86,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Phone Number:</span> </div>
-                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CHPH_lb__new"></span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;padding-left: 10px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CHPH_lb__new"></span> </div>
               </div>
 
             </div>
@@ -96,7 +96,7 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Phone Number:</span> </div>
-                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CWPH_lb__new"></span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0;padding-left: 10px;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CWPH_lb__new"></span> </div>
               </div>
             </div>
             <!-- 6 col ends here -->                                      
