@@ -722,6 +722,12 @@
 	
 			$("#displayData tbody tr").removeAttr("tabindex");
 			
+			var tabindex =3;
+			$("#displayData tbody tr").each(function(){
+				$(this).attr("tabindex",tabindex);
+				tabindex++;
+			})
+			
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
