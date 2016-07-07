@@ -67,12 +67,10 @@
                                 <thead>
                                     <tr>
                                         <th>On File</th>
-                                        <th>Activity</th>
+                                        <th>Activity Note</th>
                                         <th>Number</th>
                                         <th>Scheduled</th>
                                         <th>Employee</th>
-                                        <th>Notes</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -494,7 +492,7 @@
         $(document).ready(function () {
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-            var dataMergeIndices = [[0, "&nbsp;&nbsp;", 1], [2], [3], [4], [5], [6]];
+            var dataMergeIndices = [[0, "&nbsp;&nbsp;", 1], [2, "</br>", 6], [3], [4], [5]];
             generateTableAndApplyInfiniteScroll("tblDispActivity", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             $("#previous").click(function (event) {
                 _00('F12', event);
@@ -504,9 +502,9 @@
             });
         });
     </script>
-    <style>
+    <%--<style>
         #tblDispActivity tr td:nth-child(3), #tblDispActivity tr td:nth-child(5) {
             text-align: right !important;
         }
-    </style>
+    </style>--%>
 </asp:Content>
