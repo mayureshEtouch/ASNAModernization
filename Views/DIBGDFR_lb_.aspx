@@ -687,7 +687,7 @@
         $(document).ready(function () {
 		
 		  copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-          
+      $("#time").html("&nbsp;" + $("#time").html());
 			$('body').on('keyup change', '#loc', function (event) {
 				$('#CenPH__lb_SFLCTL__lb_CERCD').val($(this).val());
 			}); 
