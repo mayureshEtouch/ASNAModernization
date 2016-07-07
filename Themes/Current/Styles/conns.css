@@ -845,6 +845,10 @@ textarea {
 .display-application-status .form-text strong {
 	margin: 0 14px;
 }
+.info-txt {
+	color:#4085f2;
+	font-weight: bold;
+}
 /* Error message CSS ends */
 
 /* Search criteria css starts */
