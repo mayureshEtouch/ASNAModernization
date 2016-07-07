@@ -74,13 +74,13 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="Location">
-                                            <input type="text" id="loc" maxlength="3" onfocus="_09('#CERCD','3,8','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
+                                            <input data-tb-index="1" type="text" id="loc" maxlength="3" onfocus="_09('#CERCD','3,8','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
                                         </div> 
 										<div class="mdl-cell mdl-cell--1-col" style="width: 130px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Schedule Date</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
-                                            <input type="text" id="ScheduleDate" onfocus="_09('V2AFDT','3,20','#SFLCTL');" class="mdl-textfield__input" data-tb-index="2">
+                                            <input data-tb-index="2" type="text" id="ScheduleDate" onfocus="_09('V2AFDT','3,20','#SFLCTL');" class="mdl-textfield__input" data-tb-index="2">
                                         </div>
 										<div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="width: 135px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 15px;">Total Incomplete</span>
@@ -141,11 +141,11 @@
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+												<span style="display:none;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">refresh</span>
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Search">Search</span>
 												</div>
-												<div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
+												<div style="display:none;" class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
 												</div>
 										</div>
@@ -720,6 +720,7 @@
 			
 			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 	
+			$("#displayData tbody tr").removeAttr("tabindex");
 			
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
@@ -747,10 +748,12 @@
                 _00('F6', event);
             });
 			
-			 $("#prompt").click(function (event) {
+			/* $("#prompt").click(function (event) {
                 _00('F4', event);
-            });
+            });*/
 			
+			 $("#loc").ForceNumericOnly();
+			 
 			 $("#refresh").click(function (event) {
                 _00('F5', event);
             });
