@@ -847,7 +847,8 @@ textarea {
 }
 .info-text {
 	color:#4085f2 !important;
-	font-weight: bold;
+	font-weight: 600;
+	list-style-type: circle;
 }
 /* Error message CSS ends */
 
