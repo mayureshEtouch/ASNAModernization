@@ -67,7 +67,7 @@
                                 <thead>
                                     <tr>
                                         <th>On File</th>
-                                        <th>Activity Number</th>
+                                        <th>Activity</th>
                                         <th>Number</th>
                                         <th>Scheduled</th>
                                         <th>Employee</th>
