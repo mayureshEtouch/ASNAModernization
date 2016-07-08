@@ -1498,6 +1498,29 @@ body div, body span, body textarea {
 	margin-left: 20px;
 }
 
+/* Normal table */
+.normal-table td{
+	padding: 2px 15px 2px 8px;
+}
+.normal-table-price td {
+	padding-right: 85px;
+}
+
+/* Appeal list page css */
+#appeal-list-item {
+	padding-left: 25px;
+}
+#appeal-list-item li {
+	background: url(images/icons/appeal-icon.png) 0 3px no-repeat;
+	font-weight: 600;
+	list-style: none;
+	margin: 5px 0;
+	padding-left: 35px;
+}
+#appeal-list-item .disabled-item {
+	opacity: 0.4;
+}
+
 #__Page_Hidden {
 	position: fixed;
 }
