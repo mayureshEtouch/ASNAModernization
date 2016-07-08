@@ -213,12 +213,12 @@
                                         <table cellspacing="0" cellpadding="0" border="0" class="normal-table" id="" data-upgraded=",MaterialDataTable">
                                             <thead>
                                                 <tr>
-                                                    <td><span class="form-label">Product:</span></td>
-                                                    <td><span class="form-label">+ Maintenance:</span></td>
-                                                    <td><span class="form-label">+ Add-On:</span></td>
-                                                    <td><span class="form-label">- Down:</span></td>
-                                                    <td><span class="form-label">= Requested:</span></td>
-                                                    <td><span class="form-label">Application Risk:</span></td>
+                                                    <td><span class="form-label">Product</span></td>
+                                                    <td><span class="form-label">+ Maintenance</span></td>
+                                                    <td><span class="form-label">+ Add-On</span></td>
+                                                    <td><span class="form-label">- Down</span></td>
+                                                    <td><span class="form-label">= Requested</span></td>
+                                                    <td><span class="form-label">Application Risk</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td align="right"><span class="form-text" id="product"></span></td>
