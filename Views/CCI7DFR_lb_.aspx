@@ -103,14 +103,14 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
                             <div class="icon-container">
-                <span class="icon-txt" id="invoice">Enter Invoice</span><i class="material-icons md-15 md-light enter-invoice-icon"></i>
-                <span class="icon-txt" id="work">Work</span><i class="material-icons md-15 md-light work-icon"></i>
-                <span class="icon-txt" id="display">Display</span><i class="material-icons md-15 md-light display-icon"></i>
-                <span class="icon-txt" id="sbmrac">SbmToRAC</span><i class="material-icons md-15 md-light sbm-to-rac-icon"></i>
-                <span class="icon-txt" id="notes">Notes</span><i class="material-icons md-15 md-light notes-icon"></i>
-                <span class="icon-txt" id="decision">Decision</span><i class="material-icons md-15 md-light decision-icon"></i>
-                <span class="icon-txt" id="appeal">Appeal</span><i class="material-icons md-15 md-light appeal-icon"></i>
-                <span class="icon-txt" id="prtraccertf">PrtRACcertf</span><i class="material-icons md-15 md-light Prt-rac-certf-icon"></i>
+                <span id="invoice"><span class="icon-txt">Enter Invoice</span><i class="material-icons md-15 md-light enter-invoice-icon"></i></span>
+                <span id="work"><span class="icon-txt">Work</span><i class="material-icons md-15 md-light work-icon"></i></span>
+                <span id="display"><span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></span>
+                <span id="sbmrac"><span class="icon-txt" id="sbmrac">SbmToRAC</span><i class="material-icons md-15 md-light sbm-to-rac-icon"></i></span>
+                <span id="notes"><span class="icon-txt">Notes</span><i class="material-icons md-15 md-light notes-icon"></i></span>
+                <span id="decision"><span class="icon-txt">Decision</span><i class="material-icons md-15 md-light decision-icon"></i></span>
+                <span id="appeal"><span class="icon-txt">Appeal</span><i class="material-icons md-15 md-light appeal-icon"></i></span>
+                <span id="prtraccertf"><span class="icon-txt">PrtRACcertf</span><i class="material-icons md-15 md-light Prt-rac-certf-icon"></i></span>
               </div>
                         </div>
                     </div>
@@ -151,8 +151,8 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="GEApps">GE Apps</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                         <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> 
                         </div>
                     </div>
                 </div>
@@ -1050,8 +1050,17 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#time").html("&nbsp;" + $("#time").html());
-              var dataMergeIndices = [[0], [1], [2],[3], [4], [5], [6]];
-              generateTableAndApplyInfiniteScroll("creditapp", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+              $('body').on('click', '#creditapp tbody tr', function () {
+                $("#creditapp tbody tr:even").css("background-color", "#fff");
+                $("#creditapp tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#creditapp tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
+                generateTableAndApplyInfiniteScroll("creditapp", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+              
               $("#creditapp tbody tr:first").css("background-color", "#d8d8d8");
               $("#creditapp tbody tr").attr("tabindex","4");
               $("#CenPH__lb_SFLCTL__lb_2ITNB_new").ForceNumericOnly();
@@ -1077,7 +1086,9 @@
           
                 }
               });
-              
+              for(var i = 0; i < $("#creditapp tr td:nth-child(2)").length;i++) {
+                $($("#creditapp tr td:nth-child(2)")[i]).html($($("#creditapp tr td:nth-child(2)")[i]).html().replace(/&nbsp;/g, ""));
+              }
               $("#previous").click(function (event) {
                    _00('F3', event);
               });
@@ -1184,16 +1195,7 @@
                     selectCusotmer(row, "C", event);
                 }
               });
-
-              $('body').on('click', '#creditapp tbody tr', function () {
-                $("#creditapp tbody tr:even").css("background-color", "#fff");
-                $("#creditapp tbody tr:odd").css("background-color", "#f9f9f9");
-                $(this).css({ "background-color": "#d8d8d8" });
-                $("#creditapp tbody tr").removeClass("selected");
-                $(this).addClass("selected");
-                $("div.icon-container").removeClass("icon-disable");
-            });
-              
+                            
             });
       </script>
     </asp:Content>
