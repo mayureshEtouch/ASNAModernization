@@ -40,7 +40,7 @@
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCIHD1R</span>
                     <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -160,6 +160,20 @@
                                     <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="currentobligation"></span>
                                     </div>
+                                     <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label">Auto=</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanAuto"></span>
+                                    </div>
+                                     <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label">PD=</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPD"></span>&nbsp;&nbsp;&nbsp;
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanunknw"></span>
+                                    </div>
+
                                 </div>
                             </div>
                             <!-- 12 col ends here -->
@@ -1622,6 +1636,9 @@
                 "CenPH__lb_RCDDTL1__lb_DD2NB": "officePh",
                 "CenPH__lb_RCDDTL1__lb_DPRNB": "cellPh",
                 "CenPH__lb_RCDDTL1__lb_1GXVA": "currentobligation",
+                "CenPH__lb_RCDDTL1__lb_1LQST": "spanAuto",
+                "CenPH__lb_RCDDTL1__lb_1LRST": "spanPD",
+                "CenPH__lb_RCDDTL1__lb_1ACCT": "spanunknw",
                 "CenPH__lb_RCDDTL1__lb_1GFVA": "product",
                 "CenPH__lb_RCDDTL1__lb_1GGVA": "maintenance",
                 "CenPH__lb_RCDDTL1__lb_1G1VA": "addon",
