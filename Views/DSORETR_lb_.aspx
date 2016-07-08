@@ -166,7 +166,7 @@
         </div>
     </div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display: none">
+    <div id="Div1" style="display: none;">
 
         <%--  OE: ETR Upd Ord Dtl       Edit transaction                                                           --%>
         <%--  CRTDSPF                                                                                              --%>
