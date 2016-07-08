@@ -160,23 +160,49 @@
                                     <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="currentobligation"></span>
                                     </div>
-                                     <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    
+
+                                </div>
+                            </div>
+
+                            <!-- 12 col ends here -->
+
+                            
+
+
+                             <!-- 12 col starts here -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Auto=</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanAuto"></span>
                                     </div>
-                                     <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    
+
+                                </div>
+                            </div>
+
+                            <!-- 12 col ends here -->
+
+                             <!-- 12 col starts here -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">PD=</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPD"></span>&nbsp;&nbsp;&nbsp;
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanunknw"></span>
                                     </div>
+                                    
 
                                 </div>
                             </div>
+
                             <!-- 12 col ends here -->
+
                         </div>
 
                         <div class="content-grid mdl-grid" style="padding: 20px 0;">
