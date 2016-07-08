@@ -137,14 +137,14 @@
                                       
                         </tbody>
                     </table>
-                    <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="next" href="javascript:void(0);"></a> -->
+                     <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="next" href="javascript:void(0);"></a>  -->
                             </div>
                                 
                 <div class="button-container">
                   
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Exit</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">refresh</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Search">Search</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enterQuote">Enter Quote</span>
@@ -1027,6 +1027,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        #creditapp tr td:nth-child(6), #creditapp tr td:nth-child(7){
+          text-align: right;
+        }
+      </style>
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -1045,7 +1050,34 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#time").html("&nbsp;" + $("#time").html());
+              var dataMergeIndices = [[0], [1], [2],[3], [4], [5], [6]];
+              generateTableAndApplyInfiniteScroll("creditapp", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+              $("#creditapp tbody tr:first").css("background-color", "#d8d8d8");
+              $("#creditapp tbody tr").attr("tabindex","4");
               $("#CenPH__lb_SFLCTL__lb_2ITNB_new").ForceNumericOnly();
+              $("#CenPH__lb_SFLCTL__lb_CAGTX_new").ForceAlphabetOnly();
+              
+              $('#CenPH__lb_SFLCTL__lb_2AJCD_new').keypress(function (e) {
+                  var regex = new RegExp("^[a-zA-Z0-9]+$");
+                  var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                  if (regex.test(str)) {
+                    return true;
+                  }
+
+                  e.preventDefault();
+                  return false;
+              });
+
+             $("form input[type=text]").on('input',function () {
+                var tab = $(this).attr("tabindex");
+                if($(this).val().length == $(this).attr('maxlength')) {
+                //$(this).next("input").focus();
+                  tab++;
+                  $("[tabindex='"+tab+"']").focus();
+          
+                }
+              });
+              
               $("#previous").click(function (event) {
                    _00('F3', event);
               });
@@ -1083,7 +1115,7 @@
 
               $("#invoice").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "1", event);
@@ -1092,7 +1124,7 @@
 
               $("#work").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "2", event);
@@ -1101,7 +1133,7 @@
 
               $("#display").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "5", event);
@@ -1110,7 +1142,7 @@
 
               $("#sbmrac").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "6", event);
@@ -1119,7 +1151,7 @@
 
               $("#notes").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "7", event);
@@ -1128,7 +1160,7 @@
 
               $("#decision").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "8", event);
@@ -1137,7 +1169,7 @@
 
               $("#appeal").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "9", event);
@@ -1146,7 +1178,7 @@
 
               $("#prtraccertf").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
-                    alert("Please select the Order");
+                    alert("Please select the Credit Application");
                 } else {
                     var row = $("#creditapp tbody tr.selected");
                     selectCusotmer(row, "C", event);
@@ -1161,10 +1193,7 @@
                 $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");
             });
-              var dataMergeIndices = [[0], [1], [2],[3], [4], [5], [6]];
               
-                    generateTableAndApplyInfiniteScroll("creditapp", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-                    $("#creditapp tbody tr:first").css("background-color", "#d8d8d8");
             });
       </script>
     </asp:Content>
