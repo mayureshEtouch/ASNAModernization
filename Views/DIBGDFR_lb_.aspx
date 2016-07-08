@@ -89,7 +89,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
                             <div class="icon-container">
-								<span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i>
+								<span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon displayDelivery"></i>
 							</div>
                         </div>
                     </div>
@@ -716,7 +716,7 @@
                 _00('Enter', event);
             }
             
-			 $(".icon-txt").click(function (event) {
+			 $(".displayDelivery").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the model");
                 } else {
