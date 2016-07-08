@@ -452,6 +452,13 @@
                $(".simplePopupBackground1").hide();
            });
 		   
+		  
+			$('#displayData tr td:nth-child(2)').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
+				 
+		   
 		   $("#add").click(function(event){
 				_00('F6', event);
 		   });
