@@ -93,7 +93,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col pull-right">
                             <div class="icon-container">
-								<span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon displayDelivery"></i>
+								<span class="icon-txt displayDelivery">Display</span><i class="material-icons md-15 md-light display-icon displayDelivery"></i>
 							</div>
                         </div>
                     </div>
@@ -721,8 +721,8 @@
 				$(this).attr("tabindex",parseInt(i+3));
 			})
 			
-			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
-			
+			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+100" });
+		
             $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
