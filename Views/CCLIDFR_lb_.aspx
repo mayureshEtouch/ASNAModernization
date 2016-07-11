@@ -438,7 +438,7 @@
             
 			var dataMergeIndices = [[0], [1]];
 			
-			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+			generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 			           
             $('.close-icon').click(function (event) {
                 _00("F12", event);
@@ -457,7 +457,7 @@
 				 {
 					$(col).text($(col).text().trim());
 				 });
-				 
+			
 		   
 		   $("#add").click(function(event){
 				_00('F6', event);
