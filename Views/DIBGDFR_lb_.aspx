@@ -63,10 +63,13 @@
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
 											
-											<input data-tb-index="2" onfocus="_09('V2AFDT','3,20','#SFLCTL');"  class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
-											<i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
-											<span id="reqdate" class="DdsCharField_OutputOnly"></span>
-                                            
+											 <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        
+												<input data-tb-index="2" class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
+												<i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+												<span id="reqdate" class="DdsCharField_OutputOnly"></span>
+											</span>
+																			
                                         </div>
 										<div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="width: 135px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 15px;">Total Incomplete</span>
@@ -691,22 +694,29 @@
                 },
                 "inputFields": {
 					"CenPH__lb_SFLCTL__lb_CERCD":"loc",
-					"CenPH__lb_SFLCTL_V2AFDT":"requestdate"
+					//"CenPH__lb_SFLCTL_V2AFDT":"requestdate"
                 }
             }
 			
         $(document).ready(function () {
 		
+		 $("#reqdate").hide();
+		 
 		  copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 			$("#time").html("&nbsp;" + $("#time").html());
 			$('body').on('keyup change', '#loc', function (event) {
 				$('#CenPH__lb_SFLCTL__lb_CERCD').val($(this).val());
 			}); 
 			// search box one keyup trigger 
-			$('body').on('focus', '#requestdate', function (event) {
+			/*$('body').on('focus', '#requestdate', function (event) {
 			  $('#CenPH__lb_SFLCTL_V2AFDT').val($(this).val());
 			  
-			}); 
+			}); */
+			
+			
+			$("#reqdate").html($("#CenPH__lb_SFLCTL_V2AFDT").html());
+           
+			$("#requestdate").val($("#CenPH__lb_SFLCTL_V2AFDT").val());
 		
 			//$("#reqdate").hide();
             // Search by Customer data table record mapping
@@ -722,14 +732,14 @@
 			})
 			
 			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-		
+			
             $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
             $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_V2AFDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
             $("#requestdate").css("width", "166px");
-			
+					
 			
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
