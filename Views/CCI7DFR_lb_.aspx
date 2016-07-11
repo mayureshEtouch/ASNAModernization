@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </section>
-            <section class="progress-bar">
+            <!-- <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
                         <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
@@ -56,7 +56,7 @@
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
                     </ul>
                 </div>
-            </section>
+            </section> -->
             
             <section class="table-data-content-container filter-field-container mrgnTp16">
                 <div class="table-data-wrapper">
