@@ -62,7 +62,11 @@
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Schedule Date</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
-                                            <input data-tb-index="2" type="text" id="ScheduleDate" onfocus="_09('V2AFDT','3,20','#SFLCTL');" class="mdl-textfield__input" data-tb-index="2">
+											
+											<input data-tb-index="2" onfocus="_09('V2AFDT','3,20','#SFLCTL');"  class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
+											<i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+											<span id="reqdate" class="DdsCharField_OutputOnly"></span>
+                                            
                                         </div>
 										<div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="width: 135px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 15px;">Total Incomplete</span>
@@ -671,6 +675,13 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style>
+		.calender-icon{
+			right: 28px;
+			top: 14px;
+		
+		}
+	</style>
 	<script type="text/javascript">
 	var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -680,23 +691,24 @@
                 },
                 "inputFields": {
 					"CenPH__lb_SFLCTL__lb_CERCD":"loc",
-					"CenPH__lb_SFLCTL_V2AFDT":"ScheduleDate"
+					"CenPH__lb_SFLCTL_V2AFDT":"requestdate"
                 }
             }
 			
         $(document).ready(function () {
 		
 		  copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-      $("#time").html("&nbsp;" + $("#time").html());
+			$("#time").html("&nbsp;" + $("#time").html());
 			$('body').on('keyup change', '#loc', function (event) {
 				$('#CenPH__lb_SFLCTL__lb_CERCD').val($(this).val());
 			}); 
 			// search box one keyup trigger 
-			$('body').on('focus', '#ScheduleDate', function (event) {
+			$('body').on('focus', '#requestdate', function (event) {
 			  $('#CenPH__lb_SFLCTL_V2AFDT').val($(this).val());
 			  
 			}); 
 		
+			//$("#reqdate").hide();
             // Search by Customer data table record mapping
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
 			
@@ -708,6 +720,16 @@
 			$("#displayData tbody tr").each(function(i){
 				$(this).attr("tabindex",parseInt(i+3));
 			})
+			
+			$("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
+			
+            $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
+            $("#requestdate").on('keyup change', function () {
+                var date = $("#requestdate").val().split("/");
+                $("#CenPH__lb_SFLCTL_V2AFDT").val(date[0] + date[1] + date[2].substr(2, 3));
+            });
+            $("#requestdate").css("width", "166px");
+			
 			
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
