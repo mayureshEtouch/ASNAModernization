@@ -1028,7 +1028,7 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
       <style>
-        #creditapp tr td:nth-child(6), #creditapp tr td:nth-child(7), #creditapp tr td:nth-child(2){
+        #creditapp tr td:nth-child(6), #creditapp tr td:nth-child(7){
           text-align: right;
         }
       </style>
