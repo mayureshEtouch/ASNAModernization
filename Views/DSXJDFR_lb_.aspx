@@ -221,9 +221,6 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F6">Customer Notes</span>
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F9">Comments</span>
             </div>
-            <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet pull-right">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-            </div>
           </div>
         </div>
       </div>
@@ -283,7 +280,10 @@
     if(li_data_count>=5){
       $("#instruction").hide()
     }
-    generateTableAndApplyInfiniteScroll("delivery_schedule", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+    generateTableAndApplyInfiniteScroll("delivery_schedule", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+    $("table tr").dblclick(function(event) {
+      return false;
+    });
   });
 </script>                
 <div id="Div1" style="display:none;">
