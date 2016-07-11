@@ -4,7 +4,19 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 7/6/2016 at 10:19 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCXPPVR# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +34,95 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span>
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Appeal Process</span> 
+        </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCXPPVR</span>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+            <div class="table-data-wrapper">
+        <div class="table-data-maincontainer">
+          <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+            <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+              <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+                              <span class="form-label">Application: </span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet" style="margin:0">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span><span class="form-text mrgnLft20" id="CenPH__lb_RCDDTL1__lb_DWZTX_new"></span>
+                          </div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        
+          <div>
+              <ul class="mdl-list" id="appeal-list-item">
+                <li>
+                <select id="CenPH__lb_RCDDTL1__lb_DM9ST_new"><option value=""></option><option value=""></option></select>
+                <span class="mdl-list__item-primary-content" id="span1">
+                  Appeal Down Payment only
+                </span>
+                </li>
+                <li>
+                <select id="CenPH__lb_RCDDTL1__lb_DNCST_new"><option value=""></option><option value=""></option></select>
+                <span class="mdl-list__item-primary-content">
+                  Appeal Cash option
+                </span>
+                </li>
+                <li>
+                <select id="CenPH__lb_RCDDTL1__lb_DNDST_new"><option value=""></option><option value=""></option></select>
+                <span class="mdl-list__item-primary-content">
+                  Appeal Other
+                </span>
+                </li>
+              </ul>
+            </div>
+                                
+            <div class="button-container">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop pull-right">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+        <div id="Div1" style="display:none;">
             
       <%--  CA: PMT for Appeal        Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -795,4 +895,100 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1ITNB":"CenPH__lb_RCDDTL1__lb_1ITNB_new",
+                    "CenPH__lb_RCDDTL1__lb_DWZTX":"CenPH__lb_RCDDTL1__lb_DWZTX_new",
+                    "CenPH__lb_RCDDTL1__lb_DM9ST": "CenPH__lb_RCDDTL1__lb_DM9ST_new",
+                    "CenPH__lb_RCDDTL1__lb_DNCST": "CenPH__lb_RCDDTL1__lb_DNCST_new",
+                    "CenPH__lb_RCDDTL1__lb_DNDST": "CenPH__lb_RCDDTL1__lb_DNDST_new"
+                },
+                "inputFields": {
+                    
+                }
+            }
+
+            $(document).ready(function(){
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#CenPH__lb_RCDDTL1__lb_1ITNB_new").html("&nbsp;&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1__lb_1ITNB_new").html());
+              $('#exit').click(function (event) {
+                    _00("F3", event);
+                });
+              $('.close-icon').click(function (event) {
+                    _00("F12", event);
+                });
+
+              if( $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').has('option').length > 0 ) {
+                $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').show();
+              } else{
+                $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').css("visibility","hidden");
+                $('#span1').html("&nbsp;&nbsp;" + $("#span1").html());
+              }
+              $("#CenPH__lb_RCDDTL1__lb_DNDST").val($("#CenPH__lb_RCDDTL1__lb_DNDST_new").val());
+              $("#CenPH__lb_RCDDTL1__lb_DNDST_new").on('change', function () {
+                $("#CenPH__lb_RCDDTL1__lb_DNDST").val($("#CenPH__lb_RCDDTL1__lb_DNDST_new").val());
+              });
+
+              $("#CenPH__lb_RCDDTL1__lb_DNCST").val($("#CenPH__lb_RCDDTL1__lb_DNCST_new").val());
+              $("#CenPH__lb_RCDDTL1__lb_DNCST_new").on('change', function () {
+                $("#CenPH__lb_RCDDTL1__lb_DNCST").val($("#CenPH__lb_RCDDTL1__lb_DNCST_new").val());
+              });
+
+              $("#CenPH__lb_RCDDTL1__lb_DM9ST").val($("#CenPH__lb_RCDDTL1__lb_DM9ST_new").val());
+              $("#CenPH__lb_RCDDTL1__lb_DM9ST_new").on('change', function () {
+                $("#CenPH__lb_RCDDTL1__lb_DM9ST").val($("#CenPH__lb_RCDDTL1__lb_DM9ST_new").val());
+              });
+
+              $('#submit').click(function (event) {
+                  _00("Enter", event);
+              });
+            });
+      </script>
+      <style>
+           #__Page_PopUp {
+            min-width: 450px !important;
+            width: 600px !important;
+      left: 50% !important;
+      margin-left: -225px;
+      top: 10% !important;
+            }
+           
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin-top: 0;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 100% !important;
+            }
+        .simplePopup {
+         left: 28% !important;
+         top: 50% !important;
+      }
+      #appeal-list-item {
+        padding-left: 25px;
+      }
+
+      #appeal-list-item li {
+        list-style: none;
+        margin-bottom: 10px;
+        padding-left: 0px;
+      }
+
+      </style>
+
     </asp:Content>
