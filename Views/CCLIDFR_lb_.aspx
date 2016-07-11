@@ -438,7 +438,7 @@
             
 			var dataMergeIndices = [[0], [1]];
 			
-			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "add", dataMergeIndices);
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 			           
             $('.close-icon').click(function (event) {
                 _00("F12", event);
