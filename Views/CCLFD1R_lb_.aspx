@@ -54,8 +54,8 @@
                     <table cellspacing="0" cellpadding="0" border="0" class="normal-table" id="" data-upgraded=",MaterialDataTable">
                       <thead>
                         <tr>
-                          <td width="20%"><span class="form-label">Application Number:</span></td>
-                          <td width="5%"><span class="form-label">Status:</span></td>
+                          <td width="16%"><span class="form-label">Application Number:</span></td>
+                          <td width="9%"><span class="form-label">Status:</span></td>
                           <td width="10%"><span class="form-label">Company:</span></td>
                           <td width="10%"><span class="form-label">Type:</span></td>
                           <td width="10%"><span class="form-label">Que:</span></td>
@@ -132,8 +132,8 @@
           <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid">
             <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
-              <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DPRNB_new_div">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_DPRNB_new_div">
+              <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-label">Cell:</span>
                 </div>
@@ -154,7 +154,7 @@
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DOKST_new_div_">S</span></td>
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DOOST_new_div_">G</span></td>
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1_VDD2DT_new_div">Validated</span></td>
-                    <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DBOTX_new_div">Soc Sec:</span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DBOTX_new"></span></td>
+                    <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1A4NB_new_div">Soc Sec:</span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span></td>
                     
                   </tr>
                   <tr>
@@ -461,7 +461,7 @@
           <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-tablet pull-right" style="margin:0">
-                <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DC4N_lb__new"></span>
+                <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DC4N_lb__new"></span>&nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DZ0NB_new"></span>
               </div>
             </div>
@@ -625,7 +625,9 @@
         "CenPH__lb_RCDDTL1__lb_DPQST":"CenPH__lb_RCDDTL1__lb_DPQST_new",
         "CenPH__lb_RCDDTL1__lb_1GFVA":"CenPH__lb_RCDDTL1__lb_1GFVA_new",
         "CenPH__lb_RCDDTL1__lb_1GGVA":"CenPH__lb_RCDDTL1__lb_1GGVA_new",
+        "DdsConstant32":"CenPH__lb_RCDDTL1__lb_1GGVA_new_div",//For Label
         "CenPH__lb_RCDDTL1__lb_1G1VA":"CenPH__lb_RCDDTL1__lb_1G1VA_new",
+        "CenPH_DdsConstant38":"CenPH__lb_RCDDTL1__lb_1G1VA_new_div",//For label
         "CenPH__lb_RCDDTL1__lb_1GEVA":"CenPH__lb_RCDDTL1__lb_1GEVA_new",
         "CenPH__lb_RCDDTL1__lb_DGUVA":"CenPH__lb_RCDDTL1__lb_DGUVA_new",
         "CenPH__lb_RCDDTL1__lb_DUJTX":"CenPH__lb_RCDDTL1__lb_DUJTX_new",
@@ -673,16 +675,18 @@
           $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
         }
       });
+
       if($("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new").text()=="" && $("#CenPH__lb_RCDDTL1__lb_DZ0NB_new").text()==""){
         $("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new_c_div").hide();
       }
-      $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB"],function(i,el){
+
+      $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB","CenPH__lb_RCDDTL1__lb_DC4N_lb_","CenPH__lb_RCDDTL1__lb_1BNKR","CenPH__lb_RCDDTL1__lb_1LBST","CenPH__lb_RCDDTL1__lb_1K9ST","CenPH__lb_RCDDTL1__lb_1K8ST","CenPH__lb_RCDDTL1__lb_1K2ST","CenPH__lb_RCDDTL1__lb_1K4ST","CenPH__lb_RCDDTL1__lb_1K3ST","CenPH__lb_RCDDTL1__lb_1LAST","CenPH__lb_RCDDTL1__lb_1K6ST","CenPH__lb_RCDDTL1__lb_1LMST","CenPH__lb_RCDDTL1__lb_1LVST","CenPH__lb_RCDDTL1__lb_1LWST","CenPH__lb_RCDDTL1__lb_1LXST","CenPH__lb_RCDDTL1__lb_DSKST"],function(i,el){
         console.log(el);
         if($("#"+el).css('color')=="rgb(255, 0, 0)"){
           $("#"+el+"_new").css('color','red');
           $("#"+el+"_new_div").css('color','red');
         }
-      })
+      });
     });
   </script>
   <div id="Div1" style="display:none;">
