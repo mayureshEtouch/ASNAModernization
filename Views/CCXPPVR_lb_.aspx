@@ -66,13 +66,17 @@
           <!-- content-grid mdl-grid starts here -->
         <div class="content-grid mdl-grid" style="padding-bottom: 0;">
           <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--4-col" style="padding:0">
             <div class="content-grid mdl-grid" style="padding-bottom: 0;">
-              <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
-                              <span class="form-label">Application: </span>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
+                              <span class="form-label">Application Number: </span>
                           </div>
-                          <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span><span class="form-text mrgnLft20" id="CenPH__lb_RCDDTL1__lb_DWZTX_new"></span>
+                          </div>
+						  
+						   <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet" style="margin:0">
+                              <span class="form-label" id="CenPH_DdsConstant2_new"></span>
                           </div>
             </div>
           </div>
@@ -83,19 +87,31 @@
           <div>
               <ul class="mdl-list" id="appeal-list-item">
                 <li>
-                <select id="CenPH__lb_RCDDTL1__lb_DM9ST_new"><option value=""></option><option value=""></option></select>
+                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DM9ST_new"> 
+					<option selected="selected" value=" ">Please select</option>
+					<option value="Y">Yes</option>
+					<option value="N">No</option>
+				</select>
                 <span class="mdl-list__item-primary-content" id="span1">
                   Appeal Down Payment only
                 </span>
                 </li>
                 <li>
-                <select id="CenPH__lb_RCDDTL1__lb_DNCST_new"><option value=""></option><option value=""></option></select>
+                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNCST_new">
+					<option selected="selected" value=" ">Please select</option>
+					<option value="Y">Yes</option>
+					<option value="N">No</option>
+				</select>
                 <span class="mdl-list__item-primary-content">
                   Appeal Cash option
                 </span>
                 </li>
                 <li>
-                <select id="CenPH__lb_RCDDTL1__lb_DNDST_new"><option value=""></option><option value=""></option></select>
+                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNDST_new">
+					<option selected="selected" value=" ">Please select</option>
+					<option value="Y">Yes</option>
+					<option value="N">No</option>
+				</select>
                 <span class="mdl-list__item-primary-content">
                   Appeal Other
                 </span>
@@ -900,9 +916,10 @@
                 "displayOnlyFields": {
                     "CenPH__lb_RCDDTL1__lb_1ITNB":"CenPH__lb_RCDDTL1__lb_1ITNB_new",
                     "CenPH__lb_RCDDTL1__lb_DWZTX":"CenPH__lb_RCDDTL1__lb_DWZTX_new",
-                    "CenPH__lb_RCDDTL1__lb_DM9ST": "CenPH__lb_RCDDTL1__lb_DM9ST_new",
-                    "CenPH__lb_RCDDTL1__lb_DNCST": "CenPH__lb_RCDDTL1__lb_DNCST_new",
-                    "CenPH__lb_RCDDTL1__lb_DNDST": "CenPH__lb_RCDDTL1__lb_DNDST_new"
+                   // "CenPH__lb_RCDDTL1__lb_DM9ST": "CenPH__lb_RCDDTL1__lb_DM9ST_new",
+                    //"CenPH__lb_RCDDTL1__lb_DNCST": "CenPH__lb_RCDDTL1__lb_DNCST_new",
+                   // "CenPH__lb_RCDDTL1__lb_DNDST": "CenPH__lb_RCDDTL1__lb_DNDST_new"
+				   "CenPH_DdsConstant2":"CenPH_DdsConstant2_new"
                 },
                 "inputFields": {
                     
@@ -920,27 +937,50 @@
                     _00("F12", event);
                 });
 
-              if( $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').has('option').length > 0 ) {
+              /* if( $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').has('option').length > 0 ) {
                 $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').show();
               } else{
                 $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').css("visibility","hidden");
                 $('#span1').html("&nbsp;&nbsp;" + $("#span1").html());
               }
-              $("#CenPH__lb_RCDDTL1__lb_DNDST").val($("#CenPH__lb_RCDDTL1__lb_DNDST_new").val());
+			  
+              $("#CenPH__lb_RCDDTL1__lb_DNDST_new").val($("#CenPH__lb_RCDDTL1__lb_DNDST").val());
               $("#CenPH__lb_RCDDTL1__lb_DNDST_new").on('change', function () {
                 $("#CenPH__lb_RCDDTL1__lb_DNDST").val($("#CenPH__lb_RCDDTL1__lb_DNDST_new").val());
               });
 
-              $("#CenPH__lb_RCDDTL1__lb_DNCST").val($("#CenPH__lb_RCDDTL1__lb_DNCST_new").val());
+              $("#CenPH__lb_RCDDTL1__lb_DNCST_new").val($("#CenPH__lb_RCDDTL1__lb_DNCST").val());
               $("#CenPH__lb_RCDDTL1__lb_DNCST_new").on('change', function () {
                 $("#CenPH__lb_RCDDTL1__lb_DNCST").val($("#CenPH__lb_RCDDTL1__lb_DNCST_new").val());
               });
 
-              $("#CenPH__lb_RCDDTL1__lb_DM9ST").val($("#CenPH__lb_RCDDTL1__lb_DM9ST_new").val());
+              $("#CenPH__lb_RCDDTL1__lb_DM9ST_new").val($("#CenPH__lb_RCDDTL1__lb_DM9ST").val());
               $("#CenPH__lb_RCDDTL1__lb_DM9ST_new").on('change', function () {
                 $("#CenPH__lb_RCDDTL1__lb_DM9ST").val($("#CenPH__lb_RCDDTL1__lb_DM9ST_new").val());
               });
-
+				
+				*/
+				
+			  $(".select").each(function(i){
+				var ele = this.id.split('_new')[0];
+				
+					if($("#"+ele).is('span'))
+						{	$(this).hide();
+							$("#span1").css("margin-left","116px");
+							
+						}	
+							
+					else
+						{	
+							$(this).show();	
+						}		
+			  });
+			  
+			   $(".select").change(function(i){
+					var ele = this.id.split('_new')[0];
+					$("#"+ele).val($(this).val());
+			    });
+				
               $('#submit').click(function (event) {
                   _00("Enter", event);
               });
@@ -954,7 +994,7 @@
       margin-left: -300px;
       top: 15% !important;
             }
-           
+			
             #__Page_PopUp > tr:first-child {
               display: none;
             }
