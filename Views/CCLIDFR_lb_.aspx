@@ -466,6 +466,11 @@
 		   $("#exit").click(function(event){
 				_00('F3', event);
 		   });
+		   
+		    $("table tr").dblclick(function(event) {
+			  return false;
+			});
+			
         });
 
     </script>
