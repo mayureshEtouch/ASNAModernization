@@ -34,8 +34,8 @@
       <div class="mdl-cell mdl-cell--4-col pull-right">
         <!-- Navigation -->
         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLFD1R</span>
-        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+        <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span>
       </div>
     </div>
   </section>
@@ -133,7 +133,7 @@
           <div class="content-grid mdl-grid">
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
-              <div class="content-grid mdl-grid">
+              <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DPRNB_new_div">
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-label">Cell:</span>
                 </div>
@@ -175,8 +175,6 @@
                 </thead>
               </table>
               </div>
-              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DOPST_new"></span>
-              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DBOTX_new"></span>
                 <!-- <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-label">S G validated Soc Sec:</span>
                 </div>
@@ -206,7 +204,7 @@
             <!-- col ends here -->
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
-              <div class="content-grid mdl-grid">
+              <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DD2NB_new_div">
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet" style="margin:0">
                   <span class="form-label">Work Phone:</span>
                 </div>
@@ -300,12 +298,12 @@
         <div class="content-grid mdl-grid">
           <!-- col starts here -->
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_DUNTX_new_div">
-            <div class="content-grid mdl-grid">
+            <div class="content-grid">
               <div id="CenPH__lb_RCDDTL1__lb_1ALCO_new_div" class="mdl-cell--3-col mdl-cell--2-col-tablet mdl-grid">
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--1-col-tablet" style="margin:0">
                   <span class="form-label">Prom:</span>
                 </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" style="margin:0">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" style="margin:0; margin-left:16px;">
                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALCO_new"></span>
                 </div>
               </div>
@@ -377,7 +375,7 @@
               <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0">
                 <span class="form-label">Note:</span>
               </div>
-              <div class="mdl-cell mdl-cell--11-col mdl-cell--4-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-tablet" style="margin:0">
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DUJTX_new"></span>
               </div>
             </div>
@@ -409,7 +407,7 @@
                       <td><span class="form-label">M</span></td>
                       <td><span class="form-label">R:</span></td>
 
-                      <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1IONB_new_div">Ovr:</span></td>
+                      <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1IONB_new_div_">Ovr:</span></td>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1IONB_new"></span></td>
                       <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DYCVA_new_div">Down $:</span></td>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DYCVA_new"></span></td>
@@ -482,14 +480,14 @@
                       <td><span class="form-label">Last Application Number</span></td>
                       <td><span class="form-label">- Date</span></td>
                       <td><span class="form-label">- Time</span></td>
-                      <td><span class="form-label">S Name</span></td>
+                      <td><span class="form-label">S &nbsp;Name</span></td>
                     </tr>
                     <tr>
                       <td align=""><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DH2NB_new"></span></td>
                       <td align=""><span class="form-text" id="CenPH__lb_RCDDTL1_VDENDT_new"></span></td>
                       <td align=""><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAHTM_new"></span></td>
                       <td align="">
-                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DLZST_new"></span>
+                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DLZST_new"></span>&nbsp;
                         <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA2TX_new"></span>
                       </td>
                     </tr>
@@ -678,6 +676,13 @@
       if($("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new").text()=="" && $("#CenPH__lb_RCDDTL1__lb_DZ0NB_new").text()==""){
         $("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new_c_div").hide();
       }
+      $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB"],function(i,el){
+        console.log(el);
+        if($("#"+el).css('color')=="rgb(255, 0, 0)"){
+          $("#"+el+"_new").css('color','red');
+          $("#"+el+"_new_div").css('color','red');
+        }
+      })
     });
   </script>
   <div id="Div1" style="display:none;">
