@@ -399,6 +399,7 @@
             width: 450px !important;
 			left: 50% !important;
 			margin-left: -225px;
+      top: 15% !important;
         }
 		#__Page_PopUp > tr:first-child {
 			display: none;
@@ -412,7 +413,7 @@
         }
         .modal-dialog-container {
             width: 100%;
-            margin-top: 0;
+            margin: 0 0 3%;
         }
         .mdl-layout__content {
             height: auto !important;
