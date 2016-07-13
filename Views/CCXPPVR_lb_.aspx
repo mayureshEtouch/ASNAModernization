@@ -88,7 +88,7 @@
               <ul class="mdl-list" id="appeal-list-item">
                 <li>
                 <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DM9ST_new"> 
-					<option selected="selected" value=" ">Please select</option>
+					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
 				</select>
@@ -98,21 +98,21 @@
                 </li>
                 <li>
                 <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNCST_new">
-					<option selected="selected" value=" ">Please select</option>
+					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
 				</select>
-                <span class="mdl-list__item-primary-content">
+                <span class="mdl-list__item-primary-content" id="span2">
                   Appeal Cash option
                 </span>
                 </li>
                 <li>
                 <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNDST_new">
-					<option selected="selected" value=" ">Please select</option>
+					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
 				</select>
-                <span class="mdl-list__item-primary-content">
+                <span class="mdl-list__item-primary-content" id="span3">
                   Appeal Other
                 </span>
                 </li>
@@ -967,16 +967,16 @@
 					if($("#"+ele).is('span'))
 						{	$(this).hide();
 							$("#span1").css("margin-left","116px");
-							
 						}	
 							
 					else
 						{	
-							$(this).show();	
+              $(this).show();	
+              
 						}		
 			  });
 			  
-			   $(".select").change(function(i){
+        $(".select").change(function(i){
 					var ele = this.id.split('_new')[0];
 					$("#"+ele).val($(this).val());
 			    });
