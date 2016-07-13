@@ -154,7 +154,7 @@
                     <td style="padding-left: 0;"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DOKST_new_div_">S</span></td>
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DOOST_new_div_">G</span></td>
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1_VDD2DT_new_div">Validated</span></td>
-                    <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1A4NB_new_div">Soc Sec:</span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span></td>
+                    <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1A4NB_new_div">Soc Sec: </span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span></td>
                     
                   </tr>
                   <tr>
@@ -210,7 +210,7 @@
                 </div>
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DD2NB_new"></span>
-                <span class="form-label" id="CenPH__lb_RCDDTL1__lb_DAWNB_new_div" style="margin:0 20px 0 50px;">Ext:</span>
+                <span class="form-label" id="CenPH__lb_RCDDTL1__lb_DAWNB_new_div" style="margin:0 20px 0 50px;">Ext: </span>
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAWNB_new"></span>&nbsp;
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DVUTX_new"></span>&nbsp;
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DVVTX_new"></span>
@@ -258,7 +258,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1LQST_new_div" style="padding:0">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
-                  <span class="form-label">Auto=:</span>
+                  <span class="form-label">Auto=</span>
                 </div>
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1LQST_new"></span>
@@ -270,7 +270,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1LRST_new_div" style="padding:0">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
-                  <span class="form-label">PD=:</span>
+                  <span class="form-label">PD=</span>
                 </div>
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1LRST_new"></span>
@@ -383,7 +383,7 @@
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="margin:0">
-                <span class="form-label">Note:</span>
+                <span class="form-label">Note: </span>
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DUJTX_new" style="margin-left: 5px;"st></span>
               </div>
               <!-- <div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-tablet" style="margin:0">
