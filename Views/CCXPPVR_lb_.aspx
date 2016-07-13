@@ -75,7 +75,7 @@
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span><span class="form-text mrgnLft20" id="CenPH__lb_RCDDTL1__lb_DWZTX_new"></span>
                           </div>
 						  
-						   <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet" style="margin:0">
+						   <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet" style="margin:10px 0 0 0">
                               <span class="form-label" id="CenPH_DdsConstant2_new"></span>
                           </div>
             </div>
@@ -86,14 +86,14 @@
         
           <div>
               <ul class="mdl-list" id="appeal-list-item">
-                <li>
+                <li style="margin-top: 0;">
                 <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DM9ST_new"> 
 					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
 				</select>
                 <span class="mdl-list__item-primary-content" id="span1">
-                  Appeal Down Payment only
+                  Appeal Down Payment Only
                 </span>
                 </li>
                 <li>
@@ -103,7 +103,7 @@
 					<option value="N">No</option>
 				</select>
                 <span class="mdl-list__item-primary-content" id="span2">
-                  Appeal Cash option
+                  Appeal Cash Option
                 </span>
                 </li>
                 <li>
@@ -1021,6 +1021,7 @@
       }
       #appeal-list-item {
         padding-left: 25px;
+		margin-top: 0;
       }
 
       #appeal-list-item li {
