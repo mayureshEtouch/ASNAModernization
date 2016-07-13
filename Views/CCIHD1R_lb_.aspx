@@ -59,24 +59,24 @@
                                             <table cellspacing="0" cellpadding="0" border="0" class="normal-table" id="tblAppDtls" data-upgraded=",MaterialDataTable">
                                                 <thead>
                                                     <tr>
-                                                        <td><span class="form-label">Application Number</span></td>
-                                                        <td><span class="form-label">Status</span></td>
-                                                        <td><span class="form-label">Company</span></td>
-                                                        <td><span class="form-label">Type</span></td>
-                                                        <td><span class="form-label">Que</span></td>
-                                                        <td><span class="form-label">Invoice</span></td>
-                                                        <td><span class="form-label"></span></td>
-                                                        <td><span class="form-label">Sls</span></td>
-                                                        <td><span class="form-label">Location</span></td>
-                                                        <td><span class="form-label">Employee Name</span></td>
+                                                        <td width="16%"><span class="form-label">Application Number:</span></td>
+                                                        <td width="9%"><span class="form-label">Status:</span></td>
+                                                        <td width="10%"><span class="form-label">Company:</span></td>
+                                                        <td width="10%"><span class="form-label">Type:</span></td>
+                                                        <td width="10%"><span class="form-label">Que:</span></td>
+                                                        <td width="10%"><span class="form-label">Invoice:</span></td>
+                                                        <td width="5%"><span class="form-label"></span></td>
+                                                        <td width="5%"><span class="form-label">Sls:</span></td>
+                                                        <td width="5%"><span class="form-label">Location:</span></td>
+                                                        <td width="20%"><span class="form-label">Employee Name:</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td align="right"><span class="form-text" id="appNum"></span></td>
+                                                        <td align=""><span class="form-text" id="appNum"></span></td>
                                                         <td><span class="form-text" id="status"></span></td>
                                                         <td><span class="form-text" id="company"></span></td>
                                                         <td><span class="form-text" id="type"></span></td>
                                                         <td><span class="form-text" id="que"></span></td>
-                                                        <td align="right"><span class="form-text" id="invoice"></span></td>
+                                                        <td align=""><span class="form-text" id="invoice"></span></td>
                                                         <td><span class="form-text" id="unknw"></span></td>
                                                         <td><span class="form-text" id="sls"></span></td>
                                                         <td align="right"><span class="form-text" id="loc"></span></td>
@@ -89,14 +89,15 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
-                            <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet soldto1_div" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Sold To:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="soldto1"></span>
                                         <br />
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="soldto2"></span>
@@ -109,27 +110,64 @@
                                 </div>
                             </div>
 
-                            <!-- 12 col ends here -->
+                            <!-- col starts here -->
 
-                            <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet bureau1_div" style="padding: 0; margin: 0 0 0 8px;" id="CenPH__lb_RCDDTL1__lb_DZ9TX_new_div">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin: 0">
+                                        <span class="form-label">Bureau:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin: 0">
+                                        <span class="form-text" id="bureau1"></span>&nbsp;&nbsp;<span class="form-text" id="bureau2"></span>&nbsp;&nbsp;<span class="form-text" id="bureau3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col ends here -->
+                        </div>
+                        <!-- content-grid mdl-grid ends here -->
+
+
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid" style="padding: 0">
+
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet ssn_div" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label">Social Security:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="ssn"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col ends here -->
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet homePh_div" style="margin: 0 0 0 8px;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Home Phone:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="homePh"></span>
                                     </div>
                                 </div>
                             </div>
                             <!-- 12 col ends here -->
+
+                        </div>
+                        <!-- content-grid mdl-grid ends here -->
+
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet officePh_div"  style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Office Phone:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-text" id="officePh"></span>
                                         <span class="form-label" style="margin: 0 20px 0 50px;">Ext:</span>
                                         <span class="form-text" id="ext"></span>
@@ -137,73 +175,140 @@
                                 </div>
                             </div>
                             <!-- 12 col ends here -->
-
-                            <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--84col-tablet cellPh_div"  style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Cell Phone:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="cellPh"></span>
                                     </div>
                                 </div>
                             </div>
                             <!-- 12 col ends here -->
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                            </div>
+                            <!-- 12 col ends here -->
+                        </div>
+                        <!-- content-grid mdl-grid ends here -->
 
-                            <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid" style="padding: 0">
+
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet currentobligation_div" style="margin: 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Current Obligation:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="currentobligation"></span>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
 
-                            <!-- 12 col ends here -->
-
-                            
-
-
-                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                            <!-- col ends here -->
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanAuto_div" style="margin: 0 auto;">
                                         <span class="form-label">Auto=</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanAuto_div" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanAuto"></span>
                                     </div>
-                                    
-
-                                </div>
-                            </div>
-
-                            <!-- 12 col ends here -->
-
-                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
-                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanPD_div" style="margin: 0 auto;">
                                         <span class="form-label">PD=</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanPD_div" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPD"></span>&nbsp;&nbsp;&nbsp;
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanunknw"></span>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
 
-                            <!-- 12 col ends here -->
+                            <!-- col ends here -->
+
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet crdAvl_div" style="margin: 0 8px;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label">Credit Available:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="crdAvl"></span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- col ends here -->
 
                         </div>
+                        <!-- content-grid mdl-grid ends here -->
+
+
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid" style="padding: 0">
+
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet spanPromotion1_div" style="margin: 0 8px;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label">Promotion:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPromotion1"></span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- col ends here -->
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet spanPromotion2_div" style="margin: 0 8px;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label"></span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPromotion2"></span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- col ends here -->
+
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet spanDown_div" style="margin: 0 8px;">
+                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span class="form-label">Required Down $:</span>
+                                    </div>
+                                    <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanDown"></span>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- col ends here -->
+
+                        </div>
+                        <!-- content-grid mdl-grid ends here -->
+
+
 
                         <div class="content-grid mdl-grid" style="padding: 20px 0;">
                             <!-- 12 col starts here -->
@@ -235,8 +340,23 @@
                             </div>
                         </div>
 
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DUJTX_new_div">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="margin: 0">
+                                        <span class="form-label">Note:</span>
+                                        <span class="form-text" id="notes" style="margin-left: 5px;" st></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col ends here -->
+                        </div>
+                        <!-- content-grid mdl-grid ends here -->
+
                         <!-- 12 col starts here -->
-                        <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
+                        <%--    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
                             <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                 <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
                                     <span class="form-label">Notes:</span>
@@ -245,7 +365,7 @@
                                     <span data-upgraded=",MaterialTextfield" class="form-text" id="notes"></span>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
                         <!-- 12 col ends here -->
 
                         <div class="content-grid mdl-grid" style="padding: 0;">
@@ -269,7 +389,8 @@
                                                     <td><span class="form-label">V</span></td>
                                                     <td><span class="form-label">$</span></td>
                                                     <td><span class="form-label">M</span></td>
-                                                    <td><span class="form-label">GrDr Override</span></td>
+                                                    <td><span class="form-label">GrDr  Override</span></td>
+                                                    <td><span class="form-label">Down $</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><span class="form-text" id="spanB"></span></td>
@@ -286,12 +407,26 @@
                                                     <td><span class="form-text" id="spanDollar"></span></td>
                                                     <td><span class="form-text" id="spanM"></span></td>
                                                     <td><span class="form-text" id="spanOverride"></span></td>
+                                                    <td><span class="form-text" id="spanDownDollar"></span></td>
                                                 </tr>
                                             </thead>
                                         </table>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="content-grid mdl-grid" id="">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet recommnds_div" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="margin: 0">
+                                        <span class="form-label">Recommnds:</span>
+                                        <span class="form-text" id="recommnds" style="margin-left: 5px;" st></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col ends here -->
                         </div>
 
                         <div class="content-grid mdl-grid" style="padding: 20px 0;">
@@ -303,13 +438,13 @@
                                             <thead>
                                                 <tr>
                                                     <td><span class="form-label">Last Application #:</span></td>
-                                                    <td><span class="form-label">- Date:</span></td>
-                                                    <td><span class="form-label">- Time:</span></td>
-                                                    <td><span class="form-label">- S:</span></td>
-                                                    <td><span class="form-label">Name:</span></td>
+                                                    <td><span class="form-label">- Date</span></td>
+                                                    <td><span class="form-label">- Time</span></td>
+                                                    <td><span class="form-label">- S</span></td>
+                                                    <td><span class="form-label">Name</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="right"><span class="form-text" id="lastApp"></span></td>
+                                                    <td align=""><span class="form-text" id="lastApp"></span></td>
                                                     <td align="right"><span class="form-text" id="date1"></span></td>
                                                     <td align="right"><span class="form-text" id="time1"></span></td>
                                                     <td align="right"><span class="form-text" id="spanU"></span></td>
@@ -370,7 +505,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" data-tb-index="1" size="10" id="btnOption" onfocus="_09('#DL5ST','22,74','#RCDDTL1');"></span>
+                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" data-tb-index="1" size="10" id="btnOption" onfocus="_09('#DL5ST','22,74','#RCDDTL1');" maxlength="3"></span>
                                     </div>
                                 </div>
                             </div>
@@ -1658,12 +1793,21 @@
                 "CenPH__lb_RCDDTL1__lb_DBPTX+CenPH__lb_RCDDTL1__lb_DBOTX": "soldto3",
                 "CenPH__lb_RCDDTL1__lb_DBLTX": "soldto4",
                 "CenPH__lb_RCDDTL1__lb_DUSTX": "soldto5",
+                "CenPH__lb_RCDDTL1__lb_1AMCO": "bureau1",
+                "CenPH__lb_RCDDTL1__lb_DZ9TX": "bureau2",
+                "CenPH__lb_RCDDTL1_V1C4DT": "bureau3",
+                "CenPH__lb_RCDDTL1__lb_1A4NB": "ssn",
                 "CenPH__lb_RCDDTL1__lb_DD1NB": "homePh",
+                "CenPH__lb_RCDDTL1__lb_DAWNB": "ext",
                 "CenPH__lb_RCDDTL1__lb_DD2NB": "officePh",
                 "CenPH__lb_RCDDTL1__lb_DPRNB": "cellPh",
                 "CenPH__lb_RCDDTL1__lb_1GXVA": "currentobligation",
                 "CenPH__lb_RCDDTL1__lb_1LQST": "spanAuto",
                 "CenPH__lb_RCDDTL1__lb_1LRST": "spanPD",
+                "CenPH__lb_RCDDTL1__lb_DHHVA": "crdAvl",
+                "CenPH__lb_RCDDTL1__lb_1ALCO": "spanPromotion1",
+                "CenPH__lb_RCDDTL1__lb_1ACCT": "spanPromotion2",
+                "CenPH__lb_RCDDTL1__lb_DHBVA": "spanDown",
                 "CenPH__lb_RCDDTL1__lb_1ACCT": "spanunknw",
                 "CenPH__lb_RCDDTL1__lb_1GFVA": "product",
                 "CenPH__lb_RCDDTL1__lb_1GGVA": "maintenance",
@@ -1673,18 +1817,21 @@
                 "CenPH__lb_RCDDTL1__lb_1JANB": "applicationRisk",
                 "CenPH__lb_RCDDTL1__lb_DUJTX": "notes",
                 "CenPH__lb_RCDDTL1__lb_1BNKR": "spanB",
-                "CenPH__lb_RCDDTL1__lb_1K9ST": "spanF",
-                "CenPH__lb_RCDDTL1__lb_1K8ST": "spanP",
-                "CenPH__lb_RCDDTL1__lb_1K2ST": "spanD",
-                "CenPH__lb_RCDDTL1__lb_1K4ST": "spanI",
-                "CenPH__lb_RCDDTL1__lb_1K3ST": "spanC",
-                "CenPH__lb_RCDDTL1__lb_1LAST": "spanA",
-                "CenPH__lb_RCDDTL1__lb_1K6ST": "spanS",
-                "CenPH__lb_RCDDTL1__lb_1LMST": "spanL",
-                "CenPH__lb_RCDDTL1__lb_1LVST": "spanG",
-                "CenPH__lb_RCDDTL1__lb_1LWST": "spanV",
-                "CenPH__lb_RCDDTL1__lb_1LXST": "spanDollar",
+                "CenPH__lb_RCDDTL1__lb_1LBST": "spanF",
+                "CenPH__lb_RCDDTL1__lb_1K9ST": "spanP",
+                "CenPH__lb_RCDDTL1__lb_1K8ST": "spanD",
+                "CenPH__lb_RCDDTL1__lb_1K2ST": "spanI",
+                "CenPH__lb_RCDDTL1__lb_1K4ST": "spanC",
+                "CenPH__lb_RCDDTL1__lb_1K3ST": "spanA",
+                "CenPH__lb_RCDDTL1__lb_1LAST": "spanS",
+                "CenPH__lb_RCDDTL1__lb_1K6ST": "spanL",
+                "CenPH__lb_RCDDTL1__lb_1LMST": "spanG",
+                "CenPH__lb_RCDDTL1__lb_1LVST": "spanV",
+                "CenPH__lb_RCDDTL1__lb_1LWST": "spanDollar",
+                "CenPH__lb_RCDDTL1__lb_1LXST": "spanM",
+                "CenPH__lb_RCDDTL1__lb_DYCVA": "spanDownDollar",
                 "CenPH__lb_RCDDTL1__lb_1IONB": "spanOverride",
+                "CenPH__lb_RCDDTL1__lb_1ULTX": "recommnds",
                 "CenPH__lb_RCDDTL1__lb_DH2NB": "lastApp",
                 "ctl00\\$CenPH\\$_lb_RCDDTL1_VDENDT": "date1",
                 "CenPH__lb_RCDDTL1__lb_DAHTM": "time1",
@@ -1707,6 +1854,25 @@
             $("#next").click(function (event) {
                 _00('Enter', event);
             });
+            
+            $.each(copyToAndFrom['displayOnlyFields'], function (i, el) {
+                if ($("#" + copyToAndFrom['displayOnlyFields'][i]).html() == '') {
+                    console.log($("#" + copyToAndFrom['displayOnlyFields'][i]));
+                    $("." + copyToAndFrom['displayOnlyFields'][i] + "_div").remove();
+                }
+            });
+
+            $('#btnOption').keypress(function (e) {
+                var regex = new RegExp("^[a-zA-Z0-9]+$");
+                var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                if (regex.test(str)) {
+                    return true;
+                }
+
+                e.preventDefault();
+                return false;
+            });
         });
     </script>
+    
 </asp:Content>
