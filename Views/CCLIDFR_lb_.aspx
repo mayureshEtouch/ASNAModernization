@@ -101,7 +101,7 @@
 </div>
 <!-- Modified HTML code ends here -->
 
-        <div id="Div1" style="display:none">
+        <div id="Div1">
             
       <%--  CA: DFW Notes-Store       Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -440,7 +440,17 @@
 			var dataMergeIndices = [[0], [1]];
 			
 			generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
-			           
+			$('body').on("click", "#next-page, #previous-page", function(event) {
+       $("#previous-page,#next-page").remove();
+                setTimeout(function(){
+                    if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length === 0) {
+                        $("#displayData").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                    if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                        $("#displayData").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                    }
+                },10)
+            });           
             $('.close-icon').click(function (event) {
                 _00("F12", event);
             });
