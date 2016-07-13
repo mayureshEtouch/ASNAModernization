@@ -293,42 +293,52 @@
         </div>
         <!-- content-grid mdl-grid ends here -->
 
-
-        <!-- content-grid mdl-grid starts here -->
-        <div class="content-grid mdl-grid">
-          <!-- col starts here -->
-          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_DUNTX_new_div">
-            <div class="content-grid">
-              <div id="CenPH__lb_RCDDTL1__lb_1ALCO_new_div" class="mdl-cell--3-col mdl-cell--2-col-tablet mdl-grid">
-                <div class="mdl-cell mdl-cell--9-col mdl-cell--1-col-tablet" style="margin:0">
+<!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid">
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1ALCO_new_div" style="padding:0">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet"  style="margin:0">
                   <span class="form-label">Prom:</span>
                 </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" style="margin:0; margin-left:16px;">
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALCO_new"></span>
                 </div>
               </div>
-              <div id="CenPH__lb_RCDDTL1__lb_1G4VA_new_div" class="mdl-cell--2-col mdl-cell--2-col-tablet mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet" style="margin:0">
+            </div>
+            <!-- col ends here -->
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1G4VA_new_div" style="padding:0">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-label">P$:</span>
                 </div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet" style="margin:0">
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1G4VA_new"></span>
                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ACCT_new"></span>
                 </div>
               </div>
-              <div id="CenPH__lb_RCDDTL1__lb_DHBVA_new_div" class="mdl-cell--2-col mdl-cell--2-col-tablet mdl-grid">
-                <div class="mdl-cell mdl-cell--9-col mdl-cell--1-col-tablet" style="margin:0">
+            </div>
+            <!-- col ends here -->
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_DHBVA_new_div" style="padding:0">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-label">Required Down:</span>
                 </div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet" style="margin:0">
-                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DHBVA_new"></span>
-                </div>
-              </div>
-              <div id="" class="mdl-cell--3-col mdl-cell--2-col-tablet mdl-grid">
-              </div>
-            </div>
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
+                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DHBVA_new"></span>
+               </div>
+             </div>
+           </div>
+           <!-- col ends here -->
+           <!-- col starts here -->
+           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_DHHVA_new_div" style="padding:0">
+            
           </div>
           <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
 
         </div>
         <!-- content-grid mdl-grid ends here -->
@@ -405,13 +415,13 @@
                       <td><span class="form-label">V</span></td>
                       <td><span class="form-label">$</span></td>
                       <td><span class="form-label">M</span></td>
-                      <td><span class="form-label">R:</span></td>
+                      <td><span class="form-label">R</span></td>
 
-                      <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1IONB_new_div_">Ovr:</span></td>
+                      <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1IONB_new_div_">Ovr</span></td>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1IONB_new"></span></td>
-                      <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DYCVA_new_div">Down $:</span></td>
+                      <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DYCVA_new_div">Down $</span></td>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DYCVA_new"></span></td>
-                      <td><span class="form-label" id="CenPH__lb_RCDDTL1_V1AGP3_new_div">%:</span></td>
+                      <td><span class="form-label" id="CenPH__lb_RCDDTL1_V1AGP3_new_div">%</span></td>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1_V1AGP3_new"></span></td>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1U3TX_new"></span></td>
                     </tr>
@@ -625,13 +635,14 @@
         "CenPH__lb_RCDDTL1__lb_DPQST":"CenPH__lb_RCDDTL1__lb_DPQST_new",
         "CenPH__lb_RCDDTL1__lb_1GFVA":"CenPH__lb_RCDDTL1__lb_1GFVA_new",
         "CenPH__lb_RCDDTL1__lb_1GGVA":"CenPH__lb_RCDDTL1__lb_1GGVA_new",
-        "DdsConstant32":"CenPH__lb_RCDDTL1__lb_1GGVA_new_div",//For Label
+        "CenPH_DdsConstant32":"CenPH__lb_RCDDTL1__lb_1GGVA_new_div",//For Maint Label
         "CenPH__lb_RCDDTL1__lb_1G1VA":"CenPH__lb_RCDDTL1__lb_1G1VA_new",
-        "CenPH_DdsConstant38":"CenPH__lb_RCDDTL1__lb_1G1VA_new_div",//For label
+        "CenPH_DdsConstant38":"CenPH__lb_RCDDTL1__lb_1G1VA_new_div",//For Dev/Ins label
         "CenPH__lb_RCDDTL1__lb_1GEVA":"CenPH__lb_RCDDTL1__lb_1GEVA_new",
         "CenPH__lb_RCDDTL1__lb_DGUVA":"CenPH__lb_RCDDTL1__lb_DGUVA_new",
         "CenPH__lb_RCDDTL1__lb_DUJTX":"CenPH__lb_RCDDTL1__lb_DUJTX_new",
         "CenPH__lb_RCDDTL1__lb_1IONB":"CenPH__lb_RCDDTL1__lb_1IONB_new",
+        "CenPH_DdsConstant30":"CenPH__lb_RCDDTL1__lb_1IONB_new_div_", // Ovr lable
         "CenPH__lb_RCDDTL1__lb_DYCVA":"CenPH__lb_RCDDTL1__lb_DYCVA_new",
         "CenPH__lb_RCDDTL1_V1AGP3":"CenPH__lb_RCDDTL1_V1AGP3_new",
         "CenPH__lb_RCDDTL1__lb_1U3TX":"CenPH__lb_RCDDTL1__lb_1U3TX_new",
