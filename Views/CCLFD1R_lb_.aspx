@@ -118,10 +118,10 @@
                   <span class="form-label">CB Level:</span>
                 </div>
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
-                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DZ9TX_new"> </span>
+                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DZ9TX_new" style="padding-right:5px;"> </span>
                   (<span class="form-text" id="CenPH__lb_RCDDTL1__lb_DESN_lb__new"></span>)
-                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AMCO_new"> </span>
-                  <span class="form-text" id="CenPH__lb_RCDDTL1_V1C4DT_new"> </span>
+                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AMCO_new" style="padding-left:5px;"> </span>
+                  <span class="form-text" id="CenPH__lb_RCDDTL1_V1C4DT_new" style="padding-left:5px;"> </span>
                 </div>
               </div>
             </div>
@@ -210,7 +210,7 @@
                 </div>
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DD2NB_new"></span>
-                <span class="form-label" style="margin:0 20px 0 50px;">Ext:</span>
+                <span class="form-label" id="CenPH__lb_RCDDTL1__lb_DAWNB_new_div" style="margin:0 20px 0 50px;">Ext:</span>
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAWNB_new"></span>&nbsp;
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DVUTX_new"></span>&nbsp;
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DVVTX_new"></span>
@@ -455,7 +455,7 @@
           <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0">
-                <span class="form-label">Recommends:</span>
+                <span class="form-label">Recommends: </span>
               </div>
               <div class="mdl-cell mdl-cell--11-col mdl-cell--4-col-tablet" style="margin:0">
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ULTX_new"></span><br />
@@ -601,7 +601,7 @@
       "CenPH__lb_RCDDTL1__lb_DZ9TX":"CenPH__lb_RCDDTL1__lb_DZ9TX_new",
       "CenPH__lb_RCDDTL1__lb_DESN_lb_":"CenPH__lb_RCDDTL1__lb_DESN_lb__new",
       "CenPH__lb_RCDDTL1__lb_1AMCO":"CenPH__lb_RCDDTL1__lb_1AMCO_new",
-      "CenPH__lb_RCDDTL1_V1C4DT":"CenPH__lb_RCDDTL1_V1C4DT_new",
+      "ctl00\\$CenPH\\$_lb_RCDDTL1_V1C4DT":"CenPH__lb_RCDDTL1_V1C4DT_new",
       "CenPH__lb_RCDDTL1__lb_DALTX":"CenPH__lb_RCDDTL1__lb_DALTX_new",
       "CenPH__lb_RCDDTL1__lb_DPRNB":"CenPH__lb_RCDDTL1__lb_DPRNB_new",
       "CenPH__lb_RCDDTL1__lb_1A4NB":"CenPH__lb_RCDDTL1__lb_1A4NB_new",
