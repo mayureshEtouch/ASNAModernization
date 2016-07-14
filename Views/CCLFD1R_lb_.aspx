@@ -170,7 +170,7 @@
                       <span class="form-text" id="CenPH__lb_RCDDTL1_VDD2DT_new"></span><br />
                       <span class="form-text" id="CenPH__lb_RCDDTL1_VDD3DT_new"></span>
                     </td>
-                    <td></span></td>
+                    <td></td>
                   </tr>
                 </thead>
               </table>
@@ -340,7 +340,7 @@
         </div>
         <!-- content-grid mdl-grid ends here -->
 
-        </div>
+        
         <!-- content-grid mdl-grid ends here -->
 
         <div class="content-grid mdl-grid" style="padding: 20px 0;">
@@ -574,8 +574,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
 </section>
 
 </main>
@@ -692,7 +691,6 @@
       }
 
       $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB","CenPH__lb_RCDDTL1__lb_DC4N_lb_","CenPH__lb_RCDDTL1__lb_1BNKR","CenPH__lb_RCDDTL1__lb_1LBST","CenPH__lb_RCDDTL1__lb_1K9ST","CenPH__lb_RCDDTL1__lb_1K8ST","CenPH__lb_RCDDTL1__lb_1K2ST","CenPH__lb_RCDDTL1__lb_1K4ST","CenPH__lb_RCDDTL1__lb_1K3ST","CenPH__lb_RCDDTL1__lb_1LAST","CenPH__lb_RCDDTL1__lb_1K6ST","CenPH__lb_RCDDTL1__lb_1LMST","CenPH__lb_RCDDTL1__lb_1LVST","CenPH__lb_RCDDTL1__lb_1LWST","CenPH__lb_RCDDTL1__lb_1LXST","CenPH__lb_RCDDTL1__lb_DSKST"],function(i,el){
-        console.log(el);
         if($("#"+el).css('color')=="rgb(255, 0, 0)"){
           $("#"+el+"_new").css('color','red');
           $("#"+el+"_new_div").css('color','red');
