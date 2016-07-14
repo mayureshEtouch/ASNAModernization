@@ -696,6 +696,10 @@
           $("#"+el+"_new_div").css('color','red');
         }
       });
+      var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html();
+      if(html != undefined && html.length==11){
+          $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,7).replace(/\d/g,'*')+html.substr(-4));
+      }
     });
   </script>
   <div id="Div1" style="display:none;">
