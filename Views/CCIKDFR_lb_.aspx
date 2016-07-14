@@ -92,7 +92,7 @@
 																							
 												</tbody>
 										</table>
-										<a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+										
 								</div>
                                 
 								<div class="button-container">
