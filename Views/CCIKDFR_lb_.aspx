@@ -79,20 +79,20 @@
 								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
 								 <thead>
 													<tr>
-														<th>From</th>
-														<th>Type</th>
-														<th>Status</th>
-														<th>Submitted Date</th>
-														<th>Submitted Time</th>
-														<th>Returned Date</th>
-														<th>Returned Time</th>
+														<th>Request From</th>
+														<th>Request Type</th>
+														<th>Request Status</th>
+														<th>Request Submitted Date</th>
+														<th>Request Submitted Time</th>
+														<th>Request Returned Date</th>
+														<th>Request Returned Time</th>
 													</tr>
 												</thead>
 												<tbody>
 																							
 												</tbody>
 										</table>
-										<a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+										
 								</div>
                                 
 								<div class="button-container">
