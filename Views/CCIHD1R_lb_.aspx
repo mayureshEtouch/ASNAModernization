@@ -79,7 +79,7 @@
                                                         <td align=""><span class="form-text" id="invoice"></span></td>
                                                         <td><span class="form-text" id="unknw"></span></td>
                                                         <td><span class="form-text" id="sls"></span></td>
-                                                        <td align="right"><span class="form-text" id="loc"></span></td>
+                                                        <td align=""><span class="form-text" id="loc"></span></td>
                                                         <td><span class="form-text" id="empName"></span></td>
                                                     </tr>
                                                 </thead>
@@ -92,7 +92,7 @@
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet soldto1_div" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Sold To:</span>
@@ -144,7 +144,7 @@
                             </div>
                             <!-- col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet homePh_div" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Home Phone:</span>
@@ -162,7 +162,7 @@
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet officePh_div"  style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet officePh_div" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Office Phone:</span>
@@ -176,7 +176,7 @@
                             </div>
                             <!-- 12 col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--84col-tablet cellPh_div"  style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--84col-tablet cellPh_div" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Cell Phone:</span>
@@ -324,6 +324,7 @@
                                                     <td><span class="form-label">- Down</span></td>
                                                     <td><span class="form-label">= Requested</span></td>
                                                     <td><span class="form-label">Application Risk</span></td>
+                                                    <td id="invoiceRiskTd"><span class="form-label">Invoice Risk</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td align="right"><span class="form-text" id="product"></span></td>
@@ -332,6 +333,7 @@
                                                     <td align="right"><span class="form-text" id="down"></span></td>
                                                     <td align="right"><span class="form-text" id="requested"></span></td>
                                                     <td align="right"><span class="form-text" id="applicationRisk"></span></td>
+                                                    <td align="right" id="invoiceRiskTd1"><span class="form-text" id="invoiceRisk"></span></td>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -341,7 +343,7 @@
                         </div>
 
                         <!-- content-grid mdl-grid starts here -->
-                        <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DUJTX_new_div">
+                        <div class="content-grid mdl-grid notes_div" id="CenPH__lb_RCDDTL1__lb_DUJTX_new_div">
                             <!-- col starts here -->
                             <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding: 0">
                                 <div class="content-grid mdl-grid">
@@ -390,7 +392,7 @@
                                                     <td><span class="form-label">$</span></td>
                                                     <td><span class="form-label">M</span></td>
                                                     <td><span class="form-label">GrDr  Override</span></td>
-                                                    <td><span class="form-label">Down $</span></td>
+                                                    <td id="downDollar"><span class="form-label">Down $</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><span class="form-text" id="spanB"></span></td>
@@ -407,7 +409,7 @@
                                                     <td><span class="form-text" id="spanDollar"></span></td>
                                                     <td><span class="form-text" id="spanM"></span></td>
                                                     <td><span class="form-text" id="spanOverride"></span></td>
-                                                    <td><span class="form-text" id="spanDownDollar"></span></td>
+                                                    <td id="downDollar1"><span class="form-text" id="spanDownDollar"></span></td>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -437,7 +439,7 @@
                                         <table cellspacing="0" cellpadding="0" border="0" class="normal-table" id="" data-upgraded=",MaterialDataTable">
                                             <thead>
                                                 <tr>
-                                                    <td><span class="form-label">Last Application #:</span></td>
+                                                    <td><span class="form-label">Last Application Number</span></td>
                                                     <td><span class="form-label">- Date</span></td>
                                                     <td><span class="form-label">- Time</span></td>
                                                     <td><span class="form-label">- S</span></td>
@@ -505,7 +507,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" data-tb-index="1" size="10" id="btnOption" onfocus="_09('#DL5ST','22,74','#RCDDTL1');" maxlength="3"></span>
+                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" data-tb-index="1" size="10" id="btnOption" maxlength="3"></span>
                                     </div>
                                 </div>
                             </div>
@@ -1815,6 +1817,7 @@
                 "CenPH__lb_RCDDTL1__lb_1GEVA": "down",
                 "CenPH__lb_RCDDTL1__lb_DGUVA": "requested",
                 "CenPH__lb_RCDDTL1__lb_1JANB": "applicationRisk",
+                "CenPH__lb_RCDDTL1__lb_1JBNB": "invoiceRisk",
                 "CenPH__lb_RCDDTL1__lb_DUJTX": "notes",
                 "CenPH__lb_RCDDTL1__lb_1BNKR": "spanB",
                 "CenPH__lb_RCDDTL1__lb_1LBST": "spanF",
@@ -1842,6 +1845,9 @@
                 "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AGDT": "date2",
                 "CenPH__lb_RCDDTL1__lb_1ABTM": "time2",
                 "CenPH__lb_RCDDTL1__lb_1AAVN": "spanby"
+            },
+            "inputFields": {
+                "CenPH__lb_RCDDTL1__lb_DL5ST": "btnOption",
             }
         }
 
@@ -1854,7 +1860,7 @@
             $("#next").click(function (event) {
                 _00('Enter', event);
             });
-            
+
             $.each(copyToAndFrom['displayOnlyFields'], function (i, el) {
                 if ($("#" + copyToAndFrom['displayOnlyFields'][i]).html() == '') {
                     console.log($("#" + copyToAndFrom['displayOnlyFields'][i]));
@@ -1862,8 +1868,18 @@
                 }
             });
 
+            if ($(("#CenPH__lb_RCDDTL1__lb_1JBNB").html == '')) {
+                $("#invoiceRiskTd").remove();
+                $("#invoiceRiskTd1").remove();
+            }
+            if ($(("#CenPH__lb_RCDDTL1__lb_DYCVA").html == '')) {
+                $("#downDollar").remove();
+                $("#downDollar1").remove();
+            }
+
+
             $('#btnOption').keypress(function (e) {
-                var regex = new RegExp("^[a-zA-Z0-9]+$");
+                var regex = new RegExp("^[a-zA-Z0-9\\?]+$");
                 var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
                 if (regex.test(str)) {
                     return true;
@@ -1874,5 +1890,5 @@
             });
         });
     </script>
-    
+
 </asp:Content>
