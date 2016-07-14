@@ -35,30 +35,10 @@
         <!-- Navigation -->
         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCL5DFI</span>
         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+        <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span>
       </div>
     </div>
   </section>
-  <section class="progress-bar">
-    <div class="progress-bar-wrapper">
-      <ul class="progress-bar-main">
-        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-        <li class="progress-bar-divider-first">
-
-          <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
-          <li class="progress-bar-divider">
-
-            <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
-            <li class="progress-bar-divider">
-
-              <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
-              <li class="progress-bar-divider">
-
-                <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
-              </ul>
-            </div>
-          </section>
-
           <section class="table-data-content-container filter-field-container mrgnTp16">
             <div class="table-data-wrapper">
               <div class="table-data-maincontainer">
@@ -86,7 +66,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" id="filter-by-co" style="width: 120px;">
                       
-                      <input type="text" class="mdl-textfield__input" data-tb-index="3" id="requestdate">
+                      <input type="text" class="mdl-textfield__input" data-tb-index="1" id="requestdate" >
                       <i id="reqesdate" class="material-icons calender-icon page-icons editable-data" style="position: absolute; right: -13px; top: 14px;"></i>
 
                       <span id="reqdate" class="DdsCharField_OutputOnly" style="display:none;"></span>
@@ -95,7 +75,7 @@
                       <span class="summary-table-title pull-right">Status</span>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="filter-by-co">
-                      <input type="text" class="mdl-textfield__input" data-tb-index="3" id="CenPH__lb_SFLCTL__lb_2TJST_new" maxlength="1">
+                      <input type="text" class="mdl-textfield__input"  id="CenPH__lb_SFLCTL__lb_2TJST_new" maxlength="1" data-tb-index="1">
                     </div>
 
                   </div>
@@ -139,9 +119,7 @@
                 <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop">
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F12">Previous</span>
                 </div>
-                <!-- <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
-                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                </div> -->
+                
               </div>
             </div>
           </div>
@@ -155,8 +133,8 @@
   <script type="text/javascript">
     var copyToAndFrom = {
       "displayOnlyFields": {
-        "CenPH__lb_SFLCTL__lb__lb_TME":"date",
-        "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+        "CenPH_DdsConstant11":"date",
+        "CenPH__lb_SFLCTL__lb__lb_TME":"time",
         "CenPH__lb_SFLCTL__lb_2CCID":"CenPH__lb_SFLCTL__lb_2CCID_new",
         "CenPH__lb_SFLCTL__lb_2FSCO":"CenPH__lb_SFLCTL__lb_2FSCO_new",
       },
