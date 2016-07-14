@@ -194,7 +194,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
-                  <span class="form-label">Home:</span>
+                  <span class="form-label">Home Phone:</span>
                 </div>
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0">
                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DD1NB_new"></span>

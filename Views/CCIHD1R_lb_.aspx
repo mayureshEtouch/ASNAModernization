@@ -198,12 +198,12 @@
                         <div class="content-grid mdl-grid" style="padding: 0">
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet currentobligation_div" style="margin: 0 8px;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet currentobligation_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Current Obligation:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0 auto 0 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="currentobligation"></span>
                                     </div>
 
@@ -213,10 +213,10 @@
 
                             <!-- col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0 auto;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0  0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanAuto_div" style="margin: 0 auto;">
-                                        <span class="form-label">Auto=</span>
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanAuto_div" style="margin: 0;">
+                                        <span class="form-label" style="margin-left:4px;">Auto=</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanAuto_div" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanAuto"></span>
@@ -225,7 +225,7 @@
                                         <span class="form-label">PD=</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanPD_div" style="margin: 0 auto;">
-                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPD"></span>&nbsp;&nbsp;&nbsp;
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="spanPD"></span>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="spanunknw"></span>
                                     </div>
 
