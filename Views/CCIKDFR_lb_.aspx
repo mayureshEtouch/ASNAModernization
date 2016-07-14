@@ -577,7 +577,6 @@
               	_00('F3',event);
             });
             if($(".simplePopupClose").length > 0) {
-				console.log
                  $(".simplePopupBackground1").show();
            } else {
                $(".simplePopupBackground1").hide();
