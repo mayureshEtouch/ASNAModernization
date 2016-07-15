@@ -4,6 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 7/12/2016 at 8:55 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCLADFR# --%>
+		<link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+		<link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+		<script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
 
     </asp:Content>
 
@@ -22,7 +34,92 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+		<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+	<header class="mdl-layout__header">
+		<div class="mdl-layout__header-row"> 
+			<!-- Title --> 
+			<span class="mdl-layout-title logo-icon"></span>
+			<div class="mdl-layout-spacer"></div>
+			<span class="close-icon"><i class="material-icons md-15 close"></i></span>
+		</div>
+	</header>
+	<main class="mdl-layout__content">
+		<section class="time-date">
+			<div class="content-grid mdl-grid">
+				<div class="mdl-cell mdl-cell--9-col"> 
+					<!-- Title --> 
+					<span class="heading-h1">Product Requested</span> 
+				</div>
+				<div class="mdl-cell mdl-cell--3-col pull-right"> 
+					<!-- Navigation --> 
+					<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLADFR</span>
+				</div>
+			</div>
+		</section>
+		
+		<section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title" style="display: inline-block">Totals:</span>
+                            <span class="summary-txt" style="display: inline-block"><span id="total" class="mrgnLft20"></span></span>
+                        </div> 
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                            <span class="summary-title" style="display: inline-block">SMA Value:</span>
+                            <span class="summary-txt" style="display: inline-block"><span id="smaValue" class="mrgnLft20"></span></span>                           
+                        </div> 
+                    </div>
+            	</div>
+            </section>
+		
+		<section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+            <div class="table-data-wrapper">
+				<div class="table-data-maincontainer">
+					<div style="overflow: auto;" class="table-container">
+						<div>							  
+							<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								<thead>
+									<tr>
+										<th width="5%">Category</th>
+										<th>Model Number</th>
+										<th>Prd Cat Desc</th>
+										<th>Product Quantity</th>
+										<th>Product Value</th>
+										<th>GPM Code</th>
+										<th>Maint</th>
+									</tr>
+								</thead>
+								<tbody>
+																			
+								</tbody>
+							</table>
+							
+						</div>
+                                
+						<div class="button-container">
+							<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Previous</span>
+								</div>
+								<div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop pull-right">
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</main>
+	<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+
+        <div id="Div1" style="display:none">
             
       <%--  CA: DFW Details-Display   Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -443,4 +540,104 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style>
+        #__Page_PopUp {
+            min-width: 450px !important;
+            width: 450px !important;
+			left: 50% !important;
+			margin-left: -225px;
+      top: 15% !important;
+        }
+		#__Page_PopUp > tr:first-child {
+			display: none;
+		}
+
+		#__Page_PopUp .DdsInlinePopUpTitle {
+			height: 0;
+		}
+        #selectWarranty tbody tr td:last-child {
+            display: none;
+        }
+        .modal-dialog-container {
+            width: 100%;
+            margin: 0 0 3%;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+			width: 100% !important;
+		}
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+    </style>
+	
+	 <script type="text/javascript">
+	 
+	  var copyToAndFromData = {
+              "displayOnlyFields": {
+                  "CenPH__lb_SFLCTL__lb_2GFVA": "total",
+				  "CenPH__lb_SFLCTL__lb_CLIVA":"smaValue"
+              },
+              "inputFields": {
+			
+              }
+          };
+		  
+        $(document).ready(function () {
+		
+			copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+            
+			var dataMergeIndices = [[0], [1] ,[2], [3], [4], [5], [6]];
+			
+			generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+			$('body').on("click", "#next-page, #previous-page", function(event) {
+       $("#previous-page,#next-page").remove();
+                setTimeout(function(){
+                    if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length === 0) {
+                        $("#displayData").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                    if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                        $("#displayData").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                    }
+                },10)
+            });           
+            $('.close-icon').click(function (event) {
+                _00("F12", event);
+            });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
+		   
+		
+		   $("#Exit").click(function(event){
+				_00('F12', event);
+		   });
+		   
+		    $("#submit").click(function(event){
+				_00('Enter', event);
+		   });
+		   
+		   
+		    $("table tr").dblclick(function(event) {
+			  return false;
+			});
+			
+        });
+
+    </script>
     </asp:Content>
