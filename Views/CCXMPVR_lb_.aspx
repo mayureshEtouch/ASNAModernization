@@ -41,7 +41,7 @@
       <!-- Title --> 
       <span class="mdl-layout-title logo-icon"></span>
       <div class="mdl-layout-spacer"></div>
-      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+      <span class="close-icon" event-data="F12"><i class="material-icons md-15 close"></i></span>
     </div>
   </header>
   <main class="mdl-layout__content">
@@ -107,7 +107,7 @@
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
-              <span class="form-label">AdjPrevCust:</span>
+              <span class="form-label">Adj Prev Cust:</span>
             </div>
             <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
               <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX1NB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant7_new">Conn's Customer Adjustment</span></span>

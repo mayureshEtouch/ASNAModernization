@@ -468,9 +468,9 @@
         <!-- content-grid mdl-grid starts here -->
         <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DC4N_lb__new_c_div">
           <!-- col starts here -->
-          <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet" style="padding:0">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet " style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-tablet pull-right" style="margin:0">
+              <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet pull-right tablet-mrgleft-price" style="margin:0 0 0 -12px">
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DC4N_lb__new"></span>&nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DZ0NB_new"></span>
               </div>
@@ -697,11 +697,24 @@
         }
       });
       var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html();
-      if(html != undefined && html.length==11){
-          $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,7).replace(/\d/g,'*')+html.substr(-4));
+      if(html != undefined && html.length>0){
+          $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
       }
+      $("#CenPH__lb_RCDDTL1__lb_DL6ST_new").focus();
     });
   </script>
+	<style>
+			@media screen and (max-width: 1025px) {
+				.tablet-mrgleft-price {
+					margin-left: 9px !important;
+				}
+			}
+			@media screen and (max-width: 1024px) {
+				.tablet-mrgleft-price {
+					margin-left: 4px !important;
+				}
+			}
+</style>
   <div id="Div1" style="display:none;">
 
     <%--  CA: DS1 Appl-Display      Display record(1 screen)                                                   --%>
