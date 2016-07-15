@@ -41,7 +41,7 @@
       <!-- Title --> 
       <span class="mdl-layout-title logo-icon"></span>
       <div class="mdl-layout-spacer"></div>
-      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+      <span class="close-icon" event-data="F12"><i class="material-icons md-15 close"></i></span>
     </div>
   </header>
   <main class="mdl-layout__content">
