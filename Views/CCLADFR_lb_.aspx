@@ -101,7 +101,7 @@
 						<div class="button-container">
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
-									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Previous</span>
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
 								</div>
 							
 							</div>
