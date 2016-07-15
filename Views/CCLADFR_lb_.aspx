@@ -540,10 +540,10 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
 	<style>
         #__Page_PopUp {
-            min-width: 450px !important;
-            width: 450px !important;
+            min-width: 700px !important;
+            width: 700px !important;
 			left: 50% !important;
-			margin-left: -225px;
+			margin-left: -350px;
       top: 15% !important;
         }
 		#__Page_PopUp > tr:first-child {
