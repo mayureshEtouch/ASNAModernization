@@ -694,6 +694,9 @@
 			$("body").on("click", ".simplePopupClose", function() {
 				$(".simplePopupBackground1").hide();
 			});
+			
+			
+			
 			if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
 			  /*Pop up confirm box*/
 			  $(".OverlayPopupBackground").show();
@@ -709,7 +712,10 @@
 			  });
 
 			}
-			
+		
+			setTimeout(function(){
+				$("#btnOption").removeAttr("tabindex");
+			},1000);
 			
         });
 
