@@ -176,7 +176,7 @@
                            		<span class="form-label">Country:</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-								<select id="country"> 
+								<select data-tb-index="4" id="country"> 
 									<option value=" ">Please Choose</option>
 									<option value="MEX">Mexico</option>
 									<option value="CAN">Canada</option>
@@ -193,10 +193,10 @@
 				<div class="button-container">
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop" style="margin-left: 10px;">
-							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+							<span data-tb-index="5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
 						</div>
 						<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
-							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+							<span data-tb-index="6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
 						</div>
 					</div>
 				</div>

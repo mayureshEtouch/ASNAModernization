@@ -82,7 +82,7 @@
 							<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
 								<thead>
 									<tr>
-										<th width="5%">Category</th>
+										<th>Product Category</th>
 										<th>Model Number</th>
 										<th>Prd Cat Desc</th>
 										<th>Product Quantity</th>
@@ -622,7 +622,11 @@
            $("body").on("click", ".simplePopupClose", function() {
                $(".simplePopupBackground1").hide();
            });
-		   
+	
+			$('#displayData tr td:nth-child(5)').each(function(i,col){
+				
+				$(col).text($(col).text().trim());
+			});	 
 		
 		   $("#Exit").click(function(event){
 				_00('F12', event);
