@@ -700,7 +700,8 @@
       if(html != undefined && html.length>0){
           $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
       }
-      $("#CenPH__lb_RCDDTL1__lb_DL6ST_new").focus();
+      //$("#CenPH__lb_RCDDTL1__lb_DL6ST_new").focus();
+
     });
   </script>
 	<style>
