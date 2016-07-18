@@ -507,7 +507,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" data-tb-index="1" size="10" id="btnOption" maxlength="3"></span>
+                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" size="10" id="btnOption" maxlength="3"></span>
                                     </div>
                                 </div>
                             </div>
