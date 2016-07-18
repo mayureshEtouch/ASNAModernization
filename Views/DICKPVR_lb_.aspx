@@ -98,7 +98,7 @@
                            		<span class="form-label">Address Line 1:</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px">
-                           		<span class="form-text"><input type="text" id="address1" class="mdl-textfield__input" size="15" onfocus="_09('#1ANTX','5,16','#RCDDTL1');" maxlength="25" data-tb-index="1"/></span>
+                           		<span class="form-text"><input type="text" id="CenPH__lb_RCDDTL1__lb_1ANTX_new" class="mdl-textfield__input" size="15" onfocus="_09('#1ANTX','5,16','#RCDDTL1');" maxlength="25" data-tb-index="1"/></span>
                         	</div>
 						</div>
 					</div>
@@ -160,7 +160,7 @@
                            		<span class="form-label">Zip Code:</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-                           		<span class="form-text"><input id="zipcode" onfocus="_09('#1APTX','8,17','#RCDDTL1');" type="text" class="mdl-textfield__input" maxlength="10" size="15" data-tb-index="3"/></span>
+                           		<span class="form-text"><input id="CenPH__lb_RCDDTL1__lb_1APTX_new" onfocus="_09('#1APTX','8,17','#RCDDTL1');" type="text" class="mdl-textfield__input" maxlength="10" size="15" data-tb-index="3"/></span>
                         	</div>
 						</div>
 					</div>
@@ -658,9 +658,9 @@
 					"CenPH__lb_RCDDTL1__lb_DADST":"state",
               },
               "inputFields": {
-				"CenPH__lb_RCDDTL1__lb_1ANTX":"address1",
+				"CenPH__lb_RCDDTL1__lb_1ANTX":"CenPH__lb_RCDDTL1__lb_1ANTX_new",
 				"CenPH__lb_RCDDTL1__lb_1AOTX":"address2",
-				"CenPH__lb_RCDDTL1__lb_1APTX":"zipcode"	
+				"CenPH__lb_RCDDTL1__lb_1APTX":"CenPH__lb_RCDDTL1__lb_1APTX_new"	
               }
           };
 		  
@@ -716,6 +716,11 @@
 			setTimeout(function(){
 				$("#btnOption").removeAttr("tabindex");
 			},1000);
+			
+			$(".simplePopupClose").click(function(event){
+				var ele = $("#__focusID__").val().split('$')[1]+"_"+$("#__focusID__").val().split('$')[2]+"_new" ;
+				$("#"+ele).focus();
+			});
 			
         });
 
