@@ -35,11 +35,11 @@
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCJHDFR</span>
                     <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
-        <section class="progress-bar">
+      <%--  <section class="progress-bar">
             <div class="progress-bar-wrapper">
                 <ul class="progress-bar-main">
                     <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
@@ -57,8 +57,8 @@
                     <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>
                 </ul>
             </div>
-        </section>
-        <section class="order-summary">
+        </section>--%>
+        <section class="order-summary mrgnTp16">
             <div class="order-summary-wrapper">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
@@ -108,11 +108,11 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh">Refresh</span>
+                                    <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh">Refresh</span>--%>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
+                                <%--<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -879,12 +879,12 @@
             $("#previous").click(function (event) {
                 _00('F3', event);
             });
-            $("#Refresh").click(function (event) {
-                _00('F5', event);
-            });
-            $("#next").click(function (event) {
-                _00('Enter', event);
-            });
+            //$("#Refresh").click(function (event) {
+            //    _00('F5', event);
+            //});
+            //$("#next").click(function (event) {
+            //    _00('Enter', event);
+            //});
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");

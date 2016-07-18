@@ -49,7 +49,7 @@
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--9-col"> 
               <!-- Title --> 
-              <span class="heading-h1">Credit Promotion Details</span> 
+              <span class="heading-h1" id="heading">Credit Promotion Details</span> 
             </div>
             <div class="mdl-cell mdl-cell--3-col pull-right"> 
               <!-- Navigation --> 
@@ -230,13 +230,13 @@
                             <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
                                   <span class="form-label">Last Name:</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                              <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet">
                                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1V8CD_new"></span>
                               </div>
-                              <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0 0 0 18px" id="CenPH__lb_RCDDTL1__lb_1WBCD_new_div">
+                              <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet" style="margin:0 0 0 18px" id="CenPH__lb_RCDDTL1__lb_1WBCD_new_div">
                                   <span class="form-label">Suffix:</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
+                              <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet">
                                   <span class="form-text" style="margin-left: 10px;" id="CenPH__lb_RCDDTL1__lb_1WBCD_new">I</span>
                               </div>
                 </div>
@@ -544,6 +544,7 @@
         $(document).ready(function () {
         if($("#CenPH__lb_RCDKEY__lb_1ANCO").length>0){
           $(".form-div-first").show();
+          $("#heading").html("Letter Code Key Screen");
           copyData(copyToAndFrom1, "keyup keydown change blur mouseup mousedown");
         }else if($('#CenPH__lb_CONFIRM_VZCFCD').length > 0){
            /*Pop up confirm box*/
