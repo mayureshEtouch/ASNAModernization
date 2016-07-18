@@ -104,7 +104,7 @@
               </div>
               <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 0 0 -3px">
                 <span class="form-text">
-                  <input type="text" class="mdl-textfield__input" size="15" value=""  data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_1GEVA_new" maxlength="9" />
+                  <input type="text" class="mdl-textfield__input pull-right" size="15" value=""  data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_1GEVA_new" maxlength="10" />
                 </span>
               </div>
             </div>
@@ -148,41 +148,49 @@
   </main>
   <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
   <div id="modal" class="simplePopup"></div>
+  <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+    <i class="material-icons md-15 md-light help-icon"></i>
+    <span class="confirmation-text">Do you want to continue</span>
+    <div class="button-container">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+    </div>
+  </div>
 </div>
 <!-- Modified HTML code ends here -->
 <style>
   .modal-dialog-container{width: 800px;}
   #__Page_PopUp {
-                  min-width: 800px !important;
-                  width: 680px !important;
-                  left: 50% !important;
-          margin-left: -400px !important;
-          top: 17% !important;
-              }
-              #__Page_PopUp tbody > tr:first-child {
-                display: none;
-              }
-              #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 0;
-              }
-              .modal-dialog-container {
-                  width: 100%;
-                  margin: 0 0 2% 0;
-              }
-              .mdl-layout__content {
-                  height: auto !important;
-                  overflow: hidden !important;
-              }
-              #wrapper {
-                  width: 100% !important;
-              }
-              #__Page_Hidden{
-                  height: 100% !important;
-              }
-              .simplePopup {
-                left: 28% !important;
-                top: 50% !important;
-              }
+    min-width: 800px !important;
+    width: 680px !important;
+    left: 50% !important;
+    margin-left: -400px !important;
+    top: 17% !important;
+  }
+  #__Page_PopUp tbody > tr:first-child {
+    display: none;
+  }
+  #__Page_PopUp .DdsInlinePopUpTitle {
+    height: 0;
+  }
+  .modal-dialog-container {
+    width: 100%;
+    margin: 0 0 2% 0;
+  }
+  .mdl-layout__content {
+    height: auto !important;
+    overflow: hidden !important;
+  }
+  #wrapper {
+    width: 100% !important;
+  }
+  #__Page_Hidden{
+    height: 100% !important;
+  }
+  .simplePopup {
+    left: 28% !important;
+    top: 50% !important;
+  }
 </style>
 <script type="text/javascript">
   var copyToAndFrom = {
@@ -200,19 +208,34 @@
   }
 
   $(document).ready(function () {
-    copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-    $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").ForceNumericOnly();
-    $("#CenPH__lb_RCDDTL1__lb_1GEVA_new").ForceAmountOnly().numericWithTwoDecimalPrecisions();
-    $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").val($("#CenPH__lb_RCDDTL1__lb_1ACCT_new").val().trim());
+    if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+      /*Pop up confirm box*/
+      $(".OverlayPopupBackground").show();
+      $(".confirmation-outer-conatiner").show();
+
+      $("#yes").click(function (event) {
+        $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+        _16(event,this,1,'Enter');
+      });
+      $("#no").click(function (event) {
+        $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+        _16(event,this,1,'Enter');
+      });
+    }else{
+      copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+      $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_1GEVA_new").ForceAmountOnly().numericWithTwoDecimalPrecisions();
+      $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").val($("#CenPH__lb_RCDDTL1__lb_1ACCT_new").val().trim());
+    }
 
     /*Eerror message on popup screen*/
-     if($(".simplePopupClose").length > 0) {
-          $(".simplePopupBackground1").show();
+    if($(".simplePopupClose").length > 0) {
+      $(".simplePopupBackground1").show();
     } else {
-        $(".simplePopupBackground1").hide();
+      $(".simplePopupBackground1").hide();
     }
     $("body").on("click", ".simplePopupClose", function() {
-        $(".simplePopupBackground1").hide();
+      $(".simplePopupBackground1").hide();
     });
   });
 </script>
