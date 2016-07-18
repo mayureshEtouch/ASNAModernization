@@ -22,7 +22,162 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Customer/Application Notes</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSPMDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Application Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="selected-row">
+                                            <td id="CenPH__lb_SFLCTL__lb_CAKNA_new"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id=CenPH__lb_SFLCTL__lb_CAJNA_new></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="CenPH__lb_SFLCTL__lb_CAINA_new"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="CenPH__lb_SFLCTL__lb_CAHNA_new"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <section class="form-data">
+                                    <div class="form-data-wrapper" style="border: none; box-shadow: none; margin:0;">
+                                        <!-- content-grid mdl-grid starts here -->
+                                        <div class="content-grid mdl-grid">
+                                            <!-- col starts here -->
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                                <div class="content-grid mdl-grid">
+                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
+                                                        <span class="form-label">On File Date:</span>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
+                                                        <span class="form-text" id="CenPH__lb_SFLCTL_V2D7DT_new"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- col ends here -->
+                                            <!-- col starts here -->
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                                <div class="content-grid mdl-grid">
+                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+                                                        <span class="form-label">Employee code:</span>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                                        <span class="form-text" id="CenPH__lb_SFLCTL__lb_CC1CD_new"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- col ends here -->
+                                            <!-- col starts here -->
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                                <div class="content-grid mdl-grid">
+                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
+                                                        <span class="form-label">Call Back Date:</span>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                                        <span class="form-text" id="CenPH__lb_SFLCTL_VCD8DT_new"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- col ends here -->
+                                        </div>
+                                        <!-- content-grid mdl-grid ends here -->
+                                        <!-- content-grid mdl-grid starts here -->
+                                        <div class="content-grid mdl-grid">
+                                            <!-- col starts here -->
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                                <div class="content-grid mdl-grid">
+                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet" style="margin:0">
+                                                        <span class="form-label">Customer Activity Type:</span>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                                                        <span class="form-text" id="CenPH__lb_SFLCTL__lb_CR7ST_new"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- col ends here -->
+                                            <!-- col starts here -->
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="padding:0">
+                                                <div class="content-grid mdl-grid">
+                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
+                                                        <span class="form-label">Activity Note:</span>
+                                                    </div>
+                                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet">
+                                                        <span class="form-text" id="CenPH__lb_SFLCTL__lb_CQNTX_new"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- col ends here -->
+                                        </div>
+                                        <!-- content-grid mdl-grid ends here -->
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="activity-notes" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>On File Date</th>
+                                            <th>Employee Code</th>
+                                            <th width="70%">Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                                <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="activity">Activity</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addNote">Add Note</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Cust/Appl Notes   Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -441,4 +596,42 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant9": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_CAKNA": "CenPH__lb_SFLCTL__lb_CAKNA_new",
+                "CenPH__lb_SFLCTL__lb_CAJNA": "CenPH__lb_SFLCTL__lb_CAJNA_new",
+                "CenPH__lb_SFLCTL__lb_CAINA": "CenPH__lb_SFLCTL__lb_CAINA_new",
+                "CenPH__lb_SFLCTL__lb_CAHNA": "CenPH__lb_SFLCTL__lb_CAHNA_new",
+                "CenPH__lb_SFLCTL_V2D7DT": "CenPH__lb_SFLCTL_V2D7DT_new",
+                "CenPH__lb_SFLCTL__lb_CC1CD": "CenPH__lb_SFLCTL__lb_CC1CD_new",
+                "CenPH__lb_SFLCTL_VCD8DT": "CenPH__lb_SFLCTL_VCD8DT_new",
+                "CenPH__lb_SFLCTL__lb_CR7ST": "CenPH__lb_SFLCTL__lb_CR7ST_new",
+                "CenPH__lb_SFLCTL__lb_CQNTX": "CenPH__lb_SFLCTL__lb_CQNTX_new"
+
+            }
+
+        }
+
+        $(document).ready(function () {
+            copyData(copyToAndFrom, "");
+            $("#time").html("&nbsp;" + $("#time").html());
+            var dataMergeIndices = [[0], [1], [2]];
+            generateTableAndApplyInfiniteScroll("activity-notes", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+
+            $("#previous").click(function (event) {
+                _00('F3', event);
+            });
+
+            $("#activity").click(function (event) {
+                _00('F5', event);
+            });
+
+            $("#addNote").click(function (event) {
+                _00('F9', event);
+            });
+        });
+    </script>
     </asp:Content>
