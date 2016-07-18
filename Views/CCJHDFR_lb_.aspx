@@ -108,11 +108,11 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh">Refresh</span>
+                                    <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh">Refresh</span>--%>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
+                                <%--<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -879,12 +879,12 @@
             $("#previous").click(function (event) {
                 _00('F3', event);
             });
-            $("#Refresh").click(function (event) {
-                _00('F5', event);
-            });
-            $("#next").click(function (event) {
-                _00('Enter', event);
-            });
+            //$("#Refresh").click(function (event) {
+            //    _00('F5', event);
+            //});
+            //$("#next").click(function (event) {
+            //    _00('Enter', event);
+            //});
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
