@@ -83,12 +83,12 @@
 								<thead>
 									<tr>
 										<th>Product Category</th>
-										<th>Model Number</th>
-										<th>Prd Cat Desc</th>
+										<th width="20%">Model Number</th>
+										<th width="22%">Prd Cat Desc</th>
 										<th>Product Quantity</th>
 										<th>Product Value</th>
 										<th>GPM Code</th>
-										<th>Maint</th>
+										<th width="17%">Maint</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -540,10 +540,10 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
 	<style>
         #__Page_PopUp {
-            min-width: 700px !important;
-            width: 700px !important;
+            min-width: 730px !important;
+            width: 730px !important;
 			left: 50% !important;
-			margin-left: -350px;
+			margin-left: -365px;
       top: 15% !important;
         }
 		#__Page_PopUp > tr:first-child {
@@ -577,6 +577,9 @@
                 left: 30% !important;
                 top: 40% !important;
               }
+							 #displayData tr td:nth-child(5) {
+text-align: right !important;
+}
     </style>
 	
 	 <script type="text/javascript">
