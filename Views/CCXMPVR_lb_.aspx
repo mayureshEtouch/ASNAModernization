@@ -83,7 +83,7 @@
               </div>
               <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet tablet-mrgleft1" style="margin:0 0 0 4px;">
                 <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_1IPNB_new"></span>
-                <span class="mrgnLft20" id="CenPH_DdsConstant6_new"></span>
+                <span class="mrgnLft20" id="CenPH_DdsConstant6_new" style="margin-left: 17px;"></span>
               </span>
             </div>
           </div>

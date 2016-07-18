@@ -79,28 +79,19 @@
               
             </div>
             <!-- content-grid mdl-grid ends here -->
-            <!-- content-grid mdl-grid starts here -->
-            <div class="content-grid mdl-grid">
-              
-             <!-- col starts here -->
-                <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0; margin-left: 10px;">
-                            <div class="button-container">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 0px;">
-                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
-                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F10">search</span>
-                </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
-                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="Enter">Submit</span>
-                </div>
-              </div>
-            </div>
-              </div>
-              <!-- col ends here -->
-              
-              
-            </div>
-            <!-- content-grid mdl-grid ends here -->
+						<div class="button-container">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
+               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F10">search</span>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="Enter">Submit</span>
+						</div>
+					</div>
+				</div>
+						
+           
             </div>
             <div class="form-data-wrapper form-div-second" style="padding-bottom:0;display:none;">
             <!-- content-grid mdl-grid starts here -->
