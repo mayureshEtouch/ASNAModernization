@@ -22,7 +22,113 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+      <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Application Audit</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCKGDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+             <!-- <section class="progress-bar">
+                 <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
+                    </ul>
+                </div> 
+            </section>  -->
+            
+            <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell mdl-cell--8-col-tablet">
+                            <span class="summary-title">Application</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ITNB_new"></span>
+                        </div>
+                                 
+                    </div>
+              </div>
+            </section>
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                <span id="detail"><span class="icon-txt">Detail</span><i class="material-icons md-15 md-light display-icon"></i></span>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="applicationAudit" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>Application Date</th>
+                            <th>Application Time</th>
+                            <th>S</th>
+                            <th>Store Loc</th>
+                            <th>Employee Number</th>
+                            <th>Cmp</th>
+                            <th>Que</th>
+                            <th>Grader</th>
+                            <th>Invoice $</th>
+                            <th>Available $</th>
+                            <th>$ Down</th>
+                            <th>C</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printAudit">Print Audit</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="All">All</span>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  CA: DSP Appl Audit        Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -906,4 +1012,65 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        #applicationAudit tbody tr td:nth-child(8), #applicationAudit tbody tr td:nth-child(9), #applicationAudit tbody tr td:nth-child(10), #applicationAudit tbody tr td:nth-child(11) {
+        text-align: right;
+        }
+      </style>
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant14": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2ITNB": "CenPH__lb_SFLCTL__lb_2ITNB_new"
+                  },
+                "inputFields": {
+                   
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+              $('body').on('click', '#applicationAudit tbody tr', function () {
+                $("#applicationAudit tbody tr:even").css("background-color", "#fff");
+                $("#applicationAudit tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#applicationAudit tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [10], [9], [11]];
+                generateTableAndApplyInfiniteScroll("applicationAudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                $("#applicationAudit tbody tr:first").css("background-color", "#d8d8d8");
+
+                var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+              }
+              $("#detail").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Application");
+                } else {
+                    var row = $("#applicationAudit tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+              });
+
+              $("#previous").click(function (event) {
+                   _00('F3', event);
+              });
+
+              $("#printAudit").click(function (event) {
+                  _00('F6', event);
+              });
+
+              $("#All").click(function (event) {
+                  _00('F11', event);
+              });
+            });
+      </script>
     </asp:Content>
