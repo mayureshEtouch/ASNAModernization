@@ -35,7 +35,7 @@
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSA1DFR</span>
                     <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time" style="margin-left: 5px;"></span>
                 </div>
             </div>
         </section>
@@ -73,8 +73,10 @@
                                         <span class="summary-table-title pull-right">On File Date</span>
                                     </div>
 
-                                    <div class="mdl-cell mdl-cell--2-col" style="width: 85px;">
-                                        <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" maxlength="8">
+                                    <div class="mdl-cell mdl-cell--2-col" style="width: 110px;">
+                                        <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" maxlength="13" name="date" size="14" style="width: 100px;">
+                                        <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+                                        <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col" style="width: 110px;">
                                         <span class="summary-table-title pull-right">On File Time</span>
@@ -104,8 +106,10 @@
                             <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblDisplayActivity" data-upgraded=",MaterialDataTable">
                                 <thead>
                                     <tr>
-                                        <th>On File</th>
-                                        <th>Call Back</th>
+                                        <th>On File Date</th>
+                                        <th>On File Time</th>
+                                        <th>Call Back Date</th>
+                                        <th>Call Back Time</th>
                                         <th>Customer Activity Type</th>
                                         <th>Referenced Number</th>
                                         <th>Employee Code</th>
@@ -124,9 +128,9 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Create">Create</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
+                                <%--<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                     </div>
@@ -561,6 +565,16 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
+
+    <style>
+        .calender-icon {
+           position: absolute;
+           right: 0;
+           top: 13px;
+            
+        }
+    </style>
+
     <script type="text/javascript">
         var copyToAndFrom = {
             "displayOnlyFields": {
@@ -579,8 +593,24 @@
 
         $(document).ready(function () {
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-            var dataMergeIndices = [[0, '&nbsp;&nbsp;', 1], [2, '&nbsp;&nbsp;', 3], [4], [5], [6], [7]];
+            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
+            // var dataMergeIndices = [[0, '&nbsp;&nbsp;', 1], [2, '&nbsp;&nbsp;', 3], [4], [5], [6], [7]];
             generateTableAndApplyInfiniteScroll("tblDisplayActivity", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            $('#tblDisplayActivity tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
+            $("#number1").html($("#CenPH__lb_SFLCTL_V2D7DT").html());
+
+            $("#number1").val($("#CenPH__lb_SFLCTL_V2D7DT").val());
+            $("#number1").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+
+            $("#reqesdate").click(function () { $("#number1").datepicker("show"); });
+           
+            $("#number1").on('keyup change', function () {
+                var date = $("#number1").val().split("/");
+                $("#CenPH__lb_SFLCTL_V2D7DT").val(date[0] + date[1] + date[2].substr(2, 3));
+            });
+           // $("#number1").css("width", "85px");
 
             $("#previous").click(function (event) {
                 _00('F12', event);
@@ -599,14 +629,11 @@
                     if (jQuery.trim(num).length > 0) {
                         _00('Enter', event);
                     }
-                    else{
-                    alert("Please enter value");
-                    return false;
+                    else {
+                        alert("Please enter value");
+                        return false;
                     }
                 }
-                _00('Enter', event);
-            });
-            $("#next").click(function (event) {
                 _00('Enter', event);
             });
             var selectCusotmer = function (row, value, event) {
@@ -615,8 +642,9 @@
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-            $('#number1').keypress(function (e) {
-                var regex = new RegExp("^[0-9\\/]+$");
+
+            $('#ScheduleDate').keypress(function (e) {
+                var regex = new RegExp("^[0-9\\:]+$");
                 var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
                 if (regex.test(str)) {
                     return true;
@@ -625,19 +653,8 @@
                 e.preventDefault();
                 return false;
             });
-            
-                $('#ScheduleDate').keypress(function (e) {
-                    var regex = new RegExp("^[0-9\\:]+$");
-                    var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-                    if (regex.test(str)) {
-                        return true;
-                    }
 
-                    e.preventDefault();
-                    return false;
-                });
-            
-           
+
         });
     </script>
 </asp:Content>
