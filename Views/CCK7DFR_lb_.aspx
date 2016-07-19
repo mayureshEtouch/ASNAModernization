@@ -66,7 +66,7 @@
                                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="pre-add" data-upgraded=",MaterialDataTable">
                                         <thead>
                                             <tr>
-                                                <th>Address</th>
+                                                <th width="30%">Address</th>
                                                 <th>Years</th>
                                                 <th>Moved In</th>
                                                 <th>Moved Out</th>
@@ -523,9 +523,11 @@
                 height: 100% !important;
             }
             #__Page_PopUp {
-                min-width: 450px !important;
-                left: 21% !important;
-                width: 800px !important;
+                min-width: 740px !important;
+                left: 50% !important;
+                width: 740px !important;
+								height: auto !important;
+								margin-left: -370px;
             }
 
             #__Page_PopUp > tr:first-child {
@@ -540,7 +542,7 @@
             }
             .modal-dialog-container {
                 width: 100% !important;
-                margin-top: 0;
+                margin: 0 0 2% 0;
             }
 
             .mdl-layout__content {
