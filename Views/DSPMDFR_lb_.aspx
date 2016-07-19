@@ -51,7 +51,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="selected-row">
+                                        <tr>
                                             <td id="CenPH__lb_SFLCTL__lb_CAKNA_new"></td>
                                         </tr>
                                         <tr>
@@ -619,7 +619,7 @@
             copyData(copyToAndFrom, "");
             $("#time").html("&nbsp;" + $("#time").html());
             var dataMergeIndices = [[0], [1], [2]];
-            generateTableAndApplyInfiniteScroll("activity-notes", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            generateTableAndApplyInfiniteScroll("activity-notes", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
 
             $("#previous").click(function (event) {
                 _00('F3', event);

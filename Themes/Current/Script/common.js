@@ -110,7 +110,7 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
     });
 }
 
-function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices) {
+function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick) {
     $("body").css({
         "background-color": "#FFFFFF"
     });
@@ -173,11 +173,13 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
             return;
         }
     }
-
-    //Select customer on double click
-    $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
-        selectCusotmer(this, "1", event);
-    });
+    if(!disableDoubleClick) {
+       //Select customer on double click
+        $('body').on('dblclick', '#' + tableId + ' tbody tr', function(event) {
+            selectCusotmer(this, "1", event);
+        }); 
+    }
+    
     $("#" + selectRowId).click(function(event) {
         var row = $("#" + tableId + " tbody tr.selected");
         selectCusotmer(row, "1", event);
