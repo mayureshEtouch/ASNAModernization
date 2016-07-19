@@ -85,7 +85,7 @@
                                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
                                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
-                                                        <span class="form-label">Employee code:</span>
+                                                        <span class="form-label">Employee Code:</span>
                                                     </div>
                                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                                         <span class="form-text" id="CenPH__lb_SFLCTL__lb_CC1CD_new"></span>
