@@ -487,29 +487,20 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#time").html("&nbsp;" + $("#time").html());
-              $('body').on('click', '#activitytbl tbody tr', function () {
-                $("#activitytbl tbody tr:even").css("background-color", "#fff");
-                $("#activitytbl tbody tr:odd").css("background-color", "#f9f9f9");
-                $(this).css({ "background-color": "#d8d8d8" });
-                $("#activitytbl tbody tr").removeClass("selected");
-                $(this).addClass("selected");
-                $("div.icon-container").removeClass("icon-disable");
-            });
+             
               var dataMergeIndices = [[0], [1], [2], [3]];
                 generateTableAndApplyInfiniteScroll("activitytbl", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-
-                var doAction = function (row, value, event) {
-                var selectId = $(row).data('selectid');
-                $("#" + selectId).val(value);
-                _00('Enter', event);
-                }
-                $("#activitytbl tbody tr.selected").click(function (event) {
-                  var row = $("#activitytbl tbody tr.selected");
-                  doAction(row, "1", event);
-                });
+                 
+                
+                $("#activitytbl tr").css('cursor', 'pointer');
+                
                 $("#previous").click(function (event) {
                 _00('F12', event);
               });
+
+               $("#next").click(function (event) {
+                  _00('Enter', event);
+                }); 
             });
       </script>
     </asp:Content>

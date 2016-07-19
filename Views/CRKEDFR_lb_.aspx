@@ -22,7 +22,217 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Customer Requests</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRKEDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+						<section class="order-summary">
+			<div class="order-summary-wrapper" style="margin-bottom: 0;">
+				<div class="content-grid mdl-grid">
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+						<span class="summary-title">Customer Name</span>
+						<span class="summary-txt" id="custName"></span>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+						<span class="summary-title">Home Phone</span>
+						<span class="summary-txt" id="homePhone"></span>
+                        <span class="summary-title">Work Phone</span>
+						<span class="summary-txt" id="workPhone"></span>
+					</div>
+                    
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+						<span class="summary-title">Address</span>
+						<span class="summary-txt" id="address1"> </span>
+						<span class="summary-txt" id="address2"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+            
+						<section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+								<span class="icon-txt display ">Display</span><i class="material-icons md-15 md-light display-icon display"></i>
+                                <span class="icon-txt lxnx">LxNx</span><i class="material-icons md-15 md-light lxnx-icon lxnx"></i>
+                                <span class="icon-txt print">Print</span><i class="material-icons md-15 md-light print-icon print"></i>
+                                <span class="icon-txt fico">FICO Summ</span><i class="material-icons md-15 md-light fico-summ-icon fico"></i>
+                                <span class="icon-txt request">Re-Request</span><i class="material-icons md-15 md-light re-rqst-icon request"></i>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Application Number</th>
+														<th>Bureau ID</th>
+														<th>Date Report Retrieved</th>
+														<th>Bureau Request</th>
+													</tr>
+												</thead>
+												<tbody>
+																							
+												</tbody>
+										</table>
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
+                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="request">Request</span>
+												</div>
+												<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+ <script type="text/javascript">
+          var copyToAndFromData = {
+              "displayOnlyFields": {
+                  "CenPH_DdsConstant12": "date",
+                  "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+				  "CenPH__lb_SFLCTL__lb_CAHNA":"custName",
+				  "CenPH__lb_SFLCTL__lb_CYQNB":"homePhone",
+				  "CenPH__lb_SFLCTL__lb_CYTNB":"workPhone",
+				  "CenPH__lb_SFLCTL__lb_CANTX":"address1",
+				  "CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CADST+CenPH__lb_SFLCTL__lb_CAPTX":"address2"
+				  
+              },
+              "inputFields": {
+              }
+          };
+          
+            $(document).ready(function () {
+			
+			copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+            
+			var dataMergeIndices = [[0], [1], [2], [3]];
+			
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
+                 			
+			var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            //Display customer details
+            $(".display").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+            });
+			
+			  $(".lxnx").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "6", event);
+                }
+            });
+			
+			  $(".print").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "7", event);
+                }
+            });
+			
+			  $(".fico").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "8", event);
+                }
+            });
+			
+			  $(".request").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "9", event);
+                }
+            });
+			
+			
+			$("#prompt").click(function (event) {
+                _00('F4', event);
+            });
+			
+			$("#refresh").click(function (event) {
+                _00('F5', event);
+            });
+            $("#request").click(function (event) {
+                _00('F6', event);
+            });
+			
+			$("#exit").click(function (event) {
+                _00('F3', event);
+            });
+              
+           });
+         </script>
+		 
+        <div id="Div1" style="display:none">
             
       <%--  CR: DSP Cust Requests     Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>

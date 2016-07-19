@@ -127,7 +127,7 @@
                            		<span class="form-label">Notes:</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--10-col mdl-cell--5-col-tablet">
-                           		<span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="txtAppNotes" maxlength="65"></span>
+                           		<span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="txtAppNotes" maxlength="70"></span>
                         	</div>
 						</div>
 					</div>
