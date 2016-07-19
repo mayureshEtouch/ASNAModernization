@@ -659,11 +659,7 @@
               	_00('F3',event);
             });
            
-			$("#country").val($("#CenPH__lb_RCDDTL1__lb_1A1CD").val());
 			
-			$("#country").change(function(){
-                $("#CenPH__lb_RCDDTL1__lb_1A1CD").val($(this).val());
-            })
 					
 		   $("#Exit").click(function(event){
 				_00('F12',event);
