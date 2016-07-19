@@ -116,8 +116,8 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printAudit">Print Audit</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="All">All</span>
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="All">All</span> -->
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="All">All</span>
                         </div>
                     </div>
                 </div>
@@ -1015,6 +1015,12 @@
       <style>
         #applicationAudit tbody tr td:nth-child(8), #applicationAudit tbody tr td:nth-child(9), #applicationAudit tbody tr td:nth-child(10), #applicationAudit tbody tr td:nth-child(11) {
         text-align: right;
+        }
+        #applicationAudit tbody tr td:nth-child(8) {
+          text-align: left;
+        }
+        .order-summary-wrapper {
+          margin: 11px 20px;
         }
       </style>
       <script type="text/javascript">
