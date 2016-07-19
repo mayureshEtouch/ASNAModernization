@@ -7,6 +7,7 @@
     <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member DSCHE1R# --%>
     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
     <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
     <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
@@ -16,7 +17,13 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery-ui.css")%>">
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl ("~/Themes/Current/Script/input-validations.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
+
 
 </asp:Content>
 
@@ -128,7 +135,9 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="2" size="15" class="mdl-textfield__input" id="callBackDt"></span>
+                                        <input type="text" data-tb-index="2" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;"></span>
+                                    <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+                                    <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                 </div>
                             </div>
                         </div>
@@ -209,10 +218,12 @@
 
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop modal-button-container">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</button>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+                                <%--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</button>--%>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right modal-button-container">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">OK</button>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                                <%--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ok">OK</button>--%>
                             </div>
                         </div>
                     </div>
@@ -221,7 +232,7 @@
 
         </main>
         <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;"></div>
-        <div id="modal1" class="simplePopup"></div>
+        <div id="modal" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i>
             <span class="confirmation-text">Do you want to continue</span>
@@ -232,7 +243,7 @@
         </div>
     </div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1">
+    <div id="Div1" style="display:none">
 
         <%--  CU: ED1 Activity Audit    Edit record(1 screen)                                                      --%>
         <%--  CRTDSPF                                                                                              --%>
@@ -914,6 +925,13 @@
             left: 30% !important;
             top: 40% !important;
         }
+
+        .modal-dialog-container .calender-icon {
+            position: relative !important;
+            right: -16px !important;
+            top: -20px !important;
+            float: right;
+        }
     </style>
     <script type="text/javascript">
         var copyToAndFromData = {
@@ -935,14 +953,28 @@
         $(document).ready(function () {
 
             copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+            $("#loc").ForceNumericOnly();
+            $("#refNum").ForceNumericOnly();
+            $("#custActivity").ForceAlphabetOnly();
+            $("#CenPH__lb_RCDDTL1__lb_1R7ST").appendTo("#custActivity");
+            $("#callBackDt").html($("#CenPH__lb_RCDDTL1_V1D8DT").html());
 
+            $("#callBackDt").val($("#CenPH__lb_RCDDTL1_V1D8DT").val());
+            $("#callBackDt").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+
+            $("#reqesdate").click(function () { $("#callBackDt").datepicker("show"); });
+
+            $("#callBackDt").on('keyup change', function () {
+                var date = $("#callBackDt").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1D8DT").val(date[0] + date[1] + date[2].substr(2, 3));
+            });
             $('.close-icon').click(function (event) {
                 _00('F3', event);
             });
 
 
 
-            $("#exit").click(function (event) {
+            $("#Exit").click(function (event) {
                 _00('F12', event);
             });
 
@@ -968,7 +1000,16 @@
                 });
 
             }
+            $('#callBackTm').keypress(function (e) {
+                var regex = new RegExp("^[0-9\\:]+$");
+                var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                if (regex.test(str)) {
+                    return true;
+                }
 
+                e.preventDefault();
+                return false;
+            });
 
 
 

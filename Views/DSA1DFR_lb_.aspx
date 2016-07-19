@@ -82,7 +82,7 @@
                                         <span class="summary-table-title pull-right">On File Time</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col" style="width: 85px;">
-                                        <input type="text" id="ScheduleDate" class="mdl-textfield__input" data-tb-index="2" maxlength="8">
+                                        <input type="text" id="ScheduleDate" class="mdl-textfield__input" data-tb-index="1" maxlength="8">
                                     </div>
 
                                 </div>
