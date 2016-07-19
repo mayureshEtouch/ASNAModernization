@@ -155,7 +155,7 @@
       $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
       
       $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
-      $("#requestdate").on('keyup change', function () {
+      $("#requestdate").on('change', function () {
         var date = $("#requestdate").val().split("/");
         $("#CenPH__lb_SFLCTL_V2F0DT").val(date[0] + date[1] + date[2].substr(2, 3));
       });
