@@ -65,12 +65,12 @@
             </div>
             <span class="summary-label" style="display:block">First Name:</span>
             <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-              <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1V6CD_new" maxlength="15">
+              <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_1V6CD_new" maxlength="15">
 
             </div>
             <span class="summary-label" style="display:block">Middle Initial:</span>
             <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-              <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="5" id="CenPH__lb_RCDDTL1__lb_1V7CD_new" maxlength="1">
+              <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1V7CD_new" maxlength="1">
 
             </div>
           </div>
@@ -80,7 +80,7 @@
           <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
             <span class="form-label">Promotion Letter Code:</span>
             <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
-              <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_1ANCO_new" maxlength="8">
+              <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="5" id="CenPH__lb_RCDDTL1__lb_1ANCO_new" maxlength="8">
 
             </div>
           </div>
