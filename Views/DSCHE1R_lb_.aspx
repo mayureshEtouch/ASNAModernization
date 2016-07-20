@@ -122,7 +122,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="8" id="custActivity"></span>
+                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="8" id="custActivity" onfocus="_09('#1R7ST','4,9','#RCDDTL1');"></span>
                                 </div>
                             </div>
                         </div>
@@ -957,6 +957,7 @@
             $("#refNum").ForceNumericOnly();
             $("#custActivity").ForceAlphabetOnly();
             $("#CenPH__lb_RCDDTL1__lb_1R7ST").appendTo("#custActivity");
+
             $("#callBackDt").html($("#CenPH__lb_RCDDTL1_V1D8DT").html());
 
             $("#callBackDt").val($("#CenPH__lb_RCDDTL1_V1D8DT").val());
