@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="2" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;"></span>
+                                        <input type="text" data-tb-index="1" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;"></span>
                                     <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                     <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                 </div>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="3" size="15" class="mdl-textfield__input" maxlength="8" id="callBackTm"></span>
+                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="8" id="callBackTm"></span>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="2" size="15" class="mdl-textfield__input" maxlength="3" id="loc"></span>
+                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="3" id="loc"></span>
                                 </div>
                             </div>
                         </div>
