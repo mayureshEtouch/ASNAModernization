@@ -22,7 +22,138 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Customer Bureau Information</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRKGDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container table-container-search">
+                            <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Application Number:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2ITNO_new"></span> </div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Bureau ID:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2BFCO_new"></span> </div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                            </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Report Requested Date:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL_V2HFNB_new"></span> </div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Customer Name:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CALTX_new"></span></div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                            </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Social Security Number:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CSSN_new"></span>
+                                        <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_SFLCTL__lb_CSSN_new-show">Show</a> </span> </div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Customer Address:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0" id="CenPH__lb_SFLCTL__lb_CVWTX_new"></div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                            </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            <!-- content-grid mdl-grid starts here -->
+                            <div class="content-grid mdl-grid" style="padding:0">
+                                <!-- 6 col starts here -->
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Driver D.O.B Date:</span> </div>
+                                        <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_SFLCTL_VCGWNB_new"></span> </div>
+                                    </div>
+                                </div>
+                                <!-- 6 col ends here -->
+                            </div>
+                            <!-- content-grid mdl-grid ends here -->
+                            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                                <div class="table-data-wrapper">
+                                    <div class="table-data-maincontainer">
+                                        <div style="overflow: auto;" class="table-container">
+                                            <div>
+                                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="cust-bereau-info" data-upgraded=",MaterialDataTable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Bureau Details</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="button-container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CR: DSP Bureau Details    Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -408,4 +539,46 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant3": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2ITNO": "CenPH__lb_SFLCTL__lb_2ITNO_new",
+                    "CenPH__lb_SFLCTL__lb_2BFCO": "CenPH__lb_SFLCTL__lb_2BFCO_new",
+                    "CenPH__lb_SFLCTL_V2HFNB": "CenPH__lb_SFLCTL_V2HFNB_new",
+                    "CenPH__lb_SFLCTL__lb_CALTX": "CenPH__lb_SFLCTL__lb_CALTX_new",
+                    "ctl00\\$CenPH\\$_lb_SFLCTL_VCGWNB": "ctl00\\$CenPH\\$_lb_SFLCTL_VCGWNB_new"
+                }
+
+            }
+
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "");
+                var custAddress = '<span data-upgraded=",MaterialTextfield" class="form-text">' + $("#CenPH__lb_SFLCTL__lb_CVWTX").text() + '</br>' + $("#CenPH__lb_SFLCTL__lb_CVXTX").text() + '<span style="padding-left: 10px; display: inline-block;">' + $("#CenPH__lb_SFLCTL__lb_CVYTX").text() + '</span><span style="padding-left: 10px; display: inline-block;">' + $("#CenPH__lb_SFLCTL__lb_CW4TX").text() + '</span></span>'
+                $("#CenPH__lb_SFLCTL__lb_CVWTX_new").html(custAddress);
+                //SSN #
+                $("#CenPH__lb_SFLCTL__lb_CSSN_new").html("*****" + $("#CenPH__lb_SFLCTL__lb_CSSN").text().split("-")[2]);
+                $("#CenPH__lb_SFLCTL__lb_CSSN_new-show").on("mousedown touchstart", function() {
+                    setTimeout(function() {
+                        $("#CenPH__lb_SFLCTL__lb_CSSN_new").html($("#CenPH__lb_SFLCTL__lb_CSSN").text());
+                    }, 0);
+                });
+                $("#CenPH__lb_SFLCTL__lb_CSSN_new-show").on("mouseup touchend", function() {
+                    $("#CenPH__lb_SFLCTL__lb_CSSN_new").html("*****" + $("#CenPH__lb_SFLCTL__lb_CSSN").text().split("-")[2]);
+                });
+                $("#time").html("&nbsp;" + $("#time").html());
+                var dataMergeIndices = [[0]];
+                generateTableAndApplyInfiniteScroll("cust-bereau-info", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+
+                $("#exit").click(function (event) {
+                    _00('F3', event);
+                });
+                
+            });
+        </script>
     </asp:Content>
