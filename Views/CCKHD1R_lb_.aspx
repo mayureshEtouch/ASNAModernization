@@ -34,7 +34,7 @@
         <!-- Navigation --> 
         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCKHD1R</span> 
 		<i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> 
-		<i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> 
+		<i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span> 
 	 </div>
     </div>
   </section>
@@ -363,7 +363,7 @@
 			 <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Option2  :</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Option2:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1U3TX_new"><span></span><span class="mrgnLft20">CCC</span></span> </div>
               </div>
             </div>
@@ -532,7 +532,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Cash Option:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ASST_new"></span> </div>
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="_lb_RCDDTL1__lb_1LWST_new"></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -591,7 +591,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Addon Contracts :</span> </div>
-                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ASST_new"></span> </div>
+                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="_lb_RCDDTL1__lb_1LXST_new"></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -613,7 +613,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Max Contract Length:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DZ0NB_new"></span> </div>
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="_lb_RCDDTL1__lb_DZ0NB_new"></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -676,7 +676,7 @@
 					<!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0 0 0 8px"> 
             <!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Company Code:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABCD_new"></span> </div>
@@ -684,7 +684,7 @@
             </div>
             <!-- 3 col ends here -->
 						<!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Location Code:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AACD_new"></span> </div>
@@ -692,28 +692,30 @@
             </div>
             <!-- 3 col ends here --> 
 						<!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Employee Code:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AJCD_new"></span> </div>
                   </div>
             </div>
             <!-- 3 col ends here -->
-						<!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+				       
+          </div>
+          <!-- content-grid mdl-grid ends here -->
+					
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0 0 0 8px"> 
+					<!-- 3 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Workstation Id:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABVN_new"></span> </div>
                   </div>
             </div>
-            <!-- 3 col ends here -->           
-          </div>
-          <!-- content-grid mdl-grid ends here -->
-					
-						<!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0 0 0 8px"> 
+            <!-- 3 col ends here -->    
+			
             <!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Customer Id:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALNB_new"></span> </div>
@@ -721,31 +723,49 @@
             </div>
             <!-- 3 col ends here -->
 						<!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">User Stamp:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AAVN_new"></span> </div>
                   </div>
             </div>
             <!-- 3 col ends here --> 
-						<!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+						
+			     
+          </div>
+          <!-- content-grid mdl-grid ends here -->   
+		  
+		  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0 0 0 8px"> 
+			<!-- 3 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Workstation Id:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AHVN_new"></span> </div>
                   </div>
             </div>
             <!-- 3 col ends here -->
+		    
 			<!-- 3 col starts here -->
-            <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Audit Stamp:</span> </div>
+                    <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Date Audit Stamp:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="auditStamp"><span></span><span class="mrgnLft20"></span></span> </div>
                   </div>
             </div>
-            <!-- 3 col ends here -->           
+            <!-- 3 col ends here -->        
+
+			<!-- 3 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Time Audit Stamp:</span> </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new"><span></span><span class="mrgnLft20"></span></span> </div>
+                  </div>
+            </div>
+            <!-- 3 col ends here -->        
+			
           </div>
-          <!-- content-grid mdl-grid ends here -->   
+          <!-- content-grid mdl-grid ends here -->  
 		  
         </div>
 				<div class="button-container">
@@ -2240,7 +2260,7 @@
 				  "CenPH__lb_RCDDTL1__lb_1BANB":"CenPH__lb_RCDDTL1__lb_1BANB_new",
 				  "CenPH__lb_RCDDTL1__lb_1JBNB":"CenPH__lb_RCDDTL1__lb_1JBNB_new",
 				"CenPH__lb_RCDDTL1__lb_1JANB":"CenPH__lb_RCDDTL1__lb_1JANB_new",
-				//"ctl00\\$CenPH\\$_lb_RCDDTL1_V1C4DT":"bsource",
+				"CenPH__lb_RCDDTL1__lb_1IPNB":"bsource",
 				"ctl00\\$CenPH\\$_lb_RCDDTL1_V1C4DT":"bsourceDate",
 				"CenPH__lb_RCDDTL1__lb_DZ9TX":"cSourceTxt",
 				"CenPH__lb_RCDDTL1__lb_1GFVA":"CenPH__lb_RCDDTL1__lb_1GFVA_new",
@@ -2284,10 +2304,13 @@
 				"CenPH__lb_RCDDTL1__lb_1ALNB":"CenPH__lb_RCDDTL1__lb_1ALNB_new",
 				"CenPH__lb_RCDDTL1__lb_1AAVN":"CenPH__lb_RCDDTL1__lb_1AAVN_new",
 				"CenPH__lb_RCDDTL1__lb_1AHVN":"CenPH__lb_RCDDTL1__lb_1AHVN_new",
-				"ctl00\\$CenPH\\$_lb_RCDDTL1_V1AGDT+CenPH__lb_RCDDTL1__lb_1ABTM":"auditStamp",
-				"CenPH__lb_RCDDTL1__lb_DPQST":"CenPH__lb_RCDDTL1__lb_DPQST_new",
-				"CenPH__lb_RCDDTL1__lb_DZ0NB":"CenPH__lb_RCDDTL1__lb_DZ0NB_new",
+				"ctl00\\$CenPH\\$_lb_RCDDTL1_V1AGDT":"auditStamp",
+				"CenPH__lb_RCDDTL1__lb_1ABTM":"CenPH__lb_RCDDTL1__lb_1ABTM_new",
 				
+				"CenPH__lb_RCDDTL1__lb_DPQST":"CenPH__lb_RCDDTL1__lb_DPQST_new",
+				"CenPH__lb_RCDDTL1__lb_1LWST":"_lb_RCDDTL1__lb_1LWST_new",
+				"CenPH__lb_RCDDTL1__lb_1LXST":"_lb_RCDDTL1__lb_1LXST_new",
+				"CenPH__lb_RCDDTL1__lb_DZ0NB":"_lb_RCDDTL1__lb_DZ0NB_new",
               },
               "inputFields": {
 			
@@ -2303,6 +2326,10 @@
 				_00('F12', event);
 				});
 		   
+		       var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html();
+				  if(html != undefined && html.length>0){
+					  $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+			  }
 		 
 		 
         });

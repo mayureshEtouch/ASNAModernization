@@ -122,7 +122,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="8" id="custActivity"></span>
+                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="8" id="custActivity" onfocus="_09('#1R7ST','4,9','#RCDDTL1');"></span>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="2" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;"></span>
+                                        <input type="text" data-tb-index="1" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;"></span>
                                     <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                     <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                 </div>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="3" size="15" class="mdl-textfield__input" maxlength="8" id="callBackTm"></span>
+                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="8" id="callBackTm"></span>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="form-text">
-                                        <input type="text" data-tb-index="2" size="15" class="mdl-textfield__input" maxlength="3" id="loc"></span>
+                                        <input type="text" data-tb-index="1" size="15" class="mdl-textfield__input" maxlength="3" id="loc"></span>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
 
         </main>
         <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;"></div>
-        <div id="modal" class="simplePopup"></div>
+        <div id="modal1" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i>
             <span class="confirmation-text">Do you want to continue</span>
@@ -957,6 +957,7 @@
             $("#refNum").ForceNumericOnly();
             $("#custActivity").ForceAlphabetOnly();
             $("#CenPH__lb_RCDDTL1__lb_1R7ST").appendTo("#custActivity");
+
             $("#callBackDt").html($("#CenPH__lb_RCDDTL1_V1D8DT").html());
 
             $("#callBackDt").val($("#CenPH__lb_RCDDTL1_V1D8DT").val());

@@ -1048,9 +1048,9 @@
                 $("div.icon-container").removeClass("icon-disable");
             });
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [10], [9], [11]];
-                generateTableAndApplyInfiniteScroll("applicationAudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("applicationAudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
                 $("#applicationAudit tbody tr:first").css("background-color", "#d8d8d8");
-
+                $("#applicationAudit tr").css('cursor', 'pointer');
                 var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
