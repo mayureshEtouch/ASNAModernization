@@ -78,7 +78,7 @@
               <span class="form-label">Type choices, press Enter.</span>
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
-                              <span class="form-label">Nbr:Application:</span>
+                              <span class="form-label">Number:Application:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-tablet">
                               <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDKEY__lb_1ITNB_new" maxlength="9"></span>
@@ -95,7 +95,7 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+              <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span> -->
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet" style="margin:0">
-                              <span class="form-label">Application:</span>
+                              <span class="form-label">Application Number:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet pull-right" style="margin:0">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span>
@@ -155,6 +155,7 @@
                           </div>
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet pull-right">
                               <span class="form-text" id="CenPH__lb_RCDDTL1_V1FSDT_new"></span>
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1BETM_new"></span>
                           </div>
                     </div>
                   </div>
@@ -348,7 +349,7 @@
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</button>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button>
+              <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button> -->
             </div>
           </div>
         </div>
@@ -2034,8 +2035,12 @@
       }
 
       #CenPH__lb_RCDKEY__lb_1ITNB_new {
-        width: 407px;
-        margin-left: 18px;
+        width: 351px;
+        margin-left: 44px;
+      }
+
+      #exit {
+        margin-left: -5px;
       }
       </style>
       <script type="text/javascript">
@@ -2044,7 +2049,8 @@
                     "CenPH__lb_RCDDTL1__lb_1ITNB": "CenPH__lb_RCDDTL1__lb_1ITNB_new",
                     "CenPH__lb_RCDDTL1__lb_1SYST": "CenPH__lb_RCDDTL1__lb_1SYST_new",
                     "CenPH__lb_RCDDTL1__lb_1S0ST": "CenPH__lb_RCDDTL1__lb_1S0ST_new",
-                    "CenPH__lb_RCDDTL1_V1FSDT+CenPH__lb_RCDDTL1__lb_1BETM": "CenPH__lb_RCDDTL1_V1FSDT_new",
+                    "CenPH__lb_RCDDTL1_V1FSDT": "CenPH__lb_RCDDTL1_V1FSDT_new",
+                    "CenPH__lb_RCDDTL1__lb_1BETM": "CenPH__lb_RCDDTL1__lb_1BETM_new",
                     "CenPH__lb_RCDDTL1__lb_1SZST": "CenPH__lb_RCDDTL1__lb_1SZST_new",
                     "CenPH__lb_RCDDTL1__lb_1YRNB": "CenPH__lb_RCDDTL1__lb_1YRNB_new",
                     "CenPH__lb_RCDDTL1__lb_1YPNB+CenPH__lb_RCDDTL1__lb_1BLTM": "CenPH__lb_RCDDTL1__lb_1YPNB_new",
