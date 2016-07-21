@@ -32,7 +32,7 @@
         <span class="heading-h1">Display Selected Bureau Details</span> </div>
       <div class="mdl-cell mdl-cell--4-col pull-right"> 
         <!-- Navigation --> 
-        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRQUDFR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRQUDFR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
     </div>
   </section>
   <section class="table-data-content-container mrgnTp16">
@@ -109,7 +109,8 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Social Security Number:</span> </div>
-                <div  class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CSS_lb_new"></span> </div>
+                <div  class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CSS_lb_new"></span>
+				<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_SFLCTL__lb_CSS_lb_new-show">Show</a></div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -142,7 +143,7 @@
           
           <div class="button-container">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="allDetails">All Details</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return">Return</span> </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="allDetails">All Details</span> </div>
               
             </div>
           </div>
@@ -555,11 +556,16 @@
 			   
                 var dataMergeIndices = [[0]];
                 generateTableAndApplyInfiniteScroll("cust-bereau-info", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
-
-                $("#exit").click(function (event) {
-                    _00('F3', event);
-                });
                 
+				$("#CenPH__lb_SFLCTL__lb_CSS_lb_new-show").on("mousedown touchstart", function() {
+                    setTimeout(function() {
+                        $("#CenPH__lb_SFLCTL__lb_CSS_lb_new").html($("#CenPH__lb_SFLCTL__lb_CSS_lb_").text());
+                    }, 0);
+                });
+                $("#CenPH__lb_SFLCTL__lb_CSS_lb_new-show").on("mouseup touchend", function() {
+                    $("#CenPH__lb_SFLCTL__lb_CSS_lb_new").html("*****" + $("#CenPH__lb_SFLCTL__lb_CSS_lb_").text().split("-")[2]);
+                });
+				
 				$("#allDetails").click(function (event) {
                     _00('F9', event);
                 });
