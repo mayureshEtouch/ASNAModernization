@@ -87,7 +87,7 @@
           <div>
               <ul class="mdl-list" id="appeal-list-item">
                 <li style="margin-top: 0;">
-                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DM9ST_new"> 
+                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DM9ST_new" data-tb-index="1"> 
 					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
@@ -97,7 +97,7 @@
                 </span>
                 </li>
                 <li>
-                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNCST_new">
+                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNCST_new" data-tb-index="1">
 					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
@@ -107,7 +107,7 @@
                 </span>
                 </li>
                 <li>
-                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNDST_new">
+                <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DNDST_new" data-tb-index="1">
 					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
