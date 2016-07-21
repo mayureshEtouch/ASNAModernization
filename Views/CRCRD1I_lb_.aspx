@@ -64,7 +64,7 @@
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid" style="padding:0"> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1BGNU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Collection Items:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BGNU_new"></span> </div>
@@ -72,7 +72,7 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1BHNU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Over 500:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BHNU_new"></span> </div>
@@ -80,7 +80,7 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1BINU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Over 2000:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BINU_new"></span> </div>
@@ -88,7 +88,7 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1BJNU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Non Med:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BJNU_new"></span> </div>
@@ -96,7 +96,7 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1BKNU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Last:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BKNU_new"></span> </div>
@@ -390,21 +390,21 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CLNU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">FICO Score:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> 
-                      <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CMNU_new"></span>
+                      <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CLNU_new"></span>
                     </div>
                   </div>
                 </div>
                 <!-- 4 col ends here --> 
                 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CMNU_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Strategy Used:</span> </div>
-                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id=""></span> </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CMNU_new"></span> </div>
                   </div>
                 </div>
                 <!-- 4 col ends here --> 
@@ -582,6 +582,7 @@
     "CenPH__lb_RCDDTL1__lb_1CANU":"CenPH__lb_RCDDTL1__lb_1CANU_new",
     "CenPH__lb_RCDDTL1__lb_1CBNU":"CenPH__lb_RCDDTL1__lb_1CBNU_new",
   "CenPH__lb_RCDDTL1__lb_1CMNU":"CenPH__lb_RCDDTL1__lb_1CMNU_new",//fico
+  "CenPH__lb_RCDDTL1__lb_1CLNU":"CenPH__lb_RCDDTL1__lb_1CLNU_new",//fico Strategy
   "CenPH__lb_RCDDTL1__lb_1CCNU":"CenPH__lb_RCDDTL1__lb_1CCNU_new",
   "CenPH__lb_RCDDTL1__lb_1CDNU":"CenPH__lb_RCDDTL1__lb_1CDNU_new",
   "CenPH__lb_RCDDTL1__lb_1CENU":"CenPH__lb_RCDDTL1__lb_1CENU_new",
@@ -617,15 +618,11 @@ $(document).ready(function () {
 }else{
   $(".form-div-second").show();
   copyData(copyToAndFrom2, "NONE");
-/*         $.each(copyToAndFrom2['displayOnlyFields'],function(i,el){
+         $.each(copyToAndFrom2['displayOnlyFields'],function(i,el){
            if($("#"+copyToAndFrom2['displayOnlyFields'][i]).html()==''){
              $("#"+copyToAndFrom2['displayOnlyFields'][i]+"_div").hide();
            }
          });
-         var html = $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html();
-         if(html != undefined && html.length>0){
-             $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
-           }*/
          }
 
        });

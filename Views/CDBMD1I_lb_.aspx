@@ -391,22 +391,22 @@
             </div>
             <!-- 4 col ends here --> 
        <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CLNU_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">FICO Score:</span> </div>
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> 
-          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CMNU_new"></span>
+          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CLNU_new"></span>
           
         </div>
               </div>
             </div>
             <!-- 4 col ends here -->
              <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CMNU_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">FICO Strategy Used:</span> </div>
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> 
-          <span data-upgraded=",MaterialTextfield" class="form-text" id="not_found"></span>
+          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CMNU_new"></span>
           
         </div>
               </div>
@@ -546,6 +546,7 @@
     "CenPH__lb_RCDDTL1__lb_1B9NU":"CenPH__lb_RCDDTL1__lb_1B9NU_new",
     "CenPH__lb_RCDDTL1__lb_1CANU":"CenPH__lb_RCDDTL1__lb_1CANU_new",
     "CenPH__lb_RCDDTL1__lb_1CBNU":"CenPH__lb_RCDDTL1__lb_1CBNU_new",
+    "CenPH__lb_RCDDTL1__lb_1CLNU":"CenPH__lb_RCDDTL1__lb_1CLNU_new",
     "CenPH__lb_RCDDTL1__lb_1CMNU":"CenPH__lb_RCDDTL1__lb_1CMNU_new",
     "CenPH__lb_RCDDTL1__lb_1B7XT":"CenPH__lb_RCDDTL1__lb_1B7XT_new",
     "CenPH__lb_RCDDTL1__lb_1DNNU":"CenPH__lb_RCDDTL1__lb_1DNNU_new",
@@ -570,6 +571,11 @@
 }
 $(document).ready(function () {
   copyData(copyToAndFrom,"NONE");
+  $.each(copyToAndFrom2['displayOnlyFields'],function(i,el){
+    if($("#"+copyToAndFrom2['displayOnlyFields'][i]).html()==''){
+      $("#"+copyToAndFrom2['displayOnlyFields'][i]+"_div").hide();
+    }
+  });
 });
 </script>
 <div id="Div1" style="display:none;">
