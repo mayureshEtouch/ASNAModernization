@@ -601,6 +601,9 @@ a:visited, .mdl-menu__item a {
 	text-align: left;
 	margin-right: 15px;
 } */
+.form-text  {
+	line-height: 20px;
+}
 .form-data-wrapper .icon-calender {
 	cursor: pointer;
 	font-size: 18px;
@@ -1504,6 +1507,11 @@ body div, body span, body textarea {
 /* Margin left 20px */
 .mrgnLft20 {
 	margin-left: 20px;
+}
+
+/* Margin left 10px */
+.mrgnLft10 {
+	margin-left: 10px;
 }
 
 /* Normal table */
