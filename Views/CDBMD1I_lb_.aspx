@@ -571,9 +571,9 @@
 }
 $(document).ready(function () {
   copyData(copyToAndFrom,"NONE");
-  $.each(copyToAndFrom2['displayOnlyFields'],function(i,el){
-    if($("#"+copyToAndFrom2['displayOnlyFields'][i]).html()==''){
-      $("#"+copyToAndFrom2['displayOnlyFields'][i]+"_div").hide();
+  $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+    if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+      $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
     }
   });
 });
