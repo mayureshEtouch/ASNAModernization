@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CCK8DFR_lb_.aspx.cs" Inherits="conns.CCK8DFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
@@ -1539,4 +1538,3 @@ CssClass="DdsConstant"
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
     </asp:Content>
->>>>>>> a8d79649bdf4985b57861fb52400e0130a3078a6
