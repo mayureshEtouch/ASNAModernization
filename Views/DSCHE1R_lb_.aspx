@@ -45,7 +45,6 @@
     <!-- Modified HTML code starts here -->
     <div id="view1">
         <div class="OverlayPopupBackground"></div>
-        <div class="modal-dialog-container">
             <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
@@ -244,10 +243,19 @@
             </div>
         </div>
         <!-- Modified HTML code ends here -->
-    </div>
     <div id="view2">
+        
         <!-- Modified HTML code starts here -->
         <div class="OverlayPopupBackground"></div>
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <!--<span class="mdl-layout-heading">StoreFront</span>-->
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -255,12 +263,6 @@
                         <!-- Title -->
                         <span class="heading-h1">Activity Audit Key Screen</span>
                     </div>
-                    <%--<div class="mdl-cell mdl-cell--4-col pull-right">
-                        <!-- Navigation -->
-                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSCHE1R</span>
-                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
-                    </div>--%>
                 </div>
             </section>
             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
@@ -277,13 +279,13 @@
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin: 0">
                                             <span class="form-label">Customer ID:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--6-col-tablet" style="margin: 0">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin: 0">
                                             <span class="form-text">
                                                 <input type="text" data-tb-index="1" id="custID" onfocus="_09('#1ALNB','4,35','#RCDKEY');" maxlength="8" />
                                             </span>
 
                                         </div>
-                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin-left: 80px; top: 10px;">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin-top: 4px;">
                                             <span class="form-text">Value, F4 for list</span>
                                         </div>
                                     </div>
@@ -314,13 +316,13 @@
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin: 0">
                                             <span class="form-label">On File Time:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--6-col-tablet" style="margin: 0">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin: 0">
                                             <span class="form-text">
                                                 <input type="text" data-tb-index="1" id="onFileTm1" maxlength="8" />
                                             </span>
 
                                         </div>
-                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin-left: 80px; top: 10px;">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"  style="margin-top: 4px;">
                                             <span class="form-text">Time</span>
                                         </div>
                                     </div>
@@ -999,10 +1001,11 @@
             left: 50% !important;
             margin-left: -380px;
             top: 18% !important;
+            height: 400px !important;
         }
 
-            #__Page_PopUp > tr:first-child {
-                display: none;
+            #__Page_PopUp > tbody > tr:first-child {
+                display: none !important;
             }
 
             #__Page_PopUp .DdsInlinePopUpTitle {
@@ -1036,12 +1039,13 @@
             top: 40% !important;
         }
 
-        .modal-dialog-container .calender-icon {
+        #view1 .modal-dialog-container .calender-icon {
             position: relative !important;
             right: -16px !important;
             top: -20px !important;
             float: right;
         }
+
     </style>
     <script type="text/javascript">
         var copyToAndFromData = {

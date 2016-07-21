@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 7/20/2016 at 7:27 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCW5DFR# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,90 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <div class="modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--9-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Customer Employment by Date</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCW5DFR</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="order-summary">
+                    <div class="order-summary-wrapper" style="margin-bottom: 0;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                <span class="summary-title">Current Work Phone</span>
+                                <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CD2NB_new"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                <span class="summary-title">Extension</span>
+                                <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CAWNB_new"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="table-data-content-container spacer-container-bottom">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div style="overflow: auto;" class="table-container">
+                                <div>
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="emp-by-date" data-upgraded=",MaterialDataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Employer/Supervisor</th>
+                                                <th>Since</th>
+                                                <th>Income Frequency</th>
+                                                <th>Income</th>
+                                                <th>Employment Duration</th>
+                                                <th>Occupation Code</th>
+                                                <th>Supervisor Name</th>
+                                                <th>User Stamp</th>
+                                                <th>Dte Audit Stamp</th>
+                                                <th>Tme Audit Stamp</th>
+                                                <th>Address</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="button-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop">
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phoneValidation">Phone Validation</span>
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">reset</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+            <div id="promptErrorMsg" class="simplePopup"></div>
+        </div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DFW Empl by Date      Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -494,4 +588,72 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            #__Page_Hidden{
+                height: 100% !important;
+            }
+            #__Page_PopUp {
+                min-width: 80% !important;
+                left: 10% !important;
+                width: 740px !important;
+                height: auto !important;
+            }
+
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 0;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            .modal-dialog-container {
+                width: 100% !important;
+                margin: 0 0 2% 0;
+            }
+
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #form1 {
+                margin-top: -20px;
+            }
+            .simplePopup {
+              left: 30% !important;
+              top: 40% !important;
+            }
+            .aspNetHidden {
+                margin-top: 20px !important;
+            }
+      </style>
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_CD2NB": "CenPH__lb_SFLCTL__lb_CD2NB_new",
+                    "CenPH__lb_SFLCTL__lb_CAWNB": "CenPH__lb_SFLCTL__lb_CAWNB_new"
+                }
+            }
+
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "");
+                var dataMergeIndices = [[6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16, "</br>", 17, "&nbsp;", 18, "&nbsp;", 19]];
+                generateTableAndApplyInfiniteScroll("emp-by-date", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+
+                $("#phoneValidation").click(function (event) {
+                    _00('F9', event);
+                });
+
+                $("#reset").click(function (event) {
+                    _00('F5', event);
+                });
+                
+            });
+        </script>
     </asp:Content>
