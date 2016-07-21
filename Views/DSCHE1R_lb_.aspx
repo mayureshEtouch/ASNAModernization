@@ -298,7 +298,9 @@
                                         </div>
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet" style="margin: 0">
                                             <span class="form-text">
-                                                <input type="text" data-tb-index="1" id="onFileDt1" />
+                                                <input type="text" data-tb-index="1" id="onFileDt1" size="14" style="width: 100px;" />
+                                                 <i id="reqesdate1" class="material-icons calender-icon page-icons editable-data"></i>
+                                        <span id="reqdate1" class="DdsCharField_OutputOnly"></span>
                                             </span>
 
                                         </div>
@@ -330,7 +332,7 @@
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Exit</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1">Exit</span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt1">Prompt</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
@@ -1131,13 +1133,13 @@
                 $("#view2").show();
                 copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
                 $("#custID").ForceNumericOnly();
-                $("#CenPH__lb_RCDDTL1__lb_1R7ST").appendTo("#custID");
-                $("#callBackDt").html($("#CenPH__lb_RCDDTL1_V1D8DT").html());
+                $("#CenPH__lb_RCDKEY__lb_1ALNB").appendTo("#custID");
+                $("#onFileDt1").html($("#CenPH__lb_RCDKEY_V1D7DT").html());
 
                 $("#onFileDt1").val($("#CenPH__lb_RCDKEY_V1D7DT").val());
                 $("#onFileDt1").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
 
-                $("#reqesdate1").click(function () { $("#callBackDt").datepicker("show"); });
+                $("#reqesdate1").click(function () { $("#onFileDt1").datepicker("show"); });
 
                 $("#onFileDt1").on('keyup change', function () {
                     var date = $("#onFileDt1").val().split("/");
@@ -1157,11 +1159,11 @@
                     _00('F3', event);
                 });
                 $('#prompt1').click(function (event) {
-                    _00('F3', event);
+                    _00('F4', event);
                 });
 
 
-                $("#Exit1").click(function (event) {
+                $("#exit1").click(function (event) {
                     _00('F12', event);
                 });
 

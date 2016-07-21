@@ -91,8 +91,8 @@
         <div class="button-container">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit12">Exit</span>
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+              <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>--%>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
               <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span> -->
@@ -437,7 +437,8 @@
          <div class="button-container" style="padding-bottom: 5px;" id="div4">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</button>
+              <%--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</button>--%>
+                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
               <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button> -->
@@ -2202,8 +2203,8 @@
                   
               }
 
-              $("#Exit12").click(function (event) {
-                   _00('F12', event);
+              $("#Exit").click(function (event) {
+                   _00('F3', event);
               });
 
               $("#prompt").click(function (event) {
