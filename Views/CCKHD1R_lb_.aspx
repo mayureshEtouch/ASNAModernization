@@ -160,7 +160,9 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Social Security Number:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span> 
+				 <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_RCDDTL1__lb_1A4NB_new-show">Show</a>
+				 </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -2256,7 +2258,7 @@
 				  "CenPH__lb_RCDDTL1__lb_1AMCO":"CenPH__lb_RCDDTL1__lb_1AMCO_new",
 				  "CenPH__lb_RCDDTL1__lb_1A7CO":"CenPH__lb_RCDDTL1__lb_1A7CO_new",
 				  "CenPH__lb_RCDDTL1__lb_1ACCT":"CenPH__lb_RCDDTL1__lb_1ACCT_new",
-				  "CenPH__lb_RCDDTL1__lb_1A4NB":"CenPH__lb_RCDDTL1__lb_1A4NB_new",
+				  //"CenPH__lb_RCDDTL1__lb_1A4NB":"CenPH__lb_RCDDTL1__lb_1A4NB_new",
 				  "CenPH__lb_RCDDTL1__lb_1BANB":"CenPH__lb_RCDDTL1__lb_1BANB_new",
 				  "CenPH__lb_RCDDTL1__lb_1JBNB":"CenPH__lb_RCDDTL1__lb_1JBNB_new",
 				"CenPH__lb_RCDDTL1__lb_1JANB":"CenPH__lb_RCDDTL1__lb_1JANB_new",
@@ -2331,11 +2333,19 @@
 				_00('F12', event);
 				});
 		   
-		       var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html();
-				  if(html != undefined && html.length>0){
-					  $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
-			  }
-		 
+			  
+			   $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html("*****" + $("#CenPH__lb_RCDDTL1__lb_1A4NB").text().split("-")[2]);
+			   
+				
+				$("#CenPH__lb_RCDDTL1__lb_1A4NB_new-show").on("mousedown touchstart", function() {
+                    setTimeout(function() {
+                        $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html($("#CenPH__lb_RCDDTL1__lb_1A4NB").text());
+                    }, 0);
+                });
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new-show").on("mouseup touchend", function() {
+                    $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html("*****" + $("#CenPH__lb_RCDDTL1__lb_1A4NB").text().split("-")[2]);
+                });
+				
 		 
         });
 
