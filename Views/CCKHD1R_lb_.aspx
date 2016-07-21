@@ -220,7 +220,7 @@
             <!-- 4 col ends here --> 
 			
 			 <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" id="cSourceTxt_div">
               <div class="content-grid mdl-grid">
                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Credit Score Txt:</span> </div>
                 <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="cSourceTxt"></span> </div>
@@ -355,16 +355,16 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Grader Override Status:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1LMST_new"><span></span><span class="mrgnLft20">CCC</span></span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1LMST_new"><span></span><span class="mrgnLft20"></span></span> </div>
               </div>
             </div>
             <!-- 4 col ends here -->
 
 			 <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" id="CenPH__lb_RCDDTL1__lb_1U3TX_new_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Option2:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1U3TX_new"><span></span><span class="mrgnLft20">CCC</span></span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1U3TX_new"><span></span><span class="mrgnLft20"></span></span> </div>
               </div>
             </div>
             <!-- 4 col ends here -->
@@ -392,7 +392,7 @@
                     <div class="mdl-cell mdl-cell--4-col pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1AFP3_new"></span> </div>
                   </div>
                 </div>
-                <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;">
+                <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" id="CenPH__lb_RCDDTL1__lb_DEXVA_new_div" style="margin: 0;">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col" style="margin: 0;"> <span class="form-label">or</span>  <span class="form-label mrgnLft20">Premiums:</span> </div>
                     <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DEXVA_new"></span> </div>
@@ -424,7 +424,7 @@
                     <div class="mdl-cell mdl-cell--4-col pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1AGP3_new"></span> </div>
                   </div>
                 </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;" id="CenPH__lb_RCDDTL1__lb_DYCVA_new_div">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col" style="margin: 0;"> <span class="form-label">or</span> <span class="form-label mrgnLft20">Down Overriden:</span></div>
                     <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DYCVA_new"></span> </div>
@@ -2321,7 +2321,12 @@
 		
 			copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
             
-		
+			$.each(copyToAndFromData['displayOnlyFields'],function(i,el){
+			   if($("#"+copyToAndFromData['displayOnlyFields'][i]).html()==''){
+				 $("#"+copyToAndFromData['displayOnlyFields'][i]+"_div").hide();
+			   }
+			 });
+		 
 			 $("#previous").click(function(event){
 				_00('F12', event);
 				});
