@@ -35,29 +35,11 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRB4DFR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i>*nbsp;&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
-			<section class="progress-bar">
-                <div class="progress-bar-wrapper">
-                    <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                        <li class="progress-bar-divider-first">
-
-                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
-                    </ul>
-                </div>
-            </section>
+			
            <section class="add-item">
                 <div class="add-item-wrapper">
                     <div class="content-grid mdl-grid">
@@ -368,9 +350,7 @@
 												<div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
 												</div>
-												<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-												</div>
+											
 										</div>
 								</div>
 						</div>
@@ -1419,8 +1399,8 @@
 	<script type="text/javascript">
   var copyToAndFrom = {
     "displayOnlyFields": {
-		  "CenPH_DdsConstant48":"date",
-		  "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+		  "CenPH_DdsConstant11":"date",
+		  "CenPH__lb_SFLCTL__lb__lb_TME":"time",
 		  "CenPH__lb_SFLRCD__lb_1ITNO\\.0":"CenPH__lb_SFLRCD__lb_1ITNO_new",
 		  "ctl00\\$CenPH\\$_lb_SFLRCD_V1HFNB\\.0":"requestedDate",
 		  "CenPH__lb_SFLRCD__lb_1OQNB\\.0":"score",
