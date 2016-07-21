@@ -601,9 +601,7 @@ a:visited, .mdl-menu__item a {
 	text-align: left;
 	margin-right: 15px;
 } */
-.form-text  {
-	line-height: 20px;
-}
+
 .form-data-wrapper .icon-calender {
 	cursor: pointer;
 	font-size: 18px;
