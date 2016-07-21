@@ -39,26 +39,8 @@
                     </div>
                 </div>
             </section>
-            <section class="progress-bar">
-                <div class="progress-bar-wrapper">
-                    <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                        <li class="progress-bar-divider-first">
-
-                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
-                    </ul>
-                </div>
-            </section>
-						<section class="order-summary">
+         
+		 <section class="order-summary mrgnTp16">
 			<div class="order-summary-wrapper" style="margin-bottom: 0;">
 				<div class="content-grid mdl-grid">
 					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -119,14 +101,12 @@
 								<div class="button-container">
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
-												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
                                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
-                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
+                                                
                                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="request">Request</span>
 												</div>
-												<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-												</div>
+												
 										</div>
 								</div>
 						</div>
@@ -159,7 +139,7 @@
             
 			var dataMergeIndices = [[0], [1], [2], [3]];
 			
-			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
+			generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
                  			
 			var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
@@ -218,9 +198,10 @@
                 _00('F4', event);
             });
 			
-			$("#refresh").click(function (event) {
+			/*$("#refresh").click(function (event) {
                 _00('F5', event);
-            });
+            });*/
+			
             $("#request").click(function (event) {
                 _00('F6', event);
             });
