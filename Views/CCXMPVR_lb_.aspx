@@ -315,7 +315,7 @@
       margin-left: 14px !important;
     }
     .tablet-mrgleft1 {
-      margin-left: 10px !important;
+      margin-left: 6px !important;
     }
 
 
