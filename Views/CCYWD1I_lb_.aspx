@@ -368,10 +368,11 @@
                                 <div class="button-container" style="padding-bottom: 5px;">
                                         <div class="content-grid mdl-grid">
                                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
-                                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</button>
+                                                       <!--  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</button> -->
+                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                                                 </div>
                                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
-                                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button>
+                                                        <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button> -->
                                                 </div>
                                         </div>
                                 </div>
@@ -1282,7 +1283,7 @@
               $("#CenPH__lb_RCDDTL1_V1CRP3_new").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + $("#CenPH__lb_RCDDTL1_V1CRP3_new").html());
 
               $("#CenPH_DdsConstant30_new").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + $("#CenPH_DdsConstant30_new").html());
-              
+
               if($("#CenPH__lb_RCDDTL1__lb_1ENN_lb_").length > 0)
               {
                 $("#custage").show();
@@ -1340,15 +1341,15 @@
              } 
 
              $('#Exit').click(function (event) {
-                    _00("F3", event);
+                    _00('F3', event);
                 });
               $('.close-icon').click(function (event) {
                     _00("F12", event);
                 });
 
-                $('#next').click(function (event) {
+                /*$('#next').click(function (event) {
                     _00("Enter", event);
-                });              
+                });         */     
             });
       </script>
     </asp:Content>

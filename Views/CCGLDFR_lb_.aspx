@@ -22,7 +22,107 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Phone Verification Information</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCGLDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section> -->
+            <section class="order-summary">
+      <div class="order-summary-wrapper" style="margin-bottom: 0;">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Customer Name</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ALTX_new"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+            <span class="summary-title">Home Phone Number</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CPPNB_new"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Address</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ANTX_new"><span class="mrgnLft20" id="CenPH__lb_SFLCTL__lb_2APTX_new"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="phoneinfo" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>Response Group Status</th>
+                            <th>Response Group Description</th>
+                            <th>Input Number - Telephone</th>
+                            <th>Requested Date</th>
+                            <th>Customer Name</th>
+                            <th>Returned Phone</th>
+                            <th>Returned Phone Text</th>
+                            <th>Telephone Company</th>
+                            <th width="15%">Address</th>
+                            <th>Application Number</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                                                              
+                        </tbody>
+                    </table>
+                    <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Prompt">Prompt</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Phone Verify Data Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -632,4 +732,53 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        .order-summary-wrapper {
+          margin: 11px 20px;
+        }
+      </style>
+      <script type="text/javascript">
+          var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant3": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2ALTX": "CenPH__lb_SFLCTL__lb_2ALTX_new",
+                    "CenPH__lb_SFLCTL__lb_CPPNB": "CenPH__lb_SFLCTL__lb_CPPNB_new",
+                    "CenPH__lb_SFLCTL__lb_2ANTX+CenPH__lb_SFLCTL__lb_2AQTX+CenPH__lb_SFLCTL__lb_2W6TX+CenPH__lb_SFLCTL__lb_2APTX": "CenPH__lb_SFLCTL__lb_2ANTX_new"
+                    
+                  },
+                "inputFields": {
+                    
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+
+              $('body').on('click', '#phoneinfo tbody tr', function () {
+                $("#phoneinfo tbody tr:even").css("background-color", "#fff");
+                $("#phoneinfo tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#phoneinfo tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+              var dataMergeIndices = [[0, "&nbsp;",1], [2], [4], [6], [7], [9], ["&nbsp;"], [11], [12, "&nbsp;", 13, "&nbsp;", 14, "&nbsp;", 15], [17]];
+                generateTableAndApplyInfiniteScroll("phoneinfo", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+              
+              $("#previous").click(function (event) {
+                    _00('F3', event);
+              });
+
+              $("#next").click(function (event) {
+                    _00('Enter', event);
+              });
+
+              $("#Prompt").click(function (event) {
+                    _00('F4', event);
+              });
+            });
+      </script>
     </asp:Content>
