@@ -101,7 +101,7 @@
     				<div class="button-container">
     					<div class="content-grid mdl-grid">
     						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop" style="margin-left: 10px;">
-    							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F12">Return</span>
+    							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F12">Previous</span>
     						</div>
     						<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
     						</div>
@@ -119,8 +119,8 @@
     	#__Page_PopUp {
     	                min-width: 400px !important;
     	                width: 440px !important;
-    	                left: 50% !important;
-    	        margin-left: -400px !important;
+    	                left: 25% !important;
+    	        /* margin-left: -400px !important; */
     	        top: 17% !important;
     	            }
     	            #__Page_PopUp tbody > tr:first-child {

@@ -109,7 +109,7 @@
           <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Application Number:</span> </div>
-              <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text"><input type="text" data-tb-index="1" size="8" maxlength="10"  onfocus="_09('#DINNB','6,9','#RCDDTL1');" id="application" /> </span> </div>
+              <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text"><input type="text" data-tb-index="1" size="8" maxlength="10"  onfocus="_09('#DINNB','6,9','#RCDDTL1');" id="CenPH__lb_RCDDTL1__lb_DINNB_new" /> </span> </div>
             </div>
           </div>
           <!-- col ends here --> 
@@ -609,7 +609,7 @@
 				  
               },
               "inputFields": {
-				  "CenPH__lb_RCDDTL1__lb_DINNB":"application",
+				  "CenPH__lb_RCDDTL1__lb_DINNB":"CenPH__lb_RCDDTL1__lb_DINNB_new",
 				  "CenPH__lb_RCDDTL1__lb_DBFCO":"bureauId"
 				  
 			
@@ -647,6 +647,12 @@
 		   });
 		   
 		
+			$(".simplePopupClose").click(function(event){
+				var ele = $("#__focusID__").val().split('$')[1]+"_"+$("#__focusID__").val().split('$')[2]+"_new" ;
+				$("#"+ele).focus();
+			});
+			
+			
 			
         });
 
