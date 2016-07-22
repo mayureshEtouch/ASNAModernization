@@ -98,7 +98,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Driver License:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DCNTX_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DCNTX_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -107,7 +107,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Phone Listing Name:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1PHNN_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1PHNN_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -121,7 +121,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Dependents:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1DEP_lb_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1DEP_lb_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -130,7 +130,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Home - Residence Type:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RTCD_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RTCD_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -145,7 +145,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">For - Residence Time:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1REST_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1REST_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -154,7 +154,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Years Paying:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RES_usd_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RES_usd_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -169,7 +169,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Bankruptcy:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1BNKR_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1BNKR_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -178,7 +178,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Marital:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ASST_new"></span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ASST_new"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -188,73 +188,75 @@
 
 
                     <!-- content-grid mdl-grid starts here -->
-                    <div class="content-grid mdl-grid">
-                        <!-- col starts here -->
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Name:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPNM_new"></span> </div>
+                    <div id="marital_info">
+                        <div class="content-grid mdl-grid">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Name:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPNM_new"></span></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- col ends here -->
+                            <!-- col ends here -->
 
-                        <!-- col starts here -->
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Social Security Number Spouse:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPSS_new"></span> </div>
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Social Security Number Spouse:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPSS_new"></span></div>
+                                </div>
                             </div>
+                            <!-- col ends here -->
+
                         </div>
-                        <!-- col ends here -->
-
-                    </div>
-                    <!-- content-grid mdl-grid ends here -->
+                        <!-- content-grid mdl-grid ends here -->
 
 
-                    <!-- content-grid mdl-grid starts here -->
-                    <div class="content-grid mdl-grid">
-                        <!-- col starts here -->
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">D.O.B. Spouse:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SDOB_new"></span> </div>
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">D.O.B. Spouse:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SDOB_new"></span></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- col ends here -->
+                            <!-- col ends here -->
 
-                        <!-- col starts here -->
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">DL State Spouse:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPST_new"></span> </div>
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">DL State Spouse:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPST_new"></span></div>
+                                </div>
                             </div>
+                            <!-- col ends here -->
+
                         </div>
-                        <!-- col ends here -->
-
-                    </div>
-                    <!-- content-grid mdl-grid ends here -->
+                        <!-- content-grid mdl-grid ends here -->
 
 
-                    <!-- content-grid mdl-grid starts here -->
-                    <div class="content-grid mdl-grid">
-                        <!-- col starts here -->
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Driver License:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DGMXT_new"></span> </div>
+                        <!-- content-grid mdl-grid starts here -->
+                        <div class="content-grid mdl-grid">
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Driver License:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DGMXT_new"></span></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- col ends here -->
+                            <!-- col ends here -->
 
-                        <!-- col starts here -->
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Income:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new"></span> </div>
+                            <!-- col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Income:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new"></span></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- col ends here -->
+                            <!-- col ends here -->
 
+                        </div>
                     </div>
                     <!-- content-grid mdl-grid ends here -->
 
@@ -276,7 +278,7 @@
         <div id="modal" class="simplePopup"></div>
     </div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display:none">
+    <div id="Div1" style="display: none">
 
         <%--  CU: D1W Personal Detail   Display record(1 screen)                                                   --%>
         <%--  CRTDSPF                                                                                              --%>
@@ -1045,7 +1047,7 @@
                 "CenPH__lb_RCDDTL1__lb_1SPST+CenPH__lb_RCDDTL1__lb_DGMXT": "CenPH__lb_RCDDTL1__lb_DGMXT_new",
                 "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "CenPH__lb_RCDDTL1__lb_1SPI_usd_new",
                 "": ""
-                
+
             }
         }
 
@@ -1053,11 +1055,12 @@
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
-        //    if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html()=='S') {
-        //        console.log('hello');
-        //    }
-        //else{
-        //}
+            if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html() == 'S' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '') {
+                $("#marital_info").hide();
+            }
+            else {
+                $("#marital_info").show();
+            }
 
             $('#close').click(function (event) {
                 _00('F3', event);
