@@ -79,7 +79,7 @@
                                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="emp-by-date" data-upgraded=",MaterialDataTable">
                                         <thead>
                                             <tr>
-                                                <th>Employer/Supervisor</th>
+                                                <th>Employer/<br/>Supervisor</th>
                                                 <th>Since</th>
                                                 <th>Income Frequency</th>
                                                 <th>Income</th>
@@ -87,8 +87,8 @@
                                                 <th>Occupation Code</th>
                                                 <th>Supervisor Name</th>
                                                 <th>User Stamp</th>
-                                                <th>Dte Audit Stamp</th>
-                                                <th>Tme Audit Stamp</th>
+                                                <th>Date Audit Stamp</th>
+                                                <th>Time Audit Stamp</th>
                                                 <th>Address</th>
                                             </tr>
                                         </thead>
@@ -593,7 +593,7 @@
                 height: 100% !important;
             }
             #__Page_PopUp {
-                min-width: 80% !important;
+                min-width: 740px !important;
                 left: 10% !important;
                 width: 740px !important;
                 height: auto !important;
