@@ -75,7 +75,9 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Social Security Number:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span></div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span>
+                                    <span><a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_RCDDTL1__lb_1A4NB_new-show">Show</a> </span>
+                                </div>
                             </div>
                         </div>
                         <!-- col ends here -->
@@ -203,7 +205,9 @@
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Social Security Number Spouse:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPSS_new"></span></div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPSS_new"></span>
+                                        <span><a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_RCDDTL1__lb_1SPSS_new-show">Show</a> </span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- col ends here -->
@@ -1055,13 +1059,54 @@
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
-            if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html() == 'S' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '') {
-                $("#marital_info").hide();
+            if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html() == 'S' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '&nbsp;' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '') {
+                //$("#marital_info").hide();
             }
             else {
-                $("#marital_info").show();
+               // $("#marital_info").show();
             }
+            maskSSN();
+            $("#CenPH__lb_RCDDTL1__lb_1A4NB_new-show, #CenPH__lb_RCDDTL1__lb_1A4NB_new").on("mousedown touchstart", function (event) {
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html($("#CenPH__lb_RCDDTL1__lb_1A4NB").html());
+            });
+            $("#CenPH__lb_RCDDTL1__lb_1A4NB_new-show, #CenPH__lb_RCDDTL1__lb_1A4NB_new").on("mouseup touchend", function (event) {
+                maskSSN();
+            });
 
+
+            $("#CenPH__lb_RCDDTL1__lb_1SPSS_new-show, #CenPH__lb_RCDDTL1__lb_1SPSS_new").on("mousedown touchstart", function (event) {
+                $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html($("#CenPH__lb_RCDDTL1__lb_1SPSS").html());
+            });
+            $("#CenPH__lb_RCDDTL1__lb_1SPSS_new-show, #CenPH__lb_RCDDTL1__lb_1SPSS_new").on("mouseup touchend", function (event) {
+                maskSSN();
+            });
+            function maskSSN() {
+                var val = $("#CenPH__lb_RCDDTL1__lb_1A4NB").html().split('-');
+                var s1, s2,s3;
+                for (var i = 0; i < val.length; i++) {
+                    val[0] = "***";
+                    s1 = val[0];
+
+                    val[1] = "**";
+                    s2 = val[1];
+                    s3= val[2];
+                }
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(s1 + s2 + s3);
+                if ($("#CenPH__lb_RCDDTL1__lb_1SPSS").html() != '' || $("#CenPH__lb_RCDDTL1__lb_1SPSS").html() != '&nbsp;') {
+                    console.log('hello');
+                    var val1 = $("#CenPH__lb_RCDDTL1__lb_1SPSS").html().split('-');
+                    var s4, s5, s6;
+                    for (var j = 0; j < val.length; j++) {
+                        val1[0] = "***";
+                        s4 = val1[0];
+
+                        val1[1] = "**";
+                        s5 = val1[1];
+                        s6 = val1[2];
+                    }
+                    $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html(s4 + s5 + s6);
+                }
+            }
             $('#close').click(function (event) {
                 _00('F12', event);
             });
