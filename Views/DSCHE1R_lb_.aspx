@@ -54,7 +54,7 @@
                     <span class="close-icon"><i class="material-icons md-15 close"></i></span>
                 </div>
             </header>
-            <main class="mdl-layout__content">
+            <main class="mdl-layout__content"  style="margin-bottom: 24px;">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--9-col">

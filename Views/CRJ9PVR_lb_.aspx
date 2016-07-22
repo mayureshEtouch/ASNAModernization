@@ -109,7 +109,7 @@
           <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Application Number:</span> </div>
-              <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text"><input type="text" data-tb-index="1" size="8" maxlength="10"  onfocus="_09('#DINNB','6,9','#RCDDTL1');" id="CenPH__lb_RCDDTL1__lb_DINNB_new" /> </span> </div>
+              <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text"><input type="text" data-tb-index="1" size="10" maxlength="10"  onfocus="_09('#DINNB','6,9','#RCDDTL1');" id="CenPH__lb_RCDDTL1__lb_DINNB_new" /> </span> </div>
             </div>
           </div>
           <!-- col ends here --> 
@@ -128,7 +128,7 @@
         
         
         
-        <div class="button-container" style="padding-bottom: 5px;">
+        <div class="button-container">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
@@ -585,6 +585,7 @@
         .mdl-layout__content {
             height: auto !important;
             overflow: hidden !important;
+						margin-bottom: 25px;
         }
         #wrapper {
 			width: 100% !important;
