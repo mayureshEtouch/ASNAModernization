@@ -391,7 +391,7 @@
             </div>
             <!-- 4 col ends here --> 
        <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CLNU_div">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CLNU_new_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">FICO Score:</span> </div>
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> 
@@ -402,7 +402,7 @@
             </div>
             <!-- 4 col ends here -->
              <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CMNU_div">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1CMNU_new_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">FICO Strategy Used:</span> </div>
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> 
@@ -571,9 +571,9 @@
 }
 $(document).ready(function () {
   copyData(copyToAndFrom,"NONE");
-  $.each(copyToAndFrom2['displayOnlyFields'],function(i,el){
-    if($("#"+copyToAndFrom2['displayOnlyFields'][i]).html()==''){
-      $("#"+copyToAndFrom2['displayOnlyFields'][i]+"_div").hide();
+  $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+    if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+      $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
     }
   });
 });
