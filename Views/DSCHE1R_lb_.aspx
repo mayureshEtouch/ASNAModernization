@@ -261,7 +261,7 @@
                         </div>
                     </div>
                 </section>
-            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+            <section class="table-data-content-container mrgnTp16" style="margin-bottom: 25px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">
@@ -1007,7 +1007,7 @@
             left: 50% !important;
             margin-left: -380px;
             top: 18% !important;
-            height: 400px !important;
+            height: auto !important;
         }
 
             #__Page_PopUp > tbody > tr:first-child {
@@ -1020,7 +1020,7 @@
 
         .modal-dialog-container {
             width: 100%;
-            margin: 0 0 3%;
+            margin: 0;
         }
 
         .mdl-layout__content {
