@@ -231,16 +231,7 @@
                 </section>
 
             </main>
-            <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;"></div>
-            <div id="modal1" class="simplePopup"></div>
-            <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-                <i class="material-icons md-15 md-light help-icon"></i>
-                <span class="confirmation-text">Do you want to continue</span>
-                <div class="button-container">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
-                </div>
-            </div>
+           
         </div>
         <!-- Modified HTML code ends here -->
     <div id="view2">
@@ -257,14 +248,19 @@
                 </div>
             </header>
         <main class="mdl-layout__content">
+            
             <section class="time-date">
-                <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
-                        <!-- Title -->
-                        <span class="heading-h1">Activity Audit Key Screen</span>
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--9-col">
+                            <!-- Title -->
+                            <span class="heading-h1">CU: ED1 Activity Audit KEY SCREEN</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSCHE1R</span>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
@@ -351,10 +347,20 @@
             </section>
 
         </main>
-        <div id="modal2" class="simplePopup"></div>
+        
         <!-- Modified HTML code ends here -->
 
     </div>
+     <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;"></div>
+            <div id="modal1" class="simplePopup"></div>
+            <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+                <i class="material-icons md-15 md-light help-icon"></i>
+                <span class="confirmation-text">Do you want to continue</span>
+                <div class="button-container">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+                </div>
+            </div>
     <div id="Div1" style="display: none">
 
         <%--  CU: ED1 Activity Audit    Edit record(1 screen)                                                      --%>
@@ -1039,7 +1045,7 @@
             top: 40% !important;
         }
 
-        #view1 .modal-dialog-container .calender-icon {
+        #view1 .calender-icon {
             position: relative !important;
             right: -16px !important;
             top: -20px !important;
@@ -1113,10 +1119,12 @@
                     $("#yes").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                         _16(event, this, 1, 'Enter');
+                       // $(".OverlayPopupBackground").show()
                     });
                     $("#no").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                         _16(event, this, 1, 'Enter');
+                        $(".OverlayPopupBackground").hide()
                     });
 
                 }
@@ -1176,7 +1184,7 @@
                 });
 
                 $("body").on("click", ".simplePopupClose", function () {
-                    $(".simplePopupBackground1").hide();
+                    $(".simplePopupBackground").hide();
                 });
                 if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                     /*Pop up confirm box*/
