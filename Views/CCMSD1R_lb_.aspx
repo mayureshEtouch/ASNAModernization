@@ -190,9 +190,10 @@
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1">Exit</span>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop modal-button-container pull-right">
 			   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit1">Next</span>
             </div>
-            
           </div>
         </div>
       </div>
