@@ -34,8 +34,8 @@
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCHPDFR</span>
-                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -87,10 +87,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   
                                 </tbody>
                             </table>
-                          
+
                         </div>
 
                         <div class="button-container tablet-width-rt">
@@ -112,7 +111,7 @@
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
     </body>
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display: none;">
 
             <%--  CU: DFI All Ext Crd Trans Display file                                                               --%>
             <%--  CRTDSPF                                                                                              --%>
@@ -661,6 +660,9 @@
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [11]];
             generateTableAndApplyInfiniteScroll("tblExtCrd", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            $('#tblExtCrd tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
             $("#previous").click(function (event) {
                 _00('F3', event);
             });
@@ -696,4 +698,9 @@
 
         });
     </script>
+    <style>
+        #tblExtCrd tr td:nth-child(9) {
+            text-align: right !important;
+        }
+    </style>
 </asp:Content>
