@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 7/21/2016 at 8:04 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member DSCSPVI# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,149 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <div class="modal-dialog-container">
+    	<header class="mdl-layout__header">
+    		<div class="mdl-layout__header-row"> 
+    			<!-- Title --> 
+    			<span class="mdl-layout-title logo-icon"></span>
+    			<div class="mdl-layout-spacer"></div>
+    			<span class="close-icon" event-data="F12"><i class="material-icons md-15 close"></i></span>
+    		</div>
+    	</header>
+    	<main class="mdl-layout__content">
+    		<section class="time-date">
+    			<div class="content-grid mdl-grid">
+    				<div class="mdl-cell mdl-cell--9-col"> 
+    					<!-- Title --> 
+    					<span class="heading-h1">Order Promo Validate</span> 
+    				</div>
+    				<div class="mdl-cell mdl-cell--3-col pull-right"> 
+    					<!-- Navigation --> 
+    					<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSCSPVI</span>
+    				</div>
+    			</div>
+    		</section>
+    		<section class="form-data">
+    			<div class="form-data-wrapper" style="padding-bottom:0;">			
+    				<!-- content-grid mdl-grid starts here -->
+    				<div class="content-grid mdl-grid">
+    					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+    						<div class="content-grid mdl-grid">
+    							<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+    								<span class="form-label">Order Number:</span>
+    							</div>
+    							<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+    								<span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SCNB_new"></span>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+    						<div class="content-grid mdl-grid">
+    							<div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+    								<span class="form-label">Max COP Available:</span>
+    							</div>
+    							<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 0 0 -3px;">
+    								<span class="form-text" id="CenPH__lb_RCDDTL1__lb_DQ9ST_new"></span>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    				<!-- content-grid mdl-grid ends here -->
+    				<!-- content-grid mdl-grid starts here -->
+    				<div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DKMXT_new_div">
+    					<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+    						<div class="content-grid mdl-grid">
+    							<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+    								<span class="form-label">Text:</span>
+    							</div>
+    							<div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0  -2px;">
+    								<span class="form-text" id="CenPH__lb_RCDDTL1__lb_DKMXT_new"></span>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    				<!-- content-grid mdl-grid ends here -->
+    		
+    				<div class="button-container">
+    					<div class="content-grid mdl-grid">
+    						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop" style="margin-left: 10px;">
+    							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F12">Return</span>
+    						</div>
+    						<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+            </section>
+    		
+    	</main>
+    	<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+        <div id="modal" class="simplePopup"></div>
+    </div>
+    <!-- Modified HTML code ends here -->
+    <style type="text/css">
+    	#__Page_PopUp {
+    	                min-width: 400px !important;
+    	                width: 440px !important;
+    	                left: 50% !important;
+    	        margin-left: -400px !important;
+    	        top: 17% !important;
+    	            }
+    	            #__Page_PopUp tbody > tr:first-child {
+    	              display: none;
+    	            }
+    	            #__Page_PopUp .DdsInlinePopUpTitle {
+    	              height: 0;
+    	            }
+    	            .modal-dialog-container {
+    	                width: 100%;
+    	                margin: 0 0 3% 0;
+    	            }
+    	            .mdl-layout__content {
+    	                height: auto !important;
+    	                overflow: hidden !important;
+    	            }
+    	            #wrapper {
+    	                width: 100% !important;
+    	            }
+    	            #__Page_Hidden{
+    	                height: 100% !important;
+    	            }
+    	            .simplePopup {
+    	              left: 28% !important;
+    	              top: 50% !important;
+    	            }
+    	            #div_driver, #div_license {
+    	                display: none;
+    	            }
+.modal-dialog-container{width: 650px;}
+@media screen and (max-width: 1024px) {
+.tablet-mrgleft {
+margin-left: -4px !important;
+}
+}
+</style>
+<script type="text/javascript">
+ var copyToAndFrom = {
+  "displayOnlyFields": {
+    "CenPH__lb_RCDDTL1__lb_1SCNB":"CenPH__lb_RCDDTL1__lb_1SCNB_new",
+    "CenPH__lb_RCDDTL1__lb_DQ9ST":"CenPH__lb_RCDDTL1__lb_DQ9ST_new",
+    "CenPH__lb_RCDDTL1__lb_DKMXT":"CenPH__lb_RCDDTL1__lb_DKMXT_new",
+  },
+  "inputFields": {}
+}
+$(document).ready(function () {
+  copyData(copyToAndFrom,"NONE");
+  $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+             if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+               $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
+             }
+           });
+  });
+</script>
+        <div id="Div1" style="display:none;">
             
       <%--  CA: PMT Promo Validate    Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
