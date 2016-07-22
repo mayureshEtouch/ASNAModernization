@@ -1593,6 +1593,9 @@ input[maxlength='4'] {
 .order-summary-wrapper .mdl-cell {
 	margin-bottom: 10px;
 } 
+.normal-table-price td {
+	padding-right: 35px;
+}
 }
 @media (min-width: 1024px) and (max-width: 1100px) {
 #wrapper,  #span-content,  #content,  #main-content {

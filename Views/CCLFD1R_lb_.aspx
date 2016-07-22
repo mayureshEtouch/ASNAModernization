@@ -348,7 +348,7 @@
           <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin:0 auto;">
             <div class="content-grid mdl-grid" style="padding:0;">
               <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet">
-                <table cellspacing="0" cellpadding="0" border="0" class="normal-table normal-table-price" id="" data-upgraded=",MaterialDataTable" >
+                <table cellspacing="0" cellpadding="0" border="0" class="normal-table normal-table-price" id="" data-upgraded=",MaterialDataTable"  >
                   <thead>
                     <tr>
                       <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1JBNB_new_div">IRsk</span></td>
