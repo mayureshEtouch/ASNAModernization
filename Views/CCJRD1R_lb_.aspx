@@ -1060,10 +1060,10 @@
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
             if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html() == 'S' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '&nbsp;' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '') {
-                //$("#marital_info").hide();
+                $("#marital_info").hide();
             }
             else {
-               // $("#marital_info").show();
+                $("#marital_info").show();
             }
             maskSSN();
             $("#CenPH__lb_RCDDTL1__lb_1A4NB_new-show, #CenPH__lb_RCDDTL1__lb_1A4NB_new").on("mousedown touchstart", function (event) {
@@ -1078,6 +1078,7 @@
                 $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html($("#CenPH__lb_RCDDTL1__lb_1SPSS").html());
             });
             $("#CenPH__lb_RCDDTL1__lb_1SPSS_new-show, #CenPH__lb_RCDDTL1__lb_1SPSS_new").on("mouseup touchend", function (event) {
+                
                 maskSSN();
             });
             function maskSSN() {
@@ -1092,8 +1093,7 @@
                     s3= val[2];
                 }
                 $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(s1 + s2 + s3);
-                if ($("#CenPH__lb_RCDDTL1__lb_1SPSS").html() != '' || $("#CenPH__lb_RCDDTL1__lb_1SPSS").html() != '&nbsp;') {
-                    console.log('hello');
+                if ($("#CenPH__lb_RCDDTL1__lb_1SPSS").html().replace('&nbsp;', '') != '') {
                     var val1 = $("#CenPH__lb_RCDDTL1__lb_1SPSS").html().split('-');
                     var s4, s5, s6;
                     for (var j = 0; j < val.length; j++) {
@@ -1106,6 +1106,8 @@
                     }
                     $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html(s4 + s5 + s6);
                 }
+                
+                
             }
             $('#close').click(function (event) {
                 _00('F12', event);
