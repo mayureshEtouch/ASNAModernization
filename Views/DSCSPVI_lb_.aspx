@@ -119,8 +119,8 @@
     	#__Page_PopUp {
     	                min-width: 400px !important;
     	                width: 440px !important;
-    	                left: 50% !important;
-    	        margin-left: -400px !important;
+    	                left: 25% !important;
+    	        /* margin-left: -400px !important; */
     	        top: 17% !important;
     	            }
     	            #__Page_PopUp tbody > tr:first-child {
