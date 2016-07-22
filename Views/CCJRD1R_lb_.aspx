@@ -83,8 +83,8 @@
                         <!-- col starts here -->
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">D.O.B.:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="dob"></span></div>
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">D.O.B.:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="dob"></span></div>
                             </div>
                         </div>
                         <!-- col ends here -->
