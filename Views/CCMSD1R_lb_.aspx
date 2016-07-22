@@ -3,6 +3,20 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 7/21/2016 at 6:56 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+		
+		<link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+		<link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+		<script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+		
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCMSD1R# --%>
 
     </asp:Content>
@@ -22,7 +36,185 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	
+		<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span> 
+      <!--<span class="mdl-layout-heading">StoreFront</span>-->
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span> </div>
+  </header>
+  
+  <main class="mdl-layout__content" id="customerAudit" style="display:none">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Customer Audit Key Screen</span> </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCMSD1R</span></div>
+      </div>
+    </section>
+    <section class="form-data">
+      <div class="form-data-wrapper" style="padding-bottom:0;"> 
+        
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid"> 
+          <!-- col starts here -->
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Customer ID:</span> </div>
+              <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0"> <span class="form-text"><input  id="CenPH__lb_RCDKEY__lb_1ALNB_new" maxlength="7"  onfocus="_09('#1ALNB','4,31','#RCDKEY');" type="text" data-tb-index="1"/> </span></div>
+            </div>
+          </div>
+          <!-- col ends here --> 
+		  
+		 
+          
+        </div>
+        <!-- content-grid mdl-grid ends here --> 
+        
+		 <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid"> 
+          <!-- col starts here -->
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Application:</span> </div>
+              <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0"> 
+					<span class="form-text"><input type="text" maxlength="9" onfocus="_09('#1ITNB','5,31','#RCDKEY');" id="CenPH__lb_RCDKEY__lb_1ITNB_new" data-tb-index="1"/> </span>
+			  </div>
+            </div>
+          </div>
+          <!-- col ends here --> 
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+		
+        
+        <div class="button-container" style="padding-bottom: 5px;">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+			   <span style="display:none" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
+			   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <main class="mdl-layout__content" id="customerDisplay" style="display:none">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Display Customer Audit</span> </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCMSD1R</span></div>
+      </div>
+    </section>
+    <section class="form-data">
+      <div class="form-data-wrapper" style="padding-bottom:0;"> 
+        
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid"> 
+          <!-- col starts here -->
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Customer Name:</span> </div>
+              <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ALTX_new"></span> </div>
+            </div>
+          </div>
+          <!-- col ends here --> 
+		  
+		 
+          
+        </div>
+        <!-- content-grid mdl-grid ends here --> 
+        
+		 <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid"> 
+          <!-- col starts here -->
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Address:</span> </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0" id="CenPH__lb_RCDDTL1__lb_1ANTX_new"> 
+					
+			  </div>
+            </div>
+          </div>
+          <!-- col ends here --> 
+		  
+		  <!-- col starts here -->
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Home Phone:</span> </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1K2NB_new"></span> </div>
+            </div>
+			 <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Work Phone:</span> </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1K3NB_new"></span> </div>
+            </div>
+          </div>
+          <!-- col ends here --> 
+		  
+          
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+		
+		 <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid"> 
+          <!-- col starts here -->
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Ship-to Address:</span> </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0" id="CenPH__lb_RCDDTL1__lb_1VJTX_new"> 
+					
+			  </div>
+            </div>
+          </div>
+          <!-- col ends here --> 
+          
+        </div>
+        <!-- content-grid mdl-grid ends here --> 
+		
+        <div class="button-container" style="padding-bottom: 5px;">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1">Exit</span>
+			   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit1">Submit Request</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  	 <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    
+    <div id="promptErrorMsg" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
+	
+	
+</div>
+<!-- Modified HTML code ends here -->
+	
+        <div id="Div1" style="display:none">
             
       <%--  CA: D1W Customer Audit    Display record(1 screen)                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -587,4 +779,137 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style>
+        #__Page_PopUp {
+            min-width: 450px !important;
+            width: 600px !important;
+			left: 50% !important;
+			margin-left: -300px;
+			height: 310px !important;
+      top: 15% !important;
+        }
+		#__Page_PopUp > tbody > tr:first-child {
+			display: none;
+		}
+
+		#__Page_PopUp .DdsInlinePopUpTitle {
+			height: 0;
+		}
+        
+        .modal-dialog-container {
+            width: 100%;
+            margin: 0 0 3%;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+			width: 100% !important;
+		}
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+		.confirmation-outer-conatiner {
+			top: 35% !important;
+		}
+    </style>
+	
+	<script type="text/javascript">
+             var copyToAndFromData = {
+              "displayOnlyFields": {
+				"CenPH__lb_RCDDTL1__lb_1ALTX":"CenPH__lb_RCDDTL1__lb_1ALTX_new",
+				"CenPH__lb_RCDDTL1__lb_1K2NB":"CenPH__lb_RCDDTL1__lb_1K2NB_new",
+				"CenPH__lb_RCDDTL1__lb_1K3NB":"CenPH__lb_RCDDTL1__lb_1K3NB_new"
+				
+                  
+              },
+              "inputFields": {
+				"CenPH__lb_RCDKEY__lb_1ALNB":"CenPH__lb_RCDKEY__lb_1ALNB_new", //customer-id
+				"CenPH__lb_RCDKEY__lb_1ITNB":"CenPH__lb_RCDKEY__lb_1ITNB_new"	// application-id
+              }
+          };
+
+            $(document).ready(function () {
+			
+			   if($("#CenPH__lb_RCDKEY__lb_1ALNB").length > 0){
+					$("#customerAudit").show();
+					$("#customerDisplay").hide();
+				}else{
+					$("#customerDisplay").show();
+					$("#customerAudit").hide();
+				}
+				
+               copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+				
+                var custAddress = '<span data-upgraded=",MaterialTextfield" class="form-text">' + $("#CenPH__lb_RCDDTL1__lb_1ANTX").text() + '</br>' + $("#CenPH__lb_RCDDTL1__lb_1AOTX").text() + '</br>'+ '<span>' + $("#CenPH__lb_RCDDTL1__lb_DAQTX").text() + '</span>&nbsp;<span>' + $("#CenPH__lb_RCDDTL1__lb_DBLTX").text() +'&nbsp;'+ $("#CenPH__lb_RCDDTL1__lb_1U9TX").text() + '</span></span>'
+				
+                $("#CenPH__lb_RCDDTL1__lb_1ANTX_new").html(custAddress);
+				
+				
+				 var custShipAddress = '<span data-upgraded=",MaterialTextfield" class="form-text">' + $("#CenPH__lb_RCDDTL1__lb_1VJTX").text() + '</br>' + $("#CenPH__lb_RCDDTL1__lb_1VKTX").text() + '</br>'+ '<span>' + $("#CenPH__lb_RCDDTL1__lb_1VLTX").text() + '</span></span>'
+				
+                $("#CenPH__lb_RCDDTL1__lb_1VJTX_new").html(custShipAddress);
+               
+				 $('.close-icon').click(function (event) {
+					_00('F3',event);
+				});
+			
+				 if($("#__Page_PopUp .simplePopupClose").length > 0) {
+					$(".simplePopupBackground1").show();
+				} else {
+					$(".simplePopupBackground1").hide();
+				}
+				$("body").on("click", ".simplePopupClose", function() {
+					$(".simplePopupBackground1").hide();
+				});
+			
+			
+			
+			if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+			  /*Pop up confirm box*/
+			  $(".OverlayPopupBackground").show();
+			  $(".confirmation-outer-conatiner").show();
+			  
+			  $("#yes").click(function (event) {
+				  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+					_16(event,this,1,'Enter');
+			  });
+			  $("#no").click(function (event) {
+				  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+				  _16(event,this,1,'Enter');
+			  });
+
+			}
+			
+                $("#prompt").click(function (event) {
+                    _00('F4', event);
+                });
+				
+				$("#submit").click(function (event) {
+                   _00('Enter',event);
+                });
+				
+				$("#submit1").click(function (event) {
+                   _00('Enter',event);
+                });
+
+                $("#exit").click(function (event) {
+                    _00('F3', event);
+                });
+				
+				 $("#exit1").click(function (event) {
+                    _00('F3', event);
+                });
+                
+            });
+        </script>
+		
     </asp:Content>
