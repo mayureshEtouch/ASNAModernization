@@ -22,7 +22,92 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Appeal Decision</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCN7SRR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="width: 170px;">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">Appeal Decision Code </span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet" id="number">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2EPCO_new" class="mdl-textfield__input" data-tb-index="1" maxlength="3">
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        
+             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="appealtable" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>Appeal Decision Code</th>
+                            <th>Appeal Decision Grader</th>
+                            <th>Appeal Decision Store</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                                                          
+                        </tbody>
+                    </table>
+                    <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  CA: SEL Appeal Decisio Select record                                                                 --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -373,4 +458,47 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant8": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2EPCO": "CenPH__lb_SFLCTL__lb_2EPCO_new"
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+
+              var dataMergeIndices = [[0], [1], [3]];
+                generateTableAndApplyInfiniteScroll("appealtable", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+
+              $("#previous").click(function (event) {
+                _00('F3', event);
+              });  
+
+              $("#prompt").click(function (event) {
+                _00('F4', event);
+              });
+
+              $("#next").click(function (event) {
+                _00('Enter', event);
+              });
+
+              $('#CenPH__lb_SFLCTL__lb_2EPCO_new').keypress(function (e) {
+                  var regex = new RegExp("^[a-zA-Z0-9]+$");
+                  var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+                  if (regex.test(str)) {
+                    return true;
+                  }
+
+                  e.preventDefault();
+                  return false;
+              });
+            });
+      </script>
     </asp:Content>
