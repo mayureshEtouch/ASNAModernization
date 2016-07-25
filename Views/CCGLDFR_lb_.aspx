@@ -111,7 +111,7 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Prompt">Prompt</span>
                         </div>
                         <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                            <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
                         </div>
                     </div>
                 </div>
@@ -757,24 +757,24 @@
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#time").html("&nbsp;" + $("#time").html());
 
-              $('body').on('click', '#phoneinfo tbody tr', function () {
+              /*$('body').on('click', '#phoneinfo tbody tr', function () {
                 $("#phoneinfo tbody tr:even").css("background-color", "#fff");
                 $("#phoneinfo tbody tr:odd").css("background-color", "#f9f9f9");
                 $(this).css({ "background-color": "#d8d8d8" });
                 $("#phoneinfo tbody tr").removeClass("selected");
                 $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");
-            });
+            });*/
               var dataMergeIndices = [[0, "&nbsp;",1], [2], [4], [6], [7], [9], ["&nbsp;"], [11], [12, "&nbsp;", 13, "&nbsp;", 14, "&nbsp;", 15], [17]];
-                generateTableAndApplyInfiniteScroll("phoneinfo", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("phoneinfo", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
               
               $("#previous").click(function (event) {
                     _00('F3', event);
               });
 
-              $("#next").click(function (event) {
+              /*$("#next").click(function (event) {
                     _00('Enter', event);
-              });
+              });*/
 
               $("#Prompt").click(function (event) {
                     _00('F4', event);
