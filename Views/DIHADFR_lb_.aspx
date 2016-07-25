@@ -22,7 +22,98 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Builder Orders</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIHADFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="order-summary mrgnTp16">
+                <div class="order-summary-wrapper" style="margin-bottom: 0;">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                            <span class="summary-title">Customer Name</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ALTX_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                            <span class="summary-title">Telephone</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CHPH_lb_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                            <span class="summary-title">Unpaid</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CDIF_usd_new"></span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                            <span class="summary-title">Payment</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                                <span class="icon-txt display-customer">Display</span><i class="display-customer material-icons md-15 md-light display-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="builder-orders" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Order Number</th>
+                                            <th>Version Number</th>
+                                            <th>Order Type</th>
+                                            <th>Location</th>
+                                            <th>Original Order Date</th>
+                                            <th>Monies Status</th>
+                                            <th>Delivery</th>
+                                            <th>Order Delivery Status</th>
+                                            <th>Delivered Date</th>
+                                            <th>Purchased $</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="selectCompletedOrder">Select Completed Order</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  OE: DSP Builder Orders    Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -725,4 +816,44 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant18": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2ALTX": "CenPH__lb_SFLCTL__lb_2ALTX_new",
+                    "CenPH__lb_SFLCTL__lb_CHPH_lb_": "CenPH__lb_SFLCTL__lb_CHPH_lb_new",
+                    "CenPH__lb_SFLCTL__lb_CDIF_usd_": "CenPH__lb_SFLCTL__lb_CDIF_usd_new",
+                    "CenPH__lb_SFLCTL__lb_CLTA_usd_": "CenPH__lb_SFLCTL__lb_CLTA_usd_new"
+                }
+
+            }
+
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "");
+                $("#time").html("&nbsp;" + $("#time").html());
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
+                generateTableAndApplyInfiniteScroll("builder-orders", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+
+                $("#selectCompletedOrder").click(function (event) {
+                    _00('F7', event);
+                });
+                
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+                 //Display customer details
+                $(".display-customer").click(function (event) {
+                    var row = $("#builder-orders tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                });
+            });
+        </script>
     </asp:Content>
