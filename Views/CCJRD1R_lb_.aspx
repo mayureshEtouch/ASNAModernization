@@ -1049,8 +1049,7 @@
                 "CenPH__lb_RCDDTL1__lb_1SDOB": "CenPH__lb_RCDDTL1__lb_1SDOB_new",
                 "CenPH__lb_RCDDTL1__lb_1SPST": "CenPH__lb_RCDDTL1__lb_1SPST_new",
                 "CenPH__lb_RCDDTL1__lb_1SPST+CenPH__lb_RCDDTL1__lb_DGMXT": "CenPH__lb_RCDDTL1__lb_DGMXT_new",
-                "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "CenPH__lb_RCDDTL1__lb_1SPI_usd_new",
-                "": ""
+                "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "CenPH__lb_RCDDTL1__lb_1SPI_usd_new"
 
             }
         }
