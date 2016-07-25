@@ -22,6 +22,95 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Preapproved Promotion</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRH4SRR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+						
+            
+  <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--1-col" style="width: 50px;">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">SSN</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet" id="number">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2SSN_new" class="mdl-textfield__input" data-tb-index="1">
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>SSN</th>
+														<th>First Name</th>
+														<th>Middle Initial</th>
+														<th>Last Name</th>
+														<th>Not Used - Used Status</th>
+														<th>Not Used - Used Date</th>
+													</tr>
+												</thead>
+												<tbody>
+																					
+												</tbody>
+										</table>
+								</div>
+                               
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+												</div>
+                                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+
         <div id="Div1">
             
       <%--  Select CR: Preapproved Pr Select record                                                              --%>
@@ -648,4 +737,40 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	 <script type="text/javascript">
+           var copyToAndFromData = {
+              "displayOnlyFields": {
+				"CenPH_DdsConstant15":"date",
+				"CenPH__lb_SFLCTL__lb__lb_TME":"time"
+              },
+              "inputFields": {
+				"CenPH__lb_SFLCTL__lb_2SSN":"CenPH__lb_SFLCTL__lb_2SSN_new"
+              }
+          };
+
+            $(document).ready(function () {
+                copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+				
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5]];
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+                $("#prompt").click(function (event) {
+                    _00('F4', event);
+                });
+
+                $("#exit").click(function (event) {
+                    _00('F3', event);
+                });
+				
+				
+                $("#next").click(function (event) {
+                   _00('Enter', event);
+                });
+				
+				$("#search").click(function (event) {
+                  _00('Enter', event);
+                });
+                
+            });
+        </script>
     </asp:Content>
