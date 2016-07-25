@@ -75,7 +75,7 @@
                     <div class="table-data-maincontainer">
                         <div style="overflow: auto;" class="table-container">
                             <div>							  
-								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
 								 <thead>
 													<tr>
 														<th>SSN</th>
