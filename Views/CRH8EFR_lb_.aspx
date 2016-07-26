@@ -106,7 +106,7 @@
 														<th>Promo ID</th>
                                                         <th>Used Status</th>
 														<th>Used Date</th>
-														<th>SSN#</th>
+														<th>SSN</th>
                                                         <th>Score</th>
                                                         <th>Criteria Code</th>
                                                         <th>Address</th>
