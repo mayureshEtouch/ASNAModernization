@@ -1225,8 +1225,8 @@
                 //var val = $("#CenPH__lb_RCDDTL1__lb_1SSN").html().split('-');
                var val = $("#CenPH__lb_RCDDTL1__lb_1SSN").html();
                   //var s1, s2,s3;
-                  var ssn_new = val .slice(-3);
-                  ssn_new = ("*******"+ssn_new);
+                  var ssn_new = val .slice(-4);
+                  ssn_new = ("*****"+ssn_new);
                    $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html(ssn_new);
             //
                 }
