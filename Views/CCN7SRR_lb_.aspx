@@ -476,7 +476,7 @@
 
               var dataMergeIndices = [[0], [1], [3]];
                 generateTableAndApplyInfiniteScroll("appealtable", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-
+                $("#appealtable tr").css('cursor', 'pointer');
               $("#previous").click(function (event) {
                 _00('F3', event);
               });  

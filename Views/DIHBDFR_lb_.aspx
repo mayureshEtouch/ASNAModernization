@@ -761,9 +761,9 @@
             generateTableAndApplyInfiniteScroll("tblCompleted", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             $("#number1").ForceNumericOnly();
             $("#CenPH__lb_SFLCTL__lb_2BANB").appendTo("#number1");
-            //$('#tblCompleted tbody tr').dblclick(function () {
-            //    return false; // does both event.stopPropogation as well as event.preventDefault
-            //});
+            $('#tblCompleted tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
             $('#previous').click(function (event) {
                 _00('F3', event);
             });
