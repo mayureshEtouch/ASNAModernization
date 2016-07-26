@@ -22,7 +22,6 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1" style="display:none">
 		<!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
         <main class="mdl-layout__content">
@@ -127,9 +126,7 @@
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
 												
 												</div>
-                                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-												</div>
+                                             
 										</div>
 								</div>
 						</div>
@@ -140,6 +137,8 @@
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
             
+        <div id="Div1" style="display:none">
+	
       <%--  Edit CR: Preapproved Name Edit file                                                                  --%>
       <%--  CRTDSPF                                                                                              --%>
       <%--  RSTDSP(*YES)                                                                                         --%>
@@ -784,7 +783,7 @@
             $(document).ready(function () {
                 copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
 				
-                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9, "&nbsp;", 10, "&nbsp;", 11, ",&nbsp;", 12], [13]];
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9, "&nbsp;&nbsp;", 10, "&nbsp;&nbsp;", 11, ",&nbsp;&nbsp;", 12], [13]];
                 generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
 
 
@@ -798,10 +797,9 @@
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-			
 				
             //Next button click handler
-            $("#next").click(function (event) {
+            $(".display").click(function (event) {
                 var row = $("#displayData tbody tr.selected");
                 selectCusotmer(row, "5", event);
             });
