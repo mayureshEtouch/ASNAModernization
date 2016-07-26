@@ -70,7 +70,7 @@
                                   <span class="form-label">Letter code:</span>
                               </div>
                               <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-                                  <input class="mdl-textfield__input" type="text" style="width: 110px; display:inline-block" data-tb-index="1" maxlength="9" size="10" id="CenPH__lb_RCDKEY__lb_1ANCO_new">
+                                  <input class="mdl-textfield__input" type="text" style="width: 110px; display:inline-block" data-tb-index="1" maxlength="9" size="10" id="CenPH__lb_RCDKEY__lb_1ANCO_new" onfocus="_09('#1ANCO','5,15','#RCDKEY');">
                               </div>
                 </div>
               </div>
@@ -83,6 +83,7 @@
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
 							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
+               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F4">Prompt</span>
                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F10">search</span>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
