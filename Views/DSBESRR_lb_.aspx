@@ -65,12 +65,12 @@
                 <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
                               <span class="summary-table-title">Filter by:</span>
                             </div>
-                <div class="mdl-cell mdl-cell--10-col search-container">
+                <div class="mdl-cell mdl-cell--3-col search-container">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--1-col">
+                    <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet">
                                   <span class="summary-table-title pull-right">Zip Code</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--11-col">
+                                <div class="mdl-cell mdl-cell--3-col">
                                   <input type="text" id="number" class="mdl-textfield__input">
                                 </div>
                   </div>
