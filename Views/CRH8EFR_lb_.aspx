@@ -67,7 +67,7 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Last Name</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V8CD_new" maxlength="18" onfocus="_09('#2V8CD','3,22','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V8CD_new" maxlength="18" onfocus="_09('#2V8CD','3,22','#SFLCTL');" class="mdl-textfield__input" data-tb-index="3">
                                         </div>                             
                                     </div>
                                 </div>
@@ -786,6 +786,12 @@
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9, "&nbsp;&nbsp;", 10, "&nbsp;&nbsp;", 11, ",&nbsp;&nbsp;", 12], [13]];
                 generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
 
+				$("#displayData tbody tr").removeAttr("tabindex");
+			
+				
+				$("#displayData tbody tr").each(function(i){
+					$(this).attr("tabindex",parseInt(i+4));
+				})	
 
 			$("#exit").click(function (event) {
 				_00('F3', event);
