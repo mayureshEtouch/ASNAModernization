@@ -42,7 +42,7 @@
       <span class="mdl-layout-title logo-icon"></span> 
       <!--<span class="mdl-layout-heading">StoreFront</span>-->
       <div class="mdl-layout-spacer"></div>
-      <span class="close-icon"><i class="material-icons md-15 close"></i></span> </div>
+      <span class="close-icon" event-data="F3"><i class="material-icons md-15 close"></i></span> </div>
   </header>
   <main class="mdl-layout__content">
     <section class="time-date">
