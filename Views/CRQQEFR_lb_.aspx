@@ -87,7 +87,7 @@
                                     <thead>
                                         <tr>
                                             <th>Letter Code</th>
-                                            <th>SSN#</th>
+                                            <th>SSN</th>
                                             <th>First Name</th>
                                             <th>Middle Initial</th>
                                             <th>Last Name</th>

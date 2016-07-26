@@ -76,24 +76,26 @@
 
         <!-- content-grid mdl-grid starts here -->
         <div class="content-grid mdl-grid">
-          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1IPNB_new_div">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--5-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1IPNB_new_div">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
                 <span class="form-label">Credit Score:</span>
               </div>
-              <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet tablet-mrgleft1" style="margin:0 0 0 4px;">
+              <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet " style="margin:0 0 0 -4px;">
                 <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_1IPNB_new"></span>
-                <span class="mrgnLft20" id="CenPH_DdsConstant6_new" style="margin-left: 17px;"></span>
               </span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span id="CenPH_DdsConstant6_new"></span>
             </div>
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_DHSVA_new_div">
+        <div class="mdl-cell mdl-cell--12-col mdl-cell--3-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_DHSVA_new_div">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-tablet" style="margin:0">
               <span class="form-label">OTB - Open to Buy:</span>
             </div>
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin:0 0 0 -3px">
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -3px">
               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DHSVA_new"></span>
             </div>
           </div>
@@ -106,11 +108,17 @@
         <!-- col starts here -->
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
               <span class="form-label">Adj Prev Cust:</span>
             </div>
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
-              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX1NB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant7_new">Conn's Customer Adjustment</span></span>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -4px;">
+              <span class="form-text">
+				<span id="CenPH__lb_RCDDTL1__lb_DX1NB_new"></span>
+				
+				</span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span  id="CenPH_DdsConstant7_new">Conn's Customer Adjustment</span>
             </div>
           </div>
         </div>
@@ -123,11 +131,14 @@
         <!-- col starts here -->
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
               <span class="form-label">Adj Cust Empl:</span>
             </div>
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
-              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX3NB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant8_new">Customer Employment Adjustment</span></span>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -4px;">
+              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX3NB_new"></span></span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span id="CenPH_DdsConstant8_new">Customer Employment Adjustment</span>
             </div>
           </div>
         </div>
@@ -139,11 +150,14 @@
         <!-- col starts here -->
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
               <span class="form-label">Adj Cust Res:</span>
             </div>
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
-              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX2NB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant9_new">Customer Residense Adjustment</span></span>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -4px;">
+              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX2NB_new"></span></span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span id="CenPH_DdsConstant9_new">Customer Residense Adjustment</span>
             </div>
           </div>
         </div>
@@ -155,11 +169,14 @@
         <!-- col starts here -->
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
               <span class="form-label">Adj Appl Down Offrd:</span>
             </div>
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
-              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX4NB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant10_new">Down Pmt Offered Adjustment</span></span>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -4px;">
+              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX4NB_new"></span></span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span id="CenPH_DdsConstant10_new">Down Pmt Offered Adjustment</span>
             </div>
           </div>
         </div>
@@ -171,11 +188,14 @@
         <!-- col starts here -->
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
               <span class="form-label">Adj Debt 2 Income:</span>
             </div>
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
-              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX5NB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant11_new">Debt to Income Adjustment</span></span>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -4px;">
+              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DX5NB_new"></span></span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span id="CenPH_DdsConstant11_new">Debt to Income Adjustment</span>
             </div>
           </div>
         </div>
@@ -188,11 +208,14 @@
         <!-- col starts here -->
         <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
               <span class="form-label">Acct Crd Score:</span>
             </div>
-            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
-              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DWNNB_new"></span><span class="mrgnLft20" id="CenPH_DdsConstant12_new">Adjusted Credit Score</span></span>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0 0 0 -4px;">
+              <span class="form-text"><span id="CenPH__lb_RCDDTL1__lb_DWNNB_new"></span></span>
+            </div>
+			<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
+                <span id="CenPH_DdsConstant12_new">Adjusted Credit Score</span>
             </div>
           </div>
         </div>
@@ -207,7 +230,7 @@
             <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet" style="margin:0">
               <span class="form-label">COP:</span>
             </div>
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet tablet-mrgleft" style="margin:0 0 0 4px;">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0 0 0 4px;">
               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DS7NB_new"></span>
             </div>
           </div>
