@@ -22,7 +22,123 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <div id="Div1" style="display:none">
+		<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Preapproved Promotion</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRH8EFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+					
+            
+  <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--2-col">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">First Name</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V6CD_new" onfocus="_09('#2V6CD','3,4','#SFLCTL');" maxlength="15" class="mdl-textfield__input" data-tb-index="1">
+                                        </div>  
+                                         <div class="mdl-cell mdl-cell--2-col">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">Middle Initial</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V7CD_new"  onfocus="_09('#2V7CD','3,20','#SFLCTL');" maxlength="1" class="mdl-textfield__input" data-tb-index="2">
+                                        </div>  
+                                          <div class="mdl-cell mdl-cell--2-col">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">Last Name</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V8CD_new" maxlength="18" onfocus="_09('#2V8CD','3,22','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
+                                        </div>                             
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			<section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+								<span class="icon-txt display">Display</span><i class="material-icons md-15 md-light display-icon display"></i>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>First Name</th>
+														<th>Middle Initial</th>
+														<th>Last Name</th>
+														<th>Promo ID</th>
+                                                        <th>Used Status</th>
+														<th>Used Date</th>
+														<th>SSN#</th>
+                                                        <th>Score</th>
+                                                        <th>Criteria Code</th>
+                                                        <th>Address</th>
+                                                        <th>Limit Assigned</th>
+													</tr>
+												</thead>
+												<tbody>
+													                                                   									
+												</tbody>
+										</table>
+                                         
+								</div>
+                               
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+												
+												</div>
+                                                <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
             
       <%--  Edit CR: Preapproved Name Edit file                                                                  --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -652,4 +768,48 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<script type="text/javascript">
+           var copyToAndFromData = {
+              "displayOnlyFields": {
+				"CenPH_DdsConstant10":"date",
+				"CenPH__lb_SFLCTL__lb__lb_TME":"time"
+              },
+              "inputFields": {
+				"CenPH__lb_SFLCTL__lb_2V6CD":"CenPH__lb_SFLCTL__lb_2V6CD_new",
+				"CenPH__lb_SFLCTL__lb_2V7CD":"CenPH__lb_SFLCTL__lb_2V7CD_new",
+				"CenPH__lb_SFLCTL__lb_2V8CD":"CenPH__lb_SFLCTL__lb_2V8CD_new",
+              }
+          };
+
+            $(document).ready(function () {
+                copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+				
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9, "&nbsp;", 10, "&nbsp;", 11, ",&nbsp;", 12], [13]];
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+
+			$("#exit").click(function (event) {
+				_00('F3', event);
+			});
+				
+			var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+			
+				
+            //Next button click handler
+            $("#next").click(function (event) {
+                var row = $("#displayData tbody tr.selected");
+                selectCusotmer(row, "5", event);
+            });
+				
+				$("#search").click(function (event) {
+                  _00('Enter', event);
+                });
+                
+            });
+        </script>
     </asp:Content>

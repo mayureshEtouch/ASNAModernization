@@ -35,7 +35,7 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRH4SRR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> &nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
@@ -55,7 +55,7 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">SSN</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet" id="number">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2SSN_new" class="mdl-textfield__input" data-tb-index="1">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2SSN_new" maxlength="9" class="mdl-textfield__input" data-tb-index="1">
                                         </div>                                
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
 
-        <div id="Div1">
+        <div id="Div1" style="display:none">
             
       <%--  Select CR: Preapproved Pr Select record                                                              --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -762,10 +762,19 @@
                     _00('F3', event);
                 });
 				
+			var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+			
 				
-                $("#next").click(function (event) {
-                   _00('Enter', event);
-                });
+            //Next button click handler
+            $("#next").click(function (event) {
+                var row = $("#displayData tbody tr.selected");
+                selectCusotmer(row, "1", event);
+            });
 				
 				$("#search").click(function (event) {
                   _00('Enter', event);
