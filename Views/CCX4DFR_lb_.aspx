@@ -22,6 +22,234 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <main class="mdl-layout__content">
+      <section class="time-date">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--8-col"> 
+            <!-- Title --> 
+            <span class="heading-h1">Phone Validation Results</span> </div>
+          <div class="mdl-cell mdl-cell--4-col pull-right"> 
+            <!-- Navigation --> 
+            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCX4DFR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span> </div>
+        </div>
+      </section>
+      <section class="table-data-content-container mrgnTp16">
+        <div class="table-data-wrapper">
+          <div class="table-data-maincontainer">
+            <div class="table-container table-container-search"> 
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid" style="padding:0"> 
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Credit  Application Number:</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2ITNB_new"></span> </div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+                
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Phone Requested Date::</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_SFLCTL_V2D5DT_new"></span> </div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+              </div>
+              <!-- content-grid mdl-grid ends here --> 
+              
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid" style="padding:0"> 
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Customer Name:</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2ANTX_new"></span><br/>
+                    <span data-upgraded=",MaterialTextfield" class="form-text"></span><br/>
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2AQTX_new"></span><br/>
+                      <span style="padding-left: 10px; display: inline-block;" id="CenPH__lb_SFLCTL__lb_2W6TX_new"></span>,
+                      <span style="padding-left: 10px; display: inline-block;" id="CenPH__lb_SFLCTL__lb_2APTX_new"></span>
+                      
+                      </div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+                
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Telephone Number:</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2PWNB_new"></span></div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+              </div>
+              <!-- content-grid mdl-grid ends here --> 
+              
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid" style="padding:0"> 
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Adaptive Result Status:</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_COLST_new"></span> </div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+                
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Grader Validation Status:</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CONST_new"></span> </div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+              </div>
+              <!-- content-grid mdl-grid ends here --> 
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid" style="padding:0"> 
+                <!-- 6 col starts here -->
+                <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet">
+                  <div class="content-grid mdl-grid">
+                    <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Phone Validation Date:</span> </div>
+                    <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_SFLCTL_VCD9DT_new">0</span> </div>
+                  </div>
+                </div>
+                <!-- 6 col ends here --> 
+              </div>
+              <!-- content-grid mdl-grid ends here --> 
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+        <div class="table-data-wrapper">
+          <div class="table-data-maincontainer">
+            <div style="overflow: auto;" class="table-container">
+              <div>
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
+                  <thead>
+                    <tr>
+                      <th>Response Group Status Description </th>
+                      <th>Customer 
+                        Name</th>
+                      <th>Returned Phone Number</th>
+                      <th>Returned Phone Txt</th>
+                      <th>Address</th>
+                      <th>Confidence Score</th>
+                      <th>Telephone Company Code </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr>
+                      <td>666666666</td>
+                      <td>000000</td>
+                      <td>666/666-666</td>
+                      <td>000/000-0000</td>
+                      <td>315 Valley Wood Dr, Spring, 77338 TX</td>
+                      <td>66/66/6666</td>
+                      <td>000</td>
+                    </tr>
+                    <tr>
+                      <td>666666666</td>
+                      <td>000000</td>
+                      <td>666/666-666</td>
+                      <td>000/000-0000</td>
+                      <td>315 Valley Wood Dr, Spring, 77338 TX</td>
+                      <td>66/66/6666</td>
+                      <td>000</td>
+                    </tr>
+                    <tr>
+                      <td>666666666</td>
+                      <td>000000</td>
+                      <td>666/666-666</td>
+                      <td>000/000-0000</td>
+                      <td>315 Valley Wood Dr, Spring, 77338 TX</td>
+                      <td>66/66/6666</td>
+                      <td>000</td>
+                    </tr>
+                    <tr>
+                      <td>666666666</td>
+                      <td>000000</td>
+                      <td>666/666-666</td>
+                      <td>000/000-0000</td>
+                      <td>315 Valley Wood Dr, Spring, 77338 TX</td>
+                      <td>66/66/6666</td>
+                      <td>000</td>
+                    </tr>
+                    <tr>
+                      <td>666666666</td>
+                      <td>000000</td>
+                      <td>666/666-666</td>
+                      <td>000/000-0000</td>
+                      <td>315 Valley Wood Dr, Spring, 77338 TX</td>
+                      <td>66/66/6666</td>
+                      <td>000</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> </div>
+              <div class="button-container">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="modal1" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+    <script type="text/javascript">
+     var copyToAndFrom = {
+       "displayOnlyFields": {
+        "CenPH_DdsConstant6":"date",
+        "CenPH__lb_SFLCTL__lb__lb_TME":"time",
+        "CenPH__lb_SFLCTL__lb_2ITNB":"CenPH__lb_SFLCTL__lb_2ITNB_new",
+        "ctl00\\$CenPH\\$_lb_SFLCTL_V2D5DT":"ctl00\\$CenPH\\$_lb_SFLCTL_V2D5DT_new",
+        "CenPH__lb_SFLCTL__lb_2ALTX":"CenPH__lb_SFLCTL__lb_2ALTX_new",
+        "CenPH__lb_SFLCTL__lb_2ANTX":"CenPH__lb_SFLCTL__lb_2ANTX_new",
+        "CenPH__lb_SFLCTL__lb_2PWNB":"CenPH__lb_SFLCTL__lb_2PWNB_new",
+        "CenPH__lb_SFLCTL__lb_COLST":"CenPH__lb_SFLCTL__lb_COLST_new",
+        "CenPH__lb_SFLCTL__lb_CONST":"CenPH__lb_SFLCTL__lb_CONST_new",
+        "ctl00\\$CenPH\\$_lb_SFLCTL_VCD9DT":"ctl00\\$CenPH\\$_lb_SFLCTL_VCD9DT_new",
+        "CenPH__lb_SFLCTL__lb_2AQTX":"CenPH__lb_SFLCTL__lb_2AQTX_new",
+        "CenPH__lb_SFLCTL__lb_2W6TX":"CenPH__lb_SFLCTL__lb_2W6TX_new",
+        "CenPH__lb_SFLCTL__lb_2APTX":"CenPH__lb_SFLCTL__lb_2APTX_new",
+    },
+    "inputFields": {
+      }
+    }
+      $(document).ready(function () {
+        copyData(copyToAndFrom,"NONE");
+        if($("#CenPH__lb_RCDKEY__lb_1ANCO").length>0){
+         copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+       }else if($('#CenPH__lb_CONFIRM_VZCFCD').length > 0){
+        /*Pop up confirm box*/
+        $(".OverlayPopupBackground").show();
+        $(".confirmation-outer-conatiner").show();
+
+        $("#yes").click(function (event) {
+         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+         _16(event,this,1,'Enter');
+       });
+        $("#no").click(function (event) {
+         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+         _16(event,this,1,'Enter');
+       });
+
+      }
+             });
+           </script>
         <div id="Div1">
             
       <%--  CR: DSP Phone Results     Display file                                                               --%>
