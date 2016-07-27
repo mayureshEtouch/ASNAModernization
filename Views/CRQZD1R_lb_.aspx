@@ -260,6 +260,7 @@
                               </div>
                               <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SSN_new"></span>
+                                  <a id="ssn-show" style="color:blue;cursor: pointer; display:none;" href="javascript:void(0);">Show</a>
                               </div>
                 </div>
               </div>
@@ -562,8 +563,20 @@
          });
          var html = $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html();
          if(html != undefined && html.length>0){
+              html = html.replace(/-/g,'');
              $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+             $("#ssn-show").show();
          }
+         /* Showing ssn on click*/
+
+          $("#ssn-show").on("mousedown taphold touchstart", function() {
+           setTimeout(function() {
+             $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html(html);
+           },0);
+         });
+          $("#ssn-show").on("mouseup dragend touchend", function() {
+           $("#CenPH__lb_RCDDTL1__lb_1SSN_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+         });
         }
 
          /*Eerror message on popup screen*/

@@ -154,7 +154,7 @@
                     <td style="padding-left: 0;"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DOKST_new_div_">S</span></td>
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DOOST_new_div_">G</span></td>
                     <td><span class="form-label" id="CenPH__lb_RCDDTL1_VDD2DT_new_div">Validated</span></td>
-                    <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1A4NB_new_div">Soc Sec: </span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span></td>
+                    <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1A4NB_new_div">Soc Sec: </span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span> <a id="ssn-show" style="color:blue;cursor: pointer; display:none;" href="javascript:void(0);">Show</a></td>
                     
                   </tr>
                   <tr>
@@ -698,8 +698,20 @@
       });
       var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html();
       if(html != undefined && html.length>0){
+          html = html.replace(/-/g,'');
           $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+          $("#ssn-show").show();
       }
+      /* Showing ssn on click*/
+
+       $("#ssn-show").on("mousedown taphold touchstart", function() {
+        setTimeout(function() {
+          $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html);
+        },0);
+      });
+        $("#ssn-show").on("mouseup dragend touchend", function() {
+         $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+       });
       //$("#CenPH__lb_RCDDTL1__lb_DL6ST_new").focus();
 
     });
