@@ -793,6 +793,16 @@
 					$(this).attr("tabindex",parseInt(i+4));
 				})	
 
+				 $('#displayData tr td:nth-child(3)').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
+				 
+				 $('#displayData tr td:nth-child(11)').each(function (i, col )
+				 {
+					$(col).css("text-align","right");
+				 });
+					
 			$("#exit").click(function (event) {
 				_00('F3', event);
 			});
