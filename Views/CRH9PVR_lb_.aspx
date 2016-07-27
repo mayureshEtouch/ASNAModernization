@@ -46,7 +46,7 @@
           <div class="content-grid mdl-grid select-customer-screen-grid">
 
             <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
-              <span class="form-label">SSN Number:</span>
+              <span class="form-label">SSN:</span>
               <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                 <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="1" id="ssn" maxlength="9" autocomplete="off" style="width: 80%;">
                 <a id="ssn-show" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>

@@ -856,4 +856,9 @@
                 });
             });
         </script>
+		<style>
+			#builder-orders tbody tr td:last-child {
+				text-align: right;
+			}
+		</style>
     </asp:Content>
