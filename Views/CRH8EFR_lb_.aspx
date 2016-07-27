@@ -35,7 +35,7 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRH8EFR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
@@ -793,6 +793,16 @@
 					$(this).attr("tabindex",parseInt(i+4));
 				})	
 
+				 $('#displayData tr td:nth-child(3)').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
+				 
+				 $('#displayData tr td:nth-child(11)').each(function (i, col )
+				 {
+					$(col).css("text-align","right");
+				 });
+					
 			$("#exit").click(function (event) {
 				_00('F3', event);
 			});
