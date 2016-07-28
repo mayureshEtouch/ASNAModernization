@@ -53,7 +53,7 @@
                                         <span class="summary-table-title pull-right" style="margin-left: -5px;">Order Number</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet" id="number">
-                                        <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" onfocus="_09('#2BANB','4,5','#SFLCTL');" maxlength="8">
+                                        <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" onfocus="_09('#2BANB','4,5','#SFLCTL');" maxlength="9">
                                     </div>
                                 </div>
                             </div>
