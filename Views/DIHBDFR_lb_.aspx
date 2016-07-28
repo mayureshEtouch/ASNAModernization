@@ -85,8 +85,18 @@
                 </div>
             </div>
         </section>
-
-        <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+          <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                                <span class="icon-txt display-customer">Display</span><i class="display-customer material-icons md-15 md-light display-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <section class="table-data-content-container spacer-container-bottom">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div style="overflow: auto;" class="table-container">
@@ -760,9 +770,21 @@
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
             generateTableAndApplyInfiniteScroll("tblCompleted", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             $("#number1").ForceNumericOnly();
-            $("#CenPH__lb_SFLCTL__lb_2BANB").appendTo("#number1");
+           // $("#CenPH__lb_SFLCTL__lb_2BANB").appendTo("#number1");
             $('#tblCompleted tbody tr').dblclick(function () {
                 return false; // does both event.stopPropogation as well as event.preventDefault
+            });
+
+            var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            //Display customer details
+            $(".display-customer").click(function (event) {
+                var row = $("#tblCompleted tbody tr.selected");
+                selectCusotmer(row, "5", event);
             });
             $('#previous').click(function (event) {
                 _00('F3', event);
