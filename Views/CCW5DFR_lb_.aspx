@@ -74,7 +74,7 @@
                 <section class="table-data-content-container spacer-container-bottom">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div style="overflow: auto;" class="table-container">
+                            <div style="overflow: auto; width: 740px !important" class="table-container">
                                 <div>
                                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="emp-by-date" data-upgraded=",MaterialDataTable">
                                         <thead>
@@ -594,9 +594,10 @@
             }
             #__Page_PopUp {
                 min-width: 740px !important;
-                left: 10% !important;
+                left: 50% !important;
                 width: 740px !important;
                 height: auto !important;
+								margin-left: -370px !important;
             }
 
             #__Page_PopUp > tr:first-child {
@@ -628,6 +629,9 @@
             .aspNetHidden {
                 margin-top: 20px !important;
             }
+					#__Page_PopUp	#next-page {
+							margin-right: -165px !important;
+						}
       </style>
         <script type="text/javascript">
             var copyToAndFrom = {
