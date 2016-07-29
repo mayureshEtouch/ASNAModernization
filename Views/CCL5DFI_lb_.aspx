@@ -71,7 +71,7 @@
 
                       <span id="reqdate" class="DdsCharField_OutputOnly" style="display:none;"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="width: 68px;">
+                    <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="width: 68px; margin-left: 10px;">
                       <span class="summary-table-title pull-right">Status</span>
                     </div>
                     <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="filter-by-co">
@@ -130,6 +130,13 @@
   </main>
   <div id="modal1" class="simplePopup"></div>
   <!-- Modified HTML code ends here -->
+  <style>
+  .ui-datepicker-today 
+	{
+		background: #ff0000
+	}
+  </style>
+  
   <script type="text/javascript">
     var copyToAndFrom = {
       "displayOnlyFields": {
