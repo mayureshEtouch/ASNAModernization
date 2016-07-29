@@ -555,7 +555,7 @@
                 <span class="form-label">Option:</span>
               </div>
               <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet" style="margin:0">
-                <span class="form-text" id="CenPH_"><input class="mdl-textfield__input" type="text" style="width: 110px; display:inline-block" maxlength="3" size="10" id="CenPH__lb_RCDDTL1__lb_DL6ST_new"></span>
+                <span class="form-text" id="CenPH_"><input class="mdl-textfield__input" type="text" style="width: 110px; display:inline-block" maxlength="3" size="10" id="CenPH__lb_RCDDTL1__lb_DL6ST_new" onfocus="_09('#DL6ST','22,73','#RCDDTL1');"></span>
               </div>
             </div>
           </div>
