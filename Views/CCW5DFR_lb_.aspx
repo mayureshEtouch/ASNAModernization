@@ -74,9 +74,9 @@
                 <section class="table-data-content-container spacer-container-bottom">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div style="overflow: auto; width: 740px !important" class="table-container">
+                            <div style="overflow: auto; width: 740px !important" class="table-container" id="emp-by-date">
                                 <div>
-                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="emp-by-date" data-upgraded=",MaterialDataTable">
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
                                         <thead>
                                             <tr>
                                                 <th>Employer/<br/>Supervisor</th>
@@ -96,7 +96,9 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="button-container">
+                                
+                            </div>
+							<div class="button-container">
                                     <div class="content-grid mdl-grid">
                                         <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop">
                                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
@@ -107,7 +109,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -589,6 +590,9 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
         <style>
+			#emp-by-date {
+				margin-bottom: 10px;
+			}
             #__Page_Hidden{
                 height: 100% !important;
             }
@@ -630,12 +634,7 @@
             .aspNetHidden {
                 margin-top: 20px !important;
             }
-					#__Page_PopUp	#next-page {
-							margin-right: -170px !important;
-						}
-							#__Page_PopUp	#previous-page{
-							margin-right: -125px !important;
-						}
+					
       </style>
         <script type="text/javascript">
             var copyToAndFrom = {
