@@ -94,10 +94,10 @@
                             <!-- col starts here -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Sold To:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="soldto1"></span>
                                         <br />
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="soldto2"></span>
@@ -146,10 +146,10 @@
                             <!-- col starts here -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 0 0 8px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Home Phone:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="homePh"></span>
                                     </div>
                                 </div>
@@ -200,10 +200,10 @@
                             <!-- col starts here -->
                             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet currentobligation_div" style="margin: 0 0 0 5px;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Current Obligation:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="currentobligation"></span>
                                     </div>
 
