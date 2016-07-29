@@ -62,7 +62,7 @@
             <div class="order-summary-wrapper">
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
-                        <span class="summary-title">S.S. # Spouse</span>
+                        <span class="summary-title">S.S.#</span>
                         <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CSPSS_new"></span>
                     </div>
                 </div>
