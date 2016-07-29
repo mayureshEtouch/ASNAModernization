@@ -478,9 +478,9 @@
 				_00('F3', event);
 		   });
 		   
-		    $("table tr").dblclick(function(event) {
+		    /*$("table tr").dblclick(function(event) {
 			  return false;
-			});
+			});*/
 			
         });
 
