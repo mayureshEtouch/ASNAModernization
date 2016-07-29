@@ -176,6 +176,7 @@
                     </div>
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col" style="margin: 0 38px;">
+							<span class="summary-title" id="CenPH_DdsConstant6_new">Special Instructions</span>
                             <fieldset id="special-instructions"></fieldset>
                         </div>
                     </div>
@@ -1095,6 +1096,8 @@
           };
 
           //Special instructions section
+		  
+		 
           
           function generateSpecialInstructionsSection() {
               //Create copyToAndFrom JSON object for special instructions

@@ -1045,7 +1045,7 @@
               $("#creditapp tbody tr:first").css("background-color", "#d8d8d8");
               $("#creditapp tbody tr").attr("tabindex","4");
               $("#CenPH__lb_SFLCTL__lb_2ITNB_new").ForceNumericOnly();
-              $("#CenPH__lb_SFLCTL__lb_CAGTX_new").ForceAlphabetOnly();
+             // $("#CenPH__lb_SFLCTL__lb_CAGTX_new").ForceAlphabetOnly();
               
               $('#CenPH__lb_SFLCTL__lb_2AJCD_new').keypress(function (e) {
                   var regex = new RegExp("^[a-zA-Z0-9]+$");
