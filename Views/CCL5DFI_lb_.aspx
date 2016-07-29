@@ -66,7 +66,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" id="filter-by-co" style="width: 120px;">
                       
-                      <input type="text" class="mdl-textfield__input" data-tb-index="1" id="requestdate" >
+                      <input type="text" readonly="true" class="mdl-textfield__input" data-tb-index="1" id="requestdate" >
                       <i id="reqesdate" class="material-icons calender-icon page-icons editable-data" style="position: absolute; right: -13px; top: 14px;"></i>
 
                       <span id="reqdate" class="DdsCharField_OutputOnly" style="display:none;"></span>
