@@ -598,6 +598,7 @@
                 width: 740px !important;
                 height: auto !important;
 								margin-left: -370px !important;
+								top: 17% !important;
             }
 
             #__Page_PopUp > tr:first-child {
@@ -630,7 +631,10 @@
                 margin-top: 20px !important;
             }
 					#__Page_PopUp	#next-page {
-							margin-right: -165px !important;
+							margin-right: -170px !important;
+						}
+							#__Page_PopUp	#previous-page{
+							margin-right: -125px !important;
 						}
       </style>
         <script type="text/javascript">
