@@ -684,6 +684,10 @@
 			top: 14px;
 		
 		}
+		.ui-datepicker-today 
+		{
+			background: #ff0000
+		}
 	</style>
 	<script type="text/javascript">
 	var copyToAndFrom = {
