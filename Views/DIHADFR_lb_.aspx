@@ -56,7 +56,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Payment</span>
-                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new"></span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new" style="color:red;"></span>
                         </div>
                     </div>
                 </div>
