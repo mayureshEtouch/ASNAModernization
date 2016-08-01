@@ -22,7 +22,89 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+		<section class="time-date">
+				<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--8-col"> 
+								<!-- Title --> 
+								<span class="heading-h1">Select Zone Master - Inside</span> </div>
+						<div class="mdl-cell mdl-cell--4-col pull-right"> 
+								<!-- Navigation --> 
+								<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVUMSRR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
+				</div>
+		</section>
+		
+		<section class="table-data-content-container filter-field-container mrgnTp16">
+				<div class="table-data-wrapper">
+						<div class="table-data-maincontainer">
+								<div class="table-container filter-search-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+												<div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+														<div class="content-grid mdl-grid">
+																<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Repair Zone Code</span> </div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="model">
+																		<input type="text"  id="txtZoneCode" class="mdl-textfield__input" data-tb-index="1" maxlength="3">
+																</div>
+																<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location Code</span> </div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="serial">
+																		<span style=" margin: 12px 10px 0 0; display:block;" id="CenPH__lb_SFLCTL__lb_2AACD_new"></span>
+																</div>
+																<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location DRV</span> </div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="invoice">
+																		<span style=" margin: 12px 10px 0 0; display:block;" id="CenPH__lb_SFLCTL__lb_CKWTX_new"></span>
+																</div>
+														</div>
+												</div>
+												<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+														<div class="button-container">
+																<button class="mdl-button mdl-button--accent" id="search">Search</button>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+		
+		<section class="table-data-content-container spacer-container-bottom mrgnTp16">
+				<div class="table-data-wrapper">
+						<div class="table-data-maincontainer">
+								<div style="overflow: auto;" class="table-container">
+										<div>
+												<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblZoneMstr" data-upgraded=",MaterialDataTable">
+														<thead>
+																<tr>
+																		<th>Repair Zone</th>
+																		<th>Zone Type</th>
+																		<th>Technician Type</th>
+																		<th>Zone Description</th>
+
+																</tr>
+														</thead>
+														<tbody>
+																
+																
+														</tbody>
+												</table>
+												<%--<a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a> </div>--%>
+										<div class="button-container">
+												<div class="content-grid mdl-grid">
+														<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+														<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+</main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  SV: SEL Zone / Inside     Select record                                                              --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -468,4 +550,57 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+            <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant9": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_2AACD": "CenPH__lb_SFLCTL__lb_2AACD_new",
+                "CenPH__lb_SFLCTL__lb_CKWTX": "CenPH__lb_SFLCTL__lb_CKWTX_new"
+
+
+            },
+            "inputFields": {
+                "CenPH__lb_SFLCTL__lb_2F9CD": "txtZoneCode"
+
+            }
+        }
+
+        $(document).ready(function () {
+            $('body').css({ "background-color": "white" });
+            copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            var dataMergeIndices = [[0], [1], [2], [3]];
+            generateTableAndApplyInfiniteScroll("tblZoneMstr", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            $("#txtZoneCode").ForceNumericOnly();
+            //$('#tblZoneMstr tbody tr').dblclick(function () {
+            //    return false; // does both event.stopPropogation as well as event.preventDefault
+            //});
+
+            var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+
+            $('#previous').click(function (event) {
+                _00('F3', event);
+            });
+            $('#search').click(function (event) {
+                _00('enter', event);
+            });
+
+            $("#next").click(function (event) {
+                var row = $("#tblZoneMstr tbody tr.selected");
+                selectCusotmer(row, "1", event);
+                //_00('enter', event);
+            });
+        });
+    </script>
+    <style>
+        /*#tblCompleted tr td:nth-child(7) {
+            text-align: right !important;
+        }*/
+
+    </style>
     </asp:Content>
