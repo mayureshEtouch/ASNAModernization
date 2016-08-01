@@ -83,7 +83,7 @@
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
 							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
-               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F4">Prompt</span>
+               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span>
                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F10">search</span>
 						</div>
 						<div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
@@ -588,6 +588,10 @@
          $("body").on("click", ".simplePopupClose", function() {
              $(".simplePopupBackground1").hide();
          });
+
+         $("#prompt").click(function (event) {
+            _00('F4', event);
+          });
 
        });
      </script>
