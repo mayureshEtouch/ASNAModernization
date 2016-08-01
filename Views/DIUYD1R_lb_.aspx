@@ -22,7 +22,542 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+  <section class="time-date">
+    <div class="content-grid mdl-grid">
+      <div class="mdl-cell mdl-cell--8-col"> 
+        <!-- Title --> 
+        <span class="heading-h1">Display Warranty Record</span> </div>
+      <div class="mdl-cell mdl-cell--4-col pull-right"> 
+        <!-- Navigation --> 
+        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIUYD1R</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+    </div>
+  </section>
+  <section class="table-data-content-container mrgnTp16">
+    <div class="table-data-wrapper">
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Customer Name:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="custName"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Customer ID:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="custID" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+          
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Home Phone:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="homePhone" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell-4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Work Phone:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="workPhone" data-upgraded=",MaterialTextfield" class="form-text"></span></div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="table-data-content-container mrgnTp16">
+    <div class="table-data-wrapper">
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Invoice Number:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="invoice" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Item Number:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="itemNumber" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Retail - Item Price:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" id="retail" class="form-text"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+          </div>
+          
+            
+          <!-- content-grid mdl-grid ends here --> 
+          
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Company:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="company" data-upgraded=",MaterialTextfield" class="form-text"></span></div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Location:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="location" data-upgraded=",MaterialTextfield" class="form-text"></span></div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+           
+           
+          </div>
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+		  
+		  <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Employee ID:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="employeeID" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+			
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Employee Name:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="employeeName"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+			
+      <!-- content-grid mdl-grid ends here --> 
+	  
+            </div>
+			
+			<!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+		  
+		 
+		 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Vendor Number:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="vendorNumber"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Vendor Name::</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="vendorName"></span></div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+      <!-- content-grid mdl-grid ends here --> 
+	  
+            </div>
+            
+             <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Model Number:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="model"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Product Category:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="productCat"></span></div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+             <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Product Category Description:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="productCatDesp"></span></div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+      <!-- content-grid mdl-grid ends here --> 
+            </div>
+            
+              <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Model Description:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="modelDesc"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Product Group:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="productGroup"></span></div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+             <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Product Group Description:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="productGroupDesc"></span></div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+      <!-- content-grid mdl-grid ends here --> 
+            </div>
+            
+                <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Serial Number:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="serial"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+      <!-- content-grid mdl-grid ends here --> 
+            </div>
+            
+                  <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Date Sold:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="dateSold"></span> </div>
+              </div>
+            <!-- 6 col ends here -->
+            </div> 
+             <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Mfg. Warranty Ends:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="MfgWarrEnds" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            <!-- 6 col ends here -->
+            </div> 
+             <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Repair Code:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span  id="repairCode" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            <!-- 6 col ends here -->
+            </div> 
+      <!-- content-grid mdl-grid ends here --> 
+            </div>
+            
+    </div>
+    </div>
+    </div>
+  </section>
+  
+  <section class="table-data-content-container mrgnTp16">
+    <div class="table-data-wrapper">
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Warranty Type:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="warrantyType"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">SMA Months:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="warrantyMonth"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">SMA Warranty Ends Date:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span id="warrantyEnds" data-upgraded=",MaterialTextfield" class="form-text"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+          </div>            
+          <!-- content-grid mdl-grid ends here --> 
+          
+            <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+			<!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Warranty Price:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="warrantyPrice"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+		  
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Service Contract Number:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="serviceContract"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">S/C Sold Date:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="scSold" ></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+            
+            
+          </div>            
+          <!-- content-grid mdl-grid ends here --> 
+          
+           <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+			<!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Original RMA: Months:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="rmaMonths"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+		  
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Original RMA: Ends:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="rmaMonthsEnd"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+           
+          </div>            
+          <!-- content-grid mdl-grid ends here --> 
+		  
+		  
+           <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+			
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Last Serviced on :</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id= "lastServicedOn"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Work order:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="workOrder"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+          </div>            
+          <!-- content-grid mdl-grid ends here --> 
+           
+            <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">User: Stamp:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="lastChanged"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here --> 
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Workstation ID:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="workStationId"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+            
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Date: Stamp:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="dateStamp"></span> </div>
+              </div>
+            <!-- 6 col ends here --> 
+            </div>
+          </div>            
+          <!-- content-grid mdl-grid ends here -->
+          
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 6 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Time: Stamp:</span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="timeStamp"></span> </div>
+              </div>
+            </div>
+            <!-- 6 col ends here -->
+            </div>            
+          <!-- content-grid mdl-grid ends here -->
+    </div>
+    
+    <div class="button-container">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="rsaNotes">RSA Notes</span>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Next</span>
+						</div>
+					</div>
+				</div>
+  </section>
+  
+</main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+
+	<script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                   
+                    "CenPH_DdsConstant41": "date",
+					"CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+                    "CenPH__lb_RCDDTL1__lb_DALTX": "custName",
+					"CenPH__lb_RCDDTL1__lb_1ALNB":"custID",
+					"CenPH__lb_RCDDTL1__lb_DHPH_lb_":"homePhone",
+					"CenPH__lb_RCDDTL1__lb_DWPH_lb_":"workPhone",
+					"CenPH__lb_RCDDTL1__lb_1G1N_lb_":"invoice",
+					"CenPH__lb_RCDDTL1__lb_1WNNB":"itemNumber",
+					"CenPH__lb_RCDDTL1__lb_1AOVA":"retail",
+					"CenPH__lb_RCDDTL1__lb_1ABCD":"company",
+					"CenPH__lb_RCDDTL1__lb_1AACD":"location",
+					"CenPH__lb_RCDDTL1__lb_1AJCD":"employeeID",
+					"CenPH__lb_RCDDTL1__lb_DA0TX":"employeeName",
+					"CenPH__lb_RCDDTL1__lb_DBLNB":"vendorNumber",
+					"CenPH__lb_RCDDTL1__lb_DECTX":"vendorName",
+					"CenPH__lb_RCDDTL1__lb_1AXTX":"model",
+					"CenPH__lb_RCDDTL1__lb_1AXCD":"productCat",
+					"CenPH__lb_RCDDTL1__lb_DH2TX":"productCatDesp",
+					"CenPH__lb_RCDDTL1__lb_DA2TX":"modelDesc",
+					"CenPH__lb_RCDDTL1__lb_1AWCD":"productGroup",
+					"CenPH__lb_RCDDTL1__lb_DQRTX":"productGroupDesc",
+					"CenPH__lb_RCDDTL1__lb_1A8TX":"serial",
+					"CenPH__lb_RCDDTL1_V1AODT":"dateSold",
+					"CenPH__lb_RCDDTL1_V1APDT":"MfgWarrEnds",
+					"CenPH__lb_RCDDTL1__lb_DOHCD":"repairCode",
+					"CenPH__lb_RCDDTL1__lb_1U1CD":"warrantyType",
+					"CenPH__lb_RCDDTL1__lb_1G4N_lb_":"warrantyMonth",
+					"CenPH__lb_RCDDTL1_V1AQDT":"warrantyEnds",
+					"CenPH__lb_RCDDTL1__lb_1G7A_usd_":"warrantyPrice", //to be in html
+					
+					
+					"CenPH__lb_RCDDTL1__lb_1G6N_lb_":"serviceContract",
+					"CenPH__lb_RCDDTL1_VDEEDT":"scSold",
+					"CenPH__lb_RCDDTL1__lb_1G7N_lb_":"rmaMonths",
+					"CenPH__lb_RCDDTL1_V1JADT":"rmaMonthsEnd",
+					"CenPH__lb_RCDDTL1_V1I8DT":"lastServicedOn",
+					"CenPH__lb_RCDDTL1__lb_1G2N_lb_":"workOrder",
+					
+					"CenPH__lb_RCDDTL1__lb_1AAVN":"lastChanged",
+					"CenPH__lb_RCDDTL1__lb_1ABVN":"workStationId",
+					
+					"CenPH__lb_RCDDTL1_V1AGDT":"dateStamp",
+					"CenPH__lb_RCDDTL1__lb_1ABTM":"timeStamp"
+					
+                  },
+                "inputFields": {
+				
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            
+
+              $("#exit").click(function (event) {
+                   _00('F3', event);
+              });
+
+			  $("#submit").click(function (event) {
+                   _00('Enter', event);
+              });
+			  
+			  $("#rsaNotes").click(function (event) {
+                   _00('F10', event);
+              });
+
+            });
+      </script>
+	  
+        <div id="Div1" style="display:none">
             
       <%--  CU: D1R Warranty Rcd      Display record(1 screen)                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
