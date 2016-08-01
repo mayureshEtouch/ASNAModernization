@@ -1206,6 +1206,21 @@ textarea {
 .re-rqst-icon{
 	background: url(../images/icons/re-rqst-icon.png)	no-repeat;
 }
+.change-product-icon{
+ background:url(../images/icons/change-product-icon.png) no-repeat;
+}
+.change-customer-icon{
+ background: url(../images/icons/change-customer-icon.png) no-repeat;
+}
+.services-icon{
+ background: url(../images/icons/services-icon.png) no-repeat;
+}
+.sales-icon{
+ background: url(../images/icons/sales-icon.png) no-repeat;
+}
+.adt-services-icon{
+ background: url(../images/icons/adt-services.png) no-repeat;
+}
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
  background: rgb(255, 255, 255);
  border: 1px solid #c5c5c5;
