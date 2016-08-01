@@ -22,7 +22,97 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+    <section class="time-date">
+        <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--8-col"> 
+                <!-- Title --> 
+                <span class="heading-h1">Display Warranty by Model</span> </div>
+            <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                <!-- Navigation --> 
+                <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIVBDFR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+        </div>
+    </section>
+    <section class="table-data-content-container filter-field-container mrgnTp16">
+        <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+                <div class="table-container filter-search-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+                        <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col" style="margin-left: -15px;"> <span class="summary-table-title pull-right" >Model Number</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="model">
+                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2AXTX_new" class="mdl-textfield__input" data-tb-index="1" maxlength="20">
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Serial Number</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="serial">
+                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2A8TX_new" class="mdl-textfield__input" data-tb-index="2" maxlength="20">
+                                </div>
+                                <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Invoice Number</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="invoice">
+                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2G1N_lb_new" class="mdl-textfield__input" data-tb-index="3" maxlength="9">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                            <div class="button-container">
+                                <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="add-item">
+        <div class="add-item-wrapper">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col pull-right">
+                    <div class="icon-container"><span id="changeprod"><span class="icon-txt">Change Product</span><i class="material-icons md-15 md-light change-product-icon"></i></span><span id="display"> <span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></span><span id="changecust"><span class="icon-txt">Change Customer</span><i class="material-icons md-15 md-light change-customer-icon"></i></span><span id="services"><span class="icon-txt">Services</span><i class="material-icons md-15 md-light services-icon"></i></span> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="table-data-content-container spacer-container-bottom">
+        <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+                <div style="overflow: auto;" class="table-container">
+                    <div>
+                        <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displaymodel" data-upgraded=",MaterialDataTable">
+                            <thead>
+                                <tr>
+                                    <th>Model Number</th>
+                                    <th>Serial Number</th>
+                                    <th>Invoice Number</th>
+                                    <th>Warranty Rcd Status</th>
+                                    <th>Sold Date</th>
+                                    <th>Warranty Date</th>
+                                    <th>Warranty Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                        <!-- <a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a> --> </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DSP for Mdl/Srl#      Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -654,4 +744,103 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant9": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time"
+                    
+                  },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2AXTX": "CenPH__lb_SFLCTL__lb_2AXTX_new",
+                    "CenPH__lb_SFLCTL__lb_2A8TX": "CenPH__lb_SFLCTL__lb_2A8TX_new",
+                    "CenPH__lb_SFLCTL__lb_2G1N_lb_": "CenPH__lb_SFLCTL__lb_2G1N_lb_new"
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+              $("#CenPH__lb_SFLCTL__lb_2AXTX_new").focus();
+              $('body').on('click', '#displaymodel tbody tr', function () {
+                $("#displaymodel tbody tr:even").css("background-color", "#fff");
+                $("#displaymodel tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#displaymodel tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
+                generateTableAndApplyInfiniteScroll("displaymodel", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+               $("#displaymodel tbody tr:first").css("background-color", "#d8d8d8");
+               $("#displaymodel tbody tr").attr("tabindex","4");
+               $("#CenPH__lb_SFLCTL__lb_2G1N_lb_new").ForceNumericOnly();
+                $("#displaymodel tr").css('cursor', 'pointer'); 
+
+                $("form input[type=text]").on('input',function () {
+                var tab = $(this).attr("tabindex");
+                if($(this).val().length == $(this).attr('maxlength')) {
+                //$(this).next("input").focus();
+                  tab++;
+                  $("[tabindex='"+tab+"']").focus();
+          
+                }
+              });
+
+                $("#previous").click(function (event) {
+                   _00('F3', event);
+                });
+
+                $("#all").click(function (event) {
+                  _00('F11', event);
+                });
+
+                $("#search").click(function (event) {
+                  _00('Enter', event);
+                });
+                var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+              }
+
+              $("#changeprod").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Model");
+                } else {
+                    var row = $("#displaymodel tbody tr.selected");
+                    selectCusotmer(row, "2", event);
+                }
+              });
+
+              $("#display").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Model");
+                } else {
+                    var row = $("#displaymodel tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+              });
+
+              $("#changecust").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Model");
+                } else {
+                    var row = $("#displaymodel tbody tr.selected");
+                    selectCusotmer(row, "6", event);
+                }
+              });
+
+              $("#services").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Model");
+                } else {
+                    var row = $("#displaymodel tbody tr.selected");
+                    selectCusotmer(row, "8", event);
+                }
+              });
+            });
+      </script>
     </asp:Content>
