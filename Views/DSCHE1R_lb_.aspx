@@ -135,7 +135,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                         <span class="form-text">
-                                            <input type="text" data-tb-index="1" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;"></span>
+                                            <input type="text" data-tb-index="1" class="mdl-textfield__input" id="callBackDt" maxlength="12" name="date" size="14" style="width: 100px;" readonly></span>
                                         <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </div>
@@ -296,7 +296,7 @@
                                         </div>
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet" style="margin: 0">
                                             <span class="form-text">
-                                                <input type="text" data-tb-index="1" id="onFileDt1" size="14" style="width: 100px;" />
+                                                <input type="text" data-tb-index="1" id="onFileDt1" size="14" style="width: 100px;" readonly />
                                                  <i id="reqesdate1" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate1" class="DdsCharField_OutputOnly"></span>
                                             </span>
@@ -1051,6 +1051,10 @@
             top: -20px !important;
             float: right;
         }
+        .ui-datepicker-today 
+		{
+			background: #ff0000
+		}
 
     </style>
     <script type="text/javascript">

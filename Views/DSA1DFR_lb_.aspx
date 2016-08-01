@@ -74,7 +74,7 @@
                                     </div>
 
                                     <div class="mdl-cell mdl-cell--2-col" style="width: 110px;">
-                                        <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" maxlength="13" name="date" size="14" style="width: 100px;">
+                                        <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" maxlength="13" name="date" size="14" style="width: 100px;" readonly>
                                         <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </div>
@@ -573,6 +573,10 @@
            top: 13px;
             
         }
+        .ui-datepicker-today 
+		{
+			background: #ff0000
+		}
     </style>
 
     <script type="text/javascript">
