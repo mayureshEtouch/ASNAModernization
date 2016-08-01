@@ -571,7 +571,7 @@
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
             var dataMergeIndices = [[0], [1], [2], [3]];
             generateTableAndApplyInfiniteScroll("tblZoneMstr", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            $("#txtZoneCode").ForceNumericOnly();
+            //$("#txtZoneCode").ForceNumericOnly();
             //$('#tblZoneMstr tbody tr').dblclick(function () {
             //    return false; // does both event.stopPropogation as well as event.preventDefault
             //});
