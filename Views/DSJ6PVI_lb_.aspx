@@ -22,7 +22,125 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	
+	<!-- Modified HTML code starts here -->
+
+
+	
+	<main class="mdl-layout__content">
+		<section class="time-date">
+			<div class="content-grid mdl-grid">
+				<div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet"> 
+					<!-- Title --> 
+					<span class="heading-h1"></span> </div>
+				<div class="mdl-cell mdl-cell--3-col pull-right"> 
+					<!-- Navigation --> 
+					<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSJ6PVI</span>
+					<i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
+			</div>
+		</section>
+		<section class="form-data">
+			<div class="box-container" style="height: auto;">
+				
+				<!-- content-grid mdl-grid starts here -->
+				<div class="content-grid mdl-grid">
+					<!-- col starts here -->
+				  	<div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col">
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                           		<span class="form-label">Company:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet">
+                           		<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABCD_new"></span>
+                        	</div>
+						</div>
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                           		<span class="form-label">Location:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet">
+							<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AACD_new"></span>
+							
+                        	</div>
+						</div>
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" >
+                           		<span class="form-label">Profile:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet">
+                           		<span class="form-text"><input class="mdl-textfield__input" id="CenPH__lb_RCDDTL1__lb_1N9CD_new" onfocus="_09('#1N9CD','10,11','#RCDDTL1');" maxlength="10" type="text" data-tb-index="1" size="15"></span>
+                        	</div>
+						</div>
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" >
+                           		<span class="form-label">Password:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet">
+                           		<span class="form-text"><input class="mdl-textfield__input" id="CenPH__lb_RCDDTL1__lb_1Q2TX_new" onfocus="_09('#1Q2TX','12,11','#RCDDTL1');"  maxlength="10" type="password" data-tb-index="2" size="15"></span>
+                        	</div>
+						</div>
+					</div>
+					<!-- col ends here -->
+				</div>
+				<!-- content-grid mdl-grid ends here -->
+				
+				
+				
+			
+				<div class="button-container">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+		
+	</main>
+	<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+
+<!-- Modified HTML code ends here -->
+
+  <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                   
+                    "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
+                    "CenPH__lb_RCDDTL1__lb_1ABCD": "CenPH__lb_RCDDTL1__lb_1ABCD_new",
+					"CenPH__lb_RCDDTL1__lb_1AACD":"CenPH__lb_RCDDTL1__lb_1AACD_new",
+					"CenPH_DdsConstant5":"CenPH_DdsConstant5_new"
+                  },
+                "inputFields": {
+					"CenPH__lb_RCDDTL1__lb_1N9CD":"CenPH__lb_RCDDTL1__lb_1N9CD_new",
+					"CenPH__lb_RCDDTL1__lb_1Q2TX":"CenPH__lb_RCDDTL1__lb_1Q2TX_new"
+                   
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            
+
+              $("#Exit").click(function (event) {
+                   _00('F3', event);
+              });
+
+              $("#submit").click(function (event) {
+                  _00('Enter', event);
+              });
+
+
+            });
+      </script>
+
+        <div id="Div1" style="display:none">
+      
             
       <%--  WH: PMT for User Loc Tst  Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -269,7 +387,8 @@
               CssClass="DdsCharField"
               Length="10" 
               Alias="#1Q2TX" 
-              VisibleCondition="*False"
+              VisibleCondition="*True"
+              InputStyle="Password"
               Usage="Both" 
               VirtualRowCol="12,11" 
               PositionCursor="34" 
@@ -277,6 +396,7 @@
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 100px; top: 267px;"
               Text=".........." 
+              VisibleCondition="*False"
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
