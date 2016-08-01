@@ -744,6 +744,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        #displaymodel tr td:nth-child(1), #displaymodel tr td:nth-child(3){
+          text-align: left;
+        }
+      </style>
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -776,8 +781,14 @@
                $("#displaymodel tbody tr:first").css("background-color", "#d8d8d8");
                $("#displaymodel tbody tr").attr("tabindex","4");
                $("#CenPH__lb_SFLCTL__lb_2G1N_lb_new").ForceNumericOnly();
-                $("#displaymodel tr").css('cursor', 'pointer'); 
+                /*$("#displaymodel tr").css('cursor', 'pointer'); */
+                for(var i = 0; i < $("#displaymodel tr td:nth-child(1)").length;i++) {
+                $($("#displaymodel tr td:nth-child(1)")[i]).html($($("#displaymodel tr td:nth-child(1)")[i]).html().replace(/&nbsp;/g, ""));
+                }
 
+                for(var i = 0; i < $("#displaymodel tr td:nth-child(3)").length;i++) {
+                $($("#displaymodel tr td:nth-child(3)")[i]).html($($("#displaymodel tr td:nth-child(3)")[i]).html().replace(/&nbsp;/g, ""));
+                }
                 $("form input[type=text]").on('input',function () {
                 var tab = $(this).attr("tabindex");
                 if($(this).val().length == $(this).attr('maxlength')) {
