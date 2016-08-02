@@ -968,6 +968,13 @@
                     var row = $("#display-apps tbody tr.selected");
                     selectCusotmer(row, "1", event);
                 });
+				
+				$('#display-apps tr td').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
+				 $('#display-apps tr td:nth-child(6)').css("text-align","right");
+				 
             });
         </script>
     </asp:Content>
