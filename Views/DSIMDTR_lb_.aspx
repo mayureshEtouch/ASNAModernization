@@ -367,7 +367,7 @@
           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">Help</span>
         </div>
         <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right">
-          <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> -->
+           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> 
         </div>
       </div>
     </div>
@@ -1181,7 +1181,7 @@
               $("#time").html("&nbsp;" + $("#time").html());
 
               var dataMergeIndices = [[0]];
-                generateTableAndApplyInfiniteScroll("qualityaudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("qualityaudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
                $("#qualityaudit tbody tr:first").css("background-color", "#d8d8d8");
 
                if($("#CenPH__lb_SFLRCD").length > 0)
@@ -1201,9 +1201,9 @@
                    _00('F6', event);
                 });
 
-                /*$("#next").click(function (event) {
+                $("#next").click(function (event) {
                    _00('Enter', event);
-                });*/
+                });
 
                 $("#help").click(function (event) {
                    _00('F1', event);
