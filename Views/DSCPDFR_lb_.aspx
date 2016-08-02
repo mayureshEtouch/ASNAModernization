@@ -22,7 +22,99 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+	<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Customer Notes</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSCPDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+			
+				      
+						
+             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Date</th>
+														<th>Time</th>
+														<th>Employee</th>
+														<th width="50%">Notes</th>
+													</tr>
+												</thead>
+												<tbody>
+																					
+												</tbody>
+										</table>
+										
+								</div>
+                                
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                                                
+                                                
+												</div>
+												
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+
+  <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+					"CenPH_DdsConstant5":"date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time"
+                  },
+                "inputFields": {
+					
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            
+			 var dataMergeIndices = [[0] , [1] , [2], [3]];
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+              
+			
+              $("#previous").click(function (event) {
+                   _00('F3', event);
+              });
+			  
+			  $("#prompt").click(function(event){
+				_00('F4', event);
+			  });
+
+
+            });
+      </script>
+	  
+        <div id="Div1" style="display:none">
             
       <%--  CU: DSP Cust Notes        Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
