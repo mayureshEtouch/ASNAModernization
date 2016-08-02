@@ -139,13 +139,13 @@
                 <!-- 4 col starts here -->
                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" id="CenPH__lb_SFLCTL__lb_CSEST_new_div">
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">A:</span>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" id="CenPH__lb_SFLCTL__lb_CSEST_new_div">
+                    <div class="mdl-cell mdl-cell--9-col" style="margin: 0;"> <span class="form-label">A:</span>
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CSEST_new"></span>
                      </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" id="CenPH__lb_SFLCTL__lb_CSFST_new_div">
-                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">P:</span> 
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" id="CenPH__lb_SFLCTL__lb_CSFST_new_div">
+                     <div class="mdl-cell mdl-cell--9-col" style="margin: 0;"> <span class="form-label">P:</span> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CSFST_new"></span>
                     </div>
                     </div>
