@@ -54,9 +54,9 @@
                             <span class="summary-title">Unpaid</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CDIF_usd_new"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new">
                             <span class="summary-title">Payment</span>
-                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new" style="color:red;"></span>
+                            <!-- <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new" style="color:red;"></span> -->
                         </div>
                     </div>
                 </div>
@@ -816,6 +816,15 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style type="text/css">
+            #CenPH__lb_SFLCTL__lb_CLTA_usd_ {
+                font-size: 13px !important;
+                padding-top: 3px !important;
+                position: relative !important;
+                top: 4px !important;
+                left: 0px !important;
+            }
+        </style>>
         <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -823,14 +832,14 @@
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                     "CenPH__lb_SFLCTL__lb_2ALTX": "CenPH__lb_SFLCTL__lb_2ALTX_new",
                     "CenPH__lb_SFLCTL__lb_CHPH_lb_": "CenPH__lb_SFLCTL__lb_CHPH_lb_new",
-                    "CenPH__lb_SFLCTL__lb_CDIF_usd_": "CenPH__lb_SFLCTL__lb_CDIF_usd_new",
-                    "CenPH__lb_SFLCTL__lb_CLTA_usd_": "CenPH__lb_SFLCTL__lb_CLTA_usd_new"
+                    "CenPH__lb_SFLCTL__lb_CDIF_usd_": "CenPH__lb_SFLCTL__lb_CDIF_usd_new"
                 }
 
             }
 
             $(document).ready(function () {
                 copyData(copyToAndFrom, "");
+                $("#CenPH__lb_SFLCTL__lb_CLTA_usd_").appendTo("#CenPH__lb_SFLCTL__lb_CLTA_usd_new");
                 $("#time").html("&nbsp;" + $("#time").html());
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
                 generateTableAndApplyInfiniteScroll("builder-orders", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
