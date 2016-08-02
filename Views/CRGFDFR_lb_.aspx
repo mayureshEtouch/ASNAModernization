@@ -22,7 +22,67 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Comments</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRGFDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="order-summary mrgnTp16">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col mdl-cell mdl-cell--8-col-tablet">
+                            <span class="summary-title">Account Number</span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ACCT_new"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="comments" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Maint</th>
+                                            <th width="60%">Comment</th>
+                                            <th>P (Place Called)</th>
+                                            <th>W (Talked to)</th>
+                                            <th>T (Activity Flag)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CL: DSP Comments          Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -446,4 +506,26 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+        var copyToAndFromData = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant8": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_2ACCT": "CenPH__lb_SFLCTL__lb_2ACCT_new"
+            },
+            "inputFields": {
+            }
+        };
+
+        $(document).ready(function () {
+            copyData(copyToAndFromData, "");
+            $("#time").html("&nbsp;" + $("#time").html());
+            var dataMergeIndices = [[0], [1], [2], [3], [4]];
+            generateTableAndApplyInfiniteScroll("comments", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+            $('#previous').click(function (event) {
+                _00('F3', event);
+            });
+        });
+
+    </script>
     </asp:Content>

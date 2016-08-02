@@ -3,78 +3,107 @@
     return (element.valid());
 }
 
+jQuery.fn.AlphanumericOnly = function() {
+    return this.each(function() {
+        $(this).keydown(function(event) {
+            // Allow: backspace, delete, tab, escape, and enter
+            if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
+                // Allow: Ctrl+V
+                (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||
+                // Allow: Ctrl+c
+                (event.ctrlKey == true && (event.which == '99' || event.which == '67')) ||
+                // Allow: Ctrl+A
+                (event.keyCode == 65 && event.ctrlKey === true) ||
+                // Allow: home, end, left, right
+                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                // let it happen, don't do anything
+                return;
+            } else {
+                // Ensure that it is a number and stop the keypress
+                if (event.shiftKey || (event.keyCode < 48 && event.keyCode > 90) && (event.keyCode < 96 || event.keyCode > 105)) {
+                    event.preventDefault();
+                }
+            }
+        }) && $(this).on('paste', function(event) {
+            var $el = $(this);
+            setTimeout(function() {
+                if ($el.val() != $el.val().replace(/\D/g, "")) {
+                    $el.val($el.val().replace(/\D/g, ""));
+                }
+                return;
+            }, 100);
+        });
+    });
+}
+
 // Numeric only control handler
 jQuery.fn.ForceNumericOnly =
     function() {
         return this.each(function() {
-        $(this).keydown(function(event) {
-            // Allow: backspace, delete, tab, escape, and enter
-            if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || 
+            $(this).keydown(function(event) {
+                // Allow: backspace, delete, tab, escape, and enter
+                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
                     // Allow: Ctrl+V
-                    (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||  
+                    (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||
                     // Allow: Ctrl+c
-                    (event.ctrlKey == true && (event.which == '99' || event.which == '67')) || 
+                    (event.ctrlKey == true && (event.which == '99' || event.which == '67')) ||
                     // Allow: Ctrl+A
-                (event.keyCode == 65 && event.ctrlKey === true) || 
-                 // Allow: home, end, left, right
-                (event.keyCode >= 35 && event.keyCode <= 39)) {
-                     // let it happen, don't do anything
-                     return;
-            }
-            else {
-                // Ensure that it is a number and stop the keypress
-                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
-                    event.preventDefault(); 
-                }   
-            }
-        }) && $(this).on('paste',function(event) {
+                    (event.keyCode == 65 && event.ctrlKey === true) ||
+                    // Allow: home, end, left, right
+                    (event.keyCode >= 35 && event.keyCode <= 39)) {
+                    // let it happen, don't do anything
+                    return;
+                } else {
+                    // Ensure that it is a number and stop the keypress
+                    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                        event.preventDefault();
+                    }
+                }
+            }) && $(this).on('paste', function(event) {
                 var $el = $(this);
-                setTimeout(function(){
-                    if ($el.val() != $el.val().replace(/\D/g, "")) 
-                    { 
+                setTimeout(function() {
+                    if ($el.val() != $el.val().replace(/\D/g, "")) {
                         $el.val($el.val().replace(/\D/g, ""));
                     }
                     return;
-                },100);
+                }, 100);
             });
-});
-};
+        });
+    };
 // Alphabet only control handler
 jQuery.fn.ForceAlphabetOnly =
     function() {
         return this.each(function() {
-        $(this).keydown(function(event) {
-            // Allow: backspace, delete, tab, escape, and enter
-            if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || 
+            $(this).keydown(function(event) {
+                // Allow: backspace, delete, tab, escape, and enter
+                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 ||
                     // Allow: Ctrl+V
-                    (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||  
+                    (event.ctrlKey == true && (event.which == '118' || event.which == '86')) ||
                     // Allow: Ctrl+c
-                    (event.ctrlKey == true && (event.which == '99' || event.which == '67')) || 
+                    (event.ctrlKey == true && (event.which == '99' || event.which == '67')) ||
                     // Allow: Ctrl+A
-                (event.keyCode == 65 && event.ctrlKey === true) || 
-                 // Allow: home, end, left, right
-                (event.keyCode >= 35 && event.keyCode <= 39)) {
-                     // let it happen, don't do anything
-                     return;
-            }
-            else {
-                // Ensure that it is a alphabet and stop the keypress
-                if ((event.keyCode < 65 || event.keyCode > 90)) {
-                    event.preventDefault(); 
-                }   
-            }
-        }) && $(this).on('paste',function(event) {
+                    (event.keyCode == 65 && event.ctrlKey === true) ||
+                    // Allow: home, end, left, right
+                    (event.keyCode >= 35 && event.keyCode <= 39)) {
+                    // let it happen, don't do anything
+                    return;
+                } else {
+                    // Ensure that it is a alphabet and stop the keypress
+                    if ((event.keyCode < 65 || event.keyCode > 90)) {
+                        event.preventDefault();
+                    }
+                }
+            }) && $(this).on('paste', function(event) {
                 var $el = $(this);
-                setTimeout(function(){
-                    if ($el.val() != $el.val().replace(/\W/g, "")) 
-                    { 
+                setTimeout(function() {
+                    if ($el.val() != $el.val().replace(/\W/g, "")) {
                         $el.val($el.val().replace(/\W/g, ""));
                     }
                     return;
-                },100);
+                }, 100);
             });
-});
-};
+        });
+    };
 
 // Numeric with question mark
 jQuery.fn.ForceNumericWithQuestionMarkOnly =
@@ -103,56 +132,55 @@ jQuery.fn.ForceNumericWithQuestionMarkOnly =
 
 // Numeric with question mark and F4
 jQuery.fn.ForceNumericWithQuestionMarkAndF4Only = function(maxlength, minlength) {
-        return this.each(function() {
-            $(this).keydown(function(e) {
-                if (e.keyCode === 115) {
-                    return true;
+    return this.each(function() {
+        $(this).keydown(function(e) {
+            if (e.keyCode === 115) {
+                return true;
+            } else if ((e.shiftKey && e.which === 191) || e.keyCode === 191) {
+                $(this).attr("maxlength", "1");
+                return true;
+            } else if (e.ctrlKey || e.altKey) {
+                return false;
+            } else if (e.shiftKey) {
+                return false;
+            } else {
+                if (maxlength && $(this).val().indexOf("?") === -1) {
+                    $(this).attr("maxlength", maxlength);
                 }
-                else if ((e.shiftKey && e.which === 191) || e.keyCode === 191) {
-                    $(this).attr("maxlength", "1");
-                    return true;
-                } else if (e.ctrlKey || e.altKey) {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
                     return false;
-                } else if (e.shiftKey) {
-                    return false;
-                } else {
-                    if (maxlength && $(this).val().indexOf("?") === -1) {
-                        $(this).attr("maxlength", maxlength);
-                    }
-                    var key = e.keyCode;
-                    if (!((key == 8) || (key == 46) || (key == 9) || (key == 13) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
-                        return false;
-                    }
                 }
-            });
+            }
         });
-    };
+    });
+};
 
 // Numeric with two decimal precisions
 jQuery.fn.numericWithTwoDecimalPrecisions = function() {
-	
-        return this.each(function() {
-		
-            $(this).on("change keyup", function(e) {
-                if (/^[0-9]+(\.[0-9]{1,2})?$/.test($(this).val().replace(/\s/g, ""))) {
-                    return true;
-                } else if (/^[0-9]+(\.)?$/.test($(this).val().replace(/\s/g, ""))) {
-                    return true;
-                } else {
-                    $(this).val("");
-                    return;
-                }
 
-            });
+    return this.each(function() {
+
+        $(this).on("change keyup", function(e) {
+            if (/^[0-9]+(\.[0-9]{1,2})?$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (/^[0-9]+(\.)?$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else {
+                $(this).val("");
+                return;
+            }
+
         });
-    }
-	
-    // Numeric with two decimal precisions with minus
+    });
+}
+
+// Numeric with two decimal precisions with minus
 jQuery.fn.numericWithTwoDecimalPrecisionsWithMinus = function() {
         return this.each(function() {
-        
+
             $(this).on("change keyup", function(e) {
-            
+
                 if (/^\-?([0-9]+(\.[0-9]{1,2})?)?$/.test($(this).val().replace(/\s/g, ""))) {
                     return true;
                 } else if (/^\-?([0-9]+(\.)?)$/.test($(this).val().replace(/\s/g, ""))) {
@@ -165,26 +193,26 @@ jQuery.fn.numericWithTwoDecimalPrecisionsWithMinus = function() {
             });
         });
     }
-    	// Numeric with two decimal precisions with minus
+    // Numeric with two decimal precisions with minus
 jQuery.fn.numericWithTwoDecimalPrecisionsWithTrailingMinus = function() {
-        return this.each(function() {
-		
-            $(this).on("change keyup", function(e) {
-			
-                if (/^([0-9]+(\.[0-9]{1,2})?)?\-?$/.test($(this).val().replace(/\s/g, ""))) {
-                    return true;
-                } else if (/^([0-9]+(\.)?\-?)$/.test($(this).val().replace(/\s/g, ""))) {
-                    return true;
-                } else {
-                    $(this).val("");
-                    return;
-                }
+    return this.each(function() {
 
-            });
+        $(this).on("change keyup", function(e) {
+
+            if (/^([0-9]+(\.[0-9]{1,2})?)?\-?$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else if (/^([0-9]+(\.)?\-?)$/.test($(this).val().replace(/\s/g, ""))) {
+                return true;
+            } else {
+                $(this).val("");
+                return;
+            }
+
         });
-    }
-	
-    //Allow only Y or N
+    });
+}
+
+//Allow only Y or N
 jQuery.fn.ForceYesOrNoOnly = function() {
     return this.each(function() {
         $(this).on("change keyup", function(e) {
@@ -250,33 +278,33 @@ jQuery.fn.numericWithCustomDecimalPrecisions = function(beforePrecision, afterPr
             } else {
                 var inpValue = $(this).val();
                 var splitByPeriod = inpValue.split(".");
-                splitByPeriod= splitByPeriod.filter(Boolean);
-                if(splitByPeriod.length === 1) {
+                splitByPeriod = splitByPeriod.filter(Boolean);
+                if (splitByPeriod.length === 1) {
                     //$(this).val($(this).val().replace(/\D/g,""));
-                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
-                    if(splitByPeriod[0].length > beforePrecision) {
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g, "");
+                    if (splitByPeriod[0].length > beforePrecision) {
                         $(this).val($(this).val().substr(0, beforePrecision));
                     }
                     $(this).val(splitByPeriod[0]);
-                } else if(splitByPeriod.length === 2) {
+                } else if (splitByPeriod.length === 2) {
                     //$(this).val(splitByPeriod[0]+"."+splitByPeriod[1].replace(/\D/g,""));
-                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g,"");
-                    if(splitByPeriod[0].length > beforePrecision) {
+                    splitByPeriod[0] = splitByPeriod[0].replace(/\D/g, "");
+                    if (splitByPeriod[0].length > beforePrecision) {
                         $(this).val($(this).val().substr(0, beforePrecision));
                     }
                     $(this).val(splitByPeriod[0]);
-                    splitByPeriod[1] = splitByPeriod[1].replace(/\D/g,"");
-                    if(splitByPeriod[1].length > beforePrecision) {
+                    splitByPeriod[1] = splitByPeriod[1].replace(/\D/g, "");
+                    if (splitByPeriod[1].length > beforePrecision) {
                         splitByPeriod[1] = splitByPeriod[1].substr(0, afterPrecision);
                     }
                     $(this).val(splitByPeriod[0] + "." + splitByPeriod[1]);
                 }
                 inpValue = $(this).val();
                 splitByPeriod = inpValue.split(".");
-                if (splitByPeriod[0].length > beforePrecision/* || !(/^([0-9])$/.test(splitByPeriod[0]))*/) {
+                if (splitByPeriod[0].length > beforePrecision /* || !(/^([0-9])$/.test(splitByPeriod[0]))*/ ) {
                     splitByPeriod[0] = splitByPeriod[0].substr(0, splitByPeriod[0].length - 1);
                     $(this).val(splitByPeriod.join("."));
-                } else if(splitByPeriod.length === 2 && splitByPeriod[1].length > afterPrecision) {
+                } else if (splitByPeriod.length === 2 && splitByPeriod[1].length > afterPrecision) {
                     $(this).val(inpValue.substr(0, inpValue.length - 1));
                 }
                 return;
@@ -341,9 +369,9 @@ jQuery.fn.ForceTwoDecimalPointsWithTrailingMinus = function() {
         $(this).on("blur", function(e) {
 
             if ($(this).val() != '') {
-                if($(this).val().slice(-1)=='-'){
-                    $(this).val(parseFloat($(this).val()).toFixed(2)+'-');
-                }else{
+                if ($(this).val().slice(-1) == '-') {
+                    $(this).val(parseFloat($(this).val()).toFixed(2) + '-');
+                } else {
                     $(this).val(parseFloat($(this).val()).toFixed(2));
                 }
             }
