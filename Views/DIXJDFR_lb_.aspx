@@ -669,4 +669,10 @@
 
         });
     </script>
+    <style>
+        #tblCustWorksheet tr td:nth-child(6) {
+            text-align: right !important;
+        }
+
+    </style>
 </asp:Content>
