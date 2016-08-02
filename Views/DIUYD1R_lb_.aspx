@@ -32,7 +32,7 @@
         <span class="heading-h1">Display Warranty Record</span> </div>
       <div class="mdl-cell mdl-cell--4-col pull-right"> 
         <!-- Navigation --> 
-        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIUYD1R</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIUYD1R</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span><i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
     </div>
   </section>
   <section class="table-data-content-container mrgnTp16">
@@ -304,7 +304,7 @@
     </div>
   </section>
   
-  <section class="table-data-content-container mrgnTp16">
+  <section class="table-data-content-container mrgnTp16 spacer-container-bottom">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
@@ -351,7 +351,7 @@
             <!-- 6 col ends here --> 
 		  
             <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+            <div id="serviceContract_div" class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Service Contract Number:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="serviceContract"></span> </div>
@@ -360,7 +360,7 @@
             <!-- 6 col ends here --> 
             
             <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+            <div id="scSold_div" class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">S/C Sold Date:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="scSold" ></span> </div>
@@ -375,7 +375,7 @@
            <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
 			<!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+            <div id="rmaMonths_div" class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Original RMA: Months:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="rmaMonths"></span> </div>
@@ -384,7 +384,7 @@
             </div>
 		  
             <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+            <div id="rmaMonthsEnd_div" class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Original RMA: Ends:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="rmaMonthsEnd"></span> </div>
@@ -402,7 +402,7 @@
 			
             
             <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+            <div id="lastServicedOn_div" class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Last Serviced on :</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id= "lastServicedOn"></span> </div>
@@ -411,7 +411,7 @@
             </div>
             
             <!-- 6 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+            <div id="workOrder_div" class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Work order:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="workOrder"></span> </div>
@@ -541,7 +541,13 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
             
-
+		
+			$.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+			   if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+				 $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
+			   }
+			 });
+		 
               $("#exit").click(function (event) {
                    _00('F3', event);
               });

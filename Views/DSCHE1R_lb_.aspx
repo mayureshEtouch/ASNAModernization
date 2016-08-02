@@ -1082,7 +1082,7 @@
                 $("#view1").show();
                 $("#view2").hide();
                 copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
-                $("#loc").ForceNumericOnly();
+                $("#loc").AlphanumericOnly();
                 $("#refNum").ForceNumericOnly();
                 $("#custActivity").ForceAlphabetOnly();
                 $("#CenPH__lb_RCDDTL1__lb_1R7ST").appendTo("#custActivity");
