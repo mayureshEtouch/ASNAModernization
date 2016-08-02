@@ -67,9 +67,7 @@
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
-                                                
-                                                
+                                              
 												</div>
 												
 										</div>
@@ -106,10 +104,7 @@
                    _00('F3', event);
               });
 			  
-			  $("#prompt").click(function(event){
-				_00('F4', event);
-			  });
-
+			
 
             });
       </script>
