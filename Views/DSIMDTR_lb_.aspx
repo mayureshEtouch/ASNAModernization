@@ -266,7 +266,26 @@
       
           </div>
           <!-- content-grid mdl-grid ends here --> 
-      
+            <section class="table-data-content-container" id="tb1">
+                                <div class="table-data-wrapper">
+                                    <div class="table-data-maincontainer">
+                                        <div style="overflow: auto;" class="table-container">
+                                            <div>
+                                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="qualityaudit" data-upgraded=",MaterialDataTable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Comments</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                         
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
        
           
       
@@ -337,27 +356,7 @@
           <!-- content-grid mdl-grid ends here -->   
        
       
-      <section class="table-data-content-container" id="tb1">
-                                <div class="table-data-wrapper">
-                                    <div class="table-data-maincontainer">
-                                        <div style="overflow: auto;" class="table-container">
-                                            <div>
-                                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="qualityaudit" data-upgraded=",MaterialDataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Comments</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                         
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-          
+               
         </div>
     
     <div class="button-container">
