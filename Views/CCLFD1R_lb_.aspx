@@ -690,7 +690,7 @@
         $("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new_c_div").hide();
       }
 
-      $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB","CenPH__lb_RCDDTL1__lb_DC4N_lb_","CenPH__lb_RCDDTL1__lb_1BNKR","CenPH__lb_RCDDTL1__lb_1LBST","CenPH__lb_RCDDTL1__lb_1K9ST","CenPH__lb_RCDDTL1__lb_1K8ST","CenPH__lb_RCDDTL1__lb_1K2ST","CenPH__lb_RCDDTL1__lb_1K4ST","CenPH__lb_RCDDTL1__lb_1K3ST","CenPH__lb_RCDDTL1__lb_1LAST","CenPH__lb_RCDDTL1__lb_1K6ST","CenPH__lb_RCDDTL1__lb_1LMST","CenPH__lb_RCDDTL1__lb_1LVST","CenPH__lb_RCDDTL1__lb_1LWST","CenPH__lb_RCDDTL1__lb_1LXST","CenPH__lb_RCDDTL1__lb_DSKST"],function(i,el){
+      $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB","CenPH__lb_RCDDTL1__lb_DC4N_lb_","CenPH__lb_RCDDTL1__lb_1BNKR","CenPH__lb_RCDDTL1__lb_1LBST","CenPH__lb_RCDDTL1__lb_1K9ST","CenPH__lb_RCDDTL1__lb_1K8ST","CenPH__lb_RCDDTL1__lb_1K2ST","CenPH__lb_RCDDTL1__lb_1K4ST","CenPH__lb_RCDDTL1__lb_1K3ST","CenPH__lb_RCDDTL1__lb_1LAST","CenPH__lb_RCDDTL1__lb_1K6ST","CenPH__lb_RCDDTL1__lb_1LMST","CenPH__lb_RCDDTL1__lb_1LVST","CenPH__lb_RCDDTL1__lb_1LWST","CenPH__lb_RCDDTL1__lb_1LXST","CenPH__lb_RCDDTL1__lb_DSKST","CenPH__lb_RCDDTL1__lb_DHHVA"],function(i,el){
         if($("#"+el).css('color')=="rgb(255, 0, 0)"){
           $("#"+el+"_new").css('color','red');
           $("#"+el+"_new_div").css('color','red');
