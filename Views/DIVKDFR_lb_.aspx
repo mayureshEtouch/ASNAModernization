@@ -103,7 +103,7 @@
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Discount Amount:</span> </div>
                         <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0">
-                          <input type="text" data-tb-index="1" class="mdl-textfield__input" id="CenPH__lb_SFLCTL__lb_CCFVA_new" maxlength="8">
+                          <input type="text" data-tb-index="1" class="mdl-textfield__input" id="CenPH__lb_SFLCTL__lb_CCFVA_new" maxlength="9">
                         </div>
                       </div>
                     </div>
