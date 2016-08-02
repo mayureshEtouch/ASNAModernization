@@ -159,77 +159,11 @@
   <div class="table-data-wrapper mrgnTp16">
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
-          
-      <div class="content-grid mdl-grid" style="padding:0"> 
-      <div class="mdl-cell mdl-cell--12-col" style="margin: 8px 8px 0 8px;"><span class="summary-table-title">Service</span> </div>
-      </div>
-       
-          <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Service satisfied Code:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2M8ST_new"></span> </div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Work Quality Code:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2QRST_new"></span> </div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-             <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Efficiency Of Technician Code:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2NAST_new"></span> </div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-      
-       
-          <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Satisfied with Repair:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2QOST_new"></span> </div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Tech Appearance Code:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2QQST_new"></span> </div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-            
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-          
-        </div>
-      </div>
-    </div>
-  
-      
-  <div class="table-data-wrapper mrgnTp16">
-      <div class="table-data-maincontainer">
-        <div class="table-container table-container-search"> 
-          
-      <div class="content-grid mdl-grid" style="padding:0"> 
       <div class="mdl-cell mdl-cell--12-col" style="margin: 8px 8px 0 8px;"><span class="summary-table-title">Sales</span> </div>
       </div>
-       
-          <!-- content-grid mdl-grid starts here -->
+
+<!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -257,9 +191,8 @@
             <!-- 4 col ends here --> 
           </div>
           <!-- content-grid mdl-grid ends here --> 
-      
-       
-          <!-- content-grid mdl-grid starts here -->
+
+<!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -280,8 +213,8 @@
             
           </div>
           <!-- content-grid mdl-grid ends here --> 
-      
-       <!-- content-grid mdl-grid starts here -->
+
+ <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -310,10 +243,9 @@
             <!-- 4 col ends here --> 
             
           </div>
-          <!-- content-grid mdl-grid ends here --> 
-      
-      
-       <!-- content-grid mdl-grid starts here -->
+          <!-- content-grid mdl-grid ends here -->
+
+<!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -334,6 +266,76 @@
       
           </div>
           <!-- content-grid mdl-grid ends here --> 
+      
+       
+          
+      
+       
+          
+          
+        </div>
+      </div>
+    </div>
+  
+      
+  <div class="table-data-wrapper mrgnTp16">
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+          
+      <div class="content-grid mdl-grid" style="padding:0"> 
+      <div class="mdl-cell mdl-cell--12-col" style="margin: 8px 8px 0 8px;"><span class="summary-table-title">Service</span> </div>
+      </div>
+
+        <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Service Satisfied Code:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2M8ST_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+            <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Work Quality Code:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2QRST_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+             <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Efficiency Of Technician Code:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2NAST_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here -->
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Satisfied With Repair:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2QOST_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+            <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Tech Appearance Code:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2QQST_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+            
+          </div>
+          <!-- content-grid mdl-grid ends here -->   
+       
       
       <section class="table-data-content-container" id="tb1">
                                 <div class="table-data-wrapper">
@@ -363,16 +365,17 @@
         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="comment">Comments</span>
+          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">Help</span>
         </div>
         <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right">
-          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+          <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> -->
         </div>
       </div>
     </div>
               
       </div>
     
-    </div
+    </div>
   
   
   </section>
@@ -1199,8 +1202,12 @@
                    _00('F6', event);
                 });
 
-                $("#next").click(function (event) {
+                /*$("#next").click(function (event) {
                    _00('Enter', event);
+                });*/
+
+                $("#help").click(function (event) {
+                   _00('F1', event);
                 });
             });
       </script>
