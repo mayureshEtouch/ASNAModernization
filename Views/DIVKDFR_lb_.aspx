@@ -118,7 +118,7 @@
                     <!-- 6 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
                       <div class="content-grid mdl-grid">
-                        <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Total = :</span> </div>
+                        <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Total = </span> </div>
                         <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAAVA_new"></span> </div>
                       </div>
                     </div>
@@ -180,6 +180,12 @@
            </section>
          </main>
          <div id="modal1" class="simplePopup"></div>
+           <style>
+           .ui-datepicker-today 
+          {
+            background: #ff0000
+          }
+           </style>
          <!-- Modified HTML code ends here -->
          <script type="text/javascript">
            var copyToAndFrom = {
