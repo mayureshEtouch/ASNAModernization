@@ -22,7 +22,108 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Workorders for Customer</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVBPDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="order-summary mrgnTp16">
+      <div class="order-summary-wrapper" style="margin-bottom: 0;">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Customer Name</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CALTX_new"></span>
+          </div>
+          
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Address</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CANTX_new">
+                          <br>
+                            <br>  
+                            <span class="mrgnLft10" id="CenPH__lb_SFLCTL__lb_CADST_new"></span>
+<span class="mrgnLft10" id="CenPH__lb_SFLCTL__lb_CAPTX_new"></span> 
+                        </span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+            <span class="summary-title">Phone Details</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_COKNB_new">HOME: </span>
+            
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_COLNB_new">WORK: </span>
+          </div>
+        </div>
+      </div>
+    </section>
+            
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                <span id="detail"><span class="icon-txt">Details</span><i class="material-icons md-15 md-light display-icon"></i></span>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="workorder" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>Work Order</th>
+                            <th>Enter Location</th>
+                            <th>Servicing Location</th>
+                            <th>Model Number</th>
+                            <th>Entered Date</th>
+                            <th>Scheduled Date</th>
+                            <th>Completed  Date</th>
+                            <th>Type Repair</th>
+                            <th>Work Order Status</th>
+                            <th>Product Movement Status</th>
+                            <th>Narrative</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                         
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  SV: DSP Wrkordrs 4/Cust   Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -987,4 +1088,64 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+         var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant15": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_CALTX": "CenPH__lb_SFLCTL__lb_CALTX_new",
+                    "CenPH__lb_SFLCTL__lb_CANTX+CenPH__lb_SFLCTL__lb_CAQTX": "CenPH__lb_SFLCTL__lb_CANTX_new",
+                    "CenPH__lb_SFLCTL__lb_CADST": "CenPH__lb_SFLCTL__lb_CADST_new",
+                    "CenPH__lb_SFLCTL__lb_CAPTX": "CenPH__lb_SFLCTL__lb_CAPTX_new",
+                    "CenPH_DdsConstant10+CenPH__lb_SFLCTL__lb_COKNB":"CenPH__lb_SFLCTL__lb_COKNB_new",
+                    "CenPH_DdsConstant11+CenPH__lb_SFLCTL__lb_COLNB": "CenPH__lb_SFLCTL__lb_COLNB_new"
+                  },
+                "inputFields": {
+                    
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+
+              $('body').on('click', '#workorder tbody tr', function () {
+                $("#workorder tbody tr:even").css("background-color", "#fff");
+                $("#workorder tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#workorder tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10]];
+                generateTableAndApplyInfiniteScroll("workorder", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                $("#workorder tbody tr:first").css("background-color", "#d8d8d8");
+
+                var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+              }
+
+              $("#detail").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Work Order");
+                } else {
+                    var row = $("#workorder tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+              });
+
+              $("#previous").click(function (event) {
+                   _00('F3', event);
+              });
+
+              $("#next").click(function (event) {
+                   _00('Enter', event);
+              });
+
+            });
+      </script>
     </asp:Content>
