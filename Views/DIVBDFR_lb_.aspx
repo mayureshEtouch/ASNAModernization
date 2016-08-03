@@ -71,7 +71,7 @@
         <div class="add-item-wrapper">
             <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col pull-right">
-                    <div class="icon-container"><span id="changeprod"><span class="icon-txt">Change Product</span><i class="material-icons md-15 md-light change-product-icon"></i></span><span id="display"> <span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></span><span id="changecust"><span class="icon-txt">Change Customer</span><i class="material-icons md-15 md-light change-customer-icon"></i></span><span id="services"><span class="icon-txt">Services</span><i class="material-icons md-15 md-light services-icon"></i></span> </div>
+                    <div class="icon-container"><span id="changeprod"> <span class="icon-txt">Change Product</span><i class="material-icons md-15 md-light change-product-icon"></i></span><span id="display"> <span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></span><span id="changecust"><span class="icon-txt">Change Customer</span><i class="material-icons md-15 md-light change-customer-icon"></i></span><span id="services"><span class="icon-txt">Services</span><i class="material-icons md-15 md-light services-icon"></i></span> </div>
                 </div>
             </div>
         </div>
@@ -744,11 +744,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-      <style>
-        #displaymodel tr td:nth-child(1), #displaymodel tr td:nth-child(3){
-          text-align: left;
-        }
-      </style>
+      
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -781,14 +777,16 @@
                $("#displaymodel tbody tr:first").css("background-color", "#d8d8d8");
                $("#displaymodel tbody tr").attr("tabindex","4");
                $("#CenPH__lb_SFLCTL__lb_2G1N_lb_new").ForceNumericOnly();
+               splitSpace();
                 /*$("#displaymodel tr").css('cursor', 'pointer'); */
-                for(var i = 0; i < $("#displaymodel tr td:nth-child(1)").length;i++) {
-                $($("#displaymodel tr td:nth-child(1)")[i]).html($($("#displaymodel tr td:nth-child(1)")[i]).html().replace(/&nbsp;/g, ""));
-                }
 
-                for(var i = 0; i < $("#displaymodel tr td:nth-child(3)").length;i++) {
+                /*for(var i = 0; i < $("#displaymodel tr td:nth-child(1)").length;i++) {
+                $($("#displaymodel tr td:nth-child(1)")[i]).html($($("#displaymodel tr td:nth-child(1)")[i]).html().replace(/&nbsp;/g, ""));
+                }*/
+
+                /*for(var i = 0; i < $("#displaymodel tr td:nth-child(3)").length;i++) {
                 $($("#displaymodel tr td:nth-child(3)")[i]).html($($("#displaymodel tr td:nth-child(3)")[i]).html().replace(/&nbsp;/g, ""));
-                }
+                }*/
                 $("form input[type=text]").on('input',function () {
                 var tab = $(this).attr("tabindex");
                 if($(this).val().length == $(this).attr('maxlength')) {
@@ -798,7 +796,30 @@
           
                 }
               });
+                 $('body').on("click", "#next-page", function (event) {
+                _00("PgDn", event);
+                splitSpace();
+            });
+            $('body').on("click", "#previous-page", function (event) {
+                _00("PgUp", event);
+                splitSpace();
+            });
+            function splitSpace(){
+                $("#displaymodel tbody tr").each(function() {
+                  
+                  $(this).find('td').each (function() {
+                   
+                   var html = $(this).html();
+                  
+                   html = html.replace(/[&]nbsp[;]/gi,"");
+                  
+                   $(this).html(html);
+                  });                          
+                });
+                }
 
+                
+                
                 $("#previous").click(function (event) {
                    _00('F3', event);
                 });
@@ -854,4 +875,5 @@
               });
             });
       </script>
+      
     </asp:Content>

@@ -97,7 +97,7 @@
                             <th>Cmp</th>
                             <th>Que</th>
                             <th>Grader</th>
-                            <th>Invoice $</th>
+                            <th>Product $</th>
                             <th>Available $</th>
                             <th>$ Down</th>
                             <th>C</th>
