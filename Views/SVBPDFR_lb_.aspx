@@ -112,7 +112,7 @@
                          
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                            <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
                         </div>
                     </div>
                 </div>
@@ -1142,9 +1142,9 @@
                    _00('F3', event);
               });
 
-              $("#next").click(function (event) {
+              /*$("#next").click(function (event) {
                    _00('Enter', event);
-              });
+              });*/
 
             });
       </script>
