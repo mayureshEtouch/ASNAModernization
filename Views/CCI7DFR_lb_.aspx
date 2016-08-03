@@ -51,10 +51,10 @@
                                     <div class="content-grid mdl-grid">
                                         
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" id="Location" style="margin: 0 0 0 10px;">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_CAGTX_new" class="mdl-textfield__input" data-tb-index="1" maxlength="4">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_CAGTX_new" placeholder="Code" class="mdl-textfield__input" data-tb-index="1" maxlength="4">
                                         </div> 
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" id="filter-by-co" style="margin: 0 15px 0 20px;">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2ITNB_new" class="mdl-textfield__input" data-tb-index="2" maxlength="9">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2ITNB_new" placeholder="Application Number" class="mdl-textfield__input" data-tb-index="2" maxlength="9">
                                         </div>
                     <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="width: 72px;">
                                             <span class="summary-table-title pull-right">Location</span>
@@ -63,7 +63,7 @@
                                            <span style=" margin: 12px 10px 0 0; display:block;" id="CenPH__lb_SFLCTL__lb_2AACD_new"></span>
                                         </div>
                     <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" id="filter-by-co">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2AJCD_new" class="mdl-textfield__input" data-tb-index="3" maxlength="5">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2AJCD_new" placeholder="Employee Number" class="mdl-textfield__input" data-tb-index="3" maxlength="5">
                                         </div>
                                                                   
                                     </div>
