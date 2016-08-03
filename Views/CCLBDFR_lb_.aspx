@@ -647,7 +647,9 @@
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-
+            $('.close-icon').click(function (event) {
+                _00('F12', event);
+            });
             $("#change").click(function (event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the model");
