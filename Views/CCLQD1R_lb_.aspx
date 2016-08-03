@@ -35,7 +35,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 
-        <div class="OverlayPopupBackground"></div>
+       <div class="OverlayPopupBackground"></div>
 <div class="modal-dialog-container">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row"> 
@@ -63,34 +63,34 @@
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid">
               <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">Social Security:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DBJXT_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">D.O.B.:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1DOBD_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin-right:0">
-                              <span class="form-label">DL Number:</span>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+                              <span class="form-label">Driver License:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1DRCD_new"></span>
@@ -104,66 +104,61 @@
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid">
               <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">Phone Listing Name:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet pull-right">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1PHNN_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--3-col" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">Dependents:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet pull-right">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1DEP_lb_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
-                  <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col" style="padding:0">
-                      <div class="content-grid mdl-grid">                         
-                    </div>
-                  </div>
-                  <!-- col ends here -->
+                  
         </div>
               <!-- content-grid mdl-grid ends here -->
               
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid">
               <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
-                              <span class="form-label">Home:</span>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Residence Type:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RTCD_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">For:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet pull-right">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1REST_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-label">Years Paying:</span>
@@ -180,34 +175,111 @@
                 <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid">
               <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">Bankruptcy:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1BNKR_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
-                              <span class="form-label">Martial:</span>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Marital Status:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ASST_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
-                  <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
-                      <div class="content-grid mdl-grid"></div>
+                  
+        </div>
+              <!-- content-grid mdl-grid ends here -->
+              
+         <div class="content-grid mdl-grid" style="padding:0" id="spousedetail"> 
+          <div class="mdl-cell mdl-cell--12-col" style="padding: 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"><span class="summary-table-title"style="margin: 10px 0 0;">Spouse Details</span> </div>
+          </div>      
+              
+          <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label" id="sname">Name:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPNM_new"></span>
+                          </div>
+                    </div>
                   </div>
                   <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label" id="ssecurity">Social Security:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DIDXT_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label" id="dob"> D.O.B.:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1_V1SDOB_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  
+        </div>
+              <!-- content-grid mdl-grid ends here -->
+              
+              
+              
+          <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label" id="dlicen">Driver License:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPST_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label" id="income">Income:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  
+                  
+                  
         </div>
               <!-- content-grid mdl-grid ends here -->
 
@@ -216,7 +288,7 @@
             <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="change">Change</span>
-             </div>
+            </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
             </div>
@@ -1069,7 +1141,12 @@
                     "CenPH__lb_RCDDTL1__lb_1REST": "CenPH__lb_RCDDTL1__lb_1REST_new",
                     "CenPH__lb_RCDDTL1__lb_1RES_usd_": "CenPH__lb_RCDDTL1__lb_1RES_usd_new",
                     "CenPH__lb_RCDDTL1__lb_1BNKR": "CenPH__lb_RCDDTL1__lb_1BNKR_new",
-                    "CenPH__lb_RCDDTL1__lb_1ASST": "CenPH__lb_RCDDTL1__lb_1ASST_new"
+                    "CenPH__lb_RCDDTL1__lb_1ASST": "CenPH__lb_RCDDTL1__lb_1ASST_new",
+                    "CenPH__lb_RCDDTL1__lb_1SPNM": "CenPH__lb_RCDDTL1__lb_1SPNM_new",
+                    "CenPH__lb_RCDDTL1__lb_DIDXT": "CenPH__lb_RCDDTL1__lb_DIDXT_new",
+                    "CenPH__lb_RCDDTL1_V1SDOB": "CenPH__lb_RCDDTL1_V1SDOB_new",
+                    "CenPH__lb_RCDDTL1__lb_1SPST+CenPH_DdsConstant15+CenPH__lb_RCDDTL1__lb_DGMXT": "CenPH__lb_RCDDTL1__lb_1SPST_new",
+                    "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "CenPH__lb_RCDDTL1__lb_1SPI_usd_new"
                   },
                 "inputFields": {
                     
@@ -1094,6 +1171,51 @@
               $('#next').click(function (event) {
                     _00("Enter", event);
               });
+
+              if($("#CenPH__lb_RCDDTL1__lb_1SPNM").length > 0)
+              {
+                $("#sname").show();
+                $("#spousedetail").show();
+              } else {
+                $("#sname").hide();
+                $("#spousedetail").hide();
+              }
+
+              if($("#CenPH__lb_RCDDTL1__lb_DIDXT").length > 0)
+              {
+                $("#ssecurity").show();
+                $("#spousedetail").show();
+              } else {
+                $("#ssecurity").hide();
+                $("#spousedetail").hide();
+              }
+
+              if($("#CenPH__lb_RCDDTL1_V1SDOB").length > 0)
+              {
+                $("#dob").show();
+                $("#spousedetail").show();
+              } else {
+                $("#dob").hide();
+                $("#spousedetail").hide();
+              }
+
+              if($("#CenPH__lb_RCDDTL1__lb_1SPST").length > 0)
+              {
+                $("#dlicen").show();
+                $("#spousedetail").show();
+              } else {
+                $("#dlicen").hide();
+                $("#spousedetail").hide();
+              }
+
+              if($("#CenPH__lb_RCDDTL1__lb_1SPI_usd_").length > 0)
+              {
+                $("#income").show();
+                $("#spousedetail").show();
+              } else {
+                $("#income").hide();
+                $("#spousedetail").hide();
+              }
             });
       </script>
     </asp:Content>
