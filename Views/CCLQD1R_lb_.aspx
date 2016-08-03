@@ -4,7 +4,19 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/2/2016 at 1:24 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCLQD1R# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +34,202 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row"> 
+            <!-- Title --> 
+             <span class="mdl-layout-title logo-icon"></span>
+            <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+            <div class="mdl-layout-spacer"></div>
+            <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+    <section class="time-date">
+        <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--9-col"> 
+                <!-- Title --> 
+                <span class="heading-h1">Customer Personal Detail</span> </div>
+            <div class="mdl-cell mdl-cell--3-col pull-right"> 
+                <!-- Navigation --> 
+                <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLQD1R</span></div>
+        </div>
+    </section>
+    <section class="form-data">
+                <div class="form-data-wrapper" style="padding-bottom:0;">
+
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Social Security:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DBJXT_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">D.O.B.:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1DOBD_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin-right:0">
+                              <span class="form-label">DL Number:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1DRCD_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+        </div>
+              <!-- content-grid mdl-grid ends here -->
+              
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Phone Listing Name:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet pull-right">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1PHNN_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--3-col" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Dependents:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet pull-right">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1DEP_lb_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col" style="padding:0">
+                      <div class="content-grid mdl-grid">                         
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+        </div>
+              <!-- content-grid mdl-grid ends here -->
+              
+              <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Home:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RTCD_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">For:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet pull-right">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1REST_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+                              <span class="form-label">Years Paying:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet pull-right">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RES_usd_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+        </div>
+              <!-- content-grid mdl-grid ends here -->
+              
+                <!-- content-grid mdl-grid starts here -->
+              <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Bankruptcy:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1BNKR_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                              <span class="form-label">Martial:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ASST_new"></span>
+                          </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+                  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                      <div class="content-grid mdl-grid"></div>
+                  </div>
+                  <!-- col ends here -->
+        </div>
+              <!-- content-grid mdl-grid ends here -->
+
+        <div class="button-container" style="padding-bottom: 5px;">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="change">Change</span>
+             </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+            </div>
+          </div>
+        </div>
+      </div>
+            </section>
+    
+    </main>
+    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+        <div id="modal" class="simplePopup"></div>
+</div>
+        <div id="Div1" style="display:none;">
             
       <%--  CU: D1W Pers Detail-Store Display record(1 screen)                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -812,4 +1019,81 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+           #__Page_PopUp {
+            min-width: 450px !important;
+            width: 600px !important;
+      left: 50% !important;
+      margin-left: -300px;
+      top: 15% !important;
+            }
+      
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin: 0 0 3%;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 100% !important;
+            }
+        .simplePopup {
+         left: 28% !important;
+         top: 50% !important;
+      }
+
+        #exit {
+          margin-left: -9px;
+        }
+      </style>
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_DBJXT": "CenPH__lb_RCDDTL1__lb_DBJXT_new",
+                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD": "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD_new",
+                    "CenPH__lb_RCDDTL1__lb_1DRCD+CenPH_DdsConstant22+CenPH__lb_RCDDTL1__lb_DCNTX": "CenPH__lb_RCDDTL1__lb_1DRCD_new",
+                    "CenPH__lb_RCDDTL1__lb_1PHNN": "CenPH__lb_RCDDTL1__lb_1PHNN_new",
+                    "CenPH__lb_RCDDTL1__lb_1DEP_lb_": "CenPH__lb_RCDDTL1__lb_1DEP_lb_new",
+                    "CenPH__lb_RCDDTL1__lb_1RTCD": "CenPH__lb_RCDDTL1__lb_1RTCD_new",
+                    "CenPH__lb_RCDDTL1__lb_1REST": "CenPH__lb_RCDDTL1__lb_1REST_new",
+                    "CenPH__lb_RCDDTL1__lb_1RES_usd_": "CenPH__lb_RCDDTL1__lb_1RES_usd_new",
+                    "CenPH__lb_RCDDTL1__lb_1BNKR": "CenPH__lb_RCDDTL1__lb_1BNKR_new",
+                    "CenPH__lb_RCDDTL1__lb_1ASST": "CenPH__lb_RCDDTL1__lb_1ASST_new"
+                  },
+                "inputFields": {
+                    
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+
+              $("#change").click(function (event) {
+                   _00('F9', event);
+              });
+
+              $('#exit').click(function (event) {
+                    _00("F3", event);
+              });
+              $('.close-icon').click(function (event) {
+                    _00("F12", event);
+              });
+
+              $('#next').click(function (event) {
+                    _00("Enter", event);
+              });
+            });
+      </script>
     </asp:Content>
