@@ -149,7 +149,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
-                              <span class="form-label">For:</span>
+                              <span class="form-label">Residence Time :</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1REST_new"></span>
@@ -161,7 +161,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-                              <span class="form-label">Years Paying:</span>
+                              <span class="form-label">Residence Payment:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet pull-right">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RES_usd_new"></span>
@@ -290,7 +290,7 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="change">Change</span>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+              <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> -->
             </div>
           </div>
         </div>
@@ -1128,6 +1128,10 @@
         #exit {
           margin-left: -9px;
         }
+
+        #CenPH__lb_RCDDTL1__lb_DBJXT_new {
+            position: absolute;
+        }
       </style>
       <script type="text/javascript">
         var copyToAndFrom = {
@@ -1168,9 +1172,9 @@
                     _00("F12", event);
               });
 
-              $('#next').click(function (event) {
+              /*$('#next').click(function (event) {
                     _00("Enter", event);
-              });
+              });*/
 
               if($("#CenPH__lb_RCDDTL1__lb_1SPNM").length > 0)
               {
