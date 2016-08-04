@@ -69,7 +69,7 @@
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
-                <span class="form-label">Address Line 1:</span>
+                <span class="form-label">Address:</span>
               </div>
               <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px">
                 <div class="form-text shipping-add" data-upgraded=",MaterialTextfield" id="shipping-add">
@@ -152,7 +152,7 @@
         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-              <span class="form-label">Or Time at Address:</span>
+              <span class="form-label">Time at Address:</span>
             </div>
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
               <span id="CenPH__lb_RCDDTL1__lb_1ATAD_new" class="DdsCharField_OutputOnly"></span>
@@ -223,7 +223,10 @@
       #div_driver, #div_license {
         display: none;
       }
-
+ .ui-datepicker-today 
+  {
+    background: #ff0000
+  }
 
       @media screen and (max-width: 1024px) {
         .tablet-mrgleft {
@@ -233,9 +236,6 @@
           margin-left: 10px !important;
         }
 
-        .ui-datepicker-today 
-        {
-          background: #ff0000
         }
       </style>
       <script type="text/javascript">
