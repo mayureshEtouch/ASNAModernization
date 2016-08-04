@@ -158,8 +158,10 @@
     .tablet-mrgleft1 {
       margin-left: 10px !important;
     }
-
-
+}
+    #credit_references tr td:nth-child(6), #credit_references tr td:nth-child(7){
+        text-align: right;
+      }
   </style>
   <script type="text/javascript">
    $(document).ready(function () {
@@ -176,7 +178,7 @@
     "CenPH__lb_SFLRCD__lb_1L_usd_XX",
     "CenPH_DdsConstant11",
     "CenPH__lb_SFLRCD__lb_1PMNT",
-    ]
+    ];
     //var placeHolderElement = '<span>&nbsp;</span>'
      //adjustSpan("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", spanIds, placeHolderElement);
 
