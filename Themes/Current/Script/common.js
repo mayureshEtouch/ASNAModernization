@@ -110,7 +110,7 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
     });
 }
 
-function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick) {
+function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick,spanIds,placeHolderElement) {
     $("body").css({
         "background-color": "#FFFFFF"
     });
@@ -133,6 +133,9 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
             tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
         }
         var recordCount = $(tableSelector).length - 1;
+        if(spanIds && spanIds.length>0){
+            adjustSpan(tableId, recordConatainer,spanIds,placeHolderElement)
+        }
         if(spanIndices) {
             generateTableWithSpanIndex(recordCount, tableId, direction, tableSelector, spanIndices);
         } else {
@@ -211,6 +214,54 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
         width: "300px"
     }, 500);
 }
+
+
+/*************************/ /*************************/
+/************************* If spans are less then they should be, this function inserts dummy spans *************************/
+/*************************/ /*************************/
+     function adjustSpan(tableId, recordConatainer,spanIds,placeHolderElement){
+      var tableSelector = "";
+      if ($('table#' + recordConatainer).length > 0) {
+          tableSelector = 'table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+      } else {
+          tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+      }
+      var placeHolderElement = placeHolderElement || '<span>&nbsp;</span>';
+      $(tableSelector).each(function() {
+        if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+          var divid = $(this);
+
+          //if(spanIds.length != $(divid.children('span')).length){
+            //$(divid.children('span')).each(function(i,el){
+              if(spanIds!=undefined && $.isArray(spanIds) && spanIds.length>0){
+                /*Make the necessary adjustment and introduce empty placeHolderElement*/
+                /*var ele_first = $(divid).children('span')[0];
+                var id_post_fix = "";
+                if(ele_first != undefined){
+                  id_post_fix = ele_first.split('.')[1];
+                }*/
+                for (var i = 0; i < spanIds.length; i++) {
+                  var el_span = $(divid).children('span')[i];
+
+                  if( el_span == undefined || ($(el_span).attr('id') != undefined && $(el_span).attr('id').indexOf(spanIds[i]) == -1)){
+                    if(i==0){
+                      $(divid).prepend(placeHolderElement);
+                    }else{
+                      $(divid).children('span').eq(i - 1).after(placeHolderElement);
+                    }
+                  }
+                }
+              }else{
+                /*If number of spans are same as spanIds, let's continue and do nothing for given row*/
+              }
+            //})
+          }
+        //}
+      })
+    }
+/*************************/ /*************************/
+/************************* End *************************/
+/*************************/ /*************************/
 
 // To fixed table header
 $(".fixed-table-container-inner .th-inner").animate({
