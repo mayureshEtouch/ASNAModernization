@@ -5,6 +5,26 @@
         <%-- Migrated on 8/2/2016 at 1:06 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCLDE1R# --%>
 
+   <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+    <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery-ui.css")%>">
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl ("~/Themes/Current/Script/input-validations.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
+
+
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +42,281 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span>
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Enter Customer Employment History</span> 
+        </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLDE1R</span>
+        </div>
+      </div>
+    </section>
+    <section class="form-data">
+      <div class="form-data-wrapper" style="padding-bottom:0;">
+              
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+                              <span class="form-label">Employer:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px">
+                              <span class="form-text"><input type="text" maxlength="20" id="employer" onfocus="_09('#1UNTX','3,13','#RCDDTL1');" class="mdl-textfield__input" size="15" data-tb-index="1" value=""/></span>
+                          </div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+                <span class="form-label">Supervisor:</span>
+              </div>
+              <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
+                <span class="form-text"><input type="text" maxlength="30" onfocus="_09('#1WWTX','4,13','#RCDDTL1');" class="mdl-textfield__input" size="15" id="Supervisor" value=""  data-tb-index="2"/></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+                <span class="form-label">Income Amount:</span>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+                <span class="form-text"><input type="text" onfocus="_09('#1INC$','5,17','#RCDDTL1');" maxlength="7" class="mdl-textfield__input" size="15" value="" id="incomeAmount"  data-tb-index="3"/></span>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
+                <span class="form-label">Frequency:</span>
+              </div>
+              <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0 0 0 -3px;">
+
+
+                <span data-upgraded=",MaterialTextfield" class="form-text" id="free_delivery">
+                        <select onfocus="_09('#1INCF','5,39','#RCDDTL1');"  id="CenPH__lb_RCDDTL1__lb_1INCF_new" >
+                          <option value=" ">Please Choose</option>
+                          <option value="A">Annual</option>
+                          <option value="B">Bi-Weekly</option>
+                          <option value="H">Hourly</option>
+                          <option value="M">Monthly</option>
+                          <option value="W">Weekly</option>
+                        </select>
+                 </span> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+              
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+				  <span class="form-label">Employed Since:</span>
+			  </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0; position: relative;">
+				<input type="text" readonly="true" class="mdl-textfield__input" data-tb-index="1" id="requestdate" >
+				<i id="reqesdate" class="material-icons calender-icon page-icons editable-data" style="position: absolute; right: -13px; top: 14px;"></i> <span id="reqdate" class="DdsCharField_OutputOnly" style="display:none;"></span>
+
+			</div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+              
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
+                              <span class="form-label">Duration:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
+                              <span class="form-text">
+                
+                <input type="text" onfocus="_09('#DZ4NB','7,12','#RCDDTL1');" maxlength="3" id="Duration" class="editable-data mdl-textfield__input-small" value="" size="5" maxlength="3" data-tb-index="6"><span style="margin: 0 10px 0 5px; display: inline-block;">Years</span>
+                
+                <input type="text" id="Months" onfocus="_09('#DJVN#','7,23','#RCDDTL1');" class="editable-data mdl-textfield__input-small"  value="" size="5" maxlength="2" data-tb-index="7"><span style="margin: 0 0 0 5px; display: inline-block;">Months</span>
+                </span>
+                
+                          </div>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col" style="padding:0">
+            <div class="content-grid mdl-grid"></div>
+          </div>
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+      
+        <div class="button-container">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop" style="margin-left: 10px;">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+        </section>
+    
+  </main>
+  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+
+<style>
+        #__Page_PopUp {
+            min-width: 540px !important;
+            width: 540px !important;
+      left: 50% !important;
+      margin-left: -225px;
+        }
+    #__Page_PopUp > tr:first-child {
+      display: none;
+    }
+
+    #__Page_PopUp .DdsInlinePopUpTitle {
+      height: 0;
+    }
+       
+          .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+width: 100% !important;
+}
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+			  
+		.ui-datepicker-today 
+		{
+			background: #ff0000
+		}
+		
+    </style>
+
+    <script type="text/javascript">
+      
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    
+                    
+                  },
+                "inputFields": {
+
+                  "CenPH__lb_RCDDTL1__lb_1UNTX":"employer",
+                  "CenPH__lb_RCDDTL1__lb_1WWTX":"Supervisor",
+                  "CenPH__lb_RCDDTL1__lb_1INC_usd_":"incomeAmount",
+                  "CenPH__lb_RCDDTL1__lb_1INCF":"CenPH__lb_RCDDTL1__lb_1INCF_new",
+                  // "ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD":"employedSince",
+                  "CenPH__lb_RCDDTL1__lb_DZ4NB":"Duration",
+                  "CenPH__lb_RCDDTL1__lb_DJVN_lb_":"Months"
+
+
+                    
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+           
+
+                $("#reqdate").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").html());
+                $("#requestdate").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").val());
+                $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+                
+                $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
+                $("#requestdate").on('change', function () {
+                  var date = $("#requestdate").val().split("/");
+                  $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").val(date[0] + date[1] + date[2].substr(2, 3));
+                });
+
+
+             $("#CenPH__lb_RCDDTL1__lb_1INCF_new").change(function(){
+                var org_id = (this.id.replace('new',''));
+                $("#"+org_id).val($(this).val());
+              })
+
+              $("#previous").click(function (event) {
+                    _00('F3', event);
+              });
+
+             $("#prompt").click(function (event) {
+                    _00('F4', event);
+              });
+           
+
+              $("#submit").click(function (event) {
+                    _00('Enter', event);
+              });
+           
+
+                $('.close-icon').click(function (event) {
+                _00("F3", event);
+                });
+                if($(".simplePopupClose").length > 0) {
+                     $(".simplePopupBackground1").show();
+               } else {
+                   $(".simplePopupBackground1").hide();
+               }
+               $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+               });
+
+
+            });
+    </script>
+        <div id="Div1" style="display: none;">
             
       <%--  CU: E1W Employment        Edit record(1 screen)                                                      --%>
       <%--  CRTDSPF                                                                                              --%>
