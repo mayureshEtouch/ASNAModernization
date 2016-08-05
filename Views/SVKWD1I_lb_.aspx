@@ -661,7 +661,7 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+              <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> -->
             </div>
           </div>
         </div>
@@ -1873,9 +1873,9 @@
                     _00("F12", event);
               });
 
-              $('#next').click(function (event) {
+              /*$('#next').click(function (event) {
                     _00("Enter", event);
-              });
+              });*/
             });
         </script>
     </asp:Content>
