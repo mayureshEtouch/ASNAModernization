@@ -640,8 +640,28 @@
         <script type="text/javascript">
              
             $(document).ready(function () {
-                var dataMergeIndices = [[0], [1], [2, "&nbsp;", 9, "&nbsp;", 8, "&nbsp;", 10], [3], [5, "&nbsp;", 6, "&nbsp", 7], ["&nbsp", "&nbsp"], [11], [12], [13], [15]];
-                generateTableAndApplyInfiniteScroll("cust-per-ref", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+              var spanIds = [
+              "CenPH__lb_SFLRCD__lb_1NMRF",
+              "CenPH__lb_SFLRCD__lb_1REFT",
+              "CenPH__lb_SFLRCD__lb_1ANTX",
+              "CenPH__lb_SFLRCD__lb_1BXNB",
+              "CenPH_DdsConstant8",
+              "CenPH__lb_SFLRCD__lb_1DRCD",
+              "CenPH_DdsConstant9",
+              "CenPH__lb_SFLRCD__lb_1DVR_lb_",
+              "CenPH__lb_SFLRCD__lb_RBPTX",
+              "CenPH__lb_SFLRCD__lb_RBMTX",
+              "CenPH__lb_SFLRCD__lb_1APTX",
+              "CenPH__lb_SFLRCD__lb_RTX20",
+              "CenPH__lb_SFLRCD__lb_1ABVN",
+              "CenPH__lb_SFLRCD_V1AGDT",
+              "CenPH__lb_SFLRCD__lb_1ABTM",
+              "CenPH_DdsConstant10",
+              "CenPH__lb_SFLRCD__lb_1CREC"
+              ];
+                //var dataMergeIndices = [[0], [1], [2, "&nbsp;", 10, "&nbsp;", 9, "&nbsp;", 11], [3], [5, "&nbsp;", 7, "&nbsp", 8], ["&nbsp", "&nbsp"], [12], [13], [14], [16]];
+                var dataMergeIndices = [[0], [1], [2, "&nbsp;", 7, "&nbsp;", 8, "&nbsp;", 9], [3], [5, "&nbsp;", 6], [11], [12], [13], [14], [16]];
+                generateTableAndApplyInfiniteScroll("cust-per-ref", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
                 $("#exit,.close-icon").click(function (event) {
                     _00('F12', event);
