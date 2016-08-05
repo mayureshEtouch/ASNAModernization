@@ -851,6 +851,8 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
+              $("#CenPH__lb_RCDDTL1__lb_1QXTX_new").focus();
+              $("#CenPH__lb_RCDDTL1__lb_1QYTX_new").attr("tabindex","2");
               $("#prompt").click(function (event) {
                    _00('F4', event);
               });
@@ -887,6 +889,16 @@
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                     _00('Enter', event);
                 });
+
+                $("form input[type=text]").on('input',function () {
+                var tab = $(this).attr("tabindex");
+                if($(this).val().length == $(this).attr('maxlength')) {
+                //$(this).next("input").focus();
+                  tab++;
+                  $("[tabindex='"+tab+"']").focus();
+          
+                }
+              });
             });
         </script>
     </asp:Content>
