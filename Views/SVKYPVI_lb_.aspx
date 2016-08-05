@@ -782,7 +782,8 @@
         }
 
         .mdl-layout__content {
-            height: auto !important;
+            /*height: auto !important;*/
+                height: 200px !important;
             overflow: hidden !important;
         }
 
