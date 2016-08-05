@@ -4,7 +4,18 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/4/2016 at 12:36 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCQ8DFR# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +33,92 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <div class="modal-dialog-container">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title logo-icon"></span>
+                    <div class="mdl-layout-spacer"></div>
+                    <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <section class="time-date">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--9-col">
+                            <!-- Title -->
+                            <span class="heading-h1">Display Duplicate Phone Reference</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col pull-right">
+                            <!-- Navigation -->
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCQ8DFR</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="order-summary">
+                    <div class="order-summary-wrapper" style="margin-bottom: 0;">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                <span class="summary-title">Reference Phone </span>
+                                <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2BXNB_new"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                <span class="summary-title">Reference Name</span>
+                                <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2NMRF_new"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="add-item">
+                    <div class="add-item-wrapper">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet pull-right">
+                                <div class="icon-container">
+                                    <span class="icon-txt display-icon1">Display</span><i class="material-icons md-15 md-light display-icon display-icon1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="table-data-content-container spacer-container-bottom" style="margin-top: 5px;">
+                    <div class="table-data-wrapper">
+                        <div class="table-data-maincontainer">
+                            <div style="overflow: auto;" class="table-container">
+                                <div>
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="disp-duplicates" data-upgraded=",MaterialDataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Reference Name</th>
+                                                <th>Reference Type</th>
+                                                <th width="48%">Address</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="button-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop">
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right">
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+            <div id="modal" class="simplePopup"></div>
+        </div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DFW Dup Phone         Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -452,4 +548,100 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <style>
+            .modal-dialog-container {
+                width: 900px;
+            }
+            @media screen and (max-width: 1024px) {
+                .tablet-width-rt {
+                    width: 790px !important;
+                }
+                .modal-dialog-container {
+                    width: 740px;
+                }
+            }
+            #__Page_Hidden{
+                height: 100% !important;
+            }
+            #__Page_PopUp {
+                min-width: 740px !important;
+                left: 10% !important;
+                width: 80% !important;
+                height: auto !important;
+            }
+
+            #__Page_PopUp > tr:first-child {
+                display: none;
+            }
+
+            #__Page_PopUp .DdsInlinePopUpTitle {
+                height: 0;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            .modal-dialog-container {
+                width: 100% !important;
+                margin: 0 0 2% 0;
+            }
+
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #form1 {
+                margin-top: -20px;
+            }
+            .simplePopup {
+              left: 30% !important;
+              top: 40% !important;
+            }
+            .aspNetHidden {
+                margin-top: 20px !important;
+            }
+        </style>
+        <script type="text/javascript">
+             var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_2BXNB": "CenPH__lb_SFLCTL__lb_2BXNB_new",
+                    "CenPH__lb_SFLCTL__lb_2NMRF": "CenPH__lb_SFLCTL__lb_2NMRF_new"
+                },
+                "inputFields": {
+                }
+            }
+            $(document).ready(function () {
+                copyData(copyToAndFrom);
+                var dataMergeIndices = [[0], [1], [2, "&nbsp;", 3, "&nbsp;", 4, "&nbsp;", 5]];
+                generateTableAndApplyInfiniteScroll("disp-duplicates", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+                $("#exit,.close-icon").click(function (event) {
+                    _00('F3', event);
+                });
+
+                $("#add").click(function (event) {
+                    _00('F6', event);
+                });
+
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+
+                $(".display-icon1").click(function (event) {
+                    var row = $("#disp-duplicates tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                });
+
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
+            });
+        </script>
     </asp:Content>
