@@ -101,7 +101,7 @@
                               <span class="form-label">Exch SMA RA#:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="2" size="15" id="CenPH__lb_RCDDTL1__lb_1QYTX_new" maxlength="10"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1QYTX_new" maxlength="10"></span>
                           </div>
             </div>
           </div>
@@ -117,7 +117,7 @@
                               <span class="form-label">Exch IA Log#:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="3" size="15" id="CenPH__lb_RCDDTL1__lb_1QZTX_new" maxlength="10"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1QZTX_new" maxlength="10"></span>
                           </div>
             </div>
           </div>
@@ -852,7 +852,7 @@
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
               $("#CenPH__lb_RCDDTL1__lb_1QXTX_new").focus();
-              $("#CenPH__lb_RCDDTL1__lb_1QXTX_new").attr("tabindex","4");
+              //$("#CenPH__lb_RCDDTL1__lb_1QXTX_new").attr("tabindex","4");
               $("#prompt").click(function (event) {
                    _00('F4', event);
               });
