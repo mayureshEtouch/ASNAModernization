@@ -2,8 +2,26 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/4/2016 at 12:38 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member SVKMPVI# --%>
+  <%-- Migrated on 7/18/2016 at 10:27 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+    <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member DSCHE1R# --%>
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+    <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery-ui.css")%>">
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl ("~/Themes/Current/Script/input-validations.js")%>"></script>
+
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
 
     </asp:Content>
 
@@ -22,7 +40,96 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+	<header class="mdl-layout__header">
+		<div class="mdl-layout__header-row"> 
+			<!-- Title --> 
+			<span class="mdl-layout-title logo-icon"></span>
+			<!--<span class="mdl-layout-heading">StoreFront</span>--> 
+			<div class="mdl-layout-spacer"></div>
+			<span class="close-icon"><i class="material-icons md-15 close"></i></span>
+		</div>
+	</header>
+	<main class="mdl-layout__content">
+		<section class="time-date">
+			<div class="content-grid mdl-grid">
+				<div class="mdl-cell mdl-cell--9-col"> 
+					<!-- Title --> 
+					<span class="heading-h1">Enter Note Type</span> </div>
+				<div class="mdl-cell mdl-cell--3-col pull-right"> 
+					<!-- Navigation --> 
+					<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKMPVI</span></div>
+			</div>
+		</section>
+		<section class="form-data">
+            <div class="form-data-wrapper" style="padding-bottom:0;">
+
+				<!-- content-grid mdl-grid starts here -->
+				<div class="content-grid mdl-grid">
+					<!-- col starts here -->
+				  	<div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
+                           		<span class="form-label">Exchange ID:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                           		<span class="form-text" id="exchangeID"></span>
+                        	</div>
+						</div>
+					</div>
+					<!-- col ends here -->
+					<!-- col starts here -->
+				  	<div class="mdl-cell mdl-cell--8-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+                           		<span class="form-label">Exch Note Type:</span>
+                        	</div>
+                        	<div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <select id="CenPH_1FLST" name="CenPH_1FLST" style="padding: 0 2px;" data-tb-index="1" tabindex="1">
+                                            <option selected="selected" value=" ">Please select</option>
+                                            <option value="EXR">EXR - Exchange Reason</option>
+                                            <option value="EXJ">EXJ - Justification</option>
+                                            <option value="EXP">EXP - Exception Problem Notes</option>
+                                            <option value="EXD">EXD - Delivery Notes</option>
+                                            <option value="EXO">EXO - Other Notes</option>
+                                        </select>
+                                        <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                                    </span>
+                                </div>
+						</div>
+					</div>
+					<!-- col ends here -->
+					
+					
+				</div>
+				<!-- content-grid mdl-grid ends here -->
+				
+			
+				
+				
+			
+				<div class="button-container">
+					<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+						</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
+							<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+		
+	</main>
+	<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none">
             
       <%--  SV: PTI Note Type ?       Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -318,4 +425,93 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+                 <style type="text/css">
+
+     #__Page_PopUp {
+      min-width: 450px !important;
+      width: 700px !important;
+      left: 25% !important;
+      /*margin-left: -380px;*/ 
+      top: 15% !important;
+    }
+
+    #__Page_PopUp > tr:first-child {
+      display: none;
+    }
+    #__Page_PopUp .DdsInlinePopUpTitle {
+      height: 0;
+    }
+    .modal-dialog-container {
+      width: 100%;
+      margin: 0 0 0 0;
+      
+    }
+    .mdl-layout__content {
+      height: auto !important;
+      overflow: hidden !important;
+    }
+    #wrapper {
+      width: 100% !important;
+    }
+    #__Page_Hidden{
+      height: 100% !important;
+    }
+    .simplePopup {
+     left: 28% !important;
+     top: 50% !important;
+    }
+    
+    
+    </style>
+        <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH__lb_RCDDTL1__lb_1ZSNB": "exchangeID"
+            },
+            "inputFields": {
+                "CenPH__lb_RCDDTL1__lb_1MMCD": "CenPH_1FLST"
+            }
+        }
+
+        $(document).ready(function () {
+            copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+           
+            $('#CenPH_1FLST').val(" ");
+            $('.close-icon').click(function (event) {
+                _00('F12', event);
+            });
+            
+
+            $("#submit").click(function (event) {
+                _00('Enter', event);
+            });
+
+     
+
+
+            $("#Exit").click(function (event) {
+                _00('F3', event);
+            });
+
+            $("body").on("click", ".simplePopupClose", function () {
+                $(".simplePopupBackground").hide();
+            });
+            if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                /*Pop up confirm box*/
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
+
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _16(event, this, 1, 'Enter');
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _16(event, this, 1, 'Enter');
+                });
+
+            }
+
+        });
+    </script>
     </asp:Content>
