@@ -4,6 +4,19 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/3/2016 at 8:22 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCRSD1R# --%>
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
 
     </asp:Content>
 
@@ -22,7 +35,246 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <div class="modal-dialog-container">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row"> 
+          <!-- Title --> 
+          <span class="mdl-layout-title logo-icon"></span>
+          <div class="mdl-layout-spacer"></div>
+          <span class="close-icon" event-data="F3"><i class="material-icons md-15 close"></i></span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <section class="time-date">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col"> 
+              <!-- Title --> 
+              <span class="heading-h1">Display Credit Customer</span> 
+            </div>
+            <div class="mdl-cell mdl-cell--6-col pull-right"> 
+              <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCRSD1R</span>
+            </div>
+          </div>
+        </section>
+        
+        
+        <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+              <!-- content-grid mdl-grid starts here -->
+            <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+              <!-- col starts here -->
+                <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
+                                  <span class="form-label">Customer Name:</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0">
+                                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A2TX_new"></span>
+                              </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+                        
+                        <!-- col starts here -->
+                <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
+                                  <span class="form-label">Address:</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0">
+                              <span class="form-text">
+                              <span id="CenPH__lb_RCDDTL1__lb_1BFTX_new"></span><br>
+                              <span id="CenPH__lb_RCDDTL1__lb_DBPTX_new"></span>
+                              <span style="padding-left: 10px; display: inline-block;" id="CenPH__lb_RCDDTL1__lb_DBMTX_new"></span>
+                              <span style="padding-left: 10px; display: inline-block;" id="CenPH__lb_RCDDTL1__lb_1BHTX_new"></span>
+                              </span>
+                              </span>
+                              </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+                        
+                        <!-- col starts here -->
+                <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
+                                  <span class="form-label">Phone Number:</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0">
+                                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1BXNB_new"></span>
+                              </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+                      
+            </div>
+            <!-- content-grid mdl-grid ends here -->
+            
+            
+           <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+          <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+              <div style="overflow: auto;" class="table-container">
+                <div>
+                  <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="cust-bereau-info" data-upgraded=",MaterialDataTable">
+                    <thead>
+                      <tr>
+                        <th>Text</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr id="CenPH__lb_RCDDTL1__lb_DBVTX_new_div">
+                        <td id="CenPH__lb_RCDDTL1__lb_DBVTX_new"></td>
+                      </tr>
+                      <tr id="CenPH__lb_RCDDTL1__lb_DBWTX_new_div">
+                        <td id="CenPH__lb_RCDDTL1__lb_DBWTX_new"></td>
+                      </tr>
+                      <tr id="CenPH__lb_RCDDTL1__lb_DTX34_new_div">
+                        <td id="CenPH__lb_RCDDTL1__lb_DTX34_new"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="button-container">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                                            
+                <div class="button-container">
+                  <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="Enter">Submit</span>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        </section>
+        
+      </main>
+      <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+        </div>
+      </div>
+        <div id="modal" class="simplePopup"></div>
+    </div>
+    <!-- Modified HTML code ends here -->
+    <style type="text/css">
+
+     #__Page_PopUp {
+      min-width: 450px !important;
+      width: 700px !important;
+      left: 25% !important;
+      /* margin-left: -300px; */
+      top: 15% !important;
+    }
+
+    #__Page_PopUp > tr:first-child {
+      display: none;
+    }
+    #__Page_PopUp .DdsInlinePopUpTitle {
+      height: 0;
+    }
+    .modal-dialog-container {
+      width: 100%;
+      margin: 0 0 0 0;
+    }
+    .mdl-layout__content {
+      height: auto !important;
+      overflow: hidden !important;
+    }
+    #wrapper {
+      width: 100% !important;
+    }
+    #__Page_Hidden{
+      height: 100% !important;
+    }
+    .simplePopup {
+     left: 28% !important;
+     top: 50% !important;
+    }
+    
+    .mrgnLft20 {
+      margin-left: 20px;
+    }
+    #appeal-list-item {
+      padding-left: 25px;
+    }
+    #appeal-list-item li {
+      background: url(images/icons/appeal-icon.png) 0 3px no-repeat;
+      font-weight: 600;
+      list-style: none;
+      margin: 5px 0;
+      padding-left: 35px;
+    }
+    .disabled-item {
+      opacity: 0.4;
+    }
+    </style>
+    <script type="text/javascript">
+         var copyToAndFrom = {
+           "displayOnlyFields": {
+          "CenPH__lb_RCDDTL1__lb_1A2TX":"CenPH__lb_RCDDTL1__lb_1A2TX_new",
+          "CenPH__lb_RCDDTL1__lb_1BFTX":"CenPH__lb_RCDDTL1__lb_1BFTX_new",
+          "CenPH__lb_RCDDTL1__lb_DBPTX":"CenPH__lb_RCDDTL1__lb_DBPTX_new",
+          "CenPH__lb_RCDDTL1__lb_DBMTX":"CenPH__lb_RCDDTL1__lb_DBMTX_new",
+          "CenPH__lb_RCDDTL1__lb_1BHTX":"CenPH__lb_RCDDTL1__lb_1BHTX_new",
+          "CenPH__lb_RCDDTL1__lb_1BXNB":"CenPH__lb_RCDDTL1__lb_1BXNB_new",
+          "CenPH__lb_RCDDTL1__lb_DBVTX":"CenPH__lb_RCDDTL1__lb_DBVTX_new",
+          "CenPH__lb_RCDDTL1__lb_DBWTX":"CenPH__lb_RCDDTL1__lb_DBWTX_new",
+          "CenPH__lb_RCDDTL1__lb_DTX34":"CenPH__lb_RCDDTL1__lb_DTX34_new",
+        },
+        "inputFields": {}
+      }
+      $(document).ready(function () {
+        copyData(copyToAndFrom);
+        $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+          if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+            $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
+          }
+        });
+        if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+          /*Pop up confirm box*/
+          $(".OverlayPopupBackground").show();
+          $(".confirmation-outer-conatiner").show();
+
+          $("#yes").click(function (event) {
+            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+            //_16(event,this,1,'Enter');
+            _00('Enter', event);
+          });
+          $("#no").click(function (event) {
+            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+            //_16(event,this,1,'Enter');
+            _00('Enter', event);
+            
+          });
+
+        }
+
+
+        $("body").on("click", ".simplePopupClose", function() {
+          $(".simplePopupBackground1").hide();
+        });
+
+      });
+    </script>
+        <div id="Div1" style="display:none;">
             
       <%--  SV: DSW Credit CUstomer   Display record(1 screen)                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
