@@ -610,9 +610,9 @@
                 }
             }
             $(document).ready(function () {
-                copyData(copyToAndFrom);
+                copyData(copyToAndFrom);  
                 var dataMergeIndices = [[0], [1], [2, "&nbsp;", 3, "&nbsp;", 4, "&nbsp;", 5]];
-                generateTableAndApplyInfiniteScroll("disp-duplicates", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("disp-duplicates", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
                 $("#exit,.close-icon").click(function (event) {
                     _00('F3', event);
