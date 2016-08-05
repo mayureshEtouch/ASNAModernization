@@ -129,7 +129,7 @@
             </div>
 </div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:block">
+        <div id="Div1" style="display:none">
             
       <%--  SV: PVI Chg Exch Sts      Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
