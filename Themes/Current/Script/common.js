@@ -109,6 +109,21 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
         }
     });
 }
+/***** This function is being used for rendering table data. ***********/
+/**************************** Parameters *******************************/
+/***********************************************************************
+
+tableId => modern UI table Id => string,
+recordConatainer => ASPX container DIV id => string, 
+ignoreSapn => In case you want to ignore certain spans => Array/NONE, 
+selectRowId => Id of the element, by clicking that element it would be setting the selected element equilent to asax => string/NONE , 
+spanIndices =>  If provided the array of indices, it would be rendering the column acoording to indices position => [[0],[1],[3]] => Two dimentional Array, 
+disableDoubleClick => If double click on row to be disabled, need to provide this argument => DISABLE_DOUBLE_CLICK/"" ,
+spanIds =>  If in row aspx pages, there is inconsistency in number of spans across the Divs, we can provide ids of all the spans and it would be used to make the spans consistent data across the Divs. => Two D array [[]]/"",
+placeHolderElement => Placeholder element in the of spanIds argument used, would be used to insert the placeholder element in asax div (Usually it's span) <span>&nbsp;</span> would be used if no argument or blanc provided.
+
+***********************************************************************/
+/***********************************************************************/
 
 function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick,spanIds,placeHolderElement) {
     $("body").css({
@@ -230,16 +245,8 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
       $(tableSelector).each(function() {
         if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
           var divid = $(this);
-
-          //if(spanIds.length != $(divid.children('span')).length){
-            //$(divid.children('span')).each(function(i,el){
               if(spanIds!=undefined && $.isArray(spanIds) && spanIds.length>0){
                 /*Make the necessary adjustment and introduce empty placeHolderElement*/
-                /*var ele_first = $(divid).children('span')[0];
-                var id_post_fix = "";
-                if(ele_first != undefined){
-                  id_post_fix = ele_first.split('.')[1];
-                }*/
                 for (var i = 0; i < spanIds.length; i++) {
                   var el_span = $(divid).children('span')[i];
 
