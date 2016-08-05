@@ -105,7 +105,7 @@
                                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right">
-                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Submit</span>
                                         </div>
                                     </div>
                                 </div>
