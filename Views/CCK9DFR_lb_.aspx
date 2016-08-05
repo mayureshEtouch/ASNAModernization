@@ -660,7 +660,7 @@
               "CenPH__lb_SFLRCD__lb_1CREC"
               ];
                 //var dataMergeIndices = [[0], [1], [2, "&nbsp;", 10, "&nbsp;", 9, "&nbsp;", 11], [3], [5, "&nbsp;", 7, "&nbsp", 8], ["&nbsp", "&nbsp"], [12], [13], [14], [16]];
-                var dataMergeIndices = [[0], [1], [2, "&nbsp;", 7, "&nbsp;", 8, "&nbsp;", 9], [3], [5, "&nbsp;", 6], [11], [12], [13], [14], [16]];
+                var dataMergeIndices = [[0], [1], [2, "&nbsp;", 8, "&nbsp;",  9, "&nbsp;",  10], [3], [5, "&nbsp;", 7], [11], [12], [13], [14], [16]];
                 generateTableAndApplyInfiniteScroll("cust-per-ref", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
                 $("#exit,.close-icon").click(function (event) {
