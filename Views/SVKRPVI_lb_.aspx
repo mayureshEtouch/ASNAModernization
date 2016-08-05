@@ -852,7 +852,7 @@
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
               $("#CenPH__lb_RCDDTL1__lb_1QXTX_new").focus();
-              $("#CenPH__lb_RCDDTL1__lb_1QYTX_new").attr("tabindex","2");
+              //$("#CenPH__lb_RCDDTL1__lb_1QZTX").attr("tabindex","4");
               $("#prompt").click(function (event) {
                    _00('F4', event);
               });
