@@ -141,6 +141,7 @@
           .modal-dialog-container {
             width: 100%;
             margin-top: 0;
+			margin-bottom : 20px !important;
 			
         }
         .mdl-layout__content {
@@ -166,7 +167,7 @@ width: 100% !important;
            $(document).ready(function () {
               $('body').css({ "background-color": "white" });
              
-              var dataMergeIndices = [[0 , "&nbsp;", 4 , "<br>", 5 , "&nbsp;", 6 , "&nbsp;",7 ], [1], [2] , [3]];
+              var dataMergeIndices = [[0 , "<br>", 4 , "<br>", 5 , "&nbsp;", 6 , "&nbsp;",7 ], [1], [2] , [3]];
 
 			  
 			  generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices,"DISABLE_DOUBLE_CLICK");

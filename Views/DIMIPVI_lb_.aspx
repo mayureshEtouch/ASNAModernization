@@ -63,7 +63,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Name:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1JZXT_new" maxlength="30" data-tb-index="1"/></span>
+                                        <span class="form-text"><input type="text" onfocus="_09('#1JZXT','2,8','#RCDDTL1');" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1JZXT_new" maxlength="30" data-tb-index="1"/></span>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Phone:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1P3N_lb_new" maxlength="10" data-tb-index="2" /></span>
+                                        <span class="form-text"><input onfocus="_09('#1P3N#','3,8','#RCDDTL1');" type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1P3N_lb_new" maxlength="10" data-tb-index="2" /></span>
                                     </div>
                                 </div>
                             </div>
@@ -83,8 +83,8 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Address:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J0XT_new" maxlength="30" data-tb-index="3"/></span>
-                                        <span class="form-text" style="margin-top: 5px; display: block;"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J1XT_new" maxlength="30" data-tb-index="4"/></span>
+                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J0XT_new" onfocus="_09('#1J0XT','4,8','#RCDDTL1');" maxlength="30" data-tb-index="3"/></span>
+                                        <span class="form-text" style="margin-top: 5px; display: block;"><input type="text" class="mdl-textfield__input" size="15" onfocus="_09('#1J1XT','5,8','#RCDDTL1');" id="CenPH__lb_RCDDTL1__lb_1J1XT_new" maxlength="30" data-tb-index="4"/></span>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                         <span class="form-label" style="margin: 7px 10px 0 0">Zip:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                        <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J2XT_new" maxlength="10" data-tb-index="5"/></span>
+                                        <span class="form-text"><input onfocus="_09('#1J2XT','6,8','#RCDDTL1');" type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J2XT_new" maxlength="10" data-tb-index="5"/></span>
                                     </div>
                                 </div>
                             </div>
@@ -114,6 +114,10 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-left modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                                     </span>
+									
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" data-upgraded=",MaterialButton,MaterialRipple">Prompt<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </span>
+									
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
@@ -557,6 +561,11 @@
                 $('#next').click(function (event) {
                     _00("Enter", event);
                 });
+				
+				$('#prompt').click(function (event) {
+                    _00("F4", event);
+                });
+				
                 //Error message
                 if($(".simplePopupClose").length > 0) {
                     $(".simplePopupBackground1").show();

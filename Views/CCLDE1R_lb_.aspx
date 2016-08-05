@@ -75,7 +75,7 @@
             <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
-                              <span class="form-label">Employer:</span>
+                              <span class="form-label">Employer Name:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px">
                               <span class="form-text"><input type="text" maxlength="20" id="employer" onfocus="_09('#1UNTX','3,13','#RCDDTL1');" class="mdl-textfield__input" size="15" data-tb-index="1" value=""/></span>
@@ -91,7 +91,7 @@
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0">
-                <span class="form-label">Supervisor:</span>
+                <span class="form-label">Supervisor Name:</span>
               </div>
               <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0 0 0 -4px;">
                 <span class="form-text"><input type="text" maxlength="30" onfocus="_09('#1WWTX','4,13','#RCDDTL1');" class="mdl-textfield__input" size="15" id="Supervisor" value=""  data-tb-index="2"/></span>
@@ -116,13 +116,13 @@
           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
-                <span class="form-label">Frequency:</span>
+                <span class="form-label">Income Frequency:</span>
               </div>
               <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0 0 0 -3px;">
 
 
                 <span data-upgraded=",MaterialTextfield" class="form-text" id="free_delivery">
-                        <select onfocus="_09('#1INCF','5,39','#RCDDTL1');"  id="CenPH__lb_RCDDTL1__lb_1INCF_new" >
+                        <select onfocus="_09('#1INCF','5,39','#RCDDTL1');"  data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1INCF_new" >
                           <option value=" ">Please Choose</option>
                           <option value="A">Annual</option>
                           <option value="B">Bi-Weekly</option>
@@ -143,10 +143,10 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-				  <span class="form-label">Employed Since:</span>
+				  <span class="form-label">Date of Employment:</span>
 			  </div>
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0; position: relative;">
-				<input type="text" readonly="true" class="mdl-textfield__input" data-tb-index="1" id="requestdate" >
+				<input type="text" readonly="true" class="mdl-textfield__input" data-tb-index="5" id="requestdate" >
 				<i id="reqesdate" class="material-icons calender-icon page-icons editable-data" style="position: absolute; right: -13px; top: 14px;"></i> <span id="reqdate" class="DdsCharField_OutputOnly" style="display:none;"></span>
 
 			</div>
@@ -183,11 +183,10 @@
         <div class="button-container">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop" style="margin-left: 10px;">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Exit</span>
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  data-tb-index="8" id="previous">Exit</span>
             </div>
             <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="9" id="submit">Submit</span>
             </div>
           </div>
         </div>
@@ -195,8 +194,18 @@
         </section>
     
   </main>
-  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-    <div id="modal" class="simplePopup"></div>
+<div id="promptErrorMsg" class="simplePopup"></div>
+
+  <div class="simplePopupBackground1" style="display:block; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+  <div id="modal" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+      <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+      <div class="button-container">
+          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+      </div>
+  </div>
+  
 </div>
 <!-- Modified HTML code ends here -->
 
@@ -216,8 +225,9 @@
     }
        
           .modal-dialog-container {
-            width: 100%;
+            width: 650px !important;
             margin-top: 0;
+			margin-bottom : 20px !important;
         }
         .mdl-layout__content {
             height: auto !important;
@@ -278,7 +288,7 @@ width: 100% !important;
                 $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
                 $("#requestdate").on('change', function () {
                   var date = $("#requestdate").val().split("/");
-                  $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").val(date[0] + date[1] + date[2].substr(2, 3));
+                  $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").val(date[0] + "/"+date[1] +"/"+ date[2]);
                 });
 
 
@@ -290,13 +300,8 @@ width: 100% !important;
               $("#previous").click(function (event) {
                     _00('F3', event);
               });
-
-             $("#prompt").click(function (event) {
-                    _00('F4', event);
-              });
-           
-
-              $("#submit").click(function (event) {
+			  
+			  $("#submit").click(function (event) {
                     _00('Enter', event);
               });
            
@@ -313,6 +318,34 @@ width: 100% !important;
                    $(".simplePopupBackground1").hide();
                });
 
+			   
+			   if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+				/*Pop up confirm box*/
+				$(".OverlayPopupBackground").show();
+				$(".confirmation-outer-conatiner").show();
+
+				$("#yes").click(function (event) {
+				 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+				 _00('Enter', event);
+				 //_16(event,this,1,'Enter');
+			   });
+				$("#no").click(function (event) {
+				 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+				 _00('Enter', event);
+				 //_16(event,this,1,'Enter');
+			   });
+
+			  }
+			  
+				if($("#__Page_PopUp .simplePopupClose").length > 0) {
+				 $(".simplePopupBackground1").show();
+			  } else {
+				 $(".simplePopupBackground1").hide();
+			  }
+			  $("body").on("click", ".simplePopupClose", function() {
+				 $(".simplePopupBackground1").hide();
+			  });
+	  
 
             });
     </script>
