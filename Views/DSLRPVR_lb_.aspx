@@ -124,7 +124,7 @@ var copyToAndFrom = {
 			
   $(document).ready(function() {
 		copyData(copyToAndFrom, "");
-		
+		$("#time").html("&nbsp;" + $("#time").html());
 		 
 		$('body').on('keyup change', '#profile', function (event) {
 		  $('#CenPH__lb_RCDDTL1__lb_1N9CD').val($(this).val());
