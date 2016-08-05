@@ -62,8 +62,8 @@
 													<tr>
 														<th width="15%">Exchange Note Type</th>
 														<th>Exchange Note</th>
-                                                        <th>Date stamp</th>
-                                                        <th>Time stamp</th>
+                                                        <th>Date Stamp</th>
+                                                        <th>Time Stamp</th>
 													</tr>
 												</thead>
 												<tbody>
