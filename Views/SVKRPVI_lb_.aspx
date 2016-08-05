@@ -4,7 +4,19 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/4/2016 at 12:39 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member SVKRPVI# --%>
-
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,7 +34,125 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span>
+      <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet"> 
+          <!-- Title --> 
+          <span class="heading-h1">Enter RA#' S</span> </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKRPVI</span></div>
+      </div>
+    </section>
+    <section class="form-data">
+            <div class="form-data-wrapper" style="padding-bottom:0;">
+        
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
+                              <span class="form-label">Exchange ID:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
+                              <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ZSNB_new"></span>
+                          </div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
+                              <span class="form-label">Exch Mfg RA#:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1QXTX_new" maxlength="10"></span>
+                          </div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
+                              <span class="form-label">Exch SMA RA#:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="2" size="15" id="CenPH__lb_RCDDTL1__lb_1QYTX_new" maxlength="10"></span>
+                          </div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
+                              <span class="form-label">Exch IA Log#:</span>
+                          </div>
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="3" size="15" id="CenPH__lb_RCDDTL1__lb_1QZTX_new" maxlength="10"></span>
+                          </div>
+            </div>
+          </div>
+          <!-- col ends here -->
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        
+        
+      
+        <div class="button-container">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+            </div>
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+        </section>
+    
+  </main>
+  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+          </div>
+</div>
+        <div id="Div1" style="display:none;">
             
       <%--  SV: PTI Enter RA#'s       Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -671,4 +801,92 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+           #__Page_PopUp {
+            min-width: 450px !important;
+            width: 600px !important;
+            left: 50% !important;
+             margin-left: -300px;
+            top: 15% !important;
+            }
+      
+            #__Page_PopUp > tr:first-child {
+              display: none;
+            }
+            #__Page_PopUp .DdsInlinePopUpTitle {
+              height: 0;
+            }
+            .modal-dialog-container {
+                width: 100%;
+                margin: 0 0 3%;
+            }
+            .mdl-layout__content {
+                height: auto !important;
+                overflow: hidden !important;
+            }
+            #wrapper {
+                width: 100% !important;
+            }
+            #__Page_Hidden{
+                height: 100% !important;
+            }
+        .simplePopup {
+         left: 28% !important;
+         top: 50% !important;
+        }
+        </style>
+        <script type="text/javascript">
+          var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_RCDDTL1__lb_1ZSNB": "CenPH__lb_RCDDTL1__lb_1ZSNB_new"
+                  },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_1QXTX": "CenPH__lb_RCDDTL1__lb_1QXTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1QYTX": "CenPH__lb_RCDDTL1__lb_1QYTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1QZTX": "CenPH__lb_RCDDTL1__lb_1QZTX_new"
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+
+              $("#prompt").click(function (event) {
+                   _00('F4', event);
+              });
+
+              $("#exit").click(function (event) {
+                   _00('F3', event);
+              });
+
+              $('.close-icon').click(function (event) {
+                    _00("F12", event);
+              });
+
+              $('#submit').click(function (event) {
+                    _00("Enter", event);
+              });
+
+              if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                    $(".editable-data").show();
+                    $(".ro-data").hide();
+                    $(".confirmation-outer-conatiner").hide();
+                    $(".OverlayPopupBackground").hide();
+                } else {
+                    $(".editable-data").hide();
+                    $(".ro-data").show();
+                    $(".confirmation-outer-conatiner").show();
+                    $(".OverlayPopupBackground").show();
+                }
+                
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
+            });
+        </script>
     </asp:Content>
