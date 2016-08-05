@@ -79,7 +79,7 @@
               <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="credit_references" data-upgraded=",MaterialDataTable">
                <thead>
                 <tr>
-                  <th>Tp</th>
+                  <th>Type</th>
                   <th>Creditor</th>
                   <th>Account Number</th>
                   <th>Opened</th>
