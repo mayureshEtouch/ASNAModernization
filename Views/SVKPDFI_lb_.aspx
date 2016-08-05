@@ -22,7 +22,76 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Exchange Notes</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKPDFI</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>					
+            
+			
+		<section class="order-summary mrgnTp16">
+			<div class="order-summary-wrapper" style="margin-bottom: 0;">
+				<div class="content-grid mdl-grid">
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+						<span class="summary-title">Exchange ID </span>
+						<span class="summary-txt" id="exchangeID"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+  
+            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblExchangeNote" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th width="15%">Exchange Note Type</th>
+														<th>Exchange Note</th>
+                                                        <th>Date stamp</th>
+                                                        <th>Time stamp</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+                                                    									
+												</tbody>
+										</table>
+                                         
+								</div>
+                               
+								<div class="button-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+												</div>
+                                                <%--<div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>--%>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none">
             
       <%--  SV: DFI Exchange Notes    Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -595,4 +664,34 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant6": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_2ZSNB": "exchangeID"
+            }
+        }
+
+        $(document).ready(function () {
+            copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+            var dataMergeIndices = [[0], [1], [2], [3]];
+            // var dataMergeIndices = [[0, '&nbsp;&nbsp;', 1], [2, '&nbsp;&nbsp;', 3], [4], [5], [6], [7]];
+            generateTableAndApplyInfiniteScroll("tblExchangeNote", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            $('#tblExchangeNote tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
+           
+            //$("#next").click(function (event) {
+            //    _00('Enter', event);
+            //});
+
+            $("#previous").click(function (event) {
+                _00('F3', event);
+            });
+
+            
+
+        });
+    </script>
     </asp:Content>
