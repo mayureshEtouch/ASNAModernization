@@ -122,6 +122,22 @@ disableDoubleClick => If double click on row to be disabled, need to provide thi
 spanIds =>  If in row aspx pages, there is inconsistency in number of spans across the Divs, we can provide ids of all the spans and it would be used to make the spans consistent data across the Divs. => Two D array [[]]/"",
 placeHolderElement => Placeholder element in the of spanIds argument used, would be used to insert the placeholder element in asax div (Usually it's span) <span>&nbsp;</span> would be used if no argument or blanc provided.
 
+Example:
+var spanIds = [
+    "CenPH__lb_SFLRCD__lb_1ACTP",
+    "CenPH__lb_SFLRCD__lb_1UMTX",
+    "CenPH__lb_SFLRCD__lb_1A_lb_XX",
+    "ctl00$CenPH$_lb_SFLRCD_V1OPDT",
+    "ctl00$CenPH$_lb_SFLRCD_V1CLOD",
+    "CenPH_DdsConstant10",
+    "CenPH__lb_SFLRCD__lb_1L_usd_XX",
+    "CenPH_DdsConstant11",
+    "CenPH__lb_SFLRCD__lb_1PMNT",
+    ];
+
+    var dataMergeIndices = [[0],[1],[2],[3],[4],[6],[8]];
+    generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK", spanIds,"<span>&nbsp;</span>");
+
 ***********************************************************************/
 /***********************************************************************/
 
