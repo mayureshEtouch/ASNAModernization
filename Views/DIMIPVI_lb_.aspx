@@ -59,7 +59,7 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                         <span class="form-label" style="margin: 7px 10px 0 0">Name:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
@@ -69,7 +69,7 @@
                             </div>
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                         <span class="form-label" style="margin: 7px 10px 0 0">Phone:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--7-col" style="margin:0">
@@ -79,10 +79,10 @@
                             </div>
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                         <span class="form-label" style="margin: 7px 10px 0 0">Address:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--8-col" style="margin:0">
                                         <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J0XT_new" onfocus="_09('#1J0XT','4,8','#RCDDTL1');" maxlength="30" data-tb-index="3"/></span>
                                         <span class="form-text" style="margin-top: 5px; display: block;"><input type="text" class="mdl-textfield__input" size="15" onfocus="_09('#1J1XT','5,8','#RCDDTL1');" id="CenPH__lb_RCDDTL1__lb_1J1XT_new" maxlength="30" data-tb-index="4"/></span>
                                     </div>
@@ -90,24 +90,17 @@
                             </div>
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0">
                                         <span class="form-label" style="margin: 7px 10px 0 0">Zip:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0">
                                         <span class="form-text"><input onfocus="_09('#1J2XT','6,8','#RCDDTL1');" type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1J2XT_new" maxlength="10" data-tb-index="5"/></span>
+                                    </div>
+									 <div class="mdl-cell mdl-cell--4-col" >
+                                        <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mdl-cell mdl-cell--12-col" style="padding:0">
-                              <div class="content-grid mdl-grid">
-                                  <div class="mdl-cell mdl-cell--5-col" style="margin:0">
-                                      <span class="form-label" style="margin: 7px 10px 0 0"></span>
-                                  </div>
-                                  <div class="mdl-cell mdl-cell--7-col" style="margin:0">
-                                      <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAQTX_new"></span>
-                                  </div>
-                              </div>
-                          </div>
                         </div>
                         <div class="button-container" style="padding-bottom: 5px;">
                             <div class="content-grid mdl-grid">
@@ -606,7 +599,6 @@
                 left: 50% !important;
                 margin-left: -225px;
                 top: 10% !important;
-				height: 440px !important;
             }
             #__Page_PopUp > tbody > tr:first-child {
                 display: none;
@@ -634,5 +626,11 @@
                 left: 30% !important;
                 top: 40% !important;
             }
+			.confirmation-outer-conatiner {
+				top: 35%;
+			}
+			#content {
+				margin-bottom: 20px;
+			}
         </style>
     </asp:Content>
