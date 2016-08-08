@@ -243,7 +243,7 @@
               </div>
               <!-- col ends here --> 
               <!-- col starts here -->
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1G4VA_new_div" style="padding:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1ACCT_new_div" style="padding:0">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">P$:</span> </div>
                   <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1G4VA_new"></span> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ACCT_new"></span> </div>
@@ -527,7 +527,7 @@
         "CenPH__lb_RCDDTL1__lb_DHHVA":"CenPH__lb_RCDDTL1__lb_DHHVA_new", //employer
         "CenPH__lb_RCDDTL1__lb_1ALCO":"CenPH__lb_RCDDTL1__lb_1ALCO_new",
         "CenPH__lb_RCDDTL1__lb_1G4VA":"CenPH__lb_RCDDTL1__lb_1G4VA_new",
-        "CenPH__lb_RCDDTL1__lb_1ACCT":"_lb_RCDDTL1__lb_1ACCT_new",
+        "CenPH__lb_RCDDTL1__lb_1ACCT":"CenPH__lb_RCDDTL1__lb_1ACCT_new",
         "CenPH__lb_RCDDTL1__lb_DHBVA":"CenPH__lb_RCDDTL1__lb_DHBVA_new",
         "CenPH__lb_RCDDTL1__lb_1JBNB":"CenPH__lb_RCDDTL1__lb_1JBNB_new",
         "CenPH__lb_RCDDTL1__lb_1JANB":"CenPH__lb_RCDDTL1__lb_1JANB_new",
