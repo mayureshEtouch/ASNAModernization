@@ -197,7 +197,7 @@
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+              <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span> -->
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
               
@@ -854,9 +854,9 @@
               $('.close-icon').click(function (event) {
                     _00("F12", event);
               });
-              $('#prompt').click(function (event) {
+              /*$('#prompt').click(function (event) {
                     _00("F4", event);
-              });
+              });*/
             });
       </script>
     </asp:Content>
