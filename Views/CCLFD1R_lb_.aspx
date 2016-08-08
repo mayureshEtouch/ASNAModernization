@@ -243,7 +243,7 @@
               </div>
               <!-- col ends here --> 
               <!-- col starts here -->
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="CenPH__lb_RCDDTL1__lb_1ACCT_new_div" style="padding:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="p_doller_div" style="padding:0">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">P$:</span> </div>
                   <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1G4VA_new"></span> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ACCT_new"></span> </div>
@@ -588,6 +588,9 @@
 
       if($("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new").text()=="" && $("#CenPH__lb_RCDDTL1__lb_DZ0NB_new").text()==""){
         $("#CenPH__lb_RCDDTL1__lb_DC4N_lb__new_c_div").hide();
+      }
+      if($("#CenPH__lb_RCDDTL1__lb_1G4VA_new").text()=="" && $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").text()==""){
+        $("#p_doller_div").hide();
       }
 
       $.each(["CenPH_DdsConstant16","CenPH__lb_RCDDTL1__lb_1JANB","CenPH__lb_RCDDTL1__lb_DC4N_lb_","CenPH__lb_RCDDTL1__lb_1BNKR","CenPH__lb_RCDDTL1__lb_1LBST","CenPH__lb_RCDDTL1__lb_1K9ST","CenPH__lb_RCDDTL1__lb_1K8ST","CenPH__lb_RCDDTL1__lb_1K2ST","CenPH__lb_RCDDTL1__lb_1K4ST","CenPH__lb_RCDDTL1__lb_1K3ST","CenPH__lb_RCDDTL1__lb_1LAST","CenPH__lb_RCDDTL1__lb_1K6ST","CenPH__lb_RCDDTL1__lb_1LMST","CenPH__lb_RCDDTL1__lb_1LVST","CenPH__lb_RCDDTL1__lb_1LWST","CenPH__lb_RCDDTL1__lb_1LXST","CenPH__lb_RCDDTL1__lb_DSKST","CenPH__lb_RCDDTL1__lb_DHHVA"],function(i,el){
