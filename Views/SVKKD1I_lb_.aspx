@@ -33,7 +33,7 @@
         <span class="heading-h1">Display Exchange Item Detail</span> </div>
       <div class="mdl-cell mdl-cell--4-col pull-right"> 
         <!-- Navigation --> 
-        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKKD1I</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKKD1I</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
     </div>
   </section>
   
@@ -569,7 +569,7 @@
                                             <option value="CRT">CRT - Create Return</option>
                                             <option value="APP">APP - Enter Approval</option>
                                             <option value="DNO">DNO - Display Notes</option>
-                                            <option value="ENO">Enter Notes</option>
+                                            <option value="ENO">ENO - Enter Notes</option>
                                             <option value="DEA">DEA - Display Exchange Audit</option>
                                             <option value="CST">CST - Change Status</option>
                                             <option value="DWO">DWO - Display Work Order</option>
@@ -608,12 +608,79 @@
   
       
 </main>
+
+<main class="mdl-layout__content" id="screen1" style="display: none;">
+  <section class="time-date">
+    <div class="content-grid mdl-grid">
+      <div class="mdl-cell mdl-cell--8-col"> 
+        <!-- Title --> 
+        <span class="heading-h1">SV: DS1 Exchange Item KEY SCREEN</span> </div>
+      <div class="mdl-cell mdl-cell--4-col pull-right"> 
+        <!-- Navigation --> 
+        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKKD1I</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date1" id="date1"></span> <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time1" id="time1"></span> </div>
+    </div>
+  </section>
+  
+  <section class="table-data-content-container mrgnTp16">
+   <div class="table-data-wrapper mrgnTp16 spacer-container-bottom" >
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+       
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange ID:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDKEY__lb_1ZSNB_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+            <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Number:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id=""></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here --> 
+
+        </div>
+    
+     
+    <div class="button-container">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1">Exit</span>
+       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt1">Prompt</span>
+              </div>
+     
+              
+            </div>
+          </div>
+      </div>
+   
+    </div>
+  </section>
+  
+      
+</main>
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-
+<style>
+     .spacer-container-bottom {
+    margin-bottom: 48px !important;
+}
+ </style>
 <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
+                    "CenPH_DdsConstant40":"date",
+                    "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+                    "CenPH_DdsConstant5":"date1",
+                    "CenPH__lb_RCDKEY__lb__lb_TME":"time1",
                     "CenPH__lb_RCDDTL1__lb_1ZSNB":"CenPH__lb_RCDDTL1__lb_1ZSNB_new",
                     "CenPH__lb_RCDDTL1__lb_1U3ST":"CenPH__lb_RCDDTL1__lb_1U3ST_new",
                     "CenPH__lb_RCDDTL1__lb_1ZTNB":"CenPH__lb_RCDDTL1__lb_1ZTNB_new",
@@ -681,7 +748,7 @@
             $(document).ready(function () {
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
 
-                if($("#displayExchangeItemDetail").length > 0) {
+                if($("#CenPH__lb_RCDDTL1__lb_1ZSNB").length > 0) {
                    $("#displayExchangeItemDetail").show();
                    $("#screen1").hide();
                 }
@@ -702,7 +769,12 @@
                     _00("F3", event);
                 });
                 
-                 $('#prompt').click(function (event) {
+               
+                    $('#exit1').click(function (event) {
+                    _00("F3", event);
+                });
+                
+                 $('#prompt1').click(function (event) {
                     _00("F4", event);
                 });
 

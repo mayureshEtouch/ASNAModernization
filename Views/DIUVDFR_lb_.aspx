@@ -286,31 +286,30 @@
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Option:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> 
-                      <select id="CenPH__lb_SFLCTL__lb_CSDST_new" tabindex="1">
+                      <select id="CenPH__lb_SFLCTL__lb_CSDST_new" tabindex="1" onfocus="_09('#CSDST','10,9','#SFLCTL');">
                         <option  value=" "> Please Choose  </option>
-                        <option value="CRD"> CRD </option>
-                        <option value="DAP"> DAP </option>
-                        <option value="DSV"> DSV </option>
-                        <option value="DUP"> DUP </option>
-                        <option value="DCA"> DCA </option>
-                        <option value="ECN"> ECN </option>
-                        <option value="DCN"> DCN </option>
-                        <option value="EAP"> EAP </option>
-                        <option value="ECA"> ECA </option>
-                        <option value="DCL"> DCL </option>
-                        <option value="DSO"> DSO </option>
-                        <option value="CAP"> CAP </option>
-                        <option value="DAA"> DAA </option>
-                        <option value="CCI"> CCI </option>
-                        <option value="CRC"> CRC </option>
-                        <option value="DIN"> DIN </option>
-                        <option value="ENC"> ENC </option>
-                        <option value="DDI"> DDI </option>
-                        <option value="CSL"> CSL </option>
-                        <option value="DCI"> DCI </option>
-                        <option value="DWS"> DWS </option>
-                        <option value="CRS"> CRS </option>
-
+                        <option value="CRD"> CRD - Display Credit</option>
+                        <option value="DAP"> DAP - Display Application</option>
+                        <option value="DSV"> DSV - Display Service</option>
+                        <option value="DUP"> DUP - Display Duplicates</option>
+                        <option value="DCA"> DCA - Display Activity</option>
+                        <option value="ECN"> ECN - Enter Customer Note</option>
+                        <option value="DCN"> DCN - Display Customer Notes</option>
+                        <option value="EAP"> EAP - Enter Credit Application</option>
+                        <option value="ECA"> ECA - Enter Customer Activity</option>
+                        <option value="DCL"> DCL - Display Collections</option>
+                        <option value="DSO"> DSO - Display Service Order</option>
+                        <option value="CAP"> CAP - Change Application</option>
+                        <option value="DAA"> DAA - Display All Applications</option>
+                        <option value="CCI"> CCI - Change Customer Info</option>
+                        <option value="CRC"> CRC - Customer Return Check</option>
+                        <option value="DIN"> DIN - Display Customer Invoice{</option>
+                        <option value="ENC"> ENC - Enter Customer No Call</option>
+                        <option value="DDI"> DDI - Display Delivery Invoices</option>
+                        <option value="CSL"> CSL - Cash Sale Lookup</option>
+                        <option value="DCI"> DCI - Display Customer Info</option>
+                        <option value="DWS"> DWS - Display Cust Worksheets</option>
+                        <option value="CRS"> CRS - Customer Relation Survey</option>
                       </select> 
                     </div>
                   </div>
