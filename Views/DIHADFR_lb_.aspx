@@ -52,7 +52,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Unpaid</span>
-                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CDIF_usd_new"></span>
+                            <span class="summary-txt pull-right amt-width" id="CenPH__lb_SFLCTL__lb_CDIF_usd_new"></span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" id="CenPH__lb_SFLCTL__lb_CLTA_usd_new">
                             <span class="summary-title">Payment</span>
@@ -818,12 +818,16 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
         <style type="text/css">
             #CenPH__lb_SFLCTL__lb_CLTA_usd_ {
+				display: block;
                 font-size: 13px !important;
                 padding-top: 3px !important;
-                position: relative !important;
-                top: 4px !important;
-                left: 0px !important;
+                position: static !important;
+				width: 90px !important;
+				text-align: right;
             }
+			.amt-width {
+				width: 90px !important;
+			}
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {
@@ -840,6 +844,7 @@
             $(document).ready(function () {
                 copyData(copyToAndFrom, "");
                 $("#CenPH__lb_SFLCTL__lb_CLTA_usd_").appendTo("#CenPH__lb_SFLCTL__lb_CLTA_usd_new");
+				$("#CenPH__lb_SFLCTL__lb_CLTA_usd_").text($("#CenPH__lb_SFLCTL__lb_CLTA_usd_").text().trim());
                 $("#time").html("&nbsp;" + $("#time").html());
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
                 generateTableAndApplyInfiniteScroll("builder-orders", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");

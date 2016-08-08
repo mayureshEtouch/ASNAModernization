@@ -428,14 +428,15 @@
                  <style type="text/css">
 
      #__Page_PopUp {
-      min-width: 450px !important;
+      min-width: 700px !important;
       width: 700px !important;
-      left: 25% !important;
-      /*margin-left: -380px;*/ 
+      left: 50% !important;
+      margin-left: -350px;
       top: 15% !important;
+	  height: 260px !important;
     }
 
-    #__Page_PopUp > tr:first-child {
+    #__Page_PopUp > tbody > tr:first-child {
       display: none;
     }
     #__Page_PopUp .DdsInlinePopUpTitle {
