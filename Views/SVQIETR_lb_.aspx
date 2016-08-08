@@ -88,7 +88,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Employee Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5"  maxlength="5" onfocus="_09('#1AJCD','3,56','#SFLCTL');">
+                                        <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5"  maxlength="5" onfocus="_09('#1AJCD','3,56','#SFLCTL');" id="empCode">
                                     </div>
                                 </div>
                             </div>
@@ -399,7 +399,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Model Descriptionecs:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Model Description:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="modalDesc" ></span> </div>
                                 </div>
                             </div>
@@ -491,7 +491,7 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="outIns">Out/Ins Convert</span>
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="change">Change Customer Info</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+                            <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  event-data="Enter">next</span> </div>
                         </div>
                     </div>
                 </div>
@@ -1850,7 +1850,7 @@
                 "CenPH__lb_SFLCTL__lb_CK2TX": "vendorName",
                 "CenPH__lb_SFLCTL__lb_CA2TX": "modalDesc",
                 "CenPH__lb_SFLCTL__lb_1F2CD": "locAt"
-
+               
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_1AJCD": "empCode",
@@ -1878,6 +1878,11 @@
                 var date = $("#schedulingDt").val().split("/");
                 $("#CenPH__lb_SFLCTL_V1DADT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
+            if (!$("#CenPH__lb_SFLCTL__lb_CEOTX").is('input')) {
+                $("#repairLoc").val($("#CenPH__lb_SFLCTL__lb_CEOTX").html());
+                $("#repairLoc3").val($("#CenPH__lb_SFLCTL__lb_CESTX").html());
+            }
+
             function generateSpecialInstructionsSection() {
                 //Create copyToAndFrom JSON object for special instructions
                 var copyToAndFrom = {
@@ -1913,10 +1918,14 @@
                 }
                 $("#special-instructions").
                     after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-                $("#special-instructions").prepend('<legend id="legen">Special Instructions:</legend>');
+                $("#special-instructions").prepend('<legend id="legen">Problem Description:</legend>');
             }
 
-            
+              $("#repairSelect").change()
+            {
+                $("#CenPH__lb_SFLCTL__lb_CF8CD").val($("#repairSelect").val());
+
+            };
            
             $('body').on("click", "#sp-next-page", function (event) {
                 _00("PgDn", event);
@@ -1927,25 +1936,21 @@
                 generateSpecialInstructionsSection();
             });
             //Next button click handler
-            $("#next").click(function (event) {
-                _00('enter', event);
-            });
+            //$("body").on("click","#xyzevent",function (e) {
+            //    _00('Enter', e);
+            //});
 
             $("#outIns").click(function (event) {
                 _00('10', event);
             });
 
-            $("#repairSelect").change()
-            {
-                $("#CenPH__lb_SFLCTL__lb_CF8CD").val($("#repairSelect").val());
-
-            };
+          
 
             $("#prompt").click(function (event) {
                 _00('F4', event);
             });
 
-            $("#empCode").ForceNumericOnly();
+            //$("#empCode").ForceNumericOnly();
 
             $("#change").click(function (event) {
                 _00('F11', event);

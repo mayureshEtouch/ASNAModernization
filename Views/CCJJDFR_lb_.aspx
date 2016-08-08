@@ -79,7 +79,7 @@
               <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="credit_references" data-upgraded=",MaterialDataTable">
                <thead>
                 <tr>
-                  <th>Tp</th>
+                  <th>Type</th>
                   <th>Creditor</th>
                   <th>Account Number</th>
                   <th>Opened</th>
@@ -158,13 +158,34 @@
     .tablet-mrgleft1 {
       margin-left: 10px !important;
     }
-
-
+}
+    #credit_references tr td:nth-child(6), #credit_references tr td:nth-child(7){
+        text-align: right;
+      }
   </style>
   <script type="text/javascript">
    $(document).ready(function () {
-     var dataMergeIndices = [[0],[1],[2],[3],[4],[5],[6]];
-     generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
+
+
+
+    var spanIds = [
+    "CenPH__lb_SFLRCD__lb_1ACTP",
+    "CenPH__lb_SFLRCD__lb_1UMTX",
+    "CenPH__lb_SFLRCD__lb_1A_lb_XX",
+    "ctl00$CenPH$_lb_SFLRCD_V1OPDT",
+    "ctl00$CenPH$_lb_SFLRCD_V1CLOD",
+    "CenPH_DdsConstant10",
+    "CenPH__lb_SFLRCD__lb_1L_usd_XX",
+    "CenPH_DdsConstant11",
+    "CenPH__lb_SFLRCD__lb_1PMNT",
+    ];
+    //var placeHolderElement = '<span>&nbsp;</span>'
+     //adjustSpan("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", spanIds, placeHolderElement);
+
+     /* Passing here all the spanIds as we need to make sure no span is missing for any row. */
+
+     var dataMergeIndices = [[0],[1],[2],[3],[4],[6],[8]];
+     generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK", spanIds);
      var selectCusotmer = function (row, value, event) {
        var selectId = $(row).data('selectid');
        a = selectId.split(".");
@@ -184,6 +205,9 @@
      $("select").each(function(){
        $(this).val('');
      })
+
+
+      
    });
  </script>
  <div id="Div1" style="display: none;">

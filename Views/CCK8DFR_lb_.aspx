@@ -42,7 +42,7 @@
               <!-- Title --> 
               <span class="mdl-layout-title logo-icon"></span>
               <div class="mdl-layout-spacer"></div>
-              <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+              <span class="close-icon" event-data="F3"><i class="material-icons md-15 close"></i></span>
             </div>
           </header>
           <main class="mdl-layout__content">
@@ -67,15 +67,15 @@
                        <thead>
                         <tr>
                           <th>Account Type</th>
-                          <th>Creditor</th>
-                          <th>Creditor Account Number</th>
-                          <th>Opened Date</th>
+                          <th >Creditor</th>
+                          <th >Creditor Account Number</th>
+                          <th >Opened Date</th>
                           <th>Closed Date</th>
-                          <th>Account Balance</th>
-                          <th>Payment Amount</th>
-                          <th>User Stamp</th>
-                          <th>Date Audit Stamp</th>
-                          <th>Time Audit Stamp</th>
+                          <th >Account Balance</th>
+                          <th >Payment Amount</th>
+                          <th >User Stamp</th>
+                          <th >Date Audit Stamp</th>
+                          <th >Time Audit Stamp</th>
                           <th>Current Record</th>
                         </tr>
                       </thead>
@@ -149,14 +149,33 @@
           margin-bottom: 10px;
           padding-left: 0px;
         }
-
+        #credit_references tr td:nth-child(6), #credit_references tr td:nth-child(7){
+            text-align: right;
+          }
         </style>
         <script type="text/javascript">
 
 
          $(document).ready(function(){
-          var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10]];
-          generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+          var spanIds = [
+          "CenPH__lb_SFLRCD__lb_1ACTP",
+          "CenPH__lb_SFLRCD__lb_1UMTX",
+          "CenPH__lb_SFLRCD__lb_1A_lb_XX",
+          "ctl00$CenPH$_lb_SFLRCD_V1OPDT",
+          "ctl00$CenPH$_lb_SFLRCD_V1CLOD",
+          "DdsConstant7",
+          "CenPH__lb_SFLRCD__lb_1L_usd_XX",
+          "DdsConstant8",
+          "CenPH__lb_SFLRCD__lb_1PMNT",
+          "CenPH__lb_SFLRCD__lb_1AAVN",
+          "CenPH__lb_SFLRCD_V1AGDT",
+          "CenPH__lb_SFLRCD__lb_1ABTM",
+          "DdsConstant9",
+          "CenPH__lb_SFLRCD__lb_1CREC",
+          ];
+          var dataMergeIndices = [[0], [1], [2], [3], [4], [6], [8], [9], [10], [11], [13]];
+          generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
         });
         </script>
         <div id="Div1" style="display:none;">

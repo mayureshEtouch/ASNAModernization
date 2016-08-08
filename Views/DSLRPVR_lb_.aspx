@@ -33,7 +33,7 @@
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSLRPVR</span>
-                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <!-- <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> -->
                         <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ var copyToAndFrom = {
 			
   $(document).ready(function() {
 		copyData(copyToAndFrom, "");
-		
+		$("#time").html("&nbsp;" + $("#time").html());
 		 
 		$('body').on('keyup change', '#profile', function (event) {
 		  $('#CenPH__lb_RCDDTL1__lb_1N9CD').val($(this).val());

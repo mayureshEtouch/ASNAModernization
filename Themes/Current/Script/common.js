@@ -109,8 +109,39 @@ var generateTableWithSpanIndex = function(recordCount, tableId, direction, table
         }
     });
 }
+/***** This function is being used for rendering table data. ***********/
+/**************************** Parameters *******************************/
+/***********************************************************************
 
-function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick) {
+tableId => modern UI table Id => string,
+recordConatainer => ASPX container DIV id => string, 
+ignoreSapn => In case you want to ignore certain spans => Array/NONE, 
+selectRowId => Id of the element, by clicking that element it would be setting the selected element equilent to asax => string/NONE , 
+spanIndices =>  If provided the array of indices, it would be rendering the column acoording to indices position => [[0],[1],[3]] => Two dimentional Array, 
+disableDoubleClick => If double click on row to be disabled, need to provide this argument => DISABLE_DOUBLE_CLICK/"" ,
+spanIds =>  If in row aspx pages, there is inconsistency in number of spans across the Divs, we can provide ids of all the spans and it would be used to make the spans consistent data across the Divs. => Two D array [[]]/"",
+placeHolderElement => Placeholder element in the of spanIds argument used, would be used to insert the placeholder element in asax div (Usually it's span) <span>&nbsp;</span> would be used if no argument or blanc provided.
+
+Example:
+var spanIds = [
+    "CenPH__lb_SFLRCD__lb_1ACTP",
+    "CenPH__lb_SFLRCD__lb_1UMTX",
+    "CenPH__lb_SFLRCD__lb_1A_lb_XX",
+    "ctl00$CenPH$_lb_SFLRCD_V1OPDT",
+    "ctl00$CenPH$_lb_SFLRCD_V1CLOD",
+    "CenPH_DdsConstant10",
+    "CenPH__lb_SFLRCD__lb_1L_usd_XX",
+    "CenPH_DdsConstant11",
+    "CenPH__lb_SFLRCD__lb_1PMNT",
+    ];
+
+    var dataMergeIndices = [[0],[1],[2],[3],[4],[6],[8]];
+    generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK", spanIds,"<span>&nbsp;</span>");
+
+***********************************************************************/
+/***********************************************************************/
+
+function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick,spanIds,placeHolderElement) {
     $("body").css({
         "background-color": "#FFFFFF"
     });
@@ -133,6 +164,9 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
             tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
         }
         var recordCount = $(tableSelector).length - 1;
+        if(spanIds && spanIds.length>0){
+            adjustSpan(tableId, recordConatainer,spanIds,placeHolderElement)
+        }
         if(spanIndices) {
             generateTableWithSpanIndex(recordCount, tableId, direction, tableSelector, spanIndices);
         } else {
@@ -211,6 +245,46 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
         width: "300px"
     }, 500);
 }
+
+
+/*************************/ /*************************/
+/************************* If spans are less then they should be, this function inserts dummy spans *************************/
+/*************************/ /*************************/
+     function adjustSpan(tableId, recordConatainer,spanIds,placeHolderElement){
+      var tableSelector = "";
+      if ($('table#' + recordConatainer).length > 0) {
+          tableSelector = 'table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+      } else {
+          tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+      }
+      var placeHolderElement = placeHolderElement || '<span>&nbsp;</span>';
+      $(tableSelector).each(function() {
+        if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+          var divid = $(this);
+              if(spanIds!=undefined && $.isArray(spanIds) && spanIds.length>0){
+                /*Make the necessary adjustment and introduce empty placeHolderElement*/
+                for (var i = 0; i < spanIds.length; i++) {
+                  var el_span = $(divid).children('span')[i];
+
+                  if( el_span == undefined || ($(el_span).attr('id') != undefined && $(el_span).attr('id').indexOf(spanIds[i]) == -1)){
+                    if(i==0){
+                      $(divid).prepend(placeHolderElement);
+                    }else{
+                      $(divid).children('span').eq(i - 1).after(placeHolderElement);
+                    }
+                  }
+                }
+              }else{
+                /*If number of spans are same as spanIds, let's continue and do nothing for given row*/
+              }
+            //})
+          }
+        //}
+      })
+    }
+/*************************/ /*************************/
+/************************* End *************************/
+/*************************/ /*************************/
 
 // To fixed table header
 $(".fixed-table-container-inner .th-inner").animate({
