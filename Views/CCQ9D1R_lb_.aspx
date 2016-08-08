@@ -63,19 +63,19 @@
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid">
               <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label" id="refname">Reference Name:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1NMRF_new"></span>
                           </div>
                     </div>
                   </div>
                   <!-- col ends here -->
                   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label" id="reftype">Reference Type:</span>
@@ -86,14 +86,7 @@
                     </div>
                   </div>
                   <!-- col ends here -->
-                  <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="padding:0">
-                      <div class="content-grid mdl-grid">
-                          
-                          
-                    </div>
-                  </div>
-                  <!-- col ends here -->
+                 
         </div>
               <!-- content-grid mdl-grid ends here -->
               
@@ -102,7 +95,7 @@
               <!-- col starts here -->
             <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0; width: 140px;">
+                          <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0; width: 136px;">
                               <span class="form-label">Address:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0 4px">
@@ -121,7 +114,7 @@
               <!-- col starts here -->
             <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0; width: 140px;">
+                          <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0; width: 136px;">
                               <span class="form-label">Reference Phone:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0 4px">
@@ -139,7 +132,7 @@
               <!-- col starts here -->
             <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0; width: 140px;">
+                          <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0; width: 136px;">
                               <span class="form-label">Drivers License:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0 4px">
@@ -157,7 +150,7 @@
               <!-- col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin:0">
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin:0;  width: 128px;">
                               <span class="form-label">User Stamp:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -766,10 +759,10 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
       <style>
          #__Page_PopUp {
-            min-width: 450px !important;
-            width: 600px !important;
+            min-width: 700px !important;
+            width: 700px !important;
             left: 50% !important;
-            margin-left: -300px;
+            margin-left: -350px;
             top: 15% !important;
             }
       
@@ -796,35 +789,6 @@
             .simplePopup {
               left: 28% !important;
               top: 50% !important;
-            }
-            #exit {
-              margin-left: -9px;
-            }
-            #CenPH__lb_RCDDTL1__lb_1REFT_new {
-              position: absolute;
-              left: 403px !important;;
-              top: 22px !important;;
-              width: 10px !important;;
-            }
-            #reftype {
-              position: absolute;
-              left: 298px !important;;
-              top: 21px !important;;
-            }
-            #refname {
-              position: absolute;
-            }
-            #CenPH__lb_RCDDTL1__lb_1NMRF_new {
-              position: absolute;
-            }
-            #CenPH__lb_RCDDTL1__lb_1ANTX_new {
-              margin-left: -33px !important;;
-            }
-            #CenPH__lb_RCDDTL1__lb_1BXNB_new {
-              margin-left: -29px !important;;
-            }
-            #CenPH__lb_RCDDTL1__lb_1DRCD_new {
-              margin-left: -25px !important;;
             }
       </style>
       <script type="text/javascript">
