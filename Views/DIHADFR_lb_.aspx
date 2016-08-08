@@ -824,7 +824,7 @@
                 top: 4px !important;
                 left: 0px !important;
             }
-        </style>>
+        </style>
         <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
