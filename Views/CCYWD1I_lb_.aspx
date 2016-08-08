@@ -1259,6 +1259,7 @@
             left: 50% !important;
             margin-left: -300px;
             top: 9% !important;
+			height: auto !important;
             }
             
             #__Page_PopUp > tbody > tr:first-child {
