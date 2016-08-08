@@ -212,9 +212,10 @@
 <style>
         #__Page_PopUp {
             min-width: 540px !important;
-            width: 540px !important;
+            
       left: 50% !important;
-      margin-left: -225px;
+      margin-left: -325px;
+	  top:13% !important;
         }
     #__Page_PopUp > tr:first-child {
       display: none;
