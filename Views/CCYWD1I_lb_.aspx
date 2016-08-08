@@ -1400,6 +1400,7 @@
                 });
 
               $("#CenPH__lb_RCDKEY__lb_1ITNB_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDKEY__lb_1ITNB_new").focus();
               if($("#CenPH__lb_RCDKEY__lb_1ITNB").length > 0) {
                   $('#section2').show();
                   $('#section1').hide();
