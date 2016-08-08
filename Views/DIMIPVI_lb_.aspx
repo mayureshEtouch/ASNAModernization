@@ -606,14 +606,12 @@
                 left: 50% !important;
                 margin-left: -225px;
                 top: 10% !important;
+				height: 440px !important;
             }
-            #__Page_PopUp > tr:first-child {
+            #__Page_PopUp > tbody > tr:first-child {
                 display: none;
             }
 
-            #__Page_PopUp .DdsInlinePopUpTitle {
-                height: 1px !important;
-            }
             #wrapper {
                 width: 100% !important;
             }
@@ -635,10 +633,6 @@
             .simplePopup {
                 left: 30% !important;
                 top: 40% !important;
-            }
-            .confirmation-outer-conatiner {
-                top: 30% !important;
-                left: 28% !important;
             }
         </style>
     </asp:Content>
