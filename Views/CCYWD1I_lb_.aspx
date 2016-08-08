@@ -46,7 +46,7 @@
                         <span class="close-icon"><i class="material-icons md-15 close"></i></span> </div>
         </header>
         <main class="mdl-layout__content">
-                <section class="time-date">
+                <section class="time-date" id="section1">
                         <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--9-col"> 
                                         <!-- Title --> 
@@ -56,7 +56,57 @@
                                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCYWD1I</span></div>
                         </div>
                 </section>
-                <section class="form-data">
+                <section class="time-date" id="section2">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet"> 
+                    <!-- Title --> 
+                    <span class="heading-h1">CA: D1W Decision Key Screen</span> </div>
+                <div class="mdl-cell mdl-cell--3-col pull-right"> 
+                    <!-- Navigation --> 
+                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCYWD1I</span></div>
+            </div>
+        </section>
+    <section class="form-data" id="section3">
+            <div class="form-data-wrapper" style="padding-bottom:0;">
+                
+                
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid">
+                    <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0">
+                                <span class="form-label">Nbr: Application:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                                <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDKEY__lb_1ITNB_new" maxlength="9"></span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                                <span class="form-text">Value, F4 for list</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col ends here -->
+                </div>
+                <!-- content-grid mdl-grid ends here -->
+                
+                
+                
+            
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <section class="form-data" id="section4">
                         <div class="form-data-wrapper" style="padding-bottom:0;"> 
                                 
                                 <!-- content-grid mdl-grid starts here -->
@@ -369,7 +419,7 @@
                                         <div class="content-grid mdl-grid">
                                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
                                                        <!--  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</button> -->
-                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+                                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
                                                 </div>
                                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
                                                         <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button> -->
@@ -1211,8 +1261,8 @@
             top: 9% !important;
             }
             
-            #__Page_PopUp > tr:first-child {
-              display: none;
+            #__Page_PopUp > tbody > tr:first-child {
+                display: none;
             }
             #__Page_PopUp .DdsInlinePopUpTitle {
               height: 0;
@@ -1239,6 +1289,8 @@
       #Exit {
         margin-left: -5px;
       }
+
+
       </style>
 
       <script type="text/javascript">
@@ -1272,7 +1324,7 @@
                     "CenPH__lb_RCDDTL1__lb_1ABTM": "CenPH__lb_RCDDTL1__lb_1ABTM_new"               
                 },
                 "inputFields": {
-                    
+                    "CenPH__lb_RCDKEY__lb_1ITNB": "CenPH__lb_RCDKEY__lb_1ITNB_new"
                 }
             }
 
@@ -1347,9 +1399,31 @@
                     _00("F12", event);
                 });
 
-                /*$('#next').click(function (event) {
+              $("#CenPH__lb_RCDKEY__lb_1ITNB_new").ForceNumericOnly();
+              if($("#CenPH__lb_RCDKEY__lb_1ITNB").length > 0) {
+                  $('#section2').show();
+                  $('#section1').hide();
+                  $('#section3').show();
+                  $('#section4').hide();
+                  
+              } else {
+                  $('#section1').show();
+                  $('#section2').hide();
+                  $('#section4').show();
+                  $('#section3').hide();
+                  
+              }
+
+                $('#submit').click(function (event) {
                     _00("Enter", event);
-                });         */     
+                }); 
+
+                $('#prompt').click(function (event) {
+                    _00("F4", event);
+                }); 
+                 $('#exit').click(function (event) {
+                    _00('F3', event);
+                });                
             });
       </script>
     </asp:Content>
