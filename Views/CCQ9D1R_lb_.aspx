@@ -66,7 +66,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin:0">
-                              <span class="form-label">Reference Name:</span>
+                              <span class="form-label" id="refname">Reference Name:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1NMRF_new"></span>
@@ -78,7 +78,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
-                              <span class="form-label">Reference Type:</span>
+                              <span class="form-label" id="reftype">Reference Type:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1REFT_new"></span>
@@ -770,7 +770,7 @@
             width: 600px !important;
             left: 50% !important;
             margin-left: -300px;
-            top: 9% !important;
+            top: 15% !important;
             }
       
             #__Page_PopUp > tr:first-child {
@@ -799,6 +799,32 @@
             }
             #exit {
               margin-left: -9px;
+            }
+            #CenPH__lb_RCDDTL1__lb_1REFT_new {
+              position: absolute;
+              left: 403px !important;;
+              top: 22px !important;;
+              width: 10px !important;;
+            }
+            #reftype {
+              position: absolute;
+              left: 298px !important;;
+              top: 21px !important;;
+            }
+            #refname {
+              position: absolute;
+            }
+            #CenPH__lb_RCDDTL1__lb_1NMRF_new {
+              position: absolute;
+            }
+            #CenPH__lb_RCDDTL1__lb_1ANTX_new {
+              margin-left: -33px !important;;
+            }
+            #CenPH__lb_RCDDTL1__lb_1BXNB_new {
+              margin-left: -29px !important;;
+            }
+            #CenPH__lb_RCDDTL1__lb_1DRCD_new {
+              margin-left: -25px !important;;
             }
       </style>
       <script type="text/javascript">
