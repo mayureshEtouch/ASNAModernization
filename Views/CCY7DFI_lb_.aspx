@@ -22,7 +22,140 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+    <section class="time-date">
+        <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--8-col"> 
+                <!-- Title --> 
+                <span class="heading-h1">Validate Details</span> </div>
+            <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                <!-- Navigation --> 
+                <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCY7DFI</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>&nbsp;<i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
+        </div>
+    </section>
+    <section class="order-summary mrgnTp16">
+      <div class="order-summary-wrapper" style="margin-bottom: 0;">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Customer Name</span>
+            <span class="summary-txt" id="customerName"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Home Phone</span>
+            <span class="summary-txt" id="homePhone"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+            <span class="summary-title">Phone Work</span>
+            <span class="summary-txt" id="workPhone"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                <span class="icon-txt detail">Detail</span><i class="material-icons md-15 md-light display-icon detail"></i>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <section class="table-data-content-container spacer-container-bottom">
+        <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+                <div style="overflow: auto;" class="table-container">
+                    <div>
+                        <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+                            <thead>
+                                <tr>
+                                    <th>Social Security  Number</th>
+                                    <th>D.O.B.</th>
+                                    <th>Driver License</th>
+                                    <th>Credit Limit</th>
+                                    <th>Status-Use Credit Limit</th>
+                                    <th>Credit Score</th>
+                                    <th>Score Updated</th>
+                                    <th>Date Stamp</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    
+                            </tbody>
+                        </table>
+                       </div>
+                    <div class="button-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span> </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+
+ <script type="text/javascript">
+
+ var copyToAndFrom = {
+    "displayOnlyFields": {
+        "CenPH_DdsConstant15":"date",
+        "CenPH__lb_SFLCTL__lb__lb_TME":"time",
+        "CenPH__lb_SFLCTL__lb_CWZTX":"customerName",
+        "CenPH__lb_SFLCTL__lb_CPPNB":"homePhone",
+        "CenPH__lb_SFLCTL__lb_CPQNB":"workPhone"
+      },
+      "inputFields": {
+        
+      }
+    }
+
+          $(document).ready(function () {
+
+               copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+
+              var dataMergeIndices = [[0], [1], [2 , "&nbsp;", 3] , [4], [5], [6], [7] ,[8]];
+              generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+
+               var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+             }
+
+            //Display customer details
+            $(".detail").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+            });
+
+
+
+              $("#exit").click(function (event) {
+                  _00('F3', event);
+              });
+
+             
+
+          });
+      </script>
+
+
+        <div id="Div1" style="display: none;">
             
       <%--  CA: DSP Validate Details  Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
