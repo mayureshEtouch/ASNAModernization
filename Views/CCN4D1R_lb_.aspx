@@ -84,7 +84,9 @@
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Social Security Number:</span> </div>
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span> </div>
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span> 
+                      <a id="ssn-show" style="color:blue;cursor: pointer; display:none;" href="javascript:void(0);">Show</a>
+                      </div>
                     </div>
                   </div>
                   <!-- col ends here --> 
@@ -204,7 +206,9 @@
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Social Security Number:</span> </div>
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPSS_new"></span></div>
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPSS_new"></span>
+                      <a id="ssn-show2" style="color:blue;cursor: pointer; display:none;" href="javascript:void(0);">Show</a>
+                      </div>
                     </div>
                   </div>
                   <!-- col ends here --> 
@@ -333,7 +337,10 @@
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Address:</span> </div>
-                      <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DANTX_new"></span></div>
+                      <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;">
+                      <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DANTX_new"></span>
+                      &nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DUSTX_new"></span>
+                      </div>
                       </div>
                     </div>
                     <!-- col ends here --> 
@@ -397,7 +404,7 @@
           <script type="text/javascript">
            var copyToAndFrom = {
              "displayOnlyFields": {
-              "CenPH_DdsConstant42":"date",
+              "CenPH_DdsConstant37":"date",
               "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
               "CenPH__lb_RCDDTL1__lb_DALTX":"CenPH__lb_RCDDTL1__lb_DALTX_new",
               "CenPH__lb_RCDDTL1__lb_DD1NB":"CenPH__lb_RCDDTL1__lb_DD1NB_new",
@@ -443,6 +450,39 @@
           }
           $(document).ready(function () {
             copyData(copyToAndFrom,"NONE");
+            var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html();
+            if(html != undefined && html.length>0){
+                 html = html.replace(/-/g,'');
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+                $("#ssn-show").show();
+            }
+            /* Showing ssn on click*/
+
+             $("#ssn-show").on("mousedown taphold touchstart", function() {
+              setTimeout(function() {
+                $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html);
+              },0);
+            });
+             $("#ssn-show").on("mouseup dragend touchend", function() {
+              $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+            });
+             /* For second SSN */
+             var html2 = $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html();
+            if(html2 != undefined && html2.length>0){
+                 html2 = html2.replace(/-/g,'');
+                $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html(html2.substr(0,(html2.length-4)).replace(/\d/g,'*')+html2.substr(-4));
+                $("#ssn-show2").show();
+            }
+            /* Showing ssn on click*/
+
+             $("#ssn-show2").on("mousedown taphold touchstart", function() {
+              setTimeout(function() {
+                $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html(html2);
+              },0);
+            });
+             $("#ssn-show2").on("mouseup dragend touchend", function() {
+              $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html(html2.substr(0,(html2.length-4)).replace(/\d/g,'*')+html2.substr(-4));
+            });
         });
       </script>
       <div id="Div1" style="display:none;">
