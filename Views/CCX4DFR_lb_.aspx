@@ -140,7 +140,7 @@
                       <th>Customer 
                         Name</th>
                         <th>Returned Phone Number</th>
-                        <th>Returned Phone Txt</th>
+                        <th>Returned Phone Text</th>
                         <th>Address</th>
                         <th>Confidence Score</th>
                         <th>Telephone Company Code </th>
