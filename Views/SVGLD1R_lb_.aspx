@@ -37,7 +37,7 @@
     </div>
   </section>
   
-  <section class="table-data-content-container mrgnTp16">
+  <section class="table-data-content-container spacer-container-bottom mrgnTp16">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
@@ -115,7 +115,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Sales Person:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Sales Person Number:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1SL1X_new"></span> </div>
               </div>
             </div>
@@ -297,7 +297,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Total Cancelled Amount:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Total Canceled Amount:</span> </div>
                 <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1TCAX_new"></span> </div>
               </div>
             </div>
