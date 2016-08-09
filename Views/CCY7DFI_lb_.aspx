@@ -120,11 +120,30 @@
 
           $(document).ready(function () {
 
+
+            var spanIds = [
+              "CenPH__lb_SFLRCD__lb_1A4NB",
+              "CenPH__lb_SFLRCD_V1DOBD",
+              "CenPH__lb_SFLRCD__lb_1DRCD",
+              "CenPH__lb_SFLRCD__lb_RG7XT",
+              "CenPH__lb_SFLRCD__lb_1HDVA",
+              "CenPH__lb_SFLRCD__lb_1L1ST",
+              "CenPH__lb_SFLRCD__lb_1IPNB",
+              "CenPH__lb_SFLRCD_V1C6DT",
+              "CenPH__lb_SFLRCD_V1AGDT",
+          ];
+
+
                copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
 
               var dataMergeIndices = [[0], [1], [2 , "&nbsp;", 3] , [4], [5], [6], [7] ,[8]];
-              generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+              generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
+
+              $('#displayData tr td:nth-child(4)').each(function (i, col )
+               {
+                 $(col).css("text-align","right");
+               });
 
                var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
