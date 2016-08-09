@@ -194,6 +194,8 @@
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop" style="margin-left: 10px;">
 							<span data-tb-index="5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+
+							<span data-tb-index="5" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
 						</div>
 						<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right modal-button-container">
 							<span data-tb-index="6" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
@@ -682,6 +684,10 @@
 				_00('F12',event);
 		   });
 		 
+			 $("#prompt").click(function (event) {
+                _00('F4', event);
+            });
+
 			$("#submit").click(function (event) {
                 _00('Enter', event);
             });
