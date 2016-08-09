@@ -84,7 +84,7 @@
                                         <tr>
                                             <th>SSN Number</th>
                                             <th>First Name</th>
-                                            <th width="8%">Middle Initial</th>
+                                            <th width="11%">Middle Initial</th>
                                             <th>Last Name</th>
                                             <th>Used Status</th>
                                             <th>Used Date</th>
