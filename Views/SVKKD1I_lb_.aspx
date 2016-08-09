@@ -56,7 +56,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange Item status:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange Item Status:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1U3ST_new"></span> </div>
               </div>
             </div>
@@ -77,7 +77,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Original Invoice line Number:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Original Invoice Line Number:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ZUNB_new"></span> </div>
               </div>
             </div>
@@ -85,7 +85,7 @@
              <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Sold date:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Sold Date:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1G4DT_new"></span> </div>
               </div>
             </div>
@@ -258,7 +258,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange Vendor code:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange Vendor Code:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1QUTX_new"></span> </div>
               </div>
             </div>
@@ -266,7 +266,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange Entered date:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange Entered Date:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1G0DT_new"></span> </div>
               </div>
             </div>
@@ -402,7 +402,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exch Approved date:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exch Approved Date:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1G1DT_new"></span> </div>
               </div>
             </div>
@@ -499,7 +499,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exch Last Status Changed date:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exch Last Status Changed Date:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1G2DT_new"></span> </div>
               </div>
             </div>
@@ -544,7 +544,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Date stamp:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Date Stamp:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1AGDT_new"></span> </div>
               </div>
             </div>
@@ -552,7 +552,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Time stamp:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Time Stamp:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new"></span> </div>
               </div>
             </div>
@@ -596,7 +596,9 @@
      
     <div class="button-container">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+              </div>
+							<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
               </div>
               
             </div>
