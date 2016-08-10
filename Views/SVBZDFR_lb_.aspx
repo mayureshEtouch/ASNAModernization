@@ -65,7 +65,7 @@
 				<div class="add-item-wrapper">
 						<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--12-col pull-right">
-										<div class="icon-container"><span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></div>
+										<div class="icon-container"><span id="display"><span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></span></div>
 								</div>
 						</div>
 				</div>
@@ -101,7 +101,7 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                         </div>
                         <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet pull-right">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                            <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
                         </div>
                     </div>
                 </div>
@@ -1573,9 +1573,9 @@
                 $("div.icon-container").removeClass("icon-disable");
             });
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
-                generateTableAndApplyInfiniteScroll("orderaudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("orderaudit", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
                //$("#orderaudit tbody tr:first").css("background-color", "#d8d8d8");
-
+               $("#orderaudit tr").css('cursor', 'pointer');
                var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -1588,9 +1588,19 @@
                 selectCusotmer(row, "5", event);
               });
 
-              /*$("#next").click(function (event) {
-                _00("Enter",event);
-              });*/
+              $("#display").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the Order Audit");
+                } else {
+                    var row = $("#orderaudit tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+              });
+
+              $("#previous").click(function (event) {
+                   _00('F3', event);
+              });
+
             });
       </script>
     </asp:Content>
