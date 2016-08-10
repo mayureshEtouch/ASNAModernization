@@ -143,7 +143,7 @@
                   <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label"></span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CITY_new">&nbsp;&nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1STE_new"><br/>
                   <br/>
-                  <span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span> </div>
+                  <span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
