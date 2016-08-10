@@ -103,7 +103,7 @@
                     <th>ECM Decision Status</th>
                     <th>Customer Name</th>
                     <th>Home Phone Number</th>
-                    <th>Conn's Ap-Application Number</th>
+                    <th>Conn's Application Number</th>
                     <th>Application Status</th>
                   </tr>
                 </thead>
