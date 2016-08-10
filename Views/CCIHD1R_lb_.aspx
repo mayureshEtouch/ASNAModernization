@@ -507,7 +507,8 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                                            <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" size="10" id="btnOption" maxlength="3" onfocus="_09('#DL5ST','22,74','#RCDDTL1');"></span>
+                                            <!-- <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" size="10" id="btnOption" maxlength="3" onfocus="_09('#DL5ST','22,74','#RCDDTL1');"></span> -->
+                                            <select name="btnOption" id="btnOption" style="width: 180px;" data-tb-index="17"></select>
                                     </div>
                                 </div>
                             </div>
@@ -1853,6 +1854,9 @@
 
         $(document).ready(function () {
             $('body').css({ "background-color": "white" });
+            var optionCodes = ["CAN","CCI","CGA","CSG","CWA","DAA","DAN","DCA","DCC","DCD","DCE","DCR","DCT","DGE","DIN","DMA","DNO","DOA","DPA","DPD","DRQ","DWA","ECA","ECM","OLD","WWC"];
+            var optionDesc = ["Cancel Application","Change Customer Info","Change Application Info","Chg to Co-Signer Appl","Change Work Address","Display Application Audit","Display All Notes","Display Previous Address","Display Credit References","Display Customer Details","Display Employmnt History","Display Personal Referenc","Display Charge to Cust","Display GECC Appls","Display Invoice","Display Mandatory Addons","Display Notes","Display Old Applications","Display Previous Accts","Display Product","Display Requirements","Display Work Address","Enter Customer Activity","E-Commerce Chg Empl/Loc","Display Old Accounts","Work with Customer (CRM)"];
+            generateSelectBoxOptions("btnOption",optionCodes,optionDesc);
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
             $("#previous").click(function (event) {
                 _00('F12', event);

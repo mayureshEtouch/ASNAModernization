@@ -469,7 +469,7 @@
 
 
 
-                                    <div class="mdl-cell mdl-cell--2-col" style="margin: 0;"><span class="form-label">Scheduling inside repair on :</span> </div>
+                                    <div class="mdl-cell mdl-cell--2-col" style="margin: 0;"><span class="form-label">Scheduling inside repair on </span> </div>
                                     <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0 0 -10px;">
                                         <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="schedulingDt" maxlength="8" style="width: 90px;" data-tb-index="1" onfocus="_09('V1DADT','14,34','#SFLCTL');" readonly>
                                         <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
@@ -534,7 +534,16 @@
 
 
     </main>
+   <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
     <div id="modal1" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+                <i class="material-icons md-15 md-light help-icon"></i>
+                <span class="confirmation-text">Do you want to continue</span>
+                <div class="button-container">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+                </div>
+            </div>
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display: none">
 
@@ -1876,7 +1885,7 @@
                 "CenPH__lb_SFLCTL__lb_1JACD": "smaMethod",
                 "CenPH__lb_SFLCTL__lb_1TVNB": "smaMonths",
                 "CenPH__lb_SFLCTL_V1AQDT": "smaEnds",
-                "CenPH__lb_SFLCTL__lb_1TUNB": "smsContract",
+                "CenPH__lb_SFLCTL__lb_1TUNB": "smaContract",
                 "CenPH__lb_SFLCTL__lb_1OMNB": "callBackWO",
                 "CenPH__lb_SFLCTL_V1DHDT": "callBackOrig",
                 "CenPH__lb_SFLCTL__lb_1I8CD": "callBackTech",
@@ -1978,9 +1987,26 @@
             //$("body").on("click","#xyzevent",function (e) {
             //    _00('Enter', e);
             //});
+            $("body").on("click", ".simplePopupClose", function () {
+                $(".simplePopupBackground").hide();
+            });
+            if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                /*Pop up confirm box*/
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
 
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _16(event, this, 1, 'Enter');
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _16(event, this, 1, 'Enter');
+                });
+
+            }
             $("#outIns").click(function (event) {
-                _00('10', event);
+                _00('F10', event);
             });
 
 
