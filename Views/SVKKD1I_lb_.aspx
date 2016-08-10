@@ -787,6 +787,12 @@
                     _00("F4", event);
                 });
 
+
+                  $('#next').click(function (event) {
+                    _00("Enter", event);
+                });
+
+
                 $('#previous').click(function (event) {
                     _00("F3", event);
                 });
