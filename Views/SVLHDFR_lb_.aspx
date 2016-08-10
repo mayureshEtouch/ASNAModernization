@@ -475,7 +475,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-                <script type="text/javascript">
+        <script type="text/javascript">
             var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH_DdsConstant8": "date",
