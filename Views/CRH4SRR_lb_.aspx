@@ -769,7 +769,8 @@
                 _00('Enter', event);
             }
 			
-				
+				      $("#CenPH__lb_SFLCTL__lb_2SSN_new").ForceNumericOnly();
+              
             //Next button click handler
             $("#next").click(function (event) {
                 var row = $("#displayData tbody tr.selected");
