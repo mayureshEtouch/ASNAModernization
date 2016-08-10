@@ -125,7 +125,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Name:</span> </div>
-                <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1V6CD_new"></span> </div>
+                <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1V6CD_new"></span>&nbsp;&nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1WBCD_new"></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -135,7 +135,15 @@
                 <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Address:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1V9CD_new"><br/>
                   <br/>
-                  CONROE<span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span> </div>
+                  <span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span> </div>
+                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label"></span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CVCO_new"><br/>
+                  <br/>
+                  <span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span> </div>
+                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label"></span> </div>
+                <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1CITY_new">&nbsp;&nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1STE_new"><br/>
+                  <br/>
+                  <span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -165,7 +173,7 @@
              <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Customer Promo Type:</span> </div>
+                <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Previous Cust Type:</span> </div>
                 <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AOCO_new"></span> </div>
               </div>
             </div>
@@ -1180,8 +1188,13 @@
                     "CenPH__lb_RCDDTL1__lb_1SSN": "CenPH__lb_RCDDTL1__lb_1SSN_new",
                     "CenPH__lb_RCDDTL1__lb_1BSCR": "CenPH__lb_RCDDTL1__lb_1BSCR_new",
                     "CenPH__lb_RCDDTL1__lb_1WCCD": "CenPH__lb_RCDDTL1__lb_1WCCD_new",
-                    "CenPH__lb_RCDDTL1__lb_1V6CD+CenPH__lb_RCDDTL1__lb_1V7CD+CenPH__lb_RCDDTL1__lb_1V8CD+CenPH__lb_RCDDTL1__lb_1WBCD": "CenPH__lb_RCDDTL1__lb_1V6CD_new",
-                    "CenPH__lb_RCDDTL1__lb_1V9CD+CenPH__lb_RCDDTL1__lb_1CVCO+CenPH__lb_RCDDTL1__lb_1CITY+CenPH__lb_RCDDTL1__lb_1STE+CenPH__lb_RCDDTL1__lb_1ZIP": "CenPH__lb_RCDDTL1__lb_1V9CD_new",
+                    "CenPH__lb_RCDDTL1__lb_1V6CD+CenPH__lb_RCDDTL1__lb_1V7CD+CenPH__lb_RCDDTL1__lb_1V8CD": "CenPH__lb_RCDDTL1__lb_1V6CD_new",
+                    "CenPH__lb_RCDDTL1__lb_1WBCD": "CenPH__lb_RCDDTL1__lb_1WBCD_new",
+                    "CenPH__lb_RCDDTL1__lb_1V9CD": "CenPH__lb_RCDDTL1__lb_1V9CD_new",
+                    "CenPH__lb_RCDDTL1__lb_1CVCO+": "CenPH__lb_RCDDTL1__lb_1CVCO_new",
+                    "CenPH__lb_RCDDTL1__lb_1CITY+CenPH__lb_RCDDTL1__lb_1STE+CenPH__lb_RCDDTL1__lb_1ZIP": "CenPH__lb_RCDDTL1__lb_1CITY_new",
+                    /*"CenPH__lb_RCDDTL1__lb_1STE": "CenPH__lb_RCDDTL1__lb_1STE_new",
+                    "CenPH__lb_RCDDTL1__lb_1ZIP": "CenPH__lb_RCDDTL1__lb_1ZIP_new",*/
                     "CenPH__lb_RCDDTL1__lb_1TFVA": "CenPH__lb_RCDDTL1__lb_1TFVA_new",
                     "CenPH__lb_RCDDTL1__lb_1AHCO": "CenPH__lb_RCDDTL1__lb_1AHCO_new",
                     "CenPH__lb_RCDDTL1__lb_1AOCO": "CenPH__lb_RCDDTL1__lb_1AOCO_new",

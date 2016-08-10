@@ -485,10 +485,6 @@
                 _00('F4', event);
               });*/
 
-              $("#next").click(function (event) {
-                _00('Enter', event);
-              });
-
               $('#CenPH__lb_SFLCTL__lb_2EPCO_new').keypress(function (e) {
                   var regex = new RegExp("^[a-zA-Z0-9]+$");
                   var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);

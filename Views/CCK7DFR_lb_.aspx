@@ -563,7 +563,7 @@
       <script type="text/javascript">
           $(document).ready(function () {
               var dataMergeIndices = [[0, "</br>", 4, "</br>", 5, "&nbsp;", 6, "&nbsp;", 7], [1], [2], [3], [8], [9], [10], [12]];
-              generateTableAndApplyInfiniteScroll("pre-add", "__Page_PopUp CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+              generateTableAndApplyInfiniteScroll("pre-add", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
 
               $("#exit").click(function (event) {
                   _00('F3', event);
