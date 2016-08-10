@@ -454,6 +454,13 @@ function makeSelectDescriptive(selectId, values, descriptions) {
     }
 }
 
+function generateSelectBoxOptions(selectId, values, descriptions) {
+    for(var i=0; i < values.length; i++) {
+        var option = '<option value='+ values[i] +'>'+ values[i] + ' - ' + descriptions[i] +'</option>';
+        $("#" + selectId).append(option);
+    }
+}
+
 var doAction = function(row, value, event) {
     var selectId = $(row).data('selectid');
     a = selectId.split(".");

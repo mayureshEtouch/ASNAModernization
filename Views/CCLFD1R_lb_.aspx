@@ -461,7 +461,8 @@
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin:0"> <span class="form-label">Option:</span> </div>
               <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-text" id="CenPH_">
-                <input class="mdl-textfield__input" type="text" style="width: 110px; display:inline-block" maxlength="3" size="10" id="CenPH__lb_RCDDTL1__lb_DL6ST_new" onFocus="_09('#DL6ST','22,73','#RCDDTL1');" data-tb-index="1">
+                <!-- <input class="mdl-textfield__input" type="text" style="width: 110px; display:inline-block" maxlength="3" size="10" id="CenPH__lb_RCDDTL1__lb_DL6ST_new" onFocus="_09('#DL6ST','22,73','#RCDDTL1');" data-tb-index="1"> -->
+                <select name="CenPH__lb_RCDDTL1__lb_DL6ST_new" id="CenPH__lb_RCDDTL1__lb_DL6ST_new" style="width: 180px;" data-tb-index="17"></select>
                 </span> </div>
             </div>
           </div>
@@ -574,11 +575,16 @@
         "CenPH__lb_RCDDTL1__lb_1AAVN":"CenPH__lb_RCDDTL1__lb_1AAVN_new",
       },
       "inputFields": {
-        "CenPH__lb_RCDDTL1__lb_DL6ST":"CenPH__lb_RCDDTL1__lb_DL6ST_new",
+        "CenPH__lb_RCDDTL1__lb_DL6ST":"CenPH__lb_RCDDTL1__lb_DL6ST_new"
       }
     }
 
     $(document).ready(function () {
+      var optionCodes = 
+          ["AOK","CDG","CSA","DAA","DAN","DAX","DBS","DCA","DCB","DCC","DCD","DCE","DCN","DCP","DCR","DCT","DEC","DER","DID","DIN","DIS","DMA","DNO","DOA","DOP","DPA","DPD","DPS","DRQ","DSP","ECA","ECM","END","EQF","OLD","PVH","PVW","RVW","SCP","VCD","WWC"];
+      var optionDesc = 
+          ["OK'd to Process","Display Customer Changes","Credit Score Adjust","Display Application Audit","Display All Notes","Display Application Extn","Display Bureau Summary","Display Customer Address","Display Bureau Requests","Display Credit Reference","Display Customer Details","Display Employment Histry","Display Customer Name","Display Credit Promotion","Display Personal Referenc","Display Charge to Cust","Display External Credit","Display External Requests","Display ID Scan Data","Display Invoice","Display ID Scan","Display Mandatory Addons","Display Notes","Display Old Applications","Display Order Promotion","Display Previous Accts","Display Product","Display Previous Sales","Display Requirements","Display FICO Scoring","Enter Customer Activity","E-Commerce Chg Empl/Loc","End Process","Display Equifax Report","Display Old Accounts","Phone Verify-Home","Phone Verify-Work","Review Application","Select Credit Promotion","Validate Cust Details","Work With Customer (CRM)"];
+      generateSelectBoxOptions("CenPH__lb_RCDDTL1__lb_DL6ST_new",optionCodes,optionDesc);
       copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
       $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
         if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
