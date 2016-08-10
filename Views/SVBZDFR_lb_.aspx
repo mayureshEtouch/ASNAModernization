@@ -22,7 +22,89 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Service Order Audit Inquiry</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVBZDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+      
+      <section class="order-summary mrgnTp16">
+      <div class="order-summary-wrapper" style="margin-bottom: 0;">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Customer Order Number</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2SO_lb_X_new"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Account Number</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2OONB_new"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+            <span class="summary-title">Customer</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CAFTX_new"><br/>
+<br/>
+<span style="padding-left: 10px; display: inline-block;"></span><span style="padding-left: 10px; display: inline-block;"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+                       
+             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="orderaudit" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>S/O Audit Date</th>
+                            <th>S/O Audit Time</th>
+                            <th>S/O Type</th>
+                            <th>Technician Number</th>
+                            <th>Request Date</th>
+                            <th>Service Order STS Flag</th>
+                            <th>User Stamp</th>
+                            <th>Workstation ID</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--6-col-tablet">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+<div id="modal1" class="simplePopup"></div>
+
+        <div id="Div1" style="display:none;">
             
       <%--  SV: DSP for S/O Audit     Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -1454,4 +1536,52 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant20": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2SO_lb_X": "CenPH__lb_SFLCTL__lb_2SO_lb_X_new",
+                    "CenPH__lb_SFLCTL__lb_2OONB": "CenPH__lb_SFLCTL__lb_2OONB_new",
+                    "CenPH__lb_SFLCTL__lb_CAFTX+CenPH__lb_SFLCTL__lb_CANTX+CenPH__lb_SFLCTL__lb_CAOTX+CenPH__lb_SFLCTL__lb_CAQTX+CenPH__lb_SFLCTL__lb_CADST+CenPH__lb_SFLCTL__lb_CAPTX": "CenPH__lb_SFLCTL__lb_CAFTX_new",
+
+                  },
+                "inputFields": {
+                    
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#time").html("&nbsp;" + $("#time").html());
+              $('body').on('click', '#orderaudit tbody tr', function () {
+                $("#orderaudit tbody tr:even").css("background-color", "#fff");
+                $("#orderaudit tbody tr:odd").css("background-color", "#f9f9f9");
+                $(this).css({ "background-color": "#d8d8d8" });
+                $("#orderaudit tbody tr").removeClass("selected");
+                $(this).addClass("selected");
+                $("div.icon-container").removeClass("icon-disable");
+            });
+              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
+                generateTableAndApplyInfiniteScroll("orderaudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+               //$("#orderaudit tbody tr:first").css("background-color", "#d8d8d8");
+
+               var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+              }
+
+              $("#orderaudit").dblclick(function (event) {
+                var row = $("#orderaudit tbody tr.selected");
+                selectCusotmer(row, "5", event);
+              });
+
+              /*$("#next").click(function (event) {
+                _00("Enter",event);
+              });*/
+            });
+      </script>
     </asp:Content>
