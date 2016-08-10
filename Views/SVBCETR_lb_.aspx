@@ -90,7 +90,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Employee Code:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" maxlength="5" onfocus="_09('#1AJCD','3,56','#SFLCTL');" id="empCode">
+                                        <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" maxlength="5" onfocus="_09('#1AJCD','3,56','#SFLCTL');" id="CenPH__lb_SFLCTL__lb_1AJCD_new">
                                     </div>
                                 </div>
                             </div>
@@ -438,7 +438,7 @@
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Assurant Number:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <%--<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1C5DT_new">56326</span>--%>
-                                        <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="assurantNo" maxlength="8" style="width: 100px;" data-tb-index="1" onfocus="_09('#CF5TX','12,68','#SFLCTL');">
+                                        <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="CenPH__lb_SFLCTL__lb_CF5TX_new" maxlength="8" style="width: 100px;" data-tb-index="1" onfocus="_09('#CF5TX','12,68','#SFLCTL');">
                                     </div>
                                 </div>
                             </div>
@@ -471,13 +471,13 @@
 
                                     <div class="mdl-cell mdl-cell--2-col" style="margin: 0;"><span class="form-label">Scheduling inside repair on </span> </div>
                                     <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0 0 -10px;">
-                                        <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="schedulingDt" maxlength="8" style="width: 90px;" data-tb-index="1" onfocus="_09('V1DADT','14,34','#SFLCTL');" readonly>
+                                        <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="CenPH__lb_SFLCTL_V1DADT_new" maxlength="8" style="width: 90px;" data-tb-index="1" onfocus="_09('V1DADT','14,34','#SFLCTL');" readonly>
                                         <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--1-col" style="margin: 0;">
                                         <span class="form-label">zone</span>
-                                        <input type="text" class="editable-data mdl-textfield__input-small mrgnLft10" size="3" id="zone" maxlength="8" style="width: 50px;" data-tb-index="1" onfocus="_09('#CJNCD','14,48','#SFLCTL');">
+                                        <input type="text" class="editable-data mdl-textfield__input-small mrgnLft10" size="3" id="CenPH__lb_SFLCTL__lb_CJNCD_new" maxlength="8" style="width: 50px;" data-tb-index="1" onfocus="_09('#CJNCD','14,48','#SFLCTL');">
                                     </div>
 
                                     <div class="mdl-cell mdl-cell--2-col" style="margin: 0;">
@@ -1902,28 +1902,28 @@
 
             },
             "inputFields": {
-                "CenPH__lb_SFLCTL__lb_1AJCD": "empCode",
+                "CenPH__lb_SFLCTL__lb_1AJCD": "CenPH__lb_SFLCTL__lb_1AJCD_new",
 
 
-                "CenPH__lb_SFLCTL__lb_CF5TX": "assurantNo",
+                "CenPH__lb_SFLCTL__lb_CF5TX": "CenPH__lb_SFLCTL__lb_CF5TX_new",
 
-                "CenPH__lb_SFLCTL_V1DADT": "schedulingDt",
-                "CenPH__lb_SFLCTL__lb_CJNCD": "zone",
+                "CenPH__lb_SFLCTL_V1DADT": "CenPH__lb_SFLCTL_V1DADT_new",
+                "CenPH__lb_SFLCTL__lb_CJNCD": "CenPH__lb_SFLCTL__lb_CJNCD_new",
                 "CenPH__lb_SFLCTL__lb_CF8CD": "repairSelect"
             }
         }
 
         $(document).ready(function () {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-            $("#schedulingDt").html($("#CenPH__lb_SFLCTL_V1DADT").html());
+            $("#CenPH__lb_SFLCTL_V1DADT_new").html($("#CenPH__lb_SFLCTL_V1DADT").html());
 
-            $("#schedulingDt").val($("#CenPH__lb_SFLCTL_V1DADT").val());
-            $("#schedulingDt").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+            $("#CenPH__lb_SFLCTL_V1DADT_new").val($("#CenPH__lb_SFLCTL_V1DADT").val());
+            $("#CenPH__lb_SFLCTL_V1DADT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
 
-            $("#reqesdate").click(function () { $("#schedulingDt").datepicker("show"); });
+            $("#reqesdate").click(function () { $("#CenPH__lb_SFLCTL__lb_CJNCD_new").datepicker("show"); });
 
-            $("#schedulingDt").on('keyup change', function () {
-                var date = $("#schedulingDt").val().split("/");
+            $("#CenPH__lb_SFLCTL_V1DADT_new").on('keyup change', function () {
+                var date = $("#CenPH__lb_SFLCTL_V1DADT_new").val().split("/");
                 $("#CenPH__lb_SFLCTL_V1DADT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
             //if (!$("#CenPH__lb_SFLCTL__lb_CEOTX").is('input')) {
@@ -2025,6 +2025,11 @@
                 _00('F12', event);
             });
             generateSpecialInstructionsSection();
+
+            $(".simplePopupClose").click(function (event) {
+                var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
+                $("#" + ele).focus();
+            });
         });
     </script>
 </asp:Content>
