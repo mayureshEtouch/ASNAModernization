@@ -752,7 +752,7 @@
                 copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
 				
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5]];
-                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 
                 $("#prompt").click(function (event) {
                     _00('F4', event);
@@ -770,7 +770,7 @@
             }
 			
 				      $("#CenPH__lb_SFLCTL__lb_2SSN_new").ForceNumericOnly();
-              
+
             //Next button click handler
             $("#next").click(function (event) {
                 var row = $("#displayData tbody tr.selected");
