@@ -103,11 +103,11 @@
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
 
- <style>
-        #displayData tr td:nth-child(4), #displayData tr td:nth-child(7){
-          text-align: right;
-        }
-      </style>
+<style>
+  #displayData tr td:nth-child(4){
+    text-align: right;
+  }
+</style>
 
  <script type="text/javascript">
 
@@ -142,24 +142,36 @@
 
                copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
 
+
+               var ssnMasking = function(){
+
+                  $('#displayData tr td:nth-child(1)').each(function (i, ele )
+                  {
+
+                    if($(ele).html() != undefined && $(ele).html() !='&nbsp;'){
+
+                       var html = $(ele).html();
+                       html = html.replace(/-/g,'');
+                       var ssn= html;
+                        $(ele).html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+
+                       $(ele).append('&nbsp;<a class="ssn-show"  data-ssn="'+ssn+'" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>');
+                         }
+
+                  });
+
+               }
+
               var dataMergeIndices = [[0], [1], [2 , "&nbsp;", 3] , [4], [5], [6], [7] ,[8]];
+
               generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
-
-               $('#displayData tr td:nth-child(1)').each(function (i, ele )
-               {
-
-                  if($(ele).html() != undefined && $(ele).html() !='&nbsp;'){
-
-                     var html = $(ele).html();
-                     html = html.replace(/-/g,'');
-                     var ssn= html;
-                      $(ele).html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
-
-                     $(ele).append('&nbsp;<a class="ssn-show"  data-ssn="'+ssn+'" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>');
-                  }
-
+                $('body').on("click", "#next-page, #previous-page", function(event) {
+                    ssnMasking();
                });
+
+
+                ssnMasking();
 
                $("body").on("mousedown taphold touchstart", ".ssn-show",function() {
                  
