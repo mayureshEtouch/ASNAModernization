@@ -219,13 +219,13 @@
               <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
                 <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
                                   <span class="form-label">Last Name:</span>
                               </div>
                               <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet">
                                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1V8CD_new"></span>
                               </div>
-                              <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet" style="margin:0 0 0 18px" id="CenPH__lb_RCDDTL1__lb_1WBCD_new_div">
+                              <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0 0 0 18px" id="CenPH__lb_RCDDTL1__lb_1WBCD_new_div">
                                   <span class="form-label">Suffix:</span>
                               </div>
                               <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet">
@@ -292,7 +292,7 @@
                   <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                                   <span class="form-label">Criteria Code:</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                              <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin:0">
                                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1WCCD_new"></span>
                               </div>
                 </div>
@@ -300,28 +300,27 @@
               <!-- col ends here -->
               
             </div>
-            <!-- content-grid mdl-grid ends here -->
             <!-- content-grid mdl-grid starts here -->
             <div class="content-grid mdl-grid">
               <!-- col starts here -->
-                <div class="mdl-cell mdl-cell--7-col mdl-cell mdl-cell--5-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1CVCO_new_div">
+                <div class="mdl-cell mdl-cell--8-col mdl-cell mdl-cell--5-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1CVCO_new_div">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
                                   <span class="form-label">Address2:</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet tablet-mrgleft1">
-                                  <span class="form-text" style="margin-left: 4px;" id="CenPH__lb_RCDDTL1__lb_1CVCO_new"></span>
+                              <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin:0">
+                                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1CVCO_new"></span>
                               </div>
                 </div>
               </div>
               <!-- col ends here -->
               <!-- col starts here -->
-                <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1GZNB_new_div">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="padding:0" id="">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0">
-                                  <span class="form-label">Invoice Number - Invoice Used:</span>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+                                  <span class="form-label">Invoice Number:</span>
                               </div>
-                              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
+                              <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin:0">
                                   <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GZNB_new"></span>
                               </div>
                 </div>
@@ -330,6 +329,7 @@
               
             </div>
             <!-- content-grid mdl-grid ends here -->
+            
             <!-- content-grid mdl-grid starts here -->
             <div class="content-grid mdl-grid">
               <!-- col starts here -->
@@ -387,7 +387,7 @@
               </div>
               <!-- col ends here -->
               <!-- col starts here -->
-                <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1_V1UDTE_new_div">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="padding:0" id="">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin:0">
                                   <span class="form-label">Used Date:</span>
@@ -454,7 +454,7 @@
     <!-- Modified HTML code ends here -->
     <style>
     #__Page_PopUp {
-                    min-width: 800px !important;
+                    min-width: 880px !important;
                     width: 680px !important;
                     left: 50% !important;
             margin-left: -400px !important;
