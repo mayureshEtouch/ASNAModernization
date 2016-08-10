@@ -1425,7 +1425,17 @@
                 }); 
                  $('#exit').click(function (event) {
                     _00('F3', event);
-                });                
+                }); 
+
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                  
+                });               
             });
       </script>
     </asp:Content>
