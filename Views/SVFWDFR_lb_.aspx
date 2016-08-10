@@ -55,18 +55,18 @@
                                 <thead>
                                     <tr>
                                         <th colspan="4"></th>
-                                        <th colspan="4" class="primary-header">QUANTITY</th>
+                                        <th colspan="4" class="primary-header" style="text-align:center;">QUANTITY</th>
                                         <th></th>
                                     </tr>
                                     <tr>
                                         <th>Purchase Order Number</th>
-                                        <th>PO Line Number.</th>
+                                        <th>PO Line Number</th>
                                         <th>Part ID </th>
                                         <th>Expected Arrival Date</th>
-                                        <th>Ordered Quantity </th>
-                                        <th>Qty Avail For Res</th>
-                                        <th>Received Quantity</th>
-                                        <th>Cancelled Quantity</th>
+                                        <th>ORDERED QUANTITY </th>
+                                        <th>QTY AVAIL FOR RES</th>
+                                        <th>RECEIVED QUANTITY</th>
+                                        <th>CANCELLED QUANTITY</th>
                                         <th>Part Information Drv Description</th>
                                     </tr>
                                 </thead>
