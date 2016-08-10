@@ -33,9 +33,9 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVBCETR</span> 
-                    <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">SVBCETR</span>
+                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
-                             <!-- 4 col starts here -->
+                            <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Deposit:</span> </div>
@@ -132,13 +132,13 @@
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
-                            
+
                         </div>
                         <!-- content-grid mdl-grid ends here -->
 
-                         <!-- content-grid mdl-grid starts here -->
+                        <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
-                            
+
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
@@ -200,14 +200,14 @@
                                         <span id="repairLoc1"></span>,
                                         <span id="repairLoc2"></span>
                                     </div>
-                                 <%--   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                    <%--   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span id="CenPH_PANTX">
                                             <input class="mdl-textfield__input" type="text" data-tb-index="1" id="repairLoc" onfocus="_09('#CEOTX','6,46','#SFLCTL');"></span>--%>
 
 
 
-                                        <%--<input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" id="repairLoc2">--%>
-                                       <%-- <br />
+                                    <%--<input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" id="repairLoc2">--%>
+                                    <%-- <br />
                                         <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" id="repairLoc3" onfocus="_09('#CESTX','7,70','#SFLCTL');" maxlength="10" style="width: 100px;">
                                         <span id="repairLoc1"></span>
                                         <span id="repairLoc2"></span>
@@ -418,7 +418,7 @@
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Model Number:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="modalNo">Test</span>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -536,7 +536,7 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display:none">
+    <div id="Div1" style="display: none">
 
         <%--  SV: ETR Enter WO/Cmts-CST Edit transaction                                                           --%>
         <%--  CRTDSPF                                                                                              --%>
@@ -1819,7 +1819,7 @@
             margin-top: -2px;
         }
 
-        
+
 
         .zip-input {
             display: inline;
@@ -1835,16 +1835,16 @@
             margin-left: 0% !important;
             margin-right: 1% !important;
         }
+
         .calender-icon {
-           /*position: absolute;
+            /*position: absolute;
            right: 0;
            top: 13px;*/
-            
         }
-        .ui-datepicker-today 
-		{
-			background: #ff0000
-		}
+
+        .ui-datepicker-today {
+            background: #ff0000;
+        }
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
@@ -1857,7 +1857,7 @@
                 "CenPH__lb_SFLCTL__lb_1AACD": "locCode",
                 "CenPH__lb_SFLCTL__lb_1G5CD": "productOwner",
                 "CenPH__lb_SFLCTL__lb_1F4CD": "expectedPayment",
-                "CenPH__lb_SFLCTL__lb_1GLVA":"deposite",
+                "CenPH__lb_SFLCTL__lb_1GLVA": "deposite",
                 "CenPH__lb_SFLCTL_V1C6DT": "entryDate",
                 "CenPH__lb_SFLCTL__lb_CALTX": "custName",
                 "CenPH__lb_SFLCTL__lb_CANTX": "custAdd",
@@ -1894,10 +1894,10 @@
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_1AJCD": "empCode",
-              
-            
+
+
                 "CenPH__lb_SFLCTL__lb_CF5TX": "assurantNo",
-                
+
                 "CenPH__lb_SFLCTL_V1DADT": "schedulingDt",
                 "CenPH__lb_SFLCTL__lb_CJNCD": "zone",
                 "CenPH__lb_SFLCTL__lb_CF8CD": "repairSelect"
