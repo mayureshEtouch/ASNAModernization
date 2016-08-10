@@ -22,7 +22,159 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Workorder Audit</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVRIDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>&nbsp;
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="order-summary mrgnTp16">
+      <div class="order-summary-wrapper" style="margin-bottom: 0;">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+            <span class="summary-title">Work Order Number</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2ODNB_new"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+            <span class="summary-title">Customer Name</span>
+            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CALTX_new"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+            
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                <span class="icon-txt displayDetail">Detail</span><i class="material-icons md-15 md-light display-icon displayDetail"></i>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>Changed Date</th>
+                            <th>Changed Time</th>
+                            <th>Servicing Location</th>
+                            <th>Servicing Employee</th>
+                            <th>Work Order Status</th>
+                            <th>Type Repair</th>
+                            <th>Repair Zone</th>
+                            <th>Scheduled Date</th>
+                            <th>Contacted Date</th>
+                            <th>Repaired  Date</th>
+                            <th>Call Back Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                                      
+                        </tbody>
+                    </table>
+                    <div class="tablet-width-rt">
+                   
+                    </div>
+                </div>
+                                
+                <div class="button-container tablet-width-rt">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+<style>
+@media screen and (max-width: 1024px) {
+.tablet-width-rt{
+  width: 870px !important;
+}
+}
+</style>
+
+<script type="text/javascript">
+   
+    var copyToAndFromData = {
+              "displayOnlyFields": {
+                "CenPH__lb_SFLCTL__lb_2ODNB":"CenPH__lb_SFLCTL__lb_2ODNB_new",
+                "CenPH__lb_SFLCTL__lb_CALTX":"CenPH__lb_SFLCTL__lb_CALTX_new",
+                "CenPH_DdsConstant18":"date",
+                "CenPH__lb_SFLCTL__lb__lb_TME":"time"
+
+              },
+              "inputFields": {
+      
+              }
+          };
+      
+        $(document).ready(function () {
+          
+            copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+                  
+            var dataMergeIndices = [[0], [1] ,[2], [3], [4], [5], [6], [7], [8], [9], [10]];
+
+
+             generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+               
+             $("#exit").click(function(event){
+              _00('F3', event);
+             });
+
+
+             var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+
+            $(".displayDetail").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                }
+            });
+
+           $("#exit").click(function (event) {
+                _00('F3', event);
+            });
+
+      
+        });
+
+    </script>
+
+        <div id="Div1" style="display: none;">
             
       <%--  SV: DSP Workorder Audit   Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>

@@ -22,7 +22,98 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Work Order Comments by ID</span> </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVLHDFR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+                </div>
+            </section>
+            <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+                                <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet" style="margin-left: -15px;"> <span class="summary-table-title pull-right">Work Order #</span> </div>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
+                                            <span style="margin: 12px 10px 0 0; display: block;" id="CenPH__lb_SFLCTL__lb_2ODNB_new"></span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Comment ID</span> </div>
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet">
+                                            <select class="mdl-textfield__input" id="CenPH__lb_SFLCTL__lb_2IXCD_new" style="margin-top: 8px;">
+                                                <option value=" ">   </option>
+                                                <option selected="selected" value="WKO"> WKO </option>
+                                                <option value="WLB"> WLB </option>
+                                                <option value="Y&amp;Z"> Y&amp;Z </option>
+                                                <option value="SUP"> SUP </option>
+                                                <option value="MGR"> MGR </option>
+                                            </select>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet">
+                                            <span style="margin: 12px 10px 0 10px; display: block;" id="CenPH__lb_SFLCTL__lb_CNUTX_new"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container"><span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="wrk-ord-by-comments" data-upgraded=",MaterialDataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Comments</th>
+                                            <th>User Stamp</th>
+                                            <th>Stamp Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="button-container">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop">
+                                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+        <!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  SV: DSP WO Cmmts by ID    Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -384,4 +475,44 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant8": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_2ODNB": "CenPH__lb_SFLCTL__lb_2ODNB_new",
+                    "CenPH__lb_SFLCTL__lb_CNUTX": "CenPH__lb_SFLCTL__lb_CNUTX_new"
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2IXCD": "CenPH__lb_SFLCTL__lb_2IXCD_new"
+                }
+            }
+
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "click change blur focus");
+                $("#time").html("&nbsp;" + $("#time").html());
+                var dataMergeIndices = [[0], [1], [2]];
+                generateTableAndApplyInfiniteScroll("wrk-ord-by-comments", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+                $("#previous").click(function (event) {
+                    _00('F3', event);
+                });
+
+                $("#prompt").click(function (event) {
+                    _00('F4', event);
+                });
+                
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+                 //Display customer details
+                $(".icon-container").click(function (event) {
+                    var row = $("#wrk-ord-by-comments tbody tr.selected");
+                    selectCusotmer(row, "5", event);
+                });
+            });
+        </script>
     </asp:Content>

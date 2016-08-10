@@ -125,7 +125,15 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Name:</span> </div>
-                <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1V6CD_new"></span>&nbsp;&nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1WBCD_new"></span> </div>
+                <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1V6CD_new"></span> </div>
+              </div>
+            </div>
+            <!-- 4 col ends here --> 
+			 <!-- 4 col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Suffix:</span> </div>
+                <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1WBCD_new"></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
