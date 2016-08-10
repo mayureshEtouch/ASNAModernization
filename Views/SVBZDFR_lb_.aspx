@@ -61,8 +61,17 @@
       </div>
     </section>
     
-                       
-             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+             <section class="add-item">
+				<div class="add-item-wrapper">
+						<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--12-col pull-right">
+										<div class="icon-container"><span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></div>
+								</div>
+						</div>
+				</div>
+		</section>
+		          
+             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div style="overflow: auto;" class="table-container">
