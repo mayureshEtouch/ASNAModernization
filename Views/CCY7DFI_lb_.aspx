@@ -103,6 +103,12 @@
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
 
+ <style>
+        #displayData tr td:nth-child(4), #displayData tr td:nth-child(7){
+          text-align: right;
+        }
+      </style>
+
  <script type="text/javascript">
 
  var copyToAndFrom = {
@@ -140,10 +146,40 @@
               generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
 
-              $('#displayData tr td:nth-child(4)').each(function (i, col )
+               $('#displayData tr td:nth-child(1)').each(function (i, ele )
                {
-                 $(col).css("text-align","right");
+
+                  if($(ele).html() != undefined && $(ele).html() !='&nbsp;'){
+
+                     var html = $(ele).html();
+                     html = html.replace(/-/g,'');
+                     var ssn= html;
+                      $(ele).html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+
+                     $(ele).append('&nbsp;<a class="ssn-show"  data-ssn="'+ssn+'" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>');
+                  }
+
                });
+
+               $("body").on("mousedown taphold touchstart", ".ssn-show",function() {
+                 
+
+                    var parent = $(this).parent();
+                    if($(this).data('ssn') != undefined){
+                      $(parent).html($(parent).html().replace(/(\*+)?\d+/,$(this).data('ssn')))
+                      //$(parent).text($(this).data('ssn'));
+                    }
+                });
+                  $("body").on("mouseup dragend touchend",".ssn-show", function() {
+                    
+                   var parent = $(this).parent();
+                   var unmased_ssn = String($(this).data('ssn'));
+                    
+                   var masked_ssn = unmased_ssn.substr(0,(unmased_ssn.length-4)).replace(/\d/g,'*')+unmased_ssn.substr(-4);
+                   
+                   $(parent).html($(parent).html().replace(/(\*+)?\d+/,masked_ssn))
+                   //$(parent).text(masked_ssn);
+                 });
 
                var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
