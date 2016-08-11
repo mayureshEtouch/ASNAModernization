@@ -768,7 +768,7 @@
     ["Bld Exchange Item", "Change Entry Location", "Change Movement Status", "Change Repair Location", "Change Scheduling Info", "Change Service Location", "Change Scheduling Zone", "Change Workorder Comments", "Change Workorder Status", "Convert WO (Ins <--> Out)", "Display Customer Activity", "Display Comments by Id", "Display Exchange", "Display WO Product Mvmt", "Display Parts PO Detail", "Display S/O Audit", "Display Scheduling Dates", "Display S/O Inquiry", "Display Workorder Audit", "Display Wororder Payments", "Display W/O Timing", "Enter Customer Activity", "Enter/Update Messages", "Repair At Store", "Send to Other Srvc Loc"];
     generateSelectBoxOptions("CenPH__lb_SFLCTL__lb_CRGST_new",optionCodes,optionDesc);
     
-    $("#CenPH__lb_SFLCTL__lb_CRGST_new").prepend("<option val=' ' selected='selected'>Please Choose</option");
+    $("#CenPH__lb_SFLCTL__lb_CRGST_new").prepend('<option val=" " selected="selected">Please Choose</option>');
 
     copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
     if($("#CenPH__lb_SFLCTL__lb_CRGST_new").val() == null || $("#CenPH__lb_SFLCTL__lb_CRGST_new").val() == undefined){
@@ -780,7 +780,7 @@
       $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
     }
   });
-   
+
    var dataMergeIndices = [[0]];
    generateTableAndApplyInfiniteScroll("problem-description", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
  });
