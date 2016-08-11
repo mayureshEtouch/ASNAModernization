@@ -405,7 +405,7 @@
         $(document).ready(function () {
 
             copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
-            $("#empCode").ForceNumericOnly();
+            //$("#empCode").ForceNumericOnly();
             $("#CenPH__lb_RCDDTL1__lb_1AJCD").appendTo("#empCode");
 
             $("#previous").click(function (event) {
