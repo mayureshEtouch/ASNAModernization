@@ -69,7 +69,7 @@
             <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1ODNB_new"></span>
           </div>
           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-            <span class="summary-title">Comment ID status</span>
+            <span class="summary-title">Comment ID Status</span>
             <span class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1IXCD_new"></span>
           </div>
         </div>
