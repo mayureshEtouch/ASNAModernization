@@ -311,9 +311,9 @@
             <!-- 4 col ends here --> 
        <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
-              <div class="content-grid mdl-grid">
+              <div class="content-grid mdl-grid current">
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Current:</span> </div>
-                <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1B4NU_new"></span> </div>
+                <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1B4NU_new"></span> </div>
          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin: 0 0 0 10px;"> <span class="form-label">%:</span> </div>
                 <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1BJP3_new"></span> </div>
               </div>
@@ -500,6 +500,20 @@
 }
 .reduceMrgn > .mdl-cell > .content-grid {
   padding: 0 8px;
+}
+@media (min-width: 1024px) and (max-width: 1100px) { 
+	.current > .mdl-cell:first-child {
+		width: 60px !important;
+	}
+	.current > .mdl-cell:nth-child(2) {
+		width: 15px !important;
+		text-align: left !important;
+	}
+	.current > .mdl-cell:nth-child(3) {
+		width: 18px !important;
+		margin-left: 8px;
+	}
+	
 }
 </style>
 <script type="text/javascript">
