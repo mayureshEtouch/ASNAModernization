@@ -88,7 +88,7 @@
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
                               <span class="form-text"><select id="CenPH__lb_RCDDTL1__lb_1ACTP_new" name="CenPH__lb_RCDDTL1__lb_1ACTP_new" data-tb-index="1" style="width: 174px; padding: 0 2px;" onfocus="_09('#1ACTP','3,37','#RCDDTL1');">
 
-                                            <option selected="selected" value=" ">Please select</option>
+                                            <option selected="selected" value=" ">Please Select</option>
                                             <option value="RC">RC - Revolving Loan</option>
                                             <option value="IL">IL - Installment Loan</option>
                                             <option value="BC">BC - Bank Card</option>
