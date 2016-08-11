@@ -193,7 +193,7 @@
         width: 440px !important;
         left: 25% !important;
 /* margin-left: -400px !important; */
-        top: 27% !important;
+        top: 16% !important;
     }
     #__Page_PopUp tbody > tr:first-child {
       display: none;
