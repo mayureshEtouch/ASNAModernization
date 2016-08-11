@@ -85,14 +85,14 @@
                               <span class="form-label">Type:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
-                              <span class="form-text"><select id="CenPH__lb_RCDDTL1__lb_1ACTP_new" name="CenPH__lb_RCDDTL1__lb_1ACTP_new" data-tb-index="1" style="width: 174px; padding: 0 2px;">
+                              <span class="form-text"><select id="CenPH__lb_RCDDTL1__lb_1ACTP_new" name="CenPH__lb_RCDDTL1__lb_1ACTP_new" data-tb-index="1" style="width: 174px; padding: 0 2px;" onfocus="_09('#1ACTP','3,37','#RCDDTL1');">
                                             <option selected="selected" value=" ">Please select</option>
-                                            <option value="RC">RC</option>
-                                            <option value="IL">IL</option>
-                                            <option value="BC">BC</option>
-                                            <option value="CC">CC</option>
-                                            <option value="HL">HL</option>
-                                            <option value="GC">GC</option>
+                                            <option value="RC">RC - Revolving Loan</option>
+                                            <option value="IL">IL - Installment Loan</option>
+                                            <option value="BC">BC - Bank Card</option>
+                                            <option value="CC">CC - Credit Card</option>
+                                            <option value="HL">HL - Home Loan</option>
+                                            <option value="GC">GC - Gasoline Card</option>
                                         </select></span>
                           </div>
             </div>
@@ -137,7 +137,7 @@
                               <span class="form-label">Account Opened:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
-                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate" maxlength="8" style="width: 90px;" data-tb-index="1">
+                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate" maxlength="8" style="width: 90px;" data-tb-index="1" readonly="true">
                                              <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i><span id="reqdate" class="DdsCharField_OutputOnly"></span>
                           </div>
             </div>
@@ -150,7 +150,7 @@
                               <span class="form-label">Closed:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
-                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate2" maxlength="8" style="width: 90px;" data-tb-index="1">
+                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate2" maxlength="8" style="width: 90px;" data-tb-index="1" readonly="true">
                                              <i id="reqesdate2" class="material-icons calender-icon page-icons editable-data"></i><span id="clodate" class="DdsCharField_OutputOnly"></span>
                           </div>
             </div>
@@ -169,7 +169,7 @@
                               <span class="form-label">Payment Amount:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1PMNT_new" maxlength="7"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1PMNT_new" maxlength="8"></span>
                           </div>
             </div>
           </div>
@@ -181,7 +181,7 @@
                               <span class="form-label">Balance:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1L_usd_XX_new" maxlength="9"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1L_usd_XX_new" maxlength="10"></span>
                           </div>
             </div>
           </div>
@@ -208,6 +208,13 @@
     
   </main>
   <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+  <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+  <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+  <div class="button-container">
+    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+  </div>
+</div>
     <div id="modal" class="simplePopup"></div>
 </div>
         <div id="Div1" style="display:none;">
@@ -863,6 +870,10 @@
          left: 28% !important;
          top: 50% !important;
         }
+        .ui-datepicker-today 
+  {
+    background: #ff0000
+  }
       </style>
       <script type="text/javascript">
         var copyToAndFrom = {
@@ -875,7 +886,8 @@
                     "CenPH__lb_RCDDTL1__lb_1PMNT": "CenPH__lb_RCDDTL1__lb_1PMNT_new",
                     "CenPH__lb_RCDDTL1__lb_1L_usd_XX": "CenPH__lb_RCDDTL1__lb_1L_usd_XX_new",
                     "ctl00\\$CenPH\\$_lb_RCDDTL1_V1OPDT": "requestdate",
-                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1CLOD": "requestdate2"
+                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1CLOD": "requestdate2",
+                    "CenPH__lb_RCDDTL1__lb_1ACTP": "CenPH__lb_RCDDTL1__lb_1ACTP_new"
                 }
             }
             $(document).ready(function () {
@@ -906,8 +918,8 @@
               });
 
               $("#CenPH__lb_RCDDTL1__lb_1A_lb_XX_new").ForceNumericOnly();
-              $("#CenPH__lb_RCDDTL1__lb_1PMNT_new").ForceNumericOnly();
-              $("#CenPH__lb_RCDDTL1__lb_1L_usd_XX_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDDTL1__lb_1PMNT_new").numericWithTwoDecimalPrecisions();
+              $("#CenPH__lb_RCDDTL1__lb_1L_usd_XX_new").numericWithTwoDecimalPrecisions();
 
               $("#CenPH__lb_RCDDTL1__lb_1UMTX_new").focus();
 
@@ -945,7 +957,30 @@
                 $("body").on("click", ".simplePopupClose", function() {
                    $(".simplePopupBackground1").hide();
                   
-                });     
+                });
+
+                if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                    $(".editable-data").show();
+                    $(".ro-data").hide();
+                    $(".confirmation-outer-conatiner").hide();
+                    $(".OverlayPopupBackground").hide();
+                } else {
+                    $(".editable-data").hide();
+                    $(".ro-data").show();
+                    $(".confirmation-outer-conatiner").show();
+                    $(".OverlayPopupBackground").show();
+                }
+                
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                }); 
+
+                
             });
       </script>
     </asp:Content>
