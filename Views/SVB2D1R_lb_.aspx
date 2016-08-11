@@ -115,7 +115,7 @@
                         <!--  col starts here -->
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">RFG:</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">REG:</span> </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1REGX_new"></span> </div>
                             </div>
                         </div>
@@ -403,7 +403,7 @@
                         <!-- col starts here -->
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Vendor Return Date:</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Vendor Number:</span> </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_VDDPDT_new"></span></div>
                             </div>
                         </div>
