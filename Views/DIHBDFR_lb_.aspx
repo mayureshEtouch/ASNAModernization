@@ -123,6 +123,7 @@
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                                 </div>
@@ -787,7 +788,7 @@
                 selectCusotmer(row, "5", event);
             });
             $('#previous').click(function (event) {
-                _00('F3', event);
+                _00('F12', event);
             });
             $('#search').click(function (event) {
                 _00('enter', event);
@@ -796,9 +797,9 @@
                 _00('F4', event);
             });
 
-            //$("#next").click(function (event) {
-            //    _00('enter', event);
-            //});
+            $("#exit").click(function (event) {
+                _00('F3', event);
+            });
         });
     </script>
     <style>
