@@ -83,7 +83,7 @@
                                           <div class="mdl-cell mdl-cell--1-col">
                                             <span class="summary-table-title pull-right">Name</span>
                                           </div>
-                                          <div class="mdl-cell mdl-cell--3-col">
+                                          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                                             <input type="text" id="name" maxlength="30" class="mdl-textfield__input">
                                           </div>
                                           <div class="mdl-cell mdl-cell--1-col">
