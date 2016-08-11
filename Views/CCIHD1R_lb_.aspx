@@ -24,8 +24,14 @@
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <style>
         .normal-table td {
-            padding: 2px 15px 2px 8px;
+            padding: 2px 22px;
         }
+		
+@media (min-width: 768px) and (max-width: 1023px) {
+	.normal-table td {
+            padding: 2px 10px;
+        }
+}
     </style>
     <!-- Modified HTML code starts here -->
     <div class="OverlayPopupBackground"></div>
@@ -89,6 +95,13 @@
                                 </div>
                             </div>
                         </div>
+						</div>
+                            </div>
+                        </div>
+						
+						<div class="table-data-wrapper mrgnTp16">
+                <div class="table-data-maincontainer">
+                    <div class="table-container table-container-search">
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- col starts here -->
@@ -193,6 +206,14 @@
                             <!-- 12 col ends here -->
                         </div>
                         <!-- content-grid mdl-grid ends here -->
+						
+						</div>
+						</div></div>
+						
+						
+						<div class="table-data-wrapper mrgnTp16">
+                <div class="table-data-maincontainer">
+                    <div class="table-container table-container-search">
 
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
@@ -430,6 +451,13 @@
                             </div>
                             <!-- col ends here -->
                         </div>
+						
+						</div></div></div>
+						
+						
+						<div class="table-data-wrapper mrgnTp16">
+                <div class="table-data-maincontainer">
+                    <div class="table-container table-container-search">
 
                         <div class="content-grid mdl-grid" style="padding: 20px 0;">
                             <!-- 12 col starts here -->
