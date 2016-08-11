@@ -122,10 +122,10 @@
           <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
                               <span class="form-label">Account Opened:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                               <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="" maxlength="8" style="width: 90px;" data-tb-index="4">
                                              <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                           </div>
@@ -821,10 +821,10 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
       <style>
         #__Page_PopUp {
-            min-width: 450px !important;
-            width: 600px !important;
+            min-width: 700px !important;
+            width: 700px !important;
             left: 50% !important;
-             margin-left: -300px;
+             margin-left: -350px;
             top: 15% !important;
             }
       
