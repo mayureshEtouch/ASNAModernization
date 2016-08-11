@@ -453,7 +453,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Model description:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Model Description:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CA2TX_new"></span> </div>
                 </div>
               </div>
