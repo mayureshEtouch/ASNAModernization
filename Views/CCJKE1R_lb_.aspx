@@ -7,16 +7,19 @@
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/additional-methods.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/tooltips.js")%>"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery-ui.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
+
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -70,7 +73,7 @@
                               <span class="form-label">Creditor:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1UMTX_new" maxlength="20"></span>
                           </div>
             </div>
           </div>
@@ -82,7 +85,15 @@
                               <span class="form-label">Type:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
-                              <span class="form-text"><select class="mdl-textfield__input" data-tb-index="2" style="width: 90px;"><option value="">Test</option><option value="">Test1</option></select></span>
+                              <span class="form-text"><select id="CenPH__lb_RCDDTL1__lb_1ACTP_new" name="CenPH__lb_RCDDTL1__lb_1ACTP_new" data-tb-index="1" style="width: 174px; padding: 0 2px;">
+                                            <option selected="selected" value=" ">Please select</option>
+                                            <option value="RC">RC</option>
+                                            <option value="IL">IL</option>
+                                            <option value="BC">BC</option>
+                                            <option value="CC">CC</option>
+                                            <option value="HL">HL</option>
+                                            <option value="GC">GC</option>
+                                        </select></span>
                           </div>
             </div>
           </div>
@@ -100,7 +111,7 @@
                               <span class="form-label">Account Number:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="3" size="15"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1A_lb_XX_new" maxlength="16"></span>
                           </div>
             </div>
           </div>
@@ -126,8 +137,8 @@
                               <span class="form-label">Account Opened:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
-                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="" maxlength="8" style="width: 90px;" data-tb-index="4">
-                                             <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate" maxlength="8" style="width: 90px;" data-tb-index="1">
+                                             <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i><span id="reqdate" class="DdsCharField_OutputOnly"></span>
                           </div>
             </div>
           </div>
@@ -139,8 +150,8 @@
                               <span class="form-label">Closed:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
-                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="" maxlength="8" style="width: 90px;" data-tb-index="5">
-                                             <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
+                              <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate2" maxlength="8" style="width: 90px;" data-tb-index="1">
+                                             <i id="reqesdate2" class="material-icons calender-icon page-icons editable-data"></i><span id="clodate" class="DdsCharField_OutputOnly"></span>
                           </div>
             </div>
           </div>
@@ -158,7 +169,7 @@
                               <span class="form-label">Payment Amount:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="6" size="15"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1PMNT_new" maxlength="7"></span>
                           </div>
             </div>
           </div>
@@ -170,7 +181,7 @@
                               <span class="form-label">Balance:</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="7" size="15"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1L_usd_XX_new" maxlength="9"></span>
                           </div>
             </div>
           </div>
@@ -184,7 +195,7 @@
         <div class="button-container">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
@@ -199,7 +210,7 @@
   <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div>
 </div>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: E1W Cust Crd Ref      Edit record(1 screen)                                                      --%>
       <%--  CRTDSPF                                                                                              --%>
@@ -853,4 +864,88 @@
          top: 50% !important;
         }
       </style>
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    
+                  },
+                "inputFields": {
+                    "CenPH__lb_RCDDTL1__lb_1UMTX": "CenPH__lb_RCDDTL1__lb_1UMTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1A_lb_XX": "CenPH__lb_RCDDTL1__lb_1A_lb_XX_new",
+                    "CenPH__lb_RCDDTL1__lb_1PMNT": "CenPH__lb_RCDDTL1__lb_1PMNT_new",
+                    "CenPH__lb_RCDDTL1__lb_1L_usd_XX": "CenPH__lb_RCDDTL1__lb_1L_usd_XX_new",
+                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1OPDT": "requestdate",
+                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1CLOD": "requestdate2"
+                }
+            }
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              $("#CenPH__lb_RCDDTL1__lb_1ACTP_new").val($("#CenPH__lb_RCDDTL1__lb_1ACTP").val());
+              $("#CenPH__lb_RCDDTL1__lb_1ACTP_new").on('change', function () {
+                $("#CenPH__lb_RCDDTL1__lb_1ACTP").val($("#CenPH__lb_RCDDTL1__lb_1ACTP_new").val());
+              });
+              $("#reqdate").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1OPDT").html());
+              $("#requestdate").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1OPDT").val());
+              $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+
+              $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
+              $("#requestdate").on('change', function () {
+                var date = $("#requestdate").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1OPDT").val(date[0] + "/"+date[1] + "/"+date[2]);
+              });
+
+              $("#clodate").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CLOD").html());
+              $("#requestdate2").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CLOD").val());
+              $("#requestdate2").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+
+              $("#reqesdate2").click(function () { $("#requestdate2").datepicker("show"); });
+              $("#requestdate2").on('change', function () {
+                var date = $("#requestdate2").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1CLOD").val(date[0] + "/"+date[1] + "/"+date[2]);
+              });
+
+              $("#CenPH__lb_RCDDTL1__lb_1A_lb_XX_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDDTL1__lb_1PMNT_new").ForceNumericOnly();
+              $("#CenPH__lb_RCDDTL1__lb_1L_usd_XX_new").ForceNumericOnly();
+
+              $("#CenPH__lb_RCDDTL1__lb_1UMTX_new").focus();
+
+              $("form input[type=text]").on('input',function () {
+                var tab = $(this).attr("tabindex");
+                if($(this).val().length == $(this).attr('maxlength')) {
+                //$(this).next("input").focus();
+                  tab++;
+                  $("[tabindex='"+tab+"']").focus();
+          
+                }
+              });
+              
+              $("#exit").click(function (event) {
+                   _00('F3', event);
+              });
+
+              $("#prompt").click(function (event) {
+                   _00('F4', event);
+              });
+
+              $("#submit").click(function (event) {
+                   _00('Enter', event);
+              });
+
+              $('.close-icon').click(function (event) {
+                    _00("F3", event);
+              });
+
+              if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                  
+                });     
+            });
+      </script>
     </asp:Content>
