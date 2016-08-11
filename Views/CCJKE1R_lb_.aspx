@@ -69,23 +69,23 @@
           <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-label">Creditor:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                               <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1UMTX_new" maxlength="20"></span>
                           </div>
             </div>
           </div>
           <!-- col ends here -->
           <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
                               <span class="form-label">Type:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
-                              <span class="form-text"><select id="CenPH__lb_RCDDTL1__lb_1ACTP_new" name="CenPH__lb_RCDDTL1__lb_1ACTP_new" data-tb-index="1" style="width: 174px; padding: 0 2px;">
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
+                              <span class="form-text"><select id="CenPH__lb_RCDDTL1__lb_1ACTP_new" name="CenPH__lb_RCDDTL1__lb_1ACTP_new" data-tb-index="1" style="padding: 0 2px;">
                                             <option selected="selected" value=" ">Please select</option>
                                             <option value="RC">RC</option>
                                             <option value="IL">IL</option>
@@ -107,10 +107,10 @@
           <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-label">Account Number:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                               <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1A_lb_XX_new" maxlength="16"></span>
                           </div>
             </div>
@@ -131,12 +131,12 @@
         <!-- content-grid mdl-grid starts here -->
         <div class="content-grid mdl-grid">
           <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-label">Account Opened:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                               <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate" maxlength="8" style="width: 90px;" data-tb-index="1">
                                              <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i><span id="reqdate" class="DdsCharField_OutputOnly"></span>
                           </div>
@@ -144,12 +144,12 @@
           </div>
           <!-- col ends here -->
           <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
                               <span class="form-label">Closed:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
+                          <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
                               <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="requestdate2" maxlength="8" style="width: 90px;" data-tb-index="1">
                                              <i id="reqesdate2" class="material-icons calender-icon page-icons editable-data"></i><span id="clodate" class="DdsCharField_OutputOnly"></span>
                           </div>
@@ -165,22 +165,22 @@
           <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-label">Payment Amount:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                               <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1PMNT_new" maxlength="7"></span>
                           </div>
             </div>
           </div>
           <!-- col ends here -->
           <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
                               <span class="form-label">Balance:</span>
                           </div>
-                          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                          <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet">
                               <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1L_usd_XX_new" maxlength="9"></span>
                           </div>
             </div>
