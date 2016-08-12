@@ -103,7 +103,7 @@
 												<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
                                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
-                                                
+                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
                                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="request">Request</span>
 												</div>
 												
@@ -197,6 +197,11 @@
 			$("#prompt").click(function (event) {
                 _00('F4', event);
             });
+
+        $("#refresh").click(function (event) {
+                _00('F5', event);
+            });
+      
 			
 			/*$("#refresh").click(function (event) {
                 _00('F5', event);
@@ -213,7 +218,7 @@
            });
          </script>
 		 
-        <div id="Div1" style="display:none">
+        <div id="Div1" style="display:none;">
             
       <%--  CR: DSP Cust Requests     Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>

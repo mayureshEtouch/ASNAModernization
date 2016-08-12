@@ -29,13 +29,13 @@
     <div class="content-grid mdl-grid">
       <div class="mdl-cell mdl-cell--8-col"> 
         <!-- Title --> 
-        <span class="heading-h1">Display Selected FICO Details</span> </div>
+        <span class="heading-h1" id="heading">Display Selected FICO Details</span> </div>
         <div class="mdl-cell mdl-cell--4-col pull-right"> 
           <!-- Navigation --> 
           <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRCRD1I</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span> </div>
         </div>
       </section>
-      <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+      <section class="table-data-content-container spacer-container-bottom mrgnTp16 form-div-first" style="display:none;">
         <div class="table-data-wrapper">
           <div class="table-data-maincontainer">
             <div class="table-container table-container-search"> 
@@ -517,6 +517,98 @@
         </div>
       </div>
     </section>
+    			<section class="table-data-content-container spacer-container-bottom mrgnTp16 form-div-second" style="display:none;">
+    				<div class="table-data-wrapper">
+    					<div class="table-data-maincontainer">
+    						<div class="table-container table-container-search">
+    						
+    							
+    							<!-- content-grid mdl-grid starts here -->
+    				<div class="content-grid mdl-grid">
+    					<!-- col starts here -->
+    				  	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+    						<div class="content-grid mdl-grid" style="padding:0">
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+                               		<span class="form-label">Customer ID:</span>
+                            	</div>
+                            	<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet value-field" style="margin:0">
+                               		<span class="form-text" id="CenPH__lb_RCDKEY__lb_1ALNB_new"></span>
+                            	</div>
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+    								<span class="form-text">Value, F4 for list</span>
+                            	</div>
+    						</div>
+    					</div>
+    					<!-- col ends here -->
+    					
+    					<!-- col starts here -->
+    				  	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+    						<div class="content-grid mdl-grid" style="padding:0">
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+                               		<span class="form-label">Application:</span>
+                            	</div>
+                            	<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet value-field" style="margin:0">
+                               		<span class="form-text" id="CenPH__lb_RCDKEY__lb_1ITNO_new"></span>
+                            	</div>
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+    								<span class="form-text">Value, F4 for list</span>
+                            	</div>
+    						</div>
+    					</div>
+    					<!-- col ends here -->
+    					
+    					<!-- col starts here -->
+    				  	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+    						<div class="content-grid mdl-grid" style="padding:0">
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+                               		<span class="form-label">Bureau ID:</span>
+                            	</div>
+                            	<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet value-field" style="margin:0">
+                               		<span class="form-text" id="CenPH__lb_RCDKEY__lb_1BFCO_new"></span>
+                            	</div>
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+    								<span class="form-text">Value, F4 for list</span>
+                            	</div>
+    						</div>
+    					</div>
+    					<!-- col ends here -->
+    					
+    					<!-- col starts here -->
+    				  	<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+    						<div class="content-grid mdl-grid" style="padding:0">
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+                               		<span class="form-label">Report Requested:</span>
+                            	</div>
+                            	<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet value-field" style="margin:0">
+                               		<span class="form-text" id="ctl00$CenPH$_lb_RCDKEY_V1HFNB_new"></span>
+                            	</div>
+    							<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+    								<span class="form-text">Date, F4 for list</span>
+                            	</div>
+    						</div>
+    					</div>
+    					<!-- col ends here -->
+    				</div>
+    				<!-- content-grid mdl-grid ends here -->
+    							
+    							<div class="button-container">
+    							<div class="content-grid mdl-grid">
+    								<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+    									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span>
+    									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span>
+    								</div>
+    								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+    									<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
+    								</div>
+    							</div>
+    						</div>
+    							
+    																						
+    							</div>																	
+    						</div>
+    						
+    					</div>
+    			</section>
   </main>
   <div id="modal1" class="simplePopup"></div>
   <!-- Modified HTML code ends here -->
@@ -539,12 +631,16 @@
     "inputFields": {}
   }
   var copyToAndFrom1 = {
-   "displayOnlyFields": {},
+   "displayOnlyFields": {
+   	"CenPH_DdsConstant11":"date",
+   	"CenPH__lb_RCDKEY__lb__lb_TME":"time",
+   	"CenPH__lb_RCDKEY__lb_1ALNB":"CenPH__lb_RCDKEY__lb_1ALNB_new",
+   	"CenPH__lb_RCDKEY__lb_1ITNO":"CenPH__lb_RCDKEY__lb_1ITNO_new",
+   	"CenPH__lb_RCDKEY__lb_1BFCO":"CenPH__lb_RCDKEY__lb_1BFCO_new",
+   	"ctl00\\$CenPH\\$_lb_RCDKEY_V1HFNB":"ctl00\\$CenPH\\$_lb_RCDKEY_V1HFNB_new",
+   },
    "inputFields": {
-     "CenPH__lb_RCDKEY__lb_1ANCO":"CenPH__lb_RCDKEY__lb_1ANCO_new",
-     "CenPH__lb_RCDKEY__lb_1ANCO":"CenPH__lb_RCDKEY__lb_1ANCO_new",
-     "CenPH__lb_RCDKEY__lb_1ANCO":"CenPH__lb_RCDKEY__lb_1ANCO_new",
-     "CenPH__lb_RCDKEY__lb_1ANCO":"CenPH__lb_RCDKEY__lb_1ANCO_new",
+     
    }
  }
  var copyToAndFrom2 = {
@@ -605,9 +701,9 @@
 }
 $(document).ready(function () {
   copyData(copyToAndFromCommon,"NONE");
-  if($("#CenPH__lb_RCDKEY__lb_1ANCO").length>0){
-   $(".form-div-first").show();
-   $("#heading").html("Letter Code Key Screen");
+  if($("#CenPH__lb_RCDKEY__lb_1ALNB").length>0){
+   $(".form-div-second").show();
+   $("#heading").html("CR: DS1 To Display KEY SCREEN");
    copyData(copyToAndFrom1, "keyup keydown change blur mouseup mousedown");
  }else if($('#CenPH__lb_CONFIRM_VZCFCD').length > 0){
   /*Pop up confirm box*/
@@ -624,7 +720,7 @@ $(document).ready(function () {
  });
 
 }else{
-  $(".form-div-second").show();
+  $(".form-div-first").show();
   copyData(copyToAndFrom2, "NONE");
          $.each(copyToAndFrom2['displayOnlyFields'],function(i,el){
            if($("#"+copyToAndFrom2['displayOnlyFields'][i]).html()==''){
