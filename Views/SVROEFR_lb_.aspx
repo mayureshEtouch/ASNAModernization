@@ -132,8 +132,11 @@
             ["MGR", "SUP", "WKO", "WLB", "Y&Z"];
             var optionDesc = ["Manager Review", "Supervisor Review", "Work Order", "Warranty Labor", "Y&Z Process"];
             generateSelectBoxOptions("CenPH__lb_SFLCTL__lb_2IXCD_new",optionCodes,optionDesc);
+            $("#CenPH__lb_SFLCTL__lb_2IXCD_new").prepend('<option val=" " selected="selected">Please Choose</option>');
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-
+             if($("#CenPH__lb_SFLCTL__lb_2IXCD_new").val() == null || $("#CenPH__lb_SFLCTL__lb_2IXCD_new").val() == undefined){
+              $("#CenPH__lb_SFLCTL__lb_2IXCD_new").val($("#CenPH__lb_SFLCTL__lb_2IXCD_new option:first").val());
+            }
 
             var dataMergeIndices = [[0],["&nbsp;"],[1]];
             generateTableAndApplyInfiniteScroll("comments", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLEDOUBLECLICK");
@@ -148,7 +151,7 @@
           //var placeHolderElement = placeHolderElement || '<input type="text"  id="" class="mdl-textfield__input input_change">';
           $(tableSelector).each(function(i) {
             var div_id = $(this).attr('id');
-            var placeHolderElement = $('<input>').attr({type: 'text', id: '', name: '',class:'mdl-textfield__input input_change'}); 
+            var placeHolderElement = $('<input>').attr({type: 'text', id: '', name: '',class:'mdl-textfield__input input_change',maxlength:'60'}); 
             
             if (div_id !== 'CenPH__lb_SFLRCD__End') {
               var row_num_arr = div_id.match(/\d+$/);
