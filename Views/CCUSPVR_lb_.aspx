@@ -151,7 +151,7 @@
                               <span class="form-label">Down Pmt not Met. How Much Do You Have ?</span>
                           </div>
                           <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet tablet-mrgleft" style="margin:0 0 0 8px;">
-                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_PHBVA_new" maxlength="11"></span>
+                              <span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_PHBVA_new" maxlength="8"></span>
                           </div>
             </div>
           </div>
