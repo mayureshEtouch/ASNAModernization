@@ -686,6 +686,20 @@
                 $("#submit").click(function (event) {
                    _00('Enter', event);
                 });
+
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                  
+                });
+
+                $('.close-icon').click(function (event) {
+                    _00("F12", event);
+              });
             });
       </script>
     </asp:Content>
