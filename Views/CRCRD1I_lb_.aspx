@@ -43,7 +43,7 @@
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid" style="padding:0"> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Application:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNO_new"></span> </div>
@@ -51,7 +51,7 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Requested:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1HFNB_new"></span> </div>

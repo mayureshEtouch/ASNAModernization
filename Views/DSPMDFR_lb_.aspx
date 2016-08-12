@@ -70,7 +70,7 @@
                                         <!-- content-grid mdl-grid starts here -->
                                         <div class="content-grid mdl-grid">
                                             <!-- col starts here -->
-                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
                                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                                                         <span class="form-label">On File Date:</span>
@@ -82,7 +82,7 @@
                                             </div>
                                             <!-- col ends here -->
                                             <!-- col starts here -->
-                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
                                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                                         <span class="form-label">Employee Code:</span>
@@ -94,7 +94,7 @@
                                             </div>
                                             <!-- col ends here -->
                                             <!-- col starts here -->
-                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
                                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
                                                         <span class="form-label">Call Back Date:</span>
@@ -110,7 +110,7 @@
                                         <!-- content-grid mdl-grid starts here -->
                                         <div class="content-grid mdl-grid">
                                             <!-- col starts here -->
-                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
                                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet" style="margin:0">
                                                         <span class="form-label">Customer Activity Type:</span>
@@ -122,12 +122,12 @@
                                             </div>
                                             <!-- col ends here -->
                                             <!-- col starts here -->
-                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="padding:0">
+                                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
-                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0">
+                                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                                         <span class="form-label">Activity Note:</span>
                                                     </div>
-                                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet">
+                                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                                         <span class="form-text" id="CenPH__lb_SFLCTL__lb_CQNTX_new"></span>
                                                     </div>
                                                 </div>
