@@ -657,7 +657,7 @@
             $(document).ready(function () {
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-
+              $("#CenPH__lb_RCDDTL1__lb_1UJTX_new").focus();
               if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                     $(".editable-data").show();
                     $(".ro-data").hide();
