@@ -301,6 +301,9 @@ width: 100% !important;
               $("#previous").click(function (event) {
                     _00('F3', event);
               });
+
+              $("#Duration").ForceNumericOnly();
+               $("#Months").ForceNumericOnly();
 			  
 			  $("#submit").click(function (event) {
                     _00('Enter', event);
