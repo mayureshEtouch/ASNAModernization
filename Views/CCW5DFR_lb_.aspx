@@ -103,7 +103,7 @@
                                         <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop">
                                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
                                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="phoneValidation">Phone Validation</span>
-                                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">reset</span>
+                                            <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">reset</span> -->
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right">
                                         </div>
@@ -657,9 +657,9 @@
                     _00('F9', event);
                 });
 
-                $("#reset").click(function (event) {
+                /*$("#reset").click(function (event) {
                     _00('F5', event);
-                });
+                });*/
                 
             });
         </script>
