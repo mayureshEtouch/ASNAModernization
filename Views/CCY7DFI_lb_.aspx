@@ -105,9 +105,10 @@
 <!-- Modified HTML code ends here -->
 
 <style>
-  #displayData tr td:nth-child(4){
+  #displayData tr td:nth-child(5){
     text-align: right;
   }
+
 </style>
 
  <script type="text/javascript">
