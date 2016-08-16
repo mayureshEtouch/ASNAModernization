@@ -937,6 +937,16 @@
                     _00("F12", event);
                 });
 
+              if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                   $(".simplePopupBackground1").show();
+                } else {
+                   $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                   $(".simplePopupBackground1").hide();
+                  
+                });
+
               /* if( $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').has('option').length > 0 ) {
                 $('#CenPH__lb_RCDDTL1__lb_DM9ST_new').show();
               } else{
