@@ -75,7 +75,8 @@
                                 <tr>
                                     <th>Social Security  Number</th>
                                     <th>D.O.B.</th>
-                                    <th>Driver License</th>
+                                    <th>Driver State</th>
+                                     <th>Driver License</th>
                                     <th>Credit Limit</th>
                                     <th>Status-Use Credit Limit</th>
                                     <th>Credit Score</th>
@@ -162,7 +163,7 @@
 
                }
 
-              var dataMergeIndices = [[0], [1], [2 , "&nbsp;", 3] , [4], [5], [6], [7] ,[8]];
+              var dataMergeIndices = [[0], [1], [2], [3] , [4], [5], [6], [7] ,[8]];
 
               generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
