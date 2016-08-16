@@ -339,16 +339,17 @@
                       <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Address:</span> </div>
                       <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;">
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DANTX_new"></span>
-                      &nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DUSTX_new"></span>
                       </div>
                       </div>
                     </div>
                     <!-- col ends here --> 
                     <!-- col starts here -->
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                      <div class="content-grid mdl-grid">
-
-
+                       <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Zip Code:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;">
+                        <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DUSTX_new"></span>
+                      </div>
                       </div>
                     </div>
                     <!-- col ends here --> 

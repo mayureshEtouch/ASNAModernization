@@ -312,6 +312,12 @@
       });
       
       
+       $(".simplePopupClose").click(function(event){
+          var ele = $("#__focusID__").val().split('$')[1]+"_"+$("#__focusID__").val().split('$')[2]+"_new" ;
+          $("#"+ele).focus();
+       });
+
+       $("#CenPH__lb_RCDDTL1__lb_1DVR_lb__new").ForceNumericOnly();
       
       if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
         /*Pop up confirm box*/

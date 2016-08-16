@@ -100,6 +100,8 @@
                           </div>
                           <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0 4px">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ANTX_new"> <br/>
+                      <br/>  </span><br/><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DBPTX_new"> <br/>
+                      <br/>  </span><br/><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DBMTX_new"> <br/>
                       <br/>  </span>
                           </div>
                     </div>
@@ -796,7 +798,9 @@
                 "displayOnlyFields": {
                     "CenPH__lb_RCDDTL1__lb_1NMRF": "CenPH__lb_RCDDTL1__lb_1NMRF_new",
                     "CenPH__lb_RCDDTL1__lb_1REFT": "CenPH__lb_RCDDTL1__lb_1REFT_new",
-                    "CenPH__lb_RCDDTL1__lb_1ANTX+CenPH__lb_RCDDTL1__lb_DBPTX+CenPH__lb_RCDDTL1__lb_DBMTX+CenPH__lb_RCDDTL1__lb_1APTX": "CenPH__lb_RCDDTL1__lb_1ANTX_new",
+                    "CenPH__lb_RCDDTL1__lb_1ANTX+CenPH__lb_RCDDTL1__lb_DBMTX": "CenPH__lb_RCDDTL1__lb_1ANTX_new",
+                    "CenPH__lb_RCDDTL1__lb_DBPTX": "CenPH__lb_RCDDTL1__lb_DBPTX_new",
+                    "CenPH__lb_RCDDTL1__lb_DBMTX+CenPH__lb_RCDDTL1__lb_1APTX": "CenPH__lb_RCDDTL1__lb_DBMTX_new",
                     "CenPH__lb_RCDDTL1__lb_1BXNB": "CenPH__lb_RCDDTL1__lb_1BXNB_new",
                     "CenPH__lb_RCDDTL1__lb_1DRCD+CenPH_DdsConstant11+CenPH__lb_RCDDTL1__lb_1DVR_lb_": "CenPH__lb_RCDDTL1__lb_1DRCD_new",
                     "CenPH__lb_RCDDTL1__lb_1AAVN": "CenPH__lb_RCDDTL1__lb_1AAVN_new",
