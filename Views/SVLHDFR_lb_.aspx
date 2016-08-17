@@ -48,17 +48,12 @@
                                             <span style="margin: 12px 10px 0 0; display: block;" id="CenPH__lb_SFLCTL__lb_2ODNB_new"></span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Comment ID</span> </div>
-                                        <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet">
-                                            <select class="mdl-textfield__input" id="CenPH__lb_SFLCTL__lb_2IXCD_new" style="margin-top: 8px;">
-                                                <option value=" ">   </option>
-                                                <option selected="selected" value="WKO"> WKO </option>
-                                                <option value="WLB"> WLB </option>
-                                                <option value="Y&amp;Z"> Y&amp;Z </option>
-                                                <option value="SUP"> SUP </option>
-                                                <option value="MGR"> MGR </option>
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
+                                            <select class="mdl-textfield__input" id="CenPH__lb_SFLCTL__lb_2IXCD_new" style="margin-top: 8px;" onfocus="_09('#2IXCD','3,35','#SFLCTL');">
+                                               
                                             </select>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet">
                                             <span style="margin: 12px 10px 0 10px; display: block;" id="CenPH__lb_SFLCTL__lb_CNUTX_new"></span>
                                         </div>
                                     </div>
@@ -92,7 +87,7 @@
                                         <tr>
                                             <th>Comments</th>
                                             <th>User Stamp</th>
-                                            <th>Stamp Date</th>
+                                            <th>Date Stamp Or Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -489,8 +484,17 @@
             }
 
             $(document).ready(function () {
-                copyData(copyToAndFrom, "click change blur focus");
                 $("#time").html("&nbsp;" + $("#time").html());
+                var optionCodes = 
+                ["MGR", "SUP", "WKO", "WLB", "Y&Z"];
+                var optionDesc = 
+                ["Manager Review", "Supervisor Review", "Work Order", "Warranty Labor", "Y&Z Process"];
+                generateSelectBoxOptions("CenPH__lb_SFLCTL__lb_2IXCD_new",optionCodes,optionDesc);
+                $("#CenPH__lb_SFLCTL__lb_2IXCD_new").prepend('<option val=" " selected="selected">Please Choose</option>');
+                copyData(copyToAndFrom, "click change blur focus");
+                 if($("#CenPH__lb_SFLCTL__lb_2IXCD_new").val() == null || $("#CenPH__lb_SFLCTL__lb_2IXCD_new").val() == undefined){
+                  $("#CenPH__lb_SFLCTL__lb_2IXCD_new").val($("#CenPH__lb_SFLCTL__lb_2IXCD_new option:first").val());
+                }
                 var dataMergeIndices = [[0], [1], [2]];
                 generateTableAndApplyInfiniteScroll("wrk-ord-by-comments", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
 
