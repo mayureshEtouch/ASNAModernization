@@ -53,15 +53,15 @@
                     <td></td>
                   </tr>
                   <tr>
-                    <td class="th-text-heading"><span class="form-label">Collection Items:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1BGNU_new_div">Collection Items:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BGNU_new"></td>
-                    <td class="th-text-heading"><span class="form-label">Over 500:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1BHNU_new_div">Over 500:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BHNU_new"></td>
-                    <td class="th-text-heading"><span class="form-label">Over 2000:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1BINU_new_div">Over 2000:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BINU_new"></td>
-                    <td class="th-text-heading"><span class="form-label">Non Med:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1BJNU_new_div">Non Med:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BJNU_new"></td>
-                    <td class="th-text-heading"><span class="form-label">Last:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1BKNU_new_div">Last:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BKNU_new"></td>
                     <td></td>
                     <td></td>
