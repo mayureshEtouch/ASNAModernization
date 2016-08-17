@@ -87,7 +87,7 @@
                                         <tr>
                                             <th>Comments</th>
                                             <th>User Stamp</th>
-                                            <th>Date Stamp Or Date</th>
+                                            <th>Date Stamp</th>
                                         </tr>
                                     </thead>
                                     <tbody>
