@@ -155,9 +155,9 @@
                     <td  id="CenPH__lb_RCDDTL1__lb_1CANU_new"></td>
                     <td class="th-text-heading"><span class="form-label">I/L Newest:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1CBNU_new"></td>
-                    <td class="th-text-heading"><span class="form-label">FICO Score:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1CLNU_new_div">FICO Score:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1CLNU_new"></td>
-                    <td class="th-text-heading"><span class="form-label">Strategy Used:</span></td>
+                    <td class="th-text-heading"><span class="form-label" id="CenPH__lb_RCDDTL1__lb_1CMNU_new_div">Strategy Used:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1CMNU_new"></td>
                     <td></td>
                     <td></td>
