@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </section>
-             <section class="table-data-content-container spacer-container-bottom">
+             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 5px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div style="overflow: auto;" class="table-container">
@@ -106,9 +106,9 @@
                             <th>Bank</th>
                             <th>Customer Name</th>
                             <th>CO</th>
-                            <th>Payment Mode</th>
-                            <th>Pay-off</th>
-                            <th>$</th>
+                            <th>Payment</th>
+                            <th>Mode</th>
+                            <th>Pay-off  $</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -138,10 +138,11 @@
 </div>
     <style>
         #__Page_PopUp {
-            min-width: 540px !important;
-            width: 540px !important;
+            min-width: 700px !important;
+            width: 700px !important;
       left: 50% !important;
-      margin-left: -225px;
+      margin-left: -350px;
+	  top: 14% !important;
         }
     #__Page_PopUp > tr:first-child {
       display: none;
@@ -154,7 +155,7 @@
           .modal-dialog-container {
             width: 100%;
             margin-top: 0;
-      margin-bottom : 20px !important;
+      margin-bottom : 15px !important;
       
         }
         .mdl-layout__content {
@@ -174,6 +175,10 @@
                 left: 30% !important;
                 top: 40% !important;
               }
+			  #displayData tr td:nth-child(10) {
+            text-align: right !important;
+        }
+			  
     </style>
     <script type="text/javascript">
 
@@ -226,7 +231,10 @@
                     _00('F3', event);
               });
 
-            
+           $('#displayData tr td').each(function (i, col )
+             {
+              $(col).text($(col).text().trim());
+             });
       
           var selectCusotmer = function (row, value, event) {
               var selectId = $(row).data('selectid');
