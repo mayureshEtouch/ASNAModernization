@@ -26,6 +26,9 @@
         .normal-table td {
             padding: 2px 22px;
         }
+		.normal-table tr td:first-child {
+			padding-left: 0;
+		}
 		
 @media (min-width: 768px) and (max-width: 1023px) {
 	.normal-table td {
@@ -56,7 +59,7 @@
                     <div class="table-container table-container-search">
                         <!-- content-grid mdl-grid starts here -->
 
-                        <div class="content-grid mdl-grid" style="padding: 20px 0;">
+                        <div class="content-grid mdl-grid" style="padding: 10px 0;">
                             <!-- 12 col starts here -->
                             <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
                                 <div class="content-grid mdl-grid" style="padding: 0;">
@@ -105,7 +108,7 @@
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Sold To:</span>
@@ -126,7 +129,7 @@
                             <!-- col starts here -->
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet bureau1_div" style="padding: 0; margin: 0 0 0 8px;" id="CenPH__lb_RCDDTL1__lb_DZ9TX_new_div">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet bureau1_div" style="padding: 0; margin: 0;" id="CenPH__lb_RCDDTL1__lb_DZ9TX_new_div">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin: 0">
                                         <span class="form-label">Bureau:</span>
@@ -145,7 +148,7 @@
                         <div class="content-grid mdl-grid" style="padding: 0">
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet ssn_div" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet ssn_div" style="margin: 0">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Social Security:</span>
@@ -157,7 +160,7 @@
                             </div>
                             <!-- col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Home Phone:</span>
@@ -175,7 +178,7 @@
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet officePh_div" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet officePh_div" style="margin: 0">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Office Phone:</span>
@@ -189,7 +192,7 @@
                             </div>
                             <!-- 12 col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet cellPh_div" style="margin: 0 0 0 8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet cellPh_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Cell Phone:</span>
@@ -219,7 +222,7 @@
                         <div class="content-grid mdl-grid" style="padding: 0">
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet currentobligation_div" style="margin: 0 0 0 5px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet currentobligation_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Current Obligation:</span>
@@ -234,7 +237,7 @@
 
                             <!-- col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0  0 0 8px;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet spanAuto_div" style="margin: 0;">
                                         <span class="form-label" style="margin-left:4px;">Auto=</span>
@@ -257,7 +260,7 @@
                             <!-- col ends here -->
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet crdAvl_div" style="margin: 0 8px;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet crdAvl_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Credit Available:</span>
@@ -280,7 +283,7 @@
                         <div class="content-grid mdl-grid" style="padding: 0">
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet spanPromotion1_div" style="margin: 0 0 0  8px;">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--3-col-tablet spanPromotion1_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Promotion:</span>
@@ -295,7 +298,7 @@
 
                             <!-- col ends here -->
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet spanPromotion2_div" style="margin: 0 8px;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet spanPromotion2_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label"></span>
@@ -311,7 +314,7 @@
                             <!-- col ends here -->
 
                             <!-- col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet spanDown_div" style="margin: 0 8px;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--2-col-tablet spanDown_div" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0 auto;">
                                         <span class="form-label">Required Down $:</span>
@@ -331,7 +334,7 @@
 
 
 
-                        <div class="content-grid mdl-grid" style="padding: 20px 0;">
+                        <div class="content-grid mdl-grid" style="padding: 10px 0;">
                             <!-- 12 col starts here -->
                             <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
                                 <div class="content-grid mdl-grid" style="padding: 0;">
@@ -367,7 +370,7 @@
                         <div class="content-grid mdl-grid notes_div" id="CenPH__lb_RCDDTL1__lb_DUJTX_new_div">
                             <!-- col starts here -->
                             <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding: 0">
-                                <div class="content-grid mdl-grid">
+                                <div class="content-grid mdl-grid" style="padding: 0">
                                     <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="margin: 0">
                                         <span class="form-label">Note:</span>
                                         <span class="form-text" id="notes" style="margin-left: 5px;" st></span>
@@ -459,7 +462,7 @@
                 <div class="table-data-maincontainer">
                     <div class="table-container table-container-search">
 
-                        <div class="content-grid mdl-grid" style="padding: 20px 0;">
+                        <div class="content-grid mdl-grid" style="padding: 10px 0;">
                             <!-- 12 col starts here -->
                             <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin: 0 auto;">
                                 <div class="content-grid mdl-grid" style="padding: 0;">
@@ -500,14 +503,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-grid mdl-grid" style="padding: 0; padding-left: 3px;">
+                        <div class="content-grid mdl-grid" style="padding: 0;">
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0 auto;">
-                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;">
+                                <div class="content-grid mdl-grid" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet">
                                         <span class="form-label">Last Worked:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--5-col-tablet" style="margin: 0;">
                                         <span class="form-text" id="date2"></span><span class="form-text" style="margin-left: 20px;" id="time2"></span>
                                     </div>
                                 </div>
@@ -515,12 +518,12 @@
                             <!-- 12 col ends here -->
 
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0;">
                                         <span class="form-label">By:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--10-col  mdl-cell--6-col-tablet" style="margin: 0;">
                                         <span class="form-text" id="spanby"></span>
                                     </div>
                                 </div>
@@ -528,12 +531,12 @@
                             <!-- 12 col ends here -->
 
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0 auto;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--3-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--3-col-tablet" style="margin: 0;">
                                         <span class="form-label">Option:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0 auto;">
+                                    <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
                                             <!-- <input class="mdl-textfield__input" type="text" style="width: 110px; display: inline-block" size="10" id="btnOption" maxlength="3" onfocus="_09('#DL5ST','22,74','#RCDDTL1');"></span> -->
                                             <select name="btnOption" id="btnOption" style="width: 180px;" data-tb-index="17"></select>
