@@ -93,7 +93,7 @@
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
                                     <span class="form-text emp-info">
                                         <input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_1AJCD_new" maxlength="5" onfocus="_09('#1AJCD','5,11','#RCDDTL1');">
-                                        <span id="CenPH_1A0TX" class="DdsCharField_OutputOnly">Corporate Sales</span>
+                                        <span id="CenPH__lb_RCDDTL1__lb_DA0TX_new" class="DdsCharField_OutputOnly" >Corporate Sales</span>
                                     </span>
 
                                 </div>
@@ -948,6 +948,7 @@
             width: 680px !important;
             left: 50% !important;
             margin-left: -340px !important;
+            
         }
 
             #__Page_PopUp tbody > tr:first-child {
@@ -961,6 +962,8 @@
        .modal-dialog-container {
                 width: 100%;
                 margin-top: 0;
+                margin-bottom: 15px !important;
+                
             }
 
         .emp-info input {
@@ -971,10 +974,10 @@
             display: inline-block;
         }
 
-        /*.mdl-layout__content {
+        .mdl-layout__content {
             height: auto !important;
             overflow: hidden !important;
-        }*/
+        }
 
         #wrapper {
             width: 100% !important;
@@ -994,7 +997,8 @@
             "displayOnlyFields": {
                 "CenPH__lb_RCDDTL1__lb_1ITNB": "CenPH__lb_RCDDTL1__lb_1ITNB_new",
                 "CenPH__lb_RCDDTL1__lb_1ABCD": "CenPH__lb_RCDDTL1__lb_1ABCD_new",
-                "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new"
+                "CenPH__lb_RCDDTL1__lb_1AACD": "CenPH__lb_RCDDTL1__lb_1AACD_new",
+                "CenPH__lb_RCDDTL1__lb_DA0TX": "CenPH__lb_RCDDTL1__lb_DA0TX_new"
             },
             "inputFields": {
                 "CenPH__lb_RCDDTL1__lb_1AJCD": "CenPH__lb_RCDDTL1__lb_1AJCD_new"
@@ -1038,6 +1042,10 @@
                 });
 
             }
+            $(".simplePopupClose").click(function (event) {
+                var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
+                $("#" + ele).focus();
+            });
         });
 
     </script>
