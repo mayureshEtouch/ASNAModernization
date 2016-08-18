@@ -443,7 +443,8 @@
           <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Last Worked:</span> </div>
-              <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1_V1AGDT_new"></span><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new" style="margin-left:20px;"></span> </div>
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1_V1AGDT_new"></span> </div>
+			  <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new" ></span> </div>
             </div>
           </div>
           <!-- col ends here --> 

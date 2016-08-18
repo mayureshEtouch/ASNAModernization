@@ -506,12 +506,15 @@
                         <div class="content-grid mdl-grid" style="padding: 0;">
                             <!-- 12 col starts here -->
                             <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;">
-                                <div class="content-grid mdl-grid" style="margin: 0;">
-                                    <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet">
+                                <div class="content-grid mdl-grid" style="margin-left: 8px;">
+                                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin: 0;">
                                         <span class="form-label">Last Worked:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--8-col  mdl-cell--5-col-tablet" style="margin: 0;">
-                                        <span class="form-text" id="date2"></span><span class="form-text" style="margin-left: 20px;" id="time2"></span>
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet" style="margin: 0;">
+                                        <span class="form-text" id="date2"></span>
+                                    </div>
+									<div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet" style="margin: 0;">
+                                       <span class="form-text" id="time2"></span>
                                     </div>
                                 </div>
                             </div>
