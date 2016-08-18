@@ -29,7 +29,7 @@
           <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRCRD1I</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span> </div>
       </div>
     </section>
-    <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+    <section class="table-data-content-container spacer-container-bottom mrgnTp16 form-div-first" style="display:none;">
       <div class="table-data-wrapper">
         <div class="table-data-maincontainer">
           <div style="overflow: auto;" class="table-container fico-details">
