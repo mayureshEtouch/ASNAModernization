@@ -29,7 +29,7 @@
           <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CRCRD1I</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span> </div>
       </div>
     </section>
-    <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+    <section class="table-data-content-container spacer-container-bottom mrgnTp16 form-div-first" style="display:none;">
       <div class="table-data-wrapper">
         <div class="table-data-maincontainer">
           <div style="overflow: auto;" class="table-container fico-details">
@@ -277,7 +277,7 @@
             
             <div class="button-container">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span> <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> --> </div>
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> 
                   <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> --> 
                 </div>
