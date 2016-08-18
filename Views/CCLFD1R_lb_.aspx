@@ -266,10 +266,10 @@
             
             <!-- content-grid mdl-grid ends here -->
             
-            <div class="content-grid mdl-grid" style="padding: 20px 0;"> 
+            <div class="content-grid mdl-grid" style="padding: 10px 0;"> 
               <!-- 12 col starts here -->
               <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin:0 auto;">
-                <div class="content-grid mdl-grid" style="padding:0;">
+                <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet">
                     <table cellspacing="0" cellpadding="0" border="0" class="normal-table normal-table-price" id="" data-upgraded=",MaterialDataTable"  >
                       <thead>
@@ -317,7 +317,7 @@
             <div class="content-grid mdl-grid" style="padding:0;"> 
               <!-- 12 col starts here -->
               <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin:0 auto;">
-                <div class="content-grid mdl-grid" style="padding:0;">
+                <div class="content-grid mdl-grid" style="padding:0 8px;">
                   <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet">
                     <table cellspacing="0" cellpadding="0" border="0" class="normal-table" id="" data-upgraded=",MaterialDataTable">
                       <thead>
@@ -398,10 +398,10 @@
       <div class="table-data-wrapper mrgnTp16">
       <div class="table-data-maincontainer">
       <div class="table-container table-container-search">
-        <div class="content-grid mdl-grid" style="padding: 20px 0;"> 
+        <div class="content-grid mdl-grid" style="padding: 10px 0;"> 
           <!-- 12 col starts here -->
           <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="margin:0 auto;">
-            <div class="content-grid mdl-grid" style="padding:0;">
+            <div class="content-grid mdl-grid" style="padding:0 8px;">
               <div class="mdl-cell mdl-cell--8-col mdl-cell mdl-cell--6-col-tablet">
                 <table cellspacing="0" cellpadding="0" border="0" class="normal-table" id="" data-upgraded=",MaterialDataTable">
                   <thead>
@@ -626,6 +626,9 @@
     });
   </script>
   <style>
+	.normal-table td:first-child {
+		padding-left: 0;
+	} 
 			@media screen and (max-width: 1025px) {
 				.tablet-mrgleft-price {
 					margin-left: 9px !important;

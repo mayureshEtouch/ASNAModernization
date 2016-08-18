@@ -71,6 +71,8 @@
                   <tr class="oddrow">
                     <td class="th-text-heading"><span class="form-label">Trade Lines Open:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BLNU_new"></td>
+					<td></td>
+                    <td></td>
                     <td class="th-text-heading"><span class="form-label">Ever 4:</span></td>
                     <td  id="CenPH__lb_RCDDTL1__lb_1BWNU_new"></td>
                     <td class="th-text-heading"><span class="form-label">Ever 3:</span></td>
@@ -81,8 +83,7 @@
                     <td  id="CenPH__lb_RCDDTL1__lb_1B2NU_new"></td>
                     <td class="th-text-heading"><span class="form-label">%:</span></td>
                     <td  id="CenPH__lb_RCDDTL1_V1BMP3_new"></td>
-                    <td></td>
-                    <td></td>
+                    
                   </tr>
 				  <tr>
                     <td class="th-text-heading"><span class="form-label">R/C:</span></td>
@@ -276,7 +277,7 @@
             
             <div class="button-container">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span> <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> --> </div>
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right"> 
                   <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> --> 
                 </div>
