@@ -2240,6 +2240,11 @@
 	.mrgnBtm50 {
 		margin-bottom: 50px;
 	}
+	@media (min-width: 768px) and (max-width: 1023px) { 
+		.table-container .pull-right {
+			text-align: left;
+		}
+	}
 	</style>
 	<script type="text/javascript">
 	 

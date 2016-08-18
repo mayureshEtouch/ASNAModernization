@@ -1095,12 +1095,13 @@
             }
             .modal-dialog-container {
                 width: 100%;
-                margin-top: 0;
+				margin: 0 auto !important;
             }
 
             .mdl-layout__content {
                 height: auto !important;
                 overflow: hidden !important;
+				margin-bottom: 15px !important;
             }
 
             #__AsnaDisplayfileRestored__ {
