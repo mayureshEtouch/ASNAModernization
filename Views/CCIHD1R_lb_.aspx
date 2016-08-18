@@ -29,6 +29,13 @@
 		.normal-table tr td:first-child {
 			padding-left: 0;
 		}
+		#date2 {
+			width: 95px;
+			margin-left: 19px !important;
+		}
+		#time2 {
+			margin-left: 34px !important;
+		}
 		
 @media (min-width: 768px) and (max-width: 1023px) {
 	.normal-table td {
@@ -48,7 +55,7 @@
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCIHD1R</span>
-                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light date-icon"></i>&nbsp;<span class="date-time-txt" name="date" id="date"></span>
                     <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
@@ -505,15 +512,15 @@
                         </div>
                         <div class="content-grid mdl-grid" style="padding: 0;">
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--5-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--5-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin-left: 8px;">
-                                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--6-col  mdl-cell--3-col-tablet" style="margin: 0;">
                                         <span class="form-label">Last Worked:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet" style="margin: 0;">
                                         <span class="form-text" id="date2"></span>
                                     </div>
-									<div class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet" style="margin: 0;">
+									<div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0;">
                                        <span class="form-text" id="time2"></span>
                                     </div>
                                 </div>
@@ -521,7 +528,7 @@
                             <!-- 12 col ends here -->
 
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet" style="margin: 0;">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;">
                                 <div class="content-grid mdl-grid" style="margin: 0 auto;">
                                     <div class="mdl-cell mdl-cell--2-col  mdl-cell--2-col-tablet" style="margin: 0;">
                                         <span class="form-label">By:</span>
@@ -534,9 +541,9 @@
                             <!-- 12 col ends here -->
 
                             <!-- 12 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;">
-                                <div class="content-grid mdl-grid" style="margin: 0 auto;">
-                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--3-col-tablet" style="margin: 0;">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet" style="margin: 0;">
+                                <div class="content-grid mdl-grid" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--3-col  mdl-cell--3-col-tablet" style="margin: 0 0 0 8px;">
                                         <span class="form-label">Option:</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--9-col  mdl-cell--5-col-tablet" style="margin: 0;">
