@@ -150,14 +150,9 @@
            $(document).ready(function () {
               $('body').css({ "background-color": "white" });
                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-
-              /* if($("#customerName").length > 0 ){
-                    $("#approved").show();
-               }else
-               {*/
-                  $("#reject").show();
-               //}
-
+ 
+         
+               
 
             $('.close-icon').click(function (event) {
                 _00('F3',event);
