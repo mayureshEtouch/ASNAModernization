@@ -224,7 +224,7 @@
     }else{
       copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
       $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").ForceNumericOnly();
-      $("#CenPH__lb_RCDDTL1__lb_1GEVA_new").ForceAmountOnly().numericWithTwoDecimalPrecisions();
+      $("#CenPH__lb_RCDDTL1__lb_1GEVA_new").ForceCurrencyWithTwoDecimal();
       $("#CenPH__lb_RCDDTL1__lb_1ACCT_new").val($("#CenPH__lb_RCDDTL1__lb_1ACCT_new").val().trim());
     }
 
