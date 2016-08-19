@@ -158,8 +158,8 @@
                           <th>Model Number</th>
                           <th>Sold Date</th>
                           <th>Age</th>
-                          <th>Warr End - SMA Warranty Ends Date</th>
-                          <th>War - Warranty Type</th>
+                          <th>SMA Warranty Ends Date</th>
+                          <th>Warranty Type</th>
                           <th>Warranty</th>
                         </tr>
                       </thead>
