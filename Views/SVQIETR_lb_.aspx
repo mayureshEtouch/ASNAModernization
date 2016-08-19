@@ -125,7 +125,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Repair Severity:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Product Severity:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span class="form-text" data-upgraded=",MaterialTextfield">
                                             <select id="repairSelect" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
