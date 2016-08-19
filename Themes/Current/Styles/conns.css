@@ -459,6 +459,11 @@ a:visited, .mdl-menu__item a {
 	background: url('../Images/white-to-gray-bullet.png') no-repeat;
 	width: 25px;
 }
+/* green highlight text css*/
+.green-highlight-text{
+	color: #49ba2b; 
+	font-weight: bold;
+}
 /* Modal CSS ends */
 /* 19 jan 16 add classes starts here */
 .home-icon .material-icons {
