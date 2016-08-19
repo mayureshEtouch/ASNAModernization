@@ -84,7 +84,7 @@
 									<tr>
 										<th>Product Category</th>
 										<th width="20%">Model Number</th>
-										<th width="22%">Prd Cat Desc</th>
+										<th width="22%">Product Category Description</th>
 										<th>Product Quantity</th>
 										<th>Product Value</th>
 										<th>GPM Code</th>
