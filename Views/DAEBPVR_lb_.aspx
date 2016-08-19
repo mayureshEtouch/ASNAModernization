@@ -136,24 +136,11 @@
     </style>
     <script type="text/javascript">
 
-     var copyToAndFrom = {
-                "displayOnlyFields": {
-                   "":"customerName"
-          
-                },
-                "inputFields": {
-                    
-                }
-            }
-
+    
       
            $(document).ready(function () {
               $('body').css({ "background-color": "white" });
-               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
- 
-         
-               
-
+             
             $('.close-icon').click(function (event) {
                 _00('F3',event);
             });
