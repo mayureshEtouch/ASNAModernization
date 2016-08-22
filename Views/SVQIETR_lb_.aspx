@@ -1880,7 +1880,16 @@
             });
             if (!$("#CenPH__lb_SFLCTL__lb_CEOTX").is('input')) {
                 $("#repairLoc").val($("#CenPH__lb_SFLCTL__lb_CEOTX").html());
+                $("#repairLoc").attr('readonly', 'true');
+                $("#repairLoc").css("border", "white");
                 $("#repairLoc3").val($("#CenPH__lb_SFLCTL__lb_CESTX").html());
+                $("#repairLoc3").attr('readonly', 'true');
+                $("#repairLoc3").css("width", "36px");
+                $("#repairLoc3").css("border", "white");
+                $("#CenPH_PANTX").next().remove();
+              
+                
+                
             }
 
             function generateSpecialInstructionsSection() {
