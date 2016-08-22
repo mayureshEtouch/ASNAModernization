@@ -3,6 +3,21 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/19/2016 at 6:45 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+    <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+    
+
         <%-- Legacy location: library asnaph4bk, file QDDSSRC, member SVW6PVR# --%>
 
     </asp:Content>
@@ -22,7 +37,152 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span>
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Deposit Required</span> 
+        </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVW6PVR</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="form-data">
+      <div class="form-data-wrapper" style="padding-bottom:0;">
+        
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+            <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
+                <span class="form-label">Deposit Required:</span>
+              </div>
+              <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+                <span class="form-text" id="depositRequired"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+        
+      
+        <div class="button-container">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="margin-left: 10px;">
+            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right modal-button-container">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+        </section>
+    
+  </main>
+ <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+
+     <style>
+        #__Page_PopUp {
+            min-width: 700px !important;
+            width: 700px !important;
+      left: 50% !important;
+      margin-left: -350px;
+    top: 14% !important;
+        }
+    #__Page_PopUp > tr:first-child {
+      display: none;
+    }
+
+    #__Page_PopUp .DdsInlinePopUpTitle {
+      height: 0;
+    }
+       
+          .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+      margin-bottom : 15px !important;
+      
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+          width: 100% !important;
+        }
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+    
+        
+    </style>
+    <script type="text/javascript">
+
+         var copyToAndFrom = {
+                "displayOnlyFields": {
+
+                },
+                "inputFields": {
+                  
+                }
+            }
+    
+      
+           $(document).ready(function () {
+
+            copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+            
+              $('body').css({ "background-color": "white" });
+             
+            $('.close-icon').click(function (event) {
+                _00('F3',event);
+            });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
+       
+             $("#exit").click(function (event) {
+                    _00('F3', event);
+              });
+
+      
+     });
+
+    </script>
+
+        <div id="Div1" style="display: none;">
             
       <%--  SV: PMT for Deposit $     Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
