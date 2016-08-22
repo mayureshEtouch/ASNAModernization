@@ -1232,6 +1232,9 @@ textarea {
 .filled-requirement-icon{
  background: url(../images/icons/filled-requirement-icon.png) no-repeat;
 }
+.audit-icon{
+ background: url(../images/icons/audit-icon.png) no-repeat;
+}
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
  background: rgb(255, 255, 255);
  border: 1px solid #c5c5c5;
