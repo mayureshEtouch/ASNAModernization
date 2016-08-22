@@ -22,7 +22,177 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Application Requirements</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLSDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="order-summary mrgnTp16">
+      <div class="order-summary-wrapper" style="margin-bottom: 0;">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Application Number</span>
+            <span class="summary-txt" id="applicationNumber"></span>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Customer Name</span>
+            <span class="summary-txt" id="customerName"></span>
+          </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Phone Number</span>
+            <span class="summary-txt" id="phone"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+            
+            <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col pull-right">
+                            <div class="icon-container">
+                <span class="icon-txt filledRequ">Filled Requirement</span><i class="material-icons md-15 md-light filled-requirement-icon filledRequ "></i>
+                <span class="icon-txt gotoEntry">Goto Entry</span><i class="material-icons md-15 md-light goto-entry-icon gotoEntry"></i>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                                <th></th>
+                            <th>Requirements</th>
+                            <th>User ID</th>
+                            <th>S</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                                         
+                        </tbody>
+                    </table>
+                    <div class="tablet-width-rt">
+                    
+                    </div>
+                </div>
+                                
+                <div class="button-container tablet-width-rt">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return">Return</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+    <style>
+
+#displaydata tbody > tr:hover {
+  cursor: pointer;
+}
+tr.selected {
+  background-color: #d8d8d8 !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.summary-label {
+  font-size: 11px;
+}
+}
+</style>
+
+<script type="text/javascript">
+  var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH__lb_SFLCTL__lb_2ITNB": "applicationNumber",
+                    "CenPH__lb_SFLCTL__lb_CWZTX": "customerName",
+                    "CenPH__lb_SFLCTL__lb_CPPNB": "phone",
+                    "CenPH_DdsConstant8": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME":"time"
+                },
+                "inputFields": {
+                  
+                }
+            }
+
+        $(document).ready(function () {
+    
+           copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+            // Search by Customer data table record mapping
+            var dataMergeIndices = [[0], [1], [2],[3]];
+
+            generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+      
+           
+            var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            //Display customer details
+            $(".filledRequ").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "2", event);
+                }
+            });
+            //Change customer details
+            $(".gotoEntry").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "6", event);
+                }
+            });
+
+            
+            $("#exit").click(function (event) {
+                _00('F3', event);
+            });
+
+            $("#all").click(function (event) {
+                _00('F11', event);
+            });
+
+            $("#return").click(function (event) {
+                _00('F12', event);
+            });
+            
+        });
+    </script>
+
+        <div id="Div1" style="display:none">
             
       <%--  CA: DSP Appl Requirements Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
