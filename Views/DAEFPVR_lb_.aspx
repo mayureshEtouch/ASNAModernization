@@ -93,7 +93,7 @@
             width: 700px !important;
       left: 50% !important;
       margin-left: -350px;
-    top: 14% !important;
+    top: 20% !important;
         }
     #__Page_PopUp > tr:first-child {
       display: none;
