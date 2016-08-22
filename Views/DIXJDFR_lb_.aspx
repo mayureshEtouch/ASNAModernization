@@ -56,7 +56,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--12-col pull-right">
                         <div class="icon-container">
-                            <span class="icon-txt displayDelivery">Display</span><i class="material-icons md-15 md-light display-icon displayDelivery"></i>
+                            <span class="icon-txt displayDelivery">Audit</span><i class="material-icons md-15 md-light audit-icon displayDelivery"></i>
                         </div>
                     </div>
                 </div>
