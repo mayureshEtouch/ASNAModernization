@@ -29,7 +29,7 @@
       <div class="content-grid mdl-grid">
         <div class="mdl-cell mdl-cell--8-col"> 
           <!-- Title --> 
-          <span class="heading-h1">Phone Validation Results</span> </div>
+          <span class="heading-h1">Display Customer Product</span> </div>
           <div class="mdl-cell mdl-cell--4-col pull-right"> 
             <!-- Navigation --> 
             <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIVKDFR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>  &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
@@ -215,8 +215,8 @@
                   $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
                 }
               });*/
-              $("#CenPH__lb_SFLCTL_VCBGP3_new").ForceAmountOnly().numericWithTwoDecimalPrecisions();
-              $("#CenPH__lb_SFLCTL__lb_CCFVA_new").ForceAmountOnly().numericWithTwoDecimalPrecisions();
+              $("#CenPH__lb_SFLCTL_VCBGP3_new").ForceCurrencyWithTwoDecimal();;
+              $("#CenPH__lb_SFLCTL__lb_CCFVA_new").ForceCurrencyWithTwoDecimal();
               var dataMergeIndices = [[0],[1], [2], [3], [4], [5], [6]];
 
               generateTableAndApplyInfiniteScroll("product_details", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
