@@ -501,7 +501,7 @@
                         <!--  col starts here -->
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Work Phone:</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Bus Phone:</span> </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DOLNB_new"></span> </div>
                             </div>
                         </div>
@@ -509,7 +509,7 @@
                         <!-- col starts here -->
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Bus. Phone Extension:</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Extension:</span> </div>
                                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BETX_new"></span></div>
                             </div>
                         </div>
