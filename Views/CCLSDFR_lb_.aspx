@@ -35,20 +35,25 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCLSDFR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
             <section class="order-summary mrgnTp16">
       <div class="order-summary-wrapper" style="margin-bottom: 0;">
         <div class="content-grid mdl-grid">
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
             <span class="summary-title">Application Number</span>
             <span class="summary-txt" id="applicationNumber"></span>
           </div>
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
             <span class="summary-title">Customer Name</span>
             <span class="summary-txt" id="customerName"></span>
+          </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+            <span class="summary-title">Phone Number</span>
+            <span class="summary-txt" id="phone"></span>
           </div>
         </div>
       </div>
@@ -74,6 +79,7 @@
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
                  <thead>
                           <tr>
+                                <th></th>
                             <th>Requirements</th>
                             <th>User ID</th>
                             <th>S</th>
@@ -91,13 +97,11 @@
                 <div class="button-container tablet-width-rt">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="return">Return</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">all</span>
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
@@ -127,8 +131,11 @@ tr.selected {
 <script type="text/javascript">
   var copyToAndFrom = {
                 "displayOnlyFields": {
-                    "":"applicationNumber",
-                    "":"customerName"
+                    "CenPH__lb_SFLCTL__lb_2ITNB": "applicationNumber",
+                    "CenPH__lb_SFLCTL__lb_CWZTX": "customerName",
+                    "CenPH__lb_SFLCTL__lb_CPPNB": "phone",
+                    "CenPH_DdsConstant8": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME":"time"
                 },
                 "inputFields": {
                   
@@ -169,19 +176,23 @@ tr.selected {
                 }
             });
 
-            //Next button click handler
-            $("#next").click(function (event) {
-                var row = $("#customerName tbody tr.selected");
-                selectCusotmer(row, "1", event);
+            
+            $("#exit").click(function (event) {
+                _00('F3', event);
             });
-            $("#Exit").click(function (event) {
-                _00('F9', event);
+
+            $("#all").click(function (event) {
+                _00('F11', event);
+            });
+
+            $("#return").click(function (event) {
+                _00('F12', event);
             });
             
         });
     </script>
 
-        <div id="Div1">
+        <div id="Div1" style="display:none">
             
       <%--  CA: DSP Appl Requirements Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>

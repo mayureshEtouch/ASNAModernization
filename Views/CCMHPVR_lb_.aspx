@@ -50,11 +50,11 @@
   <main class="mdl-layout__content">
     <section class="time-date">
       <div class="content-grid mdl-grid">
-        <div class="mdl-cell mdl-cell--9-col"> 
+        <div class="mdl-cell mdl-cell--8-col"> 
           <!-- Title --> 
           <span class="heading-h1">Submit</span> 
         </div>
-        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+        <div class="mdl-cell mdl-cell--4-col pull-right"> 
           <!-- Navigation --> 
           <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCMHPVR</span>
         </div>
@@ -71,7 +71,7 @@
               <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
                 <span class="form-label">Application Number:</span>
               </div>
-              <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-tablet" style="margin:0">
                 <span class="form-text" id="applicationNumber"></span>
               </div>
             </div>
@@ -86,8 +86,8 @@
               <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
                 <span class="form-label">To Grader:</span>
               </div>
-              <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
-                <span class="form-text"><input class="mdl-textfield__input" type="text" id="input1" data-tb-index="1" size="15"></span>
+              <div class="mdl-cell mdl-cell--1-col mdl-cell--5-col-tablet" style="margin:0">
+                <span class="form-text"><input class="mdl-textfield__input" type="text" id="input1" data-tb-index="1" maxlength="1" onfocus="_09('#DOKTP','5,16','#RCDDTL1');" size="15"></span>
               </div>
             </div>
           </div>
@@ -109,17 +109,24 @@
         </section>
     
   </main>
-  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-    <div id="modal" class="simplePopup"></div>
-</div>
+   <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    
+    <div id="promptErrorMsg" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
 <!-- Modified HTML code ends here -->
  <style>
         #__Page_PopUp {
-            min-width: 700px !important;
-            width: 700px !important;
+            min-width: 450px !important;
+            width: 450px !important;
       left: 50% !important;
-      margin-left: -350px;
-    top: 14% !important;
+      margin-left: -225px;
+    top: 20% !important;
         }
     #__Page_PopUp > tr:first-child {
       display: none;
@@ -159,10 +166,10 @@
 
          var copyToAndFrom = {
                 "displayOnlyFields": {
-                    "":"applicationNumber"
+                    "CenPH__lb_RCDDTL1__lb_1ITNB": "applicationNumber"
                 },
                 "inputFields": {
-                  
+                    "CenPH__lb_RCDDTL1__lb_DOKTP": "input1"
                 }
             }
     
@@ -170,20 +177,36 @@
            $(document).ready(function () {
 
             copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
-            
+            $('.close-icon').click(function (event) {
+                _00("F3", event);
+            });
               $('body').css({ "background-color": "white" });
              
-            $('.close-icon').click(function (event) {
-                _00('F3',event);
-            });
-            if($(".simplePopupClose").length > 0) {
-                 $(".simplePopupBackground1").show();
-           } else {
-               $(".simplePopupBackground1").hide();
-           }
-           $("body").on("click", ".simplePopupClose", function() {
-               $(".simplePopupBackground1").hide();
-           });
+              if ($("#__Page_PopUp .simplePopupClose").length > 0) {
+                  $(".simplePopupBackground1").show();
+              } else {
+                  $(".simplePopupBackground1").hide();
+              }
+              $("body").on("click", ".simplePopupClose", function () {
+                  $(".simplePopupBackground1").hide();
+              });
+              if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                  /*Pop up confirm box*/
+                  $(".OverlayPopupBackground").show();
+                  $(".confirmation-outer-conatiner").show();
+
+                  $("#yes").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                      //_00('Enter', event);
+                      _16(event, this, 1, 'Enter');
+                  });
+                  $("#no").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                      //_00('Enter', event);
+                      _16(event, this, 1, 'Enter');
+                  });
+
+              }
        
              $("#exit").click(function (event) {
                     _00('F3', event);
@@ -197,7 +220,7 @@
      });
 
     </script>
-        <div id="Div1">
+        <div id="Div1" style="display:none">
             
       <%--  CA: PMT Submit 4/Apprvl   Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>

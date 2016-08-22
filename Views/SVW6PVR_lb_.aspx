@@ -74,10 +74,19 @@
                 <span class="form-label">Deposit Required:</span>
               </div>
               <div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet" style="margin:0">
-                <span class="form-text" id="depositRequired"></span>
+                <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GLVA_new"></span>
               </div>
             </div>
           </div>
+        </div>
+        <!-- content-grid mdl-grid ends here -->
+
+           <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
+                <span class="form-label" style="font-weight: normal; color:#4085f2;">Before Repair Work can be scheduled</span>
+              </div>
+
         </div>
         <!-- content-grid mdl-grid ends here -->
         
@@ -103,11 +112,11 @@
 
      <style>
         #__Page_PopUp {
-            min-width: 700px !important;
-            width: 700px !important;
+            min-width: 500px !important;
+            width: 500px !important;
       left: 50% !important;
-      margin-left: -350px;
-    top: 14% !important;
+      margin-left: -250px;
+    top: 17% !important;
         }
     #__Page_PopUp > tr:first-child {
       display: none;
@@ -147,7 +156,7 @@
 
          var copyToAndFrom = {
                 "displayOnlyFields": {
-
+                    "CenPH__lb_RCDDTL1__lb_1GLVA": "CenPH__lb_RCDDTL1__lb_1GLVA_new"
                 },
                 "inputFields": {
                   
