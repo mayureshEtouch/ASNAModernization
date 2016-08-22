@@ -125,16 +125,25 @@ tr.selected {
 </style>
 
 <script type="text/javascript">
-
+  var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "":"applicationNumber",
+                    "":"customerName"
+                },
+                "inputFields": {
+                  
+                }
+            }
 
         $(document).ready(function () {
     
-          
+           copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
             // Search by Customer data table record mapping
-            var dataMergeIndices = [[0], [1], [2]];
+            var dataMergeIndices = [[0], [1], [2],[3]];
+
+            generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
       
-            generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-      
+           
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
