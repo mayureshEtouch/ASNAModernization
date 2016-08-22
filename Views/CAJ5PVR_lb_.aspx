@@ -83,7 +83,7 @@
                         <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding: 0;">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0;"><span class="form-label">Customer Care Line:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text">1-866-317-2011</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text green-highlight-text">1-866-317-2011</span> </div>
                             </div>
 
                         </div>
@@ -93,7 +93,7 @@
                         <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding: 0;">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0;"><span class="form-label">Hours:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text">8:00 am - 10:00 pm CST Daily (7 days per week)</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text green-highlight-text">8:00 am - 10:00 pm CST Daily (7 days per week)</span> </div>
                             </div>
 
                         </div>
@@ -115,8 +115,15 @@
                 </div>
             </section>
         </main>
-        <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;"></div>
-        <div id="modal" class="simplePopup"></div>
+        <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    
+    <div id="promptErrorMsg" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
     </div>
     <!-- Modified HTML code ends here -->
     <div id="Div1" style="display:none;">
@@ -428,6 +435,14 @@
             });
             $("#print").click(function (event) {
                 _00('F6', event);
+            });
+            if ($("#__Page_PopUp .simplePopupClose").length > 0) {
+                $(".simplePopupBackground1").show();
+            } else {
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function () {
+                $(".simplePopupBackground1").hide();
             });
         });
     </script>
