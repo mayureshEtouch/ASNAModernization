@@ -397,8 +397,8 @@
                                         <!-- col starts here -->
                                         <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
-                                                        <div class="mdl-cell mdl-cell--9-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label">At</span> </div>
-                                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new"></span> </div>
+                                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label">At</span> </div>
+                                                        <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new"></span> </div>
                                                 </div>
                                         </div>
                                         <!-- col ends here --> 

@@ -749,7 +749,6 @@ textarea {
 	display: block;
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 12px;
-	padding-top: 12px;
 }
 .input-label {
 	font-weight: 600;
@@ -1658,6 +1657,13 @@ input[maxlength='4'] {
 	margin-left: 0 !important;
 	border: none !important;
 }
+.mdl-grid {
+    padding: 5px 8px;
+}
+.mdl-cell {
+    margin: 5px 8px;
+}
+
 }
 
 
