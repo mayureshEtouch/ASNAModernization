@@ -633,9 +633,9 @@
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
 
             generateTableAndApplyInfiniteScroll("tblCustWorksheet", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-
-
-
+            $('#tblCustWorksheet tbody tr td:nth-child(1)').each(function () {
+                $(this).html($(this).html().replace(/&nbsp;/gi,''));
+            });
 
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
@@ -670,9 +670,10 @@
         });
     </script>
     <style>
-        #tblCustWorksheet tr td:nth-child(6) {
+        #tblCustWorksheet tr td:nth-child(6), #tblCustWorksheet tr td:nth-child(7){
             text-align: right !important;
         }
+        
 
     </style>
 </asp:Content>
