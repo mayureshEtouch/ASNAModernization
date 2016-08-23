@@ -284,7 +284,7 @@
 </main>
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:block">
+        <div id="Div1" style="display:none">
             
       <%--  OE: DTR Fast Order Dsply  Display transactions                                                       --%>
       <%--  CRTDSPF                                                                                              --%>
