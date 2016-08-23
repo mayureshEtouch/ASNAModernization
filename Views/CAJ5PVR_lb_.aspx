@@ -82,8 +82,8 @@
                         <!-- 6 col starts here -->
                         <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding: 0;">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0;"><span class="form-label">Customer Care Line:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text green-highlight-text">1-866-317-2011</span> </div>
+                                <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0;"><span class="form-label green-highlight-text">Customer Care Line:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text">1-866-317-2011</span> </div>
                             </div>
 
                         </div>
@@ -92,8 +92,8 @@
                         <!-- 6 col starts here -->
                         <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding: 0;">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0;"><span class="form-label">Hours:</span> </div>
-                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text green-highlight-text">8:00 am - 10:00 pm CST Daily (7 days per week)</span> </div>
+                                <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0;"><span class="form-label green-highlight-text">Hours:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text">8:00 am - 10:00 pm CST Daily (7 days per week)</span> </div>
                             </div>
 
                         </div>
