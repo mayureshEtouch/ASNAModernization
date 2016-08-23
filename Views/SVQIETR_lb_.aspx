@@ -65,8 +65,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Type Repair Code:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="typRprCode"></span></div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Type Repair Code:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="typRprCode"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -96,8 +96,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Product Owner:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="productOwner"></span></div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Product Owner:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="productOwner"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -125,8 +125,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Product Severity:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Product Severity:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;">
                                         <span class="form-text" data-upgraded=",MaterialTextfield">
                                             <select id="repairSelect" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
                                                 <option selected="selected" value=" ">Please select</option>
@@ -175,8 +175,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Repair Location:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Repair Location:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;">
                                         <span id="CenPH_PANTX">
                                             <input class="mdl-textfield__input" type="text" data-tb-index="1"  id="repairLoc" onfocus="_09('#CEOTX','6,46','#SFLCTL');"></span>
 
@@ -184,9 +184,10 @@
                                         
                                         <%--<input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" id="repairLoc2">--%>
                                         <br />
-                                        <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" id="repairLoc3" onfocus="_09('#CESTX','7,70','#SFLCTL');" maxlength="10" style="width: 100px;"> 
-                                         <span id="repairLoc1"></span>
+										 <span id="repairLoc1"></span>
                                          <span id="repairLoc2"></span>
+                                        <input class="mdl-textfield__input input-mrgnTp zip-input" type="text" data-tb-index="1" size="5" id="repairLoc3" onfocus="_09('#CESTX','7,70','#SFLCTL');" maxlength="10" style="width: 85px;"> 
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -215,8 +216,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Phone Cell:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="cellNo"></span></div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Phone Cell:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="cellNo"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -250,8 +251,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Components Warranty:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="componentsW"></span></div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Components Warranty:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="componentsW"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -278,8 +279,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">SMA Months:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="smaMonths"></span></div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">SMA Months:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="smaMonths"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -335,8 +336,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Call Back Tech:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="callBackTech"></span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Call Back Tech:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="callBackTech"></span> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -408,8 +409,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Assurant Number:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><%--<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1C5DT_new">56326</span>--%>
+                                    <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">Assurant Number:</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"><%--<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1C5DT_new">56326</span>--%>
                                         <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="assurantNo" maxlength="8" style="width: 100px;" data-tb-index="1" onfocus="_09('#CF5TX','13,68','#SFLCTL');">
                                     </div>
                                 </div>
@@ -1809,6 +1810,9 @@
         .ui-datepicker-today 
 		{
 			background: #ff0000
+		}
+		#repairLoc1, #repairLoc2 {
+			display: inline-block;
 		}
     </style>
     <script type="text/javascript">
