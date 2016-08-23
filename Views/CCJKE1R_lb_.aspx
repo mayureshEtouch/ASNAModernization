@@ -206,7 +206,6 @@
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
@@ -928,8 +927,8 @@
               });
 
               $("#CenPH__lb_RCDDTL1__lb_1A_lb_XX_new").ForceNumericOnly();
-              $("#CenPH__lb_RCDDTL1__lb_1PMNT_new").numericWithTwoDecimalPrecisions();
-              $("#CenPH__lb_RCDDTL1__lb_1L_usd_XX_new").numericWithTwoDecimalPrecisions();
+              $("#CenPH__lb_RCDDTL1__lb_1PMNT_new").ForceCurrencyWithTwoDecimal();
+              $("#CenPH__lb_RCDDTL1__lb_1L_usd_XX_new").ForceCurrencyWithTwoDecimal();
 
               $("#CenPH__lb_RCDDTL1__lb_1UMTX_new").focus();
 
