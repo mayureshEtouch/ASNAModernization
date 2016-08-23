@@ -33,9 +33,9 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DIU8DFR</span>
-                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIU8DFR</span>
+                    <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -161,7 +161,7 @@
     </main>
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1">
+    <div id="Div1" style="display:none">
 
         <%--  OE: DSP Worksheet Notes   Display file                                                               --%>
         <%--  CRTDSPF                                                                                              --%>
