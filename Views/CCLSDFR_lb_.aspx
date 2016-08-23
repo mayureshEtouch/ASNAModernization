@@ -52,7 +52,7 @@
           </div>
 
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-            <span class="summary-title">Phone Number</span>
+            <span class="summary-title">Phone Home</span>
             <span class="summary-txt" id="phone"></span>
           </div>
         </div>
@@ -79,10 +79,10 @@
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
                  <thead>
                           <tr>
-                                <th></th>
-                            <th>Requirements</th>
+                            <th>HDR Qualifier Req #</th>
+                            <th>HDR Requirements</th>
                             <th>User ID</th>
-                            <th>S</th>
+                            <th>HDR Request status</th>
                           </tr>
                         </thead>
                         <tbody>

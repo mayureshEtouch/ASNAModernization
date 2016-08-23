@@ -29,7 +29,7 @@
     <div class="content-grid mdl-grid">
       <div class="mdl-cell mdl-cell--8-col"> 
         <!-- Title --> 
-        <span class="heading-h1">Display Worksheet Audit Detail</span> </div>
+        <span class="heading-h1">Worksheet Display</span> </div>
       <div class="mdl-cell mdl-cell--4-col pull-right"> 
         <!-- Navigation --> 
         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIXQD1R</span> 
@@ -118,12 +118,29 @@
 					<span id="CenPH__lb_SFLCTL__lb_CANTX_new"></span><span id="CenPH__lb_SFLCTL__lb_CAOTX_new"></span>
                     <br /><span id="CenPH__lb_SFLCTL__lb_CAQTX_new"></span>
                     <span id="CenPH__lb_SFLCTL__lb_CADST_new"></span>
-                    <span id="CenPH__lb_SFLCTL__lb_CAPTX_new"></span>
+                   <%-- <span id="CenPH__lb_SFLCTL__lb_CAPTX_new"></span>--%>
 				</div>
               </div>
             </div>
             <!-- 4 col ends here --> 
-			
+			 <!-- 4 col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" >
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span class="form-label">Zip Code:</span> </div>
+                <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAPTX_new"></span> </div>
+              </div>
+            </div>
+            <%--<div class="mdl-cell mdl-cell--4-col  mdl-cell--2-col-tablet" >
+              <div class="content-grid mdl-grid">
+                <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span class="form-label">Zip Code:</span> </div>
+              <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAPTX_new"></span> </div>
+                   <%-- <span id=""></span>--%>
+				<%--</div>
+              </div>
+            </div>--%>
+            <!-- 4 col ends here --> 
+
+
           </div>
           <!-- content-grid mdl-grid ends here --> 
           
@@ -228,12 +245,12 @@
 														<th>Delivery Status</th>
 														<th>Model Number</th>
 														<th>Serial Number</th>
-														<th>Actual Price</th>
+														<th>Actual Price $</th>
 														<th>Credit</th>
-														<th>Warranty Price</th>
+														<th>Warranty Price $</th>
 														<th>Model Descritption</th>
 														<th>Installation Code</th>
-														<th>Delivery Installation Price</th>
+														<th>Delivery Installation Price $</th>
 														<th>Warranty Period</th>
 														<th>Warranty Type</th>
 													</tr>

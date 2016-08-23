@@ -60,7 +60,7 @@
         </section>
 
 
-        <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+        <section class="table-data-content-container mrgnTp16" style="margin-bottom: 30px;">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div style="overflow: auto;" class="table-container">
@@ -573,7 +573,8 @@
             width: 962px !important;
             left: 50% !important;
             margin-left: -481px;
-            height:329px !important;
+            /*height:329px !important;*/
+            height: auto !important;
             top: 17% !important;
         }
 
@@ -627,7 +628,9 @@
 
             generateTableAndApplyInfiniteScroll("tblItemTaxes", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
-
+            $('#tblItemTaxes tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
 
             $('.close-icon').click(function (event) {
                 _00('F12', event);
