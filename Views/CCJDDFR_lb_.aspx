@@ -162,6 +162,9 @@
               }
     
         
+       #displayData tr td:nth-child(4), #displayData tr td:nth-child(6){
+         text-align: right;
+       }
     </style>
     <script type="text/javascript">
 
