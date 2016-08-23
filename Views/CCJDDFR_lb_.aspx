@@ -3,6 +3,21 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/22/2016 at 7:06 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+
+           <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+    <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+    
+
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member CCJDDFR# --%>
 
     </asp:Content>
@@ -22,7 +37,197 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span>
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Application Product</span> 
+        </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCJDDFR</span>
+        </div>
+      </div>
+    </section>
+    
+     <section class="add-item">
+                <div class="add-item-wrapper">
+                    <div class="content-grid mdl-grid">
+
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet pull-right">
+                            <div class="icon-container">
+                            <span class="icon-txt change">Change</span><i class="material-icons md-15 md-light change change-icon"></i>
+                            <span class="icon-txt delete ">Delete</span><i class="material-icons md-15 md-light delete  delete-icon"></i>
+              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 5px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>Product Category</th>
+                            <th>Model Number</th>
+                            <th>Product Quantity</th>
+                            <th>Product</th>
+                            <th>GPM Code</th>
+                            <th>Product Maintenance</th>
+                            <th>Product Category Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                                                                            
+                        </tbody>
+                    </table>
+                   
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="add">Add</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+  </main>
+  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+<style>
+        #__Page_PopUp {
+            min-width: 500px !important;
+            width: 500px !important;
+      left: 50% !important;
+      margin-left: -250px;
+    top: 20% !important;
+        }
+    #__Page_PopUp > tr:first-child {
+      display: none;
+    }
+
+    #__Page_PopUp .DdsInlinePopUpTitle {
+      height: 0;
+    }
+       
+          .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+      margin-bottom : 15px !important;
+      
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+          width: 100% !important;
+        }
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+    
+        
+    </style>
+    <script type="text/javascript">
+
+         
+           $(document).ready(function () {
+
+
+             var dataMergeIndices = [[0], [1], [2], [3], [4], [5] ,[6]];
+          generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+
+
+             var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            //Display customer details
+            $(".change").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "2", event);
+                }
+            });
+            //Change customer details
+            $(".delete").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the customer");
+                } else {
+                    var row = $("#displayData tbody tr.selected");
+                    selectCusotmer(row, "4", event);
+                }
+            });
+
+
+            $('body').css({ "background-color": "white" });
+             
+            $('.close-icon').click(function (event) {
+                _00('F3',event);
+            });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
+       
+             $("#exit").click(function (event) {
+                    _00('F3', event);
+              });
+
+               $("#add").click(function (event) {
+                    _00('F6', event);
+              });
+
+      
+     });
+
+    </script>
+
+
+        <div id="Div1" style="display: none;">
             
       <%--  CA: DFW Details-Store     Display file                                                               --%>
       <%--  CRTDSPF                                                                                              --%>
