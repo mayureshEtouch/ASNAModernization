@@ -128,7 +128,7 @@
           });
         });
       </script>
-      <div id="Div1">
+      <div id="Div1" style="display:none;">
 
         <%--  OE: DSP Worksheet Audit   Display file                                                               --%>
         <%--  CRTDSPF                                                                                              --%>
