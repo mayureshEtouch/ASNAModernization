@@ -61,7 +61,7 @@
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--12-col" style="padding:0">
         <p>
-          <span class="green-highlight-text">AcceptanceNow</span> needs more information to approve your application. <br/>See an on-site customer service representative for further assistance. <br/>Call this number for additional <span class="green-highlight-text">&nbsp;&nbsp;&nbsp;&nbsp;AcceptanceNow</span> support:   </p>
+          <span class="green-highlight-text">AcceptanceNow</span> needs more information to approve your application. <br/>See an on-site customer service representative for further assistance. <br/>Call this number for additional <span class="green-highlight-text">&nbsp;AcceptanceNow</span> support:   </p>
                     
         
           </div>
