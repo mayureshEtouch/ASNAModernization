@@ -627,7 +627,9 @@
 
             generateTableAndApplyInfiniteScroll("tblItemTaxes", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
-
+            $('#tblItemTaxes tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
 
             $('.close-icon').click(function (event) {
                 _00('F12', event);
