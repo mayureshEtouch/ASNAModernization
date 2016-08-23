@@ -1315,6 +1315,7 @@ textarea {
 }
 .form-data-wrapper .button-container  .mdl-cell, .button-container .mdl-cell{
 	padding: 10px 0 3px;
+	margin-left: 8px;
 }
 .button-container.showConfirm {
 	margin-right: -2px;

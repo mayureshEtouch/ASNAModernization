@@ -437,6 +437,11 @@
             $(document).ready(function () {
                 var dataMergeIndices = [[0, "&nbsp;", "&nbsp;", 1]];
                 generateTableAndApplyInfiniteScroll("notes", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+				
+				$('#notes tr td:nth-child(1)').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
 
                 $("#previous,.close-icon").click(function (event) {
                     _00('F3', event);
