@@ -22,6 +22,71 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+
+      <script type="text/javascript">
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant15": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                    "CenPH__lb_SFLCTL__lb_1K6CD":"CenPH__lb_SFLCTL__lb_1K6CD_new",
+                    "CenPH__lb_SFLCTL__lb_1BANB":"CenPH__lb_SFLCTL__lb_1BANB_new",
+                    "CenPH__lb_SFLCTL__lb_CEBTX":"CenPH__lb_SFLCTL__lb_CEBTX_new",
+                    "CenPH__lb_SFLCTL_V1AGDT":"CenPH__lb_SFLCTL_V1AGDT_new",
+                    "CenPH__lb_SFLCTL__lb_CSTNB":"CenPH__lb_SFLCTL__lb_CSTNB_new",
+                    "CenPH__lb_SFLCTL__lb_1LBCD":"CenPH__lb_SFLCTL__lb_1LBCD_new",
+                    "CenPH__lb_SFLCTL__lb_1LCCD":"CenPH__lb_SFLCTL__lb_1LCCD_new",
+                    "CenPH__lb_SFLCTL__lb_1AJCD":"CenPH__lb_SFLCTL__lb_1AJCD_new",
+                    "CenPH__lb_SFLCTL__lb_1ABCD":"CenPH__lb_SFLCTL__lb_1ABCD_new",
+                    "CenPH__lb_SFLCTL__lb_1AACD":"CenPH__lb_SFLCTL__lb_1AACD_new",
+                    "CenPH__lb_SFLCTL__lb_1LACD":"CenPH__lb_SFLCTL__lb_1LACD_new"
+                    
+                  },
+                "inputFields": {
+                    
+                }
+            }
+
+            $(document).ready(function () {
+              $('body').css({ "background-color": "white" });
+              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+             
+
+              var dataMergeIndices = [[0]];
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+              
+           
+             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                    $(".OverlayPopupBackground").show();
+                    $(".confirmation-outer-conatiner").show();
+              } else {
+                  $(".confirmation-outer-conatiner").hide();
+                  $(".OverlayPopupBackground").hide();
+              }
+              $("#yes").click(function (event) {
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  _00('Enter', event);
+              });
+              $("#no").click(function (event) {
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                  _00('Enter', event);
+              });
+
+
+                $("#return").click(function (event) {
+                   _00('F12', event);
+                });
+
+            
+                $("#exit").click(function (event) {
+                   _00('F3', event);
+                });
+
+                $("#help").click(function (event) {
+                   _00('F1', event);
+                });
+            });
+      </script>
+
         <div id="Div1">
             
       <%--  SV: ETR Qlty Adt Cmnts    Edit transaction                                                           --%>
