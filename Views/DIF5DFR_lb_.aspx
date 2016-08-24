@@ -569,11 +569,10 @@
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
         #__Page_PopUp {
-            min-width: 962px !important;
-            width: 962px !important;
+            min-width: 700px !important;
+            width: 700px !important;
             left: 50% !important;
-            margin-left: -481px;
-            /*height:329px !important;*/
+            margin-left: -350px;
             height: auto !important;
             top: 17% !important;
         }
@@ -618,6 +617,18 @@
          {
             text-align: right !important;
         }
+		@media (min-width: 1024px) {
+			 #__Page_PopUp {
+				min-width: 962px !important;
+				width: 962px !important;
+				margin-left: -481px;
+			}
+		}
+		@media screen and (max-width: 1023px) {
+			.table-container {
+				width: 700px;
+			}
+		}
     </style>
     <script type="text/javascript">
 

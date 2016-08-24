@@ -43,18 +43,20 @@
 		 <section class="order-summary mrgnTp16">
 			<div class="order-summary-wrapper" style="margin-bottom: 0;">
 				<div class="content-grid mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
 						<span class="summary-title">Customer Name</span>
 						<span class="summary-txt" id="custName"></span>
 					</div>
-					<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
 						<span class="summary-title">Home Phone</span>
 						<span class="summary-txt" id="homePhone"></span>
+					</div>
+						<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                         <span class="summary-title">Work Phone</span>
 						<span class="summary-txt" id="workPhone"></span>
 					</div>
                     
-					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+					<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
 						<span class="summary-title">Address</span>
 						<span class="summary-txt" id="address1"> </span>
 						<span class="summary-txt" id="address2"></span>
@@ -102,7 +104,6 @@
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
-                                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
                                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="request">Request</span>
 												</div>
