@@ -29,7 +29,7 @@
             <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--8-col">
                     <!-- Title -->
-                    <span class="heading-h1">Display Worksheet Payments</span>
+                    <span class="heading-h1">Worksheet Notes</span>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
@@ -563,9 +563,9 @@
 
             generateTableAndApplyInfiniteScroll("tblWrkSheetPmt", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
-            $('#tblWrkSheetPmt tbody tr').dblclick(function () {
-                return false; // does both event.stopPropogation as well as event.preventDefault
-            });
+            //$('#tblWrkSheetPmt tbody tr').dblclick(function () {
+            //    return false; // does both event.stopPropogation as well as event.preventDefault
+            //});
             $("#Next").click(function (event) {
                 _00('Enter', event);
             });
