@@ -96,13 +96,9 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">Help</span>
-                        
+                                               
                         </div>
 
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                        </div>
                        
                     </div>
                 </div>
@@ -119,12 +115,13 @@
         var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH_DdsConstant8": "date",
-                    "CenPH__lb_SFLCTL__lb__lb_TME": "time",
-                    "CenPH__lb_SFLCTL__lb_2AXTX":"CenPH__lb_SFLCTL__lb_2AXTX_new"
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time"
+                    
                     
                   },
                 "inputFields": {
                     
+                    "CenPH__lb_SFLCTL__lb_2AXTX":"CenPH__lb_SFLCTL__lb_2AXTX_new"
                 }
             }
 
@@ -134,8 +131,10 @@
              
 
               var dataMergeIndices = [[0] , [1]];
-                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
               
+
+              $("#CenPH__lb_SFLCTL__lb_2AXTX_new").val($("#CenPH__lb_SFLCTL__lb_2AXTX").val());
            
              if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                     $(".OverlayPopupBackground").show();
@@ -181,7 +180,7 @@
 
             });
       </script>
-        <div id="Div1">
+        <div id="Div1" style="display: none;">
             
       <%--  Select IN: SKU            Select record                                                              --%>
       <%--  CRTDSPF                                                                                              --%>

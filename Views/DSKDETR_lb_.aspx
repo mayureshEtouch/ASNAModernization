@@ -22,6 +22,98 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+<!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Select Model</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSCUSRR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col search-container">
+                                    <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--1-col" style="width: 125px;">
+                                            <span class="summary-table-title">Model Number</span>
+                                        </div>  
+                                        
+                                        <div class="mdl-cell mdl-cell--4-col">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2AXTX_new"  maxlength="20" onfocus="_09('#2AXTX','5,4','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
+                                        </div> 
+                                                              
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+    
+    <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                          
+                            <th>Model Number</th>
+                            <th>Model Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                               
+                        </tbody>
+                    </table>
+                  
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">Help</span>
+                        
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        </main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
 
       <script type="text/javascript">
         var copyToAndFrom = {
