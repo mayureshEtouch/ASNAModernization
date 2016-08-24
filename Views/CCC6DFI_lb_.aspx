@@ -46,11 +46,11 @@
                             <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet pull-right" style="width: 110px;"> <span class="summary-table-title" style="margin-left:15px;">Account</span> </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="">
-                                    <input type="text" data-tb-index="1"  id="CenPH__lb_SFLCTL__lb_2REF_lb_new" class="mdl-textfield__input" maxlength="15">
+                                    <input type="text" data-tb-index="1"  id="CenPH__lb_SFLCTL__lb_2REF_lb_new" class="mdl-textfield__input" maxlength="9">
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"> <span class="summary-table-title pull-right" style="margin-left:15px;">Ex</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet" id="">
-                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2CENB_new" class="mdl-textfield__input" style="width: 27px;" maxlength="3" data-tb-index="2">
+                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2CENB_new" class="mdl-textfield__input" style="width: 27px;" maxlength="2" data-tb-index="2">
                                 </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="">
                                   <span style="margin: 12px 10px 0 0; display: block;" id="CenPH__lb_SFLCTL__lb_CA2TX_new"></span>
@@ -2410,6 +2410,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -2525,6 +2526,10 @@
               $("#all").click(function (event) {
                    _00('F11', event);
               });
+
+              for(var i = 0; i < $("#creditaccount tr td:nth-child(1)").length;i++) {
+                $($("#creditaccount tr td:nth-child(1)")[i]).html($($("#creditaccount tr td:nth-child(1)")[i]).html().replace(/&nbsp;/g, ""));
+              }
             });
       </script>
     </asp:Content>
