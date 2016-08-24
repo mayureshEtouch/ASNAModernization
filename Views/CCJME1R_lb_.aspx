@@ -158,7 +158,7 @@
               </div>
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0 0 0 0;">
                 <span class="form-text"><input id="CenPH__lb_RCDDTL1__lb_1BXNB_new" 
-                onfocus="_09('#1BXNB','6,18','#RCDDTL1');" maxlength="10" class="mdl-textfield__input" type="text" data-tb-index="5" size="15"></span>
+                onfocus="_09('#1BXNB','6,18','#RCDDTL1');" maxlength="12" class="mdl-textfield__input" type="text" data-tb-index="5" size="15"></span>
               </div>
             </div>
           </div>
