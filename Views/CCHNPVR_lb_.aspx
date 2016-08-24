@@ -3,8 +3,8 @@
 <%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
-    <%-- Migrated on 4/18/2016 at 3:36 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-    <%-- Legacy location: library asnaDSRC, file QDDSSRC, member CCHNPVR# --%>
+    <%-- Migrated on 8/19/2016 at 9:25 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+    <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CCHNPVR# --%>
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -33,10 +33,10 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-						<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCHNPVR</span>
-                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
-						
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCHNPVR</span>
+                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time"></span>
+
                 </div>
             </div>
         </section>
@@ -87,15 +87,13 @@
                                     </div>
                                 </div>
                             </div>
-                              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span id="employee_name">:</span> </div>
                                     <div class="mdl-cell mdl-cell--7-col">
-   
-
                                     </div>
                                 </div>
-                            </div>              
+                            </div>
 
                             <!-- 4 col ends here -->
 
@@ -123,8 +121,10 @@
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Credit Account:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" class="mdl-textfield__input f4" maxlength="12" id="credit_account" size="10" data-tb-index="3" onfocus="_09('#DACC#','6,37','#RCDDTL1');" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" class="mdl-textfield__input f4" maxlength="12" id="credit_account" size="10" data-tb-index="3" onfocus="_09('#DACC#','6,37','#RCDDTL1');" /></span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -133,8 +133,10 @@
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Balance:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" class="mdl-textfield__input" onfocus="_09('#DCLVA','6,59','#RCDDTL1');" id="balance" maxlength="8" size="10" data-tb-index="4" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" class="mdl-textfield__input" onfocus="_09('#DCLVA','6,59','#RCDDTL1');" id="balance" maxlength="8" size="10" data-tb-index="4" /></span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -148,11 +150,15 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span class="form-label">Insurances A/H:</span> </div>
-                                    <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="insurance" maxlength="1" onfocus="_09('#DLEST','8,19','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="5" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--2-col">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" id="insurance" maxlength="1" onfocus="_09('#DLEST','8,19','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="5" /></span>
+                                    </div>
                                     <div class="mdl-cell mdl-cell--2-col" style="padding-left: 20px;"><span class="form-label">C/L:</span> </div>
-                                    <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="cl" maxlength="1" onfocus="_09('#DLFST','8,25','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="6" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--2-col">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" id="cl" maxlength="1" onfocus="_09('#DLFST','8,25','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="6" /></span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -161,11 +167,15 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--1-col" style="margin: 8px 5px 8px 0"><span class="form-label">Prop:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="prop" onfocus="_09('#DLGST','8,32','#RCDDTL1');" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" id="prop" onfocus="_09('#DLGST','8,32','#RCDDTL1');" maxlength="1" class="mdl-textfield__input" size="10" data-tb-index="7" /></span>
+                                    </div>
                                     <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0; padding-left: 15px;"><span class="form-label">U-Emp:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px -8px;"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" id="u_emp" maxlength="1" onfocus="_09('#DLHST','8,40','#RCDDTL1');" class="mdl-textfield__input" size="10" data-tb-index="8" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px -8px;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" id="u_emp" maxlength="1" onfocus="_09('#DLHST','8,40','#RCDDTL1');" class="mdl-textfield__input" size="10" data-tb-index="8" /></span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -174,8 +184,10 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Down Payment:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" onfocus="_09('#DGEVA','8,57','#RCDDTL1');" id="down_payment" maxlength="10" class="mdl-textfield__input" size="10" data-tb-index="9" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" onfocus="_09('#DGEVA','8,57','#RCDDTL1');" id="down_payment" maxlength="10" class="mdl-textfield__input" size="10" data-tb-index="9" /></span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -226,8 +238,10 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--2-col"><span class="form-label">For:</span> </div>
-                                    <div class="mdl-cell mdl-cell--2-col"><span data-upgraded=",MaterialTextfield" class="form-text">
-                                        <input type="text" onfocus="_09('#DDUNB','12,31','#RCDDTL1');" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width: 40%" /></span> </div>
+                                    <div class="mdl-cell mdl-cell--2-col">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                                            <input type="text" onfocus="_09('#DDUNB','12,31','#RCDDTL1');" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width: 40%" /></span>
+                                    </div>
                                     <div class="mdl-cell mdl-cell--2-col" style=""><span class="form-label">Months</span> </div>
                                     <div class="mdl-cell mdl-cell--4-col" style="">
                                         <span data-upgraded=",MaterialTextfield" class="form-label" id="lbl_with_payment_of">With Payment of
@@ -457,7 +471,7 @@
         <%--  Company       : Conn Credit Corp.                                               --%>
         <%--  System        : Conn Credit Corp.                                               --%>
         <%--  User name     : UJOG                                                            --%>
-        <%--  Date          : 01/29/16  Time  : 20:30:32                                      --%>
+        <%--  Date          : 08/09/16  Time  : 09:47:08                                      --%>
         <%--  Copyright     : Conn Credit Corp.                                               --%>
         <%-- ================================================================                 --%>
         <%--  Maintenance   :                                                                 --%>
@@ -473,82 +487,85 @@
             CommandKeyInd="29"
             CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 94 | 25">
             &nbsp;
-          <%--  COMMAND KEYS............................................................        --%>
-            <%--  SETOFFS.................................................................        --%>
-            <%-- .........................................................................        --%>
-            <%--  Reposition cursor to where?                                                     --%>
-            <%--  User name                                                                       --%>
-            <%--  Company name                                                                    --%>
-            <%--  *DATE                                                                           --%>
-            <%--  Program name                                                                    --%>
-            <%--  Job name                                                                        --%>
-            <%--  Screen title                                                                    --%>
-            <%--  *TIME                                                                           --%>
-            <%--  *Program mode                                                                   --%>
-            <%--  Selection prompt text                                                           --%>
-            <%--  Loan Type                                                                       --%>
-            <%--  Nbr: Application                                                                --%>
-            <%--  Nbr: Appl Dtl Item                                                              --%>
-            <%--  Nbr: Model                                                                      --%>
-            <%--  Cde: User Stamp                                                                 --%>
-            <%--  PROGRAM                                                                         --%>
-            <%--  Dte: Audit Stamp                                                                --%>
-            <%--  Tme: Audit Stamp                                                                --%>
-            <%--  Code: Contract State                                                            --%>
-            <%--  Code: Contract State                                                            --%>
-            <%--  Cde: Employee                                                                   --%>
-            <%--  Cde: Employee                                                                   --%>
-            <%--  Txt: Employee Name                                                              --%>
-            <%--  Cde: Payment Method                                                             --%>
-            <%--  Cde: Payment Method                                                             --%>
-            <%--  Condition: Credit Payments                                                      --%>
-            <%--  Nbr: Credit Account.                                                            --%>
-            <%--  Nbr: Credit Account.                                                            --%>
-            <%--  Principal Balance                                                               --%>
-            <%--  Principal Balance                                                               --%>
-            <%--  Sts: A/H Insurance                                                              --%>
-            <%--  Sts: A/H Insurance                                                              --%>
-            <%--  Sts: C/L Insurance                                                              --%>
-            <%--  Sts: C/L Insurance                                                              --%>
-            <%--  Sts: Prp Insurnace                                                              --%>
-            <%--  Sts: Prp Insurnace                                                              --%>
-            <%--  Sts: Uem Insurnace                                                              --%>
-            <%--  Sts: Uem Insurnace                                                              --%>
-            <%--  Vlu: Down Payment                                                               --%>
-            <%--  Vlu: Down Payment                                                               --%>
-            <%--  xxx                                                                             --%>
-            <%--  xxx                                                                             --%>
-            <%--  Payments                                                                        --%>
-            <%--  Payments                                                                        --%>
-            <%--  Payments                                                                        --%>
-            <%--  Payment Amount                                                                  --%>
-            <%--  Payment Amount                                                                  --%>
-            <%--  *CON (Screen constant)                                                          --%>
-            <%--  Cde: Product Category                                                           --%>
-            <%--  Description: Prod Cat                                                           --%>
-            <%--  Nbr: Product Quantity                                                           --%>
-            <%--  Vlu: Product                                                                    --%>
-            <%--  Vlu: Product Maint.                                                             --%>
-            <%--  Vlu: Report Total 01                                                            --%>
-            <%--  Cde: Prd Cat (2)                                                                --%>
-            <%--  Dsc: Prd Cat (2)                                                                --%>
-            <%--  Qty: Product (2)                                                                --%>
-            <%--  Vlu: Product (2)                                                                --%>
-            <%--  Vlu: Prd SMA (2)                                                                --%>
-            <%--  Vlu: Prd Line (2)                                                               --%>
-            <%--  Cde: Prd Cat (3)                                                                --%>
-            <%--  Dsc: Prd Cat (3)                                                                --%>
-            <%--  Qty: Product (3)                                                                --%>
-            <%--  Vlu: Product (3)                                                                --%>
-            <%--  Vlu: Prd SMA (3)                                                                --%>
-            <%--  Vlu: Prd Line (3)                                                               --%>
-            <%--  Cde: Prd Cat (4)                                                                --%>
-            <%--  Dsc: Prd Cat (4)                                                                --%>
-            <%--  Qty: Product (4)                                                                --%>
-            <%--  Vlu: Product (4)                                                                --%>
-            <%--  Vlu: Prd SMA (4)                                                                --%>
-            <%--  Vlu: Prd Line (4)                                                               --%>
-            <%-- =========================================================================        --%>
+          <%--  COMMAND KEYS............................................................                                         --%>
+            <%--  SETOFFS.................................................................                                         --%>
+            <%-- .........................................................................                                         --%>
+            <%--  Reposition cursor to where?                                                                                      --%>
+            <%--  User name                                                                                                        --%>
+            <%--  Company name                                                                                                     --%>
+            <%--  *DATE                                                                                                            --%>
+            <%--  Program name                                                                                                     --%>
+            <%--  Job name                                                                                                         --%>
+            <%--  Screen title                                                                                                     --%>
+            <%--  *TIME                                                                                                            --%>
+            <%--  *Program mode                                                                                                    --%>
+            <%--  STS: Web Service Status                                                                                          --%>
+            <%--  Cde: Session                                                                                                     --%>
+            <%--  Nbr: Session Surrogate 20                                                                                        --%>
+            <%--  Selection prompt text                                                                                            --%>
+            <%--  Loan Type                                                                                                        --%>
+            <%--  Nbr: Application                                                                                                 --%>
+            <%--  Nbr: Appl Dtl Item                                                                                               --%>
+            <%--  Nbr: Model                                                                                                       --%>
+            <%--  Cde: User Stamp                                                                                                  --%>
+            <%--  PROGRAM                                                                                                          --%>
+            <%--  Dte: Audit Stamp                                                                                                 --%>
+            <%--  Tme: Audit Stamp                                                                                                 --%>
+            <%--  Code: Contract State                                                                                             --%>
+            <%--  Code: Contract State                                                                                             --%>
+            <%--  Cde: Employee                                                                                                    --%>
+            <%--  Cde: Employee                                                                                                    --%>
+            <%--  Txt: Employee Name                                                                                               --%>
+            <%--  Cde: Payment Method                                                                                              --%>
+            <%--  Cde: Payment Method                                                                                              --%>
+            <%--  Condition: Credit Payments                                                                                       --%>
+            <%--  Nbr: Credit Account.                                                                                             --%>
+            <%--  Nbr: Credit Account.                                                                                             --%>
+            <%--  Principal Balance                                                                                                --%>
+            <%--  Principal Balance                                                                                                --%>
+            <%--  Sts: A/H Insurance                                                                                               --%>
+            <%--  Sts: A/H Insurance                                                                                               --%>
+            <%--  Sts: C/L Insurance                                                                                               --%>
+            <%--  Sts: C/L Insurance                                                                                               --%>
+            <%--  Sts: Prp Insurnace                                                                                               --%>
+            <%--  Sts: Prp Insurnace                                                                                               --%>
+            <%--  Sts: Uem Insurnace                                                                                               --%>
+            <%--  Sts: Uem Insurnace                                                                                               --%>
+            <%--  Vlu: Down Payment                                                                                                --%>
+            <%--  Vlu: Down Payment                                                                                                --%>
+            <%--  xxx                                                                                                              --%>
+            <%--  xxx                                                                                                              --%>
+            <%--  Payments                                                                                                         --%>
+            <%--  Payments                                                                                                         --%>
+            <%--  Payments                                                                                                         --%>
+            <%--  Payment Amount                                                                                                   --%>
+            <%--  Payment Amount                                                                                                   --%>
+            <%--  *CON (Screen constant)                                                                                           --%>
+            <%--  Cde: Product Category                                                                                            --%>
+            <%--  Description: Prod Cat                                                                                            --%>
+            <%--  Nbr: Product Quantity                                                                                            --%>
+            <%--  Vlu: Product                                                                                                     --%>
+            <%--  Vlu: Product Maint.                                                                                              --%>
+            <%--  Vlu: Report Total 01                                                                                             --%>
+            <%--  Cde: Prd Cat (2)                                                                                                 --%>
+            <%--  Dsc: Prd Cat (2)                                                                                                 --%>
+            <%--  Qty: Product (2)                                                                                                 --%>
+            <%--  Vlu: Product (2)                                                                                                 --%>
+            <%--  Vlu: Prd SMA (2)                                                                                                 --%>
+            <%--  Vlu: Prd Line (2)                                                                                                --%>
+            <%--  Cde: Prd Cat (3)                                                                                                 --%>
+            <%--  Dsc: Prd Cat (3)                                                                                                 --%>
+            <%--  Qty: Product (3)                                                                                                 --%>
+            <%--  Vlu: Product (3)                                                                                                 --%>
+            <%--  Vlu: Prd SMA (3)                                                                                                 --%>
+            <%--  Vlu: Prd Line (3)                                                                                                --%>
+            <%--  Cde: Prd Cat (4)                                                                                                 --%>
+            <%--  Dsc: Prd Cat (4)                                                                                                 --%>
+            <%--  Qty: Product (4)                                                                                                 --%>
+            <%--  Vlu: Product (4)                                                                                                 --%>
+            <%--  Vlu: Prd SMA (4)                                                                                                 --%>
+            <%--  Vlu: Prd Line (4)                                                                                                --%>
+            <%-- =========================================================================                                         --%>
             <mdf:DdsDecField ID="_lb_RCDDTL1_ZZCSRW" runat="server" Style="position: absolute; left: 1px; top: 0px; width: 28px"
                 CssClass="DdsDecField"
                 Length="3"
@@ -606,6 +623,22 @@
                 Style="position: absolute; left: 658px; top: 27px;"
                 Text="ENTER  "
                 CssClass="DdsConstant" />
+            <mdf:DdsCharField ID="_lb_RCDDTL1__lb_PX4ST" runat="server" Style="position: absolute; left: 1px; top: 0px; width: 10px"
+                CssClass="DdsCharField"
+                Length="1"
+                Alias="#PX4ST"
+                Usage="Hidden" />
+            <mdf:DdsCharField ID="_lb_RCDDTL1__lb_PGUCO" runat="server" Style="position: absolute; left: 1px; top: 0px; width: 91px"
+                CssClass="DdsCharField"
+                Length="10"
+                Alias="#PGUCO"
+                Usage="Hidden" />
+            <mdf:DdsDecField ID="_lb_RCDDTL1__lb_PQHN_lb_" runat="server" Style="position: absolute; left: 1px; top: 0px; width: 181px"
+                CssClass="DdsDecField"
+                Length="20"
+                Decimals="0"
+                Alias="#PQHN#"
+                Usage="Hidden" />
             <mdf:DdsCharField ID="_lb_RCDDTL1__lb_DCSCD" runat="server" Style="position: absolute; left: 1px; top: 0px; width: 10px"
                 CssClass="DdsCharField"
                 Length="1"
@@ -1113,8 +1146,8 @@
             Alias="#CMDTXT1"
             CssClass="DdsRecord">
             &nbsp;
-          <%--  Command key text                                                                --%>
-            <%-- =========================================================================        --%>
+          <%--  Command key text                                                                                                 --%>
+          <%-- =========================================================================                                         --%>
             <mdf:DdsConstant ID="DdsConstant19" runat="server"
                 Style="position: absolute; left: 19px; top: 3px;"
                 Text="F3=Exit  F4=Prompt  F9=Get Customer"
