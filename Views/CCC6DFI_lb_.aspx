@@ -2530,6 +2530,14 @@
               for(var i = 0; i < $("#creditaccount tr td:nth-child(1)").length;i++) {
                 $($("#creditaccount tr td:nth-child(1)")[i]).html($($("#creditaccount tr td:nth-child(1)")[i]).html().replace(/&nbsp;/g, ""));
               }
+
+              for(var i = 0; i < $("#creditaccount tr td:nth-child(8)").length;i++) {
+                $($("#creditaccount tr td:nth-child(8)")[i]).html($($("#creditaccount tr td:nth-child(8)")[i]).html().replace(/&nbsp;/g, ""));
+              }
+
+              for(var i = 0; i < $("#creditaccount tr td:nth-child(9)").length;i++) {
+                $($("#creditaccount tr td:nth-child(9)")[i]).html($($("#creditaccount tr td:nth-child(9)")[i]).html().replace(/&nbsp;/g, ""));
+              }
             });
       </script>
     </asp:Content>
