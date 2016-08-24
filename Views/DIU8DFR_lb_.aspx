@@ -563,9 +563,19 @@
 
             generateTableAndApplyInfiniteScroll("tblWrkSheetPmt", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
-            //$('#tblWrkSheetPmt tbody tr').dblclick(function () {
-            //    return false; // does both event.stopPropogation as well as event.preventDefault
-            //});
+            $('#tblWrkSheetPmt tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
+            $("body").on("click", ".next-icon", function () {
+                $('#tblWrkSheetPmt tbody tr').dblclick(function () {
+                    return false; // does both event.stopPropogation as well as event.preventDefault
+                });
+            });
+            $("body").on("click", ".prev-icon", function () {
+                $('#tblWrkSheetPmt tbody tr').dblclick(function () {
+                    return false; // does both event.stopPropogation as well as event.preventDefault
+                });
+            });
             $("#Next").click(function (event) {
                 _00('Enter', event);
             });
