@@ -3,8 +3,8 @@
 <%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
-    <%-- Migrated on 1/26/2016 at 1:52 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-    <%-- Legacy location: library ASNATSRC, file QDDSSRC, member DSEBETR# --%>
+    <%-- Migrated on 8/19/2016 at 8:50 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+    <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSEBETR# --%>
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -23,185 +23,185 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
-        <main class="mdl-layout__content">
-            <section class="time-date">
+    <main class="mdl-layout__content">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <!-- Title -->
+                    <span class="heading-h1">Enter Order Payment</span>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <!-- Navigation -->
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DSEBETR</span>
+                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
+                </div>
+            </div>
+        </section>
+        <section class="progress-bar">
+            <div class="progress-bar-wrapper">
+                <ul class="progress-bar-main">
+                    <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
+                    <li class="progress-bar-divider"></li>
+
+                    <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                    <li class="progress-bar-divider"></li>
+
+                    <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                    <li class="progress-bar-divider"></li>
+
+                    <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                    <li class="white-to-gray-bullet"></li>
+
+                    <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </section>
+        <section class="order-summary">
+            <div class="order-summary-wrapper">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
-                        <!-- Title -->
-                        <span class="heading-h1">Enter Order Payment</span>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <span class="summary-title">Order #</span>
+                        <span class="summary-txt" name="order"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
-                        <!-- Navigation -->
-                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSEBETR</span>
-                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time"></span>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <span class="summary-title">Version #</span>
+                        <span class="summary-txt" name="version"></span>
                     </div>
-                </div>
-            </section>
-            <section class="progress-bar">
-                <div class="progress-bar-wrapper">
-                    <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 1</span> <span class="step-txt">Customer Selection Screen</span> </li>
-                        <li class="progress-bar-divider"></li>
-
-                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
-                        <li class="progress-bar-divider"></li>
-
-                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
-                        <li class="progress-bar-divider"></li>
-
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
-                        <li class="white-to-gray-bullet"></li>
-
-                        <li class="progress-bar-step5 gray-bg step-width"><span class="step-title-selected">Step 5</span> <span class="step-txt-selected">Enter Order Payments</span> </li>
-
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </section>
-            <section class="order-summary">
-                <div class="order-summary-wrapper">
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Order #</span>
-                            <span class="summary-txt" name="order"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Version #</span>
-                            <span class="summary-txt" name="version"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--4-col">
-                            <span class="summary-title">Customer Name</span>
-                            <span class="summary-txt" name="username"></span>
-                        </div>
+                    <div class="mdl-cell mdl-cell--4-col">
+                        <span class="summary-title">Customer Name</span>
+                        <span class="summary-txt" name="username"></span>
                     </div>
                 </div>
-            </section>
-            <section class="form-data">
-                <div class="form-data-wrapper">
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Purchase Total:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CEFVA" class="form-text pull-right"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Tax Amount:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CBLVA" class="form-text pull-right"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Balance Due:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col amount-text">
-                            <span id="CenPH_CBNVA" class="form-text pull-right" style="padding-right: 5%;"></span>
-                        </div>
+            </div>
+        </section>
+        <section class="form-data">
+            <div class="form-data-wrapper">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Purchase Total:</span>
                     </div>
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Miscellaneous:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_1ANPR" class="form-text pull-right"></span>
-                        </div>
-                       <div class="mdl-cell mdl-cell--2-col ">
-                            <span class="form-label">Payment Total:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CBMVA" class="form-text pull-right"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Requested Delivery Date:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-								<input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
-                                <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
-                                <span id="reqdate" class="DdsCharField_OutputOnly"></span>
-                            </span>
-                        </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
+                        <span id="CenPH_CEFVA" class="form-text pull-right"></span>
                     </div>
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Effective Tax Rate:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col">
-                            <span class="form-label">Order Total:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
-                            <span id="CenPH_CAQPR" class="form-text pull-right"></span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
-                            <span class="form-label">Expected Delivery Date:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col" id="exp-date-val">
-                            <span class="form-text pull-right"></span>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Tax Amount:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
+                        <span id="CenPH_CBLVA" class="form-text pull-right"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Balance Due:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col amount-text">
+                        <span id="CenPH_CBNVA" class="form-text pull-right" style="padding-right: 5%;"></span>
+                    </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Miscellaneous:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
+                        <span id="CenPH_1ANPR" class="form-text pull-right"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col ">
+                        <span class="form-label">Payment Total:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
+                        <span id="CenPH_CBMVA" class="form-text pull-right"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Requested Delivery Date:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
+                            <input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+                            <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
+                            <span id="reqdate" class="DdsCharField_OutputOnly"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Effective Tax Rate:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
+                        <span id="CenPH_V1ACPC" class="form-text pull-right"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col">
+                        <span class="form-label">Order Total:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell-brd amount-text">
+                        <span id="CenPH_CAQPR" class="form-text pull-right"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col" id="exp-date-label">
+                        <span class="form-label">Expected Delivery Date:</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--2-col" id="exp-date-val">
+                        <span class="form-text pull-right"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="add-item">
+            <div class="add-item-wrapper">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col pull-right" style="display: none">
+                        <div class="icon-container icon-disable" id="delete-record">
+                            <span class="icon-txt display-customer delete">Delete</span>
+                            <i class="material-icons md-15 md-light display-customer delete-icon-disabled delete" style="cursor: pointer;"></i>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="add-item">
-                <div class="add-item-wrapper">
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col error-msg-container" style="text-align: left;">
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col pull-right" style="display:none">
-                            <div class="icon-container icon-disable" id="delete-record">
-								<span class="icon-txt display-customer delete">Delete</span>
-								<i class="material-icons md-15 md-light display-customer delete-icon-disabled delete" style="cursor: pointer;"></i>
-							</div>
-                        </div>
+            </div>
+        </section>
+        <section class="table-data-content-container spacer-container-bottom" style="margin-bottom: 70px;">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container" style="overflow: auto;" id="enterPayment">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="payment-method">
+                            <thead>
+                                <tr>
+                                    <th width="20%">Payment Method</th>
+                                    <th width="20%">Amount ($)</th>
+                                    <th width="20%">Reference</th>
+                                    <th width="20%">Approval Code</th>
+                                    <th width="20%">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-            </section>
-            <section class="table-data-content-container spacer-container-bottom" style="margin-bottom: 70px;">
-                <div class="table-data-wrapper">
-                    <div class="table-data-maincontainer">
-                        <div class="table-container" style="overflow: auto;" id="enterPayment">
-                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="payment-method">
-                                <thead>
-                                    <tr>
-                                        <th width="20%">Payment Method</th>
-                                        <th width="20%">Amount ($)</th>
-                                        <th width="20%">Reference</th>
-                                        <th width="20%">Approval Code</th>
-										<th width= "20%">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="button-container nextStep">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</span>
-                                </div>
+                    <div class="button-container nextStep">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-        <div id="modal1" class="simplePopup"></div>
-        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-            <i class="material-icons md-15 md-light help-icon"></i>
-            <span class="confirmation-text">Do you want to continue</span>
-            <div class="button-container">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
+        </section>
+    </main>
+    <div id="modal1" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i>
+        <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
         </div>
-    
-    <div id="Div1" style="display:none;">
+    </div>
+
+    <div id="Div1" style="display: none;">
 
         <%--  OE: ETR Ent Ord Pymts     Edit transaction                                                                       --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -213,8 +213,8 @@
         <%--                                                                                                                   --%>
         <%--  Company       : DIS Development Model                                                                            --%>
         <%--  System        : DIS Development Model                                                                            --%>
-        <%--  User name     : COOL5                                                                                            --%>
-        <%--  Date          : 09/17/15  Time  : 08:31:39                                                                       --%>
+        <%--  User name     : GPALANI                                                                                          --%>
+        <%--  Date          : 08/03/16  Time  : 15:45:02                                                                       --%>
         <%--  Copyright     : DIS Development Model                                                                            --%>
         <%-- ================================================================                                                  --%>
         <%--  Maintenance   :                                                                                                  --%>
@@ -1113,13 +1113,15 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
-        .table-data-content-container .mdl-data-table td{
-			padding: 6px 10px 6px;
-			line-height:normal;
-		}
-		.mdl-layout__content .DdsDecField {
-			font-weight: normal;
-		}
+        .table-data-content-container .mdl-data-table td {
+            padding: 6px 10px 6px;
+            line-height: normal;
+        }
+
+        .mdl-layout__content .DdsDecField {
+            font-weight: normal;
+        }
+
         .even-row-read-only-data {
             text-transform: uppercase !important;
             position: relative !important;
@@ -1128,6 +1130,7 @@
             width: auto !important;
             border: 0px solid #ffffff !important;
         }
+
         .odd-row-read-only-data {
             text-transform: uppercase !important;
             position: relative !important;
@@ -1137,92 +1140,105 @@
             border: 0px !important;
             background-color: rgb(249, 249, 249) !important;
         }
-        #CenPH__lb_SFLRCD{
-			display: table;
+
+        #CenPH__lb_SFLRCD {
+            display: table;
             height: 125px !important;
         }
-        #CenPH__lb_SFLRCD, #CenPH__lb_SFLRCD * {
-            position: static !important;
-        }
+
+            #CenPH__lb_SFLRCD, #CenPH__lb_SFLRCD * {
+                position: static !important;
+            }
+
         .DdsSubfileSBar {
             display: none !important;
         }
-		.table-data-content-container .mdl-data-table {
-			margin-bottom: 0;
-		}
-		.AlternateRow, .DefaultRow {
-			display: table-row;
-			width: 100% !important;
-			height: 32px !important;
-			border-left: none !important;
-			border-right: none !important;
-			border-bottom:1px solid #c5c5c5;
-		}
-		.AlternateRow {
-			background-color: rgb(249, 249, 249) !important;
-		}
-		.DefaultRow {
-			background-color: #FFF !important;
-		}
+
+        .table-data-content-container .mdl-data-table {
+            margin-bottom: 0;
+        }
+
+        .AlternateRow, .DefaultRow {
+            display: table-row;
+            width: 100% !important;
+            height: 32px !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid #c5c5c5;
+        }
+
+        .AlternateRow {
+            background-color: rgb(249, 249, 249) !important;
+        }
+
+        .DefaultRow {
+            background-color: #FFF !important;
+        }
+
         #CenPH__lb_SFLRCD__End {
             background-color: #FFF !important;
         }
-        #CenPH__lb_SFLRCD > div input,  #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
+
+        #CenPH__lb_SFLRCD > div input, #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
             width: 12% !important;
             display: table-cell;
-			float: left;
+            float: left;
             padding: 1px 3px 2px !important;
             margin-top: 4px;
-			margin-left: 10px;
-			margin-right: 0;
+            margin-left: 10px;
+            margin-right: 0;
         }
-		#CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
-			padding: 1px 4px 2px !important;
-		}
-		#CenPH__lb_SFLRCD span.blank-space {
-			border-right: 1px solid #c5c5c5;
-			display: inline-block;
-			float: left;
-			height: 31px;
-			margin-top: 0;
-			padding: 0 !important;
-			margin-left: 0;
-			margin-right: 0 !important;
-		}
+
+        #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
+            padding: 1px 4px 2px !important;
+        }
+
+        #CenPH__lb_SFLRCD span.blank-space {
+            border-right: 1px solid #c5c5c5;
+            display: inline-block;
+            float: left;
+            height: 31px;
+            margin-top: 0;
+            padding: 0 !important;
+            margin-left: 0;
+            margin-right: 0 !important;
+        }
+
         .DdsSubfileCurrentRecord {
             background-color: #d8d8d8 !important;
         }
+
         #CenPH__lb_SFLRCD > div span[id*="2SEL"] {
             float: right;
-			width: 16% !important;
+            width: 16% !important;
         }
-		.DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
-			margin-left: 10px;
-			float: left;
-			text-align: left !important;
-		}
-		#CenPH__lb_SFLRCD > div > #CenPH__lb_SFLRCD_End {
-			margin-left:10px !important;
-		}
+
+        .DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
+            margin-left: 10px;
+            float: left;
+            text-align: left !important;
+        }
+
+        #CenPH__lb_SFLRCD > div > #CenPH__lb_SFLRCD_End {
+            margin-left: 10px !important;
+        }
+
         #CenPH__lb_SFLRCD {
             border-collapse: collapse;
         }
-		.DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select{
-			font-weight: normal !important;
-		}
-		@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-	.mdl-layout__content {
-		height: 920px;
-	}
 
-}
+        .DdsSubfileCandidateCurrentRecord select:hover, .DdsSubfileCandidateCurrentRecord select option, .DdsSubfileCandidateCurrentRecord input:hover, .DdsSubfileCandidateCurrentRecord input, .DdsSubfileCandidateCurrentRecord select:hover option, .DdsSubfileCandidateCurrentRecord:hover select option, .DdsSubfileCandidateCurrentRecord:hover select {
+            font-weight: normal !important;
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+            .mdl-layout__content {
+                height: 920px;
+            }
+        }
     </style>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             //function renderPage() {
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant23]").text());
@@ -1231,10 +1247,10 @@
             $("#requestdate").val($("#CenPH__lb_SFLCTL_VCBQDT").val());
             //$("#requestdate").datepicker({ dateFormat: 'mm/dd/yy',minDate: 0 });
             $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: 0 });
-            $("#requestcal").click(function() {
+            $("#requestcal").click(function () {
                 $("#requestdate").datepicker("show");
             });
-            $("#requestdate").on('keyup change', function() {
+            $("#requestdate").on('keyup change', function () {
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_VCBQDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
@@ -1274,14 +1290,14 @@
                 renderPage();
             });*/
 
-            $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function() {
+            $("body").on('hover', "div#CenPH__lb_SFLRCD:odd input,div#CenPH__lb_SFLRCD:odd span", function () {
                 $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
             });
-            $("body").on('hover', "div#CenPH__lb_SFLRCD:even input,div#CenPH__lb_SFLRCD:even span", function() {
+            $("body").on('hover', "div#CenPH__lb_SFLRCD:even input,div#CenPH__lb_SFLRCD:even span", function () {
                 $($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
             });
 
-            $("body").on('click', "div#CenPH__lb_SFLRCD input", function() {
+            $("body").on('click', "div#CenPH__lb_SFLRCD input", function () {
                 $("div.icon-container").removeClass("icon-disable");
                 $("div.icon-container i.delete-icon-disabled").addClass("delete-icon").removeClass("delete-icon-disabled");
             });
@@ -1298,16 +1314,16 @@
                 $("#reqdate").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
-				
-				
-				$('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function(i){
-				
-					$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text()=="4"?"Cancel":"Active");
-					//$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
-				});
-				
-			
-				  
+
+
+                $('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function (i) {
+
+                    $("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text() == "4" ? "Cancel" : "Active");
+                    //$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+                });
+
+
+
             } else {
                 //$("#exp-date-label,#exp-date-val").hide();
                 $("#reqdate").hide();
@@ -1315,29 +1331,29 @@
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
-            $("#yes").click(function(event) {
+            $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
             });
-            $("#no").click(function(event) {
+            $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 _00('Enter', event);
             });
             //Handle next button click event
-            $("#nextPage").on("click", function(event) {
+            $("#nextPage").on("click", function (event) {
                 _00("Enter", event);
             });
             //F12 event
-            $("#exitPage").on("click", function(event) {
+            $("#exitPage").on("click", function (event) {
                 _00("F12", event);
             });
-            var deleteRow = function(row, value, event) {
+            var deleteRow = function (row, value, event) {
                 var selectId = "CenPH__lb_SFLRCD__lb_2SEL";
                 var selectIndex = $(row).attr('id').split("_")[$(row).attr('id').split("_").length - 1];
                 $("#" + selectId + "\\." + selectIndex).val(value);
                 _00('Enter', event);
             }
-            $(".delete").click(function(event) {
+            $(".delete").click(function (event) {
                 var row = $("#CenPH__lb_SFLRCD > div.DdsSubfileCurrentRecord");
                 deleteRow(row, "4", event);
             });
@@ -1380,21 +1396,21 @@
             }
 
             //DdsSubfileRecord tabindex
-            setTimeout(function() {
+            setTimeout(function () {
                 $(".DdsCharField").attr("tabindex", "0");
-                $(".DdsSubfileRecord input").each(function() {
+                $(".DdsSubfileRecord input").each(function () {
                     if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
                 });
             }, 100)
-            setTimeout(function() {
-                    $(".DdsDecField").attr("tabindex", "0");
-                    $(".DdsSubfileRecord input").each(function() {
-                        if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
-                    });
-                }, 100)
-                //}
+            setTimeout(function () {
+                $(".DdsDecField").attr("tabindex", "0");
+                $(".DdsSubfileRecord input").each(function () {
+                    if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
+                });
+            }, 100)
+            //}
             renderPage(true);
-            $('body').on('keyup keydown', function(event) {
+            $('body').on('keyup keydown', function (event) {
                 var keycode = event.keycode || event.which;
                 if (keycode === 33) {
                     renderPage(true);
@@ -1403,15 +1419,15 @@
                 }
                 return;
             });
-            $('body').on("click touchstart touchend", "#sp-next-page", function(event) {
+            $('body').on("click touchstart touchend", "#sp-next-page", function (event) {
                 _00("PgDn", event);
                 renderPage(true);
             });
-            $('body').on("click touchstart touchend", "#sp-previous-page", function(event) {
+            $('body').on("click touchstart touchend", "#sp-previous-page", function (event) {
                 _00("PgUp", event);
                 renderPage(true);
             });
-            $(window).resize(function() {
+            $(window).resize(function () {
                 renderPage(false);
             })
         });
