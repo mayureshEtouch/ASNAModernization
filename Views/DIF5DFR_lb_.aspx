@@ -637,7 +637,7 @@
 
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12]];
 
-            generateTableAndApplyInfiniteScroll("__Page_PopUp #tblItemTaxes", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+            generateTableAndApplyInfiniteScroll("tblItemTaxes", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
             $('#tblItemTaxes tbody tr').dblclick(function () {
                 return false; // does both event.stopPropogation as well as event.preventDefault
