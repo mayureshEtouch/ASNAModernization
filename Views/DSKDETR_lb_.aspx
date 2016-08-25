@@ -33,7 +33,7 @@
         <span class="heading-h1">Edit Quality Card Comments</span> </div>
         <div class="mdl-cell mdl-cell--4-col pull-right"> 
           <!-- Navigation --> 
-          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSKDETR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSKDETR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span> </div>
         </div>
       </section>
 
@@ -155,9 +155,17 @@
 
   </main>
   <div id="modal1" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i>
+        <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
   <!-- Modified HTML code ends here -->
   <style>
-    
+
     .sp-inst {
       left: 0 !important;
       margin-left: 0 !important;
@@ -203,7 +211,7 @@
       /*************************/
 
       function generateSpecialInstructionsSection() {
-        
+
             //Create copyToAndFrom JSON object for special instructions
             var copyToAndFrom = {
               "displayOnlyFields": {},
@@ -216,7 +224,7 @@
 
               var allInputFields = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input, div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span');
               for(var i = 0; i < allInputFields.length; i++) {
-                
+
                 var allField = "";
                 if($(allInputFields[i]).is('input')){
                   allField = '<input maxlength="60" type="text" id="special-instructions' + i + '" class="sp-inst editable-data" tab-index="'+(9 + i)+'">';
@@ -226,7 +234,7 @@
 
                 var oldInpId = $(allInputFields[i]).attr("id");
                 var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];
-                
+
                 $("#special-instructions").append(allField);
 
 
@@ -239,9 +247,9 @@
                 if($("#__Page_PopUp #CenPH__lb_SFLRCD_0").length === 0) {
                   $("#special-instructions").after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
                 }
-                
+
                 $("#special-instructions").after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-                
+
               }
               $("#special-instructions").prepend('<legend id="legen">Comments:</legend>');
             }
@@ -299,7 +307,7 @@
                     });
                     </script>
 
-                    <div id="Div1">
+                    <div id="Div1" style="display: none;">
 
                       <%--  SV: ETR Qlty Adt Cmnts    Edit transaction                                                           --%>
                       <%--  CRTDSPF                                                                                              --%>
