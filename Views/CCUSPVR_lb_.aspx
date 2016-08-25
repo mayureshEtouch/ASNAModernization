@@ -1040,6 +1040,9 @@
                     $(".OverlayPopupBackground").show();
                 }
                 
+
+                $("#CenPH__lb_RCDDTL1__lb_PHBVA_new").ForceNumericOnly();
+                
                 $("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     _00('Enter', event);
