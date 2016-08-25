@@ -181,7 +181,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Entered:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Entered Date:</span> </div>
                   <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1HKDT_new"></span> </div>
                 </div>
               </div>
@@ -189,7 +189,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Last Worked:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span class="form-label">Last Worked Date:</span> </div>
                   <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1HLDT_new"></span> </div>
                 </div>
               </div>
