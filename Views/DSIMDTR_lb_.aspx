@@ -156,7 +156,7 @@
       </div>
     </div>
       
-  <div class="table-data-wrapper mrgnTp16">
+  <div class="table-data-wrapper mrgnTp16" >
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
           <div class="content-grid mdl-grid" style="padding:0"> 
@@ -267,7 +267,7 @@
           </div>
           <!-- content-grid mdl-grid ends here --> 
             <section class="table-data-content-container" id="tb1">
-                                <div class="table-data-wrapper">
+                                <div class="table-data-wrapper" style="margin-bottom: 20px;">
                                     <div class="table-data-maincontainer">
                                         <div style="overflow: auto;" class="table-container">
                                             <div>
