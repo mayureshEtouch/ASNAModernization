@@ -66,7 +66,7 @@
 			 <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col  mdl-cell--3-col-tablet" >
               <div class="content-grid mdl-grid">
-                <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span class="form-label">Location:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col " style="margin: 0"> <span class="form-label">Location:</span> </div>
                 <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2T4CD_new"></span> </div>
               </div>
             </div>
@@ -126,7 +126,7 @@
 			 <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" >
               <div class="content-grid mdl-grid">
-                <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span class="form-label">Zip Code:</span> </div>
+                <div  class="mdl-cell mdl-cell--3-col " style="margin: 0"> <span class="form-label">Zip Code:</span> </div>
                 <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CAPTX_new"></span> </div>
               </div>
             </div>
@@ -189,8 +189,8 @@
 			 <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--3-col-tablet" >
               <div class="content-grid mdl-grid">
-                <div  class="mdl-cell mdl-cell--5-col " style="margin: 0"> <span class="form-label">Tax Total:</span> </div>
-                <div  class="mdl-cell mdl-cell--4-col  pull-right" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CA0A_usd_new"></span> </div>
+                <div  class="mdl-cell mdl-cell--3-col " style="margin: 0"> <span class="form-label">Tax Total:</span> </div>
+                <div  class="mdl-cell mdl-cell--2-col  pull-right" style="margin: 0"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CA0A_usd_new"></span> </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
