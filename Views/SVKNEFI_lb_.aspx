@@ -78,7 +78,7 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                                <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>--%>
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="change">Change</span>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
@@ -726,7 +726,7 @@
 
                     var allField = "";
                     if ($(allInputFields[i]).is('input')) {
-                        allField = '<input maxlength="60" type="text" id="special-instructions' + i + '" class="sp-inst editable-data" tab-index="' + (9 + i) + '">';
+                        allField = '<input maxlength="50" type="text" id="special-instructions' + i + '" class="sp-inst editable-data" tab-index="' + (9 + i) + '">';
                     } else if ($(allInputFields[i]).is('span')) {
                         allField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style=""></span>';
                     }
@@ -793,9 +793,9 @@
                 _00('F3', event);
             });
 
-            $("#prompt").click(function (event) {
-                _00('F4', event);
-            });
+            //$("#prompt").click(function (event) {
+            //    _00('F4', event);
+            //});
             $("#change").click(function (event) {
                 _00('F9', event);
             });
