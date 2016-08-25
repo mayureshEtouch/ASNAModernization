@@ -33,9 +33,9 @@
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
-                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">SVKNEFI</span>
-                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date"></span>
-                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time"></span>
+                    <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVKNEFI</span>
+                    <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -91,7 +91,7 @@
         </section>
 
     </main>
-     <div id="modal" class="simplePopup"></div>
+    <div id="modal" class="simplePopup"></div>
     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
         <i class="material-icons md-15 md-light help-icon"></i>
         <span class="confirmation-text">Do you want to continue</span>
@@ -657,7 +657,8 @@
             position: relative !important;
             text-transform: uppercase !important;
             width: 99% !important;
-        }
+            font-weight: normal;
+            display: block;
     </style>
 
     <script type="text/javascript">
