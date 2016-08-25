@@ -99,6 +99,9 @@
                                                
                         </div>
 
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+                        </div>
                        
                     </div>
                 </div>
@@ -175,6 +178,11 @@
                 }
 
                  $("#search").click(function (event) {
+                    _00('Enter', event);
+                  });
+
+
+                  $("#next").click(function (event) {
                     _00('Enter', event);
                   });
 

@@ -129,7 +129,7 @@ $(document).ready(function () {
     <div class="content-grid mdl-grid">
       <div class="mdl-cell mdl-cell--8-col"> 
         <!-- Title --> 
-        <span class="heading-h1">Worksheet Audit Detail</span> </div>
+        <span class="heading-h1">Workorder Audit Detail</span> </div>
       <div class="mdl-cell mdl-cell--4-col pull-right"> 
         <!-- Navigation --> 
         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">SVRJD1R</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
