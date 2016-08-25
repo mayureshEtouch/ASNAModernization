@@ -35,7 +35,7 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSNCDFR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
@@ -183,7 +183,7 @@
 			 "CenPH__lb_SFLCTL__lb_CECTX":"vendorDesc",
 			 "CenPH__lb_SFLCTL__lb_CA3QT":"totalAvail",
 			 "CenPH__lb_SFLCTL__lb_CDQQT":"excptn",
-			 "CenPH_DdsConstant14":"date",
+			 "CenPH_DdsConstant8":"date",
 			 "CenPH__lb_SFLCTL__lb__lb_TME":"time"
             },
             "inputFields": {
