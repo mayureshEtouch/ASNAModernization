@@ -1027,7 +1027,7 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#CenPH__lb_RCDDTL1__lb_PHBVA_new").focus();
-              $("#CenPH__lb_RCDDTL1__lb_PHBVA_new").numericWithTwoDecimalPrecisions();
+              $("#CenPH__lb_RCDDTL1__lb_PHBVA_new").ForceCurrencyWithTwoDecimal();
               if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                     $(".editable-data").show();
                     $(".ro-data").hide();
@@ -1041,8 +1041,8 @@
                 }
                 
 
-                $("#CenPH__lb_RCDDTL1__lb_PHBVA_new").ForceNumericOnly();
-                
+               
+
                 $("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     _00('Enter', event);
