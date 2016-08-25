@@ -206,6 +206,14 @@
               var dataMergeIndices = [[0]];
                 generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
               
+              $("#displayData tr td").each(function(i,col){
+
+                if($(col).is('input')){
+
+                  $(col).append('<input id="CenPH__lb_SFLRCD__lb_2AQNA\\.'+i+'" maxlength="60" type="text" value="" onfocus="_07(this.id,'#2AQNA','8,3','#SFLRCD','#SFLRCD')" class="mdl-textfield__input" data-tb-index="1">');
+                }
+
+              });
            
              if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                     $(".OverlayPopupBackground").show();
