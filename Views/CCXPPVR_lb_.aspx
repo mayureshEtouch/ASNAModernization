@@ -74,10 +74,6 @@
                           <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
                               <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span><span class="form-text mrgnLft20" id="CenPH__lb_RCDDTL1__lb_DWZTX_new"></span>
                           </div>
-						  
-						   <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet" style="margin:10px 0 0 0">
-                              <span class="form-label" id="CenPH_DdsConstant2_new"></span>
-                          </div>
             </div>
           </div>
           <!-- col ends here -->
@@ -86,7 +82,7 @@
         
           <div>
               <ul class="mdl-list" id="appeal-list-item">
-                <li style="margin-top: 0;">
+                <li>
                 <select class="select" style="display:none" id="CenPH__lb_RCDDTL1__lb_DM9ST_new" data-tb-index="1"> 
 					<option selected="selected" value=" ">Please Select</option>
 					<option value="Y">Yes</option>
