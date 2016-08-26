@@ -673,43 +673,12 @@
 
         $(document).ready(function () {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-            //function generateSpecialInstructionsSection() {
-            //    //Create copyToAndFrom JSON object for special instructions
-            //    var copyToAndFrom = {
-            //        "displayOnlyFields": {},
-            //        "inputFields": {}
-            //    }
-            //    $("#special-instructions").empty();
-            //    var allInputFields = ($('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input').length ?
-            //        $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] input') :
-            //        $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"] span:not(:last)'));
-            //    for (var i = 0; i < allInputFields.length; i++) {
-            //        var splInsNewField = '<input maxlength="60" type="text" id="special-instructions' + i + '" class="sp-inst editable-data" tab-index="' + (9 + i) + '">';
-            //        var splInsRONewField = '<span type="text" id="ro-special-instructions' + i + '" class="sp-inst ro-data" style="display:none;"></span>';
-            //        var oldInpId = $(allInputFields[i]).attr("id");
-            //        var splInsOldField = oldInpId.split(".")[0] + "\\." + oldInpId.split(".")[1];
-            //        if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
-            //            $("#special-instructions").append(splInsRONewField);
-            //        } else {
-            //            $("#special-instructions").append(splInsNewField);
-            //        }
-
-
-            //        copyToAndFrom.inputFields[splInsOldField] = "special-instructions" + i;
-            //        copyToAndFrom.displayOnlyFields[splInsOldField] = "ro-special-instructions" + i;
-            //    }
-            //    copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-            //    /*$("#special-instructions").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");*/
-            //    $("#sp-previous-page,#sp-next-page").remove();
-
-            //    if ($("#CenPH__lb_SFLRCD_0").length === 0) {
-            //        $("#special-instructions").
-            //            after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
-            //    }
-            //    $("#special-instructions").
-            //        after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-            //    $("#special-instructions").prepend('<legend id="legen">Exchange Note</legend>');
-            //}
+            if ($("#CenPH_DdsConstant9:contains(Add)").length > 0) {
+                $("#change").html("Add");
+            }
+            else {
+                $("#change").html("Change");
+            }
 
             function generateSpecialInstructionsSection() {
 
