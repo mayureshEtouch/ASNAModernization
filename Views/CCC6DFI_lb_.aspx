@@ -2441,7 +2441,7 @@
               var dataMergeIndices = [[0], [1], [2], [3, "<br/>", 15], [4, "<br/>", 16], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14]];
                 generateTableAndApplyInfiniteScroll("creditaccount", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
-                $("#creditaccount tr").css('cursor', 'pointer');
+                $("#creditaccount tbody tr").css('cursor', 'pointer');
                 $("#CenPH__lb_SFLCTL__lb_2REF_lb_new").focus();
 
                 $("#CenPH__lb_SFLCTL__lb_2REF_lb_new").ForceNumericOnly();
@@ -2538,6 +2538,9 @@
               for(var i = 0; i < $("#creditaccount tr td:nth-child(9)").length;i++) {
                 $($("#creditaccount tr td:nth-child(9)")[i]).html($($("#creditaccount tr td:nth-child(9)")[i]).html().replace(/&nbsp;/g, ""));
               }
+
+              $("#CenPH__lb_SFLCTL__lb_2REF_lb_new").val($("#CenPH__lb_SFLCTL__lb_2REF_lb_new").val().replace(/\s+/g, ''));
+
             });
       </script>
     </asp:Content>
