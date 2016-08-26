@@ -1917,7 +1917,10 @@
                 $("#invoiceRiskTd").remove();
                 $("#invoiceRiskTd1").remove();
             }
-            if ($(("#CenPH__lb_RCDDTL1__lb_DYCVA").html == '')) {
+            if ($("#CenPH__lb_RCDDTL1__lb_DYCVA").length > 0) {
+                $("#downDollar").show();
+                $("#downDollar1").show();
+            } else {
                 $("#downDollar").remove();
                 $("#downDollar1").remove();
             }
