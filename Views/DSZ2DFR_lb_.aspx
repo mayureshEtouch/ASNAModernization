@@ -59,14 +59,14 @@
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="creditpayment" data-upgraded=",MaterialDataTable">
                  <thead>
                           <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Company</th>
-                            <th>Location</th>
-                            <th>Employee Code</th>
-                            <th>Amount</th>
-                            <th>Reference</th>
-                            <th>Approval Code</th>
+                            <th>Date <br/><span id="CenPH__lb_SFLCTL_VCC2DT_new"></span></th>
+                            <th>Time <br/><span id="CenPH__lb_SFLCTL__lb_CABTM_new"></span></th>
+                            <th>Company <br/><span id="CenPH__lb_SFLCTL__lb_CDXCD_new"></span></th>
+                            <th>Location <br/><span id="CenPH__lb_SFLCTL__lb_CCTCD_new"></span></th>
+                            <th>Employee Code <br/><span id="CenPH__lb_SFLCTL__lb_CC1CD_new"></span></th>
+                            <th>Amount <br/><span id="CenPH__lb_SFLCTL__lb_CX7VA_new"></span></th>
+                            <th>Reference <br/><span id="CenPH__lb_SFLCTL__lb_CF6TX_new"></span></th>
+                            <th>Approval Code <br/><span id="CenPH__lb_SFLCTL__lb_CNDTX_new"></span></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -640,13 +640,25 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        #creditpayment tr td:nth-child(6){
+          text-align: right;
+        }
+      </style>
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH_DdsConstant10": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                     "CenPH__lb_SFLCTL__lb_2K4TX": "CenPH__lb_SFLCTL__lb_2K4TX_new",
-                    
+                    "CenPH__lb_SFLCTL__lb_CABTM": "CenPH__lb_SFLCTL__lb_CABTM_new",
+                    "CenPH__lb_SFLCTL__lb_CX7VA": "CenPH__lb_SFLCTL__lb_CX7VA_new",
+                    "CenPH__lb_SFLCTL_VCC2DT": "CenPH__lb_SFLCTL_VCC2DT_new",
+                    "CenPH__lb_SFLCTL__lb_CDXCD": "CenPH__lb_SFLCTL__lb_CDXCD_new",
+                    "CenPH__lb_SFLCTL__lb_CCTCD": "CenPH__lb_SFLCTL__lb_CCTCD_new",
+                    "CenPH__lb_SFLCTL__lb_CC1CD": "CenPH__lb_SFLCTL__lb_CC1CD_new",
+                    "CenPH__lb_SFLCTL__lb_CF6TX": "CenPH__lb_SFLCTL__lb_CF6TX_new",
+                    "CenPH__lb_SFLCTL__lb_CNDTX": "CenPH__lb_SFLCTL__lb_CNDTX_new"
                   },
                 "inputFields": {
                    
