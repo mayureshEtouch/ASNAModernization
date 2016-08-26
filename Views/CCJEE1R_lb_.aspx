@@ -924,8 +924,8 @@
                     display: none;
                 }
                 #content {
-                    height: 330px !important;
-                    overflow: auto !important;
+                    /*height: 339px !important;*/
+                    overflow: hidden !important;
                 }
             </style>
         <script type="text/javascript">
@@ -1039,7 +1039,7 @@
                 }
             });
             if (!($("#CenPH_DdsConstant8")).html() == "Edit Detail") {
-                   
+                $("#content").css({ "height": "339px" });
                     $("#condition1").show();
                     $("#condition2").hide();
                     if ($("#CenPH_DdsConstant17:contains(Delete)").length > 0) {
@@ -1056,7 +1056,7 @@
                 else {
                     
                     if ($("#CenPH_DdsConstant3").html() != undefined) {
-                       
+                        $("#content").css({ "height": "244px" });
                         $("#condition1").hide();
                         $("#condition2").show();
                         if ($("#CenPH_DdsConstant15:contains(Add)").length > 0) {
@@ -1071,6 +1071,7 @@
                     }
                     else
                     {
+                        $("#content").css({ "height": "339px" });
                         $("#condition1").show();
                         $("#condition2").hide();
                         condition1();
