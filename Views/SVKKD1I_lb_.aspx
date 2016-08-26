@@ -633,7 +633,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Exchange ID:</span> </div>
+                <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"> <span class="form-label">Exchange ID:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDKEY__lb_1ZSNB_new"></span> </div>
               </div>
             </div>
@@ -641,7 +641,7 @@
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Number:</span> </div>
+                <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"> <span class="form-label">Number:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id=""></span> </div>
               </div>
             </div>
@@ -656,7 +656,7 @@
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1">Exit</span>
-       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt1">Prompt</span>
+       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt1">Submit</span>
               </div>
      
               

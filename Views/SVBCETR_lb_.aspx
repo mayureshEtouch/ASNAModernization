@@ -196,9 +196,9 @@
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span id="repairLoc"></span>,<span id=""></span>
                                         <br />
-                                        <span id="repairLoc3"></span>,
-                                        <span id="repairLoc1"></span>,
-                                        <span id="repairLoc2"></span>
+                                        <span id="repairLoc1"></span>, 
+                                        <span id="repairLoc2"></span>, 
+										<span id="repairLoc3"></span>
                                     </div>
                                     <%--   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span id="CenPH_PANTX">
