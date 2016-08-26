@@ -109,7 +109,7 @@
                 <span class="form-label">Income Amount:</span>
               </div>
               <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0">
-                <span class="form-text"><input type="text" onfocus="_09('#1INC$','5,17','#RCDDTL1');" maxlength="7" class="mdl-textfield__input" size="15" value="" id="incomeAmount"  data-tb-index="3" /></span>
+                <span class="form-text"><input type="text" onfocus="_09('#1INC$','5,17','#RCDDTL1');" maxlength="8" class="mdl-textfield__input" size="15" value="" id="incomeAmount"  data-tb-index="3" /></span>
               </div>
             </div>
           </div>
