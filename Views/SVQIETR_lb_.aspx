@@ -1888,7 +1888,7 @@
                 $("#repairLoc").css("border", "white");
                 $("#repairLoc3").val($("#CenPH__lb_SFLCTL__lb_CESTX").html());
                 $("#repairLoc3").attr('readonly', 'true');
-                $("#repairLoc3").css("width", "36px");
+                $("#repairLoc3").css("width", "60%");
                 $("#repairLoc3").css("border", "white");
                 $("#CenPH_PANTX").next().remove();
               
