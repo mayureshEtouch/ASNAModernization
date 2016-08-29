@@ -343,9 +343,9 @@
   <style>
     #__Page_PopUp {
                     min-width: 880px !important;
-                    width: 680px !important;
+                    width: 880px !important;
                     left: 50% !important;
-            margin-left: -400px !important;
+            margin-left: -440px !important;
             top: 17% !important;
                 }
                 #__Page_PopUp tbody > tr:first-child {

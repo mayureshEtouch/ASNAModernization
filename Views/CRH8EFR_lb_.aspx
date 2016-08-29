@@ -61,13 +61,13 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Middle Initial</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V7CD_new"  onfocus="_09('#2V7CD','3,20','#SFLCTL');" maxlength="1" class="mdl-textfield__input" data-tb-index="2">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V7CD_new"  onfocus="_09('#2V7CD','3,20','#SFLCTL');" maxlength="1" class="mdl-textfield__input" data-tb-index="2" style="width: 30px">
                                         </div>  
                                           <div class="mdl-cell mdl-cell--2-col">
-                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">Last Name</span>
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px; ">Last Name</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V8CD_new" maxlength="18" onfocus="_09('#2V8CD','3,22','#SFLCTL');" class="mdl-textfield__input" data-tb-index="3">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2V8CD_new" maxlength="18" onfocus="_09('#2V8CD','3,22','#SFLCTL');" class="mdl-textfield__input" data-tb-index="3" style="width: 50px;">
                                         </div>                             
                                     </div>
                                 </div>
