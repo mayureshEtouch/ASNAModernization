@@ -299,7 +299,7 @@
 
     </div>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display: block">
+    <div id="Div1" style="display: none">
 
         <%--  CA: E1W Detail            Edit record(1 screen)                                                      --%>
         <%--  CRTDSPF                                                                                              --%>
