@@ -557,7 +557,7 @@
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
+              <div class="content-grid mdl-grid"  id="_lb_RCDDTL1__lb_1LWST_new_div">
                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Cash Option:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="_lb_RCDDTL1__lb_1LWST_new"></span> </div>
               </div>
