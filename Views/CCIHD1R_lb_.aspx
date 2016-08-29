@@ -358,13 +358,13 @@
                                                     <td id="invoiceRiskTd"><span class="form-label">Invoice Risk</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="right"><span class="form-text" id="product"></span></td>
-                                                    <td align="right"><span class="form-text" id="maintenance"></span></td>
-                                                    <td align="right"><span class="form-text" id="addon"></span></td>
-                                                    <td align="right"><span class="form-text" id="down"></span></td>
-                                                    <td align="right"><span class="form-text" id="requested"></span></td>
-                                                    <td align="right"><span class="form-text" id="applicationRisk"></span></td>
-                                                    <td align="right" id="invoiceRiskTd1"><span class="form-text" id="invoiceRisk"></span></td>
+                                                    <td><span class="form-text" id="product"></span></td>
+                                                    <td><span class="form-text" id="maintenance"></span></td>
+                                                    <td><span class="form-text" id="addon"></span></td>
+                                                    <td><span class="form-text" id="down"></span></td>
+                                                    <td><span class="form-text" id="requested"></span></td>
+                                                    <td><span class="form-text" id="applicationRisk"></span></td>
+                                                    <td id="invoiceRiskTd1"><span class="form-text" id="invoiceRisk"></span></td>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -485,10 +485,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td align=""><span class="form-text" id="lastApp"></span></td>
-                                                    <td align="right"><span class="form-text" id="date1"></span></td>
-                                                    <td align="right"><span class="form-text" id="time1"></span></td>
-                                                    <td align="right"><span class="form-text" id="spanU"></span></td>
-                                                    <td align="right"><span class="form-text" id="spaneName"></span></td>
+                                                    <td><span class="form-text" id="date1"></span></td>
+                                                    <td><span class="form-text" id="time1"></span></td>
+                                                    <td><span class="form-text" id="spanU"></span></td>
+                                                    <td><span class="form-text" id="spaneName"></span></td>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -501,8 +501,8 @@
                                                     <td><span class="form-label">Reason:</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="right"><span class="form-text" id="amount"></span></td>
-                                                    <td align="right"><span class="form-text" id="reason"></span></td>
+                                                    <td><span class="form-text" id="amount"></span></td>
+                                                    <td><span class="form-text" id="reason"></span></td>
                                                 </tr>
                                             </thead>
                                         </table>

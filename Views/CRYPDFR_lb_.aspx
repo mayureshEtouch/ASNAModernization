@@ -106,7 +106,7 @@
                 </div>
             </div>
         </section>
-        <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+        <section class="table-data-content-container spacer-container-bottom">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
                     <div style="overflow: auto;" class="table-container">
@@ -209,6 +209,11 @@
                 //var row = $("#products tbody tr.selected");
                 //selectCusotmer(row, "", event);
             });
+			$('#products tr td').each(function (i, col )
+				 {
+					$(col).text($(col).text().trim());
+				 });
+			$('#products tr td:nth-child(9), #products tr td:nth-child(10)').css('text-align', 'right');
         });
     </script>
     <!-- Modified HTML code ends here -->

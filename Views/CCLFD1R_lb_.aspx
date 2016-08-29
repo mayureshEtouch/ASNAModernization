@@ -429,7 +429,7 @@
                     </tr>
                     <tr>
                       <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA6VA_new"></span></td>
-                      <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA6CO_new"></span></td>
+                      <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA6CO_new"></span></td>
                     </tr>
                   </thead>
                 </table>
