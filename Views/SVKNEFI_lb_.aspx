@@ -675,9 +675,11 @@
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
             if ($("#CenPH_DdsConstant9:contains(Add)").length > 0) {
                 $("#change").html("Add");
+                $("#next").hide();
             }
             else {
                 $("#change").html("Change");
+                $("#next").show();
             }
 
             function generateSpecialInstructionsSection() {

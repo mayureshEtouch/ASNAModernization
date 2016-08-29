@@ -201,9 +201,12 @@
 			
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="dlicen">Driver License:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPST_new"></span> </div>
+              <div class="content-grid mdl-grid" id="dlicen">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="">Driver License:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> 
+                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPST_new"></span> /
+                  <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DGMXT_new"></span> 
+                </div>
               </div>
             </div>
             <!-- col ends here --> 
@@ -1082,7 +1085,8 @@
                     "CenPH__lb_RCDDTL1__lb_1SPNM": "CenPH__lb_RCDDTL1__lb_1SPNM_new",
                     "CenPH__lb_RCDDTL1__lb_DIDXT": "CenPH__lb_RCDDTL1__lb_DIDXT_new",
                     "CenPH__lb_RCDDTL1_V1SDOB": "CenPH__lb_RCDDTL1_V1SDOB_new",
-                    "CenPH__lb_RCDDTL1__lb_1SPST+CenPH_DdsConstant15+CenPH__lb_RCDDTL1__lb_DGMXT": "CenPH__lb_RCDDTL1__lb_1SPST_new",
+                    "CenPH__lb_RCDDTL1__lb_1SPST": "CenPH__lb_RCDDTL1__lb_1SPST_new",
+                    "CenPH__lb_RCDDTL1__lb_DGMXT": "CenPH__lb_RCDDTL1__lb_DGMXT_new",
                     "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "CenPH__lb_RCDDTL1__lb_1SPI_usd_new"
                   },
                 "inputFields": {
