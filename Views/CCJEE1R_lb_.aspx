@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
         <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/input-validations.js")%>"></script>
 
     </asp:Content>
 
@@ -255,7 +256,7 @@
                            		<span class="form-label">Appl Dtl Item:</span>
                         	</div>
                         	<div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet">
-                           		<span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDKEY__lb_1APD_lb_new" onfocus="_09('#1APD#','5,26','#RCDKEY');"></span></span>
+                           		<span class="form-text"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDKEY__lb_1APD_lb_new" onfocus="_09('#1APD#','5,26','#RCDKEY');" maxlength="4"></span></span>
                         	</div>
                    	</div>
                   </div>
@@ -1065,6 +1066,7 @@
                         else {
                             $("#change").html("Change");
                         }
+                        $("#CenPH__lb_RCDKEY__lb_1APD_lb_new").ForceAmountOnly();
                         condition2();
 
                     
@@ -1078,6 +1080,11 @@
                     }
                 }
             
+            $(".simplePopupClose").click(function (event) {
+                var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
+                $("#" + ele).focus();
+            });
+           
             
             
             
