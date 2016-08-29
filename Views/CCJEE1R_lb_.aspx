@@ -901,7 +901,9 @@
             overflow: hidden !important;
         }
     </style>
+
     <script type="text/javascript">
+       
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH__lb_RCDDTL1__lb_1ITNB": "CenPH__lb_RCDDTL1__lb_1ITNB_new",
@@ -917,6 +919,7 @@
                 "CenPH__lb_RCDKEY__lb_1APD_lb_": "CenPH__lb_RCDKEY__lb_1APD_lb__new"
             }
         }
+        
         function condition1() {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
@@ -996,6 +999,20 @@
             });
         }
         $(document).ready(function () {
+            $(function(){
+                $('#CenPH__lb_RCDKEY__lb_1APD_lb__new').keypress(function(event) 
+                {
+                    var charCode = (event.which) ? event.which : event.keyCode
+
+                    if (
+                      
+                        (charCode != 46 || $(this).val().indexOf('.') != -1) &&      // “.” CHECK DOT, AND ONLY ONE.
+                        (charCode < 48 || charCode > 57))
+                        return false;
+
+                    return true;
+                });
+            });
             if ($("#CenPH_DdsConstant17:contains(Delete)").length > 0) {
 
                 $(".delete").show();
@@ -1038,7 +1055,7 @@
                     else {
                         $("#change").html("Change");
                     }
-                    $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").ForceAmountOnly();
+                   
                     condition2();
 
 
