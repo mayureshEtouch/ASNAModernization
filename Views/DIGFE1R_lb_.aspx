@@ -46,7 +46,7 @@
                     <div class="mdl-layout-spacer"></div>
                     <span class="close-icon" event-data="F12"><i class="material-icons md-15 close"></i></span> </div>
             </header>
-            <main class="mdl-layout__content">
+            <main class="mdl-layout__content" id="second-view" style="display: none;">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col">
@@ -240,6 +240,61 @@
                     </div>
                 </section>
             </main>
+
+
+      <main class="mdl-layout__content" id="first-view" style="display: none;">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--9-col">
+                    <!-- Title -->
+                    <span class="heading-h1">Enter Customer ID</span>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col pull-right">
+                    <!-- Navigation -->
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">DIGFE1R</span>
+                </div>
+            </div>
+        </section>
+        <section class="form-data">
+            <div class="form-data-wrapper" style="padding-bottom: 0;">
+
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid">
+                    <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Customer ID:</span> </div>
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0">
+                                <span class="form-text"><input value="" type="text" onfocus="_09('#1ALNB','3,17','#RCDKEY');" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDKEY__lb_1ALNB_new" maxlength="7" data-tb-index="1"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col ends here -->
+
+                
+
+                </div>
+                <!-- content-grid mdl-grid ends here -->
+
+
+                <div class="button-container" style="padding-bottom: 5px;">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
+
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop modal-button-container pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit" event-data="Enter">Submit</span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
              <div id="modal" class="simplePopup" ></div>
             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
@@ -1078,9 +1133,7 @@
             }
 
             #__Page_PopUp {
-                left: 8% !important;
-                min-width: 80% !important;
-                top: 50px !important;
+                left: 50% !important;
             }
 
             #__Page_Hidden {
@@ -1114,6 +1167,10 @@
                 top: 30% !important;
                 left: 40% !important;
             }
+            .simplePopup {
+                left: 33% !important;
+                top: 30% !important;
+            }
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {
@@ -1137,7 +1194,8 @@
                   "CenPH__lb_RCDDTL1__lb_DEONB": "extension",
                   "CenPH__lb_RCDDTL1__lb_DK3N_lb_": "cell-phone",
                   "CenPH__lb_RCDDTL1__lb_1ACST":"mailing-list",
-                  "CenPH__lb_RCDDTL1__lb_DBWNA": "cust-email"
+                  "CenPH__lb_RCDDTL1__lb_DBWNA": "cust-email",
+                  "CenPH__lb_RCDKEY__lb_1ALNB":"CenPH__lb_RCDKEY__lb_1ALNB_new"
                 }
             }
             $(document).ready(function() {
@@ -1159,16 +1217,44 @@
 					
 				}
 				
+
+                if ($("#CenPH__lb_RCDKEY__lb_1ALNB").length > 0){
+                    var copyToAndFrom2 = {
+                        "displayOnlyFields": {
+                        },
+                        "inputFields": {
+                          "CenPH__lb_RCDKEY__lb_1ALNB": "CenPH__lb_RCDKEY__lb_1ALNB_new",
+                        }
+                    }
+                    copyData(copyToAndFrom2, "keyup keydown change blur mouseup mousedown");
+                    //$("#").val($("#CenPH__lb_RCDKEY__lb_1ALNB").val());
+                    $("#first-view").show();
+                    $("#second-view").hide();
+
+                    $("#__Page_PopUp").css({"height":"240px", "width":"500px", "margin-left":"-250px","top":"20%"});
+
+                }else{
+
+                       copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+                      $(".order-summary,.form-data,.time-date").show();
+                      $("#add-one").val($("#CenPH__lb_RCDDTL1__lb_DANTX").val());
+
+
+                      $("#first-view").hide();
+                     $("#second-view").show();
+                     $("#__Page_PopUp").css({"width":"830px", "margin-left":"-415px","top":"12%"});
+                }
+
                 //Set page details
                 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
                   $(".confirmation-outer-conatiner").hide();
-                  copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-                  $(".order-summary,.form-data,.time-date").show();
-                  $("#add-one").val($("#CenPH__lb_RCDDTL1__lb_DANTX").val());
+               
                 } else {
                   $(".confirmation-outer-conatiner").show();
 				  $(".close-icon").hide();
                   $(".order-summary,.form-data,.time-date").hide();
+                  
+                       
                 }
                 
 				 if($(".simplePopupClose").length > 0) {
@@ -1180,6 +1266,7 @@
 				   $(".simplePopupBackground1").hide();
 			   });
 			   
+               $("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceNumericOnly();
 				$("#state").text($("[id$=CenPH__lb_RCDDTL1__lb_DAQTX]").text());
 				$("#city").text($("[id$=CenPH__lb_RCDDTL1__lb_DADST]").text());
                 $("#yes").click(function (event) {
