@@ -729,6 +729,7 @@
 			
 			$('#customerName td:nth-child(4)').each(function (i, col) {
 			    var $this = $(this).html();
+			    $(this).html("");
 			    var arr = $this.split('&nbsp;')
 			    for (var i = 0; i < arr.length; i++) {
 			        if (arr[i] != "") {
@@ -737,8 +738,7 @@
 			        }
 			        
 			    }
-			    mod[0] = $(mod[0]).append('<span>');
-			    console.log(mod[0].html());
+			   
 			});
             
             //$('#customerName td:nth-child(4)').each(function (i, col) {
@@ -777,7 +777,7 @@
     </script>
     <style>
         #fkeys, #header, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #Div1 {
-            display: none;
+            display:none;
         }
 
         #main-content {
