@@ -138,8 +138,8 @@
                                     <tr>
                                         <th>Company</th>
                                         <th>Location</th>
-                                        <th>Description</th>
-                                        <th><span>Available</span> <span>Xfers</span> <span>Ordered</span></th>
+                                        <th style="width:40%">Description</th>
+                                        <th><span>Available</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 58px;">Ordered</span></th>
                                        <%-- <th>Xfers</th>
                                         <th>Ordered</th>--%>
                                     </tr>
@@ -729,15 +729,17 @@
 			
 			$('#customerName td:nth-child(4)').each(function (i, col) {
 			    var $this = $(this).html();
-			    $(this).html("");
 			    var arr = $this.split('&nbsp;')
 			    for (var i = 0; i < arr.length; i++) {
 			        if (arr[i] != "") {
 			            mod.push(arr[i]);
-			            
+
 			        }
-			        
+
 			    }
+			    $(this).html("");
+			    $(this).html('<span>' + mod[0] + '</span><span style="margin-left: 80px;">' + mod[1] + '</span><span style="margin-left: 80px;">' + mod[2] + '</sapn>');
+			    
 			   
 			});
             
