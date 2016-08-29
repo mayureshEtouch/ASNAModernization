@@ -284,14 +284,14 @@
                           <td><span class="form-label" id="CenPH__lb_RCDDTL1__lb_DGUVA_new_div">= Requested</span></td>
                         </tr>
                         <tr>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1JBNB_new"></span></td>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1JANB_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1JBNB_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1JANB_new"></span></td>
                           <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DPQST_new"></span></td>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GFVA_new"></span></td>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GGVA_new"></span></td>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1G1VA_new"></span></td>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GEVA_new"></span></td>
-                          <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DGUVA_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GFVA_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GGVA_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1G1VA_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1GEVA_new"></span></td>
+                          <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DGUVA_new"></span></td>
                         </tr>
                       </thead>
                     </table>
@@ -428,7 +428,7 @@
                       <td><span class="form-label">Reason</span></td>
                     </tr>
                     <tr>
-                      <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA6VA_new"></span></td>
+                      <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA6VA_new"></span></td>
                       <td align="right"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DA6CO_new"></span></td>
                     </tr>
                   </thead>
