@@ -266,7 +266,7 @@
           <div class="content-grid mdl-grid" style="padding:0"> 
 					
             <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">O/ - Bureau Others:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLRCD__lb_1O2NB_new"></span> </div>
