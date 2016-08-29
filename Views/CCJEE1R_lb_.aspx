@@ -1054,7 +1054,6 @@
             $(".simplePopupClose").click(function (event) {
                 var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
                 $("#" + ele).focus();
-                $("#" + ele).css({"border":  "1px solid Red" });
             });
 
 
