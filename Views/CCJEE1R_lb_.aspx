@@ -262,7 +262,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet">
                                         <span class="form-text">
-                                            <input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDKEY__lb_1APD_lb__new" onfocus="_09('#1APD#','5,26','#RCDKEY');" maxlength="4"></span></span>
+                                            <input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="CenPH__lb_RCDKEY__lb_1APD_lb__new" onfocus="_09('#1APD#','5,26','#RCDKEY');" maxlength="3"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -1038,7 +1038,7 @@
                     else {
                         $("#change").html("Change");
                     }
-                    $("#CenPH__lb_RCDKEY__lb_1APD_lb_new").ForceAmountOnly();
+                    $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").ForceAmountOnly();
                     condition2();
 
 
@@ -1055,7 +1055,7 @@
                 var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
                 $("#" + ele).focus();
             });
-
+            
 
 
 
