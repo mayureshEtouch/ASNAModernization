@@ -65,7 +65,7 @@
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--12-col" style="padding:0">
         <p>Do you want to continue to <span class="green-highlight-text">AcceptanceNow</span> ?</p>
-                <p>OK to continue 
+                <p>Ok To Continue 
                   <span data-upgraded=",MaterialTextfield" class="form-text">
                                     <select tabindex="1" style="width: 105px; padding: 0px 2px; margin-left: 5px;" name="CenPH__lb_RCDDTL1__lb_PIDYN_new" id="CenPH__lb_RCDDTL1__lb_PIDYN_new">
                                         <option value=" " selected="selected">Please select</option>
