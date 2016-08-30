@@ -39,7 +39,7 @@
         <div class="mdl-layout-spacer"></div>
         <span class="close-icon"><i class="material-icons md-15 close"></i></span> </div>
     </header>
-    <main class="mdl-layout__content">
+    <main class="mdl-layout__content" id="second-view" style="display: none;">
       <section class="time-date">
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--9-col"> 
@@ -133,7 +133,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Residence Payment:</span> </div>
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet pull-right"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RES_usd_new"></span> </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1RES_usd_new"></span> </div>
               </div>
             </div>
             <!-- col ends here --> 
@@ -238,7 +238,84 @@
         </div>
       </section>
     </main>
-    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+
+     <main class="mdl-layout__content" id="first-view" style="display: none;">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--9-col">
+                    <!-- Title -->
+                    <span class="heading-h1">CU: D1W Pers Detail-Store KEY SCREEN</span>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col pull-right">
+                    <!-- Navigation -->
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCLQD1R</span>
+                </div>
+            </div>
+        </section>
+        <section class="form-data">
+            <div class="form-data-wrapper" style="padding-bottom: 0;">
+
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid">
+                    <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet" style="padding: 0">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0"><span class="form-label">Customer ID:</span> </div>
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin: 0">
+                                <span class="form-text">
+                <input value="" type="text" class="mdl-textfield__input" size="15" onfocus="_09('#1ALNB','4,31','#RCDKEY');" 
+                id="CenPH__lb_RCDKEY__lb_1ALNB_new" maxlength="7" data-tb-index="1" style="display: inline-block; width: 100px; margin-right: 15px;"/><span id="CenPH_DdsConstant4_new" class="DdsConstant" ></span>
+                </span>
+               
+                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col ends here -->
+                </div>
+                <!-- content-grid mdl-grid ends here -->
+
+        
+                 <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid">
+                    <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet" style="padding: 0">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0"><span class="form-label">Sequence:</span> </div>
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin: 0">
+                                <span class="form-text"><input value="" type="text" 
+                onfocus="_09('#1SEQ#','5,31','#RCDKEY');" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDKEY__lb_1SEQ_lb_new" maxlength="5" data-tb-index="2" style="width: 100px;"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- col ends here -->
+                </div>
+                <!-- content-grid mdl-grid ends here -->
+        
+        
+
+                <div class="button-container" style="padding-bottom: 5px;">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span>
+               
+                        </div>
+            
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop modal-button-container pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit" event-data="Enter">Submit</span>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="simplePopupBackground1" style="display:none; opacity: 0.7;display: block; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div>
   </div>
   <div id="Div1" style="display:none;">
@@ -1034,6 +1111,7 @@
       left: 50% !important;
       margin-left: -350px;
       top: 15% !important;
+	  height: auto !important;
             }
       
             #__Page_PopUp > tbody > tr:first-child {
@@ -1096,7 +1174,7 @@
 
             $(document).ready(function () {
               $('body').css({ "background-color": "white" });
-              copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+              
 
               $("#change").click(function (event) {
                    _00('F9', event);
@@ -1112,6 +1190,44 @@
               /*$('#next').click(function (event) {
                     _00("Enter", event);
               });*/
+
+
+              if ($("#CenPH__lb_RCDKEY__lb_1ALNB").length > 0){
+                    var copyToAndFrom2 = {
+                        "displayOnlyFields": {
+                          "CenPH_DdsConstant4":"CenPH_DdsConstant4_new"
+                        },
+                        "inputFields": {
+                          "CenPH__lb_RCDKEY__lb_1ALNB": "CenPH__lb_RCDKEY__lb_1ALNB_new",
+                          "CenPH__lb_RCDKEY__lb_1SEQ_lb_":"CenPH__lb_RCDKEY__lb_1SEQ_lb_new"
+                        }
+                    }
+                    copyData(copyToAndFrom2, "keyup keydown change blur mouseup mousedown");
+                   
+                    $("#first-view").show();
+                    $("#second-view").hide();
+				 
+                }else{
+                  copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+
+                      $(".order-summary,.form-data,.time-date").show();
+                      $("#add-one").val($("#CenPH__lb_RCDDTL1__lb_DANTX").val());
+
+
+                      $("#first-view").hide();
+                     $("#second-view").show();
+                    
+                }
+
+                   if($(".simplePopupClose").length > 0) {
+                      $(".simplePopupBackground1").show();
+                   } else {
+                     $(".simplePopupBackground1").hide();
+                   }
+                   $("body").on("click", ".simplePopupClose", function() {
+                     $(".simplePopupBackground1").hide();
+                   });
+
 
               if($("#CenPH__lb_RCDDTL1__lb_1SPNM").length > 0)
               {
