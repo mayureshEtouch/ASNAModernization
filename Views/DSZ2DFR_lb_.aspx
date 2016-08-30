@@ -35,7 +35,7 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSZ2DFR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
@@ -59,14 +59,14 @@
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="creditpayment" data-upgraded=",MaterialDataTable">
                  <thead>
                           <tr>
-                            <th>Date <br/><span id="CenPH__lb_SFLCTL_VCC2DT_new"></span></th>
-                            <th>Time <br/><span id="CenPH__lb_SFLCTL__lb_CABTM_new"></span></th>
-                            <th>Company <br/><span id="CenPH__lb_SFLCTL__lb_CDXCD_new"></span></th>
-                            <th>Location <br/><span id="CenPH__lb_SFLCTL__lb_CCTCD_new"></span></th>
-                            <th>Employee Code <br/><span id="CenPH__lb_SFLCTL__lb_CC1CD_new"></span></th>
-                            <th>Amount <br/><span id="CenPH__lb_SFLCTL__lb_CX7VA_new"></span></th>
-                            <th>Reference <br/><span id="CenPH__lb_SFLCTL__lb_CF6TX_new"></span></th>
-                            <th>Approval Code <br/><span id="CenPH__lb_SFLCTL__lb_CNDTX_new"></span></th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Company</th>
+                            <th>Location</th>
+                            <th>Employee Code</th>
+                            <th>Amount</th>
+                            <th>Reference</th>
+                            <th>Approval Code</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -80,7 +80,7 @@
                 <div class="button-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F3">Previous</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
                             <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
@@ -651,14 +651,14 @@
                     "CenPH_DdsConstant10": "date",
                     "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                     "CenPH__lb_SFLCTL__lb_2K4TX": "CenPH__lb_SFLCTL__lb_2K4TX_new",
-                    "CenPH__lb_SFLCTL__lb_CABTM": "CenPH__lb_SFLCTL__lb_CABTM_new",
-                    "CenPH__lb_SFLCTL__lb_CX7VA": "CenPH__lb_SFLCTL__lb_CX7VA_new",
                     "CenPH__lb_SFLCTL_VCC2DT": "CenPH__lb_SFLCTL_VCC2DT_new",
+                    "CenPH__lb_SFLCTL__lb_CABTM": "CenPH__lb_SFLCTL__lb_CABTM_new",
                     "CenPH__lb_SFLCTL__lb_CDXCD": "CenPH__lb_SFLCTL__lb_CDXCD_new",
                     "CenPH__lb_SFLCTL__lb_CCTCD": "CenPH__lb_SFLCTL__lb_CCTCD_new",
                     "CenPH__lb_SFLCTL__lb_CC1CD": "CenPH__lb_SFLCTL__lb_CC1CD_new",
+                    "CenPH__lb_SFLCTL__lb_CX7VA": "CenPH__lb_SFLCTL__lb_CX7VA_new",
                     "CenPH__lb_SFLCTL__lb_CF6TX": "CenPH__lb_SFLCTL__lb_CF6TX_new",
-                    "CenPH__lb_SFLCTL__lb_CNDTX": "CenPH__lb_SFLCTL__lb_CNDTX_new"
+                    "CenPH__lb_SFLCTL__lb_CNDTX": "CenPH__lb_SFLCTL__lb_CNDTX_new",
                   },
                 "inputFields": {
                    
@@ -666,24 +666,38 @@
             }
 
             $(document).ready(function () {
+              function appendFirstRow(){
+                var first_tr ="<tr>";
+                first_tr += "<td id='CenPH__lb_SFLCTL_VCC2DT_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CABTM_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CDXCD_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CCTCD_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CC1CD_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CX7VA_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CF6TX_new'></td>";
+                first_tr += "<td id='CenPH__lb_SFLCTL__lb_CNDTX_new'></td>";
+                first_tr +="</tr>";
+                $("#creditpayment tbody").prepend(first_tr);
+                var copyToAndFrom2 = {
+                        "displayOnlyFields": {
+                            "CenPH__lb_SFLCTL_VCC2DT": "CenPH__lb_SFLCTL_VCC2DT_new",
+                            "CenPH__lb_SFLCTL__lb_CABTM": "CenPH__lb_SFLCTL__lb_CABTM_new",
+                            "CenPH__lb_SFLCTL__lb_CDXCD": "CenPH__lb_SFLCTL__lb_CDXCD_new",
+                            "CenPH__lb_SFLCTL__lb_CCTCD": "CenPH__lb_SFLCTL__lb_CCTCD_new",
+                            "CenPH__lb_SFLCTL__lb_CC1CD": "CenPH__lb_SFLCTL__lb_CC1CD_new",
+                            "CenPH__lb_SFLCTL__lb_CX7VA": "CenPH__lb_SFLCTL__lb_CX7VA_new",
+                            "CenPH__lb_SFLCTL__lb_CF6TX": "CenPH__lb_SFLCTL__lb_CF6TX_new",
+                            "CenPH__lb_SFLCTL__lb_CNDTX": "CenPH__lb_SFLCTL__lb_CNDTX_new",
+                          },
+                        "inputFields": {}
+                      }
+                      copyData(copyToAndFrom2);
+                      $("#creditpayment tbody tr").removeClass("selected");
+              }
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-              $("#time").html("&nbsp;" + $("#time").html());
-
-              $('body').on('click', '#creditpayment tbody tr', function () {
-                $("#creditpayment tbody tr:even").css("background-color", "#fff");
-                $("#creditpayment tbody tr:odd").css("background-color", "#f9f9f9");
-                $(this).css({ "background-color": "#d8d8d8" });
-                $("#creditpayment tbody tr").removeClass("selected");
-                $(this).addClass("selected");
-                $("div.icon-container").removeClass("icon-disable");
-              });
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
-                generateTableAndApplyInfiniteScroll("creditpayment", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
-
-                $("#previous").click(function (event) {
-                   _00('F12', event);
-              });
+                generateTableAndApplyInfiniteScroll("creditpayment", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK","","",appendFirstRow);
             });
       </script>
     </asp:Content>

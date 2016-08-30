@@ -141,7 +141,7 @@ var spanIds = [
 ***********************************************************************/
 /***********************************************************************/
 
-function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick,spanIds,placeHolderElement) {
+function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices, disableDoubleClick,spanIds,placeHolderElement,callback) {
     $("body").css({
         "background-color": "#FFFFFF"
     });
@@ -172,8 +172,12 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
         } else {
             generateTableWithoutSpanIndex(recordCount, tableId, direction, ignoreSapn, tableSelector);
         }
+        if(callback && callback != undefined && typeof(callback) === 'function'){
+            callback();
+        }
         $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
         $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+
     }
 
     $('body').on("click", "#next-page", function(event) {
