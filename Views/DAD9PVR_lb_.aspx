@@ -3,6 +3,20 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/11/2016 at 5:22 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+
+         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+
         <%-- Legacy location: library ASNAPH4BK, file QDDSSRC, member DAD9PVR# --%>
 
     </asp:Content>
@@ -22,7 +36,140 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+
+      <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span> 
+      <!--<span class="mdl-layout-heading">StoreFront</span>-->
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon" event-data="F3"><i class="material-icons md-15 close"></i></span> </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">Acceptance Now</span> </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DAD9PVR</span></div>
+      </div>
+    </section>
+    <section class="form-data">
+      <div class="form-data-wrapper" style="padding-bottom:0;"> 
+        <!-- content-grid mdl-grid starts here -->
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col" style="padding:0">
+        <p>Do you want to continue to <span class="green-highlight-text">AcceptanceNow</span> ?</p>
+                <p>OK to continue 
+                  <span data-upgraded=",MaterialTextfield" class="form-text">
+                                    <select tabindex="1" style="width: 105px; padding: 0px 2px; margin-left: 5px;" name="CenPH__lb_RCDDTL1__lb_PIDYN_new" id="CenPH__lb_RCDDTL1__lb_PIDYN_new">
+                                        <option value=" " selected="selected">Please select</option>
+                                        <option value="Y">Yes</option>
+                                        <option value="N">No</option>
+                                    </select>
+                                    <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                                </span>
+                
+                </p>   
+        
+          </div> 
+        </div>
+        <!-- content-grid mdl-grid ends here --> 
+
+
+          <div class="button-container" style="padding-bottom: 5px;">
+                        <div class="content-grid mdl-grid">
+                           <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop modal-button-container" >
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" style="
+                           margin-left: -5px;" event-data="F3">Exit</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-desktop pull-right modal-button-container">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="Enter">Submit</span>
+                            </div>
+                        </div>
+             </div>
+
+     </div>
+      
+        
+       
+      </div>
+    </section>
+  </main>
+  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+   <div id="promptErrorMsg" class="simplePopup"></div>
+  <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+<style>
+        #__Page_PopUp {
+            min-width: 439px !important;
+            width: 439px !important;
+            left: 50% !important;
+    margin-left: -220px !important;
+    top:18% !important;
+        }
+        #__Page_PopUp tbody > tr:first-child {
+          display: none;
+        }
+        #__Page_PopUp .DdsInlinePopUpTitle {
+          height: 0;
+        }
+        .modal-dialog-container {
+            width: 100%;
+            margin-top: 0;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+            width: 100% !important;
+            margin-bottom: 4% !important;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+
+        }
+        .simplePopup {
+          left: 28% !important;
+          top: 35% !important;
+        }
+        #div_driver, #div_license {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      if($("#__Page_PopUp .simplePopupClose").length > 0) {
+          $(".simplePopupBackground1").show();
+      } else {
+          $(".simplePopupBackground1").hide();
+      }
+      $("body").on("click", ".simplePopupClose", function() {
+          $(".simplePopupBackground1").hide();
+      });
+      var copyToAndFrom = {
+          "displayOnlyFields": {
+            "CenPH__lb_RCDDTL1__lb_PAFTX":"CenPH__lb_RCDDTL1__lb_PAFTX_new"
+          },
+          "inputFields": {
+              "CenPH__lb_RCDDTL1__lb_PIDYN" : "CenPH__lb_RCDDTL1__lb_PIDYN_new",
+          }
+      }
+      copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
+       if($("#CenPH__lb_RCDDTL1__lb_PIDYN_new").val() == null || $("#CenPH__lb_RCDDTL1__lb_PIDYN_new").val() == undefined){
+        $("#CenPH__lb_RCDDTL1__lb_PIDYN_new").val($("#CenPH__lb_RCDDTL1__lb_PIDYN_new option:first").val());
+      }
+    });
+    </script>
+
+        <div id="Div1" style="display: none;">
             
       <%--  SY: PMT RAC 4 Answer ?    Prompt & validate record                                                   --%>
       <%--  CRTDSPF                                                                                              --%>
