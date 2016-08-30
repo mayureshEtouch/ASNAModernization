@@ -1221,6 +1221,8 @@
 
 
                 $("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceNumericOnly();
+                $("#CenPH__lb_RCDKEY__lb_1SEQ_lb_new").ForceNumericOnly();
+                
 
                    if($(".simplePopupClose").length > 0) {
                       $(".simplePopupBackground1").show();
