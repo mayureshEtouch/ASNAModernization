@@ -113,6 +113,7 @@
             left: 50% !important;
     margin-left: -220px !important;
     top:18% !important;
+
         }
         #__Page_PopUp tbody > tr:first-child {
           display: none;
@@ -123,6 +124,7 @@
         .modal-dialog-container {
             width: 100%;
             margin-top: 0;
+            margin-bottom: 2%;
         }
         .mdl-layout__content {
             height: auto !important;
@@ -140,9 +142,7 @@
           left: 28% !important;
           top: 35% !important;
         }
-        #div_driver, #div_license {
-            display: none;
-        }
+        
     </style>
     <script type="text/javascript">
     $(document).ready(function () {
