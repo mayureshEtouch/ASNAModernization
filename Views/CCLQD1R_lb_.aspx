@@ -298,7 +298,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span>
+              
                
                         </div>
             
@@ -1218,6 +1218,9 @@
                      $("#second-view").show();
                     
                 }
+
+
+                $("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceNumericOnly();
 
                    if($(".simplePopupClose").length > 0) {
                       $(".simplePopupBackground1").show();
