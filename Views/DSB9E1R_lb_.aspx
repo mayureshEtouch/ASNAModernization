@@ -28,7 +28,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col"> 
                         <!-- Title --> 
-                        <span class="heading-h1">Create New Customer</span> </div>
+                        <span class="heading-h1">Edit Customer Details</span> </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right"> 
                         <!-- Navigation --> 
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSB9E1R</span> 
