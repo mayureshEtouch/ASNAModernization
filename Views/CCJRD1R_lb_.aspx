@@ -324,7 +324,7 @@
 				<div class="content-grid mdl-grid">
 					<div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop modal-button-container">
 						<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id=""  event-data="F12">Exit</span>
-						<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id=""  event-data="F4">Prompt</span>
+						<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id=""  event-data="F4">Prompt</span> -->
 
 					</div>
 					<div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop modal-button-container pull-right">
@@ -1127,8 +1127,8 @@ CssClass="DdsConstant" />
 			$(".first-view").hide();
 			$(".second-view").show();
 			copyData(copyToAndFrom2, "keyup keydown change mouseup mousedown click blur");
-			$("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceAmountOnly();
-			$("#CenPH__lb_RCDKEY__lb_1SEQ_lb__new").ForceAmountOnly();
+			$("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceNumericOnly();
+			$("#CenPH__lb_RCDKEY__lb_1SEQ_lb__new").ForceNumericOnly();
 			$("#CenPH__lb_RCDKEY__lb_1ALNB_new, #CenPH__lb_RCDKEY__lb_1SEQ_lb__new").each(function(){
 				$(this).val($(this).val().trim());
 			})

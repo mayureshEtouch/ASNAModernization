@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                                         <span class="form-text">
-                                            <input class="mdl-textfield__input" type="text" data-tb-index="3" size="15" id="CenPH__lb_RCDDTL1__lb_1PRDQ_new" onfocus="_09('#1PRDQ','5,6','#RCDDTL1');"></span></span>
+                                            <input class="mdl-textfield__input" type="text" data-tb-index="3" size="15" id="CenPH__lb_RCDDTL1__lb_1PRDQ_new" maxlength="3" onfocus="_09('#1PRDQ','5,6','#RCDDTL1');"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet">
                                         <span class="form-text">
-                                            <input class="mdl-textfield__input" type="text" data-tb-index="4" size="15" id="CenPH__lb_RCDDTL1__lb_1GFVA_new" onfocus="_09('#1GFVA','5,15','#RCDDTL1');"></span></span>
+                                            <input class="mdl-textfield__input" type="text" data-tb-index="4" size="15" id="CenPH__lb_RCDDTL1__lb_1GFVA_new" maxlength="11" onfocus="_09('#1GFVA','5,15','#RCDDTL1');"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                         <span class="form-text">
-                                            <input class="mdl-textfield__input" type="text" data-tb-index="5" size="15" id="CenPH__lb_RCDDTL1__lb_1PRDM_new" onfocus="_09('#1PRDM','5,31','#RCDDTL1');"></span></span>
+                                            <input class="mdl-textfield__input" type="text" data-tb-index="5" size="15" id="CenPH__lb_RCDDTL1__lb_1PRDM_new" maxlength="11" onfocus="_09('#1PRDM','5,31','#RCDDTL1');"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -201,8 +201,11 @@
 
         </div>
     </div>
-    <div class="simplePopupBackground" style="display: none; opacity: 0.7; background: #000; position: absolute; height: 100%; width: 100%; top: 0; left: 0; z-index: 3;"></div>
-    <div id="modal1" class="simplePopup"></div>
+
+     <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+
+    
     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
         <i class="material-icons md-15 md-light help-icon"></i>
         <span class="confirmation-text">Do you want to continue</span>
@@ -922,12 +925,14 @@
         
         function condition1() {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+            $("#CenPH__lb_RCDDTL1__lb_1PRDQ_new").ForceNumericOnly();
+            $("#CenPH__lb_RCDDTL1__lb_1GFVA_new").ForceCurrencyWithTwoDecimal()
+            $("#CenPH__lb_RCDDTL1__lb_1PRDM_new").ForceCurrencyWithTwoDecimal();
 
 
-
-            $("body").on("click", ".simplePopupClose", function () {
-                $(".simplePopupBackground").hide();
-            });
+            /*$("body").on("click", ".simplePopupClose", function () {
+                $(".simplePopupBackground1").hide();
+            });*/
             if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                 /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();
@@ -967,9 +972,9 @@
         }
         function condition2() {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-            $("body").on("click", ".simplePopupClose", function () {
-                $(".simplePopupBackground").hide();
-            });
+            /*$("body").on("click", ".simplePopupClose", function () {
+                $(".simplePopupBackground1").hide();
+            });*/
             if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                 /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();
@@ -1073,7 +1078,14 @@
                 $("#" + ele).focus();
             });
             
-
+            if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                $(".simplePopupBackground1").show();
+            } else {
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function() {
+                $(".simplePopupBackground1").hide();
+            });
 
 
         });
