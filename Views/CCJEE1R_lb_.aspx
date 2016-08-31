@@ -182,10 +182,11 @@
 
                         <div class="button-container" style="padding-bottom: 5px;">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop modal-button-container">
+                                <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-desktop modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent delete" id="delete">Delete</span>
+                                    <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent delete" id="">Delete</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent delete" event-data="F12">Key Screen</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right modal-button-container">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
@@ -928,7 +929,11 @@
             $("#CenPH__lb_RCDDTL1__lb_1PRDQ_new").ForceNumericOnly();
             $("#CenPH__lb_RCDDTL1__lb_1GFVA_new").ForceCurrencyWithTwoDecimal()
             $("#CenPH__lb_RCDDTL1__lb_1PRDM_new").ForceCurrencyWithTwoDecimal();
-
+            $("#CenPH__lb_RCDDTL1__lb_1PRDQ_new, #CenPH__lb_RCDDTL1__lb_1GFVA_new, #CenPH__lb_RCDDTL1__lb_1PRDM_new").each(function(){
+                if($(this).val() != undefined){
+                    $(this).val($(this).val().trim());
+                }
+            })
 
             /*$("body").on("click", ".simplePopupClose", function () {
                 $(".simplePopupBackground1").hide();
