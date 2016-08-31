@@ -346,7 +346,8 @@
     "CenPH__lb_RCDDTL1__lb_1CDXT":"CenPH__lb_RCDDTL1__lb_1CDXT_new",
     "CenPH__lb_RCDDTL1__lb_1DGNU":"CenPH__lb_RCDDTL1__lb_1DGNU_new",
     "CenPH__lb_RCDDTL1__lb_1CEXT":"CenPH__lb_RCDDTL1__lb_1CEXT_new",
-    "CenPH__lb_RCDDTL1__lb_1DHNU":"CenPH__lb_RCDDTL1__lb_1DHNU_new",
+    "CenPH__lb_RCDDTL1__lb_1DHNU": "CenPH__lb_RCDDTL1__lb_1DHNU_new",
+    "CenPH__lb_RCDDTL1__lb_1B0NU": "CenPH__lb_RCDDTL1__lb_1B0NU_new"
   },
   "inputFields": {}
 }

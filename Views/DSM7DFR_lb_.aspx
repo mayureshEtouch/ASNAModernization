@@ -742,11 +742,6 @@
 			    
 			   
 			});
-            
-            //$('#customerName td:nth-child(4)').each(function (i, col) {
-            //    var $this = $(this);
-            //    $this.html($this.html().replace(/&nbsp;/g, ''));
-            //});
             var doAction = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
