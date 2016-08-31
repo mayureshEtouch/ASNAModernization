@@ -370,10 +370,10 @@
             <!-- content-grid mdl-grid starts here -->
             <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_1ULTX_new_div"> 
               <!-- col starts here -->
-              <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet" style="padding:0">
+              <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Recommends: </span> </div>
-                  <div class="mdl-cell mdl-cell--11-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ULTX_new"></span><br />
+                  <div class="mdl-cell mdl-cell--1-col" style="margin:0"> <span class="form-label">Recommends: </span> </div>
+                  <div class="mdl-cell mdl-cell--11-col" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ULTX_new"></span><br />
                   </div>
                 </div>
               </div>
