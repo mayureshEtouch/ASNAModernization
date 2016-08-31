@@ -577,7 +577,7 @@
                 left: 30% !important;
                 top: 40% !important;
               }
-							 #displayData tr td:nth-child(5) {
+#displayData tr td:nth-child(5), #displayData tr td:last-child {
 text-align: right !important;
 }
     </style>
@@ -624,7 +624,7 @@ text-align: right !important;
                $(".simplePopupBackground1").hide();
            });
 	
-			$('#displayData tr td:nth-child(5)').each(function(i,col){
+			$('#displayData tr td').each(function(i,col){
 				
 				$(col).text($(col).text().trim());
 			});	 
