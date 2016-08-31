@@ -981,7 +981,7 @@
                 $(".simplePopupBackground1").hide();
             });*/
             $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").val($("#CenPH__lb_RCDKEY__lb_1APD_lb__new").val().trim());
-            $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").ForceNumericOnly();
+            $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").ForceCurrencyWithTwoDecimal();
             if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                 /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();
