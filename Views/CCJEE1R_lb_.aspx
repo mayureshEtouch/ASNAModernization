@@ -980,6 +980,8 @@
             /*$("body").on("click", ".simplePopupClose", function () {
                 $(".simplePopupBackground1").hide();
             });*/
+            $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").val($("#CenPH__lb_RCDKEY__lb_1APD_lb__new").val().trim());
+            $("#CenPH__lb_RCDKEY__lb_1APD_lb__new").ForceNumericOnly();
             if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                 /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();
@@ -1009,7 +1011,7 @@
             });
         }
         $(document).ready(function () {
-            $(function(){
+            /*$(function(){
                 $('#CenPH__lb_RCDKEY__lb_1APD_lb__new').keypress(function(event) 
                 {
                     var charCode = (event.which) ? event.which : event.keyCode
@@ -1022,7 +1024,7 @@
 
                     return true;
                 });
-            });
+            });*/
             if ($("#CenPH_DdsConstant17:contains(Delete)").length > 0) {
 
                 $(".delete").show();
