@@ -162,7 +162,7 @@
           </div>
           <!-- content-grid mdl-grid ends here -->
           
-          <div class="content-grid mdl-grid" style="padding:0" id="spousedetail">
+          <div class="content-grid mdl-grid" style="padding:0" id="spousedetail" style="display: none;">
             <div class="mdl-cell mdl-cell--12-col" style="padding: 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"><span class="summary-table-title"style="margin: 10px 0 0;">Spouse Details</span> </div>
           </div>
           
@@ -1192,6 +1192,13 @@
               });*/
 
 
+              if($("#CenPH__lb_RCDDTL1__lb_1SPNM").length >0 ){
+                $("#spousedetail").show();
+              }else
+              {
+                $("#spousedetail").hide();
+              }
+
               if ($("#CenPH__lb_RCDKEY__lb_1ALNB").length > 0){
                     var copyToAndFrom2 = {
                         "displayOnlyFields": {
@@ -1229,7 +1236,7 @@
                      $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
                    }
                  });
-                  
+
                    if($(".simplePopupClose").length > 0) {
                       $(".simplePopupBackground1").show();
                    } else {
