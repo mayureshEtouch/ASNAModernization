@@ -193,7 +193,7 @@
 				<div id="marital_info">
 					<div class="content-grid mdl-grid">
 						<!-- col starts here -->
-						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" id="CenPH__lb_RCDDTL1__lb_1SPNM_new_div" style="padding: 0">
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Name:</span> </div>
 								<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPNM_new"></span></div>
@@ -219,7 +219,7 @@
 					<!-- content-grid mdl-grid starts here -->
 					<div class="content-grid mdl-grid">
 						<!-- col starts here -->
-						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" id="CenPH__lb_RCDDTL1__lb_1SDOB_new_div"  style="padding: 0">
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">D.O.B. Spouse:</span> </div>
 								<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SDOB_new"></span></div>
@@ -228,7 +228,7 @@
 						<!-- col ends here -->
 
 						<!-- col starts here -->
-						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"  id="CenPH__lb_RCDDTL1__lb_1SPST_new_div" style="padding: 0">
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">DL State Spouse:</span> </div>
 								<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPST_new"></span></div>
@@ -243,7 +243,7 @@
 					<!-- content-grid mdl-grid starts here -->
 					<div class="content-grid mdl-grid">
 						<!-- col starts here -->
-						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0" id="CenPH__lb_RCDDTL1__lb_DGMXT_new_div" >
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Driver License:</span> </div>
 								<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DGMXT_new"></span></div>
@@ -252,7 +252,7 @@
 						<!-- col ends here -->
 
 						<!-- col starts here -->
-						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0">
+						<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet" style="padding: 0"  id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new_div">
 							<div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Spouse Income:</span> </div>
 								<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new"></span></div>
@@ -1140,13 +1140,25 @@ CssClass="DdsConstant" />
 			$(".first-view").show();
 			copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
-			if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html() == 'S' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '&nbsp;' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '') {
+		/*	if ($("#CenPH__lb_RCDDTL1__lb_1ASST").html() == 'S' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '&nbsp;' || $("#CenPH__lb_RCDDTL1__lb_1ASST").html() == '') {
 				$("#marital_info").hide();
 			}
 			else {
 				$("#marital_info").show();
-			}
+			}*/
 			maskSSN();
+
+		   $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+               if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+                 $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
+               }
+             });
+
+		   if($("#CenPH__lb_RCDDTL1__lb_1SPSS").text().trim() != "")
+		   	$("#CenPH__lb_RCDDTL1__lb_1SPSS_new-show").show();
+		   else
+		   	$("#CenPH__lb_RCDDTL1__lb_1SPSS_new-show").hide();
+		   
 			$("#CenPH__lb_RCDDTL1__lb_1A4NB_new-show, #CenPH__lb_RCDDTL1__lb_1A4NB_new").on("mousedown touchstart", function (event) {
 				$("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html($("#CenPH__lb_RCDDTL1__lb_1A4NB").html());
 			});
