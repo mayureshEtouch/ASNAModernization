@@ -170,14 +170,14 @@
           <div class="content-grid mdl-grid"> 
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
-              <div class="content-grid mdl-grid">
+              <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_1SPNM_new_div">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="sname">Name:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPNM_new"></span> </div>
               </div>
             </div>
             <!-- col ends here --> 
             <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_DIDXT_new_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="ssecurity">Social Security:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DIDXT_new"></span> </div>
@@ -191,7 +191,7 @@
           <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid"> 
 		  <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0"  id="CenPH__lb_RCDDTL1_V1SDOB_new_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="dob"> D.O.B.:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1_V1SDOB_new"></span> </div>
@@ -200,7 +200,7 @@
             <!-- col ends here --> 
 			
             <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1SPST_new_div">
               <div class="content-grid mdl-grid" id="dlicen">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="">Driver License:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> 
@@ -217,14 +217,14 @@
 		  <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid"> 
 		   <!-- col starts here -->
-            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding:0" id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new_div">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin:0"> <span class="form-label" id="income">Income:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1SPI_usd_new"></span> </div>
               </div>
             </div>
             <!-- col ends here --> 
-			 </div>
+			   </div>
           <!-- content-grid mdl-grid ends here -->
           
           <div class="button-container" style="padding-bottom: 5px;">
@@ -1162,7 +1162,7 @@
                     "CenPH__lb_RCDDTL1__lb_1ASST": "CenPH__lb_RCDDTL1__lb_1ASST_new",
                     "CenPH__lb_RCDDTL1__lb_1SPNM": "CenPH__lb_RCDDTL1__lb_1SPNM_new",
                     "CenPH__lb_RCDDTL1__lb_DIDXT": "CenPH__lb_RCDDTL1__lb_DIDXT_new",
-                    "CenPH__lb_RCDDTL1_V1SDOB": "CenPH__lb_RCDDTL1_V1SDOB_new",
+                    "ctl00\\$CenPH\\$_lb_RCDDTL1_V1SDOB": "CenPH__lb_RCDDTL1_V1SDOB_new",
                     "CenPH__lb_RCDDTL1__lb_1SPST": "CenPH__lb_RCDDTL1__lb_1SPST_new",
                     "CenPH__lb_RCDDTL1__lb_DGMXT": "CenPH__lb_RCDDTL1__lb_DGMXT_new",
                     "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "CenPH__lb_RCDDTL1__lb_1SPI_usd_new"
@@ -1224,6 +1224,12 @@
                 $("#CenPH__lb_RCDKEY__lb_1SEQ_lb_new").ForceNumericOnly();
                 
 
+                  $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+                   if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+                     $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
+                   }
+                 });
+                  
                    if($(".simplePopupClose").length > 0) {
                       $(".simplePopupBackground1").show();
                    } else {
@@ -1234,50 +1240,7 @@
                    });
 
 
-              if($("#CenPH__lb_RCDDTL1__lb_1SPNM").length > 0)
-              {
-                $("#sname").show();
-                $("#spousedetail").show();
-              } else {
-                $("#sname").hide();
-                $("#spousedetail").hide();
-              }
-
-              if($("#CenPH__lb_RCDDTL1__lb_DIDXT").length > 0)
-              {
-                $("#ssecurity").show();
-                $("#spousedetail").show();
-              } else {
-                $("#ssecurity").hide();
-                $("#spousedetail").hide();
-              }
-
-              if($("#CenPH__lb_RCDDTL1_V1SDOB").length > 0)
-              {
-                $("#dob").show();
-                $("#spousedetail").show();
-              } else {
-                $("#dob").hide();
-                $("#spousedetail").hide();
-              }
-
-              if($("#CenPH__lb_RCDDTL1__lb_1SPST").length > 0)
-              {
-                $("#dlicen").show();
-                $("#spousedetail").show();
-              } else {
-                $("#dlicen").hide();
-                $("#spousedetail").hide();
-              }
-
-              if($("#CenPH__lb_RCDDTL1__lb_1SPI_usd_").length > 0)
-              {
-                $("#income").show();
-                $("#spousedetail").show();
-              } else {
-                $("#income").hide();
-                $("#spousedetail").hide();
-              }
+           
             });
       </script> 
 </asp:Content>
