@@ -92,7 +92,10 @@
                                             <tr>
                                                 <th>Reference Name</th>
                                                 <th>Reference Type</th>
-                                                <th width="48%">Address</th>
+                                                <th>Address</th>
+												<th>City</th>
+												<th>State</th>
+												<th>Zipcode</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -611,7 +614,7 @@
             }
             $(document).ready(function () {
                 copyData(copyToAndFrom);  
-                var dataMergeIndices = [[0], [1], [2, "&nbsp;", 3, "&nbsp;", 4, "&nbsp;", 5]];
+                var dataMergeIndices = [[0], [1], [2], [3], [4],[5]];
                 generateTableAndApplyInfiniteScroll("disp-duplicates", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
                 $("#exit,.close-icon").click(function (event) {
