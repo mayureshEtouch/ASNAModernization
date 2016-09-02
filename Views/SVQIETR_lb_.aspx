@@ -1973,6 +1973,20 @@
                 _00('F12', event);
             });
             generateSpecialInstructionsSection();
+            focusEle();
+            $(".simplePopupClose").click(function (event) {
+               focusEle() 
+            });
+
+            function focusEle(){
+            	if($("#__focusID__").val() && $("#__focusID__").val().split("$").length>0){
+            		var ele_id = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2];
+            		if(ele_id){
+            			var new_field_id = copyToAndFrom["inputFields"][ele_id];
+            			$("#" + new_field_id).focus();
+            		}
+            	}
+            }
         });
     </script>
 </asp:Content>
