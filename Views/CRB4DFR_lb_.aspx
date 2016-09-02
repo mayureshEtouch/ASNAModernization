@@ -88,7 +88,7 @@
           <!-- content-grid mdl-grid ends here --> 
 		  
 		  <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
+          <div class="content-grid mdl-grid oddrow" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
@@ -146,7 +146,7 @@
           <!-- content-grid mdl-grid ends here --> 
 		  
 		      <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
+          <div class="content-grid mdl-grid oddrow" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
@@ -203,7 +203,7 @@
           <!-- content-grid mdl-grid ends here --> 
 					
 					<!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
+          <div class="content-grid mdl-grid oddrow" style="padding:0"> 
             
              <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -263,7 +263,7 @@
           <!-- content-grid mdl-grid ends here -->
 		  
 		  	<!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
+          <div class="content-grid mdl-grid oddrow" style="padding:0"> 
 					
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
