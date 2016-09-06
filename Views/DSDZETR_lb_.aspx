@@ -145,7 +145,7 @@
                             </div>
                             <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <select id="CenPH_1FLST" name="CenPH_1FLST" style="width: 174px; padding: 0 2px;">
+                                    <select id="CenPH__lb_SFLCTL__lb_1FLST_new" name="CenPH__lb_SFLCTL__lb_1FLST_new" style="width: 174px; padding: 0 2px;">
                                         <option selected="selected" value=" ">Please select</option>
                                         <option value="H">H - Held Delivery</option>
                                         <option value="L">L - Layaway</option>
@@ -1236,9 +1236,9 @@
                 $("#CenPH__lb_SFLCTL__lb_CEWTX").val($("#CenPH_CEWTX").val());
             });
             // Set the delivery code value to original select box and vice versa
-            $("#CenPH_1FLST").val($("#CenPH__lb_SFLCTL__lb_1FLST").val());
-            $("#CenPH_1FLST").on('change', function () {
-                $("#CenPH__lb_SFLCTL__lb_1FLST").val($("#CenPH_1FLST").val());
+            $("#CenPH__lb_SFLCTL__lb_1FLST_new").val($("#CenPH__lb_SFLCTL__lb_1FLST").val());
+            $("#CenPH__lb_SFLCTL__lb_1FLST_new").on('change', function () {
+                $("#CenPH__lb_SFLCTL__lb_1FLST").val($("#CenPH__lb_SFLCTL__lb_1FLST_new").val());
             });
             // Set promotional code value
             $("#pcode").val($("#CenPH__lb_SFLCTL__lb_CCMC_lb_").val());
@@ -1349,7 +1349,7 @@
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 setReadOnlyView();
-                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").hide();
+                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH__lb_SFLCTL__lb_1FLST_new,#requestdate,#pcode,.page-icons,.editable-data").hide();
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode,.ro-data").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
@@ -1366,7 +1366,7 @@
             $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode,.ro-data").hide();
-                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH_1FLST,#requestdate,#pcode,.page-icons,.editable-data").show();
+                $("#CenPH_1AJCD,#CenPH_PBDTX,#CenPH_CETTX,#CenPH_CEUTX,#CenPH_CEWTX,#CenPH__lb_SFLCTL__lb_1FLST_new,#requestdate,#pcode,.page-icons,.editable-data").show();
                 _00('Enter', event);
             });
 
@@ -1377,7 +1377,7 @@
                 $("#CenPH_CETTX").attr("tabindex", "3");
                 $("#CenPH_CEUTX").attr("tabindex", "4");
                 $("#CenPH_CEWTX").attr("tabindex", "5");
-                $("#CenPH_1FLST").attr("tabindex", "6");
+                $("#CenPH__lb_SFLCTL__lb_1FLST_new").attr("tabindex", "6");
                 $("#requestdate").attr("tabindex", "7");
                 $("#pcode").attr("tabindex", "8");
                 $("#special-instructions input").each(function () {
@@ -1395,6 +1395,11 @@
                 setCookie("shipAddress", $("[id$='lb_SFLCTL__lb_CETTX']").text() + ($("[id$='lb_SFLCTL__lb_CEUTX']").text().trim() == "" ? "" : ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text()) + ", <br>" + $("[id$='lb_SFLCTL__lb_CEVTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_CCXST']").text() + ", " + $("[id$='lb_SFLCTL__lb_CEWTX']").text(), 360);
                 setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim() == "" ? "" : ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text()) + ", <br>" + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
+			
+			$(".simplePopupClose").click(function(event){
+				var ele = $("#__focusID__").val().split('$')[1]+"_"+$("#__focusID__").val().split('$')[2]+"_new" ;
+				$("#"+ele).focus();
+			 });
 
             //Employee field validation
             $("#CenPH__lb_SFLCTL__lb_1AJCD").keydown(function () {
