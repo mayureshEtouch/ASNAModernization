@@ -1680,9 +1680,8 @@
 			
 				$("#CenPH_1FLST").attr("tabindex","1");
 			  
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisionsWithTrailingMinus();
-				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPointsWithTrailingMinus();
+				
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').NumericWithCurencyUptoTwoDecimal();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align", "right");
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
