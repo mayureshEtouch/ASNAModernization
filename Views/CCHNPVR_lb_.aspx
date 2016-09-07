@@ -448,6 +448,17 @@
             if ($("#CenPH__lb_RCDDTL1__lb_DCJVA").length == 0) {
                 $("#lbl_with_payment_of").hide();
             }
+
+            $('[id^="balance"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="down_payment"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="maint_1"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="maint_2"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="maint_3"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="maint_4"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="value_1"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="value_2"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="value_3"]').NumericWithCurencyUptoTwoDecimal();
+            $('[id^="value_4"]').NumericWithCurencyUptoTwoDecimal();
             /*
             Performing F4 action on original fields when user does F4 on Moder UI fields.
             input fields obj must be supplied to doF4Action function and also f4 class should be there for modern UI fields.
@@ -458,7 +469,7 @@
     </script>
 
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display: none;">
+    <div id="Div1" style="display:none;">
 
         <%--  CA: PMT for Quotes        Prompt & validate record                              --%>
         <%--  CRTDSPF                                                                         --%>
