@@ -95,13 +95,13 @@
                                         <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
                                             <input type="text" id="number2" maxlength="3"  class="mdl-textfield__input" data-tb-index="2">
                                         </div>
-																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
+																				<div style="display: none;" class="mdl-cell mdl-cell--1-col" style="width: 78px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Total Avail</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
                                            <span style="margin: 12px 10px 0; display:block; text-align:right;" id="totalAvail"></span>
                                         </div>
-																				<div class="mdl-cell mdl-cell--1-col" style="width: 78px;">
+																				<div style="display: none;" class="mdl-cell mdl-cell--1-col" style="width: 78px;">
                                             <span class="summary-table-title pull-right">Excptn</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
@@ -135,7 +135,7 @@
 														<th>Location</th>
 														<th>Description</th>
 														<th>Avail</th>
-														<th>Excptn</th>
+														<th>Exception</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -181,8 +181,8 @@
 			 "CenPH__lb_SFLCTL__lb_CFATX":"productDesp",
 			 "CenPH__lb_SFLCTL__lb_PBLNB":"vendorNumber",
 			 "CenPH__lb_SFLCTL__lb_CECTX":"vendorDesc",
-			 "CenPH__lb_SFLCTL__lb_CA3QT":"totalAvail",
-			 "CenPH__lb_SFLCTL__lb_CDQQT":"excptn",
+			 //"CenPH__lb_SFLCTL__lb_CA3QT":"totalAvail",
+			 //"CenPH__lb_SFLCTL__lb_CDQQT":"excptn",
 			 "CenPH_DdsConstant8":"date",
 			 "CenPH__lb_SFLCTL__lb__lb_TME":"time"
             },
@@ -227,7 +227,7 @@
    });
 </script>
 	   
-        <div id="Div1" style="display:none">
+        <div id="Div1" style="display:none;">
             
       <%--  IN: DSP Global Avail      Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
