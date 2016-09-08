@@ -1394,6 +1394,19 @@
                 $("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right", blankWidth);
                 $("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("margin-right", blankWidth);
             }
+			
+			function dealycodeInst(keycode) {
+					var inpe = jQuery.Event("keydown");
+					inpe.which = keycode;
+					
+					try{
+						$(document).trigger(inpe);
+						renderPage(true);
+					}
+					catch(e){
+						renderPage(true);
+					}
+				}
 
             //DdsSubfileRecord tabindex
             setTimeout(function () {
@@ -1420,12 +1433,10 @@
                 return;
             });
             $('body').on("click touchstart touchend", "#sp-next-page", function (event) {
-                _00("PgDn", event);
-                renderPage(true);
+               setTimeout(function () { dealycodeInst(34); }, 1000);
             });
             $('body').on("click touchstart touchend", "#sp-previous-page", function (event) {
-                _00("PgUp", event);
-                renderPage(true);
+                setTimeout(function () { dealycodeInst(33); }, 1000);
             });
             $(window).resize(function () {
                 renderPage(false);

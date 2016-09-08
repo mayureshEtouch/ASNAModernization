@@ -1705,11 +1705,6 @@
 				function dealycodeInst(keycode) {
 					var inpe = jQuery.Event("keydown");
 					inpe.which = keycode;
-					/*if (keycode === 33) {
-						renderPage(true);
-					} else if (keycode === 34) {
-						renderPage(true);
-					}*/
 					
 					try{
 						$(document).trigger(inpe);
@@ -1748,13 +1743,9 @@
 					return;
 				});
 				$('body').on("click touchstart touchend", "#sp-next-page", function(event) {
-					console.log("next");
-					//_00("PgDn", event);
 					  setTimeout(function () { dealycodeInst(34); }, 1000);
 				});
 				$('body').on("click touchstart touchend", "#sp-previous-page", function(event) {
-					console.log("previous");
-					//_00("PgUp", event);
 					  setTimeout(function () { dealycodeInst(33); }, 1000);
 				});
 				$(window).resize(function() {
