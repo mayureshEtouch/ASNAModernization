@@ -1597,11 +1597,14 @@
 				.header-grey-background :nth-child(2) {
 					width: 7% !important;
 				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
+					width: 5.75% !important;
+				}
 				[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
-					width: 7.7% !important;
+					width: 7.35% !important;
 				}
 				[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
-					width: 7.1% !important;
+					width: 6.8% !important;
 				}
 				[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
 					width: 18.2% !important;
@@ -1613,7 +1616,7 @@
 					width: 21.3% !important;
 				}
 				 [id^='CenPH__lb_SFLRCD_'] input:nth-child(8), [id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
-					width: 20.7% !important;
+					width: 20.75% !important;
 				}
 				.header-grey-background :nth-child(6) {
 					width: 8.5% !important;
