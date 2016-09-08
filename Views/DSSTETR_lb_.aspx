@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/19/2016 at 9:20 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 9/7/2016 at 7:28 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSSTETR# --%>
 
     </asp:Content>
@@ -273,7 +273,9 @@
             </div>
         </div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
+	
+	
+        <div id="Div1" style="display: none">
             
       <%--  OE: ETR Upd Ord Pymts     Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1356,7 +1358,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-	 <style>
+	<style>
 	    .table-data-content-container .mdl-data-table td{
 			padding: 6px 10px 6px;
 			line-height:normal;
@@ -1595,19 +1597,7 @@
 					$("#CenPH__lb_SFLCTL__lb_1FLST").val($("#CenPH_1FLST").val());
                });
 			   
-				/*
-			   var $options = $("#CenPH__lb_SFLCTL__lb_1FLST > option").clone().map(function (index) {
-					if ($(this).val() != '?') {
-						if ($(this).val().trim() == "") {
-							$(this).val(" ").text("Please Choose");
-						}
-						return this;
-					} else {
-						var $options = '<option value="' + $.trim($("#CenPH__lb_SFLCTL__lb_1FLST").text()) + '">' + $.trim($("#CenPH__lb_SFLCTL__lb_1FLST").text()) + '</option>';
-					}
-					 
-				});
-				*/
+				
 			   if ($("#CenPH__lb_SFLCTL_VCBQDT").is('span')) {
                     $("#spanDate").show();
                     $("#inputDate").hide();
@@ -1635,9 +1625,6 @@
 				$("body").on('hover', "div#CenPH__lb_SFLRCD:even input,div#CenPH__lb_SFLRCD:even span", function() {
 					$($(this).parent()).removeClass("DdsSubfileCandidateCurrentRecord");
 				});
-                
-               // var dataMergeIndices = [[1], [2], [3], [4] ,[5], [6]];
-                //generateTableAndApplyInfiniteScroll("enterPayment", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 				
 				if ($("#CenPH__lb_SFLCTL_VCBQDT").length > 0) {
 					$("#exp-date-val").html($("#CenPH__lb_SFLCTL_V1AXDT").html());
@@ -1680,8 +1667,9 @@
 			
 				$("#CenPH_1FLST").attr("tabindex","1");
 			  
-				
-				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').NumericWithCurencyUptoTwoDecimal();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').numericWithTwoDecimalPrecisionsWithTrailingMinus();
+				//$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceAmountOnly();
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceTwoDecimalPointsWithTrailingMinus();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align", "right");
 				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
@@ -1690,43 +1678,50 @@
 				$('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
 			
 				function renderPage(addSpace) {
-                if (addSpace) {
-                    $("div#CenPH__lb_SFLRCD__End").remove();
-                    $("#sp-previous-page,#sp-next-page").remove();
-                    if ($("#CenPH__lb_SFLRCD_0").length === 0) {
-                        $("div#CenPH__lb_SFLRCD__End").remove();
-                        $("#enterPayment").
-                        after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
-                    }
-                    $("#enterPayment").after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-					 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2FSST"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
-					 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2EXNB"]');
+					if (addSpace) {
+						$("div#CenPH__lb_SFLRCD__End").remove();
+						$("#sp-previous-page,#sp-next-page").remove();
+						if ($("#CenPH__lb_SFLRCD_0").length === 0) {
+							$("div#CenPH__lb_SFLRCD__End").remove();
+							$("#enterPayment").
+							after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
+						}
+						$("#enterPayment").after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
+						 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2FSST"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
+						 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2EXNB"]');
 
-                    $("#CenPH__lb_SFLRCD select").empty();
-                    $("#CenPH__lb_SFLRCD select").css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
-                    $("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
-                }
-                //var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
-               // var blankWidth = mainWidth - inputWidth + 2;
-			     /*$("[id^='CenPH__lb_SFLRCD__lb_2FSST']").css("width", $("#payment-method th:first-child").innerWidth()-7);
-				 $(".payment").css("width", $("#payment-method th:nth-child(2)").width()+11);
-				 $("span.payment").css("width", $("#payment-method th:nth-child(2)").width()+17);
-				 $(".amount").css("width", $("#payment-method th:nth-child(3)").width()+3);
-				 $("span.amount").css("width", $("#payment-method th:nth-child(3)").width()+9);
-				 $(".reference").css("width", $("#payment-method th:nth-child(4)").innerWidth()-14);
-				 $("span.reference").css("width", $("#payment-method th:nth-child(4)").innerWidth()-8);
-				 $(".approval-code").css("width", $("#payment-method th:nth-child(5)").innerWidth()-16);
-				 $("span.approval-code").css("width", $("#payment-method th:nth-child(5)").innerWidth()-10);
-				 $("[id^='CenPH__lb_SFLRCD__lb_2EXNB']").css("width", $("#payment-method th:nth-child(6)").innerWidth()-11);
-				 $("[id^='CenPH__lb_SFLRCD__lb_2SEL']").css("width", $("#payment-method th:nth-child(7)").innerWidth()-10);*/
-                //$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("width", mainWidth);
-              //  $("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("width", mainWidth);
+						$("#CenPH__lb_SFLRCD select").empty();
+						$("#CenPH__lb_SFLRCD select").css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
+						$("#CenPH__lb_SFLRCD select").append("<option value='4'>Cancel</option><option selected='selected' value=' '>Active</option>");
+					}
+               
 				
-            }
+				}
+				
+				function dealycodeInst(keycode) {
+					var inpe = jQuery.Event("keydown");
+					inpe.which = keycode;
+					/*if (keycode === 33) {
+						renderPage(true);
+					} else if (keycode === 34) {
+						renderPage(true);
+					}*/
+					
+					try{
+						$(document).trigger(inpe);
+						renderPage(true);
+					}
+					catch(e){
+						renderPage(true);
+					}
+					
+					
+				}
+
 
 				//DdsSubfileRecord tabindex
 				setTimeout(function() {
@@ -1752,13 +1747,15 @@
 					}
 					return;
 				});
-				$('body').on("click", "#sp-next-page", function(event) {
-					_00("PgDn", event);
-					renderPage(true);
+				$('body').on("click touchstart touchend", "#sp-next-page", function(event) {
+					console.log("next");
+					//_00("PgDn", event);
+					  setTimeout(function () { dealycodeInst(34); }, 1000);
 				});
-				$('body').on("click", "#sp-previous-page", function(event) {
-					_00("PgUp", event);
-					renderPage(true);
+				$('body').on("click touchstart touchend", "#sp-previous-page", function(event) {
+					console.log("previous");
+					//_00("PgUp", event);
+					  setTimeout(function () { dealycodeInst(33); }, 1000);
 				});
 				$(window).resize(function() {
 					renderPage(false);
