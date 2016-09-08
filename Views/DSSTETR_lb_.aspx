@@ -188,7 +188,7 @@
             <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet" style="margin: 0;">
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet"> <span class="form-label">Requested Delivery Date:</span> </div>
-                <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet " style="margin-top: 8px; margin-left: 0;display:none" id="inputDate">
+                <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet " style="margin-top: 8px; margin-left: 0;display:none" id="inputDate">
 				<span class="form-text pull-right" data-upgraded=",MaterialTextfield">
 								<input class="editable-data" onfocus="_09('VCBQDT','9,68','#SFLCTL');" type="text" id="inputRequestDate" name="date" size="13" readonly="true">
                                 <i id="requestcal" class="material-icons calender-icon page-icons editable-data" ></i>
@@ -1420,46 +1420,7 @@
             padding: 5px 1px 0 !important;
 			height: 25px !important;
         }
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
-			width: 4.8% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
-			width: 5% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
-			width: 4.7% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(6) {
-			width: 18.65% !important;
-			text-align: right;
-		}
-		[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
-			width: 18.3% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(8) {
-			width: 24.3% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] input:nth-child(8) {
-			width: 24% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
-			width: 24.25% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
-			width: 24% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
-			width: 9.25% !important;
-			text-align: right !important;
-			margin-right: 10px;
-		}
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
-			width: 5% !important;
-		}
-		[id^='CenPH__lb_SFLRCD_'] :nth-child(4), [id^='CenPH__lb_SFLRCD_'] :nth-child(6), [id^='CenPH__lb_SFLRCD_'] :nth-child(8), [id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
-			
-			margin: 3px 4px !important;
-		}
+		
 		 #CenPH__lb_SFLRCD > div input {
 			height: 18px !important;
 			}
@@ -1521,22 +1482,129 @@
 		.amount {
 			text-align:right !important;
 		}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
+				width: 5.5% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+				width: 4.95% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+				width: 4.65% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(6) {
+				width: 18.7% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
+				width: 18.3% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(8) {
+				width: 24.4% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] input:nth-child(8) {
+				width: 24.1% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
+				width: 24.2% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
+				width: 23.9% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+				width: 9.15% !important;
+				margin-left: 10px;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
+				width: 5% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(4), [id^='CenPH__lb_SFLRCD_'] :nth-child(6), [id^='CenPH__lb_SFLRCD_'] :nth-child(8), [id^='CenPH__lb_SFLRCD_'] :nth-child(10) {
+				
+				margin: 3px 4px !important;
+			}
+			.header-grey-background :nth-child(1) {
+					width: 5% !important;
+				}
+		@media only screen 
+		and (min-device-width : 1300px) {
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
+				width: 5.45% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+				width: 4.95% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+				width: 4.65% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(6) {
+				width: 18.65% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
+				width: 18.35% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(8) {
+				width: 24.4% !important;
+			}
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+				width: 9.2% !important;
+			}
+		}
+		
+		@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) 
+		and (orientation : landscape) {
+			[id^='CenPH__lb_SFLRCD_'] :nth-child(2) {
+					width: 5.6% !important;
+				}
+				.header-grey-background :nth-child(2) {
+					width: 5.8% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
+					width: 6% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
+					width: 5.6% !important;
+				}
+				.header-grey-background :nth-child(4), .header-grey-background :nth-child(5) {
+					width: 21% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(6) {
+					width: 18.7% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] span:nth-child(8), [id^='CenPH__lb_SFLRCD_'] span:nth-child(10) {
+					width: 21.25% !important;
+				}
+				 [id^='CenPH__lb_SFLRCD_'] input:nth-child(8), [id^='CenPH__lb_SFLRCD_'] input:nth-child(10) {
+					width: 20.8% !important;
+				}
+				.header-grey-background :nth-child(6) {
+					width: 8.5% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(12) {
+					width: 8.4% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] :nth-child(1) {
+					width: 5% !important;
+				}
+		}
 	@media only screen 
 		  and (min-device-width: 768px) 
 		  and (max-device-width: 1024px) 
 		  and (orientation: portrait) 
 		  and (-webkit-min-device-pixel-ratio: 1) {
 				.mdl-layout__content {
-					height: 920px;
+					height: auto;
 				}
 				.header-grey-background :nth-child(2) {
-					width: 8% !important;
+					width: 7% !important;
 				}
 				[id^='CenPH__lb_SFLRCD_'] span:nth-child(4) {
-					width: 8.8% !important;
+					width: 7.7% !important;
 				}
 				[id^='CenPH__lb_SFLRCD_'] input:nth-child(4) {
-					width: 8.3% !important;
+					width: 7.1% !important;
+				}
+				[id^='CenPH__lb_SFLRCD_'] input:nth-child(6) {
+					width: 18.2% !important;
 				}
 				.header-grey-background :nth-child(4), .header-grey-background :nth-child(5) {
 					width: 21% !important;
@@ -1708,16 +1776,12 @@
 					
 					try{
 						$(document).trigger(inpe);
-						renderPage(true);
 					}
 					catch(e){
 						renderPage(true);
 					}
-					
-					
 				}
-
-
+				
 				//DdsSubfileRecord tabindex
 				setTimeout(function() {
 					$(".DdsCharField").attr("tabindex", "0");
