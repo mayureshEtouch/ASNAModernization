@@ -22,7 +22,127 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Customer Selection Screen</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSVGPVR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress-bar">
+                <div class="progress-bar-wrapper">
+                    <ul class="progress-bar-main">
+                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                        <li class="progress-bar-divider-first">
+
+                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
+                        <li class="progress-bar-divider">
+
+                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="table-data-content-container">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container table-container-search">
+                            <div class="content-grid mdl-grid select-customer-screen-grid">
+                                <div class="mdl-cell mdl-cell--12-col"><span class="summary-table-title">Search Customer</span> </div>
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
+                                    <span class="summary-label">Enter Phone Number :</span>
+                                    <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="1" id="CenPH__lb_RCDDTL1__lb_DAVNB_new" onfocus="_09('#DAVNB','5,37','#RCDDTL1');"  maxlength="3" style="width: calc(16.6667% - 16px) !important;">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_DBMNB_new" onfocus="_09('#DBMNB','5,41','#RCDDTL1');" maxlength="3" style="width: calc(16.6667% - 16px) !important;">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_DAXNB_new" maxlength="4" onfocus="_09('#DAXNB','5,45','#RCDDTL1');" style="width: calc(66.6667% - 16px) !important;">
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col">
+                                    <span class="circle-separator"><span>OR</span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                    <span class="summary-label">Customer Name/Partial Name :</span>
+                                    <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                    <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1ALTX_new" maxlength="30" onfocus="_09('#1ALTX','9,37','#RCDDTL1');">
+                                    </div>
+                                </div>
+                               <!--  <div class="mdl-cell mdl-cell--1-col">
+                                    <span class="circle-separator"><span>OR</span></span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                    <span class="summary-label">Email Address :</span>
+                                    <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
+                                    <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="5" id="">
+
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span>
+                        
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchExtraPhoneNumbers" event-data="F8">Search Extra Phone Numbers</span>
+                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty" event-data="F12">Customer Warranties</span>
+
+                        </div>
+                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" event-data="Enter">Search</span>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+
+        <div id="Div1" style="display: none;">
+        <script type="text/javascript">
+
+         var copyToAndFromData = {
+            "displayOnlyFields": {
+              
+               "CenPH_DdsConstant5":"date",
+               "CenPH__lb_RCDDTL1__lb__lb_TME":"time"
+               
+            },
+            "inputFields": {
+              "CenPH__lb_RCDDTL1__lb_DAVNB":"CenPH__lb_RCDDTL1__lb_DAVNB_new",
+              "CenPH__lb_RCDDTL1__lb_DBMNB":"CenPH__lb_RCDDTL1__lb_DBMNB_new",
+              "CenPH__lb_RCDDTL1__lb_DAXNB":"CenPH__lb_RCDDTL1__lb_DAXNB_new",
+              "CenPH__lb_RCDDTL1__lb_1ALTX":"CenPH__lb_RCDDTL1__lb_1ALTX_new"
+            }
+          };
+     $(document).ready(function() {
+    
+      copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+       
+       
+    
+      
+      });
+</script>
             
       <%--  CU: PMT Customer/No Maint Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
