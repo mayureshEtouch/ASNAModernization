@@ -812,10 +812,20 @@
                     return false; // does both event.stopPropogation as well as event.preventDefault
                 });
                 $("#CenPH__lb_SFLCTL__lb_2G1N_lb__new").ForceNumericOnly();
+                $('body').on('click', '#previous-page', function (event) {
+                    $('#tblCustWarrty tbody tr').dblclick(function () {
+                        return false; // does both event.stopPropogation as well as event.preventDefault
+                    });
+                });
+                $('body').on('click', '#next-page', function (event) {
+                    $('#tblCustWarrty tbody tr').dblclick(function () {
+                        return false; // does both event.stopPropogation as well as event.preventDefault
+                    });
+                });
+
                 $('body').on('click', '#previous', function (event) {
                     _00('F3', event);
                 });
-
                 $('body').on('click', '#search', function (event) {
                     _00('Enter', event);
                 });
