@@ -3,6 +3,19 @@
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 9/8/2016 at 5:45 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+    <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+    <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+    
         <%-- Legacy location: library ASNAPH5BK, file QDDSSRC, member DAOWDFR# --%>
 
     </asp:Content>
@@ -22,7 +35,150 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span>
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="time-date">
+      <div class="content-grid mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col"> 
+          <!-- Title --> 
+          <span class="heading-h1">RSA Notes</span> 
+        </div>
+        <div class="mdl-cell mdl-cell--3-col pull-right"> 
+          <!-- Navigation --> 
+          <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DAOWDFR</span>
+        </div>
+      </div>
+    </section>
+
+      <section class="order-summary">
+                <div class="order-summary-wrapper">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--10-col mdl-cell--4-col-tablet">
+                            <span class="summary-title">RSA Note Code </span>
+                            <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2MAC_lb_new"></span>
+                        </div>
+                    </div>
+              </div>
+            </section>
+            
+             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>               
+                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+                 <thead>
+                          <tr>
+                            <th>RSA Notes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+                                
+                <div class="button-container">
+                    <div class="content-grid mdl-grid">
+                        <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>                       
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+  </main>
+  <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+</div>
+<!-- Modified HTML code ends here -->
+ <script type="text/javascript">
+
+         var copyToAndFromData = {
+            "displayOnlyFields": {
+              
+              "CenPH_DdsConstant1+CenPH__lb_SFLCTL__lb_2MAC_lb_+CenPH_DdsConstant2":"CenPH__lb_SFLCTL__lb_2MAC_lb_new"
+            },
+            "inputFields": {
+            }
+          };
+     $(document).ready(function() {
+    
+      copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+       
+        var dataMergeIndices = [[0]];
+        generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+              
+               $('.close-icon').click(function (event) {
+                _00("F3", event);
+            });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
+       
+      
+      
+      });
+</script>
+<style>
+        #__Page_PopUp {
+            min-width: 500px !important;
+            width: 500px !important;
+      left: 50% !important;
+      margin-left: -250px;
+      top: 15% !important;
+        }
+    #__Page_PopUp > tr:first-child {
+      display: none;
+    }
+
+    #__Page_PopUp .DdsInlinePopUpTitle {
+      height: 0;
+    }
+     
+        .modal-dialog-container {
+            width: 100%;
+            margin: 0 0 3%;
+        }
+        .mdl-layout__content {
+            height: auto !important;
+            overflow: hidden !important;
+        }
+        #wrapper {
+      width: 100% !important;
+    }
+        #form1 {
+            margin-top: -20px;
+        }
+        #__Page_Hidden{
+            height: 100% !important;
+        }
+        .simplePopup {
+                left: 30% !important;
+                top: 40% !important;
+              }
+    </style>
+        <div id="Div1" style="display: none;">
             
       <%--  SY: Display RSA Notes     Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

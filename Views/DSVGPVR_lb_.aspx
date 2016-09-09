@@ -124,13 +124,14 @@
             "displayOnlyFields": {
               
                "CenPH_DdsConstant5":"date",
-               "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
-               "CenPH__lb_RCDDTL1__lb_DAVNB":"CenPH__lb_RCDDTL1__lb_DAVNB_new",
+               "CenPH__lb_RCDDTL1__lb__lb_TME":"time"
+               
+            },
+            "inputFields": {
+              "CenPH__lb_RCDDTL1__lb_DAVNB":"CenPH__lb_RCDDTL1__lb_DAVNB_new",
               "CenPH__lb_RCDDTL1__lb_DBMNB":"CenPH__lb_RCDDTL1__lb_DBMNB_new",
               "CenPH__lb_RCDDTL1__lb_DAXNB":"CenPH__lb_RCDDTL1__lb_DAXNB_new",
               "CenPH__lb_RCDDTL1__lb_1ALTX":"CenPH__lb_RCDDTL1__lb_1ALTX_new"
-            },
-            "inputFields": {
             }
           };
      $(document).ready(function() {
