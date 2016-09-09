@@ -22,7 +22,102 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+		<section class="time-date">
+				<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--8-col"> 
+								<!-- Title --> 
+								<span class="heading-h1">Display Customer Warranties</span> </div>
+						<div class="mdl-cell mdl-cell--4-col pull-right"> 
+								<!-- Navigation --> 
+								<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIKDDFR</span> 
+                            <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> 
+                            <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span> </div>
+				</div>
+		</section>
+		<section class="table-data-content-container filter-field-container mrgnTp16">
+				<div class="table-data-wrapper">
+						<div class="table-data-maincontainer">
+								<div class="table-container filter-search-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+												<div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+														<div class="content-grid mdl-grid">
+																<div class="mdl-cell mdl-cell--2-col" style="width: 130px;"> 
+																	<span class="summary-table-title pull-right" >Invoice Number</span> 
+																</div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet" id="model">
+																		<input type="text"  id="CenPH__lb_SFLCTL__lb_2G1N_lb__new" 
+                                                                            class="mdl-textfield__input" data-tb-index="1" maxlength="9" onfocus="_09('#2G1N#','3,11','#SFLCTL');">
+                                                                   
+																</div>
+														</div>
+												</div>
+												<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+														<div class="button-container">
+																<button class="mdl-button mdl-button--accent" id="search">Search</button>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+		<section class="add-item">
+				<div class="add-item-wrapper">
+						<div class="content-grid mdl-grid">
+								<div class="mdl-cell mdl-cell--12-col pull-right">
+										<div class="icon-container"> 
+											<span class="icon-txt display">Detail</span><i class="material-icons md-15 md-light display-icon display"></i> 
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+		<section class="table-data-content-container spacer-container-bottom">
+				<div class="table-data-wrapper">
+						<div class="table-data-maincontainer">
+								<div style="overflow: auto;" class="table-container">
+										<div>
+												<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblCustWarrty" data-upgraded=",MaterialDataTable">
+														<thead>
+																<tr>
+																		<th>Invoice Number</th>
+																		<th>Location Code</th>
+																		<th>Employee Code</th>
+																		<th>Model Number</th>
+																		<th>Serial Number</th>
+																		<th>Product Category Code</th>
+																		<th width="9%">Item Price $</th>
+																		<th>Model DRV Description</th>
+																		<th>Sold Date</th>
+																		<th>SMA Warranty Ends Date</th>
+																		<th>Warranty Type Code</th>
+																</tr>
+														</thead>
+														<tbody>
+																
+																
+														</tbody>
+												</table>
+												 </div>
+										<div class="button-container">
+												<div class="content-grid mdl-grid">
+														<div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+														<%--<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>--%>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+</main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CU: DSP Customer Warr     Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -698,4 +793,55 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+        <script type="text/javascript">
+            var copyToAndFrom = {
+                "displayOnlyFields": {
+                    "CenPH_DdsConstant11": "date",
+                    "CenPH__lb_SFLCTL__lb__lb_TME": "time"
+                },
+                "inputFields": {
+                    "CenPH__lb_SFLCTL__lb_2G1N_lb_": "CenPH__lb_SFLCTL__lb_2G1N_lb__new"
+                }
+            }
+            $(document).ready(function () {
+                
+                copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5],[6],  [7],[9],[11],[13]]; //Not sure about span number 13
+                generateTableAndApplyInfiniteScroll("tblCustWarrty", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+                $('#tblCustWarrty tbody tr').dblclick(function () {
+                    return false; // does both event.stopPropogation as well as event.preventDefault
+                });
+                $("#CenPH__lb_SFLCTL__lb_2G1N_lb__new").ForceNumericOnly();
+                $('body').on('click', '#previous', function (event) {
+                    _00('F3', event);
+                });
+
+                $('body').on('click', '#search', function (event) {
+                    _00('Enter', event);
+                });
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+                //Display customer details
+                $(".display").click(function (event) {
+                    if ($(".icon-container").hasClass("icon-disable")) {
+                        alert("Please select the customer");
+                    } else {
+                        var row = $("#tblCustWarrty tbody tr.selected");
+                        selectCusotmer(row, "5", event);
+                    }
+                });
+              
+               
+               
+            });
+        </script>
+        <style>
+            #tblCustWarrty :nth-child(7) {
+                text-align: right;
+            }
+        </style>
     </asp:Content>
