@@ -138,6 +138,8 @@
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
+                        <li class="_item"><a href="javascript:void(0);"  data-menu="8"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Customer Information</p>
+                        </a></li>
                     </ul>
                     <!-- back-content ends here -->
                 </div>
