@@ -35,11 +35,11 @@
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSVGPVR</span>
                         <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
-                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
                     </div>
                 </div>
             </section>
-            <section class="progress-bar">
+<!--             <section class="progress-bar">
                 <div class="progress-bar-wrapper">
                     <ul class="progress-bar-main">
                         <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
@@ -57,9 +57,9 @@
                         <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
                     </ul>
                 </div>
-            </section>
+            </section> -->
             
-            <section class="table-data-content-container">
+            <section class="table-data-content-container mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">
@@ -100,7 +100,7 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span>
                         
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchExtraPhoneNumbers" event-data="F8">Search Extra Phone Numbers</span>
-                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty" event-data="F12">Customer Warranties</span>
+                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty" event-data="F12">Return</span>
 
                         </div>
                         <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
@@ -138,7 +138,15 @@
     
       copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
        
-       
+          $("form input[type=text]").on('input',function () {
+        var tab = $(this).attr("tabindex");
+        if($(this).val().length == $(this).attr('maxlength')) {
+          //$(this).next("input").focus();
+          tab++;
+          $("[tabindex='"+tab+"']").focus();
+          
+        }
+      });
     
       
       });

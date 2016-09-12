@@ -2247,7 +2247,11 @@
                 _00('F7', event);
             });
             $("#next").click(function (event) {
-                _00('Enter', event);
+                
+                    var row = $("#tblCstAcc tbody tr.selected");
+                    selectCusotmer(row, "1", event);
+                
+                //_00('Enter', event);
             });
             $("#search").click(function (event) {
                 _00('Enter', event);
