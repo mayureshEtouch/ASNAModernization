@@ -64,7 +64,10 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">SSN number:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2B2NB_new"></span> </div>
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2B2NB_new"></span> 
+                    <span id="ssn-show" style="color:blue;cursor: pointer;">Show</span>
+                    <input type="hidden" id="dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" style="width: 50% !important;" >
+                    </div>
                   </div>
                 </div>
                 <!-- 4 col ends here --> 
@@ -422,6 +425,22 @@
     $("select").each(function(){
       $(this).val('');
     })
+    var html = $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html();
+    if(html != undefined && html.length>0){
+        html = html.replace(/-/g,'');
+        $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+        $("#ssn-show").show();
+    }
+    /* Showing ssn on click*/
+
+     $("#ssn-show").on("mousedown taphold touchstart", function() {
+      setTimeout(function() {
+        $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html);
+      },0);
+    });
+      $("#ssn-show").on("mouseup dragend touchend", function() {
+       $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+     });
   });
 </script>
 <div id="Div1" style="display:none;">
