@@ -1695,7 +1695,7 @@
 				 });
 				
 				var deviceAgent = navigator.userAgent.toLowerCase();
-					var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+				var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 					
 						function dealycodeInst(keycode) {
 							var inpe = jQuery.Event("keydown");
