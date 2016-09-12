@@ -148,10 +148,20 @@
         }
       });
     
+      $("#CenPH__lb_RCDDTL1__lb_DAVNB_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_DBMNB_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_DAXNB_new").ForceNumericOnly();
+      
       
       });
 </script>
-            
+          
+  <style type="text/css">
+  .simplePopup{
+    text-align: left;
+
+  }
+  </style>          
       <%--  CU: PMT Customer/No Maint Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
       <%--  RSTDSP(*YES)                                                                                                     --%>
