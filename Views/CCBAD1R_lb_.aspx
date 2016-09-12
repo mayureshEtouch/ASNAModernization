@@ -218,7 +218,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">CP Charges:</span> </div>
-                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BJVA_new"></span> </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1BJVA_new"></span> </div>
               </div>
             </div>
             <!-- col ends here --> 
@@ -395,7 +395,7 @@
               "CenPH__lb_RCDDTL1__lb_1B4CD":"CenPH__lb_RCDDTL1__lb_1B4CD_new",
               "CenPH__lb_RCDDTL1__lb_1DDNB":"CenPH__lb_RCDDTL1__lb_1DDNB_new",
               "CenPH__lb_RCDDTL1__lb_1A8ST":"CenPH__lb_RCDDTL1__lb_1A8ST_new",
-              "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AGDT":"_lb_RCDDTL1_V1AGDT_new",
+              "ctl00\\$CenPH\\$_lb_RCDDTL1_V1AGDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1AGDT_new",
               "CenPH__lb_RCDDTL1__lb_1ABTM":"CenPH__lb_RCDDTL1__lb_1ABTM_new",
               "CenPH__lb_RCDDTL1__lb_1AAVN":"CenPH__lb_RCDDTL1__lb_1AAVN_new",
               "CenPH__lb_RCDDTL1__lb_1ABVN":"CenPH__lb_RCDDTL1__lb_1ABVN_new"
