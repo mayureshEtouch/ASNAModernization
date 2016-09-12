@@ -620,7 +620,9 @@
         },0);
       });
         $("#ssn-show").on("mouseup dragend touchend", function() {
-         $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+			 setTimeout(function() {
+				$("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+				},0);
        });
       //$("#CenPH__lb_RCDDTL1__lb_DL6ST_new").focus();
 

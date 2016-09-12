@@ -439,7 +439,9 @@
       },0);
     });
       $("#ssn-show").on("mouseup dragend touchend", function() {
-       $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+		setTimeout(function() {
+			$("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+			},0);
      });
   });
 </script>
