@@ -1738,9 +1738,16 @@
 				$('body').on('keyup keydown', function(event) {
 					var keycode = event.keycode || event.which;
 					if (keycode === 33) {
-						renderPage(true);
+						if ( $("#sp-previous-page").css('display') == 'block')
+						{
+						   renderPage(true);
+						}
+						
 					} else if (keycode === 34) {
-						renderPage(true);
+						if ( $("#sp-next-page").css('display') == 'block')
+						{
+						   renderPage(true);
+						}
 					}
 					return;
 				});
