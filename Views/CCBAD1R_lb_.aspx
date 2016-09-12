@@ -36,7 +36,7 @@
     </div>
   </section>
   
-  <section class="table-data-content-container mrgnTp16">
+  <section class="table-data-content-container mrgnTp16 spacer-container-bottom">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
