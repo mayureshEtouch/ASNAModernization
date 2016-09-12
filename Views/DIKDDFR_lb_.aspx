@@ -79,7 +79,7 @@
 		<section class="table-data-content-container spacer-container-bottom">
 				<div class="table-data-wrapper">
 						<div class="table-data-maincontainer">
-								<div style="overflow: auto;" class="table-container">
+								<div style="overflow: auto;" class="table-container" id="divCustWarranty">
 										<div>
 												<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblCustWarrty" data-upgraded=",MaterialDataTable">
 														<thead>
@@ -103,14 +103,15 @@
 														</tbody>
 												</table>
 												 </div>
-										<div class="button-container">
+										
+								</div>
+								<div class="button-container">
 												<div class="content-grid mdl-grid">
 														<div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
 														<%--<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop pull-right">
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>--%>
 												</div>
 										</div>
-								</div>
 						</div>
 				</div>
 		</section>
@@ -807,18 +808,18 @@
                 
                 copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5],[6],  [7],[9],[11],[13]]; //Not sure about span number 13
-                generateTableAndApplyInfiniteScroll("tblCustWarrty", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
-                $('#tblCustWarrty tbody tr').dblclick(function () {
+                generateTableAndApplyInfiniteScroll("divCustWarranty", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+                $('#divCustWarranty tbody tr').dblclick(function () {
                     return false; // does both event.stopPropogation as well as event.preventDefault
                 });
                 $("#CenPH__lb_SFLCTL__lb_2G1N_lb__new").ForceNumericOnly();
                 $('body').on('click', '#previous-page', function (event) {
-                    $('#tblCustWarrty tbody tr').dblclick(function () {
+                    $('#divCustWarranty tbody tr').dblclick(function () {
                         return false; // does both event.stopPropogation as well as event.preventDefault
                     });
                 });
                 $('body').on('click', '#next-page', function (event) {
-                    $('#tblCustWarrty tbody tr').dblclick(function () {
+                    $('#divCustWarranty tbody tr').dblclick(function () {
                         return false; // does both event.stopPropogation as well as event.preventDefault
                     });
                 });
