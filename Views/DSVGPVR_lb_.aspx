@@ -148,6 +148,10 @@
         }
       });
     
+      $("#CenPH__lb_RCDDTL1__lb_DAVNB_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_DBMNB_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_DAXNB_new").ForceNumericOnly();
+      
       
       });
 </script>
