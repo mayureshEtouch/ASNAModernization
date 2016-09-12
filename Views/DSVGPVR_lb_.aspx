@@ -151,7 +151,13 @@
       
       });
 </script>
-            
+          
+  <style type="text/css">
+  .simplePopup{
+    text-align: left;
+
+  }
+  </style>          
       <%--  CU: PMT Customer/No Maint Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
       <%--  RSTDSP(*YES)                                                                                                     --%>
