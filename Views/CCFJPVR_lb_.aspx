@@ -22,7 +22,158 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+    <!-- Modified HTML code starts here -->
+    <div class="OverlayPopupBackground"></div>
+    <main class="mdl-layout__content">
+      <section class="time-date">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--8-col"> 
+            <!-- Title --> 
+            <span class="heading-h1">Prompt for Adjustment Date</span> </div>
+          <div class="mdl-cell mdl-cell--4-col pull-right"> 
+            <!-- Navigation --> 
+            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCFJPVR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> &nbsp;<span class="date-time-txt" name="time" id="time"></span> </div>
+        </div>
+      </section>
+      
+      <section class="table-data-content-container mrgnTp16 spacer-container-bottom">
+        <div class="table-data-wrapper">
+          <div class="table-data-maincontainer">
+            <div class="table-container table-container-search"> 
+                  <!-- content-grid mdl-grid starts here -->
+            <div class="content-grid mdl-grid">
+              <!-- col starts here -->
+                <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0;">
+                                  <span class="form-label">Account Number:</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet" style="margin:0;">
+                                  <span id="CenPH__lb_RCDDTL1__lb_1REF_lb__new" class="DdsCharField_OutputOnly" ></span>
+                                  &nbsp;&nbsp;<span id="CenPH__lb_RCDDTL1__lb_1CENB_new" class="DdsCharField_OutputOnly" ></span>
+                                  
+                              </div>
+                </div>
+                
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0;">
+                                  <span class="form-label">Date:</span>
+                              </div>
+                              <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet" style="margin:0; position: relative;">
+                                        <span id="input_date" style="display:none;">
+                                        <input type="text" readonly="true" class="mdl-textfield__input" data-tb-index="1" id="requestdate" >
+                                        <i id="reqesdate" class="material-icons calender-icon page-icons editable-data" style="position: absolute; right: -13px; top: 4px;"></i>
+                                        <span id="reqdate" class="DdsCharField_OutputOnly" style="display:none;"></span>
+                                        </span>
+                                    <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DHENB_new" style="display:none;"></span>
+                                   
+                              </div>
+                              <!-- <span id="CenPH_DdsConstant4_new" class="DdsCharField_OutputOnly" style="margin-left:20px;" ></span> -->
+
+                </div>
+              </div>
+              <!-- col ends here -->
+            </div>
+            <!-- content-grid mdl-grid ends here -->
+
+            </div>
+        
+        <div class="button-container">
+        <div class="content-grid mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Previous</span>
+                </div>
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="Enter">next</span> </div>
+        </div>
+        </div>
+          </div>
+        
+        
+        </div>
+      
+      
+      </section>
+      
+     
+      
+    </main>
+    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+      <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+      <div class="button-container">
+        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+      </div>
+    </div>
+    <div id="modal1" class="simplePopup"></div>
+    <!-- Modified HTML code ends here -->
+    <style type="text/css" media="screen">
+      .ui-datepicker-today 
+      {
+        background: #ff0000
+      }
+    </style>
+    <script type="text/javascript">
+      var copyToAndFrom = {
+        "displayOnlyFields": {
+          "CenPH_DdsConstant6":"date",
+          "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+          "CenPH__lb_RCDDTL1__lb_1REF_lb_":"CenPH__lb_RCDDTL1__lb_1REF_lb__new",
+          "CenPH__lb_RCDDTL1__lb_1CENB":"CenPH__lb_RCDDTL1__lb_1CENB_new",
+          "CenPH__lb_RCDDTL1__lb_DHENB":"CenPH__lb_RCDDTL1__lb_DHENB_new",
+        },
+        "inputFields": {
+        }
+      }
+      $(document).ready(function () {
+        copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+        if($("#CenPH__lb_RCDDTL1__lb_DHENB").is('input')){
+          $("#input_date").show();
+          /* Date stuff goes here.*/
+          $("#reqdate").html($("#CenPH__lb_RCDDTL1__lb_DHENB").html());
+          $("#requestdate").val($("#CenPH__lb_RCDDTL1__lb_DHENB").val());
+          $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+          
+          $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
+          $("#requestdate").on('change', function () {
+            var date = $("#requestdate").val().split("/");
+            $("#CenPH__lb_RCDDTL1__lb_DHENB").val(date[0] + date[1] + date[2].substr(2, 3));
+          });
+        }else{
+          $("#CenPH__lb_RCDDTL1__lb_DHENB_new").show();
+        }
+        if($("#__Page_PopUp .simplePopupClose").length > 0) {
+          $(".simplePopupBackground1").show();
+        } else {
+          $(".simplePopupBackground1").hide();
+        }
+
+        if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+          /*Pop up confirm box*/
+          $(".OverlayPopupBackground").show();
+          $(".confirmation-outer-conatiner").show();
+
+          $("#yes").click(function (event) {
+            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+            //_16(event,this,1,'Enter');
+            _00('Enter', event);
+          });
+          $("#no").click(function (event) {
+            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+            //_16(event,this,1,'Enter');
+            _00('Enter', event);
+            
+          });
+
+        }
+
+
+        $("body").on("click", ".simplePopupClose", function() {
+          $(".simplePopupBackground1").hide();
+        });
+
+      });
+    </script>
+        <div id="Div1" style="display:none;">
             
       <%--  CR: PMT Adjust Refunds    Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
