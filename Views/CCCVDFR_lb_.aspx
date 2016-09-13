@@ -359,7 +359,12 @@
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
 <style type="text/css" media="screen">
-
+@media (min-width: 768px) and (max-width: 1023px) {
+	.button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+		padding: 6px 10px;
+		margin: 0 2px;
+	}
+}
 </style>
 <script type="text/javascript">
   var copyToAndFrom = {
@@ -434,7 +439,9 @@
       },0);
     });
       $("#ssn-show").on("mouseup dragend touchend", function() {
-       $("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+		setTimeout(function() {
+			$("#CenPH__lb_SFLCTL__lb_2B2NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+			},0);
      });
   });
 </script>

@@ -96,14 +96,14 @@
                         </div>
                         <div class="button-container">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--7-col mdl-cell--10-col-desktop">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--10-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F3">Previous</span>
                         
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchExtraPhoneNumbers" event-data="F8">Search Extra Phone Numbers</span>
                          <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="warranty" event-data="F12">Return</span>
 
                         </div>
-                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-desktop pull-right">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" event-data="Enter">Search</span>
                         </div>
                     </div>
@@ -148,10 +148,20 @@
         }
       });
     
+      $("#CenPH__lb_RCDDTL1__lb_DAVNB_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_DBMNB_new").ForceNumericOnly();
+      $("#CenPH__lb_RCDDTL1__lb_DAXNB_new").ForceNumericOnly();
+      
       
       });
 </script>
-            
+          
+  <style type="text/css">
+  .simplePopup{
+    text-align: left;
+
+  }
+  </style>          
       <%--  CU: PMT Customer/No Maint Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
       <%--  RSTDSP(*YES)                                                                                                     --%>
