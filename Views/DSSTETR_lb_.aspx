@@ -1771,9 +1771,17 @@
 						}
 					});
 			
-				$(".simplePopupClose").click(function (event) {
-						var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
-						$("#" + ele).focus();
+				 $(".simplePopupClose").click(function (event) {
+				     
+				     var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
+				     if ($("#" + ele).length > 0) {
+				         $("#" + ele).focus();
+				     }
+				     else {
+				         var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2];
+				         ele = ele.replace('.', '\\.');
+				         $("#" + ele).focus();
+				     }
 					});
 			
 				$("#ctl00\\$FKeyPH\\$DSSTETR_lb_Control_F4").click(function (event) {
