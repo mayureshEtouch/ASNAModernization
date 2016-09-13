@@ -52,16 +52,16 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--10-col search-container">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--1-col" style="width: 72px;">
+                                        <div style="width: 72px;">
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="Location">
+                                        <div id="Location">
                                             <input data-tb-index="1" type="text" id="loc" maxlength="3" onfocus="_09('#CERCD','3,8','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
                                         </div> 
-										<div class="mdl-cell mdl-cell--1-col" style="width: 130px;">
+										<div style="width: 130px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Schedule Date</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
+                                        <div id="filter-by-co">
 											
 											 <span class="form-text" data-upgraded=",MaterialTextfield">
                                         
@@ -71,10 +71,10 @@
 											</span>
 																			
                                         </div>
-										<div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="width: 135px;">
+										<div style="width: 135px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 15px;">Total Incomplete</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col" id="filter-by-co">
+                                        <div id="filter-by-co">
                                            <span id="total" style=" margin: 12px 10px 0; display:block; text-align:right;"></span>
                                         </div>
                                                                   
@@ -742,7 +742,7 @@
                 var date = $("#requestdate").val().split("/");
                 $("#CenPH__lb_SFLCTL_V2AFDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
-            $("#requestdate").css("width", "166px");
+            $("#requestdate").css("width", "130px");
 					
 			
             var selectCusotmer = function (row, value, event) {
