@@ -54,6 +54,12 @@
                                   
                               </div>
                 </div>
+                 <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0;">
+                                  <br /><span class="form-label">Enter Adjustment Date and Press Enter.</span><br /><br />
+                              </div>
+                             
+                </div>
                 
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0;">
