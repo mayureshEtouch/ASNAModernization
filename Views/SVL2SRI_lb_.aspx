@@ -101,9 +101,9 @@
         #__Page_PopUp {
             min-width: 650px !important;
             width: 650px !important;
-            left: 50% !important;
+            left: 54% !important;
             margin-left: -370px !important;
-            top: 15% !important;
+            top: 20% !important;
             height: auto !important;
         }
 
