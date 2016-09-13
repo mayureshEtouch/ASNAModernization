@@ -129,15 +129,7 @@
         #orders tbody > tr:hover {
           cursor: pointer;
         }
-        #orders tbody tr td:nth-child(1), #orders tbody tr td:nth-child(2), #orders tbody tr td:nth-child(5)  {
-			text-align: right;
-		}
 
-        @media (min-width: 768px) and (max-width: 1023px) {
-        .summary-label {
-          font-size: 11px;
-        }
-        }
         </style>
             <script type="text/javascript">
             var copyToAndFrom = {
