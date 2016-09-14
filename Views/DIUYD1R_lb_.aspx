@@ -470,7 +470,7 @@
          <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop">
            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Previous</span>
-           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="rsaNotes">RSA Notes</span>
+           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="display: none;" id="rsaNotes">RSA Notes</span>
          </div>
          <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right">
            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Next</span>
@@ -630,6 +630,10 @@
        $("#rsaNotes").click(function (event) {
          _00('F10', event);
        });
+
+       if($("#CenPH_DdsConstant19").length > 0){
+          $("#rsaNotes").show();
+       }
 
      });
    </script>
