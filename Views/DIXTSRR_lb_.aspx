@@ -67,7 +67,7 @@
                                             <span class="summary-table-title pull-right" style="margin-left: -3px;"></span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
-                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2G1N_lb_new" class="mdl-textfield__input" maxlength="14" data-tb-index="1">
+                                            <input type="text" id="CenPH__lb_SFLCTL__lb_2G1N_lb_new" class="mdl-textfield__input" maxlength="9" data-tb-index="1">
                                         </div>                               
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                           <tr>
                             <th>Category</th>
                             <th>Model Number</th>
-                            <th>Model Description</th>
+                            <!-- <th>Model Description</th> -->
                             <th>Serial Number</th>
                             <th>Location</th>
                             <th>Invoice Number</th>
@@ -112,10 +112,10 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
                         </div>
                                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
-                            <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> -->
+                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
     </section>
         </main>
  <div id="modal1" class="simplePopup"></div>
-        <div id="Div1" style="display:none;">
+        <div id="Div1">
             
       <%--  CU: SEL All Sls Product   Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -805,7 +805,7 @@
                 $("div.icon-container").removeClass("icon-disable");
               });
 
-              var dataMergeIndices = [[0], [1], [7], [2], [3], [4], [5], [6], [8]];
+              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7, "&nbsp;", 8]];
                 generateTableAndApplyInfiniteScroll("model", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
                 $("#CenPH__lb_SFLCTL__lb_2G1N_lb_new").ForceNumericOnly();
@@ -819,6 +819,10 @@
                 });
 
                 $("#search").click(function (event) {
+                   _00('Enter', event);
+                });
+
+                $("#next").click(function (event) {
                    _00('Enter', event);
                 });
 
