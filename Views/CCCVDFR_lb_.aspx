@@ -365,6 +365,9 @@
 		margin: 0 2px;
 	}
 }
+#data_table tr td:nth-child(6), #data_table tr td:nth-child(7){
+        text-align: right;
+      }
 </style>
 <script type="text/javascript">
   var copyToAndFrom = {
