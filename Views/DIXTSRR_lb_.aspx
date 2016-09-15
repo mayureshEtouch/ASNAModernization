@@ -125,7 +125,7 @@
     </section>
         </main>
  <div id="modal1" class="simplePopup"></div>
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: SEL All Sls Product   Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
