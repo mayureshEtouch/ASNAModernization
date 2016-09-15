@@ -387,14 +387,14 @@
                             <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1C3NB_new" style="display: none;" ></span></td>
                             <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1C4NB_new" style="display: none;"></span></td>
                             <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DVNTX_new"></span></td>
-                            <td><span class="form-text"><span class="form-label">Class</span><span class="mrgnLft10" id="CenPH__lb_RCDDTL1__lb_1CCCD_new"></span></span></td>
+                            <td><span class="form-text"><span class="form-label row-header">Class</span><span class="mrgnLft10" id="CenPH__lb_RCDDTL1__lb_1CCCD_new"></span></span></td>
                           </tr>
                           <tr>
                             <td align="right"><span class="form-text"></span></td>
                             <td><span class="form-text"></span></td>
                             <td><span class="form-text"></span></td>
                             <td><span class="form-text" id="CenPH__lb_RCDDTL1__lb_DVOTX_new"></span></td>
-                            <td><span class="form-text"><span class="form-label">Profit Center</span><span class="mrgnLft10" id="CenPH__lb_RCDDTL1__lb_1BDCD_new"></span></span></td>
+                            <td><span class="form-text"><span class="form-label row-header">Profit Center</span><span class="mrgnLft10" id="CenPH__lb_RCDDTL1__lb_1BDCD_new"></span></span></td>
                           </tr>
                         </thead>
                       </table>
@@ -430,6 +430,10 @@
 }
 .normal-table td:first-child{
   padding-left: 0;
+}
+.row-header {
+	display: inline-block;
+	width: 82px;
 }
 </style>
 <!-- Modified HTML code ends here -->
