@@ -29,7 +29,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Select Product by Model / Serial</span>
+                        <span class="heading-h1">Select Product by Model/Serial</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -804,9 +804,14 @@
                 $(this).addClass("selected");
                 $("div.icon-container").removeClass("icon-disable");
               });
-
+			  
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7, "&nbsp;", 8]];
                 generateTableAndApplyInfiniteScroll("model", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+				
+				  $('#model tr td').each(function (i, col )
+				 {
+				 $(col).text($(col).text().trim());
+				 });
 
                 $("#CenPH__lb_SFLCTL__lb_2G1N_lb_new").ForceNumericOnly();
 
