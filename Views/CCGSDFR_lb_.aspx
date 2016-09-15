@@ -589,6 +589,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+      <style>
+        #insurance tr td:nth-child(5){
+          text-align: right;
+        }
+      </style>
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {

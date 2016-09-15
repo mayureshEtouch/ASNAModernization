@@ -22,7 +22,100 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+            <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Display Insurance Transactions</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCDBDFR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i>&nbsp; <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+            
+						<section class="order-summary mrgnTp16">
+			<div class="order-summary-wrapper" style="margin-bottom: 0;">
+				<div class="content-grid mdl-grid">
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+						<span class="summary-title">Account Nnumber</span>
+						<span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2REF_lb__new"></span>
+					</div>
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+						<span class="summary-title">Account Extension Number</span>
+						<span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2CENB_new"></span>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+            <section class="add-item">
+            <div class="add-item-wrapper">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col pull-right">
+                        <div class="icon-container">
+                            <span class="icon-txt delete">Delete</span><i class="material-icons md-15 md-light delete-icon delete"></i>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+             <section class="table-data-content-container spacer-container-bottom" style="margin-top:5px;">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div style="overflow: auto;" class="table-container">
+                            <div>							  
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblInsuranceDetails" data-upgraded=",MaterialDataTable">
+								 <thead>
+													<tr>
+														<th>Insurance Type</th>
+														<th>On File</th>
+														<th>Settlement Type</th>
+														<th>Settlement Date</th>
+														<th>Settlement Value</th>
+														<th>Changed By</th>
+														<th>Date</th>
+														<th>Time</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+													
+																							
+												</tbody>
+										</table>
+										<%--<div class="tablet-width-rt">
+										<a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+										</div>--%>
+								</div>
+                                
+								<div class="button-container tablet-width-rt">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="allTransactions">All Transactions</span>
+												</div>
+												<%--<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+												</div>--%>
+										</div>
+								</div>
+						</div>
+				</div>
+				</div>
+		</section>
+
+        </main>
+ <div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none;">
             
       <%--  CR: DSP Ins Trans         Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -499,4 +592,59 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+         <script type="text/javascript">
+        var copyToAndFrom = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant13": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_2REF_lb_": "CenPH__lb_SFLCTL__lb_2REF_lb__new",
+                "CenPH__lb_SFLCTL__lb_2CENB": "CenPH__lb_SFLCTL__lb_2CENB_new"
+            }
+        }
+
+
+
+        $(document).ready(function () {
+            $('body').css({ "background-color": "white" });
+            copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
+            // display table for selected model number
+            var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
+            generateTableAndApplyInfiniteScroll("tblInsuranceDetails", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            $('#tblInsuranceDetails tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
+
+
+            $("#previous").click(function (event) {
+                _00('F3', event);
+            });
+
+            $("#allTransactions").click(function (event) {
+                _00('F6', event);
+            });
+
+            var selectCusotmer = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+            $(".delete").click(function (event) {
+                if ($(".icon-container").hasClass("icon-disable")) {
+                    alert("Please select the option");
+                } else {
+                    var row = $("#tblInsuranceDetails tbody tr.selected");
+                    selectCusotmer(row, "4", event);
+                }
+            });
+           
+
+
+        });
+    </script>
+        <style>
+            #tblInsuranceDetails tr td:nth-child(5) {
+            text-align: right !important;
+        }
+        </style>
     </asp:Content>
