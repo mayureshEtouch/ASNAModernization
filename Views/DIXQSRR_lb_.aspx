@@ -92,7 +92,7 @@
               <div class="button-container">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F3" id="previous">Previous</span>
-                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span>
+                
                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="lookupByModel" event-data="F6">Lookup By Model</span>  
                   </div>
                   <div class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop pull-right">
@@ -140,7 +140,7 @@
 
              var dataMergeIndices = [[0], [1], [2], [3], [4], [5]];
 
-                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 
                 $("#next").click(function (event) {
                   var row = $("#displayData tbody tr.selected");
