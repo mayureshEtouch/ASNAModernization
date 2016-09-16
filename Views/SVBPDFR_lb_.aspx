@@ -80,7 +80,7 @@
              <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div style="overflow: auto;" class="table-container">
+                        <div style="overflow: auto;" class="table-container" id="divWorkorder">
                             <div>               
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="workorder" data-upgraded=",MaterialDataTable">
                  <thead>
@@ -105,7 +105,9 @@
                     <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
                 </div>
                                 
-                <div class="button-container">
+                
+            </div>
+			<div class="button-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -116,7 +118,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         </div>
     </section>
@@ -1119,7 +1120,7 @@
                 $("div.icon-container").removeClass("icon-disable");
             });
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10]];
-                generateTableAndApplyInfiniteScroll("workorder", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("divWorkorder", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
                 $("#workorder tbody tr:first").css("background-color", "#d8d8d8");
 
                 var selectCusotmer = function (row, value, event) {

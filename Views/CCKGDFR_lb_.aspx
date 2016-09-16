@@ -39,25 +39,7 @@
                     </div>
                 </div>
             </section>
-             <!-- <section class="progress-bar">
-                 <div class="progress-bar-wrapper">
-                    <ul class="progress-bar-main">
-                        <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
-                        <li class="progress-bar-divider-first">
-
-                        <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Edit Sales Order</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Edit Order Details</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Edit Order Warranty</span> </li>
-                        <li class="progress-bar-divider">
-
-                        <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Edit Order Payments</span> </li>                        
-                    </ul>
-                </div> 
-            </section>  -->
+           
             
             <section class="order-summary">
                 <div class="order-summary-wrapper">
@@ -84,7 +66,7 @@
              <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div style="overflow: auto;" class="table-container">
+                        <div style="overflow: auto;" class="table-container" id="divApplicationAudit" >
                             <div>               
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="applicationAudit" data-upgraded=",MaterialDataTable">
                  <thead>
@@ -107,9 +89,10 @@
                           
                         </tbody>
                     </table>
-                </div>
-                                
-                <div class="button-container">
+                </div>     
+                
+            </div>
+			<div class="button-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -121,7 +104,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         </div>
     </section>
@@ -1048,7 +1030,7 @@
                 $("div.icon-container").removeClass("icon-disable");
             });
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [10], [9], [11]];
-                generateTableAndApplyInfiniteScroll("applicationAudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("divApplicationAudit", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"DISABLE_DOUBLE_CLICK");
                 $("#applicationAudit tbody tr:first").css("background-color", "#d8d8d8");
                 $("#applicationAudit tr").css('cursor', 'pointer');
                 var selectCusotmer = function (row, value, event) {
