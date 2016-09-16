@@ -806,12 +806,13 @@
               });
 			  
               var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7, "&nbsp;", 8]];
-                generateTableAndApplyInfiniteScroll("model", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-				
+                generateTableAndApplyInfiniteScroll("model", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices,"","NONE","NONE",trimData);
+				function trimData(){
 				  $('#model tr td').each(function (i, col )
 				 {
 				 $(col).text($(col).text().trim());
 				 });
+        }
 
                 $("#CenPH__lb_SFLCTL__lb_2G1N_lb_new").ForceNumericOnly();
 
