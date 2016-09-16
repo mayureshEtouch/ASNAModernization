@@ -90,7 +90,7 @@
 																		<th>Model Number</th>
 																		<th>Serial Number</th>
 																		<th>Product Category Code</th>
-																		<th width="9%" style="text-align:left;">Item Price $</th>
+																		<th width="9%" style="text-align:left;">Item Price ($)</th>
 																		<th>Model DRV Description</th>
 																		<th>Sold Date</th>
 																		<th>SMA Warranty Ends Date</th>
