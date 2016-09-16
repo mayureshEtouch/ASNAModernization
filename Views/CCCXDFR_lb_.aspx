@@ -154,7 +154,7 @@
         var dataMergeIndices = [[0], [1], [2], [3], [4], [6],[8] ,[10],[12], [14], [16], [18],[20], [22], [24], [26], [28] ];
         generateTableAndApplyInfiniteScroll("insuranceDiv", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK","NONE","NONE",trimData);
         function trimData(){
-          $('table tr td').each(function (i, col ){
+          $('.navigateable tr td').each(function (i, col ){
             $(col).text($(col).text().trim());
           });
         }
