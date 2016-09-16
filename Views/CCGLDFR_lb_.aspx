@@ -79,7 +79,7 @@
              <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div style="overflow: auto;" class="table-container">
+                        <div style="overflow: auto;" class="table-container" id="divPhoneinfo">
                             <div>               
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="phoneinfo" data-upgraded=",MaterialDataTable">
                  <thead>
@@ -104,7 +104,9 @@
                     <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
                 </div>
                                 
-                <div class="button-container">
+                
+            </div>
+			<div class="button-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -115,7 +117,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         </div>
     </section>
@@ -766,7 +767,7 @@
                 $("div.icon-container").removeClass("icon-disable");
             });*/
               var dataMergeIndices = [[0, "&nbsp;",1], [2], [4], [6], [7], [9], ["&nbsp;"], [11], [12, "&nbsp;", 13, "&nbsp;", 14, "&nbsp;", 15], [17]];
-                generateTableAndApplyInfiniteScroll("phoneinfo", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("divPhoneinfo", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
               
               $("#previous").click(function (event) {
                     _00('F3', event);

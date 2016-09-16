@@ -75,7 +75,7 @@
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div style="overflow: auto;" class="table-container">
+                        <div style="overflow: auto;" class="table-container" id="divBuilderOrders">
                             <div>
                                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="builder-orders" data-upgraded=",MaterialDataTable">
                                     <thead>
@@ -98,7 +98,9 @@
                                 </table>
                                 
                             </div>
-                            <div class="button-container">
+                            
+                        </div>
+						<div class="button-container">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -106,7 +108,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -847,7 +848,7 @@
 				$("#CenPH__lb_SFLCTL__lb_CLTA_usd_").text($("#CenPH__lb_SFLCTL__lb_CLTA_usd_").text().trim());
                 $("#time").html("&nbsp;" + $("#time").html());
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
-                generateTableAndApplyInfiniteScroll("builder-orders", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
+                generateTableAndApplyInfiniteScroll("divBuilderOrders", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
 
                 $("#previous").click(function (event) {
                     _00('F12', event);
