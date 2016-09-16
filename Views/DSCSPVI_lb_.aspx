@@ -117,10 +117,10 @@
     <!-- Modified HTML code ends here -->
     <style type="text/css">
     	#__Page_PopUp {
-    	                min-width: 440px !important;
-    	                width: 440px !important;
+    	                min-width: 600px !important;
+    	                width: 600px !important;
     	                left: 50% !important;
-    	        margin-left: -220px !important; 
+    	        margin-left: -300px !important; 
     	        top: 17% !important;
     	            }
     	            #__Page_PopUp tbody > tr:first-child {
@@ -150,7 +150,6 @@
     	            #div_driver, #div_license {
     	                display: none;
     	            }
-.modal-dialog-container{width: 650px;}
 @media screen and (max-width: 1024px) {
 .tablet-mrgleft {
 margin-left: -4px !important;
