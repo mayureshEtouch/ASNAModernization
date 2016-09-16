@@ -45,7 +45,7 @@
                 <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Customer Name:</span> </div>
-                    <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="model">
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--3-col-tablet" id="model">
                       <input type="text"  id="CenPH__lb_SFLCTL__lb_2A2TX_new" maxlength="25" class="mdl-textfield__input" data-tb-index="1">
                     </div>
 

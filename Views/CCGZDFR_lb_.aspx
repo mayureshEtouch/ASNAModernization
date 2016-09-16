@@ -34,8 +34,8 @@
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCGZDFR</span>
-                    <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                    <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    <i class="material-icons md-15 md-light date-icon"></i>&nbsp;<span class="date-time-txt" name="date" id="date">13-04-2016</span>
+                    <i class="material-icons md-15 md-light time-icon"></i>&nbsp;&nbsp;<span class="date-time-txt" name="time" id="time">19:00:20</span>
                 </div>
             </div>
         </section>
@@ -127,7 +127,7 @@
         <section class="table-data-content-container spacer-container-bottom">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
-                    <div style="overflow: auto;" class="table-container">
+                    <div style="overflow: auto;" class="table-container" id="divCstAcc" >
                         <div>
                             <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblCstAcc" data-upgraded=",MaterialDataTable">
                                 <thead>
@@ -158,7 +158,9 @@
                             <a class="next-icon" style="float: right; margin-right: 15px;" id="next-page" href="javascript:void(0);"></a>
                         </div>
 
-                        <div class="button-container">
+                        
+                    </div>
+					<div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -169,7 +171,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -2230,7 +2231,7 @@
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
             // display table for selected model number
             var dataMergeIndices = [[0], [1], [2, "<br>", 15], [3, "<br>", 16], [4, "<br>", 17], [5], [6], [7], [8, "<br>", 20], [9], [10], [11], [12], [13], [14], [19], [22], [24]];
-            generateTableAndApplyInfiniteScroll("tblCstAcc", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            generateTableAndApplyInfiniteScroll("divCstAcc", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
             $("#account, #txtex").ForceNumericOnly();
             $('#tblCstAcc tr td').each(function (i, col) {
 
