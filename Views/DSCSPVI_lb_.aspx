@@ -117,10 +117,10 @@
     <!-- Modified HTML code ends here -->
     <style type="text/css">
     	#__Page_PopUp {
-    	                min-width: 400px !important;
+    	                min-width: 440px !important;
     	                width: 440px !important;
-    	                left: 25% !important;
-    	        /* margin-left: -400px !important; */
+    	                left: 50% !important;
+    	        margin-left: -220px !important; 
     	        top: 17% !important;
     	            }
     	            #__Page_PopUp tbody > tr:first-child {
