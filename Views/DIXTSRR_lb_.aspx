@@ -64,7 +64,7 @@
                                             <input type="text" id="CenPH__lb_SFLCTL__lb_2A8TX_new" class="mdl-textfield__input" maxlength="20" data-tb-index="1">
                                         </div>  
                                         <div class="mdl-cell mdl-cell--2-col">
-                                            <span class="summary-table-title pull-right" style="margin-left: -3px;"></span>
+                                            <span class="summary-table-title pull-right" style="margin-left: -3px;">Invoice Number</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
                                             <input type="text" id="CenPH__lb_SFLCTL__lb_2G1N_lb_new" class="mdl-textfield__input" maxlength="9" data-tb-index="1">
