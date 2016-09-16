@@ -92,7 +92,9 @@
 
                         </div>
 
-                        <div class="button-container tablet-width-rt">
+                       
+                    </div>
+					 <div class="button-container tablet-width-rt">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -102,7 +104,6 @@
                                 </div>--%>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
