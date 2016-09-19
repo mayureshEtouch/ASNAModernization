@@ -61,8 +61,8 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Order #</span> <span name="order" id="order-number" class="summary-txt"></span> </div>
-                        <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Total All Taxes</span> <span name="username" id="total-all-taxes" class="summary-txt">268.12</span> </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="summary-title">Order #</span> <span name="order" id="order-number" class="summary-txt"></span> </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="summary-title">Total All Taxes</span> <span name="username" id="total-all-taxes" class="summary-txt">268.12</span> </div>
 
                     </div>
                 </div>
@@ -70,59 +70,50 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-                            <div class="header-background"></div>
-                            <div class="fixed-table-container-inner">
-                                <table cellspacing="0" cellpadding="0" border="0" id="display-invoice-taxes-charged" class="navigateable">
+						 <div style="overflow: auto;" class="table-container">
+								<div>         
+                                <table cellspacing="0" cellpadding="0" border="0" id="display-invoice-taxes-charged" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded">
                                     <thead>
                                         <tr>
                                             <th style="width:7%">
-                                                <div class="th-inner">Ln <br />
-                                                </div>
+                                                Ln <br />
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Date <br />
-                                                </div>
+                                                Date <br />
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Standard<br /> Tax Rate</div>
+                                                Standard<br /> Tax Rate
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Product<br /> Adj Rate</div>
+                                                Product<br /> Adj Rate
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Warranty<br /> Adj Rate</div>
+                                                Warranty<br /> Adj Rate
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Install<br /> Adj Rate</div>
+                                                Install<br /> Adj Rate
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Other<br /> Adj Rate</div>
+                                                Other<br /> Adj Rate
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Taxing<br /> &nbsp;
+                                                Taxing<br /> &nbsp;
                                                 Zip Code
-                                                </div>
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Product<br /> Taxes
-                                                </div>
+                                                Product<br /> Taxes
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Warranty<br /> Taxes
-                                                </div>
+                                                Warranty<br /> Taxes
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Install<br /> Taxes
-                                                </div>
+                                               Install<br /> Taxes
                                             </th>
                                             <th style="width: 7%">
-                                                <div class="th-inner">Other<br /> Taxes
-                                                </div>
+                                               Other<br /> Taxes
                                             </th>
                                             <th style="width: 9%">
-                                                <div class="th-inner">Total Amount<br /> Taxes
-                                                </div>
+                                               Total Amount<br /> Taxes
                                             </th>
                                         </tr>
                                     </thead>
@@ -130,12 +121,12 @@
                                         
                                     </tbody>
                                 </table>
-                            </div>
+							</div>	
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
-                                <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
                             </div>
                         </div>
                     </div>
