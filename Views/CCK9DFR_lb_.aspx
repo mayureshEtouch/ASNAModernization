@@ -79,7 +79,7 @@
                                             <tr>
                                                 <th>Reference Name</th>
                                                 <th>Reference Type Status</th>
-                                                <th width="30%">Address</th>
+                                                <th width="25%">Address</th>
                                                 <th>Reference Phone</th>
                                                 <th width="15%">Drivers License</th>
                                                 <th>Text</th>
@@ -605,6 +605,7 @@
                 left: 10% !important;
                 width: 80% !important;
                 height: auto !important;
+				top: 10% !important;
             }
 
             #__Page_PopUp > tr:first-child {

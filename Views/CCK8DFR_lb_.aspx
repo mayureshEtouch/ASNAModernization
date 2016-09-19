@@ -108,10 +108,10 @@
         <style type="text/css">
 
          #__Page_PopUp {
-          min-width: 450px !important;
-          width: 600px !important;
-          left: 40% !important;
-          margin-left: -300px;
+          min-width: 900px !important;
+          width: 900px !important;
+          left: 50% !important;
+          margin-left: -450px;
           top: 15% !important;
         }
 
@@ -152,6 +152,21 @@
         #credit_references tr td:nth-child(6), #credit_references tr td:nth-child(7){
             text-align: right;
           }
+		  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+		#__Page_PopUp {
+				min-width: 700px !important;
+				width: 700px !important;
+				left: 50% !important;
+				margin-left: -350px;
+			}
+			.table-container {
+				width: 680px !important;
+			}
+	}
+		
         </style>
         <script type="text/javascript">
 

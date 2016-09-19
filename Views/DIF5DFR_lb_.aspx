@@ -91,7 +91,9 @@
 										</div>--%>
                         </div>
 
-                        <div class="button-container tablet-width-rt">
+                        
+                    </div>
+					<div class="button-container tablet-width-rt">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
@@ -101,7 +103,6 @@
 												</div>--%>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -624,11 +625,20 @@
 				margin-left: -481px;
 			}
 		}
-		@media screen and (max-width: 1023px) {
-			.table-container {
-				width: 700px;
+		 @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+		#__Page_PopUp {
+				min-width: 700px !important;
+				width: 700px !important;
+				left: 50% !important;
+				margin-left: -350px;
 			}
-		}
+			.table-container {
+				width: 680px !important;
+			}
+	}
     </style>
     <script type="text/javascript">
 

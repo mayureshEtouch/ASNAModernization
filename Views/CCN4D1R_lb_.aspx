@@ -64,10 +64,10 @@
                       <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DD1NB_new"></span></div>
                     </div>
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Office Phone:</span> </div>
-                      <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet tablet-phone-width" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DD2NB_new"></span></div>
-                      <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet tablet-ext-width" style="margin: 0;"> <span class="form-label">Extension:</span> </div>
-                      <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DAWNB_new"></span></div>
+                      <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Office Phone:</span> </div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet tablet-phone-width" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DD2NB_new"></span></div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet tablet-ext-width" style="margin: 0;"> <span class="form-label">Extension:</span> </div>
+                      <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DAWNB_new"></span></div>
                     </div>
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">D.O.B:</span> </div>
@@ -465,7 +465,9 @@
               },0);
             });
              $("#ssn-show").on("mouseup dragend touchend", function() {
-              $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+				setTimeout(function() {
+					$("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+				},0);
             });
              /* For second SSN */
              var html2 = $("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html();
@@ -486,6 +488,16 @@
             });
         });
       </script>
+	  <style>
+	  @media screen and (max-width: 1050px) and (min-width: 1023px) {
+    .tablet-ext-width {
+			width: 72px !important;
+			}
+			.tablet-phone-width {
+			width: 90px !important;
+			}
+}
+	  </style>
       <div id="Div1" style="display:none;">
 
         <%--  CU: DS1 Personal Detail+  Display record(1 screen)                                                   --%>
