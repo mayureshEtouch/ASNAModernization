@@ -376,7 +376,7 @@
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all" event-data="F11">All</span>
                 </div>
                 <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> 
-                  <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> --> 
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter">next</span>
                 </div>
               </div>
             </div>

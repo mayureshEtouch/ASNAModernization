@@ -117,7 +117,7 @@
                             </div>
                             <!-- 4 col ends here -->
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Deposit:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="deposit"></span></div>
@@ -125,7 +125,7 @@
                             </div>
                             <!-- 4 col ends here -->
                             <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Entry Date:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="entryDate"></span></div>
@@ -469,18 +469,18 @@
 
 
 
-                                    <div class="mdl-cell mdl-cell--2-col" style="margin: 0;"><span class="form-label">Scheduling inside repair on </span> </div>
-                                    <div class="mdl-cell mdl-cell--1-col" style="margin: 0 0 0 -10px;">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet" style="margin: 0;"><span class="form-label">Scheduling inside repair on </span> </div>
+                                    <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet" style="margin: 0 0 0 -10px; width: 120px; position: relative;">
                                         <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="CenPH__lb_SFLCTL_V1DADT_new" maxlength="8" style="width: 90px;" data-tb-index="1" onfocus="_09('V1DADT','14,34','#SFLCTL');" readonly>
                                         <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                         <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--1-col" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin: 0;">
                                         <span class="form-label">zone</span>
                                         <input type="text" class="editable-data mdl-textfield__input-small mrgnLft10" size="3" id="CenPH__lb_SFLCTL__lb_CJNCD_new" maxlength="8" style="width: 50px;" data-tb-index="1" onfocus="_09('#CJNCD','14,48','#SFLCTL');">
                                     </div>
 
-                                    <div class="mdl-cell mdl-cell--2-col" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet" style="margin: 0;">
                                         <span class="form-label">at servicing location </span>&nbsp;&nbsp;
 						                    <span style="margin: 0 5px;" class="ro-data mrgnLft10" id="locAt"></span>
                                     </div>
@@ -1846,9 +1846,8 @@
         }
 
         .calender-icon {
-            /*position: absolute;
-           right: 0;
-           top: 13px;*/
+           position: absolute;
+           right: 16px;
         }
 
         .ui-datepicker-today {

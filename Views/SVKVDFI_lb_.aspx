@@ -49,8 +49,8 @@
                       <span style="margin: 12px 10px 0 0; display: block;" id="CenPH__lb_SFLCTL__lb_2ZSNB_new"></span>
                     </div>
                     <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet"> <span class="summary-table-title pull-right" style="margin-left:15px;">Audit Update Date</span> </div>
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet" id="">
-                    <input data-tb-index="1" class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell mdl-cell--2-col-tablet" id="" style="width: 135px;">
+                    <input data-tb-index="1" class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" style="width: 115px;" >
                       <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                       <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                     </div>
@@ -122,9 +122,10 @@
         }
         .calender-icon {
           top: 14px !important;
+		  position: absolute;
+		  right: 10px !important;
         }
          </style>
-        }
         <script type="text/javascript">
            var copyToAndFrom = {
              "displayOnlyFields": {

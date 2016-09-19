@@ -56,12 +56,15 @@
             	</div>
             </section>
             
-            <section class="add-item">
-               
-            </section>
-				<section class="form-data">
-                <div class="form-data-wrapper" style="padding-bottom:0;">
-				<div class="content-grid mdl-grid">
+			
+			
+  <section class="table-data-content-container mrgnTp16">
+   <div class="table-data-wrapper mrgnTp16 spacer-container-bottom" >
+      <div class="table-data-maincontainer">
+        <div class="table-container table-container-search"> 
+       
+          <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid">
 				  <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                       <div class="content-grid mdl-grid">
                         	<div class="mdl-cell mdl-cell--2-col" style="margin:0">
@@ -83,22 +86,29 @@
 
                    	</div>
                   </div>
-                  <div class="mdl-cell mdl-cell--12-col" style="padding:0"></div>
+                  
 				</div>
-			
-				  <div class="button-container">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+          <!-- content-grid mdl-grid ends here --> 
+
+        </div>
+    
+     
+    <div class="button-container">
+            <div class="content-grid mdl-grid">
+             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Exit</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
                                 </div>
-                            </div>
-                  </div>
-						
-		  </div>
-            </section>
+     
+              
+            </div>
+          </div>
+      </div>
+   
+    </div>
+  </section>
 		
         </main>
  <div id="modal1" class="simplePopup"></div>
