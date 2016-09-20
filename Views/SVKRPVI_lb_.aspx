@@ -892,8 +892,10 @@
 
 
                 if ($(".simplePopupClose").length > 0) {
+                   
                     $(".simplePopupBackground1").show();
                 } else {
+                   
                     $(".simplePopupBackground1").hide();
                 }
                 $("body").on("click", ".simplePopupClose", function () {
