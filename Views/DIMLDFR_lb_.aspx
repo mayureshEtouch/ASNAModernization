@@ -133,7 +133,7 @@
                 <th>Address</th>
                 <th>Phone Number</th>
                 <th>Zip Code</th>
-                <th>Build</th>
+                <th>Built</th>
               </tr>
             </thead>
             <tbody>
