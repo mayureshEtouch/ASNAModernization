@@ -53,7 +53,7 @@
                 </div>
                 <!-- 4 col ends here --> 
                 <!-- 4 col starts here -->
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Work Order Number:</span> </div>
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2ODNB_new"></span> </div>
@@ -84,7 +84,7 @@
               </div>
               <!-- 4 col ends here --> 
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Location Code:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2AACD_new"></span> </div>
@@ -113,7 +113,7 @@
               </div>
               <!-- 4 col ends here --> 
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Expected Payment:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_2F4CD_new"></span> </div>
@@ -523,7 +523,7 @@
               </div>
               <!-- 4 col ends here --> 
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Time Interval:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_COETX_new"></span> </div>

@@ -44,19 +44,19 @@
                         <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
                         <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
                             <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet pull-right" style="width: 110px;"> <span class="summary-table-title" style="margin-left:15px;">Account</span> </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="">
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet pull-right" style="width: 75px;"> <span class="summary-table-title" style="margin-left:15px;">Account</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="" style="width: 90px;">
                                     <input type="text" data-tb-index="1"  id="CenPH__lb_SFLCTL__lb_2REF_lb_new" class="mdl-textfield__input" maxlength="9">
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"> <span class="summary-table-title pull-right" style="margin-left:15px;">Ex</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet" id="">
+                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet" id="" style="width: 45px;">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2CENB_new" class="mdl-textfield__input" style="width: 27px;" maxlength="2" data-tb-index="2">
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="" style="width: 135px;">
                                   <span style="margin: 12px 10px 0 0; display: block;" id="CenPH__lb_SFLCTL__lb_CA2TX_new"></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet"> <span class="summary-table-title pull-right" style="margin-right: 10px;">Home Phone</span> </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--2-col-tablet" style="width: 96px;"> <span class="summary-table-title pull-right" style="margin-right: 10px;">Home Phone</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="" style="width: 100px;">
                                   <span style="margin: 12px 10px 0 0; display: block;" id="CenPH__lb_SFLCTL__lb_CBXNB_new"></span>
                                 </div>
                                 
@@ -119,7 +119,9 @@
                             </tbody>
                         </table>
                         <!-- <a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a> --> </div>
-                    <div class="button-container">
+                    
+                </div>
+				<div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
@@ -130,7 +132,6 @@
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
