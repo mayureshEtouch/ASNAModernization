@@ -244,7 +244,7 @@
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
               if ($("#CenPH__lb_SFLRCD__End").length > 0) {
                 $("#sp-previous-page,#sp-next-page").remove();
-                if($("#__Page_PopUp #CenPH__lb_SFLRCD_0").length === 0) {
+                if($("#CenPH__lb_SFLRCD_0").length === 0) {
                   $("#special-instructions").after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
                 }
 
