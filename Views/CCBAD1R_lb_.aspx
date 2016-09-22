@@ -36,7 +36,7 @@
     </div>
   </section>
   
-  <section class="table-data-content-container mrgnTp16">
+  <section class="table-data-content-container mrgnTp16 spacer-container-bottom">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
         <div class="table-container table-container-search"> 
@@ -310,29 +310,57 @@
           
         
 		  
-		  </div>
-		  </div>
-		  </div>
-		 
-  
-  
-  </section>
-  
-  <section class="order-summary mrgnTp16 spacer-container-bottom">
-		 
-		<div class="order-summary-wrapper">
-			<div class="content-grid mdl-grid" style="padding:0"> 
-			  <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; "><span class="summary-table-title">Last Updated</span> </div>
-			 </div>
-			<div class="content-grid mdl-grid">
-				<div class="mdl-cell mdl-cell--3-col"> <span class="summary-title">Date</span> <span name="order" class="summary-txt" id="ctl00$CenPH$_lb_RCDDTL1_V1AGDT_new"></span> </div>
-				<div class="mdl-cell mdl-cell--3-col"> <span class="summary-title">Time</span> <span name="username" class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1ABTM_new"></span> </div>
-				<div class="mdl-cell mdl-cell--3-col"> <span class="summary-title">User</span> <span name="order" id="CenPH__lb_RCDDTL1__lb_1AAVN_new" class="summary-txt"></span> </div>
-				<div class="mdl-cell mdl-cell--3-col"> <span class="summary-title">Workstation ID</span> <span name="username" class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1ABVN_new"></span> </div>
-			</div>
-		</div>
-		
-		<div class="button-container">
+		  <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 5px 15px 10px; padding: 0;"> 
+       </div>
+       <div class="content-grid mdl-grid" style="padding:0"> 
+      <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0;margin: 0 15px;"><span class="summary-table-title">Last Updated</span> </div>
+      </div>
+       <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Date:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ctl00$CenPH$_lb_RCDDTL1_V1AGDT_new"></span> </div>
+              </div>
+            </div>
+            <!-- col ends here --> 
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Time:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABTM_new"></span> </div>
+              </div>
+            </div>
+            <!-- col ends here --> 
+			  <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">User:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1AAVN_new"></span> </div>
+              </div>
+            </div>
+            <!-- col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here -->
+          
+       <!-- content-grid mdl-grid starts here -->
+          <div class="content-grid mdl-grid" style="padding:0"> 
+          
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span class="form-label">Workstation ID:</span> </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABVN_new"></span> </div>
+              </div>
+            </div>
+            <!-- col ends here --> 
+          </div>
+          <!-- content-grid mdl-grid ends here -->
+          
+        </div>
+    
+     <div class="button-container">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="updateAccount" event-data="F9">Update Account</span>
@@ -340,7 +368,13 @@
               
             </div>
           </div>
-	</section>
+      </div>
+    </div>
+  
+  
+  
+  
+  </section>
   
       
 </main>
