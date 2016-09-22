@@ -276,7 +276,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Producer #:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Producer:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CBYTX_new"></span> </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Insurance Certificate#:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Insurance Certificate:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CDKCO_new"></span> </div>
                 </div>
               </div>
@@ -343,7 +343,7 @@
         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F6" id="">transactions</span>
         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F7" id="">comments</span>
         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F8" id="">cancel</span>
-        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F9" id="">adjust refunds</span>
+        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F9" id="">Adjust Refund</span>
         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F10" id="">claims</span>
       </div>
       <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col pull-right">

@@ -44,7 +44,7 @@
       <div class="order-summary-wrapper" style="margin-bottom: 0;">
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-            <span class="summary-title">Account Nnumber</span>
+            <span class="summary-title">Account Number</span>
             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2REF_lb_new"></span>
           </div>
           <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">

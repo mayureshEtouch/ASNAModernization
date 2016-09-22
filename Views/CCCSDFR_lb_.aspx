@@ -110,7 +110,7 @@
       $(document).ready(function () {
         copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
         $("#CenPH__lb_SFLCTL__lb_2ACCT_new").val($("#CenPH__lb_SFLCTL__lb_2ACCT_new").val().trim());
-        $("#CenPH__lb_SFLCTL__lb_2ACCT_new").ForceAmountOnly();
+        $("#CenPH__lb_SFLCTL__lb_2ACCT_new").ForceNumericOnly();
         var dataMergeIndices = [[0], [1], [2], [3]];
         generateTableAndApplyInfiniteScroll("comments", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
       });
