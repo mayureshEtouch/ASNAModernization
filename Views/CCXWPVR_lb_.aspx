@@ -185,10 +185,10 @@
     <!-- Modified HTML code ends here -->
     <style>
       #__Page_PopUp {
-        min-width: 880px !important;
+        min-width: 680px !important;
         width: 680px !important;
-        left: 18% !important;
-        /* margin-left: -400px !important; */
+        left: 50% !important;
+        margin-left: -340px !important;
         top: 17% !important;
       }
       #__Page_PopUp tbody > tr:first-child {

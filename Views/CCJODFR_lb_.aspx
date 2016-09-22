@@ -130,7 +130,7 @@
       left: 50% !important;
       margin-left: -225px;
         }
-    #__Page_PopUp > tr:first-child {
+    #__Page_PopUp > tbody > tr:first-child {
       display: none;
     }
 

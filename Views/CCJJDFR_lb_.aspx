@@ -110,8 +110,8 @@
   </section>
 
 </main>
-<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-<div id="modal" class="simplePopup"></div>
+ <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
 </div>
 <!-- Modified HTML code ends here -->
 <style>
@@ -122,9 +122,9 @@
     margin-left: -400px !important;
     top: 17% !important;
   }
-  /* #__Page_PopUp tbody > tr:first-child {
+  #__Page_PopUp tbody > tr:first-child {
     display: none;
-  } */
+  }
   #__Page_PopUp .DdsInlinePopUpTitle {
     height: 0;
   }
@@ -205,6 +205,18 @@
      $("select").each(function(){
        $(this).val('');
      })
+	  $('.close-icon').click(function (event) {
+              	_00('F3',event);
+            });
+            if($(".simplePopupClose").length > 0) {
+                 $(".simplePopupBackground1").show();
+           } else {
+               $(".simplePopupBackground1").hide();
+           }
+           $("body").on("click", ".simplePopupClose", function() {
+               $(".simplePopupBackground1").hide();
+           });
+		   
 
 
       

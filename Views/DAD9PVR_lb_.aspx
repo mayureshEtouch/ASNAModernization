@@ -67,7 +67,7 @@
         <p>Do you want to continue to <span class="green-highlight-text">AcceptanceNow</span> ?</p>
                 <p>Ok To Continue 
                   <span data-upgraded=",MaterialTextfield" class="form-text">
-                                    <select tabindex="1" style="width: 105px; padding: 0px 2px; margin-left: 5px;" name="CenPH__lb_RCDDTL1__lb_PIDYN_new" id="CenPH__lb_RCDDTL1__lb_PIDYN_new">
+                                    <select tabindex="1" style="width: 115px; padding: 0px 2px; margin-left: 5px;" name="CenPH__lb_RCDDTL1__lb_PIDYN_new" id="CenPH__lb_RCDDTL1__lb_PIDYN_new">
                                         <option value=" " selected="selected">Please select</option>
                                         <option value="Y">Yes</option>
                                         <option value="N">No</option>
