@@ -73,8 +73,8 @@
                     <tr>
                       <th>Text</th>
                       <th>Insurance Type</th>
-                      <th>Cust Ref#</th>
-                      <th>Account Ext#</th>
+                      <th>Cust Ref #</th>
+                      <th>Account Ext #</th>
                       <th>Bank</th>
                       <th>Claim Date</th>
                       <th>Date of Loss</th>
@@ -86,7 +86,7 @@
                       <th>Determination Date</th>
                       <th>Company #</th>
                       <th>Approved Amount</th>
-                      <th>Auto Payments#</th>
+                      <th>Auto Payments #</th>
                       <th>Closed Date</th>
                     </tr>
                   </thead>
