@@ -276,7 +276,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Producer #:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Producer:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CBYTX_new"></span> </div>
                 </div>
               </div>
@@ -284,7 +284,7 @@
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Insurance Certificate#:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Insurance Certificate:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CDKCO_new"></span> </div>
                 </div>
               </div>
