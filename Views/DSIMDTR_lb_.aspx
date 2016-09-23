@@ -1136,6 +1136,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	  <style>
+	  #next-page, #previous-page {
+		margin: 5px 15px 10px 0 !important;
+	  }
+	  </style>
       <script type="text/javascript">
         var copyToAndFrom = {
                 "displayOnlyFields": {
@@ -1210,4 +1215,5 @@
                 });
             });
       </script>
+	  
     </asp:Content>

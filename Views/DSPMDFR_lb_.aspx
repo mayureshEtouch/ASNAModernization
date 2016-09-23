@@ -112,10 +112,10 @@
                                             <!-- col starts here -->
                                             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="padding:0">
                                                 <div class="content-grid mdl-grid">
-                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet" style="margin:0">
+                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                                                         <span class="form-label">Customer Activity Type:</span>
                                                     </div>
-                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+                                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
                                                         <span class="form-text" id="CenPH__lb_SFLCTL__lb_CR7ST_new"></span>
                                                     </div>
                                                 </div>

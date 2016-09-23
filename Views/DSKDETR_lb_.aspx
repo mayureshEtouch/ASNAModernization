@@ -254,13 +254,34 @@
               $("#special-instructions").prepend('<legend id="legen">Comments:</legend>');
             }
 
+				var deviceAgent = navigator.userAgent.toLowerCase();
+				var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+					
+				function dealycodeInst(keycode) {
+					var inpe = jQuery.Event("keydown");
+					inpe.which = keycode;
+					
+					try{
+						$(document).trigger(inpe);
+						if(agentID!=='ipad')
+						{
+							generateSpecialInstructionsSection();
+						}
+					}
+					catch(e){
+						generateSpecialInstructionsSection();
+					}
+				}
+
             $('body').on("click", "#sp-next-page", function(event) {
-              _00("PgDn", event);
-              generateSpecialInstructionsSection();
+              //_00("PgDn", event);
+              //generateSpecialInstructionsSection();
+			  setTimeout(function () { dealycodeInst(34); }, 1000);
             });
             $('body').on("click", "#sp-previous-page", function(event) {
-              _00("PgUp", event);
-              generateSpecialInstructionsSection();
+              //_00("PgUp", event);
+              //generateSpecialInstructionsSection();
+			   setTimeout(function () { dealycodeInst(33); }, 1000);
             });
             $('body').on('keydown', function (event) {
               var keycode = event.keyCode || event.which;

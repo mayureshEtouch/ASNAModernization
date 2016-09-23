@@ -591,7 +591,7 @@
         </script>
         <style>
             #__Page_Hidden{
-                height: 800px !important;
+                height: 100% !important;
             }
             #__Page_PopUp {
                 min-width: 450px !important;

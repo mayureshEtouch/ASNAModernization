@@ -442,7 +442,7 @@
                                            
 
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--3-col-tablet" style="margin: 0;"><span class="form-label">Scheduling inside repair on :</span> </div>
-                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--3-col-tablet schedule-date" style="margin: 0;">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--3-col-tablet schedule-date" style="margin: 0; position: relative; width: 130px;">
                                             <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="schedulingDt" maxlength="8" style="width: 100px;" data-tb-index="1" onfocus="_09('V1DADT','15,34','#SFLCTL');" readonly>
                                              <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                             <span id="reqdate" class="DdsCharField_OutputOnly"></span>

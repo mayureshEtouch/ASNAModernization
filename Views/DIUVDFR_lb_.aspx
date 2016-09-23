@@ -303,7 +303,7 @@
                         <option value="DAA"> DAA - Display All Applications</option>
                         <option value="CCI"> CCI - Change Customer Info</option>
                         <option value="CRC"> CRC - Customer Return Check</option>
-                        <option value="DIN"> DIN - Display Customer Invoice{</option>
+                        <option value="DIN"> DIN - Display Customer Invoice</option>
                         <option value="ENC"> ENC - Enter Customer No Call</option>
                         <option value="DDI"> DDI - Display Delivery Invoices</option>
                         <option value="CSL"> CSL - Cash Sale Lookup</option>

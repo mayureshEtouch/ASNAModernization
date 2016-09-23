@@ -181,13 +181,15 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
     }
 
     $('body').on("click", "#next-page", function(event) {
-        _00("PgDn", event);
-        generateTable("top-to-bottom");
+        //_00("PgDn", event);
+       // generateTable("top-to-bottom");
+	   setTimeout(function () { dealycodeInst(34); }, 1000);
         
     });
     $('body').on("click", "#previous-page", function(event) {
-       _00("PgUp", event);
-       generateTable("top-to-bottom");
+      // _00("PgUp", event);
+      // generateTable("top-to-bottom");
+	   setTimeout(function () { dealycodeInst(33); }, 1000);
         
     });
     generateTable("top-to-bottom");
@@ -250,6 +252,25 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
     $(".fixed-table-container-inner .th-inner").animate({
         width: "300px"
     }, 500);
+	
+	var deviceAgent = navigator.userAgent.toLowerCase();
+var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+	
+function dealycodeInst(keycode) {
+	var inpe = jQuery.Event("keydown");
+	inpe.which = keycode;
+	
+	try{
+		$(document).trigger(inpe);
+		if(agentID!=='ipad')
+		{
+			generateTable("top-to-bottom");
+		}
+	}
+	catch(e){
+		generateTable("top-to-bottom");
+	}
+}
 }
 
 
