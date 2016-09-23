@@ -156,7 +156,16 @@
                 </div>
                 <!-- col ends here -->
               </div>
-              <!-- content-grid mdl-grid ends here --> 
+              <!-- content-grid mdl-grid ends here -->
+			  </div>
+			  </div>
+			  </div>
+			  
+			   <div class="table-data-wrapper mrgnTp16">
+          <div class="table-data-maincontainer">
+            <div class="table-container table-container-search"> 
+			  
+			  
               
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid" style="padding:0"> 
@@ -362,7 +371,7 @@
             <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px; padding: 0;"> 
             </div>
             <div class="content-grid mdl-grid" style="padding:0"> 
-              <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"><span class="summary-table-title">History</span> </div>
+              <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; margin: 0 15px;"><span class="summary-table-title">History</span> </div>
             </div>
 
             <!--table starts here -->
