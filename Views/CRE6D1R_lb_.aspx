@@ -55,21 +55,21 @@
         <section class="order-summary">
             <div class="order-summary-wrapper">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--3-col">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                         <span class="summary-title">Name</span>
                         <span class="summary-txt" id="name"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--3-col">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                         <span class="summary-title">Order Number</span>
                         <span class="summary-txt" id="order"></span>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="table-data-content-container" style="margin-top: 16px;">
+        <section class="table-data-content-container spacer-container-bottom mrgnTp16">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
-                    <div class="table-container table-container-search spacer-container-bottom">
+                    <div class="table-container table-container-search">
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
                             <!-- 4 col starts here -->
@@ -86,7 +86,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Sts:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Sts:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="sts"></span>
                                     </div>
@@ -97,8 +97,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Account:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col pull-right" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Account:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="account"></span>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">State:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">State:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="state"></span>
                                     </div>
@@ -135,8 +135,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Mo:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col pull-right" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Mo:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="mo"></span>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">APR:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">APR:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="apr"></span>
                                         <span>%</span>
@@ -174,8 +174,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Payment:</span> </div>
-                                    <div class="mdl-cell mdl-cell--6-col pull-right" style="margin: 0;">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Payment:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                         <span data-upgraded=",MaterialTextfield" class="form-text" id="payments"></span>
                                     </div>
                                 </div>
@@ -199,10 +199,9 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
 									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum"></span> </div>
-									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0 0 10px;"><span data-upgraded=",MaterialTextfield" class="form-text" > </span> </div>
-									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0 0 -15px;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2"></span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="ssnum_new-show">Show</a> </div>
+									 <div class="mdl-cell mdl-cell--5-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2"></span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="ssnum_new-show">Show</a> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -216,7 +215,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Amount of Purchase:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="amtofpurchase"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="amtofpurchase"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -224,9 +223,9 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span class="form-label">DOB #1:</span> </div>
-									<div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="dob1"></span></div>
-									<div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 10px;"><span class="form-label" style="margin-left: 10px;">#2:</span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">DOB #1:</span> </div>
+									<div class="mdl-cell mdl-cell--2-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="dob1"></span></div>
+									<div class="mdl-cell mdl-cell--2-col" style="margin: 0 0 0 10px;"><span class="form-label" style="margin-left: 10px;">#2:</span></div>
 									<div class="mdl-cell mdl-cell--3-col" style="margin: 0 0 0 -15px;"><span data-upgraded=",MaterialTextfield" class="form-text" id="dob2"></span> </div>
                                     
                                 </div>
@@ -243,7 +242,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Down Payment:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="downpayment"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="downpayment"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -257,7 +256,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Sale Price:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="salePrice"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="salePrice"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -273,7 +272,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Added On:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="addedOn"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="addedOn"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -281,8 +280,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Contract:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="contract"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Contract:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="contract"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -296,7 +295,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Filing Fee:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="fillingFee"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="fillingFee"></span></div>
 
                                 </div>
                             </div>
@@ -310,7 +309,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Life Ins:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="lifeIns"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="lifeIns"></span></div>
 
                                 </div>
                             </div>
@@ -319,8 +318,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Life $:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="life1"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Life $:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="life1"></span></div>
 
                                 </div>
                             </div>
@@ -335,7 +334,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">A/H Ins:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ahins"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ahins"></span></div>
 
                                 </div>
                             </div>
@@ -344,8 +343,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">A/H $:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ah1"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">A/H $:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ah1"></span></div>
 
                                 </div>
                             </div>
@@ -360,7 +359,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Prop Ins:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="propins"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="propins"></span></div>
 
                                 </div>
                             </div>
@@ -369,8 +368,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Prop $:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="prop1"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Prop $:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="prop1"></span></div>
 
                                 </div>
                             </div>
@@ -385,7 +384,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Unemp Ins:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="unempIns"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="unempIns"></span></div>
 
                                 </div>
                             </div>
@@ -394,8 +393,8 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Unemp $:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="uemp1"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Unemp $:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="uemp1"></span></div>
 
                                 </div>
                             </div>
@@ -410,7 +409,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Financed:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="financed"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="financed"></span></div>
 
                                 </div>
                             </div>
@@ -425,7 +424,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Interest:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="interest1"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="interest1"></span></div>
 
                                 </div>
                             </div>
@@ -439,14 +438,14 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Total:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="total"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="total"></span></div>
 
                                 </div>
                             </div>
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span class="form-label">Entered:</span> </div>
-                                    <div class="mdl-cell mdl-cell--3-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="earned"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Entered:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="earned"></span></div>
 
                                 </div>
                             </div>
