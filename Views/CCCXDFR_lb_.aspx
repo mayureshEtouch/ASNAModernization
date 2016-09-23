@@ -91,25 +91,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>123456</td> 
-                      <td>AH</td>
-                      <td>4860921</td>                                
-                      <td>30</td>
-                      <td>OFC</td>
-                      <td>09/05/16</td>                               
-                      <td>12/09/16</td>
-                      <td>11</td>
-                      <td></td>                               
-                      <td>30.50</td>
-                      <td>09/13/1916</td>
-                      <td></td>                               
-                      <td>09/12/1916</td>
-                      <td>Test Com</td>
-                      <td>25.00</td>                                
-                      <td>0</td>
-                      <td>09/11/1916</td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>
