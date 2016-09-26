@@ -128,13 +128,15 @@
           "CenPH__lb_RCDDTL1__lb_1REF_lb_":"CenPH__lb_RCDDTL1__lb_1REF_lb__new",
           "CenPH__lb_RCDDTL1__lb_1CENB":"CenPH__lb_RCDDTL1__lb_1CENB_new",
           "CenPH__lb_RCDDTL1__lb_DHENB":"CenPH__lb_RCDDTL1__lb_DHENB_new",
+          
         },
         "inputFields": {
+          
         }
       }
       $(document).ready(function () {
           copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-          
+        //  $("#requestdate").focus();
         if($("#CenPH__lb_RCDDTL1__lb_DHENB").is('input')){
           $("#input_date").show();
           /* Date stuff goes here.*/
@@ -143,7 +145,7 @@
           $("#requestdate").val($("#CenPH__lb_RCDDTL1__lb_DHENB").val());
           if ($("#CenPH__lb_RCDDTL1__lb_DHENB").val().trim != "") {
 
-              $("#requestdate").val($.datepicker.formatDate('mm/dd/yy', new Date()));
+              $("#requestdate").val($("#requestdate").val().substr(0,2)+"/"+$("#requestdate").val().substr(2,2)+"/"+$("#requestdate").val().substr(4,4));
           }
           $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
           
@@ -154,6 +156,7 @@
           });
         }else{
           $("#CenPH__lb_RCDDTL1__lb_DHENB_new").show();
+           $("#CenPH__lb_RCDDTL1__lb_DHENB_new").text($("#CenPH__lb_RCDDTL1__lb_DHENB_new").text())
         }
         if($("#__Page_PopUp .simplePopupClose").length > 0) {
           $(".simplePopupBackground1").show();
@@ -162,6 +165,8 @@
         }
 
         if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+           //$("#CenPH__lb_RCDDTL1__lb_DHENB_new").text($.datepicker.formatDate('mm/dd/yy', new Date()));
+           $("#CenPH__lb_RCDDTL1__lb_DHENB_new").text($("#CenPH__lb_RCDDTL1__lb_DHENB").text().substr(0,2)+"/"+$("#CenPH__lb_RCDDTL1__lb_DHENB").text().substr(2,2)+"/"+$("#CenPH__lb_RCDDTL1__lb_DHENB").text().substr(4,4));
           /*Pop up confirm box*/
           $(".OverlayPopupBackground").show();
           $(".confirmation-outer-conatiner").show();
