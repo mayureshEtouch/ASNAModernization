@@ -133,12 +133,18 @@
         }
       }
       $(document).ready(function () {
-        copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+          copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+          
         if($("#CenPH__lb_RCDDTL1__lb_DHENB").is('input')){
           $("#input_date").show();
           /* Date stuff goes here.*/
           $("#reqdate").html($("#CenPH__lb_RCDDTL1__lb_DHENB").html());
+          
           $("#requestdate").val($("#CenPH__lb_RCDDTL1__lb_DHENB").val());
+          if ($("#CenPH__lb_RCDDTL1__lb_DHENB").val().trim != "") {
+
+              $("#requestdate").val($.datepicker.formatDate('mm/dd/yy', new Date()));
+          }
           $("#requestdate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
           
           $("#reqesdate").click(function () { $("#requestdate").datepicker("show"); });
