@@ -304,7 +304,7 @@
           <div class="mdl-cell mdl-cell--12-col pull-right" style="margin-bottom:0">
            <div class="icon-container">
             <span class="icon-txt" data-action="5">Details</span><i class="material-icons md-15 md-light display-icon"></i>
-            <span class="icon-txt" data-action="8">Reinstate</span><i class="material-icons md-15 md-light reinstate-icon"></i>
+            <%--<span class="icon-txt" data-action="8">Reinstate</span><i class="material-icons md-15 md-light reinstate-icon"></i>--%>
           </div>
         </div>
       </div>
