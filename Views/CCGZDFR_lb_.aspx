@@ -140,7 +140,7 @@
                                         <th>Term</th>
                                         <th>#PD</th>
                                         <th>Payment</th>
-                                        <th>Org/Bal</th>
+                                        <th>Org/Bal ($)</th>
                                         <th>S</th>
                                         <th>I</th>
                                         <th>B</th>
