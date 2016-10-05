@@ -180,7 +180,7 @@
                     <div class="front-content">
                         <div class="misc-sales-menu-icon"></div>
                         <p class="block-heading">Other Misc. Sales Menu</p>
-                    </div>
+                    </div>  
                     <!-- front-content ends here -->
                 </div>
                 <!-- back-content starts here -->
@@ -190,7 +190,7 @@
                         <h2 class="_title">Other Misc. Sales Menu</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p>Enter Pickup Completions</p>
+                        <li class="_item"><a href="javascript:void(0);" data-menu="18"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p>Enter Pickup Completions</p>
 
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
