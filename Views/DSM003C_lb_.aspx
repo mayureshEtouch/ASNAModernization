@@ -109,7 +109,7 @@
                         <li class="_item"><a data-menu="13" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
-                        </a></li>
+                        </a></li> 
                     </ul>
                     <!-- back-content ends here -->
                 </div>
@@ -167,6 +167,8 @@
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
+                        </a></li>
+                        <li class="_item" ><a href="javascript:void(0);" data-menu="15"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Sales</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
