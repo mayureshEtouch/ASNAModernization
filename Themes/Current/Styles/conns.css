@@ -1572,6 +1572,15 @@ body div, body span, body textarea {
 	position: fixed;
 }
 
+/*menu 15: Display Incomplete Sales*/
+.delivery-icon {
+    background: url(../images/icons/delivery-icon.png) no-repeat;
+}
+.validate-icon {
+    background: url(../images/icons/validate-icon.png) no-repeat;
+}
+
+
 /* Media queries starts here */
 
 
