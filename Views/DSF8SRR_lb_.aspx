@@ -22,7 +22,99 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+        <!-- Modified HTML code starts here -->
+<div class="OverlayPopupBackground"></div>
+<main class="mdl-layout__content">
+		<section class="time-date">
+				<div class="content-grid mdl-grid">
+						<div class="mdl-cell mdl-cell--8-col"> 
+								<!-- Title --> 
+								<span class="heading-h1">Select Alternate Delivery Zone</span> </div>
+						<div class="mdl-cell mdl-cell--4-col pull-right"> 
+								<!-- Navigation --> 
+								<i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSF8SRR</span> 
+                            <i class="material-icons md-15 md-light date-icon"></i>
+								<span class="date-time-txt" name="date" id="date"></span> 
+                            <i class="material-icons md-15 md-light time-icon"></i>&nbsp;
+								<span class="date-time-txt" name="time" id="time"></span> </div>
+				</div>
+		</section>
+		<section class="table-data-content-container filter-field-container mrgnTp16">
+				<div class="table-data-wrapper">
+						<div class="table-data-maincontainer">
+								<div class="table-container filter-search-container">
+										<div class="content-grid mdl-grid">
+												<div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+												<div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+														<div class="content-grid mdl-grid">
+																<div class="mdl-cell mdl-cell--2-col" style="margin-left: -15px;"> <span class="summary-table-title pull-right" >Company</span> </div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="model">
+																		<span style=" margin: 12px 10px 0 0; display:block;" id="company"></span>
+																</div>
+																<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span> </div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="serial">
+																		<span style=" margin: 12px 10px 0 0; display:block;" id="location"></span>
+																</div>
+																<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Delivery Zone</span> </div>
+																<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="invoice">
+																		<input type="text"  id="deliveryZone" class="mdl-textfield__input" data-tb-index="1" onfocus="_09('#2AHCD','5,16','#SFLCTL');" maxlength="3">
+																</div>
+														</div>
+												</div>
+												<div class="mdl-cell mdl-cell--1-col button-cnt-container">
+														<div class="button-container">
+																<button class="mdl-button mdl-button--accent" id="search">Search</button>
+                                                            
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+		
+		<section class="table-data-content-container spacer-container-bottom mrgnTp16">
+				<div class="table-data-wrapper">
+						<div class="table-data-maincontainer">
+								<div style="overflow: auto;" class="table-container">
+										<div>
+												<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblAlternateDelZone" data-upgraded=",MaterialDataTable">
+														<thead>
+																<tr>
+																		<th>Company</th>
+																		<th>Location</th>
+																		<th>Delivery Zone</th>
+																		<th>Delivery Zone Description</th>
+																		<th>Max Installation</th>
+																		<th>Maximum Stop</th>
+																		<th>Employee Code</th>
+																		<th>Helper Code</th>
+																		<th>Truck Number</th>
+																</tr>
+														</thead>
+														<tbody>
+
+														</tbody>
+												</table>
+												 </div>
+										<div class="button-container">
+												<div class="content-grid mdl-grid">
+														<div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                                             <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>--%>
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">help</span>
+														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+														</div>
+														<div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+</main>
+<div id="modal1" class="simplePopup"></div>
+<!-- Modified HTML code ends here -->
+        <div id="Div1" style="display:none">
             
       <%--  DE: SEL Alt Del Zone      Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -557,4 +649,90 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+         <script type="text/javascript">
+        var copyToAndFromData = {
+            "displayOnlyFields": {
+                "CenPH_DdsConstant22": "date",
+                "CenPH__lb_SFLCTL__lb__lb_TME": "time",
+                "CenPH__lb_SFLCTL__lb_2ABCD": "company",
+                "CenPH__lb_SFLCTL__lb_2AACD": "location"
+            },
+            "inputFields": {
+                "CenPH__lb_SFLCTL__lb_2AHCD": "deliveryZone"
+            }
+        };
+
+        $(document).ready(function () {
+           
+              
+                copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7],[8]];
+       
+                generateTableAndApplyInfiniteScroll("tblAlternateDelZone", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+                $("#deliveryZone").ForceNumericOnly();
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+
+                $('#tblAlternateDelZone tbody tr').dblclick(function () {
+                    selectCusotmer(row, "1", event);
+                    _00('Enter', event);
+                });
+                $("#prompt").click(function (event) {
+                    _00('F4', event);
+                });
+                $("#help").click(function (event) {
+                    _00('F1', event);
+                });
+
+
+                //$("#Exit").click(function (event) {
+                //    _00('F3', event);
+                //});
+                $("#previous").click(function (event) {
+                    _00('F12', event);
+                });
+                $("#next").click(function (event) {
+                    var row = $("#tblAlternateDelZone tbody tr.selected");
+                    selectCusotmer(row, "1", event);
+                    _00('Enter', event);
+                });
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    a = selectId.split(".");
+                    $("#" + a[0] + "\\." + a[1]).val(value);
+                    _00('Enter', event);
+                }
+
+                $("body").on("click", ".simplePopupClose", function () {
+                    $(".simplePopupBackground1").hide();
+                });
+                if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                    /*Pop up confirm box*/
+                    $(".OverlayPopupBackground").show();
+                    $(".confirmation-outer-conatiner").show();
+
+                    //$("#yes").click(function (event) {
+                    //    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    //    _16(event, this, 1, 'Enter');
+                    //   // $(".OverlayPopupBackground").show()
+                    //});
+                    //$("#no").click(function (event) {
+                    //    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    //    _16(event, this, 1, 'Enter');
+                    //    $(".OverlayPopupBackground").hide()
+                    //});
+
+                }
+               
+
+           
+            
+
+        });
+
+    </script>
     </asp:Content>
