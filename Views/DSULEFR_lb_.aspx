@@ -784,8 +784,8 @@
     <script type="text/javascript">
       var copyToAndFrom = {
           "displayOnlyFields": {
-              "CenPH_DdsConstant3":"date",
-              "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+              "CenPH_DdsConstant12":"date",
+              "CenPH__lb_SFLCTL__lb__lb_TME":"time",
               "CenPH__lb_SFLCTL__lb_2BANB": "orderNo"
           },
           "inputFields": {
