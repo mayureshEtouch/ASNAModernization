@@ -94,6 +94,7 @@
         </section>
 
         </main>
+        <div id="modal1" class="simplePopup"></div>
         <div id="Div1" style="display:none;">
             
       <%--  OE: EDT Pickup Completion Edit file                                                                              --%>
@@ -828,7 +829,6 @@
               var j=i+1;
 
               var select = $("#CenPH__lb_SFLRCD__lb_1GLST.1");
-              console.log(select);
               $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(2)').append($('#CenPH__lb_SFLRCD_'+i+' select').removeAttr("style"));
               $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(4)').append($('#CenPH__lb_SFLRCD_'+i+' input').removeAttr("style"));
             }
@@ -843,6 +843,13 @@
           $("#next").click(function (event) {
               _00('Enter', event);
           });
+
+           var selectRecord = function (row, value, event) {
+              var selectId = $(row).data('selectid');
+              a = selectId.split(".");
+              $("#" + a[0] + "\\." + a[1]).val(value);
+              _00('Enter', event);
+          }
 
           $(".invoice").click(function (event) {
               var row = $("#displayData tbody tr.selected");

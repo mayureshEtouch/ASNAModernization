@@ -62,6 +62,7 @@
           </div>
         </section>
       </main>
+      <div id="modal1" class="simplePopup"></div>
       <div id="Div1" style="display:none;">
             
       <%--  OE: PMT Pickup Completion Prompt & validate record                                                               --%>
