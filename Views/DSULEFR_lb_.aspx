@@ -838,10 +838,11 @@
             }
           }
 
-          $("#displayData tbody tr").removeAttr("tabindex");
+          $("#orderPickupDisplay tbody tr").removeAttr("tabindex");
           
-          $("#displayData tbody tr").each(function(i){
+          $("#orderPickupDisplay tbody tr").each(function(i){
             $(this).attr("tabindex",parseInt(i+3));
+            $(this).html($(this).html().replace(/&nbsp;/g, ''));
           });
 
           $("#next").click(function (event) {
