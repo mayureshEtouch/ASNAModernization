@@ -822,7 +822,6 @@
           var result = $('[id^=CenPH__lb_SFLRCD_]').filter(function () {
               return this.id.match(/CenPH__lb_SFLRCD_\d+$/); 
           }).length;
-          
           for(var i=0; i < result ; i++)
           {
             if ($('#CenPH__lb_SFLRCD_'+i+' select').length > 0) {
@@ -830,7 +829,12 @@
 
               var select = $("#CenPH__lb_SFLRCD__lb_1GLST.1");
               $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(2)').append($('#CenPH__lb_SFLRCD_'+i+' select').removeAttr("style"));
-              $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(4)').append($('#CenPH__lb_SFLRCD_'+i+' input').removeAttr("style"));
+            }
+            if ($('#CenPH__lb_SFLRCD_'+i+' input').length > 0) {
+              $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(4)').append($('#CenPH__lb_SFLRCD_'+i+' input[id="CenPH__lb_SFLRCD__lb_1A8TX.'+i+'"]').removeAttr("style"));
+              $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(7)').append($('#CenPH__lb_SFLRCD_'+i+' input[id="CenPH__lb_SFLRCD__lb_1ALCD.'+i+'"]').removeAttr("style"));
+              $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(8)').append($('#CenPH__lb_SFLRCD_'+i+' input[id="CenPH__lb_SFLRCD__lb_1AMCD.'+i+'"]').removeAttr("style"));
+              $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(9)').append($('#CenPH__lb_SFLRCD_'+i+' input[id="CenPH__lb_SFLRCD__lb_1ANCD.'+i+'"]').removeAttr("style"));
             }
           }
 
