@@ -1170,7 +1170,7 @@
           var dataMergeIndices = [[1], [2], [3], [4], [5], [6], [7], [8],[9]];
           generateTableAndApplyInfiniteScroll("exchangeRetDisplay", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
-          $("#displayData tbody tr").removeAttr("tabindex");
+          $("#exchangeRetDisplay tbody tr").removeAttr("tabindex");
           
           var selectRecord = function (row, value, event) {
               var selectId = $(row).data('selectid');
@@ -1180,11 +1180,11 @@
           }
 
           $("#return").click(function (event) {
-            var row = $("#displayData tbody tr.selected");
+            var row = $("#exchangeRetDisplay tbody tr.selected");
             selectRecord(row, "1", event);
           });
 
-          $("#displayData tbody tr").each(function(i){
+          $("#exchangeRetDisplay tbody tr").each(function(i){
             $(this).attr("tabindex",parseInt(i+3));
           })
 
