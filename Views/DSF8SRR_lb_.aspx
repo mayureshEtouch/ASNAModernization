@@ -669,7 +669,7 @@
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7],[8]];
        
                 generateTableAndApplyInfiniteScroll("tblAlternateDelZone", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
-                $("#deliveryZone").ForceNumericOnly();
+                //$("#deliveryZone").ForceNumericOnly();
                 var selectCusotmer = function (row, value, event) {
                     var selectId = $(row).data('selectid');
                     a = selectId.split(".");
