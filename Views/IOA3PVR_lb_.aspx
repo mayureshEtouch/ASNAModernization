@@ -31,6 +31,13 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
         <div class="OverlayPopupBackground"></div>
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title logo-icon"></span>
+                <div class="mdl-layout-spacer"></div>
+                <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+            </div>
+        </header>
         <main class="mdl-layout__content">
           <section class="time-date">
             <div class="content-grid mdl-grid">
@@ -591,8 +598,6 @@
 
           var copyToAndFrom = {
             "displayOnlyFields": {
-                "CenPH_DdsConstant20":"date",
-                "CenPH__lb_SFLCTL__lb__lb_TME":"time",
                 "CenPH__lb_CMDTXT1": "text",
                 "CenPH__lb_RCDDTL1__lb_DEXXT":"esign-info"
             },
@@ -603,16 +608,17 @@
           $(document).ready(function () {
 
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+
+            $('body').on('click', '.close-icon', function (event) {
+                _00('F12', event);
+            });
+            
             $('#Exit').click(function (event) {
               _00("F3", event);
             });
 
             $('.close-icon').click(function (event) {
               _00("F12", event);
-            });
-
-            $('#print').click(function (event) {
-              _00("F6", event);
             });
 
             if($("#__Page_PopUp .simplePopupClose").length > 0) {

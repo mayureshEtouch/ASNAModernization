@@ -83,7 +83,7 @@
                               </tbody>
                           </table>
                           <div class="tablet-width-rt">
-                          <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+                          <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
                           </div>
                       </div>
                                 
@@ -1191,15 +1191,11 @@
           $("#previous").click(function (event) {
              _00('F3', event);
           });
-
-          $("#refresh").click(function (event) {
-              _00('F5', event);
-          });
     
           $("#previous").click(function (event) {
               _00('F12', event);
           });
         });
 
-      </script
+      </script>
     </asp:Content>

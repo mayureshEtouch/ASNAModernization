@@ -29,7 +29,7 @@
               <span class="heading-h1">Prompt Order Pickup Completions</span> </div>
             <div class="mdl-cell mdl-cell--4-col pull-right"> 
               <!-- Navigation --> 
-              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSUKPVR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span> </div>
+              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSUKPVR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
           </div>
         </section>
         
@@ -43,7 +43,7 @@
                   <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Order Number:</span> </div>
-                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="orderNo"></span> </div>
+                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"><input class="mdl-textfield__input" type="text" data-tb-index="1"  maxlength="9" id="orderNo"></span> </div>
                     </div>
                   </div>
                   <!-- 4 col ends here --> 
@@ -476,13 +476,9 @@
         $(document).ready(function () {
 
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-
+            $("#orderNo").ForceNumericOnly();
             $("#next").click(function (event) {
                 _00('Enter', event);
-            });
-
-            $("#refresh").click(function (event) {
-                _00('F5', event);
             });
       
             $("#previous").click(function (event) {

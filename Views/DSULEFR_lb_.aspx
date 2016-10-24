@@ -32,8 +32,8 @@
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
                     <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSULEFR</span>
-                    <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                    <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                    <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                    <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
                 </div>
             </div>
         </section>
@@ -73,7 +73,7 @@
                   </tbody>
                 </table>
                 <div class="tablet-width-rt">
-                <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+                <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
                 </div>
               </div>
                                 
@@ -787,10 +787,10 @@
           "displayOnlyFields": {
               "CenPH_DdsConstant12":"date",
               "CenPH__lb_SFLCTL__lb__lb_TME":"time",
-              "CenPH__lb_SFLCTL__lb_2BANB": "orderNo"
+              "CenPH__lb_SFLCTL__lb__lb_PGM": "orderNo"
           },
           "inputFields": {
-             "CenPH__lb_SFLRCD__lb_1GLST.1":"odelstatus"
+            
           }
         }
 
@@ -856,17 +856,8 @@
               _00('Enter', event);
           }
 
-          $(".invoice").click(function (event) {
-              var row = $("#displayData tbody tr.selected");
-              selectRecord(row, "1", event);
-          });
-
           $("#Prompt").click(function (event) {
                _00('F4', event);
-          });
-
-          $("#refresh").click(function (event) {
-              _00('F5', event);
           });
     
           $("#previous").click(function (event) {

@@ -31,8 +31,8 @@
               <div class="mdl-cell mdl-cell--4-col pull-right"> 
                   <!-- Navigation --> 
                   <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSTHDFR</span> <i class="material-icons md-15 md-light date-icon"></i>
-                  <span class="date-time-txt" name="date" id="date">13-04-2016</span> <i class="material-icons md-15 md-light time-icon"></i>
-                  <span class="date-time-txt" name="time" id="time">19:00:20</span> </div>
+                  <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>
+                  <span class="date-time-txt" name="time" id="time"></span> </div>
           </div>
       </section>
       <section class="table-data-content-container filter-field-container mrgnTp16">
@@ -861,9 +861,8 @@
 
         var copyToAndFrom = {
           "displayOnlyFields": {
-              "CenPH_DdsConstant18":"date",
-              "CenPH__lb_SFLCTL__lb__lb_TME":"time",
-              "CenPH__lb_SFLCTL__lb_CIKVA":"total"
+              "CenPH_DdsConstant22":"date",
+              "CenPH__lb_SFLCTL__lb__lb_TME":"time"
           },
           "inputFields": {
               "CenPH__lb_SFLCTL__lb_2ABCD":"comp",
@@ -909,17 +908,8 @@
                   selectRecord(row, "V", event);
             });
             
-
-            /* $("#prompt").click(function (event) {
-                _00('F4', event);
-            });*/
-            
             $("#printINCSales").click(function (event) {
                 _00('F10', event);
-            });
-
-            $("#refresh").click(function (event) {
-                _00('F5', event);
             });
       
             $("#previous").click(function (event) {

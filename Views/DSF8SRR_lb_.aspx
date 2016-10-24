@@ -101,8 +101,8 @@
 												<div class="content-grid mdl-grid">
 														<div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                                              <%--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>--%>
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">help</span>
-														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span>
+														<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="help">help</span> -->
+														<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">prompt</span> -->
 														</div>
 														<div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
 												</div>
@@ -684,9 +684,9 @@
                 $("#prompt").click(function (event) {
                     _00('F4', event);
                 });
-                $("#help").click(function (event) {
+               /* $("#help").click(function (event) {
                     _00('F1', event);
-                });
+                });*/
 
 
                 //$("#Exit").click(function (event) {

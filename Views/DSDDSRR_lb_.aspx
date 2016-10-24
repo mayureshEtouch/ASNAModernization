@@ -32,8 +32,8 @@
               <div class="mdl-cell mdl-cell--4-col pull-right">
                   <!-- Navigation -->
                   <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSDDSRR</span>
-                  <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date">13-04-2016</span>
-                  <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time">19:00:20</span>
+                  <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                  <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
               </div>
           </div>
         </section>
@@ -71,7 +71,7 @@
                         </tbody>
                     </table>
                     <div class="tablet-width-rt">
-                      <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a>
+                      <!-- <a class="next-icon" style="float: right;margin-right: 15px; margin-top: 7px;" id="sp-next-page" href="javascript:void(0);"></a> -->
                     </div>
                   </div>
                                 
@@ -500,10 +500,6 @@
 
           $("#Prompt").click(function (event) {
               _00('F4', event);
-          });
-
-          $("#refresh").click(function (event) {
-              _00('F5', event);
           });
     
           $("#previous").click(function (event) {
