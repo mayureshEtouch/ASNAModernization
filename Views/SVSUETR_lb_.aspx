@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true"  CodeFile="SVSUETR_lb_.aspx.cs" Inherits="conns.SVSUETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 10/17/2016 at 3:56 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -22,6 +22,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
       <main class="mdl-layout__content">
         <section class="time-date">
           <div class="content-grid mdl-grid">
@@ -164,6 +165,13 @@
         </section>
       </main>
       <div id="modal1" class="simplePopup"></div>
+      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+          <i class="material-icons md-15 md-light help-icon"></i><span class="confirmation-text">Do you want to continue</span>
+          <div class="button-container">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+          </div>
+      </div>
       <div id="Div1" style="display:none;">
             
       <%--  SY: ETR Ent Message       Edit transaction                                                                       --%>
@@ -888,16 +896,7 @@
               "CenPH__lb_SFLCTL__lb_1OCTX":"msgInfo"
           },
           "inputFields": {
-              "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
-              "CenPH__lb_SFLCTL__lb_1JRCD":"msgStatus",
-              "CenPH__lb_SFLCTL__lb_1ABCD":"company",
-              "CenPH__lb_SFLCTL__lb_1AACD":"loc",
-              "CenPH__lb_SFLCTL__lb_1AJCD":"empID",
-              "CenPH__lb_SFLCTL__lb_1JVCD":"loc_1",
-              "CenPH__lb_SFLCTL__lb_1JSCD":"msgType",
-              "CenPH__lb_SFLCTL__lb_1JTCD":"system",
-              "CenPH__lb_SFLCTL__lb_1U0NB":"msgOrder",
-              "CenPH__lb_SFLCTL__lb_1OCTX":"msgInfo"
+              
           }
         }
 
@@ -928,43 +927,43 @@
           //$('#empID').append($('#CenPH__lb_SFLCTL__lb_1OCTX').removeAttr("style"));
           if ($("#CenPH__lb_SFLCTL__lb_1UYNB").is( ":input" )) {
             // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
-            $('#msgID').append($('#CenPH__lb_SFLCTL__lb_1UYNB').removeAttr("style"));
+            $('#msgID').replaceWith($('#CenPH__lb_SFLCTL__lb_1UYNB').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1JRCD").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1JRCD":"msgStatus",
-            $('#msgStatus').append($('#CenPH__lb_SFLCTL__lb_1JRCD').removeAttr("style"));
+            $('#msgStatus').replaceWith($('#CenPH__lb_SFLCTL__lb_1JRCD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1ABCD").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1ABCD":"company",
-            $('#company').append($('#CenPH__lb_SFLCTL__lb_1ABCD').removeAttr("style"));
+            $('#company').replaceWith($('#CenPH__lb_SFLCTL__lb_1ABCD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1AACD").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1AACD":"loc",
-            $('#loc').append($('#CenPH__lb_SFLCTL__lb_1AACD').removeAttr("style"));
+            $('#loc').replaceWith($('#CenPH__lb_SFLCTL__lb_1AACD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1AJCD").is( ":input" )) {
             // "CenPH__lb_SFLCTL__lb_1AJCD":"empID",
-            $('#empID').append($('#CenPH__lb_SFLCTL__lb_1AJCD').removeAttr("style"));
+            $('#empID').replaceWith($('#CenPH__lb_SFLCTL__lb_1AJCD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1JVCD").is( ":input" )) {
             // "CenPH__lb_SFLCTL__lb_1JVCD":"loc_1",
-            $('#loc_1').append($('#CenPH__lb_SFLCTL__lb_1JVCD').removeAttr("style"));
+            $('#loc_1').replaceWith($('#CenPH__lb_SFLCTL__lb_1JVCD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1JSCD").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1JSCD":"msgType",
-            $('#msgType').append($('#CenPH__lb_SFLCTL__lb_1JSCD').removeAttr("style"));
+            $('#msgType').replaceWith($('#CenPH__lb_SFLCTL__lb_1JSCD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1JTCD").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1JTCD":"system",
-            $('#system').append($('#CenPH__lb_SFLCTL__lb_1JTCD').removeAttr("style"));
+            $('#system').replaceWith($('#CenPH__lb_SFLCTL__lb_1JTCD').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1U0NB").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1U0NB":"msgOrder",
-            $('#msgOrder').append($('#CenPH__lb_SFLCTL__lb_1U0NB').removeAttr("style"));
+            $('#msgOrder').replaceWith($('#CenPH__lb_SFLCTL__lb_1U0NB').removeAttr("style"));
           }
           if ($("#CenPH__lb_SFLCTL__lb_1OCTX").is( ":input" )) {
             //"CenPH__lb_SFLCTL__lb_1OCTX":"msgInfo"
-            $('#msgInfo').append($('#CenPH__lb_SFLCTL__lb_1OCTX').removeAttr("style"));
+            $('#msgInfo').replaceWith($('#CenPH__lb_SFLCTL__lb_1OCTX').removeAttr("style"));
           }
           
           var mainTbl = $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]:not([id$="End"]');
@@ -1003,10 +1002,28 @@
             //e.preventDefault();
           });
 
+          if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+            /*Pop up confirm box*/
+            $(".OverlayPopupBackground").show();
+            $(".confirmation-outer-conatiner").show();
+            
+            $("#yes").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                //_00('Enter', event);
+                _16(event,this,1,'Enter');
+            });
+            $("#no").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                //_00('Enter', event);
+                _16(event,this,1,'Enter');
+            });
+
+          }
+
           $("#next").click(function (event) {
               _00('Enter', event);
           });
-          
+
           $("#Prompt").click(function (event) {
                _00('F4', event);
           });

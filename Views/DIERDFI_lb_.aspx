@@ -22,6 +22,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+        <div class="OverlayPopupBackground"></div>
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -104,6 +105,13 @@
 
         </main>
         <div id="modal1" class="simplePopup"></div>
+        <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i><span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
         <div id="Div1" style="display:none;">
             
       <%--  OE: DSP Exchange Return   Display file                                                                           --%>
@@ -1195,6 +1203,24 @@
           $("#previous").click(function (event) {
               _00('F12', event);
           });
+          if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+            /*Pop up confirm box*/
+            $(".OverlayPopupBackground").show();
+            $(".confirmation-outer-conatiner").show();
+            
+            $("#yes").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                //_00('Enter', event);
+                _16(event,this,1,'Enter');
+            });
+            $("#no").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                //_00('Enter', event);
+                _16(event,this,1,'Enter');
+            });
+
+          }
+
         });
 
       </script>

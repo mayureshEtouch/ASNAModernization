@@ -30,6 +30,14 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+    <div class="OverlayPopupBackground"></div>
+      <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title logo-icon"></span>
+              <div class="mdl-layout-spacer"></div>
+              <span class="close-icon"><i class="material-icons md-15 close"></i></span>
+          </div>
+      </header>
       <main class="mdl-layout__content">
         <section class="time-date">
           <div class="content-grid mdl-grid">
@@ -448,6 +456,14 @@
               _00('F3', event);
           });
 
+          $('body').on('click', '.close-icon', function (event) {
+              _00('F12', event);
+          });
+
+          $('.close-icon').click(function (event) {
+            _00("F12", event);
+          });
+          
           var selectRecord = function (row, value, event) {
             var selectId = $(row).data('selectid');
             a = selectId.split(".");
