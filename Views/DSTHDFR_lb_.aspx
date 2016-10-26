@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.48.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 10/3/2016 at 3:17 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 10/21/2016 at 3:59 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH5BK, file QDDSSRC, member DSTHDFR# --%>
 
     </asp:Content>
@@ -22,113 +22,123 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <main class="mdl-layout__content">
-      <section class="time-date">
+
+      <div class="OverlayPopupBackground"></div>
+      <main class="mdl-layout__content">
+        <section class="time-date">
           <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--8-col"> 
-                  <!-- Title --> 
-                  <span class="heading-h1">Display Incomplete Orders</span> </div>
-              <div class="mdl-cell mdl-cell--4-col pull-right"> 
-                  <!-- Navigation --> 
-                  <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSTHDFR</span> <i class="material-icons md-15 md-light date-icon"></i>
-                  <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>
-                  <span class="date-time-txt" name="time" id="time"></span> </div>
+            <div class="mdl-cell mdl-cell--8-col"> 
+                <!-- Title --> 
+                <span class="heading-h1">Display Incomplete Orders</span> 
+            </div>
+            <div class="mdl-cell mdl-cell--4-col pull-right"> 
+                <!-- Navigation --> 
+                <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSTHDFR</span> <i class="material-icons md-15 md-light date-icon"></i>
+                <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i>
+                <span class="date-time-txt" name="time" id="time"></span> 
+            </div>
           </div>
-      </section>
-      <section class="table-data-content-container filter-field-container mrgnTp16">
+        </section>
+        <section class="table-data-content-container filter-field-container mrgnTp16">
           <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+              <div class="table-container filter-search-container">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
+                    <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
+                        <div class="content-grid mdl-grid">
+                            <div class="mdl-cell mdl-cell--2-col" style="margin-left: -15px;"> <span class="summary-table-title pull-right" >Company</span> </div>
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
+                                <!-- <input type="text"  id="comp" class="mdl-textfield__input" data-tb-index="1"> -->
+                                <span data-upgraded=",MaterialTextfield" class="input-label-text" id="comp" style="margin-top:14px;margin-left:15px"></span>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span> </div>
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
+                                <!-- <input type="text"  id="loc" class="mdl-textfield__input" data-tb-index="2"> -->
+                                <span data-upgraded=",MaterialTextfield" class="input-label-text" id="loc" style="margin-top:14px;margin-left:15px"></span>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Salesman</span> </div>
+                            <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
+                                <input type="text"  id="slman" class="mdl-textfield__input" data-tb-index="3" maxlength="5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                        <div class="button-container">
+                            <button class="mdl-button mdl-button--accent" id="search">Search</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="add-item">
+              <div class="add-item-wrapper">
+                  <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--12-col pull-right">
+                          <div class="icon-container">
+                          <span class="icon-txt" id="invoice">Invoice</span><i class="material-icons md-15 md-light invoice-icon"></i>
+                          <span class="icon-txt" id="delivery">Delivery</span><i class="material-icons md-15 md-light delivery-icon"></i>
+                          <span class="icon-txt" id="validate">Validate</span><i class="material-icons md-15 md-light validate-icon"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+            <div class="table-data-wrapper">
               <div class="table-data-maincontainer">
-                  <div class="table-container filter-search-container">
+                <div style="overflow: auto;" class="table-container">
+                  <div>
+                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayIncmOrder" data-upgraded=",MaterialDataTable">
+                      <thead>
+                          <tr>
+                              <th>Company</th>
+                              <th>Location</th>
+                              <th>Salesman</th>
+                              <th>Order Number</th>
+                              <th>Version</th>
+                              <th>Delivery Code</th>
+                              <th>Monies Status</th>
+                              <th>Ordered Date</th>
+                              <th>Expected Delivery</th>
+                              <th>Delivery Scheduled</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                   <!--  <a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a>  -->
+                  </div>
+                  <div class="button-container">
                       <div class="content-grid mdl-grid">
-                          <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
-                          <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
-                              <div class="content-grid mdl-grid">
-                                  <div class="mdl-cell mdl-cell--2-col" style="margin-left: -15px;"> <span class="summary-table-title pull-right" >Company</span> </div>
-                                  <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="model">
-                                      <input type="text"  id="comp" class="mdl-textfield__input" data-tb-index="1" maxlength="3">
-                                  </div>
-                                  <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span> </div>
-                                  <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="serial">
-                                      <input type="text"  id="loc" class="mdl-textfield__input" data-tb-index="2" maxlength="3">
-                                  </div>
-                                  <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Salesman</span> </div>
-                                  <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="invoice">
-                                      <input type="text"  id="slman" class="mdl-textfield__input" data-tb-index="3" maxlength="5">
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="mdl-cell mdl-cell--1-col button-cnt-container">
-                              <div class="button-container">
-                                  <button class="mdl-button mdl-button--accent" id="search">Search</button>
-                              </div>
-                          </div>
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printINCSales">Print INC Sales</span> </div>
+                          <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
                       </div>
                   </div>
+                </div>
               </div>
-          </div>
-      </section>
-      <section class="add-item">
-          <div class="add-item-wrapper">
-              <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--12-col pull-right">
-                      <div class="icon-container">
-                      <span class="invoice icon-txt">Invoice</span><i class="invoice material-icons md-15 md-light invoice-icon"></i>
-                      <span class="delivery icon-txt">Delivery</span><i class="delivery material-icons md-15 md-light delivery-icon"></i>
-                      <span class="validate icon-txt">Validate</span><i class="validate material-icons md-15 md-light validate-icon"></i>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <section class="table-data-content-container spacer-container-bottom mrgnTp16">
-          <div class="table-data-wrapper">
-              <div class="table-data-maincontainer">
-                  <div style="overflow: auto;" class="table-container">
-                      <div>
-                          <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
-                              <thead>
-                                  <tr>
-                                      <th>Company</th>
-                                      <th>Location</th>
-                                      <th>Salesman</th>
-                                      <th>Order Number</th>
-                                      <th>Version</th>
-                                      <th>Delivery Code</th>
-                                      <th>Monies Status</th>
-                                      <th>Ordered Date</th>
-                                      <th>Expected Delivery</th>
-                                      <th>Delivery Scheduled</th>
-                                  </tr>
-                              </thead>
-                              <tbody></tbody>
-                          </table>
-                          </div>
-                      <div class="button-container">
-                          <div class="content-grid mdl-grid">
-                              <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printINCSales">Print INC Sales</span> </div>
-                              <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-    </main>
-    <div id="modal1" class="simplePopup"></div>
-    <div id="Div1" style="display:none;">
+            </div>
+          </section>
+        </main>
+        <div id="modal1" class="simplePopup"></div>
+      <div id="Div1" style="display:none;">
             
       <%--  OE: DSP Incomplete Ordrs  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
       <%--  RSTDSP(*YES)                                                                                                     --%>
       <%--  MEMBER-ID: DSTHDFR#                                                                                              --%>
       <%--                                                                                                                   --%>
-      <%--  Generated by  : 2E  Version:  1135                                                                               --%>
+      <%--  Generated by AllFusion 2E release 2E ( 1250)                                                                     --%>
       <%--  Function type : Display file                                                                                     --%>
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : COOL1                                                                                            --%>
-      <%--  Date          : 07/25/07  Time  : 12:24:31                                                                       --%>
+      <%--  User name     : COOL6                                                                                            --%>
+      <%--  Date          : 07/21/09  Time  : 15:48:53                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -431,7 +441,8 @@
               Alias="#2ABCD" 
               Usage="Both" 
               VirtualRowCol="5,4" 
-              PositionCursor="31 | !31 & !98 & !99" 
+              Protect="79" 
+              PositionCursor="31 | !31 & !98 & !99 & !79" 
               TabIndex="1"  />
             <mdf:DdsCharField id="_lb_SFLCTL__lb_2AACD" runat="server" style="position: absolute; left: 73px; top: 96px; width: 28px"
               CssClass="DdsCharField"
@@ -439,7 +450,8 @@
               Alias="#2AACD" 
               Usage="Both" 
               VirtualRowCol="5,8" 
-              PositionCursor="32" 
+              Protect="79" 
+              PositionCursor="32 | !32 & !98 & !99 & !79" 
               TabIndex="2"  />
             <mdf:DdsCharField id="_lb_SFLCTL__lb_2AJCD" runat="server" style="position: absolute; left: 118px; top: 96px; width: 46px"
               CssClass="DdsCharField"
@@ -447,7 +459,7 @@
               Alias="#2AJCD" 
               Usage="Both" 
               VirtualRowCol="5,13" 
-              PositionCursor="33" 
+              PositionCursor="33 | !33 & !98 & !99" 
               TabIndex="3"  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
               style="position: absolute; left: 19px; top: 147px;"
@@ -858,15 +870,16 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
       <script type="text/javascript">
-
         var copyToAndFrom = {
           "displayOnlyFields": {
               "CenPH_DdsConstant22":"date",
-              "CenPH__lb_SFLCTL__lb__lb_TME":"time"
+              "CenPH__lb_SFLCTL__lb__lb_TME":"time",
+              "CenPH__lb_SFLCTL__lb_2ABCD":"comp",
+              "CenPH__lb_SFLCTL__lb_2AACD":"loc"
           },
           "inputFields": {
-              "CenPH__lb_SFLCTL__lb_2ABCD":"comp",
-              "CenPH__lb_SFLCTL__lb_2AACD":"loc",
+              /*"CenPH__lb_SFLCTL__lb_2ABCD":"comp",
+              "CenPH__lb_SFLCTL__lb_2AACD":"loc",*/
               "CenPH__lb_SFLCTL__lb_2AJCD":"slman"
           }
         }
@@ -876,12 +889,12 @@
           copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
           // Search by Customer data table record mapping
           var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
-          generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-          $("#loc,#slman").ForceNumericOnly();
-          $("#displayData tbody tr").removeAttr("tabindex");
+          generateTableAndApplyInfiniteScroll("displayIncmOrder", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          $("#slman").ForceNumericOnly();
+          $("#displayIncmOrder tbody tr").removeAttr("tabindex");
           
           
-          $("#displayData tbody tr").each(function(i){
+          $("#displayIncmOrder tbody tr").each(function(i){
             $(this).attr("tabindex",parseInt(i+3));
           })
 
@@ -893,21 +906,25 @@
             }
 
             //Display customer details
-            $(".invoice").click(function (event) {
-                  var row = $("#displayData tbody tr.selected");
+            $("#invoice").click(function (event) {
+                  var row = $("#displayIncmOrder tbody tr.selected");
                   selectRecord(row, "1", event);
             });
 
-            $(".delivery").click(function (event) {
-                  var row = $("#displayData tbody tr.selected");
+            $("#delivery").click(function (event) {
+                  var row = $("#displayIncmOrder tbody tr.selected");
                   selectRecord(row, "5", event);
             });
 
-            $(".validate").click(function (event) {
-                  var row = $("#displayData tbody tr.selected");
+            $("#validate").click(function (event) {
+                  var row = $("#displayIncmOrder tbody tr.selected");
                   selectRecord(row, "V", event);
             });
-            
+
+            $("#search").click(function (event) {
+                _00('Enter', event);
+            });
+
             $("#printINCSales").click(function (event) {
                 _00('F10', event);
             });
