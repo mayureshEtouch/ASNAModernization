@@ -787,7 +787,7 @@
           "displayOnlyFields": {
               "CenPH_DdsConstant12":"date",
               "CenPH__lb_SFLCTL__lb__lb_TME":"time",
-              "CenPH__lb_SFLCTL__lb__lb_PGM": "orderNo"
+              "CenPH__lb_SFLCTL__lb_2BANB": "orderNo"
           },
           "inputFields": {
             
@@ -824,8 +824,8 @@
           }).length;
           for(var i=0; i < result ; i++)
           {
+             var j=i+1;
             if ($('#CenPH__lb_SFLRCD_'+i+' select').length > 0) {
-              var j=i+1;
 
               var select = $("#CenPH__lb_SFLRCD__lb_1GLST.1");
               $('#orderPickupDisplay tr:eq('+j.toString()+') td:eq(2)').append($('#CenPH__lb_SFLRCD_'+i+' select').removeAttr("style"));
