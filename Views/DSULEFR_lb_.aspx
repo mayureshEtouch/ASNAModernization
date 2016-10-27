@@ -63,7 +63,7 @@
                       <th>Serial Number</th>
                       <th>From Location</th>
                       <th>Model Status</th>
-                      <th>Area</th>
+                      <th>Location Map—Area</th>
                       <th>Row</th>
                       <th>Position</th>
                     </tr>
