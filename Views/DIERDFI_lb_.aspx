@@ -73,7 +73,7 @@
                                         <th>Delivery Line Number</th>
                                         <th>Delivery Status</th>
                                         <th>Delivery Date</th>
-                                         <th>Order Delivery Sts</th>
+                                         <th>Order Delivery Status</th>
                                         <th>Delivery Scheduled Date</th>
                                         <th>Model Number</th>
                                         <th>Serial Number</th>
