@@ -154,8 +154,9 @@
                 <div class="button-container">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Prompt">Prompt</span>
-                    </div>
+                    <!--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Prompt">Prompt</span>
+                    -->
+					</div>
                     <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
                   </div>
                 </div>
@@ -1024,9 +1025,9 @@
               _00('Enter', event);
           });
 
-          $("#Prompt").click(function (event) {
+         /* $("#Prompt").click(function (event) {
                _00('F4', event);
-          });
+          });*/
     
           $("#previous").click(function (event) {
               _00('F3', event);
