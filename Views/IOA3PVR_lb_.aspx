@@ -598,8 +598,9 @@
 
           var copyToAndFrom = {
             "displayOnlyFields": {
-                "CenPH__lb_CMDTXT1": "text",
-                "CenPH__lb_RCDDTL1__lb_DEXXT":"esign-info"
+                //"CenPH__lb_CMDTXT1": "text",
+                "CenPH__lb_RCDDTL1__lb_DEXXT":"text",
+                //"CenPH__lb_RCDDTL1__lb_DEXXT":"esign-info"
             },
             "inputFields": {
                
