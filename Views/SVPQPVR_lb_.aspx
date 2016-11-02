@@ -5,14 +5,17 @@
         <%-- Migrated on 10/12/2016 at 6:05 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAPH5BK, file QDDSSRC, member SVPQPVR# --%>
         <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
-        <link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
-        <script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
-        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
-        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
-        <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
+		<link rel="icon" href="<%=ResolveClientUrl("~/Themes/Current/Images/conns_home_plus_logo_16x16.png")%>" type="image/x-icon" />
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-1.11.1.min.js")%>"></script>
+		<script src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-migrate-1.3.0.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.simplePopup.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.validate.min.js")%>"></script>
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.table_navigation.js")%>"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
+		<link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.css")%>">
+		<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/common.js")%>"></script>
 
     </asp:Content>
 
@@ -31,7 +34,16 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-
+<div class="OverlayPopupBackground"></div>
+<div class="modal-dialog-container">
+	<header class="mdl-layout__header">
+		<div class="mdl-layout__header-row"> 
+			<!-- Title --> 
+			<span class="mdl-layout-title logo-icon"></span>
+			<div class="mdl-layout-spacer"></div>
+			<!--<span class="close-icon"><i class="material-icons md-15 close"></i></span>-->
+		</div>
+	</header>
       <main class="mdl-layout__content">
         <section class="time-date">
           <div class="content-grid mdl-grid">
@@ -50,12 +62,12 @@
             <!-- content-grid mdl-grid starts here -->
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="padding:0">
-                <div class="content-grid mdl-grid">
+                <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DF5TX_new_div">
                   <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
                     <span class="form-label">Text:</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
-                    <span class="form-text" id="textData"></span></span>
+                    <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DF5TX_new"></span></span>
                   </div>
                 </div>
               </div>
@@ -80,7 +92,7 @@
               <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="padding:0">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
-                    <span class="form-label">Repair Scheduled Date:</span>
+                    <span class="form-label">to be scheduled on:</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0;">
                     <span class="form-text" id="repairScheduleDate"></span>
@@ -95,7 +107,7 @@
               <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="padding:0">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
-                    <span class="form-label">Location:</span>
+                    <span class="form-label">for Location:</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                     <span class="form-text" id="loc"></span></span>
@@ -103,12 +115,12 @@
                 </div>
               </div>
               <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="padding:0">
-                <div class="content-grid mdl-grid">
+                <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DKWTX_new_div">
                   <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
                     <span class="form-label">Location Description:</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0;">
-                    <span class="form-text" id="locDesc"></span>
+                    <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DKWTX_new"></span>
                   </div>
                 </div>
               </div>
@@ -128,12 +140,12 @@
                 </div>
               </div>
               <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="padding:0">
-                <div class="content-grid mdl-grid">
+                <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DKZTX_new_div">
                   <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
                     <span class="form-label">Technician Type Description:</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0;">
-                    <span class="form-text" id="repairTypeDesc"></span>
+                    <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DKZTX_new"></span>
                   </div>
                 </div>
               </div>
@@ -153,12 +165,12 @@
                 </div>
               </div>
               <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="padding:0">
-                <div class="content-grid mdl-grid">
+                <div class="content-grid mdl-grid" id="CenPH__lb_RCDDTL1__lb_DAXNA_new_div">
                   <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin:0">
                     <span class="form-label">Zone Description:</span>
                   </div>
                   <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0;">
-                    <span class="form-text" id="zoneDesc"></span>
+                    <span class="form-text" id="CenPH__lb_RCDDTL1__lb_DAXNA_new"></span>
                   </div>
                 </div>
               </div>
@@ -191,8 +203,11 @@
           </div>
         </section>
     </main>
-    <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+	
+	<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div>
+</div>
+
       <div id="Div1" style="display:none;">
             
       <%--  SV: PMT to Schd Outside   Prompt & validate record                                                               --%>
@@ -617,6 +632,7 @@
             .modal-dialog-container {
                 width: 100%;
                 margin-top: 0;
+				margin-bottom: 22px;
             }
 
             .mdl-layout__content {
@@ -634,15 +650,15 @@
         <script type="text/javascript">
           var copyToAndFrom = {
             "displayOnlyFields": {
-                "CenPH__lb_RCDDTL1__lb_DF5TX":"textData",
+                "CenPH__lb_RCDDTL1__lb_DF5TX":"CenPH__lb_RCDDTL1__lb_DF5TX_new",
                 "CenPH__lb_RCDDTL1__lb_PODNB":"workOrderNo",
                 "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DSDT":"repairScheduleDate",
                 "CenPH__lb_RCDDTL1__lb_1AACD":"loc",
-                "CenPH__lb_RCDDTL1__lb_DKWTX":"locDesc",
+                "CenPH__lb_RCDDTL1__lb_DKWTX":"CenPH__lb_RCDDTL1__lb_DKWTX_new",
                 "CenPH__lb_RCDDTL1__lb_1F3CD":"repairType",
-                "CenPH__lb_RCDDTL1__lb_DKZTX":"repairTypeDesc",
+                "CenPH__lb_RCDDTL1__lb_DKZTX":"CenPH__lb_RCDDTL1__lb_DKZTX_new",
                 "CenPH__lb_RCDDTL1__lb_1F9CD":"zone",
-                "CenPH__lb_RCDDTL1__lb_DAXNA":"zoneDesc"
+                "CenPH__lb_RCDDTL1__lb_DAXNA":"CenPH__lb_RCDDTL1__lb_DAXNA_new"
             },
             "inputFields": {
             }
@@ -650,6 +666,14 @@
           $(document).ready(function () {
             
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+			  
+			  
+			   $.each(copyToAndFrom['displayOnlyFields'],function(i,el){
+				if($("#"+copyToAndFrom['displayOnlyFields'][i]).html()==''){
+				  $("#"+copyToAndFrom['displayOnlyFields'][i]+"_div").hide();
+				}
+			  });
+  
               
               $("#Exit").click(function (event) {
                   _00('F3', event);
@@ -678,6 +702,9 @@
               $("#enter").click(function (event) {
                   _00('Enter', event);
               });
+			  
+		
+
           });
       </script>
     </asp:Content>
