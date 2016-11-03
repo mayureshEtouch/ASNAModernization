@@ -461,7 +461,7 @@
           });
 
           $('.close-icon').click(function (event) {
-            _00("F12", event);
+            _00("F3", event);
           });
           
           var selectRecord = function (row, value, event) {
@@ -476,22 +476,24 @@
               selectRecord(row, "1", event);
           });
 
-          // Search by Customer data table record mapping
-          var dataMergeIndices = [[0], [1]];
-            //generateTableAndApplyInfiniteScroll("msgDataDisplay", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-          generateTableAndApplyInfiniteScroll("msgDataDisplay", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
-
           $('body').on("click", "#next-page, #previous-page", function (event) {
               $("#previous-page,#next-page").remove();
               setTimeout(function () {
-                  if ($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length === 0) {
+                  if ($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length >= 0) {
+                    console.log(1);
                       $("#msgDataDisplay").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
                   }
                   if ($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
-                      $("#msgDataDisplay").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                     $("#previous-page").remove();
                   }
-              }, 10)
+              }, 1500)
           });
+
+          // Search by Customer data table record mapping
+          var dataMergeIndices = [[0], [1]];
+          //generateTableAndApplyInfiniteScroll("msgDataDisplay", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          generateTableAndApplyInfiniteScroll("msgDataDisplay", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+
           $("#msgDataDisplay tbody tr").removeAttr("tabindex");  
           $("#msgDataDisplay tbody tr").each(function(i){
             $(this).attr("tabindex",parseInt(i+3));
