@@ -132,24 +132,30 @@
                             <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblCstAcc" data-upgraded=",MaterialDataTable">
                                 <thead>
                                     <tr>
-                                        <%-- <th>Account</th>
-                                        <th>Ex</th>
-                                        <th>Bank</th>
+                                         <th>Account</th>
+                                        <th>EX</th>
+                                        <th>Bnk</th>
                                         <th>Opn/LChg</th>
-                                        <th>Lpmt/Due</th>
+                                        <th>LPmt/Due</th>
                                         <th>Term</th>
                                         <th>#PD</th>
                                         <th>Payment</th>
-                                        <th>Org/Bal ($)</th>
+                                        <th>Org/Bal$</th>
                                         <th>S</th>
                                         <th>I</th>
                                         <th>B</th>
                                         <th>30</th>
                                         <th>60</th>
                                         <th>90</th>
+                                        <th>Loan Type</th>
+                                        <th>Int Meth Short Desc</th>
+                                        <th>Profit Center</th>
+                                        <th>Last Activity Date</th>
+                                        <th>Next Payment Due Date</th>
                                         <th>COP</th>
+                                        <th>Net Pay Off</th>
                                         <th>RC</th>
-                                        <th>Ex</th>--%>
+                                        <th>EX</th>
                                         <%--<th>Costumer Reference number </th>
                                         <th>Account Extension number</th>
                                         <th>Bank</th>
@@ -177,31 +183,7 @@
                                         <th>Net Pay Off value</th>
                                         <th>RC</th>
                                         <th>EX</th>--%>
-                                        <th style="width:7%">Costumer Reference number</th>
-                                        <th style="width:3%">Account Extension number</th>
-                                        <th style="width:4%">Bank</th>
-                                        <th style="width:3%">Opened date</th>
-                                        <th style="width:3%">Last Payment date</th>
-                                        <th>Payments number</th>
-                                        <th>Payments to Date</th>
-                                        <th>Payment Amount</th>
-                                        <th>Original Amount</th>
-                                        <th>Account status</th>
-                                        <th>Insurance</th>
-                                        <th>Bankruptcy status</th>
-                                        <th>30</th>
-                                        <th>60</th>
-                                        <th>90</th>
-                                        <th>Loan Type</th>
-                                        <th>Description</th>
-                                        <th>Profit Center code</th>
-                                        <th>Last Activity date</th>
-                                        <th style="width:3%">Next Payment Due date</th>
-                                        <th>Misc Data code</th>
-                                        <th>Net Pay Off value   </th>
-                                        <th style="width:3%">RC</th>
-                                        <th style="width:3%">Ex</th>
-                                    </tr>
+                                                                            </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
@@ -2288,12 +2270,211 @@
         $(document).ready(function () {
             $('body').css({ "background-color": "white" });
             copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-            // display table for selected model number
-            //var dataMergeIndices = [[0], [1], [2, "<br>", 15], [3, "<br>", 16], [4, "<br>", 17], [5], [6], [7], [8, "<br>", 20], [9], [10], [11], [12], [13], [14], [19], [22], [24]];
-            //var dataMergeIndices = [[0, "<br>", 14], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17]];
+ 
             var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23]];
-            generateTableAndApplyInfiniteScroll("divCstAcc", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
-            $("#account, #txtex").ForceNumericOnly();
+ 
+            generateTableAndApplyInfiniteScrollCCGZ("divCstAcc", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+            function generateTableAndApplyInfiniteScrollCCGZ(tableId, recordConatainer, ignoreSapn, selectRowId, spanIndices) {
+                $("body").css({
+                    "background-color": "#FFFFFF"
+                });
+                $('body').on('click', '#' + tableId + ' tbody tr', function () {
+                    if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+                        $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                        $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                        $("#" + tableId + " tbody tr").removeClass("selected");
+                        $(this).addClass("selected");
+                        $("div.icon-container").removeClass("icon-disable");
+                    }
+                });
+                
+                /* script for table row starts here */
+                var generateTableCCGZ = function (direction) {
+                    $("#" + tableId + " tbody").empty();
+                    var tableSelector = "";
+                    if ($('table#' + recordConatainer).length > 0) {
+                        tableSelector = 'table#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+                    } else {
+                        tableSelector = 'div#' + recordConatainer + '>div[id^=CenPH__lb_SFLRCD]';
+                    }
+                    var recordCount = $(tableSelector).length - 1;
+                    if (spanIndices) {
+                       
+                        generateTableWithSpanIndexCCGZ(recordCount, tableId, direction, tableSelector, spanIndices);
+                    }
+                    $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                    $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                }
+
+                $('body').on("click", "#next-page", function (event) {
+                    _00("PgDn", event);
+                    generateTableCCGZ("top-to-bottom");
+                });
+                $('body').on("click", "#previous-page", function (event) {
+                    _00("PgUp", event);
+                    generateTableCCGZ("top-to-bottom");
+                });
+                generateTableCCGZ("top-to-bottom");
+                //Handle Page Up and Page Down events
+                $('body').on('keyup', function (event) {
+                    var keycode = event.keycode || event.which;
+                    if (keycode === 33) {
+                        //_00("PgUp", event);
+                        generateTableCCGZ("bottom-to-top");
+                    } else if (keycode === 34) {
+                        //_00("PgDn", event);
+                        generateTableCCGZ("top-to-bottom");
+                    }
+                    return;
+                });
+                var selectCusotmer = function (row, value, event) {
+                    var selectId = $(row).data('selectid');
+                    if (selectId) {
+                        a = selectId.split(".");
+                        $("#" + a[0] + "\\." + a[1]).val(value);
+                        _00('Enter', event);
+                    } else {
+                        return;
+                    }
+                }
+
+                //Select customer on double click
+                $('body').on('dblclick', '#' + tableId + ' tbody tr', function (event) {
+                    selectCusotmer(this, "1", event);
+                });
+                $("#" + selectRowId).click(function (event) {
+                    var row = $("#" + tableId + " tbody tr.selected");
+                    selectCusotmer(row, "1", event);
+                });
+                // Set first record as default selected
+                $("#" + tableId + " tbody tr:first").css("background-color", "#d8d8d8");
+                jQuery.tableNavigation({
+                    "onRowChange": function (output) {
+                        if (output) {
+                            var selectId = $(output.row).data('selectid');
+                            if (output.r && output.keycode === "40") {
+                                _00("PgDn", event);
+                                generateTableCCGZ("top-to-bottom");
+                            } else if (output.r && output.keycode === "38" && !selectId) {
+                                _00("PgUp", event);
+                                generateTableCCGZ("bottom-to-top");
+                            } else {
+                                $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+                                $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+                                $(output.row).css({
+                                    "background-color": "#d8d8d8"
+                                });
+                            }
+                        }
+                    }
+                });
+                // To fixed table header
+                $(".fixed-table-container-inner .th-inner").animate({
+                    width: "300px"
+                }, 500);
+            }
+
+            function generateTableWithSpanIndexCCGZ(recordCount, tableId, direction, tableSelector, spanIndices) {
+                var count = 1;
+                var counterDS = 0;
+                var idDiv = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').attr("id");
+                if (idDiv) {
+                    counterDS = idDiv.replace(/\D/g, "");
+                }
+                var row = "";
+                var mNumberSelector = "#CenPH__lb_SFLRCD__lb_1REF_lb_\\.",
+                     mDespSelector = "#CenPH__lb_SFLRCD__lb_1CENB\\.",
+                     companySelector = "#CenPH__lb_SFLRCD__lb_RE8CO\\.",
+                     locationSelector = "#CenPH__lb_SFLRCD_V1AQDT\\.",
+                     statusSelector = "#CenPH__lb_SFLRCD_V1AUDT\\.",
+                     quantitySelector = "#CenPH__lb_SFLRCD__lb_1DUNB\\.",
+
+                     mNumberSelector1 = "#CenPH__lb_SFLRCD__lb_1DVNB\\.",
+                     mDespSelector1 = "#CenPH__lb_SFLRCD__lb_1CJVA\\.",
+                     companySelector1 = "#CenPH__lb_SFLRCD__lb_1CDVA\\.",
+                     locationSelector1 = "#CenPH__lb_SFLRCD__lb_1ATST\\.",
+                     statusSelector1 = "#CenPH__lb_SFLRCD__lb_RAXST\\.",
+                     quantitySelector1 = "#CenPH__lb_SFLRCD__lb_RBNKR\\.",
+
+                     mNumberSelector2 = "#CenPH__lb_SFLRCD__lb_1C2NB\\.",
+                     mDespSelector2 = "#CenPH__lb_SFLRCD__lb_1C3NB\\.",
+                     companySelector2 = "#CenPH__lb_SFLRCD__lb_1C4NB\\.",
+                     locationSelector2 = "#CenPH__lb_SFLRCD__lb_1CSCD\\.",
+                     statusSelector2 = "#CenPH__lb_SFLRCD__lb_RTPXT\\.",
+                     quantitySelector2 = "#CenPH__lb_SFLRCD__lb_1BDCD\\.",
+
+                     mNumberSelector3 = "#CenPH__lb_SFLRCD_V1BCDT\\.",
+                     mDespSelector3 = "#CenPH__lb_SFLRCD_V1ATDT\\.",
+                     companySelector3 = "#CenPH__lb_SFLRCD__lb_1CTCD\\.",
+                     locationSelector3 = "#CenPH__lb_SFLRCD__lb_1C7VA\\.",
+                     statusSelector3 = "#CenPH__lb_SFLRCD__lb_1C0NB\\.",
+                     quantitySelector3 = "#CenPH__lb_SFLRCD__lb_1DANB\\.";
+                var selectId = "";
+                var dataArray = "";
+                var data = "";
+                $(tableSelector).each(function () {
+                    if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
+                        var divid = $(this);
+                        var selectId = $(divid.children('select')).attr('id');
+                        var tr = "";
+                        if (count === 1 && direction === "top-to-bottom") {
+                           
+                            tr += "<tr tabindex='1' data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                        } else if (count === recordCount && direction === "bottom-to-top") {
+                            
+                            tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " class='selected' data-count=" + (count++) + ">";
+                        } else {
+                           
+                            tr += "<tr tabindex=" + count + " data-selectid=" + selectId + " data-count=" + (count++) + ">";
+                        }
+
+                        data += '<td>' + (($(mNumberSelector + counterDS).length > 0) ? $(mNumberSelector + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mDespSelector + counterDS).length > 0) ? $(mDespSelector + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(companySelector + counterDS).length > 0) ? $(companySelector + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(locationSelector + counterDS).length > 0) ? $(locationSelector + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(statusSelector + counterDS).length > 0) ? $(statusSelector + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(quantitySelector + counterDS).length > 0) ? $(quantitySelector + counterDS).html() : '&nbsp;') + '</td>';
+
+
+                        data += '<td>' + (($(mNumberSelector1 + counterDS).length > 0) ? $(mNumberSelector1 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mDespSelector1 + counterDS).length > 0) ? $(mDespSelector1 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(companySelector1 + counterDS).length > 0) ? $(companySelector1 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(locationSelector1 + counterDS).length > 0) ? $(locationSelector1 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(statusSelector1 + counterDS).length > 0) ? $(statusSelector1 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(quantitySelector1 + counterDS).length > 0) ? $(quantitySelector1 + counterDS).html() : '&nbsp;') + '</td>';
+
+
+                        data += '<td>' + (($(mNumberSelector2 + counterDS).length > 0) ? $(mNumberSelector2 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mDespSelector2 + counterDS).length > 0) ? $(mDespSelector2 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(companySelector2 + counterDS).length > 0) ? $(companySelector2 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(locationSelector2 + counterDS).length > 0) ? $(locationSelector2 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(statusSelector2 + counterDS).length > 0) ? $(statusSelector2 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(quantitySelector2 + counterDS).length > 0) ? $(quantitySelector2 + counterDS).html() : '&nbsp;') + '</td>';
+
+
+                        data += '<td>' + (($(mNumberSelector3 + counterDS).length > 0) ? $(mNumberSelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(mDespSelector3 + counterDS).length > 0) ? $(mDespSelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(companySelector3 + counterDS).length > 0) ? $(companySelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(locationSelector3 + counterDS).length > 0) ? $(locationSelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(statusSelector3 + counterDS).length > 0) ? $(statusSelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td>' + (($(quantitySelector3 + counterDS).length > 0) ? $(quantitySelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        $("#" + tableId + " tbody").append(tr + data + "</tr>");
+                        data = "";
+                        counterDS++;
+                    } else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
+                        $("#previous-page,#next-page").remove();
+                        if ($("#CenPH__lb_SFLRCD_0").length === 0) {
+                            $("#divCstAcc").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                        }
+                        if ($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                            $("#divCstAcc").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                        }
+
+                    }
+                });
+            }
+
+         $("#account, #txtex").ForceNumericOnly();
             $('#tblCstAcc tr td').each(function (i, col) {
 
                 if ($(col).text().indexOf('undefined') > 0) {
