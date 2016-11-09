@@ -709,11 +709,11 @@
             //Set model data
 			
             $("#model-number").text($("[id$=lb_SFLCTL__lb_PAXTX]").text());
-			$("#model-name").text($("[id$=lb_SFLCTL__lb_PA2TX]").text());
-			$("#product-category").text($("[id$=lb_SFLCTL__lb_PAXCD]").text());
-			$("#product-type").text($("[id$=lb_SFLCTL__lb_CFATX]").text());
-			$("#vendor-number").text($("[id$=lb_SFLCTL__lb_PBLNB]").text());
-			$("#vendor-name").text($("[id$=lb_SFLCTL__lb_CECTX]").text());
+      			$("#model-name").text($("[id$=lb_SFLCTL__lb_PA2TX]").text());
+      			$("#product-category").text($("[id$=lb_SFLCTL__lb_PAXCD]").text());
+      			$("#product-type").text($("[id$=lb_SFLCTL__lb_CFATX]").text());
+      			$("#vendor-number").text($("[id$=lb_SFLCTL__lb_PBLNB]").text());
+      			$("#vendor-name").text($("[id$=lb_SFLCTL__lb_CECTX]").text());
 			//$("#model-number").html($("#CenPH__lb_SFLCTL__lb_PAXTX").html()+ "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_PA2TX").html() );
             //$("#product-category").html($("#CenPH__lb_SFLCTL__lb_PAXCD").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CFATX").html());
             //$("#vendor-number").html($("#CenPH__lb_SFLCTL__lb_PBLNB").html() + "&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CECTX").html());
@@ -729,41 +729,41 @@
 			
 			$('#customerName td:nth-child(4)').each(function (i, col) {
 			    var $this = $(this).html();
-			    var arr = $this.split('&nbsp;')
+			    var arr = $this.split('&nbsp;');
 			    for (var i = 0; i < arr.length; i++) {
+
 			        if (arr[i] != "") {
+
 			            mod.push(arr[i]);
 
 			        }
-
 			    }
 			    $(this).html("");
-			    $(this).html('<span>' + mod[0] + '</span><span style="margin-left: 80px;">' + mod[1] + '</span><span style="margin-left: 80px;">' + mod[2] + '</sapn>');
-			    
-			   
+			    $(this).html('<span>' +((mod[0] == undefined) ? " " : mod[0]) + '</span><span style="margin-left: 80px;">' + ((mod[1] == undefined) ? " " : mod[1]) + '</span><span style="margin-left: 80px;">' + ((mod[2] == undefined) ? " " : mod[2]) + '</span>');
 			});
-            var doAction = function (row, value, event) {
-                var selectId = $(row).data('selectid');
-                a = selectId.split(".");
-                $("#" + a[0] + "\\." + a[1]).val(value);
-                _00('Enter', event);
-            }
-            //handle F12 event
-            $("#previous").on("click", function (event) {
-                _00('F12', event);
-            });
-            $(".model-reverse").on("click", function (event) {
-                var row = $("#customerName tbody tr.selected");
-                doAction(row, "1", event);
-            });
-            $(".model-transfer").on("click", function (event) {
-                var row = $("#customerName tbody tr.selected");
-                doAction(row, "6", event);
-            });
-            $(".model-orders").on("click", function (event) {
-                var row = $("#customerName tbody tr.selected");
-                doAction(row, "7", event);
-            });
+
+      var doAction = function (row, value, event) {
+          var selectId = $(row).data('selectid');
+          a = selectId.split(".");
+          $("#" + a[0] + "\\." + a[1]).val(value);
+          _00('Enter', event);
+      }
+      //handle F12 event
+      $("#previous").on("click", function (event) {
+          _00('F12', event);
+      });
+      $(".model-reverse").on("click", function (event) {
+          var row = $("#customerName tbody tr.selected");
+          doAction(row, "1", event);
+      });
+      $(".model-transfer").on("click", function (event) {
+          var row = $("#customerName tbody tr.selected");
+          doAction(row, "6", event);
+      });
+      $(".model-orders").on("click", function (event) {
+          var row = $("#customerName tbody tr.selected");
+          doAction(row, "7", event);
+      });
 			
 			$("#next").click(function (event) {
 				console.log("ss");
