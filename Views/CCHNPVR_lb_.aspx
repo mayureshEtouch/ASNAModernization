@@ -240,7 +240,7 @@
                                     <div class="mdl-cell mdl-cell--2-col"><span class="form-label">For:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
-                                            <input type="text" onfocus="_09('#DDUNB','12,31','#RCDDTL1');" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width: 50%" /></span>
+                                            <input type="text" onfocus="_09('#DDUNB','12,31','#RCDDTL1');" id="months" maxlength="3" class="mdl-textfield__input" size="3" data-tb-index="11" style="width: 63%" /></span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col" style=""><span class="form-label">Months</span> </div>
                                     <div class="mdl-cell mdl-cell--4-col" style="">
