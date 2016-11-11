@@ -42,11 +42,11 @@
                         <h2 class="_title">Work with Contracts</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="javascript:void(0);"  data-menu="6"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Calculate Credit Contract</p>
+                        <li class="_item"><a href="javascript:void(0);"  data-menu="6"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Calculate Credit Contract</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Short GE Application</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Short GE Application</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -68,17 +68,17 @@
                         <h2 class="_title">Work with Sales Order</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item" id="enter-sales-order"><a data-menu="1" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Sales Order</p>
+                        <li class="_item" id="enter-sales-order"><a data-menu="1" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Enter Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#" data-menu="2" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Edit Sales Order</p>
+                        <li class="_item"><a href="#" data-menu="2" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Edit Sales Order</p>
                         </a></li>
-                        <li class="_item"><a data-menu="3" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Sales Order</p>
+                        <li class="_item"><a data-menu="3" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Sales Order</p>
                         </a></li>
-                        <li class="_item"><a data-menu="20" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Credit Applications</p>
+                        <li class="_item"><a data-menu="20" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work Credit Applications</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Old Sales Orders</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Old Sales Orders</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Worksheet Sales Process</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Worksheet Sales Process</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -100,15 +100,15 @@
                         <h2 class="_title">Inventory & Delivery Schedule</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#" data-menu="4" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                        <li class="_item"><a href="#" data-menu="4" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Deliveries</p>
                         </a></a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a data-menu="11" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
+                        <li class="_item"><a data-menu="11" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a data-menu="13" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
+                        <li class="_item"><a data-menu="13" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
                         </a></li> 
                     </ul>
                     <!-- back-content ends here -->
@@ -130,15 +130,15 @@
                         <h2 class="_title">Misc. Customer Service</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
-                        <li class="_item"><a href="javascript:void(0);"  data-menu="8"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Customer Information</p>
+                        <li class="_item"><a href="javascript:void(0);"  data-menu="8"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Information</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -160,15 +160,15 @@
                         <h2 class="_title">Incomplete Orders</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>
-                        <li class="_item" ><a href="javascript:void(0);" data-menu="15"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Sales</p>
+                        <li class="_item" ><a href="javascript:void(0);" data-menu="15"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Incomplete Sales</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -190,10 +190,10 @@
                         <h2 class="_title">Other Misc. Sales Menu</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="javascript:void(0);" data-menu="18"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p>Enter Pickup Completions</p>
+                        <li class="_item"><a href="javascript:void(0);" data-menu="18"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Enter Pickup Completions</p>
 
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -1003,6 +1003,10 @@
         .homepage-content .mdl-cell {
             margin: 0px;
         }
+
+        .bold {
+            font-weight: bold;
+        }
     </style>
 
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/homepage.js")%>"></script>
@@ -1023,8 +1027,12 @@
             //Handle enter click event
             $("._list a").on("click", function (event) {
                  var menu = $(this).data("menu");
-                 $("#CenPH_MENUFMT_OPTION").val(menu);
-                _00("Enter", event);
+                 console.log(menu);
+                 if(menu && menu > 0) {
+                    $("#CenPH_MENUFMT_OPTION").val(menu);
+                    _00("Enter", event);
+                 }
+                 
             });
         });
     </script>
