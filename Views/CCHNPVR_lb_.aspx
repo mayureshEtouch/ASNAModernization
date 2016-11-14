@@ -441,16 +441,17 @@
             var descriptions = ['Sales','Commercial','Builder'];
             makeSelectDescriptive("payment_methods",values,descriptions);*/
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
-            $("#credit_account, #months").ForceNumericOnly();
+           // $("#credit_account, #months").ForceNumericOnly();
             $("#quantity_1, #quantity_2, #quantity_3, #quantity_4").ForceNumericOnly();
             //$("#employee_id").ForceAlphabetOnly();
-            $("#balance, #down_payment, #maint_1, #maint_2, #maint_3, #maint_4, #value_1, #value_2, #value_3, #value_4").numericWithTwoDecimalPrecisionsWithMinus();
+            // $("#balance, #down_payment, #maint_1, #maint_2, #maint_3, #maint_4, #value_1, #value_2, #value_3, #value_4").numericWithTwoDecimalPrecisionsWithMinus();
+            $("#credit_account, #balance, #down_payment, #maint_1, #maint_2, #maint_3, #maint_4, #value_1, #value_2, #value_3, #value_4").ForceAmountWithTwoDecimalValue();
             if ($("#CenPH__lb_RCDDTL1__lb_DCJVA").length == 0) {
                 $("#lbl_with_payment_of").hide();
             }
 
-            $('[id^="balance"]').NumericWithCurencyUptoTwoDecimal();
-            $('[id^="down_payment"]').NumericWithCurencyUptoTwoDecimal();
+           // $('[id^="balance"]').NumericWithCurencyUptoTwoDecimal();
+           // $('[id^="down_payment"]').NumericWithCurencyUptoTwoDecimal();
             $('[id^="maint_1"]').NumericWithCurencyUptoTwoDecimal();
             $('[id^="maint_2"]').NumericWithCurencyUptoTwoDecimal();
             $('[id^="maint_3"]').NumericWithCurencyUptoTwoDecimal();
