@@ -1650,6 +1650,7 @@
         .mdl-layout__content {
           padding-bottom: 70px;
         }
+
       </style>
 
       <script type="text/javascript">
@@ -1727,10 +1728,12 @@
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val(date[2] + "-" + date[0] + "-" + date[1]);
             });
 
-            //confirm the ID's
-             $("#defDate").val($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").val());
-            $("#defDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
-            $("#defdt-reqesdate").click(function () { $("#defDate").datepicker("show"); });
+            if ($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").length > 0) {
+              $("#defDate").val($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").val());
+              $("#defDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#defdt-reqesdate").click(function () { $("#defDate").datepicker("show"); });
+            }
+            else {$("#defDate").parent().parent().parent().css("display","none")}
 
             var tempKeys = {
               "CenPH_DSPFMT1_CRPHNB": "homePhone",
@@ -1768,11 +1771,36 @@
 
             //replacing tempId's with input/select
             for (var key in tempKeys) {
+
+              console.log($("#"+key).length);
+              if ($("#"+key).length == 0) {
+                console.log($('#'+tempKeys[key]).parent().parent().parent());
+                $('#'+tempKeys[key]).parent().parent().parent().css("display","none")
+              }
+
               if ($("#"+key).is( ":input" ) || $("#"+key).is( "select" )) {
                 // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
-                $('#'+tempKeys[key]).replaceWith($("#"+key).removeAttr("style"));
+               // console.log($('#'+tempKeys[key]).parent().parent());
+                $('#'+tempKeys[key]).replaceWith($("#"+key).removeAttr("style").css({
+                  "font-weight":"100",
+                  "text-align":"left"}));
               }
             }
+
+            $("#CenPH_DSPFMT1_SS_lb_1").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_SS_lb_1").attr('maxlength','9');
+
+            $("#CenPH_DSPFMT1_SS_lb_2").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_SS_lb_2").attr('maxlength','9');
+
+            $("#CenPH_DSPFMT1_CRMTHB").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_CRMTHB").attr('maxlength','2');
+            
+            $("#CenPH_DSPFMT1_FRCNTC").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_FRCNTC").attr('maxlength','10');
+
+            $("#CenPH_DSPFMT1_ADDON_usd_").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_ADDON_usd_").attr('maxlength','7');
 
             if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
               /*Pop up confirm box*/
