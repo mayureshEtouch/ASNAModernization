@@ -231,7 +231,7 @@
                   <!-- col starts here -->
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Age</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Age</span> </div>
                       <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="age_1"></span> </div>
                     </div>
                   </div>
@@ -401,7 +401,7 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">First Payment Due:</span> </div>
                   <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
-                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                        <span data-upgraded=",MaterialTextfield" id="firstPaymentDueSpan" class="form-text">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="firstPaymentDue">
                           <i id="fstPyDue-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                         </span> 
@@ -414,7 +414,7 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Deferred Date:</span> </div>
                   <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
-                    <span data-upgraded=",MaterialTextfield" class="form-text">
+                    <span data-upgraded=",MaterialTextfield" id="defDateSpan" class="form-text">
                       <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="defDate">
                       <i id="defdt-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                     </span> 
@@ -422,6 +422,72 @@
                 </div>
               </div>
               <!-- col ends here -->
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Final Payment:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="finalPayment"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Monthly Payment:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="monthlypayment"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Total Of Payments:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="totalPayments"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Amount Financed:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="amtFinanced"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Interest Amount:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="intAmount"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Loan Orig. Fee:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="loanOrigFee"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
             </div>
             <!-- content-grid mdl-grid ends here --> 
             <!-- content-grid mdl-grid starts here -->
@@ -436,23 +502,19 @@
                       </div>
                 </div>
               </div>
-              <!-- col ends here --> 
-             <!-- col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <div class="content-grid mdl-grid">
-                  
-                  
-                </div>
-              </div>
               <!-- col ends here -->
+
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  
-                  
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">A.P.R.:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="apr"></span>
+                  </div>
                 </div>
               </div>
               <!-- col ends here -->
+
             </div>
             <!-- content-grid mdl-grid ends here --> 
           
@@ -488,6 +550,17 @@
               </div>
             </div>
             <!-- col ends here -->
+
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Disability:</span> </div>
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <span data-upgraded=",MaterialTextfield" class="form-text" id="disability"></span>
+                    </div>
+              </div>
+            </div>
+            <!-- col ends here -->
           <!-- content-grid mdl-grid ends here --> 
           </div>  
       
@@ -504,6 +577,18 @@
               </div>
             </div>
             <!-- col ends here --> 
+
+            <!-- col starts here -->
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">On:</span> </div>
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <span data-upgraded=",MaterialTextfield" class="form-text" id="on"></span>
+                    </div>
+              </div>
+            </div>
+            <!-- col ends here -->
+
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
@@ -1647,6 +1732,11 @@
           margin-bottom: 10%;
         }
 
+        #CenPH__DSPFMT2 {
+          margin-top:80%;
+          margin-bottom: 10%;
+        }
+
         .mdl-layout__content {
           padding-bottom: 70px;
         }
@@ -1654,11 +1744,16 @@
       </style>
 
       <script type="text/javascript">
-         var copyToAndFrom = {
-            "displayOnlyFields": {
+        var copyToAndFrom = {
+          "displayOnlyFields":{},
+          "inputFields": {}
+        };
+
+         var copyToAndFrom_temp1 = {
               "CenPH_DdsConstant38":"date",
               "CenPH_DdsConstant39":"time",
               "CenPH_DSPFMT1_CRPHNB": "homePhone",
+              
               "CenPH_DSPFMT1_CRWRKB": "workPhone",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B": "dob", //date
               "CenPH_DSPFMT1_CRAGEB":"age",
@@ -1689,51 +1784,121 @@
               "CenPH_DSPFMT1_CRACHB" : "accLife", //select
               "CenPH_DSPFMT1_CRPRPB" : "property_1", //select
               "CenPH_DSPFMT1_CRUEMB" : "unemployment" //select
-
-            },
-            "inputFields": {
-
-            }
          }
+
+        var copyToAndFrom_temp2 = {
+              "CenPH_DdsConstant79":"date",
+              "CenPH_DdsConstant80":"time",
+              "CenPH_DSPFMT2_CRPHNB": "homePhone",
+              "CenPH_DSPFMT2_CRWRKB": "workPhone",
+              "CenPH_DSPFMT2_CRAGEB":"age",
+              "CenPH_DSPFMT2_SS_lb_1": "sssNo",
+              "CenPH_DSPFMT2_CRNMEB":"name",
+              "CenPH_DSPFMT2_CRAD1B": "address", 
+              "CenPH_DSPFMT2_CRAD2B": "address_2", 
+              "CenPH_DSPFMT2_CRCTYB":"city", 
+              "CenPH_DSPFMT2_CRSTAB": "state", 
+              "CenPH_DSPFMT2_CRZIPB": "zipcode",
+              "CenPH_DSPFMT2_CRSPNB": "codeb",
+              "CenPH_DSPFMT2_CRAGSB": "age_1",
+              "CenPH_DSPFMT2_SS_lb_2": "ssNo_1",
+              "CenPH_DSPFMT2_CRMTHB": "months",
+              "CenPH_DSPFMT2_CRSCDB": "state_1",
+              "CenPH_DSPFMT2_CRPCHB": "purchaseAmt",
+              "CenPH_DSPFMT2_CRDWNB": "dwnPayment",
+              "CenPH_DSPFMT2_ADDON_usd_": "addOnAmt",
+              "CenPH_DSPFMT2_FRCNTC": "frmContNum",
+              "ctl00\\$CenPH\\$DSPFMT2_CRFPYB" : "firstPaymentDue", //date
+              "ctl00\\$CenPH\\$DSPFMT2_DFRPMT" : "defDate",  //date
+              "ctl00\\$CenPH\\$DSPFMT2_CRLPYO" : "finalPayment", //new date field added confirm
+              "CenPH_DSPFMT2_CRMPYO" : "monthlypayment", //new field added
+              "CenPH_DSPFMT2_CRTOTO" : "totalPayments", //field added
+              "CenPH_DSPFMT2_CRBUYO" : "amtFinanced", //new field added
+              "CenPH_DSPFMT2_CRINTO" : "intAmount", //new field added
+              "CenPH_DSPFMT2_CRFILO" : "loanOrigFee", //new field added
+              "CenPH_DSPFMT2_CRINRO" : "intRate",
+              "CenPH_DSPFMT2_CRAPRO" : "apr", //new field added
+              "CenPH_DSPFMT2_CRLF_usd_O" : "life", //select //insurance life
+              "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
+              "CenPH_DSPFMT2_CRUE_usd_O" : "unemployment", //select
+              "CenPH_DSPFMT2_CRPR_usd_O" : "property_1", //select
+              "CenPH_DSPFMT2_PRDS_usd_" : "on" //new field
+        }
+
+        //replace date field
+        if ($("#ctl00\\$CenPH\\$DSPFMT2_CRFPYB").length == 1) {
+          $("#firstPaymentDueSpan").empty();
+          $("#firstPaymentDueSpan").replaceWith('<span data-upgraded=",MaterialTextfield" class="form-text" id="firstPaymentDue"></span>');
+        }
+        
+        if ($("#ctl00\\$CenPH\\$DSPFMT2_DFRPMT").length == 1) {
+          $("#defDateSpan").empty();
+          $("#defDateSpan").replaceWith('<span data-upgraded=",MaterialTextfield" class="form-text" id="defDate"></span>');
+        }
+
+        //to check ID's of both screen
+        for (var k in copyToAndFrom_temp1) {
+          if ($("#"+k).length > 0) {
+            copyToAndFrom.displayOnlyFields[k] = copyToAndFrom_temp1[k];
+          }
+        }
+
+        for (var l in copyToAndFrom_temp2) {
+          if ($("#"+l).length > 0) {
+            copyToAndFrom.displayOnlyFields[l] = copyToAndFrom_temp2[l];
+          }
+        }
+
          $(document).ready(function() {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
             //$("#dob").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val());
-             $("#dob").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val());
-            $("#dob").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
-            $("#dob-reqesdate").click(function () { $("#dob").datepicker("show"); });
-            $("#dob").on('change', function () {
-                var date = $("#dob").val().split("/");
-                $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
-                $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val(date[2] + "-" + date[0] + "-" + date[1]);
-            });
+            if ($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").length >0) {
+              $("#dob").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val());
+              $("#dob").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#dob-reqesdate").click(function () { $("#dob").datepicker("show"); });
+              $("#dob").on('change', function () {
+                  var date = $("#dob").val().split("/");
+                  $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
+                  $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val(date[2] + "-" + date[0] + "-" + date[1]);
+              });
+            }
+            else {$("#dob").parent().parent().parent().parent().css("display","none")}
 
             //$("#dob_1").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val());
-            $("#dob_1").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val());
-            $("#dob_1").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
-            $("#dob_1-reqesdate").click(function () { $("#dob_1").datepicker("show"); });
-            $("#dob_1").on('change', function () {
-                var date = $("#dob_1").val().split("/");
-                $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
-                $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val(date[2] + "-" + date[0] + "-" + date[1]);
-            });
+            if ($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").length > 0) {
+              $("#dob_1").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val());
+              $("#dob_1").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#dob_1-reqesdate").click(function () { $("#dob_1").datepicker("show"); });
+              $("#dob_1").on('change', function () {
+                  var date = $("#dob_1").val().split("/");
+                  $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
+                  $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val(date[2] + "-" + date[0] + "-" + date[1]);
+              });
+            }
+            else {$("#dob_1").parent().parent().parent().parent().css("display","none")}
+            
 
             //$("#firstPaymentDue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val());
-            $("#firstPaymentDue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val());
-            $("#firstPaymentDue").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
-            $("#fstPyDue-reqesdate").click(function () { $("#firstPaymentDue").datepicker("show"); });
-            $("#firstPaymentDue").on('change', function () {
-                var date = $("#firstPaymentDue").val().split("/");
-                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
-                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val(date[2] + "-" + date[0] + "-" + date[1]);
-            });
-
+            if ($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").length > 0) {
+              $("#firstPaymentDue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val());
+              $("#firstPaymentDue").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#fstPyDue-reqesdate").click(function () { $("#firstPaymentDue").datepicker("show"); });
+              $("#firstPaymentDue").on('change', function () {
+                  var date = $("#firstPaymentDue").val().split("/");
+                  $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val(date[2] + "-" + date[0] + "-" + date[1]);
+                  $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val(date[2] + "-" + date[0] + "-" + date[1]);
+              });
+            }
+            else {$("#firstPaymentDue").parent().parent().parent().css("display","none")}
+            
             if ($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").length > 0) {
               $("#defDate").val($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").val());
               $("#defDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
               $("#defdt-reqesdate").click(function () { $("#defDate").datepicker("show"); });
             }
             else {$("#defDate").parent().parent().parent().css("display","none")}
+
 
             var tempKeys = {
               "CenPH_DSPFMT1_CRPHNB": "homePhone",
@@ -1766,24 +1931,94 @@
               "CenPH_DSPFMT1_CRLIFB" : "life", //select
               "CenPH_DSPFMT1_CRACHB" : "accLife", //select
               "CenPH_DSPFMT1_CRPRPB" : "property_1", //select
-              "CenPH_DSPFMT1_CRUEMB" : "unemployment" //select
+              "CenPH_DSPFMT1_CRUEMB" : "unemployment", //select
+
+              //second screen extra fields
+              "ctl00\\$CenPH\\$DSPFMT2_CRLPYO" : "finalPayment", //new date field added confirm
+              "CenPH_DSPFMT2_CRMPYO" : "monthlypayment", //new field added
+              "CenPH_DSPFMT2_CRTOTO" : "totalPayments", //field added
+              "CenPH_DSPFMT2_CRBUYO" : "amtFinanced", //new field added
+              "CenPH_DSPFMT2_CRINTO" : "intAmount", //new field added
+              "CenPH_DSPFMT2_CRFILO" : "loanOrigFee", //new field added
+              "CenPH_DSPFMT2_CRAPRO" : "apr", //new field added
+              "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
+              "CenPH_DSPFMT2_PRDS_usd_" : "on" //new field
             };
 
-            //replacing tempId's with input/select
-            for (var key in tempKeys) {
+            var tempKeysDiff = {
+              //second screen fields
+              "CenPH_DSPFMT2_CRPHNB": "homePhone",
+              "CenPH_DSPFMT2_CRWRKB": "workPhone",
+              "CenPH_DSPFMT2_CRAGEB":"age",
+              "CenPH_DSPFMT2_SS_lb_1": "sssNo",
+              "CenPH_DSPFMT2_CRNMEB":"name",
+              "CenPH_DSPFMT2_CRAD1B": "address", 
+              "CenPH_DSPFMT2_CRAD2B": "address_2", 
+              "CenPH_DSPFMT2_CRCTYB":"city", 
+              "CenPH_DSPFMT2_CRSTAB": "state", 
+              "CenPH_DSPFMT2_CRZIPB": "zipcode",
+              "CenPH_DSPFMT2_CRSPNB": "codeb",
+              "CenPH_DSPFMT2_CRAGSB": "age_1",
+              "CenPH_DSPFMT2_SS_lb_2": "ssNo_1",
+              "CenPH_DSPFMT2_CRMTHB": "months",
+              "CenPH_DSPFMT2_CRSCDB": "state_1",
+              "CenPH_DSPFMT2_CRPCHB": "purchaseAmt",
+              "CenPH_DSPFMT2_CRDWNB": "dwnPayment",
+              "CenPH_DSPFMT2_ADDON_usd_": "addOnAmt",
+              "CenPH_DSPFMT2_FRCNTC": "frmContNum",
+              "ctl00\\$CenPH\\$DSPFMT2_CRFPYB" : "firstPaymentDue", //date
+              "ctl00\\$CenPH\\$DSPFMT2_DFRPMT" : "defDate",  //date
+              "ctl00\\$CenPH\\$DSPFMT2_CRLPYO" : "finalPayment", //new date field added confirm
+              "CenPH_DSPFMT2_CRMPYO" : "monthlypayment", //new field added
+              "CenPH_DSPFMT2_CRTOTO" : "totalPayments", //field added
+              "CenPH_DSPFMT2_CRBUYO" : "amtFinanced", //new field added
+              "CenPH_DSPFMT2_CRINTO" : "intAmount", //new field added
+              "CenPH_DSPFMT2_CRFILO" : "loanOrigFee", //new field added
+              "CenPH_DSPFMT2_CRINRO" : "intRate",
+              "CenPH_DSPFMT2_CRAPRO" : "apr", //new field added
+              "CenPH_DSPFMT2_CRLF_usd_O" : "life", //select //insurance life
+              "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
+              "CenPH_DSPFMT2_CRUE_usd_O" : "unemployment", //select
+              "CenPH_DSPFMT2_CRPR_usd_O" : "property_1", //select
+              "CenPH_DSPFMT2_PRDS_usd_" : "on" //new field
+            };
 
-              console.log($("#"+key).length);
-              if ($("#"+key).length == 0) {
-                console.log($('#'+tempKeys[key]).parent().parent().parent());
-                $('#'+tempKeys[key]).parent().parent().parent().css("display","none")
+            //check for 1st screen
+            if ($("#CenPH_DSPFMT1_CRPHNB").length == 1) {
+              //replacing tempId's with input/select
+              for (var key in tempKeys) {
+                if ($("#"+key).length == 0) {
+                  //console.log($('#'+tempKeys[key]).parent().parent().parent());
+                  //console.log($('#'+tempKeys[key]));
+                  $('#'+tempKeys[key]).parent().parent().parent().css("display","none");
+                }
+
+                if ($("#"+key).is( ":input" ) || $("#"+key).is( "select" )) {
+                  // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
+                 // console.log($('#'+tempKeys[key]).parent().parent());
+                  $('#'+tempKeys[key]).replaceWith($("#"+key).removeAttr("style").css({
+                    "font-weight":"100",
+                    "text-align":"left"}));
+                }
               }
+            }
 
-              if ($("#"+key).is( ":input" ) || $("#"+key).is( "select" )) {
-                // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
-               // console.log($('#'+tempKeys[key]).parent().parent());
-                $('#'+tempKeys[key]).replaceWith($("#"+key).removeAttr("style").css({
-                  "font-weight":"100",
-                  "text-align":"left"}));
+            //check for 2nd screen
+            if ($("#CenPH_DSPFMT2_CRMPYO").length == 1) {
+               for (var k in tempKeysDiff) {
+                if ($("#"+k).length == 0) {
+                  //console.log($('#'+tempKeys[key]).parent().parent().parent());
+                  //console.log($('#'+tempKeys[key]));
+                  $('#'+tempKeysDiff[k]).parent().parent().parent().css("display","none");
+                }
+
+                if ($("#"+k).is( ":input" ) || $("#"+k).is( "select" )) {
+                  // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
+                 // console.log($('#'+tempKeys[key]).parent().parent());
+                  $('#'+tempKeysDiff[k]).replaceWith($("#"+k).removeAttr("style").css({
+                    "font-weight":"100",
+                    "text-align":"left"}));
+                }
               }
             }
 
