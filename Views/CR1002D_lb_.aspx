@@ -1933,7 +1933,7 @@
               "CenPH_DSPFMT1_CRPRPB" : "property_1", //select
               "CenPH_DSPFMT1_CRUEMB" : "unemployment", //select
 
-              //second screen extra fields
+              //second screen fields
               "ctl00\\$CenPH\\$DSPFMT2_CRLPYO" : "finalPayment", //new date field added confirm
               "CenPH_DSPFMT2_CRMPYO" : "monthlypayment", //new field added
               "CenPH_DSPFMT2_CRTOTO" : "totalPayments", //field added
@@ -1980,8 +1980,26 @@
               "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
               "CenPH_DSPFMT2_CRUE_usd_O" : "unemployment", //select
               "CenPH_DSPFMT2_CRPR_usd_O" : "property_1", //select
-              "CenPH_DSPFMT2_PRDS_usd_" : "on" //new field
+              "CenPH_DSPFMT2_PRDS_usd_" : "on", //new field
+
+              //from 1st screen
+              "CenPH_DSPFMT1_PRPSLD": "property",
+              "CenPH_DSPFMT1_SMASLD": "sma",
+              "CenPH_DSPFMT1_TAXSLD": "taxes",
+              "CenPH_DSPFMT1_CRACHB" : "accLife" //select
             };
+
+/*            if($("#CenPH_DSPFMT1_PRPSLD").length == 0) {
+                $('#property').parent().parent().parent().css("display","none");
+            } else {
+              $('#property').parent().parent().parent().css("display","block");
+            }
+
+            if($("#CenPH_DSPFMT1_SMASLD").length == 0) {
+                $('#sma').parent().parent().parent().css("display","none");
+            } else {
+              $('#sma').parent().parent().parent().css("display","block");
+            }*/
 
             //check for 1st screen
             if ($("#CenPH_DSPFMT1_CRPHNB").length == 1) {
@@ -1992,6 +2010,7 @@
                   //console.log($('#'+tempKeys[key]));
                   $('#'+tempKeys[key]).parent().parent().parent().css("display","none");
                 }
+                else{$('#'+tempKeys[key]).parent().parent().parent().css("display","block");}
 
                 if ($("#"+key).is( ":input" ) || $("#"+key).is( "select" )) {
                   // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
@@ -2011,6 +2030,7 @@
                   //console.log($('#'+tempKeys[key]));
                   $('#'+tempKeysDiff[k]).parent().parent().parent().css("display","none");
                 }
+                else{$('#'+tempKeysDiff[k]).parent().parent().parent().css("display","block");}
 
                 if ($("#"+k).is( ":input" ) || $("#"+k).is( "select" )) {
                   // "CenPH__lb_SFLCTL__lb_1UYNB":"msgID",
