@@ -35,7 +35,7 @@
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
-<div class="modal-dialog-container">
+<div class="modal-dialog-container modal-cash-option">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row"> 
       <!-- Title --> 
@@ -68,7 +68,7 @@
                   <tr>
                     <th>MT</th>
                     <th>Description</th>
-                    <th></th>
+                    
                   </tr>
                 </thead>
                 <tbody>                                   
@@ -79,7 +79,7 @@
           <div class="button-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data='F12'>Previous</span></div>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit" event-data='F3'>Exit</span></div>
                        
                     </div>
           </div>
@@ -609,7 +609,7 @@
      <script type="text/javascript">
            
             $(document).ready(function () {
-               var dataMergeIndices = [[0], [1], [2]];
+               var dataMergeIndices = [[0], [1]];
       
             generateTableAndApplyInfiniteScroll("tblCashOption", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 
@@ -656,7 +656,8 @@
                 min-width: 450px !important;
                 width: 680px !important;
                 left: 50% !important;
-        margin-left: -340px !important;
+                margin-left: -340px !important;
+                height: auto !important;
             }
             #__Page_PopUp tbody > tr:first-child {
               display: none;
@@ -666,7 +667,8 @@
             }
             .modal-dialog-container {
                 width: 100%;
-                margin-top: 0;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
             }
             .mdl-layout__content {
                 height: auto !important;
@@ -684,6 +686,9 @@
             }
             #div_driver, #div_license {
                 display: none;
+            }
+            .modal-dialog-container.modal-cash-option .table-container {
+              min-height: auto !important;
             }
         </style>
     </asp:Content>
