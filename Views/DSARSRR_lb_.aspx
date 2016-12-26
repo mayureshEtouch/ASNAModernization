@@ -569,7 +569,6 @@
 
             .button-container .mdl-cell {
                 margin: 8px;
-                width: calc(100% - 0px);
             }
         }
 
