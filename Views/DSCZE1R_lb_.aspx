@@ -100,7 +100,7 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--8-col">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous
                                 </span>
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" data-upgraded=",MaterialButton,MaterialRipple">Exit To Menu
@@ -108,7 +108,7 @@
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="delete" data-upgraded=",MaterialButton,MaterialRipple">Delete
                                 </span>
                             </div>
-														<div class="mdl-cell mdl-cell--4-col pull-right">
+														<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right">
 								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Submit
                                 </span>
                             </div>
