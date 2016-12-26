@@ -69,16 +69,16 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--10-col search-container">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                                             <span class="summary-table-title pull-right">Company</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="filter-by-co">
                                             <%--<input type="text" id="number1" class="mdl-textfield__input">--%>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-tablet">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                                             <span class="summary-table-title pull-right">Location</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-loc">
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" id="filter-by-loc">
                                             <%--<input type="text" id="number2" class="mdl-textfield__input">--%>
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col">
@@ -513,7 +513,6 @@
         }
         #CenPH__lb_SFLCTL__lb_2ABCD,#CenPH__lb_SFLCTL__lb_2AACD,#CenPH__lb_SFLCTL__lb_2ACCD {
             position:static !important;
-            width: 100% !important;
         }
 
         @media (min-width: 840px) {
@@ -615,6 +614,9 @@
                 margin: 8px;
                 width: calc(100% - 0px);
             }
+			#CenPH__lb_SFLCTL__lb_2ABCD {
+				width: 55px;
+			}
         }
         /* Media queries ends here */
     </style>
