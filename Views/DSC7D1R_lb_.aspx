@@ -97,15 +97,19 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span id="cus_mailinglist" class="input-label-text"></span></div>
                             </div>
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet" id="cus_additionaladdress_div" style="padding-top: 0 !important;">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" id="cus_additionaladdress_div" style="padding: 0 !important;">
                                 	<div class="mdl-grid"  style="margin: 0">
-                                		<div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin: 0 !important;"><span class="input-label"  >Additional Address ?:</span></div>
-                                		<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
+                                		<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin: 0 !important;"><span class="input-label"  >Additional Address ?:</span></div>
+                                		<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet"><span id="cus_additionaladdress" class="input-label-text"></span></div>
                                 		</div>
                                 	</div>
                                 
+                                
+                            </div>
+							<div class="content-grid mdl-grid">
+                                                                
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Last Changed by User:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet">
                                     <span id="cus_changedby" class="input-label-text" style="display:inline-block"></span>
                                     <span class="input-label" style="display:inline-block;margin:0 10px 0 20px;">On:</span>
                                     <span id="cus_on" class="input-label-text" style="display:inline-block"></span>
