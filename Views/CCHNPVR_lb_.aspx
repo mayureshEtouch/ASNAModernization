@@ -349,7 +349,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--8-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="32" event-data="F9">Get Customer</span>
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F4" data-tb-index="33">Prompt</span>
+                                    <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F4" data-tb-index="33">Prompt</span> -->
                                     <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter" data-tb-index="34">next</span> -->
                                 </div>
                             </div>
