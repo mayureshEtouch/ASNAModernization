@@ -82,50 +82,47 @@
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Date Ordered:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="date-ordered">03/20/15</span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Location:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="location-comp">CON / 009</span></div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Date Ordered:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="date-ordered">03/20/15</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Location:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="location-comp">CON / 009</span></div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Date Delivered:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="date-del">11/20/15</span></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Employee #:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="employee">00833</span></div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Date Delivered:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="date-del">11/20/15</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Employee #:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="employee">00833</span></div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Billing Address:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Billing Address:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
 									<span class="input-label-text" id="name1"></span>
 									<span class="input-label-text" style="padding-top:0px;" id="city1"></span>
 									<span class="input-label-text" style="padding-top:0px;" id="add1"></span>
 								</div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Home Phone:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="home-phone">111/111-1111</span></div>
+                                
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid" style="margin-top: -34px;">
-                                <div class="mdl-cell mdl-cell--2-col"></div>
-                                <div class="mdl-cell mdl-cell--4-col"></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Work Phone:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="work-phone">111/111-1111</span></div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Home Phone:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="home-phone">111/111-1111</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Work Phone:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="work-phone">111/111-1111</span></div>
                             </div>
 
-                            <div class="content-grid mdl-grid select-customer-screen-grid">
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Shipping Address:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Shipping Address:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
 									<span class="input-label-text" id="name2"></span>
 									<span class="input-label-text" style="padding-top:0px;" id="city2"></span>
 									<span class="input-label-text" style="padding-top:0px;" id="add2"></span>
 								</div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Delivery Code:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="del-code">001</span></div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Delivery Code:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="del-code">001</span></div>
                             </div>
-                            <div class="content-grid mdl-grid select-customer-screen-grid" style="margin-top: -34px;">
-                                <div class="mdl-cell mdl-cell--2-col"></div>
-                                <div class="mdl-cell mdl-cell--4-col"></div>
-                                <div class="mdl-cell mdl-cell--2-col"><span class="input-label">Ad Media:</span></div>
-                                <div class="mdl-cell mdl-cell--4-col"><span class="input-label-text" id="ad-media">AD</span></div>
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet"><span class="input-label">Ad Media:</span></div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"><span class="input-label-text" id="ad-media">AD</span></div>
                             </div>
                             <span id="custom_slash" style="display:none;">/</span>
                         </div>
