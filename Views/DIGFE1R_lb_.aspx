@@ -1134,6 +1134,7 @@
 
             #__Page_PopUp {
                 left: 50% !important;
+				min-width: 830px !important;
             }
 
             #__Page_Hidden {
@@ -1164,8 +1165,7 @@
 				display: none;
 			}
 			.confirmation-outer-conatiner {
-                top: 30% !important;
-                left: 40% !important;
+                top: 35% !important;
             }
             .simplePopup {
                 left: 33% !important;
