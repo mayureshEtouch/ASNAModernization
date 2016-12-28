@@ -33,7 +33,7 @@
             </div>
             <div class="mdl-cell mdl-cell--4-col pull-right"> 
               <!-- Navigation --> 
-              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CR1002RD</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> 
+              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CR1002D</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> 
             </div>
           </div>
         </section>
@@ -113,7 +113,12 @@
                     </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="sssNo"></span>  -->
-                      <span data-upgraded=",MaterialTextfield" class="form-text" id="sssNo"></span> 
+                      <span data-upgraded=",MaterialTextfield" class="form-text" >
+					  <input type="text" maxlength="9" data-tb-index="1" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_1_new" id="CenPH_DSPFMT1_SS_lb_1_new" autocomplete="off">
+                    <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_1_new_hidden" id="CenPH_DSPFMT1_SS_lb_1_new_hidden">
+                    <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_1_new-show">Show</a> </span>
+                    <input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT1_SS_lb_1_new">
+					  </span> 
                     </div>
                   </div>
                 </div>
@@ -248,8 +253,11 @@
                         <span class="form-label">S.S.Number:</span>
                       </div>
                       <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
-                        <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="ssNo_1"></span>  -->
-                        <span data-upgraded=",MaterialTextfield" class="form-text" id="ssNo_1"></span>
+                        <span class="form-text">
+                    <input type="text" maxlength="9" autocomplete="off"  data-tb-index="4" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_2_new" id="CenPH_DSPFMT1_SS_lb_2_new">
+                    <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_2_new_hidden" id="CenPH_DSPFMT1_SS_lb_2_new_hidden">
+                    <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_2_new-show">Show</a> </span>
+                    <input type="hidden" style="width: 50% !important;" maxlength="9" size="15" class="mdl-textfield__input" value="" id="dummy-CenPH_DSPFMT1_SS_lb_2_new">
                       </div>
                     </div>
                   </div>
@@ -1766,7 +1774,7 @@
               "CenPH_DSPFMT1_CRWRKB": "workPhone",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B": "dob", //date
               "CenPH_DSPFMT1_CRAGEB":"age",
-              "CenPH_DSPFMT1_SS_lb_1": "sssNo",
+              "CenPH_DSPFMT1_SS_lb_1": "CenPH_DSPFMT1_SS_lb_1_new",
               "CenPH_DSPFMT1_CRNMEB":"name",
               "CenPH_DSPFMT1_CRAD1B": "address", 
               "CenPH_DSPFMT1_CRAD2B": "address_2", 
@@ -1776,7 +1784,7 @@
               "CenPH_DSPFMT1_CRSPNB": "codeb",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B": "dob_1", //date
               "CenPH_DSPFMT1_CRAGSB": "age_1",
-              "CenPH_DSPFMT1_SS_lb_2": "ssNo_1",
+              "CenPH_DSPFMT1_SS_lb_2": "CenPH_DSPFMT1_SS_lb_2_new",
               "CenPH_DSPFMT1_CRMTHB": "months",
               "CenPH_DSPFMT1_CRSCDB": "state_1",
               "CenPH_DSPFMT1_CRPCHB": "purchaseAmt",
@@ -1801,7 +1809,7 @@
               "CenPH_DSPFMT2_CRPHNB": "homePhone",
               "CenPH_DSPFMT2_CRWRKB": "workPhone",
               "CenPH_DSPFMT2_CRAGEB":"age",
-              "CenPH_DSPFMT2_SS_lb_1": "sssNo",
+              "CenPH_DSPFMT2_SS_lb_1": "CenPH_DSPFMT1_SS_lb_1_new",
               "CenPH_DSPFMT2_CRNMEB":"name",
               "CenPH_DSPFMT2_CRAD1B": "address", 
               "CenPH_DSPFMT2_CRAD2B": "address_2", 
@@ -1810,7 +1818,7 @@
               "CenPH_DSPFMT2_CRZIPB": "zipcode",
               "CenPH_DSPFMT2_CRSPNB": "codeb",
               "CenPH_DSPFMT2_CRAGSB": "age_1",
-              "CenPH_DSPFMT2_SS_lb_2": "ssNo_1",
+              "CenPH_DSPFMT2_SS_lb_2": "CenPH_DSPFMT1_SS_lb_2_new",
               "CenPH_DSPFMT2_CRMTHB": "months",
               "CenPH_DSPFMT2_CRSCDB": "state_1",
               "CenPH_DSPFMT2_CRPCHB": "purchaseAmt",
@@ -2082,6 +2090,51 @@
                   _16(event,this,1,'Enter');
               });
             }
+			
+			//Mask/Unmask SSN
+                $("#CenPH_DSPFMT1_SS_lb_2_new, #CenPH_DSPFMT1_SS_lb_1_new").ForceNumericOnly();
+                $("#CenPH_DSPFMT1_SS_lb_2_new").on("change keyup mouseup paste touchend", function(event) {
+                    maskUnmaskSSN("CenPH_DSPFMT1_SS_lb_2_new", event);
+                });
+                $("#CenPH_DSPFMT1_SS_lb_1_new").on("change keyup mouseup paste touchend", function(event) {
+                    maskUnmaskSSN("CenPH_DSPFMT1_SS_lb_1_new", event);
+                });
+
+                 //SSN show button click
+                $("#CenPH_DSPFMT1_SS_lb_2_new, #CenPH_DSPFMT1_SS_lb_1_new").each(function() {
+                    $(this).val($(this).val().replace(/\D/g, ''));
+                    $(this).trigger('change');
+                });
+
+                $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mousedown touchstart", function() {
+                    setTimeout(function() {
+                        var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
+                        var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
+                        $("#CenPH_DSPFMT1_SS_lb_1_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+                        $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val(ssnValue);
+                    }, 0);
+                });
+                $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mouseup touchend", function() {
+                    var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
+                    var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
+                    $("#CenPH_DSPFMT1_SS_lb_1_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+                    $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val(ssnValue);
+                });
+
+                $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown touchstart", function() {
+                    setTimeout(function() {
+                        var ssnValue = $("#CenPH_DSPFMT1_SS_lb_2_new").val();
+                        var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val();
+                        $("#CenPH_DSPFMT1_SS_lb_2_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                        $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val(ssnValue);
+                    }, 0);
+                });
+                $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mouseup touchend", function() {
+                    var ssnValue = $("#CenPH_DSPFMT1_SS_lb_2_new").val();
+                    var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val();
+                    $("#CenPH_DSPFMT1_SS_lb_2_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                    $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val(ssnValue);
+                });
 
             $("#next").click(function (event) {
               _00('Enter', event);
