@@ -1740,11 +1740,6 @@
         .mdl-layout__content {
           padding-bottom: 70px;
         }
-		.calender-icon {
-			position: relative;
-			top: -19px;
-			right: -100px;
-		}
 		@media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 

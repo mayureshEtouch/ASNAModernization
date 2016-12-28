@@ -29,7 +29,10 @@
               <span class="heading-h1">Prompt Order Pickup Completions</span> </div>
             <div class="mdl-cell mdl-cell--4-col pull-right"> 
               <!-- Navigation --> 
-              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSUKPVR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DSUKPVR</span>
+			  <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> 
+			  <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> 
+			 </div>
           </div>
         </section>
         

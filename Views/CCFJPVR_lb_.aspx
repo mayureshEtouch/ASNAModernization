@@ -39,8 +39,8 @@
       <section class="order-summary mrgnTp16">
           <div class="order-summary-wrapper">
               <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Account Number</span> <span name="order" id="CenPH__lb_RCDDTL1__lb_1REF_lb__new" class="summary-txt"></span> </div>
-                  <div class="mdl-cell mdl-cell--6-col"> <span class="summary-title">Account Extension Number</span> <span name="CenPH__lb_RCDDTL1__lb_1CENB_new" class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1CENB_new"></span> </div>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="summary-title">Account Number</span> <span name="order" id="CenPH__lb_RCDDTL1__lb_1REF_lb__new" class="summary-txt"></span> </div>
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="summary-title">Account Extension Number</span> <span name="CenPH__lb_RCDDTL1__lb_1CENB_new" class="summary-txt" id="CenPH__lb_RCDDTL1__lb_1CENB_new"></span> </div>
 
                   
               </div>
@@ -54,7 +54,7 @@
                   <!-- content-grid mdl-grid starts here -->
             <div class="content-grid mdl-grid">
               <!-- col starts here -->
-                <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
                 
                  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0;">
