@@ -253,7 +253,7 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
         width: "300px"
     }, 500);
 	
-	var deviceAgent = navigator.userAgent.toLowerCase();
+var deviceAgent = navigator.userAgent.toLowerCase();
 var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 	
 function dealycodeInst(keycode) {
@@ -268,7 +268,20 @@ function dealycodeInst(keycode) {
 		}
 	}
 	catch(e){
+		
 		generateTable("top-to-bottom");
+	}
+	finally{
+		 $('#' + tableId + ' tbody tr').on('click', function() {
+			if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
+				$("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+				$("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+				$("#" + tableId + " tbody tr").removeClass("selected");
+				$(this).addClass("selected");
+				$("div.icon-container").removeClass("icon-disable");
+			}
+			
+		});
 	}
 }
 }
