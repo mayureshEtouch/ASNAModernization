@@ -159,7 +159,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
 															<span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-											<input class="editable-data" type="text" size="17" id="phone-listed-as" maxlength="24" data-tb-index="8">
+											<input class="editable-data" type="text" size="17" id="phone-listed-as" maxlength="10" data-tb-index="8">
 											<span class="ro-data" id="ro-phone-listed-as"></span>
 										</span>
 														</div>
@@ -1859,6 +1859,7 @@
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#ref-phone").validatePhone();*///123/456-7890
             $("#sp-ssn, #cust-ssn").ForceNumericOnly();
+			$("#ro-phone-listed-as").AlphanumericOnly();
             $("#sp-ssn").on("change keyup mouseup paste", function(event) {
                 maskUnmaskSSN("sp-ssn", event);
             });
