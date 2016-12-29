@@ -1860,7 +1860,7 @@
             $("#ref-phone").validatePhone();*///123/456-7890
             $("#sp-ssn, #cust-ssn").ForceNumericOnly();
 			$("#ro-phone-listed-as").AlphanumericOnly();
-            $("phone-listed-as").ForceNumericOnly();
+            $("#phone-listed-as").ForceNumericOnly();
             $("#sp-ssn").on("change keyup mouseup paste", function(event) {
                 maskUnmaskSSN("sp-ssn", event);
             });
