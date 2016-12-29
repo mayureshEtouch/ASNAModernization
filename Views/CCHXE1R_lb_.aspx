@@ -1859,7 +1859,7 @@
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#ref-phone").validatePhone();*///123/456-7890
             $("#sp-ssn, #cust-ssn").ForceNumericOnly();
-			$("#ro-phone-listed-as").AlphanumericOnly();
+			$("#ro-phone-listed-as").ForceNumericOnly();
             $("#sp-ssn").on("change keyup mouseup paste", function(event) {
                 maskUnmaskSSN("sp-ssn", event);
             });
