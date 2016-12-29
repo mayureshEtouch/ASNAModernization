@@ -1168,8 +1168,10 @@
                 top: 35% !important;
             }
             .simplePopup {
-                left: 33% !important;
+                left: 22% !important;
                 top: 30% !important;
+                z-index: 10;
+                margin-top: 2em;
             }
         </style>
         <script type="text/javascript">
