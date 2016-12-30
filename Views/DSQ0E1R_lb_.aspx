@@ -116,7 +116,7 @@
     
     </main>
      <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-     <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
+     <div id="promptErrorMsg" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
     <!-- <div id="modal" class="simplePopup"></div> -->
 
      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
