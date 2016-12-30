@@ -149,12 +149,12 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px 8px;"><span class="form-label">Insurances A/H:</span> </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px 8px; width: 101px;"><span class="form-label">Insurances A/H:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
                                             <input type="text" id="insurance" maxlength="1" onfocus="_09('#DLEST','8,19','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="5" /></span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--2-col" style="padding-left: 20px;"><span class="form-label">C/L:</span> </div>
+                                    <div class="mdl-cell mdl-cell--2-col" style="padding-left: 20px; width: 40px;"><span class="form-label">C/L:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
                                             <input type="text" id="cl" maxlength="1" onfocus="_09('#DLFST','8,25','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="6" /></span>
@@ -197,45 +197,29 @@
 
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
-                                <div class="content-grid mdl-grid">
-                                </div>
-                            </div>
-                            <!-- 4 col ends here -->
+                           
 
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <!-- 6 col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col"><span class="form-label">Total Amount to be Financed:</span> </div>
-                                    <div class="mdl-cell mdl-cell--7-col"><span data-upgraded=",MaterialTextfield" class="form-text" id="total_amount">0.00</span> </div>
+                                    <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet"><span class="form-label">Total Amount to be Financed:</span> </div>
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet"><span data-upgraded=",MaterialTextfield" class="form-text" id="total_amount">0.00</span> </div>
 
 
                                 </div>
                             </div>
-                            <!-- 4 col ends here -->
+                            <!-- 6 col ends here -->
 
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
-                                <div class="content-grid mdl-grid">
-                                </div>
-                            </div>
-                            <!-- 4 col ends here -->
 
                         </div>
                         <!-- content-grid mdl-grid ends here -->
 
                         <!-- content-grid mdl-grid starts here -->
                         <div class="content-grid mdl-grid" style="padding: 0">
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
-                                <div class="content-grid mdl-grid">
-                                </div>
-                            </div>
-                            <!-- 4 col ends here -->
+                           
 
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <!-- 6 col starts here -->
+                            <div class="mdl-cell mdl-cell--6-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--2-col"><span class="form-label">For:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col">
@@ -252,14 +236,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- 4 col ends here -->
+                            <!-- 6 col ends here -->
 
-                            <!-- 4 col starts here -->
-                            <div class="mdl-cell mdl-cell--2-col">
-                                <div class="content-grid mdl-grid">
-                                </div>
-                            </div>
-                            <!-- 4 col ends here -->
 
                         </div>
                         <!-- content-grid mdl-grid ends here -->
