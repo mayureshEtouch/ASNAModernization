@@ -149,7 +149,7 @@
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0;"><span class="form-label">Insurances A/H:</span> </div>
+                                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 8px 8px;"><span class="form-label">Insurances A/H:</span> </div>
                                     <div class="mdl-cell mdl-cell--2-col">
                                         <span data-upgraded=",MaterialTextfield" class="form-text">
                                             <input type="text" id="insurance" maxlength="1" onfocus="_09('#DLEST','8,19','#RCDDTL1');" class="mdl-textfield__input" size="2" data-tb-index="5" /></span>

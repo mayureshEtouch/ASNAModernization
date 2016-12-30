@@ -62,15 +62,15 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Customer Name</span>
                             <span class="summary-txt" id="cust-name"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Order #</span>
                             <span class="summary-txt" id="order-number"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Version #</span>
                             <span class="summary-txt" id="version-number"></span>
                         </div>
@@ -79,85 +79,152 @@
             </section>
             <section class="form-data">
                 <div class="form-data-wrapper">
-                    <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Purchased Amount:</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
-                                    <span class="form-text" id="pur-total"></span>
-                                </div>
-                            </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Miscellaneous:</span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
-                                    <span class="form-text" id="misc"></span>
-                                </div>
-                            </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+				
+				 <!-- content-grid mdl-grid starts here -->
+				  <div class="content-grid mdl-grid" style="padding:0"> 
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+								<span class="form-label">Purchased Amount:</span>
+							</div>
+							<div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
+								<span class="form-text" id="pur-total"></span>
+							</div>
+						</div>
+					</div>
+					<!-- col ends here --> 
+					
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+								<span class="form-label">Miscellaneous:</span>
+							</div>
+							<div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
+								<span class="form-text" id="misc"></span>
+							</div>
+						</div>
+					</div>
+					<!-- col ends here --> 
+					
+				  </div>
+				  <!-- content-grid mdl-grid ends here --> 
+				  
+				  <!-- content-grid mdl-grid starts here -->
+				  <div class="content-grid mdl-grid" style="padding:0"> 
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                     <span class="form-label">Tax Rate:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="tax-rate"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+					</div>
+					<!-- col ends here --> 
+					
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                     <span class="form-label">Tax Amount:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="tax-amount"></span>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+					</div>
+					<!-- col ends here --> 
+					
+				  </div>
+				  <!-- content-grid mdl-grid ends here --> 
+				  
+				  <!-- content-grid mdl-grid starts here -->
+				  <div class="content-grid mdl-grid" style="padding:0"> 
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                     <span class="form-label">Order Total:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="order-total"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+					</div>
+					<!-- col ends here --> 
+					
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                     <span class="form-label">Payment Total:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="payment-total"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+					</div>
+					<!-- col ends here --> 
+					
+				  </div>
+				  <!-- content-grid mdl-grid ends here --> 
+				  
+				   <!-- content-grid mdl-grid starts here -->
+				  <div class="content-grid mdl-grid" style="padding:0"> 
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                     <span class="form-label">Balance Due:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="bal-due"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
+					</div>
+					<!-- col ends here --> 
+					
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                     <span class="form-label">Total Receivables:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="total-rec"></span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--5-col">
-                                    <span class="form-label">Expected Del Date:</span>
+					</div>
+					<!-- col ends here --> 
+					
+				  </div>
+				  <!-- content-grid mdl-grid ends here --> 
+				  
+				   <!-- content-grid mdl-grid starts here -->
+				  <div class="content-grid mdl-grid" style="padding:0"> 
+					<!-- col starts here -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+					  <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                                    <span class="form-label">Expected Delivery Date:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd">
+                                <div class="mdl-cell mdl-cell--7-col mdl-cell-brd mdl-cell--4-col-tablet">
                                     <span class="form-text" id="exp-deliver-date"></span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+					</div>
+					<!-- col ends here --> 
+					
+					
+					
+				  </div>
+				  <!-- content-grid mdl-grid ends here --> 
+					
+                    
                 </div>
             </section>
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
@@ -1133,6 +1200,9 @@
           th {
               padding: 0 10px;
           }
+		  #order-payment-data tr td:nth-child(2) {
+			text-align: right;
+		  }
           
         .header-background {
             background: #ffffff;
