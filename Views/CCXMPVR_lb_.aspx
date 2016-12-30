@@ -299,11 +299,13 @@
 <div id="modal" class="simplePopup"></div>
 </div>
 <!-- Modified HTML code ends here -->
-<style>#__Page_PopUp {
+<style>
+			#__Page_PopUp {
                 min-width: 800px !important;
                 width: 680px !important;
                 left: 50% !important;
-        margin-left: -400px !important;
+				margin-left: -400px !important;
+				top: 23% !important;
             }
             #__Page_PopUp tbody > tr:first-child {
               display: none;
