@@ -76,7 +76,7 @@
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop cust-name-div" style="margin: 0">
                                     <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1ALTX_new" maxlength="30" onfocus="_09('#1ALTX','9,37','#RCDDTL1');">
@@ -161,6 +161,15 @@
     text-align: left;
 
   }
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.cust-name-div {
+		width: 200px !important;
+	}
+ }
+  
   </style>          
       <%--  CU: PMT Customer/No Maint Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
