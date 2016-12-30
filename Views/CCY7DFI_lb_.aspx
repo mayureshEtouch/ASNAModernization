@@ -68,7 +68,7 @@
     <section class="table-data-content-container spacer-container-bottom">
         <div class="table-data-wrapper">
             <div class="table-data-maincontainer">
-                <div style="overflow: auto;" class="table-container">
+                <div style="overflow: auto;" class="table-container" id="displayDataDiv">
                     <div>
                         <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
                             <thead>
@@ -90,13 +90,14 @@
                             </tbody>
                         </table>
                        </div>
-                    <div class="button-container">
+                    
+                </div>
+				<div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span> </div>
                             
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -166,7 +167,7 @@
 
               var dataMergeIndices = [[0], [1], [2], [3] , [4], [5], [6], [7] ,[8]];
 
-              generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
+              generateTableAndApplyInfiniteScroll("displayDataDiv", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
 
                 $('body').on("click", "#next-page, #previous-page", function(event) {
                     ssnMasking();
