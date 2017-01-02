@@ -250,11 +250,12 @@
                     </div>
                     <div class="button-container nextStep">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
+                            <div class="mdl-cell mdl-cell--11-col mdl-cell--7-col-tablet">
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous">Previous</span>
+                                <!--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>-->
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="nextPage">Next</span>
+                            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet pull-right">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
                             </div>
 
                         </div>
