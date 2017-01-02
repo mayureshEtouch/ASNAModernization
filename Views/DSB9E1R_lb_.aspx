@@ -282,10 +282,17 @@
 		[name='lastName'] {
 			width: 95px;
 		}
-		.content-row-height .last-name-div {
+		
+	}
+	@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .content-row-height .last-name-div {
 			width: 70px;
 		}
-	}
+  }
 </style>    
     <script type="text/javascript">
       $(document).ready(function() {

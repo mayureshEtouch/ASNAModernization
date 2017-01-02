@@ -63,7 +63,7 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">Work Phone:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="workPhone"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="workPhone"></span> 
                       </div>
@@ -77,8 +77,8 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">D.O.B:</span> 
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto;"> 
-                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto; "> 
+                        <span data-upgraded=",MaterialTextfield" class="form-text" style="position: relative;">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="dob">
                           <i id="dob-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                         </span> 
@@ -111,7 +111,7 @@
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                       <span class="form-label">S.S.Number:</span> 
                     </div>
-                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0; width: 130px;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="sssNo"></span>  -->
                       <span data-upgraded=",MaterialTextfield" class="form-text" >
 					  <input type="text" maxlength="9" data-tb-index="1" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_1_new" id="CenPH_DSPFMT1_SS_lb_1_new" autocomplete="off">
@@ -210,7 +210,7 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">Co-Debtor:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="codeb"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="codeb"></span>
                       </div>
@@ -224,7 +224,7 @@
                         <span class="form-label">D.O.B:</span>
                       </div>
                       <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
-                        <span data-upgraded=",MaterialTextfield" class="form-text">
+                        <span data-upgraded=",MaterialTextfield" class="form-text" style="position: relative;">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="dob_1">
                           <i id="dob_1-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                         </span>
@@ -252,7 +252,7 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">S.S.Number:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0; width: 130px;"> 
                         <span class="form-text">
                     <input type="text" maxlength="9" autocomplete="off"  data-tb-index="4" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_2_new" id="CenPH_DSPFMT1_SS_lb_2_new">
                     <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_2_new_hidden" id="CenPH_DSPFMT1_SS_lb_2_new_hidden">
@@ -409,7 +409,7 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">First Payment Due:</span> </div>
                   <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
-                        <span data-upgraded=",MaterialTextfield" id="firstPaymentDueSpan" class="form-text">
+                        <span data-upgraded=",MaterialTextfield" id="firstPaymentDueSpan" class="form-text" style="position: relative;">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="firstPaymentDue">
                           <i id="fstPyDue-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                         </span> 
@@ -1748,6 +1748,10 @@
         .mdl-layout__content {
           padding-bottom: 70px;
         }
+		.calender-icon {
+			position: absolute;
+			right: 3px;
+		}
 		@media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
