@@ -68,15 +68,15 @@
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin-left:7px">
                                     <span class="summary-label">Customer Phone Number :</span>
                                     <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="1" id="CenPH__lb_RCDDTL1__lb_PAVNB_new" maxlength="3" style="width: calc(16.6667% - 16px) !important;">
-                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_PBMNB_new" maxlength="3" style="width: calc(16.6667% - 16px) !important;">
-                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_PAXNB_new" maxlength="4" style="width: calc(66.6667% - 16px) !important;">
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="1" id="CenPH__lb_RCDDTL1__lb_PAVNB_new" maxlength="3" >
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_PBMNB_new" maxlength="3" >
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_PAXNB_new" maxlength="4" style="width: 40%;" >
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop cust-name-div" style="margin: 0">
                                     <span class="summary-label">Customer Name/Partial Name :</span>
                                     <div id="search-by-name" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="4" id="CenPH__lb_RCDDTL1__lb_1ALTX_new" maxlength="30">
@@ -85,7 +85,7 @@
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <span class="circle-separator"><span>OR</span></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop" style="margin: 0">
+                                <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop order-num-div" style="margin: 0">
                                     <span class="summary-label">Order Number :</span>
                                     <div id="search-by-email" class="mdl-textfield mdl-js-textfield is-upgraded  mdl-textfield-select-page" data-upgraded=",MaterialTextfield">
                                     <input type="text" class="DdsCharField mdl-textfield__input" data-tb-index="5" id="CenPH__lb_RCDDTL1__lb_PBANB_new" maxlength="9">
@@ -464,10 +464,25 @@
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
 	<style type="text/css">
+	 #modal{
+          text-align: left;
+        }
 @media (min-width: 768px) and (max-width: 1025px) { 
 	.table-data-content-container .button-container .mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button {
 		padding: 6px 8px;
 		margin: 0 4px;
+	}
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	.table-container-search  .cust-name-div {
+		width: 200px;
+	}
+	.table-container-search  .order-num-div {
+		width: 152px;
 	}
 }
 </style>
@@ -528,9 +543,4 @@
               });
             });
       </script>
-      <style>
-        #modal{
-          text-align: left;
-        }
-      </style>
     </asp:Content>

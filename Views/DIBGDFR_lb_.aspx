@@ -58,7 +58,7 @@
                                         <div id="Location">
                                             <input data-tb-index="1" type="text" id="loc" maxlength="3" onfocus="_09('#CERCD','3,8','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
                                         </div> 
-										<div style="width: 130px;">
+										<div style="width: 125px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Schedule Date</span>
                                         </div>
                                         <div id="filter-by-co">
@@ -71,8 +71,8 @@
 											</span>
 																			
                                         </div>
-										<div style="width: 135px;">
-                                            <span class="summary-table-title pull-right" style="padding-left: 15px;">Total Incomplete</span>
+										<div style="width: 115px;">
+                                            <span class="summary-table-title pull-right" style="padding-left: 3px;">Total Incomplete</span>
                                         </div>
                                         <div id="filter-by-co">
                                            <span id="total" style=" margin: 12px 10px 0; display:block; text-align:right;"></span>
