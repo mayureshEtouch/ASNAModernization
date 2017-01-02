@@ -56,7 +56,7 @@
             <section class="form-data spacer-container-bottom">
                 <div class="form-data-wrapper" style="padding: 0;">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding-bottom: 0;">
                         <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Type:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0">
@@ -152,39 +152,11 @@
                                   </span>
                                 </div>
                             </div>
-                            <div class="content-grid mdl-grid content-row-height">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                      <span id="lastChangedByUser"></span>
-                                        <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
-                                    </span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
-                                <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
-                                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <span style="position:relative">
-                                        <span id="changedDate"></span>
-                                        <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
-                                        <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
-                                        <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
-                                        </span>
-                                    </span>
-                                        <span>
-                                        <span class="input-side-gutter-space form-label">At:</span>
-                                        <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
-                                          <span id="changedTime"></span>
-                                        <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
-                                    </span>
-                                    </span> </span>
-                                    
-                                </div>
-                            </div>
-                           <br><br> 
+                            
                         <!-- <span class="error"></span> -->
  
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" style="padding-bottom: 0;">
                             
                             <div class="content-grid mdl-grid content-row-height">
                                 
@@ -251,6 +223,38 @@
                             
                         </div>
                     </div>
+					<div class="content-grid mdl-grid">
+					<div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet">
+					<div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Last Changed by User:</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                      <span id="lastChangedByUser"></span>
+                                        <!-- <input type="text" class="full-input" id="lastChangedByUser" name="lastChangedByUser" value="DISTEST"> -->
+                                    </span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet" style="margin:0"> <span class="form-label">On:</span> </div>
+                                <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <span style="position:relative">
+                                        <span id="changedDate"></span>
+                                        <!-- <input type="text" id="type" name="type" style="width: 120px;" value="10/21/15"> -->
+                                        <span class="icon-textfield" style="cursor: pointer; font-size: 18px; font-weight: bold; position: absolute; right:6px; top: -1px;">
+                                        <!-- <i class="material-icons md-15 md-light ">event_available</i> -->
+                                        </span>
+                                    </span>
+                                        <span>
+                                        <span class="input-side-gutter-space form-label">At:</span>
+                                        <span class="form-text" data-upgraded=",MaterialTextfield" style="display: inline-block; margin-left: 10px;margin-right: 0;">
+                                          <span id="changedTime"></span>
+                                        <!-- <input type="text" id="at" name="at" class="full-input" value="3:15:46" style="width: 120px;"> -->
+                                    </span>
+                                    </span> </span>
+                                    
+                                </div>
+                            </div>
+						</div>
+					</div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F12" data-tb-index="20">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F7" data-tb-index="21">Extra Addresses</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F8" data-tb-index="22">Notes</span>  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F9" data-tb-index="23">Extra Phones</span>  </div>

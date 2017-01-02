@@ -226,8 +226,8 @@
                     <div class="mdl-cell mdl-cell--4-col" id="otcDetails">
                       <div class="content-grid mdl-grid">
 
-					  <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">OTC Exchange:</span> </div>
-						<div  class="mdl-cell mdl-cell--6-col"><span style="padding-right: 20px;" id="otcExchange" ></span> 
+					  <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">OTC Exchange:</span> </div>
+						<div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span style="padding-right: 20px;" id="otcExchange" ></span> 
 						</div>	
                       </div>
                     </div>
