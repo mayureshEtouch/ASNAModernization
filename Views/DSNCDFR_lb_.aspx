@@ -57,7 +57,7 @@
                     </div>
 					
 					 <div class="content-grid mdl-grid">
-                       <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Model Description</span>
                             <span id="modelDesc" class="summary-txt"></span>
                         </div>
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--10-col search-container">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--1-col" style="width: 72px;">
+                                        <div class="mdl-cell mdl-cell--1-col" style="width: 85px;">
                                             <span class="summary-table-title pull-right" >Company</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="filter-by-co">

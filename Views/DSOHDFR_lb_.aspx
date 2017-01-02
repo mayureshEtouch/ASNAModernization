@@ -43,11 +43,11 @@
                 <section class="order-summary mrgnTp16">
                     <div class="order-summary-wrapper">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Model Number</span>
                                 <span class="summary-txt" id="model_number"></span>
                             </div>
-							<div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
+							<div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Model Description</span>
                                 <span class="summary-txt" id="model_descp"></span>
                             </div>
@@ -55,7 +55,7 @@
                                 <span class="summary-title">Vendor Name</span>
                                 <span class="summary-txt" id="vendor_name"></span>
                             </div>
-                            <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Product Category</span>
                                 <span class="summary-txt" id="product_category"></span>
                             </div>
@@ -65,7 +65,7 @@
      <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div style="overflow: auto;" class="table-container">
+                            <div style="overflow: auto;" class="table-container" id="product_details_div">
                                 <div>               
                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="product_details" data-upgraded=",MaterialDataTable">
                      <thead>
@@ -88,7 +88,9 @@
                         </table>
                     </div>
                                     
-                    <div class="button-container">
+                    
+                </div>
+				<div class="button-container">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span></div>
@@ -98,7 +100,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             </div>
         </section>
@@ -124,7 +125,7 @@
            $(document).ready(function() {
              copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
              var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
-             generateTableAndApplyInfiniteScroll("product_details", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+             generateTableAndApplyInfiniteScroll("product_details_div", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
              
            });
            </script>        

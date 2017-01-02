@@ -74,7 +74,7 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--5-col">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> 
 						<span class="form-label">Product Category:</span>
@@ -84,7 +84,7 @@
 
                     </div>
                     <!-- 4 col ends here -->
-
+					
                     <!-- 4 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
@@ -94,10 +94,10 @@
                     </div>
                     <!-- 4 col ends here -->
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 0;">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">		
 						<div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Price in Effect:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col pull-right mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="productPrice" class="form-text"></span> </div>					  
+                        <div  class="mdl-cell mdl-cell--3-col pull-right mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="productPrice" class="form-text"></span> </div>					  
                       </div>
                     </div>
                     <!-- 4 col ends here -->																					
@@ -107,7 +107,7 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--5-col">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Product Group:</span> </div>
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="productGroup" class="form-text"></span> </div>
@@ -125,10 +125,10 @@
                     </div>
                     <!-- 4 col ends here -->
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 0;">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">	
 						<div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">SPIFF Price:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col pull-right mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="spiffPrice" class="form-text"></span> </div>					  
+                        <div  class="mdl-cell mdl-cell--3-col pull-right mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="spiffPrice" class="form-text"></span> </div>					  
                       </div>
                     </div>
                     <!-- 4 col ends here -->																					
@@ -138,7 +138,7 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--5-col">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Parts Warranty:</span> </div>
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="partsWarranty" class="form-text"></span> <span style="margin-left: 5px; display: inline-block;">Months</span> </div>
@@ -151,15 +151,15 @@
                     <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">SPIFF  Amount:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col pull-right mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="spiffAmount" class="form-text"></span> </div>
+                        <div  class="mdl-cell mdl-cell--3-col pull-right mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="spiffAmount" class="form-text"></span> </div>
                       </div>
                     </div>
                     <!-- 4 col ends here -->
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--3-col" style="margin: 8px 0 0;">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Commission:</span> </div>
-                        <div  class="mdl-cell mdl-cell--6-col pull-right mdl-cell--4-col-tablet"><span data-upgraded=",MaterialTextfield" class="form-text" id="net"></span>
+                        <div  class="mdl-cell mdl-cell--3-col pull-right mdl-cell--4-col-tablet"><span data-upgraded=",MaterialTextfield" class="form-text" id="net"></span>
                         <span data-upgraded=",MaterialTextfield" class="form-text">&nbsp;&nbsp;</span><span style="padding-right: 5px;" id="commision" ></span> 
                         </div>
                       </div>
@@ -171,7 +171,7 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--5-col">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Labor Warranty:</span> </div>
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="laborWarranty" class="form-text"></span> <span style="margin-left: 5px; display: inline-block;">Months</span> </div>
@@ -197,7 +197,7 @@
                   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--5-col">
+                    <div class="mdl-cell mdl-cell--4-col">
                       <div class="content-grid mdl-grid">
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">Components Warranty:</span> </div>
                         <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span data-upgraded=",MaterialTextfield" id="componentsWarranty" class="form-text"></span> <span style="margin-left: 5px; display: inline-block;">Months</span></div>
@@ -207,10 +207,10 @@
                     <!-- 4 col ends here -->
 
                     <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 8px 0 0 8px;">
+                    <div class="mdl-cell mdl-cell--4-col">
 					<div class="content-grid mdl-grid">	
-						<div  class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet" style="margin-left: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span>
+						<div  class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
+                        <div  class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" > <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span>
 						<span data-upgraded=",MaterialTextfield" class="form-text" id="refDesc" style="margin-left: 15px;"></span>
 						</div>				  
                       </div>
@@ -223,7 +223,7 @@
 				   <!-- content-grid mdl-grid starts here -->
                   <div class="content-grid mdl-grid" style="padding:0">
 				  <!-- 4 col starts here -->
-                    <div class="mdl-cell mdl-cell--5-col" id="otcDetails">
+                    <div class="mdl-cell mdl-cell--4-col" id="otcDetails">
                       <div class="content-grid mdl-grid">
 
 					  <div  class="mdl-cell mdl-cell--6-col"> <span class="form-label">OTC Exchange:</span> </div>

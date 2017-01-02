@@ -50,29 +50,29 @@
                                     </div>
                                     <div class="mdl-cell mdl-cell--10-col search-container">
                                         <div class="content-grid mdl-grid">
-                                            <div class="mdl-cell mdl-cell--2-col" >
-                                                <span class="summary-table-title pull-right" >To Location</span>
+                                            <div class="mdl-cell mdl-cell--2-col search-label" >
+                                                <span class="summary-table-title" >To Location</span>
                                             </div>
                                             <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col" id="filter-by-co">
                                                 <input type="text" id="to" class="mdl-textfield__input" value="" data-tb-index="1" maxlength="3">
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col">
-                                                <span class="summary-table-title pull-right" >Model Number:</span>
+                                            <div class="mdl-cell mdl-cell--2-col search-label">
+                                                <span class="summary-table-title" >Model Number:</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--1-col" id="">
+                                            <div class="mdl-cell mdl-cell--2-col" id="" style="width: 110px;">
                                                 <span id="model_number" class="summary-txt" style="padding-top: 12px;"></span>
                                                 
                                             </div> 
-                                            <div class="mdl-cell mdl-cell--2-col" style="margin-left: 4px;">
-                                                <span class="summary-table-title pull-right">From Company</span>
+                                            <div class="mdl-cell mdl-cell--2-col search-label" >
+                                                <span class="summary-table-title">From Company</span>
                                             </div>
                                             <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col" id="filter-by-co">
                                                 <input type="text" id="from" class="mdl-textfield__input" data-tb-index="2" maxlength="3">
                                             </div>
-                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col" >
-                                                <span class="summary-table-title pull-right">From Location</span>
+                                            <div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col search-label" >
+                                                <span class="summary-table-title">From Location</span>
                                             </div>
-                                            <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col" id="filter-by-co" style="margin-left: 15px">
+                                            <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--1-col" id="filter-by-co" style="margin-left: 5px; width: 40px;">
                                                 <input type="text" id="location" class="mdl-textfield__input" data-tb-index="3" maxlength="3">
                                             </div>                        
                                         </div>
@@ -133,6 +133,22 @@
       #model_details tbody > tr:hover {
               cursor: pointer;
             }
+	 @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+		.search-label {
+			text-align: left;
+			width: 80px;
+			word-wrap: break-word;
+		}
+		.search-label .summary-table-title {
+			white-space: normal;
+			margin: 4px 10px 0;
+		}
+	}	
+	
      </style>    
          <script type="text/javascript">
            var copyToAndFrom = {
