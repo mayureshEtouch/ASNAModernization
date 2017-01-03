@@ -60,11 +60,11 @@
 						<section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Customer Name:</span>
                             <span id="customerName" class="summary-txt"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                             <span class="summary-title">Order Number:</span>
                             <span id="orderNumber" class="summary-txt"></span>
                         </div>
@@ -95,7 +95,7 @@
 												</thead>
 												<tbody>
 														<tr>
-														<td class="pull-right"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AIST_new"></span></td>
+														<td> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AIST_new"></span></td>
 														<td class="pull-right"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AACD_new"></span></td>
 														<td class="pull-right"> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2A1NB_new"></span></td>
 														<td> <span class="form-text" id="CenPH__lb_SFLCTL__lb_2AXTX_new"></span></td>

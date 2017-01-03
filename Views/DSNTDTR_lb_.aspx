@@ -86,7 +86,8 @@
             <section class="table-data-content-container spacer-container-bottom" >
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                       <div class="table-container" style="margin-bottom: 10px;">
+                       <div class="table-container" style="margin-bottom: 10px;" id="ordersDetailDataDiv">
+							<div>
                                 <table cellspacing="0" cellpadding="0" border="0" id="orders-detail-data" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable">
                                     <thead>
                                         <tr>
@@ -154,6 +155,7 @@
                                     <tbody>
                                     </tbody>
                                 </table>
+								</div>
                             </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
@@ -1410,7 +1412,7 @@
 
 				
 				 var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [10], [12], [14], [15], [17], [19]]; 
-                generateTableAndApplyInfiniteScroll("orders-detail-data", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("ordersDetailDataDiv", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 				
 				$('#orders-detail-data tr td').each(function (i, col )
 				 {
