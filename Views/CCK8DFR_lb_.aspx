@@ -61,7 +61,7 @@
             <section class="table-data-content-container spacer-container-bottom mrgnTp16">
               <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
-                  <div style="overflow: auto;" class="table-container">
+                  <div style="overflow: auto;" class="table-container" id="creditReferencesDiv">
                     <div>               
                       <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="credit_references" data-upgraded=",MaterialDataTable">
                        <thead>
@@ -190,7 +190,18 @@
           "CenPH__lb_SFLRCD__lb_1CREC",
           ];
           var dataMergeIndices = [[0], [1], [2], [3], [4], [6], [8], [9], [10], [11], [13]];
-          generateTableAndApplyInfiniteScroll("credit_references", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
+          generateTableAndApplyInfiniteScroll("creditReferencesDiv", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK",spanIds);
+		  
+		   //Error message
+                if($("#__Page_PopUp .simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
+		  
         });
         </script>
         <div id="Div1" style="display:none;">
