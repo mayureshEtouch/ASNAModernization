@@ -376,6 +376,11 @@
                       return this;
 				});
 				$("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='?']").remove();
+        
+          $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children('option').hide();
+          $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children("option[value^='Y']" ).show();
+          $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children("option[value^='N']" ).show();
+
 			    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
           if($(".simplePopupClose").length > 0) {
                      $(".simplePopupBackground1").show();
