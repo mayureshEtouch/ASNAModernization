@@ -157,7 +157,7 @@
                 </div>
             </section>
         </main>
-        <div id="modal" class="simplePopup"></div>
+        <div id="promptErrorMsg" class="simplePopup"></div>
         <!-- Modified HTML code ends here -->
         <div id="Div1" style="display:none;">
             
