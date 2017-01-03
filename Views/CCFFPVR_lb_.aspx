@@ -696,7 +696,7 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 800px !important;
+                height: 100% !important;
             }
             .simplePopup {
               left: 30% !important;

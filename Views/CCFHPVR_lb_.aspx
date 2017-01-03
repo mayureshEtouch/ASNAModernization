@@ -48,10 +48,10 @@
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--8-col">
+                        <div class="mdl-cell mdl-cell--9-col">
                             <!-- Title -->
                             <span class="heading-h1">Enter Complete Account Number</span> </div>
-                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <div class="mdl-cell mdl-cell--3-col pull-right">
                             <!-- Navigation -->
                             <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCFHPVR</span></div>
                     </div>
@@ -61,10 +61,10 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                                         <span class="form-label" style="margin: 7px 10px 0 0">Enter Complete Account #:</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--7-col" style="margin:0">
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin:0">
                                         <span class="form-text"><input type="text" class="mdl-textfield__input" size="15" id="CenPH__lb_RCDDTL1__lb_1Y2NB_new" maxlength="16" /></span>
                                     </div>
                                 </div>
@@ -620,10 +620,10 @@
         </script>
         <style>
             #__Page_Hidden{
-                height: 800px !important;
+                height: 100% !important;
             }
             #__Page_PopUp {
-                min-width: 450px !important;
+                min-width: 500px !important;
                 width: 50% !important;
                 left: 50% !important;
                 margin-left: -25%;
