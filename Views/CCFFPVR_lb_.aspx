@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="form-data" style="margin-bottom:5px;">
+                <section class="form-data" style="margin-bottom:18px;">
                     <div class="form-data-wrapper" style="padding-bottom:0;">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--12-col">

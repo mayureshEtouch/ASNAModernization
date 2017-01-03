@@ -57,7 +57,7 @@
                     </div>
                 </section>
                 <section class="form-data">
-                    <div class="form-data-wrapper" style="padding-bottom:0;">
+                    <div class="form-data-wrapper" style="padding-bottom:0; margin-bottom: 15px;">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                 <div class="content-grid mdl-grid">
@@ -646,6 +646,7 @@
             .modal-dialog-container {
                 width: 100% !important;
                 margin-top: 0;
+				margin-bottom: 0;
             }
             .mdl-layout__content {
                 height: auto !important;
