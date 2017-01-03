@@ -209,8 +209,8 @@
                     <!-- 4 col starts here -->
                     <div class="mdl-cell mdl-cell--4-col">
 					<div class="content-grid mdl-grid">	
-						<div  class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
-                        <div  class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" > <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span>
+						<div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="form-label">UPC Vnd/ ID Ref:</span> </div>
+                        <div  class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet" > <span data-upgraded=",MaterialTextfield" class="form-text" id="ref"></span>
 						<span data-upgraded=",MaterialTextfield" class="form-text" id="refDesc" style="margin-left: 15px;"></span>
 						</div>				  
                       </div>

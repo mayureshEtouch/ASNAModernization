@@ -70,7 +70,7 @@
                                     <div id="search-by-phone" class="mdl-textfield mdl-js-textfield is-upgraded mdl-textfield-select-page mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
                                     <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="1" id="CenPH__lb_RCDDTL1__lb_DAVNB_new" onfocus="_09('#DAVNB','5,37','#RCDDTL1');"  maxlength="3" >
                                     <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="2" id="CenPH__lb_RCDDTL1__lb_DBMNB_new" onfocus="_09('#DBMNB','5,41','#RCDDTL1');" maxlength="3" >
-                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_DAXNB_new" maxlength="4" onfocus="_09('#DAXNB','5,45','#RCDDTL1');" >
+                                    <input type="text" class="DdsDecField mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop" data-tb-index="3" id="CenPH__lb_RCDDTL1__lb_DAXNB_new" maxlength="4" onfocus="_09('#DAXNB','5,45','#RCDDTL1');" style="width: 40%;" >
                                     </div>
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col">

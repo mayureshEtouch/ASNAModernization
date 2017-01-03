@@ -62,17 +62,17 @@
             <section class="order-summary" style="margin-bottom: 16px;">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Current Information</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2P7TX_new"></span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CETTX_new"></span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CE2TX_new"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Home Phone:</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CSTNB_new"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Work Phone:</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CU3NB_new"></span>
                         </div>
@@ -83,7 +83,7 @@
             <section class="table-data-content-container spacer-container-bottom">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="table-container" style="overflow: auto;">
+                        <div class="table-container" style="overflow: auto;" id="customerNameDiv">
                             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="customerName">
                                 <thead>
                                     <tr>
@@ -729,7 +729,7 @@
                 copyData(copyToAndFrom, "");
                 // Search by Customer data table record mapping
                 var dataMergeIndices = [[0, "&nbsp;", 1], [2], [3], [4], [5, "&nbsp;", 6], [7], [8, "&nbsp;", 9, "&nbsp;", 10, "</br>", 11, "&nbsp;", 12]];
-                generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("customerNameDiv", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
           
                 //Next button click handler
                 $("#next").click(function (event) {
