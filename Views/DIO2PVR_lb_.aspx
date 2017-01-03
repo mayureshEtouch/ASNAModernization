@@ -376,10 +376,20 @@
                       return this;
 				});
 				$("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='?']").remove();
-        
-          $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children('option').hide();
-          $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children("option[value^='Y']" ).show();
-          $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children("option[value^='N']" ).show();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='I']").remove();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='E']").remove();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='A']").remove();
+       $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='R']").remove();
+       $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='P']").remove();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='C']").remove();
+
+         $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='X']").remove();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='L']").remove();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='*']").remove();
+        $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option[value='S']").remove();
+          //$("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children('option').hide();
+          //$("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children("option[value^='Y']" ).show();
+         // $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").children("option[value^='N']" ).show();
 
 			    $("#CenPH__lb_RCDDTL1__lb_PH2S_lb_").appendTo("#select-value");
           if($(".simplePopupClose").length > 0) {
