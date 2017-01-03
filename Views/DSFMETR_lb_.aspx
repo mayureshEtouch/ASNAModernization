@@ -254,7 +254,7 @@
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous">Previous</span>
                                 <!--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>-->
                             </div>
-                            <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet pull-right">
+                            <div class="mdl-cell mdl-cell--5-col mdl-cell--1-col-tablet pull-right">
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
                             </div>
 
