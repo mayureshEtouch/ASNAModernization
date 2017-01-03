@@ -159,7 +159,7 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
 															<span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-											<input class="editable-data" type="text" size="17" id="phone-listed-as" maxlength="10" data-tb-index="8">
+											<input class="editable-data" type="text" size="28" id="phone-listed-as" maxlength="24" data-tb-index="8">
 											<span class="ro-data" id="ro-phone-listed-as"></span>
 										</span>
 														</div>
@@ -356,7 +356,7 @@
            <!-- <div id="modal1" class="simplePopup"></div>-->
 
     <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
- <div id="modal" class="simplePopup"></div> 
+ <div id="promptErrorMsg" class="simplePopup"></div> 
 
 
             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
@@ -369,7 +369,7 @@
         </div>
     
     <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;"> 
+        <div id="Div1" style="display:none;"> 
             
       <%--  CU: ED1 Personal Detail   Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1679,6 +1679,8 @@
         .vertical-top {
             vertical-align: top;
         }
+
+        #Div1 {padding-bottom: 100px;}
     </style>
     <script type="text/javascript">
         var copyToAndFrom = {
@@ -1865,7 +1867,7 @@
             $("#ref-phone").validatePhone();*///123/456-7890
             $("#sp-ssn, #cust-ssn").ForceNumericOnly();
 			$("#ro-phone-listed-as").AlphanumericOnly();
-            $("#phone-listed-as").ForceNumericOnly();
+            $("#phone-listed-as").AlphanumericOnly();
             $("#sp-ssn").on("change keyup mouseup paste", function(event) {
                 maskUnmaskSSN("sp-ssn", event);
             });
