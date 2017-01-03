@@ -1134,7 +1134,6 @@
 
             #__Page_PopUp {
                 left: 50% !important;
-				min-width: 830px !important;
             }
 
             #__Page_Hidden {
@@ -1166,6 +1165,7 @@
 			}
 			.confirmation-outer-conatiner {
                 top: 35% !important;
+				left: 45% !important;
             }
             .simplePopup {
                 left: 22% !important;
@@ -1233,7 +1233,7 @@
                     $("#first-view").show();
                     $("#second-view").hide();
 
-                    $("#__Page_PopUp").css({"height":"240px", "width":"500px", "margin-left":"-250px","top":"20%"});
+                    $("#__Page_PopUp").css({"height":"240px", "width":"800px", "margin-left":"-400px","top":"20%", "min-width": "800px"});
 
                 }else{
 
@@ -1244,7 +1244,10 @@
 
                       $("#first-view").hide();
                      $("#second-view").show();
-                     $("#__Page_PopUp").css({"width":"830px", "margin-left":"-415px","top":"12%"});
+					 $("#__Page_PopUp").css({"width":"740px", "margin-left":"-370px","top":"12%", "min-width":"740px"});
+					 if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
+                     $("#__Page_PopUp").css({"width":"330px", "margin-left":"-165px","top":"12%", "min-width":"330px", "height": "260px"});
+					 }
                 }
 
                 //Set page details
