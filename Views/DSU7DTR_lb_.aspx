@@ -62,9 +62,9 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #/Version #</span> <span name="order" class="summary-txt" id="order-version"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Date</span> <span name="username" class="summary-txt" id="payment-date"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="summary-title">Order #/Version #</span> <span name="order" class="summary-txt" id="order-version"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"> <span class="summary-title">Date</span> <span name="username" class="summary-txt" id="payment-date"></span> </div>
                     </div>
                 </div>
             </section>
@@ -86,10 +86,9 @@
             <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
-                        <div class="fixed-table-container">
-                            <div class="header-background"></div>
-                            <div class="fixed-table-container-inner">
-                                <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="completed-order-payment">
+                         <div class="table-container" style="overflow: auto;">
+                            <div>	
+                                <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="completed-order-payment">
                                     <thead>
                                         <tr>
                                             <th style="width: 10%">
@@ -109,7 +108,7 @@
                                             <th style="width: 7%">
                                                 <div class="th-inner">Version</div>
                                             </th>
-                                            <th style="width: 8%">
+                                            <th style="width: 15%">
                                                 <div class="th-inner">Method Type</div>
                                             </th>
                                             <th style="width: 10%">
@@ -118,7 +117,7 @@
                                             <th style="width: 10%">
                                                 <div class="th-inner">ID</div>
                                             </th>
-											<th style="width: 15%">
+											<th style="width: 8%">
                                                 <div class="th-inner">&nbsp;</div>
                                             </th>
                                         </tr>
@@ -131,10 +130,10 @@
                             <span id="custom_slash" style="display:none;">/</span>
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="taxes">taxes</span>
                                     </div>
-                                    <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
                                 </div>
                             </div>
                         </div>

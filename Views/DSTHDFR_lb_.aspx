@@ -88,10 +88,10 @@
                   </div>
               </div>
           </section>
-          <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+          <section class="table-data-content-container spacer-container-bottom">
             <div class="table-data-wrapper">
               <div class="table-data-maincontainer">
-                <div style="overflow: auto;" class="table-container">
+                <div style="overflow: auto;" class="table-container" id="displayIncmOrderDiv">
                   <div>
                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayIncmOrder" data-upgraded=",MaterialDataTable">
                       <thead>
@@ -113,13 +113,14 @@
                     </table>
                    <!--  <a href="javascript:void(0);" id="sp-next-page" style="float: right;margin-right: 15px; margin-top: 7px;" class="next-icon"></a>  -->
                   </div>
-                  <div class="button-container">
+                  
+                </div>
+				<div class="button-container">
                       <div class="content-grid mdl-grid">
                           <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="printINCSales">Print INC Sales</span> </div>
                           <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
                       </div>
                   </div>
-                </div>
               </div>
             </div>
           </section>
@@ -889,7 +890,7 @@
           copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
           // Search by Customer data table record mapping
           var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]];
-          generateTableAndApplyInfiniteScroll("displayIncmOrder", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+          generateTableAndApplyInfiniteScroll("displayIncmOrderDiv", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
           $("#slman").ForceNumericOnly();
           $("#displayIncmOrder tbody tr").removeAttr("tabindex");
           

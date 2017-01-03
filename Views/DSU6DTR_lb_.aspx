@@ -182,8 +182,8 @@
                   
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
-                            <div class="mdl-cell mdl-cell--6-col pull-right"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet pull-right"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
                         </div>
                     </div>
                 </div>

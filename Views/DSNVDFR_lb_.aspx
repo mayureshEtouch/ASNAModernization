@@ -63,9 +63,9 @@
             <section class="order-summary">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Order #</span> <span name="order" id="order-number" class="summary-txt"></span> </div>
-                        <div class="mdl-cell mdl-cell--4-col"> <span class="summary-title">Version #</span> <span name="username" class="summary-txt" id="version-number"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="summary-title">Customer Name</span> <span name="username" class="summary-txt" id="cust-name"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet"> <span class="summary-title">Order #</span> <span name="order" id="order-number" class="summary-txt"></span> </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet"> <span class="summary-title">Version #</span> <span name="username" class="summary-txt" id="version-number"></span> </div>
                     </div>
                 </div>
             </section>

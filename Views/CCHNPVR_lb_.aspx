@@ -318,8 +318,9 @@
                                 </tbody>
                             </table>
                         </div>
-
-                        <div class="button-container">
+                        
+                    </div>
+					<div class="button-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-tb-index="31" event-data="F12">Previous</span>
@@ -332,7 +333,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>

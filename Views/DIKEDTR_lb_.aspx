@@ -61,15 +61,15 @@
                 <section class="order-summary">
                     <div class="order-summary-wrapper">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Order #:</span>
                                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2BANB_new"></span>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Line #:</span>
                                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2AZNB_new"></span>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                                 <span class="summary-title">Version #:</span>
                                 <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2EXNB_new"></span>
                             </div>
@@ -80,19 +80,19 @@
                 <section class="order-summary" style="margin-top: 16px;">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Model Number:</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2AXTX_new"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Serial Number:</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_2A8TX_new"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Price:</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CBIVA_new"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--3-col">
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Credit:</span>
                             <span class="summary-txt" id="CenPH__lb_SFLCTL__lb_CBPVA_new"></span>
                         </div>
@@ -100,11 +100,11 @@
                     </div>
               </div>
             </section>
-                <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div class="fixed-table-container" style="padding-top: 0px;">
-                                <div class="fixed-table-container-inner">
+                            <div style="overflow: auto;" class="table-container" id="completedOrdersDiv">
+								<div>
                                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable" id="completed-orders">
                                         <thead>
                                             <tr>
@@ -130,8 +130,8 @@
                             </div>
                             <div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--6-col"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
-                                    <div class="mdl-cell mdl-cell--6-col pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span></div>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span></div>
+                                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span></div>
                                 </div>
                             </div>
                         </div>
@@ -1181,7 +1181,7 @@
                 copyData(copyToAndFrom, "");
                 // Search by Customer data table record mapping
                 var dataMergeIndices = [[0],[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[12],[14]];
-                generateTableAndApplyInfiniteScroll("completed-orders", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("completedOrdersDiv", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
           
                 //Next button click handler
                 $("#next").click(function (event) {
