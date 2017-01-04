@@ -46,16 +46,16 @@
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-cell mdl-cell--9-col">
                         <!-- Title -->
                         <span class="heading-h1">Select Product Warranty</span> </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <div class="mdl-cell mdl-cell--3-col pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">INA4SRR</span></div>
                 </div>
             </section>
 
-            <section class="order-summary">
+            <section class="order-summary mrgnTp16">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--6-col">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+            <section class="table-data-content-container spacer-container-bottom mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="fixed-table-container">
@@ -617,6 +617,7 @@
                 width: 450px !important;
                 left: 50% !important;
                 margin-left: -225px;
+				top: 23% !important;
             }
             #__Page_PopUp > tr:first-child {
               display: none;
@@ -636,7 +637,7 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 700px !important;
+                height: 100% !important;
             }
         </style>
     </asp:Content>

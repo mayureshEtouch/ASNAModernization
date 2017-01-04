@@ -601,13 +601,14 @@
                 height: 100% !important;
             }
             #__Page_PopUp {
-                min-width: 740px !important;
-                left: 10% !important;
-                width: 80% !important;
-                height: auto !important;
-				top: 10% !important;
+               min-width: 818px !important;
+			   width: 818px !important;
+			   left: 50% !important;
+			   margin-left: -409px;
             }
-
+			#__Page_PopUp .DdsInlinePopUpContent, #__Page_PopUp #main-content {
+						width: auto;
+					}
             #__Page_PopUp > tr:first-child {
                 display: none;
             }
@@ -693,6 +694,10 @@
                 $("body").on("click", ".simplePopupClose", function() {
                     $(".simplePopupBackground1").hide();
                 });
+				//$("#cust-per-ref tbody tr td:nth-child(2)").html($(this).html().replace(/&nbsp;/gi,"s"));
+				$('#cust-per-ref tbody tr td:nth-child(3)').html(function(i,h){
+					return h.replace(/&nbsp;/g,' ');
+				});
                 
             });
         </script>

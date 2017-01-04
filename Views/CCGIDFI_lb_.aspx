@@ -850,7 +850,7 @@
                 left: 50% !important;
                 margin-left: -225px;
                 min-width: 550px !important;
-                min-height: 450px !important;
+                min-height: 305px !important;
                 height: auto !important;
             }
 
@@ -900,9 +900,12 @@
     		 }
              .simplePopup {
                 position: absolute !important;
-                top: 202px !important;
+                top: 45% !important;
                 left: 30% !important;
              }
+			 #__Page_PopUp .form-data-wrapper {
+				margin-bottom: 16px;
+			 }
         </style>
         <script type="text/javascript">
             var copyToAndFrom = {

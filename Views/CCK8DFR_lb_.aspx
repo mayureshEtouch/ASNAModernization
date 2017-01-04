@@ -85,7 +85,9 @@
                     </table>
                   </div>
 
-                  <div class="button-container" style="width: 840px;">
+                </div>
+				
+                  <div class="button-container">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="" event-data="F3">Exit</span>
@@ -95,7 +97,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </section>
@@ -118,6 +119,9 @@
         #__Page_PopUp > tbody > tr:first-child {
           display: none;
         }
+		#__Page_PopUp .DdsInlinePopUpContent, #__Page_PopUp #main-content {
+			width: auto;
+		}
         #__Page_PopUp .DdsInlinePopUpTitle {
           height: 0;
         }
@@ -157,13 +161,10 @@
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 		#__Page_PopUp {
-				min-width: 700px !important;
-				width: 700px !important;
+				min-width: 818px !important;
+				width: 818px !important;
 				left: 50% !important;
-				margin-left: -350px;
-			}
-			.table-container {
-				width: 680px !important;
+				margin-left: -409px;
 			}
 	}
 		
