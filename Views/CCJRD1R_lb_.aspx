@@ -1209,6 +1209,17 @@ var new_text = s3.toString()
           $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").text(html.substr(0,(html.length-4)).replace(new RegExp(/\d/gi),'*')+html.substr(-4));
       }
 
+      
+
+      if ($("#CenPH__lb_RCDDTL1__lb_1SPSS").html().replace('&nbsp;', '') != '') {
+            var html = $("#CenPH__lb_RCDDTL1__lb_1SPSS").text().replace(new RegExp(/\-/gi),'');
+                  
+             if(html != undefined && html.length>0){
+                 $("#CenPH__lb_RCDDTL1__lb_1SPSS").text(html.substr(0,(html.length-4)).replace(new RegExp(/\d/gi),'*')+html.substr(-4));
+               }
+
+           }
+
 		}
 		if($("#__Page_PopUp .simplePopupClose").length > 0) {
 			$(".simplePopupBackground1").show();
