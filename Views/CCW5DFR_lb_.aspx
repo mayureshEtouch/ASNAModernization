@@ -597,12 +597,12 @@
                 height: 100% !important;
             }
             #__Page_PopUp {
-                min-width: 740px !important;
+                min-width: 780px !important;
                 left: 50% !important;
-                width: 740px !important;
+                width: 780px !important;
                 height: auto !important;
-								margin-left: -370px !important;
-								top: 17% !important;
+				margin-left: -390px !important;
+				top: 17% !important;
             }
 
             #__Page_PopUp > tr:first-child {

@@ -84,8 +84,8 @@
           <!-- col starts here -->
           <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Application:</span> </div>
-              <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet" style="margin:0"> 
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Application:</span> </div>
+              <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet" style="margin:0"> 
 					<span class="form-text"><input type="text" maxlength="9" onfocus="_09('#1ITNB','5,31','#RCDKEY');" id="CenPH__lb_RCDKEY__lb_1ITNB_new" data-tb-index="1"/> </span>
 			  </div>
             </div>
