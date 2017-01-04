@@ -76,7 +76,7 @@
 						<div class="content-grid mdl-grid">
 							<div class="mdl-cell mdl-cell--7-col mdl-cell--2-col-tablet" style="margin: 0"><span class="form-label">Social Security Number:</span> </div>
 							<div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-tablet" style="margin: 0"><span class="form-text" id="CenPH__lb_RCDDTL1__lb_1A4NB_new"></span>
-								<span><a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_RCDDTL1__lb_1A4NB_new-show">Show</a> </span>
+								<span><a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH__lb_RCDDTL1__lb_1A4NB_new-show">Show</a></span>
 							</div>
 						</div>
 					</div>
@@ -1176,7 +1176,7 @@ CssClass="DdsConstant" />
 			});
 		}
 		function maskSSN() {
-			var val = $("#CenPH__lb_RCDDTL1__lb_1A4NB").html().split('-');
+			/*var val = $("#CenPH__lb_RCDDTL1__lb_1A4NB").html().split('-');
 			var s1, s2,s3;
 			for (var i = 0; i < val.length; i++) {
 				val[0] = "***";
@@ -1185,8 +1185,11 @@ CssClass="DdsConstant" />
 				val[1] = "**";
 				s2 = val[1];
 				s3= val[2];
+				break;
 			}
-			$("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(s1 + s2 + s3);
+			console.log(s3);
+var new_text = s3.toString()
+			$("#CenPH__lb_RCDDTL1__lb_1A4NB_new").html(new_text);
 			if ($("#CenPH__lb_RCDDTL1__lb_1SPSS").html().replace('&nbsp;', '') != '') {
 				var val1 = $("#CenPH__lb_RCDDTL1__lb_1SPSS").html().split('-');
 				var s4, s5, s6;
@@ -1199,8 +1202,12 @@ CssClass="DdsConstant" />
 					s6 = val1[2];
 				}
 				$("#CenPH__lb_RCDDTL1__lb_1SPSS_new").html(s4 + s5 + s6);
-			}
-
+			}*/
+                   var html = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").text().replace(new RegExp(/\-/gi),'');
+                  
+      if(html != undefined && html.length>0){
+          $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").text(html.substr(0,(html.length-4)).replace(new RegExp(/\d/gi),'*')+html.substr(-4));
+      }
 
 		}
 		if($("#__Page_PopUp .simplePopupClose").length > 0) {
