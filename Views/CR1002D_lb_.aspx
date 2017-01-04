@@ -37,7 +37,7 @@
             </div>
           </div>
         </section>
-  
+  <div id="condition1">
         <section class="table-data-content-container mrgnTp16">
           <div class="table-data-wrapper">
             <div class="table-data-maincontainer">
@@ -114,6 +114,7 @@
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0; width: 130px;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="sssNo"></span>  -->
                       <span data-upgraded=",MaterialTextfield" class="form-text" >
+                      <span data-upgraded=",MaterialTextfield" class="form-text" id="sssNo_Remark"></span>
 					  <input type="text" maxlength="9" data-tb-index="1" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_1_new" id="CenPH_DSPFMT1_SS_lb_1_new" autocomplete="off">
                     <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_1_new_hidden" id="CenPH_DSPFMT1_SS_lb_1_new_hidden">
                     <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_1_new-show">Show</a> </span>
@@ -254,6 +255,7 @@
                       </div>
                       <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0; width: 130px;"> 
                         <span class="form-text">
+                        <span data-upgraded=",MaterialTextfield" class="form-text" id="sssNo_Remark1"></span>
                     <input type="text" maxlength="9" autocomplete="off"  data-tb-index="4" size="15" class="mdl-textfield__input  masking" style="float: left;width: 67px !important;" name="CenPH_DSPFMT1_SS_lb_2_new" id="CenPH_DSPFMT1_SS_lb_2_new">
                     <input type="hidden" maxlength="9" name="CenPH_DSPFMT1_SS_lb_2_new_hidden" id="CenPH_DSPFMT1_SS_lb_2_new_hidden">
                     <a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="CenPH_DSPFMT1_SS_lb_2_new-show">Show</a> </span>
@@ -612,7 +614,7 @@
           </div>  
           <div class="button-container">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop"> 
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop" id="divAdd"> 
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="process">Process</span>
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="menu">Menu</span>
@@ -628,6 +630,8 @@
       </div>
     </div>
   </section>
+  </div>
+  <div id="condition2"></div>
 </main>
   <div id="modal1" class="simplePopup"></div>
   <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;width: auto;">
@@ -1774,7 +1778,7 @@
               "CenPH_DdsConstant38":"date",
               "CenPH_DdsConstant39":"time",
               "CenPH_DSPFMT1_CRPHNB": "homePhone",
-              
+             
               "CenPH_DSPFMT1_CRWRKB": "workPhone",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B": "dob", //date
               "CenPH_DSPFMT1_CRAGEB":"age",
@@ -1860,13 +1864,27 @@
         //to check ID's of both screen
         for (var k in copyToAndFrom_temp1) {
           if ($("#"+k).length > 0) {
-            copyToAndFrom.displayOnlyFields[k] = copyToAndFrom_temp1[k];
+            //copyToAndFrom.displayOnlyFields[k] = copyToAndFrom_temp1[k];
+            if(k=="CenPH_DSPFMT1_SS_lb_1"){
+              copyToAndFrom.inputFields[k] = copyToAndFrom_temp1[k];
+            }
+            else{
+              copyToAndFrom.displayOnlyFields[k] = copyToAndFrom_temp1[k];
+
+            }
           }
         }
 
         for (var l in copyToAndFrom_temp2) {
           if ($("#"+l).length > 0) {
-            copyToAndFrom.displayOnlyFields[l] = copyToAndFrom_temp2[l];
+            //copyToAndFrom.displayOnlyFields[l] = copyToAndFrom_temp2[l];
+            if(l=="CenPH_DSPFMT1_SS_lb_1"){
+              copyToAndFrom.inputFields[l] = copyToAndFrom_temp2[l];
+            }
+            else{
+              copyToAndFrom.displayOnlyFields[l] = copyToAndFrom_temp2[l];
+
+            }
           }
         }
 
@@ -2140,13 +2158,84 @@
                     $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val(ssnValue);
                 });
 
+              $('input:text[name="CenPH_DSPFMT1_SS_lb_1_new"]').keypress(function () {
+               
+             
+                $('input:text[name="CenPH_DSPFMT1_SS_lb_1"]').val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+                //console.log($('#dummy-CenPH_DSPFMT1_SS_lb_1_new').val());
+            });
             $("#next").click(function (event) {
+              $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+              console.log( $("#CenPH_DSPFMT1_SS_lb_1").val());
               _00('Enter', event);
             });
 
             $("#previous").click(function (event) {
               _00('F3', event);
             });
+
+
+  if(!$('#CenPH_DSPFMT1_SS_lb_1').is('input:text') ) {
+    
+      $('#next').hide();
+      $("#CenPH_DSPFMT1_SS_lb_1_new").hide();
+      $("#CenPH_DSPFMT1_SS_lb_2_new").hide();
+    //CenPH_DSPFMT1_SS_lb_2_new
+    $("#sssNo_Remark").html($("#CenPH_DSPFMT2_SS_lb_1").html());
+   
+    $("#sssNo_Remark1").html($("#CenPH_DSPFMT2_SS_lb_2").html());
+
+    var html = $("#sssNo_Remark").html();
+    if(html != undefined && html.length>0){
+        html = html.replace(/-/g,'');
+        $("#sssNo_Remark").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+        $("#CenPH_DSPFMT1_SS_lb_1_new-show").show();
+    }
+    /* Showing ssn on click*/
+
+     $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mousedown taphold touchstart", function() {
+      setTimeout(function() {
+        $("#sssNo_Remark").html(html);
+      },0);
+    });
+      $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mouseup dragend touchend", function() {
+    setTimeout(function() {
+      $("#sssNo_Remark").html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+      },0);
+     });
+
+
+    var html1 = $("#sssNo_Remark1").html();
+    if(html1 != undefined && html1.length>0){
+        html1 = html1.replace(/-/g,'');
+        $("#sssNo_Remark1").html(html1.substr(0,(html1.length-4)).replace(/\d/g,'*')+html1.substr(-4));
+        $("#CenPH_DSPFMT1_SS_lb_2_new-show").show();
+    }
+    /* Showing ssn on click*/
+
+     $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown taphold touchstart", function() {
+      setTimeout(function() {
+        $("#sssNo_Remark1").html(html1);
+      },0);
+    });
+      $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mouseup dragend touchend", function() {
+    setTimeout(function() {
+      $("#sssNo_Remark1").html(html1.substr(0,(html1.length-4)).replace(/\d/g,'*')+html1.substr(-4));
+      },0);
+     });
+
+$('#divAdd').append('<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">Print</span>');
+
+$( "#revise" ).on( "click", function() {
+   _00('F2', event);
+});
+
+$( "#print" ).on( "click", function() {
+  _00('F7', event);
+});
+
+
+}
 
 /*            $("#process").click(function (event) {
               _00('Enter', event);
