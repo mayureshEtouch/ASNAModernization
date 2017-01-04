@@ -480,6 +480,12 @@ $(document).ready(function() {
             $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
           } 
       } 
+	  if($(".time-date").length > 0) {
+		  setTimeout(function(){  $('.time-date .pull-right').html(function(i,h){
+			return h.replace(/&nbsp;/g,'');
+		 });
+	  },100)
+	  }
 });
 
 function makeSelectDescriptive(selectId, values, descriptions) {

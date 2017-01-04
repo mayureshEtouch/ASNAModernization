@@ -57,17 +57,17 @@
         <section class="order-summary">
             <div class="order-summary-wrapper">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                         <span class="summary-title">Order #/Version # </span>
                         <div class="summary-txt">
                             <span id="CenPH_1BANB"></span><span>/</span><span id="verssion-number"></span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                         <span class="summary-title">Customer Name </span>
                         <span id="CenPH_PALTX" class="summary-txt"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                         <span class="summary-title">Billing Address</span>
                         <div class="summary-txt" data-upgraded=",MaterialTextfield">
                             <span id="CenPH_PANTX"></span><span id="CenPH_PAOTX"></span>
@@ -77,7 +77,7 @@
                             <span id="CenPH_PAPTX"></span>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet">
                         <span class="summary-title">Phone Details</span>
                         <div class="summary-txt" data-upgraded=",MaterialTextfield">
                             <span id="Hphone">HOME:</span>

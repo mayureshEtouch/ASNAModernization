@@ -1025,7 +1025,7 @@ textarea {
 }
 .time-icon {
 	background: url(../Images/icons/ic_access_time_black_24dp_1x.png) no-repeat;
-	margin-right: -3px;
+	margin-right: 0;
 }
 .change-icon {
 	background: url(../Images/icons/ic_border_color_black_24dp_1x.png) no-repeat;

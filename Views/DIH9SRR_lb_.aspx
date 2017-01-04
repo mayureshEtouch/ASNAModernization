@@ -82,13 +82,12 @@
                         </div>
                     </div>
                 </section>
-                <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+                <section class="table-data-content-container mrgnTp16" style="margin-bottom: 16px;">
                     <div class="table-data-wrapper">
                         <div class="table-data-maincontainer">
-                            <div class="fixed-table-container">
-                                <div class="header-background"></div>
-                                <div class="fixed-table-container-inner">
-                                    <table cellspacing="0" cellpadding="0" border="0" class="navigateable" id="records">
+                            <div class="table-container" style="overflow: auto;">
+                                <div>
+                                    <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="records" style="margin-bottom: 10px;">
                                         <thead>
                                             <tr>
                                                 <th style="width:8%">
@@ -908,7 +907,7 @@
                 width: 100% !important;
             }
             #__Page_Hidden{
-                height: 700px !important;
+                height: 100% !important;
             }
             #modal1 {
               left: 30% !important;
