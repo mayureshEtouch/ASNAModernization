@@ -42,7 +42,7 @@
           <section class="form-data">
     		<div class="form-data-wrapper">
                 <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd mdl-cell--3-col-tablet">
                  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
                    <span class="form-label">Model Number</span>
@@ -53,7 +53,7 @@
                  </div>
                 </div>
                 
-                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd mdl-cell--3-col-tablet">
                  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
                    <span class="form-label">Vendor Number</span>
@@ -64,7 +64,7 @@
                  </div>
                 </div>
                 
-                <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                   <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
 				  <span class="form-label">Parts Warranty</span>
@@ -77,7 +77,7 @@
                 </div>
                 
                 <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd mdl-cell--3-col-tablet">
 				  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
                    <span class="form-label">Model Description</span>
@@ -89,7 +89,7 @@
 				
                 </div>
                 
-                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd mdl-cell--3-col-tablet">
 				<div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
                    <span class="form-label">Vendor Number Description</span>
@@ -103,7 +103,7 @@
                 
                 </div>
                 
-                <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                  <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
 				   <span class="form-label">Labor Warranty</span>
@@ -118,7 +118,7 @@
                 </div>
                 
                 <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell-brd mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
 				  <span class="form-label">Product Group</span>
@@ -130,7 +130,7 @@
                  </div>
 				 
                 </div>
-                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd">
+                 <div class="mdl-cell mdl-cell--4-col mdl-cell-brd mdl-cell--3-col-tablet">
 				 
 				      <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
@@ -144,7 +144,7 @@
 				 
                 
                  </div>
-                  <div class="mdl-cell mdl-cell--4-col">
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
 				   <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="padding: 0;">
 				   <span class="form-label">Components Warranty</span>
@@ -165,7 +165,7 @@
           <section class="table-data-content-container spacer-container-bottom mrgnTp16">
             <div class="table-data-wrapper">
               <div class="table-data-maincontainer">
-                <div style="overflow: auto;" class="table-container">
+                <div style="overflow: auto;" class="table-container" id="warrantyProductDiv">
                   <div>               
                     <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="warrantyProduct" data-upgraded=",MaterialDataTable">
                      <thead>
@@ -182,14 +182,15 @@
                   </table>
                 </div>
 
-                <div class="button-container">
+                
+                </div>
+				<div class="button-container">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span></div>
 
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </section>
@@ -228,7 +229,7 @@
               $(document).ready(function() {
                 copyData(copyToAndFrom);
                 var dataMergeIndices = [[0], [1], [2], [3]];
-                generateTableAndApplyInfiniteScroll("warrantyProduct", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
+                generateTableAndApplyInfiniteScroll("warrantyProductDiv", "CenPH__lb_SFLRCD", "NONE", "", dataMergeIndices);
                 //$('.navigateable td:not(:first-child)').css("text-align","right");
               });
               </script>  

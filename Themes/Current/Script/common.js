@@ -481,9 +481,12 @@ $(document).ready(function() {
           } 
       } 
 	  if($(".time-date").length > 0) {
-		  setTimeout(function(){  $('.time-date .pull-right').html(function(i,h){
-			return h.replace(/&nbsp;/g,'');
-		 });
+		  setTimeout(function(){  
+		   $('.time-date .pull-right').html(function(i,h){
+			h = h.replace(/&nbsp;/g,'');
+			return h.replace(/\s\<span/g,'<span');
+		 }); 
+		 
 	  },100)
 	  }
 });
