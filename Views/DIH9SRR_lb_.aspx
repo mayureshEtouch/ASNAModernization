@@ -884,10 +884,11 @@
         </script>
         <style>
             #__Page_PopUp {
-                min-width: 450px !important;
+                min-width: 568px !important;
                 width: 568px !important;
-                left: 30% !important;
+                left: 50% !important;
                 top: 10% !important;
+				margin-left: -284px !important;
             }
             #__Page_PopUp > tr:first-child {
               display: none;
