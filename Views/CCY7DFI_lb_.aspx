@@ -156,9 +156,12 @@
                        var html = $(ele).html();
                        html = html.replace(/-/g,'');
                        var ssn= html;
-                        $(ele).html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4));
+                        $(ele).html(html.substr(0,(html.length-4)).replace(/\d/g,'*')+html.substr(-4) + '&nbsp;<a class="ssn-show"  data-ssn="'+ssn+'" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>');
+                        console.log($(ele));
 
-                       $(ele).append('&nbsp;<a class="ssn-show"  data-ssn="'+ssn+'" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>');
+                       /*$(ele).append('&nbsp;<a class="ssn-show"  data-ssn="'+ssn+'" style="color:blue;cursor: pointer;" href="javascript:void(0);">Show</a>');*/
+
+
                          }
 
                   });
