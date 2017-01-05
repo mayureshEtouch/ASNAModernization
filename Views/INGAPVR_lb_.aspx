@@ -81,10 +81,12 @@
         }
         #__Page_PopUp {
           left: 50% !important;
-          margin-left: -250px;
+          margin-left: -275px;
           min-width: 550px !important;
           min-height: 400px !important;
           height: auto !important;
+		  width: 550px !important;
+		  top: 18% !important;
         }
         #__Page_PopUp tbody tr:first-child {
          height: 0px !important;

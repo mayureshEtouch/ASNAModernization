@@ -50,7 +50,7 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> 
                         <span class="form-label">Home Phone:</span> 
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0;"> 
                           <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="homePhone"></span>  -->
                           <span data-upgraded=",MaterialTextfield" class="form-text" id="homePhone"></span> 
                       </div>
@@ -77,7 +77,7 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">D.O.B:</span> 
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0 auto; "> 
+                      <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin:0; "> 
                         <span data-upgraded=",MaterialTextfield" class="form-text" style="position: relative;">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="dob">
                           <i id="dob-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
@@ -95,7 +95,7 @@
                   <!-- col starts here -->
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;">
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">Age:</span> 
                       </div>
                       <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> 
@@ -128,10 +128,10 @@
                 <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                       <span class="form-label">Name:</span> 
                     </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;">
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;">
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="name"></span> 
                     </div>
                   </div>
@@ -145,7 +145,7 @@
                 <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Address 1:</span> </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Address 1:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="address"></span> </div>
                   </div>
                 </div>
@@ -157,10 +157,10 @@
               <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                       <span class="form-label">Address 2:</span> 
                     </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin:0;"> 
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="address_2"></span> 
                     </div>
                   </div>
@@ -172,23 +172,23 @@
                 <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">City:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="city"></span> </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">City:</span> </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="city"></span> </div>
                   </div>
                 </div>
                 <!-- col ends here --> 
                 <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">State:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="state"></span> </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">State:</span> </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="state"></span> </div>
                   </div>
                 </div>
                 <!-- col ends here -->
                 <!-- col starts here -->
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Zip Code:</span> </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Zip Code:</span> </div>
                     <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="zipcode"></span> </div>
                   </div>
                 </div>
@@ -224,7 +224,7 @@
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                         <span class="form-label">D.O.B:</span>
                       </div>
-                      <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                      <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <span data-upgraded=",MaterialTextfield" class="form-text" style="position: relative;">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="dob_1">
                           <i id="dob_1-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
@@ -237,7 +237,7 @@
                   <!-- col starts here -->
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Age</span> </div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Age</span> </div>
                       <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="age_1"></span> </div>
                     </div>
                   </div>
@@ -281,7 +281,7 @@
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> 
                       <span class="form-label">Months:</span> 
                     </div>
-                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                      <!--  <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="months"></span>  -->
                      <span data-upgraded=",MaterialTextfield" class="form-text" id="months"></span>
                     </div>
@@ -294,7 +294,7 @@
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
                       <span class="form-label">State:</span>
                     </div>
-                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                    <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="state_1"></span>  -->
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="state_1"></span>
                     </div>
@@ -319,10 +319,10 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;">
                     <span class="form-label">Purchase Amt:</span>
                   </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="purchaseAmt"></span>  -->
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="purchaseAmt"></span>
                   </div>
@@ -333,8 +333,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Property:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Property:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="property"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="property"></span>
                       </div>
@@ -345,8 +345,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">SMA:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">SMA:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                    <!--  <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="sma"></span>  -->
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="sma"></span>
                   </div>
@@ -361,8 +361,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Taxes:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Taxes:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="taxes"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="taxes"></span>
                       </div>
@@ -372,8 +372,8 @@
              <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Down Payment:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Down Payment:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="dwnPayment"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="dwnPayment"></span>
                       </div>
@@ -383,8 +383,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Add-on Amount:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Add-on Amount:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="addOnAmt"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="addOnAmt"></span>
                       </div>
@@ -398,8 +398,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">From Contract Number:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">From Contract Number:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="frmContNum"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="frmContNum"></span>
                       </div>
@@ -409,8 +409,8 @@
              <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">First Payment Due:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">First Payment Due:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <span data-upgraded=",MaterialTextfield" id="firstPaymentDueSpan" class="form-text" style="position: relative;">
                           <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="firstPaymentDue">
                           <i id="fstPyDue-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
@@ -422,8 +422,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Deferred Date:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Deferred Date:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" id="defDateSpan" class="form-text">
                       <input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="defDate">
                       <i id="defdt-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
@@ -435,8 +435,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Final Payment:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Final Payment:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="finalPayment"></span>
                   </div>
                 </div>
@@ -446,8 +446,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Monthly Payment:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Monthly Payment:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="monthlypayment"></span>
                   </div>
                 </div>
@@ -457,8 +457,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Total Of Payments:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Total Of Payments:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="totalPayments"></span>
                   </div>
                 </div>
@@ -468,8 +468,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Amount Financed:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Amount Financed:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="amtFinanced"></span>
                   </div>
                 </div>
@@ -479,8 +479,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Interest Amount:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Interest Amount:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="intAmount"></span>
                   </div>
                 </div>
@@ -490,8 +490,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Loan Orig. Fee:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Loan Orig. Fee:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="loanOrigFee"></span>
                   </div>
                 </div>
@@ -505,8 +505,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Interest Rate:</span> </div>
-                 <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Interest Rate:</span> </div>
+                 <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="intRate"></span>  -->
                         <span data-upgraded=",MaterialTextfield" class="form-text" id="intRate"></span>
                       </div>
@@ -517,8 +517,8 @@
               <!-- col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">A.P.R.:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">A.P.R.:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="apr"></span>
                   </div>
                 </div>
@@ -542,7 +542,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Life:</span> </div>
-                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="life"></span> --> 
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="life"></span>
                     </div>
@@ -552,8 +552,8 @@
            <!-- col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Accidental & Health:</span> </div>
-                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Accidental & Health:</span> </div>
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="accLife"></span>  -->
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="accLife"></span>
                     </div>
@@ -565,7 +565,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Disability:</span> </div>
-                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="disability"></span>
                     </div>
               </div>
@@ -580,7 +580,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Property:</span> </div>
-                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="property_1"></span>  -->
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="property_1"></span>
                     </div>
@@ -591,8 +591,8 @@
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">On:</span> </div>
-                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">On:</span> </div>
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="on"></span>
                     </div>
               </div>
@@ -602,8 +602,8 @@
             <!-- col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
               <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet" style="margin: 0;"> <span class="form-label">Unemployment:</span> </div>
-                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0 auto;"> 
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Unemployment:</span> </div>
+                <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                       <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="unemployment"></span>  -->
                       <span data-upgraded=",MaterialTextfield" class="form-text" id="unemployment"></span>
                     </div>
