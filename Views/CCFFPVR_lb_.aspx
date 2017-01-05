@@ -638,7 +638,7 @@
                     _00("F3", event);
                 });
                 $("#CenPH__lb_RCDDTL1__lb_1BTXT_new,#CenPH__lb_RCDDTL1__lb_1Y1NB_new,#CenPH__lb_RCDDTL1__lb_1A4NB_new").ForceNumericOnly();
-                $("#ssn-show").on("mousedown", function() {
+                $("#ssn-show").on("mousedown touchstart", function() {
                     setTimeout(function(){
                         var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
                         var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
@@ -646,7 +646,7 @@
                         $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
                     },10);
                 });
-                $("#ssn-show").on("mouseup", function() {
+                $("#ssn-show").on("mouseup touchend", function() {
                     var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
                     var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
                     $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
