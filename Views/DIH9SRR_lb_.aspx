@@ -129,7 +129,7 @@
             <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
         
         <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;">
+        <div id="Div1" style="display:none;">
             
       <%--  IN: SEL AFS Markdowns     Select record                                                                          --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -879,7 +879,21 @@
                  $("body").on("click", ".simplePopupClose", function() {
                    $(".simplePopupBackground1").hide();
                 });
+
+                $('body').on("click", "#next-page, #previous-page", function(event) {
+                
+                  setTimeout(function(){
+                    $("#previous-page,#next-page").remove();
+                      if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length === 0) {
+                          $("#records").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                      }
+                      if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                          $("#records").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                      }
+                  },1500)
+               
             });
+          });
 
         </script>
         <style>
