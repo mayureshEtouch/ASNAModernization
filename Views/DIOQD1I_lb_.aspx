@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </section>
-            <section class="order-summary">
+            <section class="order-summary mrgnTp16">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col">
