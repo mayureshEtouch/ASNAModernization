@@ -78,7 +78,7 @@
                     </div>
                 </div>
             </section>
-            <section class="table-data-content-container table-container-form">
+            <section class="table-data-content-container table-container-form mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container table-container-search">

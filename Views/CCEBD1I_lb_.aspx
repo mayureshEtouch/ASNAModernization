@@ -2216,6 +2216,16 @@
               $("#submit").click(function (event) {
                   _00('Enter', event);
               });
+			  
+			  //Error message
+                if($(".simplePopupClose").length > 0) {
+                    $(".simplePopupBackground1").show();
+                } else {
+                    $(".simplePopupBackground1").hide();
+                }
+                $("body").on("click", ".simplePopupClose", function() {
+                    $(".simplePopupBackground1").hide();
+                });
             });
       </script>
     </asp:Content>
