@@ -905,6 +905,7 @@
                 $("#display-incoming-transfers td:nth-child(6)").css("text-align","right");
 
                 generateTableAndApplyInfiniteScroll("display-incoming-transfers", "CenPH__lb_SFLRCD", "NONE", "next");
+                $("#previous-page,#next-page").remove();
                 $('body').on('click', '#exitPage', function (event) {
                     _00('F12', event);
                 });
