@@ -905,10 +905,12 @@
 				margin-left: -284px !important;
             }
             #__Page_PopUp > tr:first-child {
-              display: none;
+                display: none;
             }
+
             #__Page_PopUp .DdsInlinePopUpTitle {
-              height: 0;
+                height: 1px !important;
+                
             }
             .modal-dialog-container {
                 width: 100%;

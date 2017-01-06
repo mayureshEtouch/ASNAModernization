@@ -58,7 +58,7 @@
                 </div>
             </section>
             <section class="form-data">
-                <div class="form-data-wrapper display-application-status">
+                <div class="form-data-wrapper display-application-status" style="margin-bottom: 20px;">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                             <div class="content-grid mdl-grid">
@@ -374,12 +374,14 @@
                 width: 100%;
             }
             #__Page_Hidden{
-                height: 830px !important;
+                height: 100% !important;
             }
               #__Page_PopUp {
-                left: 35% !important;
+                left: 50% !important;
                 min-width: 450px !important;
                 top: 25% !important;
+				width: 450px !important;
+				margin-left: -225px !important;
             }
 
             #__Page_PopUp > tr:first-child {
@@ -414,6 +416,9 @@
               left: 30% !important;
               top: 20% !important;
             }
+			#confirmprompt {
+				margin: 0 auto !important;
+			}
         </style>
         <script type="text/javascript">
             $(document).ready(function () {

@@ -58,16 +58,16 @@
             <section class="order-summary order-summary-container">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Model</span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="model-number"></span></span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="model-name"></span></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Product Category</span>
                             <span class="summary-txt" id="prod-cat"></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Vendor Name</span>
                             <span class="summary-txt" id="vendor-number"></span>
                         </div>
@@ -97,10 +97,10 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col pull-left modal-button-container">
+                                <div class="mdl-cell mdl-cell--6-col pull-left mdl-cell--4-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exitPage">Previous</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col pull-right modal-button-container">
+                                <div class="mdl-cell mdl-cell--6-col pull-right mdl-cell--4-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>

@@ -58,17 +58,17 @@
             <section class="order-summary order-summary-container">
                 <div class="order-summary-wrapper">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Model</span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="model-number"></span></span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="model-name"></span></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                             <span class="summary-title">Product</span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Category:</span><span id="product-category"></span></span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Type:</span><span id="product-type"></span></span>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col">
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                             <span class="summary-title">Vendor</span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Number:</span><span id="vendor-number"></span></span>
 							<span class="summary-txt"><span style="width:70px;display:inline-block;">Name:</span><span id="vendor-name"></span></span>
@@ -85,18 +85,18 @@
 								<div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
                         			<span class="summary-table-title">Filter by:</span>
                         		</div>
-								<div class="mdl-cell mdl-cell--10-col mdl-cell--5-col-tablet search-container">
+								<div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
 									<div class="content-grid mdl-grid">
-										<div class="mdl-cell mdl-cell--1-col">
+										<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                         					<span class="summary-table-title pull-right">Company</span>
                         				</div>
-                        				<div id="filter-by-co" class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
+                        				<div id="filter-by-co" class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
                         					
                         				</div>
-										<div class="mdl-cell mdl-cell--1-col">
+										<div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">
                         					<span class="summary-table-title pull-right">Location</span>
                         				</div>
-                        				<div id="filter-by-loc" class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
+                        				<div id="filter-by-loc" class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet">
                         					
                         				</div>
 									</div>
@@ -151,10 +151,10 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--6-col pull-right">
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
