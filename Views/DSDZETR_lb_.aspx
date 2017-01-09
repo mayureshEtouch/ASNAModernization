@@ -198,7 +198,7 @@
                             </div>
                             <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <select id="CenPH__lb_SFLCTL__lb_CIYS_lb_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" tabindex="6">
+                                    <select id="CenPH__lb_SFLCTL__lb_CIYS_lb_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" >
                                         <option selected="selected" value=" ">Please select</option>
                                         <option value="Y">Yes</option>
                                         <option value="N">No</option>
@@ -1380,6 +1380,7 @@
                 $("#CenPH__lb_SFLCTL__lb_1FLST_new").attr("tabindex", "6");
                 $("#requestdate").attr("tabindex", "7");
                 $("#pcode").attr("tabindex", "8");
+				$("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").attr("tabindex", "9");
                 $("#special-instructions input").each(function () {
                     if ($(this).is('[tab-index]')) { $(this).attr('tabindex', $(this).attr('tab-index')) }
                 });

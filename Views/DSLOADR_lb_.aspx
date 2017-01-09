@@ -68,7 +68,7 @@
             </div>
         </div>
     </main>
-    <%--Location entry modernized html end--%>
+    <!--Location entry modernized html end-->
 
 
 	
