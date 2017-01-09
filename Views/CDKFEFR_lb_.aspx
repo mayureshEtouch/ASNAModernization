@@ -590,7 +590,21 @@
           $(mainTbl).each(function(index) {
               var i = index+1;
               $('#custAnswerDisplay tr:eq('+i.toString()+')').append('<td></td>');
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').append($(this)[0].children[1]).removeAttr("style");
+
+              //var sel = $(this)[0].children[1];
+              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').append($(this)[0].children[1]);
+
+              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option").each(function(){
+                if($(this).val().trim() == ""){
+                  $(this).val(" ").text("Please Choose");
+                   //$('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
+                  }       
+                  return this;
+              });
+              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value='?']").remove();
+              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value='Y']").text("Y-Yes");
+              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value='N']").text("N-No");
+
               $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1) select').removeAttr("style");
               $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1) span').removeAttr("style");
           });
