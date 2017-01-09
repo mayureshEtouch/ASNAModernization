@@ -879,7 +879,7 @@
                         $('#eof-indicator').remove();
                         $("#records").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
                     }
-                },1100)
+                },1500)
             });
 
                 $('.close-icon').click(function (event) {
