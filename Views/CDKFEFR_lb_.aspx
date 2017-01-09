@@ -83,7 +83,7 @@
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Refresh">Refresh</span>
                 </div>
                 <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet pull-right">
-                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" onclick="_00(Enter, event);" >next</span>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@
         </div>
       </section>
     </main>
-      <div class="simplePopupBackground1" style="display:block; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+      <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
       <div id="modal" class="simplePopup"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
           <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
@@ -586,27 +586,25 @@
           var dataMergeIndices =  [[0, "<br/>", 1, "<br/>", 2]];
           generateTableAndApplyInfiniteScroll("custAnswerDisplay", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 
-          var mainTbl = $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]:not([id$="End"]');
-          $(mainTbl).each(function(index) {
-              var i = index+1;
-              $('#custAnswerDisplay tr:eq('+i.toString()+')').append('<td></td>');
-
-              //var sel = $(this)[0].children[1];
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').append($(this)[0].children[1]);
-
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option").each(function(){
+          var sel = $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]').find("select");
+         $("#custAnswerDisplay tr:not(:first)").each(function(i){
+            $(this).append('<td></td>');
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').append(sel[i]);
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option").each(function(){
                 if($(this).val().trim() == ""){
                   $(this).val(" ").text("Please Choose");
                    //$('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
                   }       
                   return this;
               });
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value='?']").remove();
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value='Y']").text("Y-Yes");
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value='N']").text("N-No");
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='?']").remove();
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='Y']").text("Y - YES");
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='N']").text("N - NO");
 
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1) select').removeAttr("style");
-              $('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1) span').removeAttr("style");
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1) select').removeAttr("style");
+            $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1) span').removeAttr("style");
+            //$(this).append($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]:not([id$="End"]').find("select")[i]);
           });
 
           var selectCusotmer = function (row, value, event) {
@@ -621,8 +619,6 @@
           });
 
           $("#next").click(function (event) {
-              /*var row = $("#custAnswerDisplay tbody tr.selected");
-              selectCusotmer(row, "Enter", event);*/
               _00('Enter', event);
           });
 
