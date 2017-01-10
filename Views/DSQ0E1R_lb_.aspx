@@ -765,4 +765,11 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+       <style>
+        .simplePopup {
+          top: 100px !important;
+          left: 30% !important;
+        }
+
+       </style>
     </asp:Content>
