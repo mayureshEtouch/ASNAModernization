@@ -637,7 +637,7 @@
                 _00('Enter', event);
             }
             //Display customer details
-            $(".display-customer").click(function(event) {
+            $(".display-customer").on('click',function(event) {
                 if ($(".icon-container").hasClass("icon-disable")) {
                     alert("Please select the customer");
                 } else {
