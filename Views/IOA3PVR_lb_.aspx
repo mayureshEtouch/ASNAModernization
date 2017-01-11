@@ -52,7 +52,7 @@
             </div>
           </section>
         
-          <section class="table-data-content-container spacer-container-bottom" style="margin-top: 16px;">
+          <section class="table-data-content-container mrgnTp16" style="margin-bottom: 20px;">
             <div class="table-data-wrapper">
               <div class="table-data-maincontainer">
                 <!-- content-grid mdl-grid starts here -->
@@ -73,10 +73,10 @@
                 <!-- content-grid mdl-grid ends here  -->                            
                 <div class="button-container">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--9-col-desktop">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
                       <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
                     </div>
                   </div>
