@@ -107,6 +107,7 @@
     <form id="form1" runat="server" autocomplete="off">
         <mdf:AsnaTerm5250 runat="server" />
     </form>
+    <button ontouchstart="window.location.href=window.location.href;">Tap here to continue</button>
 </body>
 
 <script type="text/javascript">
