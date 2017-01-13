@@ -1,173 +1,80 @@
 ﻿@font-face {
-  font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(../fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+font-family:"Open Sans","OpenSansRegular","Arial",sans-serif;
+font-style:normal;
+font-weight:400;
+src:local('Open Sans'),local(OpenSans),url(../fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
+unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F
 }
+
 .clear {
-	clear: both;
+clear:both
 }
+
 img {
-	width: auto !important;
-    height: auto !important;
-    max-width: 100% !important;
-}
-ul, li{
-	margin: 0;
-	padding: 0;	
-}
-li{
-	list-style-type: none;	
-}
-li a{
-	text-decoration: none;	
+width:auto!important;
+height:auto!important;
+max-width:100%!important
 }
 
-
-
-/* copyright section css starts here 
-.homepage-copyright-container {
-	background: #58595b;
-	color: #fff;
-	font-family: "Open Sans","OpenSansRegular","Arial",sans-serif;
-	font-size: 11px;
-	margin-top: 10px;
-	padding: 10px 0 12px 0;
-	text-align: center;
+ul,li {
+margin:0;
+padding:0
 }
-*/
 
-/* homepage CSS starts here */
+li {
+list-style-type:none
+}
+
+li a {
+text-decoration:none
+}
+
 .mdl-layout__content {
-	height: auto !important;
+height:auto!important
 }
-.homepage-content .mdl-cell--4-col, .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
-		width: calc(33.3333%);
-		width: -webkit-calc(33.3333%);
-		width: -moz-calc(33.3333%);
-		width: -o-(33.3333%);
+
+.homepage-content .mdl-cell--4-col,.mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
+width:calc(33.3333%);
+width:-webkit-calc(33.3333%);
+width:-moz-calc(33.3333%);
+width:-o-(33.3333%)
 }
+
 .homepage-content .mdl-grid {
-	padding: 0;
+padding:0
 }
+
 .homepage-content .mdl-cell {
-	margin: 0px;
+margin:0
 }
-.card {perspective: 1500px !important; margin: -1px;}
+
+.card {
+perspective:1500px!important;
+margin:-1px
+}
+
+.front {
+display:table
+}
+
+.front-content {
+cursor:pointer;
+display:table-cell;
+vertical-align:middle
+}
 
 
-/* homepage css ends here */
+.mdl-layout__content .block-heading {
+color:#fff;
+font-size:25px;
+font-family:"Open Sans","OpenSansRegular","Arial",sans-serif;
+margin:0 10px 16px;
+text-align:center
+}
 
-.front{
-	display: table;
+.back {
+background:#fff
 }
-.front-content{
-	cursor: pointer;
-	display: table-cell;
-    vertical-align: middle;
-}
-.contracts-icon,.sales-order-icon,.invent-delv-sch-icon,.misc-cust-serv-icon,.incomplete-orders-icon,.misc-sales-menu-icon{
-	margin: 0 auto;
-}
-.contracts-icon{
-	background:url(../Images/contracts-icon.png) no-repeat;
-	width: 60px;	
-}
-.sales-order-icon{
-	background:url(../Images/sales-order-icon.png) no-repeat;
-	width: 47px;	
-}
-.invent-delv-sch-icon{
-	background:url(../Images/invent-delv-sch-icon.png) no-repeat;
-	width: 61px;	
-}
-.misc-cust-serv-icon{
-	background:url(../Images/misc-cust-serv-icon.png) no-repeat;
-	width: 83px;	
-}
-.incomplete-orders-icon{
-	background:url(../Images/incomplete-orders-icon.png) no-repeat;
-	width: 38px;	
-}
-.misc-sales-menu-icon{
-	background:url(../Images/misc-sales-menu-icon.png) no-repeat;
-	width: 68px;	
-}
-.contracts-icon,.sales-order-icon,.invent-delv-sch-icon,.misc-cust-serv-icon,.incomplete-orders-icon,.misc-sales-menu-icon{ 
-	height: 71px; 
-	margin-bottom: 15px;
-}
-.mdl-layout__content .block-heading{
-	color: #fff;	
-	font-size: 25px;
-	font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
-	margin: 0 10px 16px;
-	text-align: center;
-}
-.back{
-	background: #fff;	
-}
-.contracts-icon-hover,.sales-order-icon-hover,.invent-delv-sch-icon-hover,.misc-cust-serv-icon-hover,.incomplete-orders-icon-hover,.misc-sales-menu-icon-hover{
-	float: left;
-	margin: 0 10px 0 15px;
-}
-.contracts-icon-hover{
-	background:url(../Images/contracts-icon-hover.png) no-repeat;
-	height: 32px;
-	width: 36px;	
-}
-.sales-order-icon-hover{
-	background:url(../Images/sales-order-icon-hover.png) no-repeat;
-	height: 34px;
-	width: 31px;	
-}
-.invent-delv-sch-icon-hover{
-	background:url(../Images/invent-delv-sch-icon-hover.png) no-repeat;
-	height: 43px;
-	width: 37px;	
-}
-.misc-cust-serv-icon-hover{
-	background:url(../Images/misc-cust-serv-icon-hover.png) no-repeat;
-	height: 42px;
-	width: 61px;	
-}
-.incomplete-orders-icon-hover{
-	background:url(../Images/incomplete-orders-icon-hover.png) no-repeat;
-	height: 36px;
-	width: 26px;	
-}
-.misc-sales-menu-icon-hover{
-	background:url(../Images/misc-sales-menu-icon-hover.png) no-repeat;
-	height: 43px;
-	width: 41px;	
-}
-.material-icons.square-icon {
-	border: solid 2px #e32527;
-	height: 10px;
-	margin: 10px 0 0 5px;
-	width: 10px;
-}
-._list{
-	margin: 0 15px 15px 15px;
-}
-.mdl-layout__content ._title{
-	font-size: 25px;
-	line-height: 30px;	
-	margin: 15px 5px 15px 10px;
-}
-._item{
-	border-bottom: 1px solid #c5c5c5;	
-}
-._item:last-child{
-	border-bottom: none;	
-}
-._item a p {
-	display: inline-block;
-	margin: 5px 0 5px 10px;
-	vertical-align: top;
-}
-/* css for background images*/
 
 .contracts-bg{
 	background:url(../Images/444_r1_c1.png) no-repeat;
@@ -193,66 +100,222 @@ li a{
 	height: 230px;
 	width: 333px;
 }
-.homepage-copyright-container {
-	margin-top: 0;
+
+.contracts-icon-hover,.sales-order-icon-hover,.invent-delv-sch-icon-hover,.misc-cust-serv-icon-hover,.incomplete-orders-icon-hover,.misc-sales-menu-icon-hover, .contracts-icon,.sales-order-icon,.invent-delv-sch-icon,.misc-cust-serv-icon,.incomplete-orders-icon,.misc-sales-menu-icon {
+background:url(../Images/homepage-icon-sprite.png) no-repeat;
+}
+.contracts-icon-hover,.sales-order-icon-hover,.invent-delv-sch-icon-hover,.misc-cust-serv-icon-hover,.incomplete-orders-icon-hover,.misc-sales-menu-icon-hover {
+float:left;
+margin:0 10px 0 15px;
 }
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-	._item a p { margin: 5px 0 5px 7px; font-size: 12px; }
+.icon-block {
+	height: 75px;
+	margin: 0 auto;
+	width: 83px;
 }
+
+.contracts-icon,.sales-order-icon,.invent-delv-sch-icon,.misc-cust-serv-icon,.incomplete-orders-icon,.misc-sales-menu-icon {
+display: block;
+margin:0 auto 15px;
+}
+
+.contracts-icon-hover {
+background-position: 0 -190px;
+width:36px;
+height: 32px;
+}
+
+.sales-order-icon-hover {
+background-position: -90px -190px;
+width:31px;
+height: 34px;
+}
+
+.invent-delv-sch-icon-hover {
+background-position: -70px -140px;
+height:43px;
+width:37px
+}
+
+.misc-cust-serv-icon-hover {
+background-position: 0 -140px;
+height:42px;
+width:61px
+}
+
+.incomplete-orders-icon-hover {
+background-position: -50px -190px;
+height:36px;
+width:26px
+}
+
+.misc-sales-menu-icon-hover {
+background-position: -120px -140px;
+height:43px;
+width:41px
+}
+
+.contracts-icon {
+background-position: -140px 0;
+width:60px;
+height: 53px;
+}
+
+.sales-order-icon {
+background-position: -90px -80px;
+width:47px;
+height: 53px;
+}
+
+.invent-delv-sch-icon {
+background-position: 0 0;
+width:61px;
+height: 71px;
+}
+
+.misc-cust-serv-icon {
+background-position: 0 -80px;
+width:83px;
+height: 60px;
+}
+
+.incomplete-orders-icon {
+background-position: -140px -80px;
+width:38px;
+height: 52px;
+}
+
+.misc-sales-menu-icon {
+background-position: -70px 0;
+width:68px;
+height: 70px;
+}
+
+.material-icons.square-icon {
+border:solid 2px #e32527;
+height:10px;
+margin:10px 0 0 5px;
+width:10px
+}
+
+._list {
+margin:0 15px 15px
+}
+
+.mdl-layout__content ._title {
+font-size:25px;
+line-height:30px;
+margin:15px 5px 15px 10px
+}
+
+._item {
+border-bottom:1px solid #c5c5c5
+}
+
+._item:last-child {
+border-bottom:none
+}
+
+._item a p {
+display:inline-block;
+margin:5px 0 5px 10px;
+vertical-align:top
+}
+
+
+
+.homepage-copyright-container {
+margin-top:0
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+._item a p {
+margin:5px 0 5px 7px;
+font-size:12px
+}
+}
+
 @media only screen and (max-width : 1200px) {
-	.homepage-content .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
-		width: calc(33.3333%);
-	}
+.homepage-content .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop {
+width:calc(33.3333%)
 }
+}
+
 @media only screen and (max-width : 1024px) {
-	._title{ font-size: 20px !important;}
+._title {
+font-size:20px!important
 }
+}
+
 @media only screen and (max-width : 979px) {
-	.progress-bar .step-width {
-		width: 16%;
-	}
-	.progress-bar .step-title, .progress-bar .step-title-selected {
-		font-size: 17px;
-	}
-	.progress-bar .step-txt, .progress-bar .step-txt-selected {
-		font-size: 11px;
-	}
-	/* css by Anagha */
-	.block-heading,._title{ font-size: 16px; line-height: 30px;}
-	._title{ font-weight: bold;}
-	._list{	margin: 0 8px 8px 8px !important;}
+.progress-bar .step-width {
+width:16%
+}
+
+.progress-bar .step-title,.progress-bar .step-title-selected {
+font-size:17px
+}
+
+.progress-bar .step-txt,.progress-bar .step-txt-selected {
+font-size:11px
+}
+
+.block-heading,._title {
+font-size:16px;
+line-height:30px
+}
+
+._title {
+font-weight:700
+}
+
+._list {
+margin:0 8px 8px!important
+}
 }
 
 @media only screen and (max-width : 767px) {
-	.progress-bar .step-width {
-		width: 14%;
-	}
-	.progress-bar .step-title, .progress-bar .step-title-selected {
-		font-size: 14px;
-	}
-	.progress-bar .step-txt, .progress-bar .step-txt-selected {
-		font-size: 10px;
-	}
-	.homepage-content .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
-		width: calc(50%);
-	}
-	.block-heading,._title{ font-size: 14px !important;}
-	._title{ font-weight: bold; margin: 5px 0 15px !important; }
-	._item a p{ font-size: 12px !important;}
-	._list{	margin: 0 5px 5px 5px !important;}
-	.contracts-icon-hover,.sales-order-icon-hover,.invent-delv-sch-icon-hover,.misc-cust-serv-icon-hover,.incomplete-orders-icon-hover,.misc-sales-menu-icon-hover{
-	margin: 0 5px 0 8px !important;
-	}
+.progress-bar .step-width {
+width:14%
+}
+
+.progress-bar .step-title,.progress-bar .step-title-selected {
+font-size:14px
+}
+
+.progress-bar .step-txt,.progress-bar .step-txt-selected {
+font-size:10px
+}
+
+.homepage-content .mdl-cell--4-col-tablet.mdl-cell--4-col-tablet {
+width:calc(50%)
+}
+
+.block-heading,._title {
+font-size:14px!important
+}
+
+._title {
+font-weight:700;
+margin:5px 0 15px!important
+}
+
+._item a p {
+font-size:12px!important
+}
+
+._list {
+margin:0 5px 5px!important
+}
+
+.contracts-icon-hover,.sales-order-icon-hover,.invent-delv-sch-icon-hover,.misc-cust-serv-icon-hover,.incomplete-orders-icon-hover,.misc-sales-menu-icon-hover {
+margin:0 5px 0 8px !important
+}
 }
 
 @media only screen and (max-width : 480px) {
-	.homepage-content .mdl-cell--6-col-phone.mdl-cell--6-col-phone {
-		width: calc(100%);
-	}
+.homepage-content .mdl-cell--6-col-phone.mdl-cell--6-col-phone {
+width:calc(100%)
+}
 }

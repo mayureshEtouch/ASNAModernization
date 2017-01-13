@@ -30,7 +30,7 @@
                 <!-- front-content starts here -->
                 <div class="front contracts-bg">
                     <div class="front-content">
-                        <div class="contracts-icon"></div>
+                        <div class="icon-block"><span class="contracts-icon"></span></div>
                         <p class="block-heading">Work with Contracts</p>
                     </div>
                     <!-- front-content ends here -->
@@ -56,7 +56,7 @@
                 <!-- front-content starts here -->
                 <div class="front sales-order-bg">
                     <div class="front-content">
-                        <div class="sales-order-icon"></div>
+						<div class="icon-block"><span class="sales-order-icon"></span></div>
                         <p class="block-heading">Work with Sales Order</p>
                     </div>
                     <!-- front-content ends here -->
@@ -88,7 +88,7 @@
                 <!-- front-content starts here -->
                 <div class="front inv-delv-sch-bg">
                     <div class="front-content">
-                        <div class="invent-delv-sch-icon"></div>
+						<div class="icon-block"><span class="invent-delv-sch-icon"></span></div>
                         <p class="block-heading">Inventory &amp; Delivery Schedule</p>
                     </div>
                     <!-- front-content ends here -->
@@ -118,7 +118,7 @@
                 <!-- front-content starts here -->
                 <div class="front misc-cust-serv-bg">
                     <div class="front-content">
-                        <div class="misc-cust-serv-icon"></div>
+						<div class="icon-block"><span class="misc-cust-serv-icon"></span></div>
                         <p class="block-heading">Misc. Customer Service</p>
                     </div>
                     <!-- front-content ends here -->
@@ -148,7 +148,7 @@
                 <!-- front-content starts here -->
                 <div class="front incomplete-orders-bg">
                     <div class="front-content">
-                        <div class="incomplete-orders-icon"></div>
+						<div class="icon-block"><span class="incomplete-orders-icon"></span></div>
                         <p class="block-heading">Incomplete Orders</p>
                     </div>
                     <!-- front-content ends here -->
@@ -178,7 +178,7 @@
                 <!-- front-content starts here -->
                 <div class="front othr-misc-sales-menu-bg">
                     <div class="front-content">
-                        <div class="misc-sales-menu-icon"></div>
+						<div class="icon-block"><span class="misc-sales-menu-icon"></span></div>
                         <p class="block-heading">Other Misc. Sales Menu</p>
                     </div>  
                     <!-- front-content ends here -->

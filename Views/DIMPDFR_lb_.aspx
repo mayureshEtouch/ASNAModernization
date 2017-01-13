@@ -535,7 +535,9 @@
 
             
             //Generate table
-            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next"); // Table 
+			 // Search by Customer data table record mapping
+            var dataMergeIndices = [[0], [1], [2]];
+            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "next"); // Table 
             
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');

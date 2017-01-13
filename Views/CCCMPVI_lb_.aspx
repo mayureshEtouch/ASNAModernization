@@ -182,6 +182,10 @@
             $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($("#dummy-ssn").val());
             _00("Enter", event);
         });
+		
+		$('body').on('click', '.close-icon', function (event) {
+                _00('F12', event);
+            });
 
         $("#ssn").ForceNumericOnly();
         $("#ssn").on("change keyup mouseup paste touchend", function(event) {

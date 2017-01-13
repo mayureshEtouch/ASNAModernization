@@ -145,15 +145,17 @@ function generateTableAndApplyInfiniteScroll(tableId, recordConatainer, ignoreSa
     $("body").css({
         "background-color": "#FFFFFF"
     });
-    $('body').on('click', '#' + tableId + ' tbody tr', function() {
+	$('body').on('click', '#' + tableId + ' tbody tr', function() {
         if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
-            $("#" + tableId + " tbody tr:even").css("background-color", "#fff");
-            $("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
-            $("#" + tableId + " tbody tr").removeClass("selected");
-            $(this).addClass("selected");
-            $("div.icon-container").removeClass("icon-disable");
+				$("#" + tableId + " tbody tr:even").css("background-color", "#fff");
+				$("#" + tableId + " tbody tr:odd").css("background-color", "#f9f9f9");
+				$("#" + tableId + " tbody tr").removeClass("selected");
+				$(this).addClass("selected");
+				$("div.icon-container").removeClass("icon-disable");
         }
     });
+	
+    
     /* script for table row starts here */
     var generateTable = function(direction) {
         $("#" + tableId + " tbody").empty();

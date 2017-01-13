@@ -143,7 +143,7 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
                                     <%--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByAddress">Search by Address</button>--%>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</button>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
                                 </div>
                             </div>
                         </div>
@@ -537,12 +537,11 @@
 </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            window.DSBPDFR = window.DSBPDFR || {}
             //Set date and time
             $("[name='date']").text($("[id$=CenPH_DdsConstant9]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             var dataMergeIndices = [[0], [1], [2], [3, "&nbsp;",5,"&nbsp;", 6, "&nbsp;&nbsp;&nbsp;", 7],[4]];
-            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+            generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "next", dataMergeIndices);
 
             var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
