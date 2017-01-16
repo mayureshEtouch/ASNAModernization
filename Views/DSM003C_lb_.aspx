@@ -4,7 +4,7 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 3/16/2016 at 11:29 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library asnaTsrc, file qddssrc, member DSM003C# --%>
-        <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/Themes/Current/Styles/homepage.css")%>" />
+        <link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/Themes/Current/Styles/homepage.min.css")%>" />
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">

@@ -51,13 +51,13 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--10-col  mdl-cell mdl-cell--6-col-tablet search-container">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--2-col">
+                                        <div class="mdl-cell mdl-cell--2-col" style="width: 115px;">
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Model Number</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
                                             <input type="text" id="CenPH__lb_SFLCTL__lb_2AXTX_new" class="mdl-textfield__input" maxlength="20" data-tb-index="1">
                                         </div>  
-                                         <div class="mdl-cell mdl-cell--2-col">
+                                         <div class="mdl-cell mdl-cell--2-col" style="width: 115px;">
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Serial Number</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
@@ -66,7 +66,7 @@
                                         <div class="mdl-cell mdl-cell--2-col">
                                             <span class="summary-table-title pull-right" style="margin-left: -3px;">Invoice Number</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number">
+                                        <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet" id="number" style="width: 90px;">
                                             <input type="text" id="CenPH__lb_SFLCTL__lb_2G1N_lb_new" class="mdl-textfield__input" maxlength="9" data-tb-index="1">
                                         </div>                               
                                     </div>
