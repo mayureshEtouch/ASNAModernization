@@ -1224,8 +1224,8 @@
 				left: 45% !important;
             }
             .simplePopup {
-                left: 22% !important;
-                top: 30% !important;
+                left: 33% !important;
+                top: 35% !important;
                 z-index: 10;
                 margin-top: 2em;
             }

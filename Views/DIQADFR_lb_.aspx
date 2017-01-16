@@ -89,8 +89,8 @@
                               <div class="mdl-cell mdl-cell--1-col">
                                 <input type="text" maxlength="3"  id="fType" class="mdl-textfield__input">
                               </div>
-                              <div class="mdl-cell mdl-cell--1-col" style="width: 80px;">
-                                <span class="summary-table-title">Reference</span>
+                              <div class="mdl-cell mdl-cell--1-col ref-label" >
+                                <span class="summary-table-title pull-right">Reference</span>
                               </div>
                               <div class="mdl-cell mdl-cell--2-col" style="width: 80px;">
                                 <input type="text"  id="fReference" class="mdl-textfield__input" maxlength="9">
@@ -206,7 +206,18 @@
           .filter-search-container .search-container .mdl-cell--2-col{
             width: calc(73% - 0px);
           }
+		  
         }
+		@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+		.filter-search-container .search-container .mdl-cell--1-col.ref-label {
+			width: 80px;
+		  }
+
+}
         #wrapper {
         width: 100% !important;
         }

@@ -500,9 +500,9 @@
               <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid" style="padding:0"> 
                 <!-- col starts here -->
-                <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet">
+                <div class="mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Customer ID:</span> </div>
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet" style="margin: 0;"> <span class="form-label">Customer ID:</span> </div>
                     <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin: 0;">  <input type="text" id="CenPH__lb_RCDKEY__lb_1ALNB_new" onfocus="_09('#1ALNB','5,35','#RCDKEY');" name="CenPH__lb_RCDKEY__lb_1ALNB_new" maxlength="7"> </div>
                   </div>
                 </div>
