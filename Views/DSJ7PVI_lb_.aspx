@@ -674,10 +674,10 @@
       </script>
       <style>
            #__Page_PopUp {
-            min-width: 450px !important;
+            min-width: 600px !important;
             width: 600px !important;
 			left: 50% !important;
-			margin-left: -225px;
+			margin-left: -300px;
 			top: 10% !important;
             }
            
@@ -690,6 +690,7 @@
             .modal-dialog-container {
                 width: 100%;
                 margin-top: 0;
+				margin-bottom: 12px;
             }
             .mdl-layout__content {
                 height: auto !important;
