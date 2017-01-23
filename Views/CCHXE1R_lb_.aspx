@@ -1829,6 +1829,7 @@
             } else {
               $(".editable-data").hide();
               $(".ro-data").show();
+              $("#ro-cust-ssn").text("****"+$("#ro-cust-ssn").text().substr(5,9));
               $(".confirmation-outer-conatiner").show();
               $(".OverlayPopupBackground").show();
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
