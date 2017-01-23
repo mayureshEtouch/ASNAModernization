@@ -1319,6 +1319,7 @@
               Alias="CRLIFB" 
               Usage="Both" 
               VirtualRowCol="21,14" 
+              Protect="30" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '0' '1' '2' " 
               TabIndex="21"  />
@@ -1333,6 +1334,7 @@
               Alias="CRACHB" 
               Usage="Both" 
               VirtualRowCol="21,40" 
+              Protect="30" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '0' '1' " 
               TabIndex="22"  />
@@ -1362,6 +1364,7 @@
               Alias="CRUEMB" 
               Usage="Both" 
               VirtualRowCol="21,74" 
+              Protect="30" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '0' '1' " 
               ErrorMessageId="UCR0030 ASMSGF0 : 65" 
