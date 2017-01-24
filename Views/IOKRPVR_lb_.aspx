@@ -80,11 +80,30 @@
                     <!-- col ends here -->
                   </div>
                   <!-- content-grid mdl-grid ends here -->
+                  <!-- content-grid mdl-grid ends here  -->                            
+                <div class="button-container">
+                  <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+                      <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
+                    </div>
+                  </div>
+
+                </div>
                 </div>
               </section>    
             </main>
             <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
             <div id="modal" class="simplePopup"></div>
+            <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+                <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+                <div class="button-container">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+                </div>
+            </div>
           </div>
       <div id="Div1" style="display:none;">
             
@@ -548,6 +567,10 @@
           left: 28%!important;
           top: 30%!important;
         }
+
+        .confirmation-outer-conatiner {
+          left: 40%!important;
+        }
       </style>
 
       <script>
@@ -573,6 +596,10 @@
               _00("F3", event);
             });
 
+            $('#submit').click(function (event) {
+              _00("Enter", event);
+            });
+
             if($("#__Page_PopUp .simplePopupClose").length > 0) {
               $(".simplePopupBackground1").show();
               } else {
@@ -581,6 +608,24 @@
               $("body").on("click", ".simplePopupClose", function() {
                  $(".simplePopupBackground1").hide();
               });
+
+              if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+                  /*Pop up confirm box*/
+                  $(".OverlayPopupBackground").show();
+                  $(".confirmation-outer-conatiner").show();
+                  
+                  $("#yes").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                      //_00('Enter', event);
+                      _16(event,this,1,'Enter');
+                  });
+                  $("#no").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                      //_00('Enter', event);
+                      _16(event,this,1,'Enter');
+                  });
+
+                }
           });
       </script>
     </asp:Content>
