@@ -83,11 +83,8 @@
                   <!-- content-grid mdl-grid ends here  -->                            
                 <div class="button-container">
                   <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-desktop pull-right">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
-                      <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
                     </div>
                   </div>
 
@@ -549,9 +546,9 @@
         }
         #__Page_PopUp {
             margin-left: -350px;
-            min-width: 700px !important;
-            width: 700px !important;
-            left: 50% !important;
+            min-width: 500px !important;
+            width: 500px !important;
+            left: 60% !important;
             top: 23%!important; 
         }
 
@@ -576,9 +573,7 @@
       <script>
         var copyToAndFrom = {
             "displayOnlyFields": {
-                //"CenPH__lb_CMDTXT1": "text",
-                "CenPH__lb_RCDDTL1__lb_DAETX":"text",
-                //"CenPH__lb_RCDDTL1__lb_DEXXT":"esign-info"
+                //"CenPH__lb_RCDDTL1__lb_DAETX":"text",
             },
             "inputFields": {
                "CenPH__lb_RCDDTL1__lb_1AJCD" : "empID"
