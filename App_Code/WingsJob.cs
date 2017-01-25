@@ -95,7 +95,9 @@ namespace WingsLogic
                 logonInfo.Program = programName;
                 logonInfo.Menu = menuName;
             }
-            myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.MonarchWeb, AVRRuntime.OpenAccessDspF.Wings );
+           //myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.MonarchWeb, AVRRuntime.OpenAccessDspF.Wings );
+             myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.None, AVRRuntime.OpenAccessDspF.Wings );
+            myDatabase.TerminalDeviceName = "SA112TC139";
 
             while( true )
             {
@@ -160,7 +162,7 @@ namespace WingsLogic
                     continue;
                 }
                 if( string.IsNullOrWhiteSpace( menuName ) )
-                    goMenu( "Main" );
+                    goMenu( "DSM003C" );
                 else
                 {
                     try
@@ -180,7 +182,7 @@ namespace WingsLogic
 
         void goMenu( string menuName )
         {
-            callQCmdExec( "Go " + menuName );
+            callQCmdExec( "Call " + menuName );
         }
 
         void callProgram( string programName )
