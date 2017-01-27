@@ -194,7 +194,7 @@
 
 <style>
         #__Page_PopUp {
-            min-width: 540px !important;
+            /*min-width: 540px !important;*/
             
       left: 50% !important;
       margin-left: -325px;
@@ -209,7 +209,7 @@
     }
        
           .modal-dialog-container {
-            width: 650px !important;
+           /* width: 650px !important;*/
             margin-top: 0;
 			margin-bottom : 20px !important;
         }
@@ -218,7 +218,7 @@
             overflow: hidden !important;
         }
         #wrapper {
-width: 100% !important;
+/*width: 100% !important;*/
 }
         #form1 {
             margin-top: -20px;
