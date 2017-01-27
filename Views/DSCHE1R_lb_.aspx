@@ -217,7 +217,7 @@
            
         </div>
         <!-- Modified HTML code ends here -->
-    <div id="view2">
+    <div id="view2" style="display:none;">
         
         <!-- Modified HTML code starts here -->
         <div class="OverlayPopupBackground"></div>
@@ -344,7 +344,7 @@
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
                 </div>
             </div>
-    <div id="Div1" style="display: none">
+    <div id="Div1" style="display:none;">
 
         <%--  CU: ED1 Activity Audit    Edit record(1 screen)                                                      --%>
         <%--  CRTDSPF                                                                                              --%>
@@ -1061,7 +1061,10 @@
         };
 
         $(document).ready(function () {
-            if ($("#CenPH__lb_RCDDTL1__lb_1R7ST").length > 0) {
+            //if ($("#CenPH__lb_RCDDTL1__lb_1R7ST").length > 0) {
+        //setTimeout(function(){
+            if ($("#CenPH__lb_RCDDTL1__lb_1R7ST").length > 0 || ($("#CenPH__lb_RCDDTL1__lb_1R7ST").length === 0) && $('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                console.log(111111);
                 $("#view1").show();
                 $("#view2").hide();
                 copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
@@ -1100,18 +1103,20 @@
                 });
                 if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                     /*Pop up confirm box*/
+                    console.log("confirm v1");
                     $(".OverlayPopupBackground").show();
                     $(".confirmation-outer-conatiner").show();
 
                     $("#yes").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-                        _16(event, this, 1, 'Enter');
+                        //_16(event, this, 1, 'Enter');
                        // $(".OverlayPopupBackground").show()
                     });
                     $("#no").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-                        _16(event, this, 1, 'Enter');
+                        //_16(event, this, 1, 'Enter');
                         $(".OverlayPopupBackground").hide()
+                        $(".confirmation-outer-conatiner").hide();
                     });
 
                 }
@@ -1128,8 +1133,10 @@
 
             }
             else {
-                $("#view1").hide();
+                console.log(13123);
                 $("#view2").show();
+                $("#view1").hide();
+                
                 copyData(copyToAndFromData, "keyup keydown change mouseup mousedown click blur");
                 $("#custID").ForceNumericOnly();
                 $("#CenPH__lb_RCDKEY__lb_1ALNB").appendTo("#custID");
@@ -1175,6 +1182,7 @@
                 });
                 if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                     /*Pop up confirm box*/
+                    console.log("confirm v2");
                     $(".OverlayPopupBackground").show();
                     $(".confirmation-outer-conatiner").show();
 
@@ -1189,7 +1197,7 @@
 
                 }
             }
-
+        //}, 1000);
         });
 
     </script>
