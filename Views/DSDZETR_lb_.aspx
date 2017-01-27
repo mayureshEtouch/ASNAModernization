@@ -1263,7 +1263,7 @@
 
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
             //set date and time
-            setDateTime("CenPH_DdsConstant16", "CenPH__lb_SFLCTL__lb__lb_TME");
+            setDateTime("CenPH_DdsConstant14", "CenPH__lb_SFLCTL__lb__lb_TME");
             // Set customer name
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             // Set order number

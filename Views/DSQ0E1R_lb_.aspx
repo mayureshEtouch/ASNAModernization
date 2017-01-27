@@ -105,7 +105,7 @@
     
     </main>
      <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-     <div id="promptErrorMsg" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
+     <div id="modal1" class="simplePopup"  style="position: absolute !important;top: 202px !important;left: 30% !important;"></div>
     <!-- <div id="modal" class="simplePopup"></div> -->
 
      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
@@ -131,6 +131,7 @@
         }
         
         #__Page_PopUp {
+          top: 169px !important;
           width: 650px !important;
           min-width: 650px !important;
           left: 50% !important;
@@ -220,7 +221,14 @@
               }
 
 
-
+   $(".close-icon").click(function(event) {
+                  /* Act on the event */
+                  $("#has2Hide").show();
+                });
+    $("#save-phone").click(function(event) {
+                  /* Act on the event */
+                   $("#has2Hide").show();
+                });
               $("#yes").click(function (event) {
                   $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                   //_00('Enter', event);

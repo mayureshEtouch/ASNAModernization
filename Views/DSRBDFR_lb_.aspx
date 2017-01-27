@@ -22,7 +22,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    
+    <div id="has2Hide">
     <header class="mdl-layout__header">
                         <div class="mdl-layout__header-row"> 
                                 <!-- Title --> 
@@ -87,7 +87,8 @@
         </section>
             </main>
     <div class="simplePopupBackground1" style="display: none; opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
-    <div id="modal" class="simplePopup"></div>
+    <div id="modal1" class="simplePopup"></div>
+    </div>
         <style>
         #__Page_Hidden{
             min-height: 800px !important;
@@ -128,8 +129,10 @@
                // generate phone numbers
                generateTableAndApplyInfiniteScroll("customerPhones", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE"); 
                $(".icon-txt, .change-icon").click(function (event) {
+                  $("#has2Hide").hide();
                    var row = $("#customerPhones tbody tr.selected");
                    selectCusotmer(row, "2", event);
+
                });
 
                var selectCusotmer = function (row, value, event) {
@@ -154,6 +157,7 @@
                 $("body").on("click", ".simplePopupClose", function() {
                     $(".simplePopupBackground1").hide();
                 });
+
           });
         </script>
         <div id="Div1" style="display:none;">

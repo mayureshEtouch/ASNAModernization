@@ -36,7 +36,7 @@
     // Add footer section
     var footer = "";
     footer += "<section class=\"copyright\">";
-    footer += "            <div class=\"copyright-container\">Copyright © 2016 Conn's. All rights reserved.<\/div>";
+    footer += "            <div class=\"copyright-container\">Copyright © <span id=\"year\"></span> Conn's. All rights reserved.<\/div>";
     footer += "        <\/section>";
 
     $(footer).insertAfter($("#main-content"));
@@ -68,6 +68,11 @@
         $('#modal').html(errorMsg);
         $('#modal').simplePopup();
     }
+
+    /* Auto change copyright year */
+     $(function(){
+      $('#year').html(new Date().getFullYear());
+     });
 
     //Logout
     $("#user-logout").on("click", function(event) {
