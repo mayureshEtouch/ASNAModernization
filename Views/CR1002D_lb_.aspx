@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CR1002D_lb_.aspx.cs" Inherits="conns.CR1002D_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 10/25/2016 at 7:57 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 1/25/2017 at 7:47 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNAtrack, file QDDSSRC, member CR1002D# --%>
 
     </asp:Content>
@@ -717,6 +717,7 @@
           <%--  93                                  ERRMSGID(UCR0027 *LIBL/ASMSGF0)                                              --%>
           <%--  42                                  DSPATR(PR)                                                                   --%>
           <%--  42                                  DSPATR(PR)                                                                   --%>
+          <%--  42                                  DSPATR(PR)                                                                   --%>
           <%--                                      sh  CF6=Display Messages CF10=No Lo-                                         --%>
           <%--                                      an Fee'                                                                      --%>
             <mdf:DdsConstant id="DdsConstant8" runat="server" 
@@ -1031,6 +1032,7 @@
               Alias="CRLIFB" 
               Usage="Both" 
               VirtualRowCol="21,14" 
+              Protect="30" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '0' '1' '2' " 
               TabIndex="21"  />
@@ -1045,6 +1047,7 @@
               Alias="CRACHB" 
               Usage="Both" 
               VirtualRowCol="21,40" 
+              Protect="22" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '0' '1' " 
               TabIndex="22"  />
@@ -1074,6 +1077,7 @@
               Alias="CRUEMB" 
               Usage="Both" 
               VirtualRowCol="21,74" 
+              Protect="24" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '0' '1' " 
               ErrorMessageId="UCR0030 ASMSGF0 : 65" 

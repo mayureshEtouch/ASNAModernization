@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/19/2016 at 8:56 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 1/25/2017 at 7:45 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CR1002R# --%>
 
     </asp:Content>
@@ -999,15 +999,11 @@
             FuncKeys="F4 'Addon select screen' 04;"
             EraseFormats="*ALL" 
           >&nbsp;
-      <%-- %%TS  SD  20000505  115757  COOL3       REL-V4R2M0  5769-PW1                                                      --%>
-      <%--                                      CF10(10 'Process Without Loan Fee-                                           --%>
-      <%--                                      ')                                                                           --%>
-      <%--  93                                  ERRMSGID(UCR0027 *LIBL/ASMSGF0)                                              --%>
-      <%--  42                                  DSPATR(PR)                                                                   --%>
-      <%--  42                                  DSPATR(PR)                                                                   --%>
-      <%--                                      sh  CF6=Display Messages CF10=No Lo-                                         --%>
-      <%--                                      an Fee'                                                                      --%>
-      <mdf:DdsConstant id="DdsConstant8" runat="server" 
+          <%-- %%TS  SD  20160831  034043  BPALANIS    REL-V7R1M0  5770-WDS                                                      --%>
+          <%--  42                                  DSPATR(PR)                                                                   --%>
+          <%--  42                                  DSPATR(PR)                                                                   --%>
+          <%--  42                                  DSPATR(PR)                                                                   --%>
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="CR1002RI" 
               CssClass="DdsConstant"
