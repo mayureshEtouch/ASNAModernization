@@ -15,5 +15,6 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/material.min.css")%>">
         <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/conns.min.css")%>">
+        <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery-ui.min.css")%>">
 
 
