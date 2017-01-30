@@ -217,7 +217,7 @@
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet" style="margin-left: 9px;">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" onclick="_00('F12',event);">Previous</span>
-                            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('F11', event);">Edit Customer Details</span>
+                            <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="readCustomer" onclick="_00('F11', event);">Edit Customer Details</span> -->
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="esign" onclick="_00('F6', event);" data-upgraded=",MaterialButton,MaterialRipple">eSign T&amp;Cs<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop mdl-cell--2-col-tablet pull-right">
