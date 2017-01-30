@@ -158,15 +158,14 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="content-grid mdl-grid">
+                        <!-- <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Requested Delivery Date:</span>
                             </div>
                             <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <!--<input type="text" id="requestdate" name="date" readonly="true">
+                                    <input type="text" id="requestdate" name="date" readonly="true">
                                         <i id="reqesdate" class="material-icons calender-icon page-icons"></i>
-                                        -->
                                     <input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
                                     <i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
                                     <span id="reqdate" class="DdsCharField_OutputOnly"></span>
@@ -180,7 +179,7 @@
                             <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield" id="expectedDate" name="expectedDate"></span>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Promotion Code:</span>
