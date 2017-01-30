@@ -2216,19 +2216,15 @@
         $("#CenPH_DSPFMT1_SS_lb_2_new-show").show();
     }
     /* Showing ssn on click*/
-var evidenceText = $("#purchaseAmt").html();
-console.log(evidenceText);
+
 if($("#CenPH_DdsConstant62").html()!="")
 {
- // evidenceText = evidenceText +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ $("#CenPH_DdsConstant62").html();
- // append( "<p>Test</p>" );
+
   $("#purchaseAmt").append( "<span class='mrgnLft20'>"+$("#CenPH_DdsConstant62").html()+"</sapn>" );
- // $("#purchaseAmt").html(evidenceText+'<span></span>');
 
 }
 else{
 evidenceTex="";
-
 
 }
      $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown taphold touchstart", function() {
