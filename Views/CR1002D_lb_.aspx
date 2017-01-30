@@ -33,7 +33,7 @@
             </div>
             <div class="mdl-cell mdl-cell--4-col pull-right"> 
               <!-- Navigation --> 
-              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CR1002D</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> 
+              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CR1002RD</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> 
             </div>
           </div>
         </section>
@@ -2217,16 +2217,14 @@
     }
     /* Showing ssn on click*/
 
-if($("#CenPH_DdsConstant62").html()!="")
-{
+
+if($("#CenPH_DdsConstant62").html()!="" && $("#CenPH_DdsConstant62").html()!=undefined)
+{ 
 
   $("#purchaseAmt").append( "<span class='mrgnLft20'>"+$("#CenPH_DdsConstant62").html()+"</sapn>" );
 
 }
-else{
-evidenceTex="";
 
-}
      $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown taphold touchstart", function() {
       setTimeout(function() {
         $("#sssNo_Remark1").html(html1);
