@@ -317,12 +317,12 @@
             <!-- content-grid mdl-grid starts here -->
             <div class="content-grid mdl-grid" style="padding:0"> 
               <!-- col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;">
+                  <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet" style="margin: 0">
                     <span class="form-label">Purchase Amt:</span>
                   </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
+                  <div class="mdl-cell mdl-cell--6-col  mdl-cell--3-col-tablet" style="margin: 0 0 0 -8px;"> 
                     <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="purchaseAmt"></span>  -->
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="purchaseAmt"></span>
                   </div>
@@ -2216,7 +2216,21 @@
         $("#CenPH_DSPFMT1_SS_lb_2_new-show").show();
     }
     /* Showing ssn on click*/
+var evidenceText = $("#purchaseAmt").html();
+console.log(evidenceText);
+if($("#CenPH_DdsConstant62").html()!="")
+{
+ // evidenceText = evidenceText +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ $("#CenPH_DdsConstant62").html();
+ // append( "<p>Test</p>" );
+  $("#purchaseAmt").append( "<span class='mrgnLft20'>"+$("#CenPH_DdsConstant62").html()+"</sapn>" );
+ // $("#purchaseAmt").html(evidenceText+'<span></span>');
 
+}
+else{
+evidenceTex="";
+
+
+}
      $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown taphold touchstart", function() {
       setTimeout(function() {
         $("#sssNo_Remark1").html(html1);
