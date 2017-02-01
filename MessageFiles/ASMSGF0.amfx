@@ -147,12 +147,13 @@
 <MSG MSGID="UCR0028" SEVERITY="0" DATACOUNT="0" TEXT="Months Financed must be longer than Cash Option Length" SECLVL=""                                                                                 />
 <MSG MSGID="UCR0029" SEVERITY="0" DATACOUNT="0" TEXT="Customer does not have valid credit application" SECLVL=""                                                                                        />
 <MSG MSGID="UCR0030" SEVERITY="0" DATACOUNT="0" TEXT="Zero premium rate found for this term. Flag must be set to 0." SECLVL=""                                                                          />
-<MSG MSGID="UCR0031" SEVERITY="0" DATACOUNT="0" TEXT="Months financed must be COP equal pay no interest for state" SECLVL=""                                                                            />
+<MSG MSGID="UCR0031" SEVERITY="0" DATACOUNT="0" TEXT="Months financed must be COP equal pay no interest term for state" SECLVL=""                                                                       />
 <MSG MSGID="UCR0032" SEVERITY="0" DATACOUNT="0" TEXT="COP Acct is not a valid Add-on Account" SECLVL=""        />
 <MSG MSGID="UCR0033" SEVERITY="0" DATACOUNT="0" TEXT="Add-on Amount is over the maximum amount for COP" SECLVL=""                                                                                       />
 <MSG MSGID="UCR0034" SEVERITY="0" DATACOUNT="0" TEXT="Valid Acct exist over min - Must be added on" SECLVL=""  />
 <MSG MSGID="UCR0035" SEVERITY="0" DATACOUNT="0" TEXT="Not valid account number - Please re-enter number" SECLVL=""                                                                                      />
 <MSG MSGID="UCR0036" SEVERITY="0" DATACOUNT="0" TEXT="Eligible acct exists for Add-on for COP contracts" SECLVL=""                                                                                      />
+<MSG MSGID="UCR0037" SEVERITY="0" DATACOUNT="0" TEXT="Order is out of balance. Call the Hotline." SECLVL=""    />
 <MSG MSGID="URS0001" SEVERITY="0" DATACOUNT="0" TEXT="Curstomer account number does not exist." SECLVL="The account number entered does not exist in the customer master file.  Enter the correct customer account number in order to continue."                                                 />
 <MSG MSGID="URS0002" SEVERITY="0" DATACOUNT="0" TEXT="Model number and serial number must both be entered." SECLVL="The model number field and serial number field must both contain information."      />
 <MSG MSGID="URS0003" SEVERITY="0" DATACOUNT="0" TEXT="Model number and serial number does not exist." SECLVL="The model number and serial number is invalid.  Enter the correct numbers in order to continue."                                                                                   />
