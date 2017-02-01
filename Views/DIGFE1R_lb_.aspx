@@ -244,7 +244,7 @@
 					
                        
 						<div class="content-grid mdl-grid" style="padding:0">
-							<div class="mdl-cell mdl-cell--7-col mdl-cell--5-col-tablet">
+							<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
 								<div class="content-grid mdl-grid">
 								  <div  class="mdl-cell mdl-cell--7-col" style="margin: 0; padding:0"> <span class="form-label">Last Changed by User:</span> </div>
 								  <div  class="mdl-cell mdl-cell--5-col" style="margin: 0; padding:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -253,7 +253,7 @@
 										  </div>
 								</div>
 							</div>
-							<div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet">
+							<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
 								<div class="content-grid mdl-grid">
 								  <div  class="mdl-cell mdl-cell--2-col" style="margin: 0; padding:0"> <span class="form-label">On:</span> </div>
 								  <div  class="mdl-cell mdl-cell--3-col" style="margin: 0; padding:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
@@ -1189,8 +1189,11 @@
                 display: none !important;
             }
 
-            #__Page_PopUp {
+            #__Page_PopUp.edit-info {
                 left: 50% !important;
+				width: 730px !important;
+				min-width: 730px !important;
+				margin-left: -365px !important;
             }
 
             #__Page_Hidden {
@@ -1269,6 +1272,8 @@
                 }
             }
             $(document).ready(function() {
+				$("#__Page_PopUp").addClass("edit-info");
+				
 				$(".simplePopup").css({"left": "323px", "height": "30px;"});
 				
 				if($("#CenPH__lb_RCDDTL1__lb_DBRST").length ==0 ){
