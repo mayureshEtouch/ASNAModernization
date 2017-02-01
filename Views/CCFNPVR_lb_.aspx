@@ -325,11 +325,12 @@
           left: 0;
           z-index: 2;
       }
-     #__Page_PopUp {
+     #__Page_PopUp.prompt-answer {
         width: 450px !important;
        left: 50% !important;
-       margin-left: -250px;
+       margin-left: -225px !important;
        top: 25% !important;
+	   min-width: 450px !important;
      }
       #__Page_PopUp > tr:first-child {
        display: none;
@@ -355,6 +356,8 @@
                  }
             };
             $(document).ready(function () {
+			$("#__Page_PopUp").addClass("prompt-answer");
+			
               copyData(copyToAndFrom, "");
               $("#select_prompt").val($("#CenPH__lb_RCDDTL1__lb_PQ1ST").val());
               $("#select_prompt").on('change',function(){

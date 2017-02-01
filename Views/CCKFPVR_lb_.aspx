@@ -52,7 +52,7 @@
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell-brd" style="padding: 0">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin: 0">
-                                    <span class="form-label">Company/Location:</span>
+                                    <span class="form-label">Company/ Location:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet" style="margin: 0">
                                     <span class="form-text" id="cust_location">000/ 000</span>
@@ -932,11 +932,11 @@
 			display: none;
 		}
         #__Page_PopUp {
-            left: 13% !important;
-            min-width: 75% !important;
+            width: 660px !important;
+			min-width: 660px !important;
+			left: 50% !important;
+			margin-left: -330px !important;
         }
-
-		
         .modal-dialog-container {
             width: 100%;
             margin-top: 0;
@@ -960,5 +960,10 @@
 		 #__Page_Hidden {
 			height: 100% !important;
 		 }
+		 .credit-application-entry {
+			margin-bottom: 17px;
+		 }
+	}
+
     </style>
 </asp:Content>

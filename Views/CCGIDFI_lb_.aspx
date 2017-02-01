@@ -837,10 +837,11 @@
             #__Page_Hidden{
                 height: 100% !important;
             }
-              #__Page_PopUp {
+              #__Page_PopUp.credit-message {
                 left: 50% !important;
-                margin-left: -225px;
+                margin-left: -275px !important;
                 min-width: 550px !important;
+				width: 550px !important;
                 min-height: 305px !important;
                 height: auto !important;
             }
@@ -921,6 +922,9 @@
                 }
             };
             $(document).ready(function () {
+			
+				$("#__Page_PopUp").addClass("credit-message");
+			
                 $('body').on('click', '.close-icon', function (event) {
                     _00('F12', event);
                 });

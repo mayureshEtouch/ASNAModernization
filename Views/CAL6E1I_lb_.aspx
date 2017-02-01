@@ -966,6 +966,9 @@
                 }
             }
             $(document).ready(function () {
+			
+				$("#__Page_PopUp").addClass("alternate-entry");
+				
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
                 /*
                 Hidding div if driver state & licence id is not present for given user
@@ -1014,8 +1017,8 @@
 
         </script>
         <style>
-            #__Page_PopUp {
-                min-width: 450px !important;
+            #__Page_PopUp.alternate-entry {
+                min-width: 680px !important;
                 width: 680px !important;
                 left: 50% !important;
 				margin-left: -340px !important;

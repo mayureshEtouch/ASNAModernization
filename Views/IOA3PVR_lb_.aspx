@@ -68,12 +68,13 @@
 <!--                     <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div> -->
-                    <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-desktop pull-right">
-                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
-                    </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
                       <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
                     </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop pull-right">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                    </div>
+                    
                   </div>
 
                 </div>
@@ -554,9 +555,9 @@
                 height: 100% !important;
             }
             #__Page_PopUp {
-                margin-left: -350px;
-                /*min-width: 700px !important;*/
-                width: 540px !important;
+                margin-left: -300px;
+                min-width: 600px !important;
+                width: 600px !important;
                 left: 60% !important;
                 top: 23%!important; 
             }

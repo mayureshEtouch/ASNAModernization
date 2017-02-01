@@ -44,7 +44,7 @@
             </div>
         </section>
       
-		<section class="form-data" style="margin-bottom:5px;">
+		<section class="form-data" style="margin-bottom:15px;">
 		<div class="form-data-wrapper" style="padding-bottom:0;">
 		<div class="content-grid mdl-grid">
 		  <div class="mdl-cell mdl-cell--12-col" style="padding:0">
@@ -109,11 +109,12 @@
           left: 0;
           z-index: 2;
       }
-     #__Page_PopUp {
+     #__Page_PopUp.search-account {
         width: 450px !important;
        left: 50% !important;
-       margin-left: -250px;
+       margin-left: -225px !important;
        top: 25% !important;
+	   min-width: 450px !important;
      }
       #__Page_PopUp > tr:first-child {
        display: none;
@@ -132,6 +133,9 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
+	  
+	  $("#__Page_PopUp").addClass("search-account");
+	  
        $("#ssn-show").on("mousedown taphold", function() {
           setTimeout(function() {
               var ssnValue = $("#ssn").val();
