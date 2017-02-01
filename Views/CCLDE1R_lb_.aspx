@@ -193,12 +193,12 @@
 <!-- Modified HTML code ends here -->
 
 <style>
-        #__Page_PopUp {
-            /*min-width: 540px !important;*/
-            
-      left: 50% !important;
-      margin-left: -325px;
-	  top:13% !important;
+        #__Page_PopUp.emp-history {
+          min-width: 650px !important;
+		  left: 50% !important;
+		  margin-left: -325px;
+		  top:13% !important;
+		  width: 650px !important;
         }
     #__Page_PopUp > tr:first-child {
       display: none;
@@ -209,7 +209,7 @@
     }
        
           .modal-dialog-container {
-           /* width: 650px !important;*/
+            width: 100% !important;
             margin-top: 0;
 			margin-bottom : 20px !important;
         }
@@ -218,8 +218,8 @@
             overflow: hidden !important;
         }
         #wrapper {
-/*width: 100% !important;*/
-}
+			width: 100% !important;
+		}
         #form1 {
             margin-top: -20px;
         }
@@ -227,9 +227,9 @@
             height: 100% !important;
         }
         .simplePopup {
-                left: 30% !important;
-                top: 40% !important;
-              }
+			left: 30% !important;
+			top: 40% !important;
+		  }
 			  
 		.ui-datepicker-today 
 		{
@@ -263,7 +263,7 @@
             $(document).ready(function () {
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-           
+				$("#__Page_PopUp").addClass("emp-history");
 
                 $("#reqdate").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").html());
                 $("#requestdate").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").val());

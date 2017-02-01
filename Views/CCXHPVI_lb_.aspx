@@ -50,16 +50,16 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--12-col" style="padding:0">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--3-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
                                             <span class="form-label">Do you want the</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-left: -15px;">
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0;margin-left: 5px;">
                                             <span class="form-text" id="CenPH__lb_RCDDTL1__lb_PZLNB_new"></span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--5-col" style="margin:0">
+                                        <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet" style="margin:0">
                                             <span class="form-label" style="">Month COP Available</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--1-col" style="margin:0;margin-left: -45px;margin-top: -3px;">
+                                        <div class="mdl-cell mdl-cell--1-col mdl-cell--4-col-tablet" style="margin:0;margin-left: -45px;margin-top: -3px;">
                                             <span class="form-text">
                                           <select id="CenPH__lb_RCDDTL1__lb_DQ1ST_new">
                                                <option selected="selected" value=" ">Please Choose</option>
@@ -644,10 +644,10 @@
                 height: 800px !important;
             }
             #__Page_PopUp {
-                min-width: 450px !important;
-                width: 50% !important;
+                min-width: 600px !important;
+                width: 600px !important;
                 left: 50% !important;
-                margin-left: -25%;
+                margin-left: -300px !important;
                 top: 10% !important;
             }
             #__Page_PopUp > tr:first-child {
@@ -667,6 +667,7 @@
             .modal-dialog-container {
                 width: 100% !important;
                 margin-top: 0;
+				margin-bottom: 20px;
             }
             .mdl-layout__content {
                 height: auto !important;
