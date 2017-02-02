@@ -950,9 +950,9 @@
         #__AsnaDisplayfileRestored__ {
             margin-top: -20px !important;
         }
-		#content {
-			height: auto !important;
-		}
+		/* #content {
+            height: auto !important;
+        } */
         .simplePopup {
           left: 28% !important;
           top: 40% !important;
