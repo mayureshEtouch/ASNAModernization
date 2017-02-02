@@ -110,7 +110,7 @@
                     </div>
                 </section>
             </main>
-        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; display: block;background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
         <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
             <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
             <div class="button-container">
@@ -565,7 +565,8 @@
                 } else {
                     $(".confirmation-outer-conatiner").show();
                     $(".close-icon").hide();
-                    $("main").hide();
+					$(".simplePopupBackground1").show();
+                    $("main").show();
                 }
                 $("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
@@ -603,10 +604,6 @@
             .modal-dialog-container {
                 width: 100% !important;
                 margin-top: 0;
-            }
-            .mdl-layout__content {
-                height: auto !important;
-                overflow: hidden !important;
             }
             #form1 {
                 margin-top: -20px;
