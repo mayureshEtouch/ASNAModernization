@@ -230,3 +230,36 @@
     });
 });
 */
+
+
+
+
+$(document).ready(function() {
+    var popUpStyles = {
+        "CCGEPVR": "width: 450px !important;left: 50% !important;margin-left: -225px !important;top: 25% !important;min-width: 450px !important;",
+        "CCFNPVR": "width: 450px !important;left: 50% !important;margin-left: -225px !important;top: 25% !important;min-width: 450px !important;",
+        "CCGIDFI": "left: 50% !important;margin-left: -275px !important;min-width: 550px !important;width: 550px !important;min-height: 305px !important;height: auto !important;",
+        "CCLDE1R": "min-width: 650px !important;left: 50% !important;margin-left: -325px;top: 13% !important;width: 650px !important;",
+        "CCLBDFR": "min-width: 760px !important;width: 760px !important;left: 50% !important;margin-left: -380px;top: 18% !important;height: auto !important;",
+        "DIMIPVI": "min-width: 760px !important;width: 760px !important;left: 50% !important;margin-left: -380px;top: 18% !important;height: auto !important;"
+    }
+
+    var currentScreen = "",
+        visiblePopUpStyles = "",
+        nonVisiblePopUpStyles = "";
+    currentScreen = window.location.href.split("/")[(window.location.href.split("/").length - 1)].split("_")[0];
+    if (popUpStyles.hasOwnProperty(currentScreen)) {
+        visiblePopUpStyles = popUpStyles[currentScreen] + "top:60px !important;";
+        nonVisiblePopUpStyles = visiblePopUpStyles + "z-index:-1;";
+        applyStyles();
+    }
+
+    function applyStyles() {
+        var popupsCount = $(".DdsInlinePopUpTable").length;
+        for (var i = 1; i < popupsCount; i++) {
+            $($(".DdsInlinePopUpTable")[i]).attr('style',nonVisiblePopUpStyles);
+        }
+        $($(".DdsInlinePopUpTable")[0]).attr('style', visiblePopUpStyles);
+    }
+
+});
