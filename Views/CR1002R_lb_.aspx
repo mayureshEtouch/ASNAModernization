@@ -479,7 +479,7 @@
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="previous">Previous</span>
 				<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="14" id="refresh">refresh</span> 
                 <span data-tb-index="15" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg">Display Messages</span> 
-                <span data-tb-index="16" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" event-data="F4">Prompt</span> 
+                <span data-tb-index="16" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" >Prompt</span> 
                 </div>
                 <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop mdl-cell--2-col-tablet pull-right"> <span data-tb-index="17" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
               </div>
@@ -2151,6 +2151,9 @@
         $(document).ready(function() {
           $('input:text[name="CenPH_DSPFMT1_SS_lb_1_new"]').keyup(function () {
                 $('input:hidden[name="CenPH_DSPFMT1_SS_lb_1_new_hidden"]').val($(this).val());
+                var ssnHidden= $('input:hidden[name="CenPH_DSPFMT1_SS_lb_1_new_hidden"]').val();
+                $("input:text[name='CenPH_DSPFMT1_SS_lb_1']").val(ssnHidden);
+
                 
             });
           $('input:text[name="CenPH_DSPFMT1_SS_lb_2_new"]').keyup(function () {
@@ -2265,6 +2268,22 @@
                 $('body').on('click', '#disp-msg', function(event) {
                     _00('F6', event);
                 });
+
+                $('body').on('click', '#prompt', function(event) {
+               if ($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val().length > 0) {
+                        $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+                    } else {
+                        $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new").val());
+                    }
+
+                    if ($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val().length > 0) {
+                        $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                    } else {
+                        $("#CenPH_DSPFMT1_SS_lb_2").val($("#CenPH_DSPFMT1_SS_lb_2_new").val());
+                    }
+                console.log($("#CenPH_DSPFMT1_SS_lb_1").val());
+                    _00('F4', event);
+                });
                 $('body').on('click', '#next', function(event) {
                   
                     if ($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val().length > 0) {
@@ -2278,6 +2297,7 @@
                     } else {
                         $("#CenPH_DSPFMT1_SS_lb_2").val($("#CenPH_DSPFMT1_SS_lb_2_new").val());
                     }
+                   
                     _00('Enter', event);
                 });
                 
