@@ -109,13 +109,6 @@
           left: 0;
           z-index: 2;
       }
-     #__Page_PopUp.search-account {
-        width: 450px !important;
-       left: 50% !important;
-       margin-left: -225px !important;
-       top: 25% !important;
-	   min-width: 450px !important;
-     }
       #__Page_PopUp > tr:first-child {
        display: none;
       }

@@ -23,7 +23,7 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <div class="OverlayPopupBackground"></div>
-    <main class="mdl-layout__content">
+    <main class="mdl-layout__content" id="orderPayment">
         <section class="time-date">
             <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--8-col">
@@ -1232,7 +1232,7 @@
         }
 
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-            .mdl-layout__content {
+            #orderPayment {
                 height: 920px;
             }
         }
