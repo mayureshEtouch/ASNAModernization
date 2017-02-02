@@ -356,7 +356,6 @@
                  }
             };
             $(document).ready(function () {
-			$("#__Page_PopUp").addClass("prompt-answer");
 			
               copyData(copyToAndFrom, "");
               $("#select_prompt").val($("#CenPH__lb_RCDDTL1__lb_PQ1ST").val());

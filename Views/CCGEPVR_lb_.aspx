@@ -133,9 +133,7 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function() {
-	  
-	  $("#__Page_PopUp").addClass("search-account");
-	  
+	  	  
        $("#ssn-show").on("mousedown taphold", function() {
           setTimeout(function() {
               var ssnValue = $("#ssn").val();

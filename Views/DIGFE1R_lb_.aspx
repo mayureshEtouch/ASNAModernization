@@ -94,10 +94,10 @@
 							<!-- content-grid mdl-grid starts here -->
                             <div class="content-grid mdl-grid" style="padding:0">
                                 <!-- 6 col starts here -->
-                                <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-cell mdl-cell--5-col">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--5-col" style="margin: 0; padding:0"> <span class="form-label">Home Phone #:</span> </div>
-                                        <div class="mdl-cell mdl-cell--7-col" style="margin: 0; padding:0"> 
+                                        <div class="mdl-cell mdl-cell--6-col" style="margin: 0; padding:0"> <span class="form-label">Home Phone #:</span> </div>
+                                        <div class="mdl-cell mdl-cell--6-col" style="margin: 0; padding:0"> 
 											<span class="form-text" data-upgraded=",MaterialTextfield">
 											<input type="text" id="home-phone" name="home-phone" maxlength="10" data-tb-index="4">
 											</span> 
@@ -106,9 +106,9 @@
                                 </div>
                                 <!-- 6 col ends here -->
 								 <!-- 6 col starts here -->
-                                <div class="mdl-cell mdl-cell--6-col">
+                                <div class="mdl-cell mdl-cell--7-col">
                                     <div class="content-grid mdl-grid">
-                                        <div class="mdl-cell mdl-cell--4-col" style="margin: 0; padding:0"> <span class="form-label">Work Phone:</span> </div>
+                                        <div class="mdl-cell mdl-cell--4-col pull-right" style="margin: 0 5px 0 0; padding:0"> <span class="form-label">Work Phone:</span> </div>
                                         <div class="mdl-cell mdl-cell--8-col" style="margin: 0; padding:0"> 
 											<span class="form-text" data-upgraded=",MaterialTextfield">
 											<input type="text" id="work-phone" name="work-phone" maxlength="10" class="mdl-cell--5-col" data-tb-index="5">
@@ -1232,6 +1232,9 @@
                 z-index: 10;
                 margin-top: 2em;
             }
+			#__Page_PopUp #content {
+				height: 100% !important;
+			}
 			.zipcode-div {
 				margin-left: -12px !important;
 			}

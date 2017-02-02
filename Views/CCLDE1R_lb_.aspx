@@ -193,13 +193,13 @@
 <!-- Modified HTML code ends here -->
 
 <style>
-        #__Page_PopUp.emp-history {
-          min-width: 650px !important;
-		  left: 50% !important;
-		  margin-left: -325px;
-		  top:13% !important;
-		  width: 650px !important;
-        }
+   /*#__Page_PopUp.emp-history {
+	  min-width: 650px !important;
+	  left: 50% !important;
+	  margin-left: -325px;
+	  top:13% !important;
+	  width: 650px !important;
+	} */
     #__Page_PopUp > tr:first-child {
       display: none;
     }
@@ -263,7 +263,7 @@
             $(document).ready(function () {
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
-				$("#__Page_PopUp").addClass("emp-history");
+				
 
                 $("#reqdate").html($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").html());
                 $("#requestdate").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1EMPD").val());

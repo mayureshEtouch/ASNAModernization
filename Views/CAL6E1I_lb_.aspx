@@ -966,8 +966,6 @@
                 }
             }
             $(document).ready(function () {
-			
-				$("#__Page_PopUp").addClass("alternate-entry");
 				
                 copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
                 /*
@@ -1017,12 +1015,6 @@
 
         </script>
         <style>
-            #__Page_PopUp.alternate-entry {
-                min-width: 680px !important;
-                width: 680px !important;
-                left: 50% !important;
-				margin-left: -340px !important;
-            }
             #__Page_PopUp tbody > tr:first-child {
               display: none;
             }
@@ -1050,5 +1042,8 @@
             #div_driver, #div_license {
                 display: none;
             }
+			.display-application-status {
+				margin-bottom: 17px;
+			}
         </style>
     </asp:Content>
