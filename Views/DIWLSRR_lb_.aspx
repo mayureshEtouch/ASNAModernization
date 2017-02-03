@@ -598,17 +598,8 @@
      <script type="text/javascript">
            
             $(document).ready(function () {
-               var dataMergeIndices = [[0], [1,2]];
-      
-            generateTableAndApplyInfiniteScroll("tblCashOption", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-            /*setInterval(function(){
-                if($("table#__Page_PopUp #CenPH__lb_SFLRCD_0").length === 0 && $("#previous-page").length === 0) {
-                    $("#tblCashOption").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
-                }
-                if($("table#__Page_PopUp #CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1 && $("#next-page").length === 0) {
-                    $("#tblCashOption").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
-                }
-            },1000)*/
+               	var dataMergeIndices = [[0], [1,"&nbsp;", 2]];
+            	generateDataTable("tblCashOption", "table#__Page_PopUp #CenPH__lb_SFLRCD", "next", dataMergeIndices, true);
 
                 $('.close-icon').click(function (event) {
                     _00("F12", event);
@@ -616,8 +607,6 @@
                 $('#next').click(function (event) {
                     _00("Enter", event);
                 });
-                //validations
-                
 
                 //Error message
                 if($("#__Page_PopUp .simplePopupClose").length > 0) {

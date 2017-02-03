@@ -852,12 +852,12 @@
             $(document).ready(function () {
                 copyData(copyToAndFrom, "keyup keydown mouseup mousedown click change");
                 var dataMergeIndices = [[0], [1], [2], [3], [4], [5]];
-               generateTableAndApplyInfiniteScroll("records", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+               generateDataTable("records", "table#__Page_PopUp #CenPH__lb_SFLRCD", "next", dataMergeIndices, true);
 
 
                 $('body').on("click", "#next-page, #previous-page", function(event) {
        
-                setTimeout(function(){$("#previous-page,#next-page").remove();
+                /*setTimeout(function(){$("#previous-page,#next-page").remove();
                     if($("#__Page_PopUp #CenPH__lb_SFLRCD_0").length === 0) {
                         $("#records").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
                     }
@@ -868,7 +868,7 @@
                         $('#eof-indicator').remove();
                         $("#records").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
                     }
-                },1500)
+                },1500)*/
             });
 
                 $('.close-icon').click(function (event) {
