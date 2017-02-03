@@ -549,7 +549,7 @@
 
             #main-content {
                 width: 100%;
-                min-height: 271px!important;
+                min-height: 178px!important;
             }
             #__Page_Hidden{
                 height: 100% !important;
