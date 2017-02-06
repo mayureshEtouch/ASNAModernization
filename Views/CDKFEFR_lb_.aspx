@@ -588,44 +588,43 @@
 
           var sel = $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]').find("select");
           
-          if (sel.length > 0) {
-            var dataMergeIndices =  [[0, "<br/>", 1, "<br/>", 2]];
-            console.log(sel.length);
+          $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]:not(#CenPH__lb_SFLRCD__End)').each(function (i) {
+            $("#custAnswerDisplay tbody").append('<tr><td></td><td></td></tr>');
+            if (sel.length > 0) {
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(0)').append($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0].innerText);
 
-            setTimeout(function(){ 
-                $("#custAnswerDisplay tr:not(:first)").each(function(i){
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').append(sel[i]);
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option").each(function(){
+                  if($(this).val().trim() == ""){
+                    $(this).val(" ").text("Please Choose");
+                     //$('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
+                    }       
+                    return this;
+                });
 
-                $(this).append('<td></td>');
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').append(sel[i]);
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option").each(function(){
-                    if($(this).val().trim() == ""){
-                      $(this).val(" ").text("Please Choose");
-                       //$('#custAnswerDisplay tr:eq('+i.toString()+') td:eq(1)').find("select option[value=' ']").insertBefore("#CenPH__lb_RCDDTL1__lb_PH2S_lb_ option:eq(0)");
-                      }       
-                      return this;
-                  });
+              if ($('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val() == " ") {
+                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
+              }
+              //$('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='?']").remove();
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='Y']").text("Y - YES");
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='N']").text("N - NO");
 
-                if ($('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val() == " ") {
-                  $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
-                }
-                //$('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='?']").remove();
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='Y']").text("Y - YES");
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='N']").text("N - NO");
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1) select').removeAttr("style");
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1) span').removeAttr("style");
+            }
+            else
+            {
+               //$("#custAnswerDisplay tbody").append('<tr><td></td><td></td></tr>');
+               var td1 = $($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0]).children()[0].innerText + $($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0]).children()[2].innerText;
+               var td2 = $($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0]).children()[1].innerText;
 
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1) select').removeAttr("style");
-                $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1) span').removeAttr("style");
-                //$(this).append($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]:not([id$="End"]').find("select")[i]);
-              });
-            }, 10);
-            
-          }
-          else
-          {
-            var dataMergeIndices =  [[0, "<br/>", 2],[1]];
-          }
+               $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(0)').append(td1);
+               $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').append(td2);
+            }
+          });
           
-          generateTableAndApplyInfiniteScroll("custAnswerDisplay", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+         // generateTableAndApplyInfiniteScroll("custAnswerDisplay", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
           var selectCusotmer = function (row, value, event) {
             var selectId = $(row).data('selectid');
             a = selectId.split(".");
