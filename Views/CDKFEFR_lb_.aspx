@@ -100,7 +100,7 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
           </div>
       </div>
-        <div id="Div1" style="display:none;">
+        <div id="Div1" >
             
       <%--  Edit OE: Cust Question Ma Edit file                                                                              --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -587,11 +587,18 @@
           //generateTableAndApplyInfiniteScroll("custAnswerDisplay", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 
           var sel = $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]').find("select");
-          
+          1
           $('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]:not(#CenPH__lb_SFLRCD__End)').each(function (i) {
             $("#custAnswerDisplay tbody").append('<tr><td></td><td></td></tr>');
             if (sel.length > 0) {
-              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(0)').append($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0].innerText);
+              //Extract question text
+              var qText = "";
+              for(var q=0;q<$($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0]).find("span").length;q++) {
+                var lineText = $($($('#CenPH__lb_SFLRCD div[id^=CenPH__lb_SFLRCD_]')[i])[0]).find("span")[q].innerText;
+                qText += lineText[0] !== "," ? "&nbsp;" : "";
+                qText += lineText;
+              }
+              $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(0)').append(qText);
 
               $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').append(sel[i]);
               $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option").each(function(){

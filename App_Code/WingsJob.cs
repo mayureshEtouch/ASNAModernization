@@ -57,7 +57,7 @@ namespace WingsLogic
             System.Data.DataRow row = wfSignon.DataSet.Tables[ "RSIGNON" ].Rows[ 0 ];
 
             logonInfo.Server = row[ "SYSTEM" ].ToString().Trim();
-            logonInfo.User = row[ "USER" ].ToString().Trim();
+            logonInfo.User = row[ "USER" ].ToString().ToUpper().Trim();
             logonInfo.Password = row[ "PASSWORD" ].ToString().Trim();
             logonInfo.Port = ( int )decimal.Parse( row[ "PORT" ].ToString() );
             logonInfo.Program = row[ "PROGRAM" ].ToString().Trim();
@@ -73,7 +73,7 @@ namespace WingsLogic
             LogonInfo logonInfo = cookie as LogonInfo;
 
             newRow[ "SYSTEM" ] = logonInfo.Server;
-            newRow[ "USER" ] = logonInfo.User;
+            newRow[ "USER" ] = logonInfo.User.ToUpper();
             newRow[ "PASSWORD" ] = logonInfo.Password;
             newRow[ "PORT" ] = logonInfo.Port;
             newRow[ "PROGRAM" ] = logonInfo.Program;
@@ -89,7 +89,7 @@ namespace WingsLogic
             {
                 logonInfo.Message = message;
                 logonInfo.Server = myDatabase.Server;
-                logonInfo.User = myDatabase.User;
+                logonInfo.User = myDatabase.User.ToUpper();
                 logonInfo.Port = myDatabase.Port;
                 logonInfo.Library = libraryName;
                 logonInfo.Program = programName;
@@ -97,16 +97,25 @@ namespace WingsLogic
             }
            //myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.MonarchWeb, AVRRuntime.OpenAccessDspF.Wings );
              myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.None, AVRRuntime.OpenAccessDspF.Wings );
-            myDatabase.TerminalDeviceName = "SA112TC139";
+            //myDatabase.TerminalDeviceName = "SA112TC139";
 
             while( true )
             {
                 promptLogon( logonInfo );
 
                 myDatabase.Server = logonInfo.Server;
-                myDatabase.User = logonInfo.User;
+                myDatabase.User = logonInfo.User.ToUpper();
                 myDatabase.Password = logonInfo.Password;
                 myDatabase.Port = logonInfo.Port;
+
+                //Select Terminal ID based on the User profile.
+                if(myDatabase.User == "ESALESQA") {
+                    myDatabase.TerminalDeviceName = "SA112TC139";
+                } else if(myDatabase.User == "GUIQA") {
+                    myDatabase.TerminalDeviceName = "SA40TC144";
+                } else {
+                    myDatabase.TerminalDeviceName = "SA73TC0142";
+                }
 
                 try
                 {
@@ -162,7 +171,7 @@ namespace WingsLogic
                     continue;
                 }
                 if( string.IsNullOrWhiteSpace( menuName ) )
-                    goMenu( "DSM003C" );
+                    goMenu( "DSLOADCI" );
                 else
                 {
                     try
