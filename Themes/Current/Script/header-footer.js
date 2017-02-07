@@ -7,6 +7,7 @@
     header += "            <div class=\"mdl-layout__header-row\">";
     header += "                <!-- Title -->";
     header += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
+	header += "                <h1 class=\"page-title\">eSales System</h1>";
     header += "                <!-- Add spacer, to align navigation to the right -->";
     header += "                <div class=\"mdl-layout-spacer\"><\/div>";
     header += "                <!-- Navigation -->";
@@ -23,6 +24,7 @@
     loginHeader += "<div class=\"mdl-layout--fixed-header mdl-layout--large-screen-only\"><header class=\"mdl-layout__header is-casting-shadow \">";
     loginHeader += "            <div class=\"mdl-layout__header-row\">";
     loginHeader += "                <span class=\"mdl-layout-title logo-icon\"><\/span>";
+	loginHeader += "                <h1 class=\"page-title\">eSales System</h1>";
     loginHeader += "                <div class=\"mdl-layout-spacer\"><\/div>";
     loginHeader += "            <\/div>";
     loginHeader += "        <\/header></\div>";

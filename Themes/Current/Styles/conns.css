@@ -421,6 +421,15 @@ a:visited, .mdl-menu__item a {
 	height: 39px;
 	width: 74px;
 }
+h1.page-title {
+    border-left: groove 2px #fff;
+	color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+	line-height: normal;
+	margin: 0;
+    padding-left: 10px;
+}
 .user-icon {
 	background: url('../Images/log-img.png') no-repeat;
 	height: 35px;
