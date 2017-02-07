@@ -420,7 +420,9 @@
                       <option selected="selected" value="1"> 1 </option>
                       <option value="2"> 2 </option>
                     </select>
-                    </span> </div>
+                    </span> 
+                    <span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DSPFMT1_CRLIFB_new_ro"></span>
+                    </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -435,7 +437,9 @@
                       <option value="0"> 0 </option>
                       <option selected="selected" value="1"> 1 </option>
                     </select>
-                    </span> </div>
+                    </span> 
+                    <span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DSPFMT1_CRACHB_new_ro"></span>
+                    </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -467,7 +471,9 @@
                       <option value="0"> 0 </option>
                       <option selected="selected" value="1"> 1 </option>
                     </select>
-                    </span> </div>
+                    </span> 
+                    <span class="form-text" data-upgraded=",MaterialTextfield" id="CenPH_DSPFMT1_CRUEMB_new_ro"></span>
+                    </div>
                 </div>
               </div>
               <!-- 6 col ends here --> 
@@ -2077,6 +2083,9 @@
                 "CenPH_DSPFMT1_CRSCDB": "CenPH_DSPFMT1_CRSCDB_new",
                 "CenPH_DSPFMT1_CRPCHB": "CenPH_DSPFMT1_CRPCHB_new",
                 "CenPH_DSPFMT1_CRDWNB": "CenPH_DSPFMT1_CRDWNB_new",
+                "CenPH_DSPFMT1_CRLIFB": "CenPH_DSPFMT1_CRLIFB_new_ro",
+                "CenPH_DSPFMT1_CRACHB": "CenPH_DSPFMT1_CRACHB_new_ro",
+                "CenPH_DSPFMT1_CRUEMB": "CenPH_DSPFMT1_CRUEMB_new_ro",
                 "CenPH_DSPFMT1_CRPRPB": "CenPH_DSPFMT1_CRPRPB_new_ro",
                 "CenPH_DSPFMT1_CRPHNB": "ro-CenPH_DSPFMT1_CRPHNB_new",
                 "CenPH_DSPFMT1_CRWRKB": "ro-CenPH_DSPFMT1_CRWRKB_new",
@@ -2213,6 +2222,30 @@
                 } else {
                     $("#CenPH_DSPFMT1_CRPRPB_new_ro").hide();
                     $("#CenPH_DSPFMT1_CRPRPB_new").show();
+                }
+
+                if ($("#CenPH_DSPFMT1_CRLIFB").is('span')) {
+                    $("#CenPH_DSPFMT1_CRLIFB_new_ro").show();
+                    $("#CenPH_DSPFMT1_CRLIFB_new").hide();
+                } else {
+                    $("#CenPH_DSPFMT1_CRLIFB_new_ro").hide();
+                    $("#CenPH_DSPFMT1_CRLIFB_new").show();
+                }
+
+                if ($("#CenPH_DSPFMT1_CRACHB").is('span')) {
+                    $("#CenPH_DSPFMT1_CRACHB_new_ro").show();
+                    $("#CenPH_DSPFMT1_CRACHB_new").hide();
+                } else {
+                    $("#CenPH_DSPFMT1_CRACHB_new_ro").hide();
+                    $("#CenPH_DSPFMT1_CRACHB_new").show();
+                }
+
+                if ($("#CenPH_DSPFMT1_CRUEMB").is('span')) {
+                    $("#CenPH_DSPFMT1_CRUEMB_new_ro").show();
+                    $("#CenPH_DSPFMT1_CRUEMB_new").hide();
+                } else {
+                    $("#CenPH_DSPFMT1_CRUEMB_new_ro").hide();
+                    $("#CenPH_DSPFMT1_CRUEMB_new").show();
                 }
 
                 if ($("#CenPH_DSPFMT1_CRPHNB").is('span')) {
@@ -2491,6 +2524,8 @@
               }
 
             });
+
+         //Insurance section issue fixes
 
         });
     </script> 

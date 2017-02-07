@@ -200,8 +200,8 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">S.S.#:</span> </div>
-									 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum"></span> </div>
-									 <div class="mdl-cell mdl-cell--5-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2"></span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="ssnum_new-show">Show</a> </div>
+									 <div class="mdl-cell mdl-cell--3-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum"></span> </div>
+									 <div class="mdl-cell mdl-cell--1-col pull-right" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="ssnum2"></span>&nbsp;&nbsp;<a href="javascript:void(0);" style="color:blue;cursor: pointer;" id="ssnum_new-show">Show</a> </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -482,6 +482,8 @@
         </section>
     </main>
     <div id="modal1" class="simplePopup"></div>
+    <span style="display: none;" id="CenPH_slash">/</span>
+    <span style="display: none;" id="CenPH_hypen">-</span>
     <!-- Modified HTML code ends here -->
      <div id="Div1" style="display:none">
             
@@ -1689,7 +1691,7 @@
                 "CenPH_DdsConstant46": "date",
                 "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
                 "CenPH__lb_RCDDTL1__lb_1ALTX": "name",
-                "CenPH__lb_RCDDTL1__lb_1BANB+CenPH_DdsConstant44+CenPH__lb_RCDDTL1__lb_1ZMNB": "order",
+                "CenPH__lb_RCDDTL1__lb_1BANB+CenPH_slash+CenPH__lb_RCDDTL1__lb_1ZMNB": "order",
                 "CenPH__lb_RCDDTL1__lb_1ABCD+CenPH_DdsConstant25+CenPH__lb_RCDDTL1__lb_1AACD": "location",
                 "CenPH__lb_RCDDTL1__lb_1SVST": "sts",
                 "CenPH__lb_RCDDTL1__lb_1TXTX": "account",
@@ -1720,7 +1722,7 @@
                 "CenPH__lb_RCDDTL1__lb_1EEVA": "financed",
                 "CenPH__lb_RCDDTL1__lb_1KMVA": "interest1",
                 "CenPH__lb_RCDDTL1__lb_1KOVA": "total",
-                "CenPH__lb_RCDDTL1_V1AGDT+CenPH_DdsConstant49+CenPH__lb_RCDDTL1__lb_1ABTM": "earned"
+                "CenPH__lb_RCDDTL1_V1AGDT+CenPH_hypen+CenPH__lb_RCDDTL1__lb_1ABTM": "earned"
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_2AXTX": "modelNumber"
