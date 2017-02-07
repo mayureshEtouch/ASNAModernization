@@ -2149,6 +2149,7 @@
             }
         };
         $(document).ready(function() {
+          $("#CenPH_DdsConstant62_new").css("color","red");
           $('input:text[name="CenPH_DSPFMT1_SS_lb_1_new"]').keyup(function () {
                 $('input:hidden[name="CenPH_DSPFMT1_SS_lb_1_new_hidden"]').val($(this).val());
                 var ssnHidden= $('input:hidden[name="CenPH_DSPFMT1_SS_lb_1_new_hidden"]').val();
