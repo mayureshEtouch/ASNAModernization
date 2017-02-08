@@ -2174,6 +2174,9 @@
             function keydown(evt) {
                 if (!evt) evt = event;
                 if (evt.keyCode == 115) {
+                  if ($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val() != $("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val()) {
+                    $("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+                  }
                     if ($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val().length > 0) {
                         
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
