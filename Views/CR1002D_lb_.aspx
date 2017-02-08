@@ -1770,6 +1770,8 @@
 				right: -100px;
 			}
 		}
+
+    #purchaseAmt span {color: red;}
       </style>
 
       <script type="text/javascript">
