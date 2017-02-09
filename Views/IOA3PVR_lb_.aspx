@@ -52,9 +52,9 @@
                   <!-- col starts here -->
                     <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
                     <div class="content-grid mdl-grid" style="padding-bottom: 0;">
-                      <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="margin:0">
+<!--                       <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="margin:0">
                         <span class="form-label"></span>
-                      </div>
+                      </div> -->
                       <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet" style="margin:0">
                         <span class="form-text" id="text"></span>
                       </div>
@@ -68,10 +68,10 @@
 <!--                     <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div> -->
-					<div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+					           <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
                       <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop pull-right">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
                     </div>
                     
@@ -82,9 +82,9 @@
             </div>
           </section>
         </main>
-        <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+        <!-- <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
         <div id="modal" class="simplePopup"></div>
-      <div id="Div1" style="display:none;">
+ -->      <div id="Div1" style="display:none;">
             
       <%--  ES: PMT to eSign Automate Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -598,7 +598,7 @@
             "displayOnlyFields": {
                 //"CenPH__lb_CMDTXT1": "text",
                 "CenPH__lb_RCDDTL1__lb_DEXXT":"text",
-                //"CenPH__lb_RCDDTL1__lb_DEXXT":"esign-info"
+                "CenPH__lb_MSGRCD_MSGKEY.0":"esign-info"
             },
             "inputFields": {
                
@@ -608,6 +608,7 @@
 
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
+            $("#esign-info").append($($(".DdsSflMsgField_OutputOnly")[0]).html());
             $('body').on('click', '.close-icon', function (event) {
                 _00('F12', event);
             });

@@ -1756,6 +1756,9 @@
         /*.mdl-layout__content {
           padding-bottom: 70px;
         }*/
+        .mrgnTp16 {
+          margin-bottom: 50px;
+        }
 		.calender-icon {
 			position: absolute;
 			right: 3px;
