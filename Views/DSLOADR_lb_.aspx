@@ -131,8 +131,8 @@
 						<div class="button-container" style="padding: 0 0 5px 0;">
 							 <div class="content-grid mdl-grid">
 								<div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
-									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('F2',event);">Location Entry</span>
-									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('F6',event);">Messages</span>
+									<span id="location-entry" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="display: none;" onclick="_00('F2',event);">Location Entry</span>
+									<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('F6',event);">Messages</span> -->
 								</div>
 								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
 									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);">Next</span>
@@ -511,6 +511,13 @@
             });
 			$("#enterYourLocation").ForceNumericOnly();
 			$("#enterYourCompany").ForceAlphabetOnly();
+
+            //conditional location entry button
+            if($("#CenPH_DdsConstant8").length > 0) {
+                $("#location-entry").show();
+            } else {
+                $("#location-entry").hide();
+            }
         });
     </script>
 </asp:Content>
