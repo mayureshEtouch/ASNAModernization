@@ -53,7 +53,7 @@
                     <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
                     <div class="content-grid mdl-grid" style="padding-bottom: 0;">
                       <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="margin:0">
-                        <span class="form-label">Text:</span>
+                        <span class="form-label"></span>
                       </div>
                       <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet" style="margin:0">
                         <span class="form-text" id="text"></span>
@@ -72,7 +72,7 @@
                       <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop pull-right">
-                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
                     </div>
                     
                   </div>

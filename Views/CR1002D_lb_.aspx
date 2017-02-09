@@ -1753,9 +1753,9 @@
           margin-bottom: 10%;
         }
 
-        .mdl-layout__content {
+        /*.mdl-layout__content {
           padding-bottom: 70px;
-        }
+        }*/
 		.calender-icon {
 			position: absolute;
 			right: 3px;
