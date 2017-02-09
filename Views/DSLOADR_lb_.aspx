@@ -122,8 +122,8 @@
                                 <div class="content-grid mdl-grid">
                                     <div style="margin: 0" class="mdl-cell mdl-cell--2-col mdl-cell--3-col-tablet"><span class="form-label">Output Queue:</span> </div>
                                     <div style="margin: 0" class="mdl-cell mdl-cell--3-col mdl-cell--5-col-tablet">
-                                        <span class="form-text">
-                                            <input id="Output-queue" type="text" name="Output-queue" value="" disabled="disabled"></span>
+                                        <span class="form-text" id="Output-queue">
+                                            <!-- <input id="Output-queue" type="text" name="Output-queue" value="" disabled="disabled"></span> -->
                                     </div>
                                 </div>
                             </div>
@@ -485,6 +485,8 @@
             $("#enterYourLocation").on("change keyup", function () {
                 $("#CenPH_DSLOADD1_SDSTRI").val($("#enterYourLocation").val());
             });
+            
+            $('#Output-queue').html($("#CenPH_DSLOADD2_OUTQ").html());
             if ($("#CenPH_DSLOADD1_SDSTRC").length > 0) {
                 $('#output-queue').hide();
                 $("#location-entry-container").show();
