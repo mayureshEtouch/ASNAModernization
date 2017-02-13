@@ -641,7 +641,7 @@
           <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
       </div>
   </div>
-  <div id="Div1" style="display:none;">
+  <div id="Div1" style="display: none;">
             
       <%-- %%TS  SD  20160721  133944  GPALANI     REL-V7R1M0  5770-WDS                                                      --%>
       <%-- ===============================================================                                                   --%>
@@ -1801,7 +1801,7 @@
               "CenPH_DSPFMT1_CRSPNB": "codeb",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B": "dob_1", //date
               "CenPH_DSPFMT1_CRAGSB": "age_1",
-              "CenPH_DSPFMT1_SS_lb_2": "CenPH_DSPFMT1_SS_lb_2_new",
+              //"CenPH_DSPFMT1_SS_lb_2": "CenPH_DSPFMT1_SS_lb_2_new",
               "CenPH_DSPFMT1_CRMTHB": "months",
               "CenPH_DSPFMT1_CRSCDB": "state_1",
               "CenPH_DSPFMT1_CRPCHB": "purchaseAmt",
@@ -1835,7 +1835,7 @@
               "CenPH_DSPFMT2_CRZIPB": "zipcode",
               "CenPH_DSPFMT2_CRSPNB": "codeb",
               "CenPH_DSPFMT2_CRAGSB": "age_1",
-              "CenPH_DSPFMT2_SS_lb_2": "CenPH_DSPFMT1_SS_lb_2_new",
+              //"CenPH_DSPFMT2_SS_lb_2": "CenPH_DSPFMT1_SS_lb_2_new",
               "CenPH_DSPFMT2_CRMTHB": "months",
               "CenPH_DSPFMT2_CRSCDB": "state_1",
               "CenPH_DSPFMT2_CRPCHB": "purchaseAmt",
@@ -1908,7 +1908,7 @@
                         
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
                         $("#CenPH_DSPFMT1_SS_lb_1").val($("#CenPH_DSPFMT1_SS_lb_1_new_hidden").val());
-                        $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+                        //$("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
                         //console.log($("#CenPH_DSPFMT1_SS_lb_1").val());
                        
                     }
@@ -1917,6 +1917,9 @@
             }
 
          $(document).ready(function() {
+            var spSSN = $("#CenPH_DSPFMT1_SS_lb_2").is("input") ? $("#CenPH_DSPFMT1_SS_lb_2").val().replace(/-/g,"") : $("#CenPH_DSPFMT1_SS_lb_2").text();
+            $("#CenPH_DSPFMT1_SS_lb_2_new").val(spSSN);
+            $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val(spSSN);
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
             //$("#dob").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val());
@@ -1982,7 +1985,7 @@
               "CenPH_DSPFMT1_CRSPNB": "codeb",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B": "dob_1", //date
               "CenPH_DSPFMT1_CRAGSB": "age_1",
-              "CenPH_DSPFMT1_SS_lb_2": "ssNo_1",
+              //"CenPH_DSPFMT1_SS_lb_2": "ssNo_1",
               "CenPH_DSPFMT1_CRMTHB": "months",
               "CenPH_DSPFMT1_CRSCDB": "state_1",
               "CenPH_DSPFMT1_CRPCHB": "purchaseAmt",
