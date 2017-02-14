@@ -1941,6 +1941,13 @@
                        
                     }
                      _00('F4', evt);
+                } else if (evt.keyCode == '13') {
+                
+                   
+                      $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+              $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+             
+              _00('Enter', event);
                 }
             }
 
@@ -2058,7 +2065,7 @@
               "CenPH_DSPFMT2_CRZIPB": "zipcode",
               "CenPH_DSPFMT2_CRSPNB": "codeb",
               "CenPH_DSPFMT2_CRAGSB": "age_1",
-              "CenPH_DSPFMT2_SS_lb_2": "ssNo_1",
+              "": "ssNo_1",
               "CenPH_DSPFMT2_CRMTHB": "months",
               "CenPH_DSPFMT2_CRSCDB": "state_1",
               "CenPH_DSPFMT2_CRPCHB": "purchaseAmt",
@@ -2067,7 +2074,7 @@
               "CenPH_DSPFMT2_FRCNTC": "frmContNum",
               "ctl00\\$CenPH\\$DSPFMT2_CRFPYB" : "firstPaymentDue", //date
               "ctl00\\$CenPH\\$DSPFMT2_DFRPMT" : "defDate",  //date
-              "ctl00\\$CenPH\\$DSPFMT2_CRLPYO" : "finalPayment", //new date field added confirm
+              "ctl00\\$CenPH\\$DSPFMT2_CRLPYO" : "finalPayment", //new date field addedCenPH_DSPFMT2_SS_lb_2 confirm
               "CenPH_DSPFMT2_CRMPYO" : "monthlypayment", //new field added
               "CenPH_DSPFMT2_CRTOTO" : "totalPayments", //field added
               "CenPH_DSPFMT2_CRBUYO" : "amtFinanced", //new field added
@@ -2231,7 +2238,7 @@
               _00('Enter', event);
             });
 
-            document.onkeydown = keydown;
+            /*document.onkeydown = keydown;
             function keydown(evt) {
                 
                   if (!evt) evt = event;
@@ -2243,7 +2250,7 @@
              
               _00('Enter', event);
                 }
-            }
+            }*/
 
 
 
