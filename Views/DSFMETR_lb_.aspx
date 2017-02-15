@@ -1770,8 +1770,8 @@
                     $("[id$='lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val($(this).find("td:eq(15) select").val() == "Active" ? " " : 4);
                     $("[id$='lb_SFLRCD__lb_2AMVA." + (i + tindex) + "']").val($(this).find("td:eq(12) input").val());
                     if ($(this).find("td:eq(1) select").val() == "DL") {
-                        $(this).find("td:eq(7) input").prop('disabled', false);
-                        $(this).find("td:eq(7) div").removeClass("is-disabled");
+                        //$(this).find("td:eq(7) input").prop('disabled', false);
+                        //$(this).find("td:eq(7) div").removeClass("is-disabled");
                     } else {
                         //$(this).find("td:eq(7) input").val("");  
                         $(this).find("td:eq(7) input").prop('disabled', true);
