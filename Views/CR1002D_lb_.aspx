@@ -2319,7 +2319,7 @@ if($("#CenPH_DdsConstant62").html()!="" && $("#CenPH_DdsConstant62").html()!=und
       },0);
      });
 
-$('#divAdd').append('<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">Print</span>');
+$('#divAdd').append('<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">eSign / Wet Sign</span>');
 
 $( "#revise" ).on( "click", function() {
    _00('F2', event);
