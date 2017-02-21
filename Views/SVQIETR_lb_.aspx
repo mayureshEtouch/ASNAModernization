@@ -1221,7 +1221,7 @@
                 Usage="Both"
                 VirtualRowCol="7,70"
                 Protect="76"
-                PositionCursor="35"
+                PositionCursor="35 & !76"
                 TabIndex="5" />
             <mdf:DdsConstant ID="DdsConstant2" runat="server"
                 Style="position: absolute; left: 19px; top: 171px;"
@@ -1525,8 +1525,8 @@
                 Usage="Both"
                 VirtualRowCol="13,68"
                 Protect="73"
-                PositionCursor="37"
-                Color="Red : 37"
+                PositionCursor="37 & !73"
+                Color="Red : 37 &amp; !73"
                 TabIndex="7" />
             <mdf:DdsConstant ID="DdsConstant7" runat="server"
                 Style="position: absolute; left: 19px; top: 315px;"
@@ -1565,7 +1565,7 @@
                 Usage="Both"
                 VirtualRowCol="15,34"
                 Protect="71"
-                PositionCursor="39"
+                PositionCursor="39 & !71"
                 EditWord="  /  /  "
                 Compare="GE 0"
                 TabIndex="9" />
@@ -1584,7 +1584,7 @@
                 Usage="Both"
                 VirtualRowCol="15,48"
                 Protect="71"
-                PositionCursor="40"
+                PositionCursor="40 & !71"
                 TabIndex="10" />
             <mdf:DdsConstant ID="DdsConstant27" runat="server"
                 Style="position: absolute; left: 469px; top: 339px;"
