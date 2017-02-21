@@ -1204,7 +1204,8 @@
                     "CenPH__lb_RCDDTL1__lb_DBJXT": "ssn",
                     "CenPH__lb_RCDDTL1__lb_1AJCD": "ro-emp-name",
                     "CenPH__lb_RCDDTL1__lb_1ALCO": "ro-promotion",
-                    "CenPH__lb_RCDDTL1__lb_DUJTX": "ro-note-to-grader"
+                    "CenPH__lb_RCDDTL1__lb_DUJTX": "ro-note-to-grader",
+                    "CenPH__lb_RCDDTL1__lb_1ACCT":"ref-account"
                 },
                 "inputFields": {
                     "CenPH__lb_RCDDTL1__lb_1AJCD": "emp-name",
