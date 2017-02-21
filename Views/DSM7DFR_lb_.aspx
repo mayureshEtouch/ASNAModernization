@@ -139,7 +139,7 @@
                                         <th>Company</th>
                                         <th>Location</th>
                                         <th style="width:40%">Description</th>
-                                        <th><span>Available</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 58px;">Ordered</span></th>
+                                        <th><span>Available</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 35px;">Ordered</span></th>
                                        <%-- <th>Xfers</th>
                                         <th>Ordered</th>--%>
                                     </tr>
@@ -725,13 +725,17 @@
             //Generate table
 			var dataMergeIndices = [[0], [1], [2], [3]];
 			generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-			var mod = new Array();
 			
-			$('#customerName td:nth-child(4)').each(function (i, col) {
-			    var $this = $(this).html();
+			
+
+
+var counter = 0;
+			$('#customerName tbody tr td:nth-child(4)').each(function (i, col) {
+          var mod = new Array();
+          var $this = $(this).html();
 			    var arr = $this.split('&nbsp;');
 			    for (var i = 0; i < arr.length; i++) {
-
+            
 			        if (arr[i] != "") {
 
 			            mod.push(arr[i]);
@@ -739,7 +743,7 @@
 			        }
 			    }
 			    $(this).html("");
-			    $(this).html('<span>' +((mod[0] == undefined) ? " " : mod[0]) + '</span><span style="margin-left: 80px;">' + ((mod[1] == undefined) ? " " : mod[1]) + '</span><span style="margin-left: 80px;">' + ((mod[2] == undefined) ? " " : mod[2]) + '</span>');
+			    $(this).html('<span style="margin-right: 30px;">' +((mod[0] == undefined) ? " " : mod[0]) + '</span><span style="margin-right: 45px;">' + ((mod[1] == undefined) ? " " : mod[1]) + '</span><span>' + ((mod[2] == undefined) ? " " : mod[2]) + '</span>');
 			});
 
       var doAction = function (row, value, event) {
@@ -787,6 +791,11 @@
             position: static !important;
             width: 100% !important;
             height: 14px !important;
+        }
+        #customerName span {
+          display: inline-block;
+          text-align: right;
+          width: 45px;
         }
 		@media (min-width: 768px){
 			.filter-search-container .button-cnt-container {
