@@ -2160,7 +2160,7 @@
             $("#CenPH_DSPFMT1_FRCNTC").ForceNumericOnly();
             $("#CenPH_DSPFMT1_FRCNTC").attr('maxlength','10');
 
-            $("#CenPH_DSPFMT1_ADDON_usd_").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_ADDON_usd_").ForceCurrencyWithTwoDecimal();
             $("#CenPH_DSPFMT1_ADDON_usd_").attr('maxlength','7');
 
             if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {

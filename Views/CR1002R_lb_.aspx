@@ -2516,8 +2516,8 @@
                 maskSSN1();
             }
             //validations
-            $("#CenPH_DSPFMT1_ADDON_usd_new,#CenPH_DSPFMT1_CRMTHB_new,#CenPH_DSPFMT1_FRCNTC_new").ForceNumericOnly();
-
+            $("#CenPH_DSPFMT1_CRMTHB_new,#CenPH_DSPFMT1_FRCNTC_new").ForceNumericOnly();
+            $("#CenPH_DSPFMT1_ADDON_usd_new").ForceCurrencyWithTwoDecimal();
             $('#CenPH_DSPFMT1_CRMTHB_new').keypress(function(event){
 
               var keycode = (event.keyCode ? event.keyCode : event.which);
