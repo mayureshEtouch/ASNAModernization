@@ -1,14 +1,8 @@
 @font-face {
-	font-family: 'Material Icons';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Material Icons'), local('MaterialIcons-Regular'), url('/../Fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2') format('woff2');
-}
-@font-face {
   font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(../fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/open-sans.woff2) format('woff2');
   unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
 .material-icons {
@@ -40,7 +34,7 @@
  }
 html, body {
 	background: #fff;
-	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif;
+	font-family: " Sans", "OpenSansRegular", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: normal;
 	color: #666;
