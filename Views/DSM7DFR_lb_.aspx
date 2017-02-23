@@ -732,7 +732,22 @@ var counter = 0;
 			$('#customerName tbody tr td:nth-child(4)').each(function (i, col) {
           var mod = new Array();
           var $this = $(this).html();
-			    var arr = $this.split('&nbsp;');
+          if($this.indexOf('STR: AVAIL:') > -1)
+          {
+          console.log("hii");
+          var res = $this.replace("STR: AVAIL:", "&nbsp;&nbsp;");
+          console.log(res);
+          res = res.replace("XFERS:", "&nbsp;&nbsp;&nbsp;");
+          res = res.replace("ORD:", "&nbsp;&nbsp;&nbsp;");
+          var arr = res.split('&nbsp;');
+
+          }
+          else{
+            var arr = $this.split('&nbsp;');
+          }
+
+         
+         // arr = $this.split('&nbsp;');
 			    for (var i = 0; i < arr.length; i++) {
             
 			        if (arr[i] != "") {
