@@ -255,7 +255,7 @@
                                 <!--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>-->
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet pull-right">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</button>
+                                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</sapn>
                             </div>
 
                         </div>
@@ -1473,11 +1473,18 @@
 
         // Button Triggers for New UI
         // Enter
-        $("#enter").on("click", "_00('Enter',event);", function () {
+       /* $("#enter").on("click", "_00('Enter',event);", function () {
             if (!$("#lb_SFLRCD__lb_2A2TX.0").text()) {
                 $("#datatableValueInsert").hide();
             }
-        });
+        });*/
+
+        $('body').on('click', '#enter', function (event) {
+            if (!$("#lb_SFLRCD__lb_2A2TX.0").text()) {
+                $("#datatableValueInsert").hide();
+            }
+                    _00('Enter', event);
+                });
         // Next Page
         $("#nextPage").on("click", function () { $("input[accesskey='n']").click(); });
 
