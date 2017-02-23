@@ -734,9 +734,9 @@ var counter = 0;
           var $this = $(this).html();
           if($this.indexOf('STR: AVAIL:') > -1)
           {
-          console.log("hii");
+          
           var res = $this.replace("STR: AVAIL:", "&nbsp;&nbsp;");
-          console.log(res);
+          
           res = res.replace("XFERS:", "&nbsp;&nbsp;&nbsp;");
           res = res.replace("ORD:", "&nbsp;&nbsp;&nbsp;");
           var arr = res.split('&nbsp;');
