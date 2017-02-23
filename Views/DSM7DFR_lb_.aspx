@@ -1,25 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DSM7DFR_lb_.aspx.cs" Inherits="conns.DSM7DFR_lb_Form" MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSM7DFR_lb_.aspx.cs" Inherits="conns.DSM7DFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
-<%@ Register TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+    <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
+        <%-- Migrated on 2/23/2017 at 3:48 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Legacy location: library ASNATRACK, file qddssrc, member DSM7DFR# --%>
 
-<asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
-    <%-- Migrated on 8/19/2016 at 8:46 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSM7DFR# --%>
+    </asp:Content>
 
-</asp:Content>
-
-<asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
-    <div id="Div0">
-
-        <mdf:DdsFile ID="DSM7DFR_lb_Control" runat="server"
+    <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
+        <div id="Div0">
+            
+            <mdf:ddsfile id="DSM7DFR_lb_Control" runat="server" 
             BannerStyle="Horizontal"
             DisplayErrorMessages="False"
-            SrcDdsCcsid="37"
-            PixelPerCharWidth="8"
-            PixelPerCharHeight="24" />
+            SrcDdsCcsid="37" 
+            PixelPerCharWidth="8" 
+            PixelPerCharHeight="24"  />
 
-    </div>
-</asp:Content>
+        </div>
+    </asp:Content>
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
@@ -167,7 +166,7 @@
         <div id="modal" class="simplePopup"></div>
    
     <!-- Modified HTML code ends here -->
-    <div id="Div1">
+    <div id="Div1" style="display: none;">
             
       <%--  IN: DSP for Reserve       Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
