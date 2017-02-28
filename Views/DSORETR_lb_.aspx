@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSORETR_lb_.aspx.cs" Inherits="conns.DSORETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/19/2016 at 9:24 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 2/27/2017 at 4:24 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSORETR# --%>
 
     </asp:Content>
@@ -792,6 +792,8 @@
             VirtualRowsPerRecord="3" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
+          <%--  Date: Available to Ship.                                                                                         --%>
+          <%--  Ind: OK to Display                                                                                               --%>
           <%--  Sts: Display Output?                                                                                             --%>
           <%--  Sts: Option                                                                                                      --%>
           <%--  Number: SKU.                                                                                                     --%>
@@ -865,6 +867,19 @@
               CssClass="DdsCharField"
               Length="144" 
               Alias="#2DBRC" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsDecField id="_lb_SFLRCD__lb_RJ2TX" runat="server" style="position: absolute; left: 1px; top: 0px; width: 64px"
+              CssClass="DdsDecField"
+              Length="7" 
+              Decimals="0" 
+              Alias="#RJ2TX" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_RHXS_lb_" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#RHXS#" 
               Usage="Hidden" 
  />
             <mdf:DdsCharField id="_lb_SFLRCD__lb_RTHST" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
