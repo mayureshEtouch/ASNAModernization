@@ -266,7 +266,7 @@
         </section>
 
     </main>
-    <div id="modal" class="simplePopup"></div>
+    <div id="modal1" class="simplePopup"></div>
     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
         <i class="material-icons md-15 md-light help-icon"></i>
         <span class="confirmation-text">Do you want to continue</span>
@@ -278,7 +278,7 @@
 
 
 
-    <div id="Div1" style="display: none;">
+    <div id="Div1" style="display:none;">
 
         <%--  OE: ETR Ent Ord Dtl       Edit transaction                                                                       --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -1843,7 +1843,7 @@
                 $("[id$='lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").text() == "4" ? $(this).find("td:eq(15)").html("Cancelled").css("color", "#e32527") : $(this).find("td:eq(15)").html("Active").css("color", "#00af00");
             });
 
-            $("#datatableValue tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");
+            /*$("#datatableValue tbody").append("<span id=more-bottom>" + $("#CenPH__lb_SFLRCD_End").html() + "</span>");*/
 
         } else {
 
