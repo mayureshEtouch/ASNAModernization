@@ -2,7 +2,7 @@
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Material Icons'), local('MaterialIcons-Regular'), url('/../Fonts/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2') format('woff2');
+	src: local('Material Icons'), local('MaterialIcons-Regular'), url('/../Fonts/material-icons.woff2') format('woff2');
 }
 @font-face {
   font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
@@ -50,6 +50,25 @@ img {
 	height: auto !important;
 	max-width: 100% !important;
 }
+a {
+    text-decoration: none;
+}
+ul {
+	padding: 0 0 0 2.5em;
+} 
+li {
+	line-height: 1.5em;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+.DdsSubfileRecord {
+    width: 100% !important;
+}
+.DefaultRow, .AlternateRow {
+	border:1px solid #dfdfe1;
+}
 .mdl-layout__container {
 	position: static;
 }
@@ -62,6 +81,16 @@ img {
 }
 #wrapper, #span-content {
 	width: 100%;
+}
+#wrapper {
+	display: inline-block;
+}
+#content
+{
+	overflow:auto;
+}
+#main-content {
+    overflow: hidden;
 }
 /* .DdsConstant, .DdsDecField {
 	color: #666;
@@ -346,6 +375,7 @@ a:visited, .mdl-menu__item a {
 } */
 
 #content {
+	padding: 1px 0;
 	margin-top: -1px;
 	width: 100% !important;
 }
@@ -373,6 +403,7 @@ a:visited, .mdl-menu__item a {
 	width: 400px;
 	height: 160px;
 	margin-top: 55px;
+	padding-left: 20px;
 }
 .login-icon {
 	background: url('../Images/login.png') right top no-repeat transparent;

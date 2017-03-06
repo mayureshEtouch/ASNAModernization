@@ -35,11 +35,11 @@
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--8-col">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop">
                         <!-- Title -->
                         <span class="heading-h1">Select Product Warranty</span>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-desktop pull-right">
                         <!-- Navigation -->
                         <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIRLSRR</span>
                     </div>

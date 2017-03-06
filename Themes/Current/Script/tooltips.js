@@ -234,37 +234,3 @@
 
 
 
-$(document).ready(function() {
-    var popUpStyles = {
-        "CCGEPVR": "width: 450px !important; margin-left: -225px !important; min-width: 450px !important;",
-        "CCFNPVR": "width: 450px !important; margin-left: -225px !important; min-width: 450px !important;",
-        "CCGIDFI": "margin-left: -275px !important;min-width: 550px !important;width: 550px !important;min-height: 305px !important;height: auto !important;",
-        "CCLDE1R": "min-width: 650px !important; margin-left: -325px; width: 650px !important;",
-        "CCLBDFR": "min-width: 760px !important;width: 760px !important; margin-left: -380px; height: auto !important;",
-        "DIMIPVI": "min-width: 760px !important;width: 760px !important; margin-left: -380px; height: auto !important;",
-		"CAL6E1I": "min-width: 680px !important; width: 680px !important; margin-left: -340px !important;",
-		"CCKFPVR": "width: 660px !important; min-width: 660px !important; margin-left: -330px !important;",
-		"IOA3PVR": "margin-left: -300px; min-width: 600px !important; width: 600px !important;",
-		"DIGFE1R": "width: 730px !important; min-width: 730px !important; margin-left: -365px !important;",
-		"CCXHPVI": " min-width: 600px !important; width: 600px !important; margin-left: -300px !important;"
-    }
-
-    var currentScreen = "",
-        visiblePopUpStyles = "",
-        nonVisiblePopUpStyles = "";
-    currentScreen = window.location.href.split("/")[(window.location.href.split("/").length - 1)].split("_")[0];
-    if (popUpStyles.hasOwnProperty(currentScreen)) {
-        visiblePopUpStyles = popUpStyles[currentScreen] + "top:15% !important; left: 50% !important;";
-        nonVisiblePopUpStyles = visiblePopUpStyles + "z-index:-1;";
-        applyStyles();
-    }
-
-    function applyStyles() {
-        var popupsCount = $(".DdsInlinePopUpTable").length;
-        for (var i = 1; i < popupsCount; i++) {
-            $($(".DdsInlinePopUpTable")[i]).attr('style',nonVisiblePopUpStyles);
-        }
-        $($(".DdsInlinePopUpTable")[0]).attr('style', visiblePopUpStyles);
-    }
-
-});
