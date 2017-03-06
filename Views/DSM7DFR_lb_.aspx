@@ -138,7 +138,7 @@
                                         <th>Company</th>
                                         <th>Location</th>
                                         <th style="width:40%">Description</th>
-                                        <th><span>Available</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 35px;">Ordered</span></th>
+                                        <th><!-- <span>Message</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 35px;">Ordered</span> -->Message</th>
                                        <%-- <th>Xfers</th>
                                         <th>Ordered</th>--%>
                                     </tr>
@@ -166,7 +166,7 @@
         <div id="modal" class="simplePopup"></div>
    
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display: none;">
+    <div id="Div1" style="display:none;">
             
       <%--  IN: DSP for Reserve       Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -722,17 +722,17 @@
             $("#CenPH__lb_SFLCTL__lb_2AACD").appendTo("#filter-by-loc");
 			$("#customerName td:nth-child(2), #customerName td:nth-child(4), #customerName td:nth-child(5), #customerName td:nth-child(6)").css("text-align","right");
             //Generate table
-			var dataMergeIndices = [[0], [1], [2], [3]];
+			var dataMergeIndices = [[0], [1], [2], [3, "</br>", 4]];
 			generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
 			
 			
 
 
 var counter = 0;
-			$('#customerName tbody tr td:nth-child(4)').each(function (i, col) {
+			/*$('#customerName tbody tr td:nth-child(4)').each(function (i, col) {
           var mod = new Array();
           var $this = $(this).html();
-          if($this.indexOf('STR: AVAIL:') > -1)
+         if($this.indexOf('STR: AVAIL:') > -1)
           {
           
           var res = $this.replace("STR: AVAIL:", "&nbsp;&nbsp;");
@@ -747,7 +747,7 @@ var counter = 0;
           }
 
          
-         // arr = $this.split('&nbsp;');
+          arr = $this.split('&nbsp;');
 			    for (var i = 0; i < arr.length; i++) {
             
 			        if (arr[i] != "") {
@@ -758,7 +758,7 @@ var counter = 0;
 			    }
 			    $(this).html("");
 			    $(this).html('<span style="margin-right: 30px;">' +((mod[0] == undefined) ? " " : mod[0]) + '</span><span style="margin-right: 45px;">' + ((mod[1] == undefined) ? " " : mod[1]) + '</span><span>' + ((mod[2] == undefined) ? " " : mod[2]) + '</span>');
-			});
+			});*/
 
       var doAction = function (row, value, event) {
           var selectId = $(row).data('selectid');
@@ -792,7 +792,7 @@ var counter = 0;
     </script>
     <style>
         #fkeys, #header, #diagnostics, #footer, #MsgPH_DdsMessagePanel1, #Div1 {
-            display:none;
+          display:none;
         }
 
         #main-content {
