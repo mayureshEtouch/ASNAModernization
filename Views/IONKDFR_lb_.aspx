@@ -693,7 +693,7 @@
                   $("#CenPH__lb_SFLCTL__lb_2AXTX").val($("#number").val());
               });*/
               $("#CenPH__lb_SFLCTL__lb_2AXTX").focus();
-               var dataMergeIndices = [[0], [1], [2], [4], [5], [6]];
+               var dataMergeIndices = [[0], [1], [3], [4], [5],[6]];
                generateTableAndApplyInfiniteScroll("modelDetails", "CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices, "DISABLE_DOUBLE_CLICK");
             });
 
