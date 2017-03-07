@@ -898,7 +898,7 @@
                 top: 10% !important;
 				margin-left: -284px !important;
             }
-            #__Page_PopUp > tr:first-child {
+            #__Page_PopUp > tbody > tr:first-child {
                 display: none;
             }
 

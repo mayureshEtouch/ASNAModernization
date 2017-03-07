@@ -88,8 +88,6 @@
 	//stick the footer at the bottom of the page if we're on an iPad/iPhone due to viewport/page bugs in mobile webkit 
 	if(navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod') 
 	{ 
-//alert($(document).height());
-//alert($(window).height());
 		  setTimeout(function(){
 		  if (($(document).height() > $(window).height())) {
 				

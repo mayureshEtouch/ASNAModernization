@@ -24,7 +24,7 @@
         <div id="wrapper" class="wrapper">
             <div id="header" class="header">
                 <div class="logo">
-                    <asp:Image ID="imgLogo" runat="server" ImageUrl="~/Themes/Current/Images/App_logo.png" />
+                    <asp:Image ID="imgLogo" runat="server" />
                 </div>
             </div>
             <%-- #header --%>
