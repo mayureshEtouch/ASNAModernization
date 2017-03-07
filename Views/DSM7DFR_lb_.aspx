@@ -138,7 +138,7 @@
                                         <th>Company</th>
                                         <th>Location</th>
                                         <th style="width:40%">Description</th>
-                                        <th><!-- <span>Message</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 35px;">Ordered</span> -->Message</th>
+                                        <th><!-- <span>Message</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 35px;">Ordered</span> --><!-- Message --></th>
                                        <%-- <th>Xfers</th>
                                         <th>Ordered</th>--%>
                                     </tr>
@@ -729,7 +729,10 @@
 
 
 var counter = 0;
-			/*$('#customerName tbody tr td:nth-child(4)').each(function (i, col) {
+    if ($("#CenPH__lb_SFLCTL__lb_CMITX").text().indexOf("AVAIL") == 0) 
+    {
+      $("#customerName tr>th:nth-child(4)").html('<span>Available</span> <span style="margin-left: 31px;">Xfers</span> <span style="margin-left: 35px;">Ordered</span>');
+      $('#customerName tbody tr td:nth-child(4)').each(function (i, col) {
           var mod = new Array();
           var $this = $(this).html();
          if($this.indexOf('STR: AVAIL:') > -1)
@@ -748,17 +751,23 @@ var counter = 0;
 
          
           arr = $this.split('&nbsp;');
-			    for (var i = 0; i < arr.length; i++) {
+          for (var i = 0; i < arr.length; i++) {
             
-			        if (arr[i] != "") {
+              if (arr[i] != "") {
 
-			            mod.push(arr[i]);
+                  mod.push(arr[i]);
 
-			        }
-			    }
-			    $(this).html("");
-			    $(this).html('<span style="margin-right: 30px;">' +((mod[0] == undefined) ? " " : mod[0]) + '</span><span style="margin-right: 45px;">' + ((mod[1] == undefined) ? " " : mod[1]) + '</span><span>' + ((mod[2] == undefined) ? " " : mod[2]) + '</span>');
-			});*/
+              }
+          }
+          $(this).html("");
+          $(this).html('<span style="margin-right: 30px;">' +((mod[0] == undefined) ? " " : mod[0]) + '</span><span style="margin-right: 45px;">' + ((mod[1] == undefined) ? " " : mod[1]) + '</span><span>' + ((mod[2] == undefined) ? " " : mod[2]) + '</span>');
+      });
+    }
+    else
+    {
+      $("#customerName tr>th:nth-child(4)").html('Message');
+    }
+			/**/
 
       var doAction = function (row, value, event) {
           var selectId = $(row).data('selectid');
