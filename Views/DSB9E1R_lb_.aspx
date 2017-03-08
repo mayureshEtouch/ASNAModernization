@@ -211,6 +211,15 @@
                                     </span>
                                 </div>
                             </div>
+                            <div class="content-grid mdl-grid content-row-height">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Preferred Mode of Communication:</span> </div>
+                                <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0">
+                                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                        <select name="prefcommmode"  id="prefcommmode" data-tb-index="17"></select>
+                                        <!-- <input type="text" id="mailingList" name="mailingList" style="width: 50px;" value="Y"> -->
+                                  </span>
+                                </div>
+                            </div>
                             <!-- <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0"> <span class="form-label">Tax Exempt ?:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
@@ -309,8 +318,8 @@
             $("[name='date']").text($("[id$=CenPH_DdsConstant32]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
 
-          var old_fields = ['#CenPH__lb_RCDDTL1__lb_DDTTX','#CenPH__lb_RCDDTL1__lb_PANTX','#CenPH__lb_RCDDTL1__lb_PAOTX','#CenPH__lb_RCDDTL1__lb_PAPTX','#CenPH__lb_RCDDTL1__lb_PAQTX','#CenPH__lb_RCDDTL1__lb_PADST','#CenPH__lb_RCDDTL1__lb_DEONB','#CenPH__lb_RCDDTL1__lb_DELNB','#CenPH__lb_RCDDTL1__lb_DEMNB','#CenPH__lb_RCDDTL1__lb_DENNB','#CenPH__lb_RCDDTL1__lb_DCGNB','#CenPH__lb_RCDDTL1__lb_DCHNB','#CenPH__lb_RCDDTL1__lb_DCINB','#CenPH__lb_RCDDTL1__lb_DK3N_lb_','#CenPH__lb_RCDDTL1__lb_DBWNA','#CenPH__lb_RCDDTL1__lb_DBRST','#CenPH__lb_RCDDTL1__lb_DBQST','#CenPH__lb_RCDDTL1__lb_DTQST','#CenPH__lb_RCDDTL1__lb_DCPST','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM','#CenPH__lb_RCDDTL1__lb_1ABST','#CenPH__lb_RCDDTL1__lb_DOAA_usd_','#CenPH__lb_RCDDTL1__lb_1ACST'];
-          var new_fields = ['#typeText','#address1','#address2','#zcode','#place','#state','#extn','#hphone1','#hphone2','#hphone3','#bphone1','#bphone2','#bphone3','#cphone','#emailAddress','#additionalAddress','#notes','#extraPhone','#taxExempt','#lastChangedByUser','#changedDate','#changedTime','#type','#suffix','#mailingList'];
+          var old_fields = ['#CenPH__lb_RCDDTL1__lb_DDTTX','#CenPH__lb_RCDDTL1__lb_PANTX','#CenPH__lb_RCDDTL1__lb_PAOTX','#CenPH__lb_RCDDTL1__lb_PAPTX','#CenPH__lb_RCDDTL1__lb_PAQTX','#CenPH__lb_RCDDTL1__lb_PADST','#CenPH__lb_RCDDTL1__lb_DEONB','#CenPH__lb_RCDDTL1__lb_DELNB','#CenPH__lb_RCDDTL1__lb_DEMNB','#CenPH__lb_RCDDTL1__lb_DENNB','#CenPH__lb_RCDDTL1__lb_DCGNB','#CenPH__lb_RCDDTL1__lb_DCHNB','#CenPH__lb_RCDDTL1__lb_DCINB','#CenPH__lb_RCDDTL1__lb_DK3N_lb_','#CenPH__lb_RCDDTL1__lb_DBWNA','#CenPH__lb_RCDDTL1__lb_DBRST','#CenPH__lb_RCDDTL1__lb_DBQST','#CenPH__lb_RCDDTL1__lb_DTQST','#CenPH__lb_RCDDTL1__lb_DCPST','#CenPH__lb_RCDDTL1__lb_1AAVN','#CenPH__lb_RCDDTL1_V1AGDT','#CenPH__lb_RCDDTL1__lb_1ABTM','#CenPH__lb_RCDDTL1__lb_1ABST','#CenPH__lb_RCDDTL1__lb_DOAA_usd_','#CenPH__lb_RCDDTL1__lb_1ACST','#CenPH__lb_RCDDTL1__lb_DU9S_lb_'];
+          var new_fields = ['#typeText','#address1','#address2','#zcode','#place','#state','#extn','#hphone1','#hphone2','#hphone3','#bphone1','#bphone2','#bphone3','#cphone','#emailAddress','#additionalAddress','#notes','#extraPhone','#taxExempt','#lastChangedByUser','#changedDate','#changedTime','#type','#suffix','#mailingList' , '#prefcommmode'];
           if($("#CenPH__lb_RCDDTL1__lb_DOAA_usd_").is('input')){
             $("#suffix-input").removeClass('hide');
             new_fields[23] = "#suffix-input";
@@ -356,7 +365,10 @@
             */
             var values = ['SLS','CML','BLD'];
             var descriptions = ['Sales','Commercial','Builder'];
+            var values1 = ['T','E','B'];
+            var descriptions1 = ['Text','Email','Both'];
             makeSelectDescriptive("type",values,descriptions);
+            makeSelectDescriptive("prefcommmode",values1,descriptions1);
             makeSelectDescriptive("mailingList",['Y','N','F','S','M','I','D','W','U','R','C','O','B','V','X','E','1','H','A','L','P','T','3','2','0','4','$','5','*','G','?'],['YES','NO','FiSERV','Sales','Minimum','Individual','Decreased','WHS','Un-Validated','Reserved','Canceled','Over Limit','Both','Vendor','Other','Extended','18 Mth COP Approval','Held','Already Used','Location','Purchase Limit','Both Costs','36 Mth COP Approval','24 Mth COP Approval','12 Mth COP Approval','48 Mth COP Approval','Cash Value','60 Mth COP Approval','Astrick','Customer Thank You Card','?']);
         
             makeSelectDescriptive("suffix",['JR.','SR.','JR','SR','II','III','IV','V'],['JR','SR','Junior','Senior','Second','Third','Fourth','Fifth']);
