@@ -6,12 +6,13 @@
 html,body{background:#fff;font-family:"Open Sans","OpenSansRegular","Arial",sans-serif;font-size:13px;line-height:normal;color:#666}
 img{width:auto!important;height:auto!important;max-width:100%!important}
 a{text-decoration:none}
-ul{padding:0 0 0 2.5em} 
+ul{padding:0 0 0 2.5em}
 li{line-height:1.5em}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 .DdsSubfileRecord{width:100%!important}
 .DefaultRow,.AlternateRow{border:1px solid #dfdfe1}
 .mdl-layout__container{position:static}
+.login-icon,.logo-icon,.user-icon,.progress-bar-divider-first,.progress-bar-divider,.white-to-gray-bullet,.white-to-gray-bullet,.home,.notifications-icon,.arrow-down,.computer-icon,.date-icon,.time-icon,.change-icon,.display-icon,.change-icon-disabled,.display-icon-disabled,.calender-icon,.help-icon,.close,.delete-icon-disabled,.delete-icon,.storage-icon-disabled,.storage-icon,.sync-icon-disabled,.sync-icon,.reserve-icon,.reserve-icon-disabled,.transfers-icon,.transfers-icon-disabled,.orders-icon,.orders-icon-disabled,.completion-icon,.completion-icon-disabled,.credit-icon,.credit-icon-disabled,.customer-icon,.customer-icon-disabled,.payments-icon,.payments-icon-disabled,.notes-icon,.notes-icon-disabled,.link-icon,.link-icon-disabled,.insurance-icon,.insurance-icon-disabled,.inventory-icon,.inventory-icon-disabled,.account-icon,.account-icon-disabled,.deselect-icon,.deselect-icon-disabled,.returns-icon,.status-icon,.exchanges-icon,.print-icon,.move-icon,.Prt-rac-certf-icon,.appeal-icon,.decision-icon,.sbm-to-rac-icon,.work-icon,.enter-invoice-icon,.exceptions-icon,.change-address-icon,.verified-icon,.duplicates-icon,.invoice-icon,.re-submit-icon,.lxnx-icon,.fico-summ-icon,.re-rqst-icon,.change-product-icon,.change-customer-icon,.services-icon,.sales-icon,.adt-services-icon,.goto-entry-icon,.filled-requirement-icon,.audit-icon,.reinstate-icon,.prev-icon,.next-icon,.display-po-details-icon,.display-po-details-icon-disabled,.invoice-icon,#appeal-list-item li,.delivery-icon,.validate-icon{background:url(../Images/icons-sprite.png) center center no-repeat transparent}
 #wrapper,#span-content,#content,#main-content,#centralDiv,.mdl-layout__container{height:100%}
 #main-content{border:none;margin:0 auto}
 #wrapper,#span-content{width:100%}
@@ -69,19 +70,19 @@ a:visited,.mdl-menu__item a{color:#069}
 #content{padding:1px 0;margin-top:-1px;width:100%!important}
 .mdl-button{border-radius:2px;font-weight:700;line-height:normal;min-width:1px}
 .box-container{background:#fff;border:1px solid #c5c5c5;border-radius:5px;box-shadow:0 2px 1px #7b7b7b;font-family:"Open Sans","OpenSansRegular","Arial",sans-serif;margin:10px auto;position:relative;width:400px;height:160px;margin-top:55px;padding-left:20px}
-.login-icon{background:url(../Images/login.png) right top no-repeat transparent;width:77px;height:78px;float:right;margin:-15px -50px 0 0}
+.login-icon{background-position:0 0;width:77px;height:78px;float:right;margin:-15px -50px 0 0}
 #CenPH__RSIGNON{height:155px!important}
 #login{float:right;right:11px}
 .simplePopup{display:none;font-family:"Open Sans","OpenSansRegular","Arial",sans-serif!important;font-size:13px!important;position:fixed;border:2px solid #e32527;background:#fff;z-index:4;padding:12px;width:35%;min-width:35%;color:#e32527}
 .simplePopupClose{float:right;cursor:pointer;margin-left:10px;margin-bottom:10px}
-.logo-icon{background:url(../Images/logo.png) no-repeat;height:39px;width:74px}
+.logo-icon{background-position:-80px 0;height:39px;width:74px}
 h1.page-title{border-left:groove 2px #fff;color:#fff;font-size:22px;font-weight:700;line-height:normal;margin:0;padding-left:10px}
-.user-icon{background:url(../Images/log-img.png) no-repeat;height:35px;width:35px}
+.user-icon{background-position:-160px 0;height:35px;width:35px}
 .simplePopupBackground{display:none;background:#000;position:fixed;height:100%;width:100%;top:0;left:0;z-index:4}
 .OverlayPopupBackground{opacity:.7;display:none;background:#000;position:fixed;height:100%;width:100%;top:0;left:0;z-index:4}
-.progress-bar-divider-first{background:url(../Images/gray-to-white.png) no-repeat;width:25px}
-.progress-bar-divider{background:url(../Images/white-bullet.png) no-repeat;width:25px}
-.white-to-gray-bullet{background:url(../Images/white-to-gray-bullet.png) no-repeat;width:25px}
+.progress-bar-divider-first{background-position:0 -80px;width:25px}
+.progress-bar-divider{background-position:-30px -80px;width:25px}
+.white-to-gray-bullet{background-position:-60px -80px;width:25px}
 .green-highlight-text{color:#49ba2b;font-weight:700}
 .home-icon .material-icons{margin-right:10px;cursor:pointer}
 .mdl-textfield-select-customer-phone .mdl-textfield__input{float:left}
@@ -126,7 +127,7 @@ textarea{width:99%;border:1px solid #c5c5c5}
 .table-container-no-scroll{height:auto;min-height:auto}
 .modal-dialog-container .order-summary-wrapper{margin:15px 14px 15px 20px}
 .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised,.modal-dialog-container .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab{background:url(../Images/btn_bg_big.png) repeat-x;height:auto;padding:10px 8px;margin:0}
-.white-to-gray-bullet{background:url(../Images/white-to-gray-bullet.png) no-repeat;width:25px}
+.white-to-gray-bullet{background-position:-60px -80px;width:25px}
 .table-data-content-container .mdl-data-table td.pull-right,.table-data-content-container .mdl-data-table th.pull-right{text-align:right}
 .search-field-container .mdl-grid{padding:0 0 0 8px}
 .search-field-container .button-container{padding:0}
@@ -187,80 +188,80 @@ textarea{width:99%;border:1px solid #c5c5c5}
 .ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{border:1px solid #ccc!important;background:#f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x!important;font-weight:700!important;color:#333!important}
 .ui-widget-header .ui-state-hover{background:none!important;border:0 solid #fff!important}
 .material-icons{display:inline-block;height:24px;width:24px}
-.home{background:url(../Images/icons/ic_home_white_24dp_1x.png) no-repeat}
-.notifications-icon{background:url(../Images/icons/ic_notifications_white_24dp_1x.png) no-repeat}
-.arrow-down{background:url(../Images/icons/ic_arrow_drop_down_white_24dp_1x.png) no-repeat}
-.computer-icon{background:url(../Images/icons/ic_computer_black_24dp_1x.png) no-repeat;margin-right:3px}
-.date-icon{background:url(../Images/icons/ic_event_available_black_24dp_1x.png) no-repeat}
-.time-icon{background:url(../Images/icons/ic_access_time_black_24dp_1x.png) no-repeat;margin-right:3px}
-.change-icon{background:url(../Images/icons/ic_border_color_black_24dp_1x.png) no-repeat}
-.display-icon{background:url(../Images/icons/ic_description_black_24dp_1x.png) no-repeat}
-.change-icon-disabled{background:url(../Images/icons/ic_border_color_black_24dp_1x-disable.png) no-repeat}
-.display-icon-disabled{background:url(../Images/icons/ic_description_black_24dp_1x-disable.png) no-repeat}
-.calender-icon{background:url(../Images/icons/calender.png) no-repeat;cursor:pointer;position:relative;right:26px;top:4px}
-.help-icon{background:url(../Images/icons/ic_help_red_24dp_1x-02.png) no-repeat}
-.close{background:url(../Images/icons/ic_close_white_24dp_1x.png) no-repeat;cursor:pointer;margin-right:8px}
-.delete-icon-disabled{background:url(../Images/icons/ic_delete_black_24dp_1x-disable.png) no-repeat}
-.delete-icon{background:url(../Images/icons/ic_delete_black_24dp_1x.png) no-repeat}
-.storage-icon-disabled{background:url(../Images/icons/ic_storage_black_24dp_1x-disable.png) no-repeat}
-.storage-icon{background:url(../Images/icons/ic_storage_black_24dp_1x.png) no-repeat}
-.sync-icon-disabled{background:url(../Images/icons/ic_sync_black_24dp_1x-disable.png) no-repeat}
-.sync-icon{background:url(../Images/icons/ic_sync_black_24dp_1x.png) no-repeat}
-.reserve-icon{background:url(../Images/icons/ic_assignment_turned_in_black_24dp_1x.png) no-repeat}
-.reserve-icon-disabled{background:url(../Images/icons/ic_assignment_turned_in_black_24dp_1x-disable.png) no-repeat}
-.transfers-icon{background:url(../Images/icons/ic_local_shipping_black_24dp_1x.png) no-repeat}
-.transfers-icon-disabled{background:url(../Images/icons/ic_local_shipping_black_24dp_1x-disable.png) no-repeat}
-.orders-icon{background:url(../Images/icons/ic_shopping_cart_black_24dp_1x.png) no-repeat}
-.orders-icon-disabled{background:url(../Images/icons/ic_shopping_cart_black_24dp_1x-disable.png) no-repeat}
-.completion-icon{background:url(../Images/icons/completion-icon.png) no-repeat}
-.completion-icon-disabled{background:url(../Images/icons/completion-icon-disable.png) no-repeat}
-.credit-icon{background:url(../Images/icons/credit-icon.png) no-repeat}
-.credit-icon-disabled{background:url(../Images/icons/credit-icon-disable.png) no-repeat}
-.customer-icon{background:url(../Images/icons/customer-icon.png) no-repeat}
-.customer-icon-disabled{background:url(../Images/icons/customer-icon-disable.png) no-repeat}
-.payments-icon{background:url(../Images/icons/payments-icon.png) no-repeat}
-.payments-icon-disabled{background:url(../Images/icons/payments-icon-disable.png) no-repeat}
-.notes-icon{background:url(../Images/icons/notes-icon.png) no-repeat}
-.notes-icon-disabled{background:url(../Images/icons/notes-icon-disable.png) no-repeat}
-.link-icon{background:url(../Images/icons/link-icon.png) no-repeat}
-.link-icon-disabled{background:url(../Images/icons/link-icon-disable.png) no-repeat}
-.insurance-icon{background:url(../Images/icons/insurance-icon.png) no-repeat}
-.insurance-icon-disabled{background:url(../Images/icons/insurance-icon-disable.png) no-repeat}
-.inventory-icon{background:url(../Images/icons/inventory-icon.png) no-repeat}
-.inventory-icon-disabled{background:url(../Images/icons/inventory-icon-disable.png) no-repeat}
-.account-icon{background:url(../Images/icons/account-icon.png) no-repeat}
-.account-icon-disabled{background:url(../Images/icons/account-icon-disable.png) no-repeat}
-.deselect-icon{background:url(../Images/icons/deselect-icon.png) no-repeat}
-.deselect-icon-disabled{background:url(../Images/icons/deselect-icon-disable.png) no-repeat}
-.returns-icon{background:url(../Images/icons/ic_assignment_return_black_24dp_1x.png) no-repeat}
-.status-icon{background:url(../Images/icons/ic_update_black_24dp_1x.png) no-repeat}
-.exchanges-icon{background:url(../Images/icons/ic_import_export_black_24dp_1x.png) no-repeat}
-.print-icon{background:url(../Images/icons/ic_print_black_24dp_1x.png) no-repeat}
-.move-icon{background:url(../Images/icons/ic_move_to_inbox_black_24dp_1x.png) no-repeat}
-.Prt-rac-certf-icon{background:url(../Images/icons/print-rac-cert.png) no-repeat}
-.appeal-icon{background:url(../Images/icons/ic_touch_app_black_24dp_1x.png) no-repeat}
-.decision-icon{background:url(../Images/icons/decision-24.png) no-repeat}
-.sbm-to-rac-icon{background:url(../Images/icons/ic_playlist_add_black_24dp_1x.png) no-repeat}
-.work-icon{background:url(../Images/icons/ic_work_black_24dp_1x.png) no-repeat}
-.enter-invoice-icon{background:url(../Images/icons/ic_format_indent_increase_black_24dp_1x.png) no-repeat}
-.exceptions-icon{background:url(../Images/icons/exception-icon.png) no-repeat}
-.change-address-icon{background:url(../Images/icons/ic_edit_location_black_24dp_1x.png) no-repeat}
-.verified-icon{background:url(../Images/icons/ic_verified_user_black_24dp_1x.png) no-repeat}
-.duplicates-icon{background:url(../Images/icons/ic_content_cduplicates_black_24dp_1x.png) no-repeat}
-.invoice-icon{background:url(../Images/icons/invoice-icon.png) no-repeat}
-.re-submit-icon{background:url(../Images/icons/ic_re-submit_24dp_1x.png) no-repeat}
-.lxnx-icon{background:url(../images/icons/lxnx-icon.png) no-repeat}
-.fico-summ-icon{background:url(../images/icons/fico-summ-icon.png) no-repeat}
-.re-rqst-icon{background:url(../images/icons/re-rqst-icon.png) no-repeat}
-.change-product-icon{background:url(../images/icons/change-product-icon.png) no-repeat}
-.change-customer-icon{background:url(../images/icons/change-customer-icon.png) no-repeat}
-.services-icon{background:url(../images/icons/services-icon.png) no-repeat}
-.sales-icon{background:url(../images/icons/sales-icon.png) no-repeat}
-.adt-services-icon{background:url(../images/icons/adt-services.png) no-repeat}
-.goto-entry-icon{background:url(../images/icons/goto-entry-icon.png) no-repeat}
-.filled-requirement-icon{background:url(../images/icons/filled-requirement-icon.png) no-repeat}
-.audit-icon{background:url(../images/icons/audit-icon.png) no-repeat}
-.reinstate-icon{background:url(../images/icons/reinstate-icon.png) no-repeat}
+.home{background-position:-140px -40px}
+.notifications-icon{background-position:-170px -40px}
+.arrow-down{background-position:-200px 0}
+.computer-icon{background-position:-200px -40px;margin-right:3px}
+.date-icon{background-position:-90px -70px}
+.time-icon{background-position:-120px -70px;margin-right:3px}
+.change-icon{background-position:-150px -70px}
+.display-icon{background-position:-180px -70px}
+.change-icon-disabled{background-position:-150px -100px}
+.display-icon-disabled{background-position:-180px -100px}
+.calender-icon{background-position:-90px -100px;cursor:pointer;position:relative;right:26px;top:4px}
+.help-icon{background-position:-110px -100px}
+.close{background-position:-210px -70px;cursor:pointer;margin-right:8px}
+.delete-icon-disabled{background-position:-230px 0}
+.delete-icon{background-position:-230px -30px}
+.storage-icon-disabled{background-position:-260px 0}
+.storage-icon{background-position:-260px -30px}
+.sync-icon-disabled{background-position:-210px -100px}
+.sync-icon{background-position:-240px -100px}
+.reserve-icon{background-position:-290px 0}
+.reserve-icon-disabled{background-position:-290px -30px}
+.transfers-icon{background-position:-240px -70px}
+.transfers-icon-disabled{background-position:-270px -70px}
+.orders-icon{background-position:-320px 0}
+.orders-icon-disabled{background-position:-320px -30px}
+.completion-icon{background-position:-270px -100px}
+.completion-icon-disabled{background-position:-300px -100px}
+.credit-icon{background-position:-300px -70px}
+.credit-icon-disabled{background-position:-330px -70px}
+.customer-icon{background-position:-350px 0}
+.customer-icon-disabled{background-position:-350px -30px}
+.payments-icon{background-position:-330px -100px}
+.payments-icon-disabled{background-position:-360px -100px}
+.notes-icon{background-position:-380px 0}
+.notes-icon-disabled{background-position:-380px -30px}
+.link-icon{background-position:-360px -70px}
+.link-icon-disabled{background-position:-390px -70px}
+.insurance-icon{background-position:-410px 0}
+.insurance-icon-disabled{background-position:-410px -30px}
+.inventory-icon{background-position:-90px -130px}
+.inventory-icon-disabled{background-position:-120px -130px}
+.account-icon{background-position:-150px -130px}
+.account-icon-disabled{background-position:-180px -130px}
+.deselect-icon{background-position:-210px -130px}
+.deselect-icon-disabled{background-position:-240px -130px}
+.returns-icon{background-position:-270px -130px}
+.status-icon{background-position:-300px -130px}
+.exchanges-icon{background-position:-330px -130px}
+.print-icon{background-position:-570px -130px}
+.move-icon{background-position:-360px -130px}
+.Prt-rac-certf-icon{background-position:-390px -130px}
+.appeal-icon{background-position:-390px -100px}
+.decision-icon{background-position:-420px -70px}
+.sbm-to-rac-icon{background-position:-420px -100px}
+.work-icon{background-position:-420px -130px}
+.enter-invoice-icon{background-position:-450px 0}
+.exceptions-icon{background-position:-450px -30px}
+.change-address-icon{background-position:-450px -70px}
+.verified-icon{background-position:-450px -100px}
+.duplicates-icon{background-position:-450px -130px}
+.invoice-icon{background-position:-480px 0}
+.re-submit-icon{background-position:-480px -30px}
+.lxnx-icon{background-position:-480px -70px}
+.fico-summ-icon{background-position:-480px -100px}
+.re-rqst-icon{background-position:-480px -130px}
+.change-product-icon{background-position:-510px 0}
+.change-customer-icon{background-position:-510px -30px}
+.services-icon{background-position:-510px -70px}
+.sales-icon{background-position:-510px -100px}
+.adt-services-icon{background-position:-510px -130px}
+.goto-entry-icon{background-position:-540px 0}
+.filled-requirement-icon{background-position:-540px -30px}
+.audit-icon{background-position:-540px -70px}
+.reinstate-icon{background-position:-540px -100px}
 .mdl-layout__content input,.mdl-layout__content select,.mdl-layout__content textarea,.mdl-layout__content .DdsCharField,.table-data-content-container .mdl-textfield-select-page .mdl-textfield__input{background:#fff;border:1px solid #c5c5c5;border-radius:2px;color:#666;font-family:"Open Sans","OpenSansRegular","Arial",sans-serif;font-size:13px;font-weight:400;height:auto;margin-right:5px;padding:1px 3px 2px;vertical-align:top}
 .mdl-layout__content input,.mdl-layout__content textarea{text-transform:uppercase}
 .mdl-layout__content .DdsConstant,.mdl-layout__content .DdsDecField,.form-label,.summary-label{font-style:normal;font-weight:600}
@@ -315,11 +316,11 @@ body div,body span,body textarea{outline:none!important}
 .ui-tooltip:after{border-color:rgba(136,183,213,0);border-bottom-color:#FFFFE0;border-width:6px;margin-left:-6px;z-index:100}
 .ui-tooltip:before{border-color:rgba(194,225,245,0);border-bottom-color:#E6DB55;border-width:8px;margin-left:-8px;z-index:100}
 .ui-tooltip{display:inline-block!important}
-.prev-icon,.next-icon{background:url(../Images/arrow-left.png) no-repeat;display:inline-block;height:30px;width:30px}
-.next-icon{background:url(../Images/arrow-right.png) no-repeat}
-.display-po-details-icon{background:url(../Images/icons/ic_assignment_black_24dp_1x.png) no-repeat}
-.display-po-details-icon-disabled{background:url(../Images/icons/ic_assignment_black_24dp_1x-disable.png) no-repeat}
-.invoice-icon{background:url(../Images/icons/invoice-icon.png) no-repeat}
+.prev-icon,.next-icon{background-position:-80px -40px;display:inline-block;height:30px;width:30px}
+.next-icon{background-position:-110px -40px}
+.display-po-details-icon{background-position:-570px 0}
+.display-po-details-icon-disabled{background-position:-570px -30px}
+.invoice-icon{background-position:-480px 0}
 .mrgnTp16{margin-top:16px}
 .form-data-wrapper .button-container .mrgnRgt8,.mrgnRgt8{margin-right:8px}
 .mrgnLft20{margin-left:20px}
@@ -327,11 +328,11 @@ body div,body span,body textarea{outline:none!important}
 .normal-table td{padding:2px 15px 2px 8px}
 .normal-table-price td{padding-right:75px}
 #appeal-list-item{padding-left:25px}
-#appeal-list-item li{background:url(images/icons/appeal-icon.png) 0 3px no-repeat;font-weight:600;list-style:none;margin:5px 0;padding-left:35px}
+#appeal-list-item li{background-position:-540px -130px;font-weight:600;list-style:none;margin:5px 0;padding-left:35px}
 #appeal-list-item .disabled-item{opacity:.4}
 #__Page_Hidden{position:fixed}
-.delivery-icon{background:url(../images/icons/delivery-icon.png) no-repeat}
-.validate-icon{background:url(../images/icons/validate-icon.png) no-repeat}
+.delivery-icon{background-position:-570px -70px}
+.validate-icon{background-position:-570px -100px}
 @media (min-width: 768px) and (max-width: 1023px) {
 #wrapper,#span-content,#content,#main-content{width:100%!important}
 .time-date .mdl-cell--8-col{width:calc(50% - 16px)}
