@@ -109,11 +109,11 @@
                             <div class="content-grid mdl-grid content-row-height">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Business Phone:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="bphone1" name="bphone1" value="" size="2" maxlength="3" data-tb-index="10">
-                                    <input type="text" id="bphone2" name="bphone2" value="" size="2" maxlength="3" data-tb-index="11">
-                                    <input type="text" id="bphone3" name="bphone3" value="" size="2" maxlength="4" data-tb-index="12">
+                                    <input type="text" id="bphone1" name="bphone1" value="" size="5" maxlength="3" data-tb-index="10">
+                                    <input type="text" id="bphone2" name="bphone2" value="" size="5" maxlength="3" data-tb-index="11">
+                                    <input type="text" id="bphone3" name="bphone3" value="" size="5" maxlength="4" data-tb-index="12">
                                     <span class="input-side-gutter-space form-label">Ext:
-                                    <input type="text" id="extn" name="extn" size="2" maxlength="4" data-tb-index="13">
+                                    <input type="text" id="extn" name="extn" size="5" maxlength="4" data-tb-index="13">
                                     </span> </span> </div>
                             </div>
                             <div class="content-grid mdl-grid content-row-height">
@@ -181,7 +181,7 @@
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0"> 
                                   <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <input maxlength="10" type="text" id="zcode" name="zcode" class="zip-code" value="" data-tb-index="8">
-                                    <span id="place"></span>, <span id="state"></span>
+                                    <span id="place"></span><span id="state"></span>
                                   </span> 
                                 </div>
                             </div>
@@ -189,9 +189,9 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Home Phone:</span> </div>
                                 <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet" style="margin:0">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <input type="text" id="hphone1" name="hphone1" class="" value="" size="1" maxlength="3" data-tb-index="14">
-                                    <input type="text" id="hphone2" name="hphone2" class="" value="" size="1" maxlength="3" data-tb-index="15">
-                                    <input type="text" id="hphone3" name="hphone3" class="" value="" size="2" maxlength="4" data-tb-index="16">
+                                    <input type="text" id="hphone1" name="hphone1" class="" value="" size="5" maxlength="3" data-tb-index="14">
+                                    <input type="text" id="hphone2" name="hphone2" class="" value="" size="5" maxlength="3" data-tb-index="15">
+                                    <input type="text" id="hphone3" name="hphone3" class="" value="" size="6" maxlength="4" data-tb-index="16">
                                     </span>
                                 </div>
                             </div>
@@ -470,6 +470,10 @@
 			$("#bphone2").attr("tabindex","6");
 			$("#bphone3").attr("tabindex","7");
 			$("#cphone").attr("tabindex","8");
+
+            if ($("#zcode").val().length > 0) {
+                $("#place").append(" , ");
+            }
 			},100)
       
 			$("form input[type=text]").on('input',function () {
