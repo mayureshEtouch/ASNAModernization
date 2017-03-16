@@ -187,14 +187,14 @@
         }
     </style>
     <script type="text/javascript">
-		function setCookie(cname, cvalue, exdays) {
+        function setCookie(cname, cvalue, exdays) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + "; " + expires;
-			console.log(cvalue);
+            console.log(cvalue);
         }
-		// To show Billing & Shipping address in Order Detail page
+        // To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
                 sessionStorage.setItem("userName", $("[id$='_RSignon_User']").val());
             }
@@ -218,9 +218,9 @@
             $("#CenPH_RSignon_Password").css({ "position": "relative", "left": "40px", "top": "40px" });
             $("#CenPH_DdsConstant1").css({ "position": "relative", "left": "0px", "top": "20px" });
             $("#CenPH_DdsConstant2").css({ "position": "relative", "left": "0px", "top": "40px" });
-			
-			$("[id$=CenPH_DdsConstant1]").html("Username");
-			
+            
+            $("[id$=CenPH_DdsConstant1]").html("Username");
+            
             //Display error popup for backend messages
             if ($("#CenPH_RSignon_Message").text().length > 1) {
                 $('#modal').html($("#CenPH_RSignon_Message").text());
@@ -244,6 +244,110 @@
                     validateInput(this);
                 });
             });
+
+            //console.log($("#CenPH_RSignon_User").val().length);
+            if($("#CenPH_RSignon_User").val().length == 0){
+                if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible')) {
+                    $("#CenPH_RSignon_User").next().remove();
+                }
+                $("#CenPH_RSignon_User").attr("required", true);
+                $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
+                $("#login").attr('disabled','disabled');
+                //$("#login").css("pointer-events", "none");
+                //validateInput(this);
+            }
+        });
+        
+        $(document).keyup(function (event) {
+           //console.log(33333);
+           $("#CenPH_RSignon_User").css({ "position": "relative", "left": "35px", "top": "20px" });
+            $("#CenPH_RSignon_Password").css({ "position": "relative", "left": "40px", "top": "40px" });
+            $("#CenPH_DdsConstant1").css({ "position": "relative", "left": "0px", "top": "20px" });
+            $("#CenPH_DdsConstant2").css({ "position": "relative", "left": "0px", "top": "40px" });
+        });
+
+        var numericReg = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
+        $("#CenPH_RSignon_User").on("keyup", function() {
+          var name=$(this).val().toLowerCase();
+
+          if(name.length == 0){
+                if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible'))
+                {
+                    //console.log(99999)
+                    $("#CenPH_RSignon_User-formaterror").remove();
+                }
+                $("#CenPH_RSignon_User").attr("required", true);
+                $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
+                $("#login").attr('disabled','disabled');
+                $("#login").css("pointer-events", "none");
+                validateInput(this);
+            }
+            else
+            {
+                if (name.substr(0, 6) == "dissls" && numericReg.test(name.substr(6, name.length).slice(0,-1)) && name.substr(name.length-1, name.length) == "u") {
+                    //console.log(11111111);
+                    if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible')) {
+                        $("#CenPH_RSignon_User-formaterror").remove();
+                    }
+                    if ($("#CenPH_RSignon_Password").val().length == 0) {
+                        //console.log(1);
+                        $("#login").attr('disabled','disabled');
+                        $("#login").css("pointer-events", "none");
+                    }
+                    else
+                    {
+                        //console.log(2)
+                        $('#login').removeAttr('disabled');
+                        $("#login").css("pointer-events", "auto");
+                    }
+                }
+                else
+                {
+                    //console.log(222222);
+                    if ($("#CenPH_RSignon_User-formaterror").length <=0) {
+                        $("#CenPH_RSignon_User").after('<label id="CenPH_RSignon_User-formaterror" class="error" style="display:block;">Username not in eSales format</label>');
+                    }                  
+                    $("#login").attr('disabled','disabled');
+                    $("#login").css("pointer-events", "none");
+                }
+            }
+        });
+
+        $("#CenPH_RSignon_Password").on('keyup', function () {
+            var pwd=$("#CenPH_RSignon_Password").val();
+            if(pwd.length == 0){
+                $("#CenPH_RSignon_Password").attr("required", true);
+
+
+                $('#CenPH_RSignon_Password').attr('data-msg-required', 'Password is required');
+                
+                $("#login").attr('disabled','disabled');
+                $("#login").css("pointer-events", "none");
+                validateInput(this);
+            }
+            else
+            {
+                if ($("#CenPH_RSignon_User-formaterror").is(':visible') || $("#CenPH_RSignon_User-error").is(':visible'))
+                {
+                    //console.log(4444444);
+                    $("#login").attr('disabled','disabled');
+                    $("#login").css("pointer-events", "none");
+                }
+                else
+                {
+                    //console.log(55555);
+                    $('#login').removeAttr('disabled');
+                    $("#login").css("pointer-events", "auto");
+                }
+            }
         });
     </script>
+    <style type="text/css">
+        #CenPH_RSignon_User-formaterror {
+            display: block;
+            position: absolute;
+            margin-left: 106px;
+            margin-top: 21px;
+        }
+    </style>
 </asp:Content>
