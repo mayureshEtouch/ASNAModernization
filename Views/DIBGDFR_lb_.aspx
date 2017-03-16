@@ -52,8 +52,8 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--10-col search-container">
                                     <div class="content-grid mdl-grid">
-                                        <div style="width: 72px;">
-                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span>
+                                        <div style="width: 75px;">
+                                            <span class="summary-table-title pull-right" style="margin-left: 0;">Location</span>
                                         </div>
                                         <div id="Location">
                                             <input data-tb-index="1" type="text" id="loc" maxlength="3" onfocus="_09('#CERCD','3,8','#SFLCTL');" class="mdl-textfield__input" data-tb-index="1">
@@ -65,7 +65,7 @@
 											
 											 <span class="form-text" data-upgraded=",MaterialTextfield">
                                         
-												<input data-tb-index="2" class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true" >
+												<input data-tb-index="2" class="editable-data" type="text" id="requestdate" name="date" size="15" readonly >
 												<i id="reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
 												<span id="reqdate" class="DdsCharField_OutputOnly"></span>
 											</span>

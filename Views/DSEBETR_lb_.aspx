@@ -117,7 +117,7 @@
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
                         <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                            <input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+                            <input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly>
                             <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                             <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                         </span>
@@ -1379,10 +1379,12 @@
                         after("<a href='javascript:void(0);' id='sp-previous-page' style='float: right;margin-right: 25px; margin-top: 7px;' class='prev-icon'></a>");
                     }
                     $("#enterPayment").after("<a href='javascript:void(0);' id='sp-next-page' style='float: right;margin-right: 15px; margin-top: 7px;' class='next-icon'></a>");
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
-                    $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
+					if($(".blank-space").length < 16) {
+						 $("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_RNICD"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]');
+						$("<span class='blank-space'></span>").insertAfter('[id^="CenPH__lb_SFLRCD__lb_2BATX"]');
+					}
 
                     $("#CenPH__lb_SFLRCD select").empty();
                     $("#CenPH__lb_SFLRCD select").css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });

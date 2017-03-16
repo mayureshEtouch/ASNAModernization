@@ -30,7 +30,9 @@
                 <!-- front-content starts here -->
                 <div class="front contracts-bg">
                     <div class="front-content">
-                        <div class="icon-block"><span class="contracts-icon"></span></div>
+                        <div class="icon-block">
+                        	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 52.17" width="60" height="53" ><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-1{fill-rule:evenodd;}</style></defs><title>contract</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="14 14.17 17 0.17 38 0.17 38 10.2 34 10.17 34 4.17 14.25 4.17 3.88 13.42 3.94 47.23 33.88 47.17 33.94 41.17 38 41.17 38 52.17 0 52.17 0 14.17 14 14.17"/><polygon class="cls-1" points="17 0 17 14.17 0 14.17 17 0"/><rect class="cls-2" x="9" y="18.17" width="18" height="4"/><rect class="cls-2" x="9" y="26.17" width="15" height="4"/><rect class="cls-2" x="9" y="34.17" width="11" height="4"/><polygon class="cls-1" points="33.75 25.92 49.25 14.67 55.25 22.42 39 33.17 33.75 25.92"/><path class="cls-1" d="M28,32.17a3.74,3.74,0,0,0,2,3l7-1-5-7Z"/><path class="cls-1" d="M52,13.87l4.9,6.3,2.84-2.28s.72-.76-.25-2c-.08,0-3.38-4.09-3.38-4.09a1.93,1.93,0,0,0-1.9-.52S52,13.87,52,13.87Z"/><polygon class="cls-1" points="24.83 36 27.17 34 28.33 35.5 25.33 37.17 24.83 36"/><polygon class="cls-1" points="42.5 14.92 51.34 9.23 53 10.42 42.16 17.11 42.5 14.92"/></g></g></svg>
+                        </div>
                         <p class="block-heading">Work with Contracts</p>
                     </div>
                     <!-- front-content ends here -->
@@ -38,7 +40,9 @@
                 <!-- back-content starts here -->
                 <div class="back">
                     <div class="icon-title-container">
-                        <div class="contracts-icon-hover"></div>
+                        <div class="contracts-icon-hover">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 52.17" width="36" height="32" fill="#f00"><defs></defs><title>contract</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="in-cls-1" points="14 14.17 17 0.17 38 0.17 38 10.2 34 10.17 34 4.17 14.25 4.17 3.88 13.42 3.94 47.23 33.88 47.17 33.94 41.17 38 41.17 38 52.17 0 52.17 0 14.17 14 14.17"/><polygon class="in-cls-1" points="17 0 17 14.17 0 14.17 17 0"/><rect class="in-cls-2" x="9" y="18.17" width="18" height="4"/><rect class="in-cls-2" x="9" y="26.17" width="15" height="4"/><rect class="cls-2" x="9" y="34.17" width="11" height="4"/><polygon class="in-cls-1" points="33.75 25.92 49.25 14.67 55.25 22.42 39 33.17 33.75 25.92"/><path class="in-cls-1" d="M28,32.17a3.74,3.74,0,0,0,2,3l7-1-5-7Z"/><path class="in-cls-1" d="M52,13.87l4.9,6.3,2.84-2.28s.72-.76-.25-2c-.08,0-3.38-4.09-3.38-4.09a1.93,1.93,0,0,0-1.9-.52S52,13.87,52,13.87Z"/><polygon class="in-cls-1" points="24.83 36 27.17 34 28.33 35.5 25.33 37.17 24.83 36"/><polygon class="in-cls-1" points="42.5 14.92 51.34 9.23 53 10.42 42.16 17.11 42.5 14.92"/></g></g></svg>
+						</div>
                         <h2 class="_title">Work with Contracts</h2>
                     </div>
                     <ul class="_list">
@@ -56,7 +60,9 @@
                 <!-- front-content starts here -->
                 <div class="front sales-order-bg">
                     <div class="front-content">
-						<div class="icon-block"><span class="sales-order-icon"></span></div>
+						<div class="icon-block">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 52.17" width="47" height="53"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-1{fill-rule:evenodd;}</style></defs><title>sales-order</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="14 14.17 17 0.17 38 0.17 38 10.2 34 10.17 34 4.17 14.25 4.17 3.88 13.42 3.94 47.23 33.88 47.17 33.94 41.17 38 41.17 38 52.17 0 52.17 0 14.17 14 14.17"/><polygon class="cls-1" points="17 0 17 14.17 0 14.17 17 0"/><rect class="cls-2" x="9" y="18.17" width="18" height="4"/><rect class="cls-2" x="9" y="26.17" width="18" height="4"/><rect class="cls-2" x="9" y="34.17" width="18" height="4"/><path class="cls-1" d="M38.48,27.09A2.15,2.15,0,0,1,39,28.62a2.7,2.7,0,0,1-.53,1.63,2.48,2.48,0,0,1-1.47.92v-5A3.88,3.88,0,0,1,38.48,27.09Zm-5-5.69A1.55,1.55,0,0,1,33,20.15a1.53,1.53,0,0,1,.53-1.28,4.48,4.48,0,0,1,1.47-.7v4A4.27,4.27,0,0,1,33.48,21.4ZM36,13.17c-.65,0-1,.34-1,1v1.28A5.69,5.69,0,0,0,31.28,17,4.7,4.7,0,0,0,30,20.4,4.68,4.68,0,0,0,30.66,23a4.5,4.5,0,0,0,1.7,1.57,12.56,12.56,0,0,0,2.64,1v5.61a2.93,2.93,0,0,1-1.23-.64,2.57,2.57,0,0,1-.69-.94,12.07,12.07,0,0,1-.53-1.48,1.37,1.37,0,0,0-.52-.69,1.66,1.66,0,0,0-.9-.25,1.5,1.5,0,0,0-1.13.47,1.45,1.45,0,0,0-.45,1.05,4.21,4.21,0,0,0,.33,1.6,4.8,4.8,0,0,0,1,1.58,5.86,5.86,0,0,0,1.7,1.27,7.93,7.93,0,0,0,2.41.67v3.27a1.2,1.2,0,0,0,.22.82,1,1,0,0,0,.81.27.84.84,0,0,0,.78-.31,2.23,2.23,0,0,0,.19-1v-3A5.8,5.8,0,0,0,39.69,33a5,5,0,0,0,1.72-2A5.67,5.67,0,0,0,42,28.44a4.93,4.93,0,0,0-.41-2,5.47,5.47,0,0,0-2.53-2.54c-.51-.21-1.2-.46-2.06-.75v-5A2.44,2.44,0,0,1,38.5,20,1.43,1.43,0,0,0,40,21.17a1.34,1.34,0,0,0,1-.44,1.45,1.45,0,0,0,.42-1,3.31,3.31,0,0,0-.29-1.21,5.27,5.27,0,0,0-.85-1.26A4.07,4.07,0,0,0,38.89,16,5.92,5.92,0,0,0,37,15.47v-1.3A.9.9,0,0,0,36,13.17Z"/></g></g></svg>
+						</div>
                         <p class="block-heading">Work with Sales Order</p>
                     </div>
                     <!-- front-content ends here -->
@@ -64,7 +70,9 @@
                 <!-- back-content starts here -->
                 <div class="back">
                     <div class="icon-title-container">
-                        <div class="sales-order-icon-hover"></div>
+                        <div class="sales-order-icon-hover">
+                        	<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 42 52.17" width="31" height="34"><defs><style>.in-cls-1,.in-cls-2{fill:#e42c29 !important}.in-cls-1{fill-rule:evenodd;}</style></defs><title>sales-order</title><g id="Layer_2" data-name="Layer 2" style=""><g id="Layer_1-2" data-name="Layer 1"><polygon class="in-cls-1" points="14 14.17 17 0.17 38 0.17 38 10.2 34 10.17 34 4.17 14.25 4.17 3.88 13.42 3.94 47.23 33.88 47.17 33.94 41.17 38 41.17 38 52.17 0 52.17 0 14.17 14 14.17"/><polygon class="in-cls-1" points="17 0 17 14.17 0 14.17 17 0"/><rect class="in-cls-2" x="9" y="18.17" width="18" height="4"/><rect class="in-cls-2" x="9" y="26.17" width="18" height="4"/><rect class="in-cls-2" x="9" y="34.17" width="18" height="4"/><path class="in-cls-1" d="M38.48,27.09A2.15,2.15,0,0,1,39,28.62a2.7,2.7,0,0,1-.53,1.63,2.48,2.48,0,0,1-1.47.92v-5A3.88,3.88,0,0,1,38.48,27.09Zm-5-5.69A1.55,1.55,0,0,1,33,20.15a1.53,1.53,0,0,1,.53-1.28,4.48,4.48,0,0,1,1.47-.7v4A4.27,4.27,0,0,1,33.48,21.4ZM36,13.17c-.65,0-1,.34-1,1v1.28A5.69,5.69,0,0,0,31.28,17,4.7,4.7,0,0,0,30,20.4,4.68,4.68,0,0,0,30.66,23a4.5,4.5,0,0,0,1.7,1.57,12.56,12.56,0,0,0,2.64,1v5.61a2.93,2.93,0,0,1-1.23-.64,2.57,2.57,0,0,1-.69-.94,12.07,12.07,0,0,1-.53-1.48,1.37,1.37,0,0,0-.52-.69,1.66,1.66,0,0,0-.9-.25,1.5,1.5,0,0,0-1.13.47,1.45,1.45,0,0,0-.45,1.05,4.21,4.21,0,0,0,.33,1.6,4.8,4.8,0,0,0,1,1.58,5.86,5.86,0,0,0,1.7,1.27,7.93,7.93,0,0,0,2.41.67v3.27a1.2,1.2,0,0,0,.22.82,1,1,0,0,0,.81.27.84.84,0,0,0,.78-.31,2.23,2.23,0,0,0,.19-1v-3A5.8,5.8,0,0,0,39.69,33a5,5,0,0,0,1.72-2A5.67,5.67,0,0,0,42,28.44a4.93,4.93,0,0,0-.41-2,5.47,5.47,0,0,0-2.53-2.54c-.51-.21-1.2-.46-2.06-.75v-5A2.44,2.44,0,0,1,38.5,20,1.43,1.43,0,0,0,40,21.17a1.34,1.34,0,0,0,1-.44,1.45,1.45,0,0,0,.42-1,3.31,3.31,0,0,0-.29-1.21,5.27,5.27,0,0,0-.85-1.26A4.07,4.07,0,0,0,38.89,16,5.92,5.92,0,0,0,37,15.47v-1.3A.9.9,0,0,0,36,13.17Z"/></g></g></svg>
+                        </div>
                         <h2 class="_title">Work with Sales Order</h2>
                     </div>
                     <ul class="_list">
@@ -88,7 +96,9 @@
                 <!-- front-content starts here -->
                 <div class="front inv-delv-sch-bg">
                     <div class="front-content">
-						<div class="icon-block"><span class="invent-delv-sch-icon"></span></div>
+						<div class="icon-block">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.14 71" width="61" height="71"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-2{fill-rule:evenodd;}</style></defs><title>inventory_1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="14.14" width="10" height="5"/><rect class="cls-1" x="7.14" y="18" width="10" height="2"/><rect class="cls-1" x="7.14" y="25" width="14" height="2"/><rect class="cls-1" x="7.14" y="31" width="20" height="2"/><rect class="cls-1" x="7.14" y="38" width="10" height="2"/><path class="cls-2" d="M25.14,42.62V65.38c0,3.4,2,5.62,5.13,5.62H57c3.1,0,5.12-2.22,5.12-5.62V42.62c0-3.36-2-5.56-5-5.62V32.75A1.75,1.75,0,0,0,55.39,31h-3.5a1.75,1.75,0,0,0-1.75,1.75V37h-13V32.75A1.75,1.75,0,0,0,35.39,31h-3.5a1.75,1.75,0,0,0-1.75,1.75V37C27.11,37.06,25.14,39.26,25.14,42.62ZM54.64,38h-2V34.5h2Zm-20,0h-2V34.5h2Zm-7.5,6.19c0-2.16,1-3.19,3.15-3.19H57c2.13,0,3.15,1,3.15,3.19V65.81C60.14,68,59.12,69,57,69H30.29c-2.13,0-3.15-1-3.15-3.19Z"/><rect class="cls-1" x="53.14" y="46" width="4" height="4"/><rect class="cls-1" x="45.14" y="46" width="4" height="4"/><rect class="cls-1" x="37.14" y="46" width="4" height="4"/><rect class="cls-1" x="53.14" y="53" width="4" height="4"/><rect class="cls-1" x="45.14" y="53" width="4" height="4"/><rect class="cls-1" x="37.14" y="53" width="4" height="4"/><rect class="cls-1" x="30.14" y="53" width="4" height="4"/><rect class="cls-1" x="45.14" y="61" width="4" height="4"/><rect class="cls-1" x="37.14" y="61" width="4" height="4"/><rect class="cls-1" x="30.14" y="61" width="4" height="4"/><polygon class="cls-2" points="0 0 0 49 23.43 49 23.43 46.87 2.13 46.87 2.13 9.59 35.15 9.59 35.15 27.7 37.28 27.7 37.28 0 27.7 0 25.82 2.13 25.57 2.13 25.57 3.2 24.5 3.2 24.5 4.26 13.85 4.26 13.85 3.2 12.78 3.2 12.78 2.13 12.53 2.13 10.65 0 0 0"/></g></g></svg>
+						</div>
                         <p class="block-heading">Inventory &amp; Delivery Schedule</p>
                     </div>
                     <!-- front-content ends here -->
@@ -96,7 +106,9 @@
                 <!-- back-content starts here -->
                 <div class="back">
                     <div class="icon-title-container">
-                        <div class="invent-delv-sch-icon-hover"></div>
+                        <div class="invent-delv-sch-icon-hover">
+                        	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.14 71" width="37" height="43"><defs><style>.in-cls-1,.in-cls-2{fill:#fff;}.in-cls-2{fill-rule:evenodd;}</style></defs><title>inventory_1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="in-cls-1" x="14.14" width="10" height="5"/><rect class="in-cls-1" x="7.14" y="18" width="10" height="2"/><rect class="in-cls-1" x="7.14" y="25" width="14" height="2"/><rect class="in-cls-1" x="7.14" y="31" width="20" height="2"/><rect class="in-cls-1" x="7.14" y="38" width="10" height="2"/><path class="in-cls-2" d="M25.14,42.62V65.38c0,3.4,2,5.62,5.13,5.62H57c3.1,0,5.12-2.22,5.12-5.62V42.62c0-3.36-2-5.56-5-5.62V32.75A1.75,1.75,0,0,0,55.39,31h-3.5a1.75,1.75,0,0,0-1.75,1.75V37h-13V32.75A1.75,1.75,0,0,0,35.39,31h-3.5a1.75,1.75,0,0,0-1.75,1.75V37C27.11,37.06,25.14,39.26,25.14,42.62ZM54.64,38h-2V34.5h2Zm-20,0h-2V34.5h2Zm-7.5,6.19c0-2.16,1-3.19,3.15-3.19H57c2.13,0,3.15,1,3.15,3.19V65.81C60.14,68,59.12,69,57,69H30.29c-2.13,0-3.15-1-3.15-3.19Z"/><rect class="in-cls-1" x="53.14" y="46" width="4" height="4"/><rect class="in-cls-1" x="45.14" y="46" width="4" height="4"/><rect class="in-cls-1" x="37.14" y="46" width="4" height="4"/><rect class="in-cls-1" x="53.14" y="53" width="4" height="4"/><rect class="in-cls-1" x="45.14" y="53" width="4" height="4"/><rect class="in-cls-1" x="37.14" y="53" width="4" height="4"/><rect class="in-cls-1" x="30.14" y="53" width="4" height="4"/><rect class="in-cls-1" x="45.14" y="61" width="4" height="4"/><rect class="in-cls-1" x="37.14" y="61" width="4" height="4"/><rect class="in-cls-1" x="30.14" y="61" width="4" height="4"/><polygon class="in-cls-2" points="0 0 0 49 23.43 49 23.43 46.87 2.13 46.87 2.13 9.59 35.15 9.59 35.15 27.7 37.28 27.7 37.28 0 27.7 0 25.82 2.13 25.57 2.13 25.57 3.2 24.5 3.2 24.5 4.26 13.85 4.26 13.85 3.2 12.78 3.2 12.78 2.13 12.53 2.13 10.65 0 0 0"/></g></g></svg>
+                        </div>
                         <h2 class="_title">Inventory & Delivery Schedule</h2>
                     </div>
                     <ul class="_list">
@@ -118,7 +130,9 @@
                 <!-- front-content starts here -->
                 <div class="front misc-cust-serv-bg">
                     <div class="front-content">
-						<div class="icon-block"><span class="misc-cust-serv-icon"></span></div>
+						<div class="icon-block">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83 58" width="83" height="60"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-2{fill-rule:evenodd;}</style></defs><title>cust-service</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" width="83" height="3"/><polygon class="cls-2" points="5 3 9.25 3 12.25 6 70 6 72.75 3 77 3 71.25 8.25 10.75 8.25 5 3"/><polygon class="cls-2" points="2 40 12.75 30.25 34.25 51 27.25 58 25.75 56.5 30.75 50.75 13 34 4.25 41.5 2 40"/><polygon class="cls-2" points="22.63 47.87 24.88 50.5 25 51.98 23.5 51.87 21.13 49.37 21 47.97 22.63 47.87"/><path class="cls-2" d="M47,7s.65,1.49-3.25,7c-1.71,2.42-6,5.87-8.75,8.5,2.75,1.87,5.5-.75,5.5-.75a41.21,41.21,0,0,0,5.75-6.5c2.5-3.87,4.25-6.92,2.92-8.25C47.17,6,47,7,47,7Z"/><path class="cls-2" d="M21,8c1,2.87,1.46,10.17.13,11.5-3.67,1.33-5.46,15-4.13,16.67S31.33,49,31.33,49L49,32S62,16.33,63,8c-.37-2.19-7.91-1.83-9-1-.8.61-1.72,4.21-5.33,8a29.66,29.66,0,0,1-8.42,6.5c-2.67,0-6.58-.58-7.25-1.25S32.33,10.33,29,7C27,6,19.33,5,21,8Zm2.25,2.25c-1.55-2.72,3.27-1.91,5.13-1,1.87,3.25,1.25,11.52,1.87,12.12S37,24.12,39.5,24.12c4.23-2.24,9-5.19,11.67-7.62,3.38-3.13,4-5.57,4.21-6.25,1-4.13,6.37-3.75,4.5.37C59,18.18,47.63,30.75,47.63,30.75L31.25,46.62S20.9,37,19.67,35.5s.43-13.67,3.83-14.88C24.74,19.42,24.8,13,23.25,10.25Z"/></g></g></svg>
+						</div>
                         <p class="block-heading">Misc. Customer Service</p>
                     </div>
                     <!-- front-content ends here -->
@@ -126,7 +140,9 @@
                 <!-- back-content starts here -->
                 <div class="back">
                     <div class="icon-title-container">
-                        <div class="misc-cust-serv-icon-hover"></div>
+                        <div class="misc-cust-serv-icon-hover">
+                        	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83 58" width="61" height="42"><defs><style>.in-cls-1,.in-cls-2{fill:#fff;}.in-cls-2{fill-rule:evenodd;}</style></defs><title>cust-service</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="in-cls-1" width="83" height="3"/><polygon class="in-cls-2" points="5 3 9.25 3 12.25 6 70 6 72.75 3 77 3 71.25 8.25 10.75 8.25 5 3"/><polygon class="in-cls-2" points="2 40 12.75 30.25 34.25 51 27.25 58 25.75 56.5 30.75 50.75 13 34 4.25 41.5 2 40"/><polygon class="in-cls-2" points="22.63 47.87 24.88 50.5 25 51.98 23.5 51.87 21.13 49.37 21 47.97 22.63 47.87"/><path class="in-cls-2" d="M47,7s.65,1.49-3.25,7c-1.71,2.42-6,5.87-8.75,8.5,2.75,1.87,5.5-.75,5.5-.75a41.21,41.21,0,0,0,5.75-6.5c2.5-3.87,4.25-6.92,2.92-8.25C47.17,6,47,7,47,7Z"/><path class="in-cls-2" d="M21,8c1,2.87,1.46,10.17.13,11.5-3.67,1.33-5.46,15-4.13,16.67S31.33,49,31.33,49L49,32S62,16.33,63,8c-.37-2.19-7.91-1.83-9-1-.8.61-1.72,4.21-5.33,8a29.66,29.66,0,0,1-8.42,6.5c-2.67,0-6.58-.58-7.25-1.25S32.33,10.33,29,7C27,6,19.33,5,21,8Zm2.25,2.25c-1.55-2.72,3.27-1.91,5.13-1,1.87,3.25,1.25,11.52,1.87,12.12S37,24.12,39.5,24.12c4.23-2.24,9-5.19,11.67-7.62,3.38-3.13,4-5.57,4.21-6.25,1-4.13,6.37-3.75,4.5.37C59,18.18,47.63,30.75,47.63,30.75L31.25,46.62S20.9,37,19.67,35.5s.43-13.67,3.83-14.88C24.74,19.42,24.8,13,23.25,10.25Z"/></g></g></svg>
+                        </div>
                         <h2 class="_title">Misc. Customer Service</h2>
                     </div>
                     <ul class="_list">
@@ -148,7 +164,9 @@
                 <!-- front-content starts here -->
                 <div class="front incomplete-orders-bg">
                     <div class="front-content">
-						<div class="icon-block"><span class="incomplete-orders-icon"></span></div>
+						<div class="icon-block">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 52.17" width="38" height="52"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-2{fill-rule:evenodd;}</style></defs><title>incomplete-orders</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle class="cls-1" cx="19" cy="36.17" r="3"/><polygon class="cls-2" points="16 15.17 22 15.17 20.88 31.17 16.88 31.17 16 15.17"/><polygon class="cls-2" points="14 14.17 14 0.17 38 0.17 38 7.84 38 41.2 34 41.17 34 7.17 34 4.17 13.25 4.17 3.88 13.42 3.94 47.23 33.88 47.17 33.94 41.17 38 41.17 38 52.17 0 52.17 0 14.17 14 14.17"/><polygon class="cls-2" points="14 0 14 14.17 0 14.17 14 0"/></g></g></svg>
+						</div>
                         <p class="block-heading">Incomplete Orders</p>
                     </div>
                     <!-- front-content ends here -->
@@ -156,7 +174,9 @@
                 <!-- back-content starts here -->
                 <div class="back">
                     <div class="icon-title-container">
-                        <div class="incomplete-orders-icon-hover"></div>
+                        <div class="incomplete-orders-icon-hover">
+                        	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 52.17" width="26" height="36"><defs><style>.in-cls-1,.in-cls-2{fill:#fff;}.in-cls-2{fill-rule:evenodd;}</style></defs><title>incomplete-orders</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle class="in-cls-1" cx="19" cy="36.17" r="3"/><polygon class="in-cls-2" points="16 15.17 22 15.17 20.88 31.17 16.88 31.17 16 15.17"/><polygon class="in-cls-2" points="14 14.17 14 0.17 38 0.17 38 7.84 38 41.2 34 41.17 34 7.17 34 4.17 13.25 4.17 3.88 13.42 3.94 47.23 33.88 47.17 33.94 41.17 38 41.17 38 52.17 0 52.17 0 14.17 14 14.17"/><polygon class="in-cls-2" points="14 0 14 14.17 0 14.17 14 0"/></g></g></svg>
+                        </div>
                         <h2 class="_title">Incomplete Orders</h2>
                     </div>
                     <ul class="_list">
@@ -178,7 +198,9 @@
                 <!-- front-content starts here -->
                 <div class="front othr-misc-sales-menu-bg">
                     <div class="front-content">
-						<div class="icon-block"><span class="misc-sales-menu-icon"></span></div>
+						<div class="icon-block">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 69.5" width="68" height="70"><defs><style>.cls-1{fill:#fff;fill-rule:evenodd;}</style></defs><title>mis-sales-menu</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M17.06,12.62l17.44,11L52,12.5,35,0Zm3.07.38L34.75,2.44,49.44,12.75,34.5,22.87Z"/><path class="cls-1" d="M17,12.5V29.37L34.75,41.5l-.12-17.75Zm2.13,2.87,14.12,9V38L19.13,27.62Z"/><path class="cls-1" d="M52,12.5V30.12L34.5,41.25l-.06-17.69ZM49.75,15,36,24.5V38l13.75-9.25Z"/><path class="cls-1" d="M.06,40.62l17.44,11L35,40.5,18,28ZM3.13,41,17.75,30.44,32.44,40.75,17.5,50.87Z"/><path class="cls-1" d="M0,40.5V57.37L17.75,69.5l-.12-17.75Zm2.13,2.87,14.12,9V66L2.13,55.62Z"/><path class="cls-1" d="M35,40.5V58.12L17.5,69.25l-.06-17.69ZM32.75,43,19,52.5V66l13.75-9.25Z"/><path class="cls-1" d="M33.06,40.62l17.44,11L68,40.5,51,28Zm3.07.38L50.75,30.44,65.44,40.75,50.5,50.87Z"/><path class="cls-1" d="M33,40.5V57.37L50.75,69.5l-.12-17.75Zm2.13,2.87,14.12,9V66L35.13,55.62Z"/><path class="cls-1" d="M68,40.5V58.12L50.5,69.25l-.06-17.69ZM65.75,43,52,52.5V66l13.75-9.25Z"/></g></g></svg>
+						</div>
                         <p class="block-heading">Other Misc. Sales Menu</p>
                     </div>  
                     <!-- front-content ends here -->
@@ -186,7 +208,9 @@
                 <!-- back-content starts here -->
                 <div class="back">
                     <div class="icon-title-container">
-                        <div class="misc-sales-menu-icon-hover"></div>
+                        <div class="misc-sales-menu-icon-hover">
+                        	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 69.5" width="41" height="43"><defs><style>.in-cls-1{fill:#fff;fill-rule:evenodd;}</style></defs><title>mis-sales-menu</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="in-cls-1" d="M17.06,12.62l17.44,11L52,12.5,35,0Zm3.07.38L34.75,2.44,49.44,12.75,34.5,22.87Z"/><path class="in-cls-1" d="M17,12.5V29.37L34.75,41.5l-.12-17.75Zm2.13,2.87,14.12,9V38L19.13,27.62Z"/><path class="in-cls-1" d="M52,12.5V30.12L34.5,41.25l-.06-17.69ZM49.75,15,36,24.5V38l13.75-9.25Z"/><path class="in-cls-1" d="M.06,40.62l17.44,11L35,40.5,18,28ZM3.13,41,17.75,30.44,32.44,40.75,17.5,50.87Z"/><path class="in-cls-1" d="M0,40.5V57.37L17.75,69.5l-.12-17.75Zm2.13,2.87,14.12,9V66L2.13,55.62Z"/><path class="in-cls-1" d="M35,40.5V58.12L17.5,69.25l-.06-17.69ZM32.75,43,19,52.5V66l13.75-9.25Z"/><path class="in-cls-1" d="M33.06,40.62l17.44,11L68,40.5,51,28Zm3.07.38L50.75,30.44,65.44,40.75,50.5,50.87Z"/><path class="in-cls-1" d="M33,40.5V57.37L50.75,69.5l-.12-17.75Zm2.13,2.87,14.12,9V66L35.13,55.62Z"/><path class="in-cls-1" d="M68,40.5V58.12L50.5,69.25l-.06-17.69ZM65.75,43,52,52.5V66l13.75-9.25Z"/></g></g></svg>
+                        </div>
                         <h2 class="_title">Other Misc. Sales Menu</h2>
                     </div>
                     <ul class="_list">

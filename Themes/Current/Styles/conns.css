@@ -1,10 +1,23 @@
-
 @font-face {
-  font-family:  "Open Sans","OpenSansRegular","Arial",sans-serif;
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(../fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+  src: url('../fonts/Open-Sans-regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Open-Sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Open-Sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Open-Sans-regular.woff') format('font-woff'), /* Pretty Modern Browsers */
+       url('../fonts/Open-Sans-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Open-Sans-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Open-Sans-700.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Open-Sans-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Open-Sans-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Open-Sans-700.woff') format('font-woff'), /* Pretty Modern Browsers */
+       url('../fonts/Open-Sans-700.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Open-Sans-700.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 .material-icons {
   font-family: 'Material Icons';
@@ -69,6 +82,9 @@ footer, header, hgroup, menu, nav, section {
 }
 .login-icon, .logo-icon, .user-icon, .progress-bar-divider-first, .progress-bar-divider, .white-to-gray-bullet, .white-to-gray-bullet, .home, .notifications-icon, .arrow-down, .computer-icon, .date-icon, .time-icon, .change-icon, .display-icon, .change-icon-disabled, .display-icon-disabled, .calender-icon, .help-icon, .close, .delete-icon-disabled, .delete-icon, .storage-icon-disabled, .storage-icon, .sync-icon-disabled, .sync-icon, .reserve-icon, .reserve-icon-disabled, .transfers-icon, .transfers-icon-disabled, .orders-icon, .orders-icon-disabled, .completion-icon, .completion-icon-disabled, .credit-icon, .credit-icon-disabled, .customer-icon, .customer-icon-disabled, .payments-icon, .payments-icon-disabled, .notes-icon, .notes-icon-disabled, .link-icon, .link-icon-disabled, .insurance-icon, .insurance-icon-disabled, .inventory-icon, .inventory-icon-disabled, .account-icon, .account-icon-disabled, .deselect-icon, .deselect-icon-disabled, .returns-icon, .status-icon, .exchanges-icon, .print-icon, .move-icon, .Prt-rac-certf-icon, .appeal-icon, .decision-icon, .sbm-to-rac-icon, .work-icon, .enter-invoice-icon, .exceptions-icon, .change-address-icon, .verified-icon, .duplicates-icon, .invoice-icon, .re-submit-icon, .lxnx-icon, .fico-summ-icon, .re-rqst-icon, .change-product-icon, .change-customer-icon, .services-icon, .sales-icon, .adt-services-icon, .goto-entry-icon, .filled-requirement-icon, .audit-icon, .reinstate-icon, .prev-icon, .next-icon, .display-po-details-icon, .display-po-details-icon-disabled, .invoice-icon, #appeal-list-item li, .delivery-icon, .validate-icon {
 	background: url('../Images/icons-sprite.png') center center no-repeat transparent;
+}
+.button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab, .progress-bar .progress-bar-wrapper, .progress-bar .gray-bg, .modal-dialog-container .table-container-search .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .modal-dialog-container .table-container-search .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab, .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .modal-dialog-container .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab, .filter-search-container .button-container .mdl-button, .ui-widget-header, .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-widget-content {
+	background: url('../Images/horizontal-repeat-sprite.png') center center repeat-x transparent;
 }
 #wrapper, #span-content, #content, #main-content, #centralDiv, .mdl-layout__container {
 	height: 100%;
@@ -188,14 +204,14 @@ a:visited, .mdl-menu__item a {
 /* progress bar css starts here */
 
 .progress-bar .progress-bar-wrapper {
-	background: url('../Images/progressbar-bg.png') repeat-x;
+	background-position: 0 -40px;
 	border: 1px solid #c5c5c5;
 	border-radius: 5px;
 	height: 55px;
 	margin: 16px 20px;
 }
 .progress-bar .gray-bg {
-	background: url('../Images/progress-bar-gray-bg.png') repeat-x;
+	background-position: 0 -100px;
 }
 .progress-bar .progress-bar-main {
 	list-style-type: none;
@@ -720,7 +736,7 @@ textarea {
 	padding: 0;
 }
 .modal-dialog-container .table-container-search .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .modal-dialog-container .table-container-search .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
-	background: url(../Images/btn_bg_big.png) repeat-x;
+	background-position: 0 -160px;
 	height: auto;
 	padding: 10px 8px;
 	margin: 0;
@@ -740,7 +756,7 @@ textarea {
 	margin: 15px 14px 15px 20px;
 }
 .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .modal-dialog-container .search-field-container .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
-	background: url(../Images/btn_bg_big.png) repeat-x;
+	background-position: 0 -160px;
 	height: auto;
 	padding: 10px 8px;
 	margin: 0;
@@ -924,7 +940,7 @@ textarea {
 	margin-top: 10px;
 }
 .filter-search-container .button-container .mdl-button{
-	background: url(../Images/btn_bg_big.png) repeat-x;
+	background-position: 0 -160px;
 	color: #fff;
 	height: 40px;
 	padding: 12px 10px;
@@ -1010,25 +1026,258 @@ textarea {
 .fixed-table-container .first .th-inner {border-left: none;}
 /* Fixed Table Head css Ends */
 
+/* Datepicker CSS code */
+/* states and images */
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+	font-size: 1em;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35);
+	background-image: none;
+}
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 49%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #eeeeee url(images/ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x;
+	color: #333333;
+	font-size: 1.1em;
+}
+.ui-widget-header .ui-icon {
+	background-image: url(images/ui-icons_ffffff_256x240.png);
+}
+.ui-datepicker-prev-hover  .ui-icon-circle-triangle-w,
+.ui-datepicker-next-hover  .ui-icon-circle-triangle-e {
+	background-image: url(images/cal-hover-icon.png) !important;
+	cursor: pointer;
+}
+.ui-datepicker-prev-hover  .ui-icon-circle-triangle-w{background-position: -12px 3px;}
+.ui-datepicker-next-hover  .ui-icon-circle-triangle-e{background-position: 1px 3px;}
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 4px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 4px;
+}
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
 /* Datepicker CSS starts */
 .ui-widget {
 	font-family: "Open Sans", "OpenSansRegular", "Arial", sans-serif !important;
 }
 .ui-widget-header {
 	border: 1px solid #b70406 !important;
-    background: #e32527 url(images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x !important;
+    background-position: 0 -210px;
     color: #ffffff !important;
     font-weight: bold !important;
 }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
 	border: 1px solid #b70406 !important;
-    background: #fe6b6c url(images/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x !important;
+    background-position: 0 -260px;
     color: #363636 !important;
 
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 	border: 1px solid #cccccc !important;
-    background: #f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x !important;
+    background-position: 0 -370px;
 	font-weight: bold !important;
     color: #333 !important;
 }
@@ -1083,6 +1332,7 @@ textarea {
 	position: relative;
     right: 26px;
     top: 4px;
+	width: 20px;
 }
 .help-icon {
 	background-position: -110px -100px;
@@ -1296,7 +1546,7 @@ textarea {
  font-weight: 600;
 }
 .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
-	background: url('../Images/btn_bg.png') repeat-x;
+	background-position: 0 0;
 	height: auto;
 	padding: 6px 15px 6px 16px;
 	margin: 0 5px;
