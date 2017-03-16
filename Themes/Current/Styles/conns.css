@@ -1,23 +1,23 @@
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  src: url('../fonts/Open-Sans-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Open-Sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Open-Sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/Open-Sans-regular.woff') format('font-woff'), /* Pretty Modern Browsers */
-       url('../fonts/Open-Sans-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/Open-Sans-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('../Fonts/Open-Sans-regular.eot'); /* IE9 Compat Modes */
+  src: url('../Fonts/Open-Sans-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/Open-Sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/Open-Sans-regular.woff') format('font-woff'), /* Pretty Modern Browsers */
+       url('../Fonts/Open-Sans-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/Open-Sans-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/Open-Sans-700.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/Open-Sans-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Open-Sans-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/Open-Sans-700.woff') format('font-woff'), /* Pretty Modern Browsers */
-       url('../fonts/Open-Sans-700.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/Open-Sans-700.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('../Fonts/Open-Sans-700.eot'); /* IE9 Compat Modes */
+  src: url('../Fonts/Open-Sans-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/Open-Sans-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/Open-Sans-700.woff') format('font-woff'), /* Pretty Modern Browsers */
+       url('../Fonts/Open-Sans-700.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/Open-Sans-700.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 .material-icons {
   font-family: 'Material Icons';
