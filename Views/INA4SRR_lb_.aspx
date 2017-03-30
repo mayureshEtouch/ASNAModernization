@@ -628,5 +628,9 @@
             #__Page_Hidden{
                 height: 100% !important;
             }
+            .simplePopup{
+left:180px !important;
+
+            }
         </style>
     </asp:Content>
