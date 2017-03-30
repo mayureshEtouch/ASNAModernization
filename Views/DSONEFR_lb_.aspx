@@ -113,7 +113,7 @@
 										<div class="content-grid mdl-grid">
 												<div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop">
 												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-												
+												<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
 												</div>
 												<div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
 														<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
@@ -920,8 +920,9 @@
 			
                  //var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6], [7]];
                 //generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-              			
+        var indexcount = 11;      			
 			  var generateTable = function () {
+        
 				var count = 0;
 				var idDiv = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').attr("id");
 				if (idDiv){
@@ -939,9 +940,8 @@
 				  
 					var rowData = $('div#CenPH__lb_SFLRCD>div[id^="CenPH__lb_SFLRCD"]').each(function () {
 						if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
-							
 							row = '';
-							row += '<tr>';
+							row += '<tr class="popup-window" data-index='+indexcount+'>';
 							row += '<td>' + (($(orderLineType + count).length > 0) ? $(orderLineType + count).html() : '&nbsp;') + '</td>';
 							row += '<td>' + (($(versionNumber + count).length > 0) ? $(versionNumber + count).html() : '&nbsp;') + '</td>';
 							row += '<td>' + (($(modelNumber + count).length > 0) ? $(modelNumber + count).html() : '&nbsp;') + '</td>';
@@ -953,6 +953,7 @@
 							
 							row += '</tr>';
 							count++;
+              indexcount = indexcount+1;
 							$("#displayData tbody").append(row);
 						}else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
 							$("#previous-page,#next-page").remove();
@@ -971,7 +972,10 @@
 				}
 				
 				generateTable();
-
+         $(".popup-window").on('click touchstart', function(){
+          var index = $(this).data('index');
+          $('#__atCursor__').val(index+',45');
+         });
          $('body').on('click touchstart', '#displayData tbody tr', function() {
             if ($(this).attr("id") !== "CenPH__lb_SFLRCD__End_New") {
                 $("#displayData tbody tr:even").css("background-color", "#fff");
@@ -1014,6 +1018,9 @@
 				
                 $("#previous").click(function (event) {
                     _00('F12', event);
+                });
+                $("#prompt").click(function (event) {
+                    _00('F4', event);
                 });
                 $("#next").click(function (event) {
                     _00('Enter', event);
