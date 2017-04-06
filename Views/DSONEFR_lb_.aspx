@@ -946,15 +946,25 @@
 							row += '<td>' + (($(versionNumber + count).length > 0) ? $(versionNumber + count).html() : '&nbsp;') + '</td>';
 							row += '<td>' + (($(modelNumber + count).length > 0) ? $(modelNumber + count).html() : '&nbsp;') + '</td>';
 							row += '<td>' + (($(mfgWarrantyDate + count).length > 0) ? $(mfgWarrantyDate + count).html() : '&nbsp;') + '</td>';
-							row += '<td>' + (($(smaMonths + count).length > 0) ? $(smaMonths + count).html() : '&nbsp;') + '</td>';
+              if($(smaMonths + count).is("input")) {
+                row += '<td id=sma' + (count) + 'month></td>';
+              } else if($(smaMonths + count).is("span")) {
+                row += '<td>' + (($(smaMonths + count).length > 0) ? $(smaMonths + count).html() : '&nbsp;') + '</td>';  
+              }
 							row += '<td>' + (($(warrantyPrice + count).length > 0) ? $(warrantyPrice + count).html() : '&nbsp;') + '</td>';
 							row += '<td>' + (($(extWarrantyDate + count).length > 0) ? $(extWarrantyDate + count).html() : '&nbsp;') + '</td>';
 							row += '<td>' + (($(refLineNumber + count).length > 0) ? $(refLineNumber + count).html() : '&nbsp;') + '</td>';
 							
 							row += '</tr>';
+              $("#displayData tbody").append(row);
+
+              if($(smaMonths + count).is("input")) {
+                $(smaMonths + count).attr("style", "width: 28px !important;margin-right: -2px !important;position: static !important;text-transform: uppercase !important;");
+                $(smaMonths + count).appendTo($('#sma' + count + 'month'));
+              }
 							count++;
               indexcount = indexcount+1;
-							$("#displayData tbody").append(row);
+
 						}else if ($(this).attr('id') === 'CenPH__lb_SFLRCD__End') {
 							$("#previous-page,#next-page").remove();
 							if($("#CenPH__lb_SFLRCD_0").length === 0) {
