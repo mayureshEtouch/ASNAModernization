@@ -362,7 +362,7 @@
                   <div  class="mdl-cell mdl-cell--5-col" style="margin: 0;"><span class="form-label">First Payment Due:</span> </div>
                   <div  class="mdl-cell mdl-cell--7-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text">
                                               <input class="editable-data" type="text" id="ctl00$CenPH$DSPFMT1_CRFPYB_new" size="15" readonly="true">
-                                              <i id="ctl00$CenPH$DSPFMT1_CRFPYB_new_selectdate" class="material-icons calender-icon page-icons editable-data"></i>
+                                              <i id="open-datepicker" class="material-icons calender-icon page-icons editable-data"></i>
                                               <span class="form-text vertical-top ro-data" id="ro-ctl00$CenPH$DSPFMT1_CRFPYB_new"></span>
                                             </span> </div>
                 </div>
@@ -482,7 +482,7 @@
             <div class="button-container">
               <div class="content-grid mdl-grid">
 				
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="previous">Previous</span>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="13" id="previous">Previous</span> -->
 				<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-tb-index="14" id="refresh">refresh</span> 
                 <span data-tb-index="15" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg">Display Messages</span> 
                 <span data-tb-index="16" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" >Prompt</span> 
@@ -921,7 +921,7 @@
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet"> 
               
-				  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Previous</span>
+				  <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous1">Previous</span> -->
                   <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise1">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disp-msg1">Display Messages</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">eSign/Wet Sign</span> </div>
                 <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next1">next</span>
@@ -2397,7 +2397,7 @@
                 $("#cust-reqesdate1").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_new").datepicker("show"); });
 
                 $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/y', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
-                $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new_selectdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").datepicker("show"); });
+                $("#open-datepicker").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_new").datepicker("show"); });
 
                 $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/y', minDate: new Date(1800, 1, 1), yearRange: "-100:+0" });
                 $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new_selectdate").click(function() { $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_new").datepicker("show"); });
