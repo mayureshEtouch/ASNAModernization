@@ -615,7 +615,7 @@
           <div class="button-container">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop" id="divAdd"> 
-                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> -->
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="process">Process</span>
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="menu">Menu</span>
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span> -->
@@ -968,7 +968,7 @@
               VirtualRowCol="11,25" 
               PositionCursor="94" 
               EditCode="Z" 
-              ErrorMessageId="UCR0028 ASMSGF0 : 94 &amp; 51 , UCR0031 ASMSGF0 : 94 &amp; 52 , UCR0005 ASMSGF0 : 85 , UCR0006 ASMSGF0 : 86" 
+              ErrorMessageId="UCR0028 ASMSGF0 : 94 &amp; 51 , UCR0031 ASMSGF0 : 94 &amp; 52 , UCR0005 ASMSGF0 : 85 , UCR0006 ASMSGF0 : 86 , UCR0051 ASMSGF0 : 32" 
               TabIndex="9"  />
             <mdf:DdsConstant id="DdsConstant28" runat="server" 
               style="position: absolute; left: 325px; top: 243px;"
@@ -1209,6 +1209,22 @@
               VirtualRowCol="13,69" 
               EditWord="   .  " 
               TabIndex="14"  />
+            <mdf:DdsCharField id="DSPFMT1_INTVAL" runat="server" style="position: absolute; left: 352px; top: 384px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="INTVAL" 
+              VisibleCondition="*False"
+              Usage="OutputOnly" 
+              VirtualRowCol="17,33" 
+              ErrorMessageId="UCR0050 ASMSGF0 MINCHG : 33" 
+ />
+            <mdf:DdsCharField id="DSPFMT1_MINCHG" runat="server" style="position: absolute; left: 1px; top: 0px; width: 19px"
+              CssClass="DdsCharField"
+              Length="2" 
+              Alias="MINCHG" 
+              Usage="ProgramToSystem" 
+              VirtualRowCol="0,0" 
+ />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_DSPFMT2" runat="server" 
             style="position: relative; width: 828px; height: 552px" 
@@ -1961,7 +1977,8 @@
             //$("#dob").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val());
             if ($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").length >0) {
               $("#dob").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B").val());
-              $("#dob").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              //{ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/y', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0" }
+              $("#dob").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: null, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
               $("#dob-reqesdate").click(function () { $("#dob").datepicker("show"); });
               $("#dob").on('change', function () {
                   var date = $("#dob").val().split("/");
@@ -1974,7 +1991,7 @@
             //$("#dob_1").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val());
             if ($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").length > 0) {
               $("#dob_1").val($("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DOB_lb_2B").val());
-              $("#dob_1").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#dob_1").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: null, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
               $("#dob_1-reqesdate").click(function () { $("#dob_1").datepicker("show"); });
               $("#dob_1").on('change', function () {
                   var date = $("#dob_1").val().split("/");
@@ -1988,7 +2005,7 @@
             //$("#firstPaymentDue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val());
             if ($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").length > 0) {
               $("#firstPaymentDue").val($("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_CRFPYB").val());
-              $("#firstPaymentDue").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#firstPaymentDue").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: null, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
               $("#fstPyDue-reqesdate").click(function () { $("#firstPaymentDue").datepicker("show"); });
               $("#firstPaymentDue").on('change', function () {
                   var date = $("#firstPaymentDue").val().split("/");
@@ -2000,7 +2017,7 @@
             
             if ($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").length > 0) {
               $("#defDate").val($("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT_DateValue").val() || $("#ctl00\\$CenPH\\$DSPFMT1_DFRPMT").val());
-              $("#defDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: new Date, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
+              $("#defDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', maxDate: null, minDate: new Date(1800, 1, 1), yearRange: "-100:+0"});
               $("#defdt-reqesdate").click(function () { $("#defDate").datepicker("show"); });
             }
             else {$("#defDate").parent().parent().parent().css("display","none")}

@@ -2668,4 +2668,6 @@
 <MSG MSGID="USR0043" SEVERITY="20" DATACOUNT="4" TEXT="OVRPRTF FILE(&amp;1) OUTQ(&amp;2) COPIES(&amp;3) USRDTA(&amp;4)" SECLVL="OVRPRTF FILE(&amp;1) OUTQ(&amp;2) COPIES(&amp;3) USRDTA(&amp;4)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*DEC" LEN3="3" DEC3="0" TYPE4="*CHAR" LEN4="10" DEC4="0"                                                        />
 <MSG MSGID="USR0045" SEVERITY="20" DATACOUNT="1" TEXT="Invalid Year" SECLVL=" " TYPE1="*DEC" LEN1="4" DEC1="0" />
 <MSG MSGID="USR0048" SEVERITY="20" DATACOUNT="0" TEXT="Error in date calculation - Attempt to read a date outside of the Calendar" SECLVL="You have asked for a date calculation involving the calendar file. The date supplied is not in the calendar file. Either the wrong date is being passed in or the range of the Calendar is too small. Amend the program or regenerate the Calendar for the required period."                                                            />
-<MSG MSGID="
+<MSG MSGID="USR0049" SEVERITY="20" DATACOUNT="0" TEXT="Error - End of Calendar File reached unexpectedly" SECLVL="End of file hit before date calculation completed. Either date passed into this function is incorrect or Calendar file is too small. Amend program or generate a larger Calendar file."                                                                                 />
+</messages>
+</LegacyMsgFileContents>
