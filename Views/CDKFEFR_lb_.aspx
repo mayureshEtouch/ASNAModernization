@@ -609,9 +609,9 @@
                     return this;
                 });
 
-              if ($('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val() == " ") {
+             /* if ($('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val() == " ") {
                 $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
-              }
+              }*/
               //$('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select").val('N')
               $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='?']").remove();
               $('#custAnswerDisplay tr:eq('+(i+1)+') td:eq(1)').find("select option[value='Y']").text("Y - YES");
