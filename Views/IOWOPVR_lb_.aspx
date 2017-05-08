@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 4/26/2017 at 1:08 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 5/5/2017 at 5:01 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATRACK, file qddssrc, member IOWOPVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -123,7 +123,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 04/25/17  Time  : 00:51:35                                                                       --%>
+      <%--  Date          : 04/29/17  Time  : 01:51:57                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -426,6 +426,7 @@
               Usage="Both" 
               VirtualRowCol="3,38" 
               PositionCursor="31 | !31 & !98 & !99" 
+              Color="Green : 31" 
               TabIndex="1"  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
@@ -452,6 +453,7 @@
               Alias="#1S7C#" 
               Usage="OutputOnly" 
               VirtualRowCol="5,38" 
+              Color="Red : 79" 
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CONFIRM" runat="server" 
@@ -636,8 +638,8 @@
 
       <style>
 
-      #div1 {
-        margin-top: 360px;
+      #Div1 {
+        margin-top: 360px!important;
       }
                 #__Page_Hidden{
             height: 100% !important;
@@ -700,6 +702,10 @@ width: 100% !important;
             /*$('body').on('click', '#next', function(event) {
                 _00('Enter', event);
             });*/
+  
+            $('#accStatus').css('color', $("#CenPH__lb_RCDDTL1__lb_1S7C_lb_").css("color"));
+            $('#leaseId').css('color', $("#CenPH__lb_RCDDTL1__lb_1S5C_lb_").css("color"));
+
 
             $('#submit').on('click', function(event) {
                 _00('Enter', event);

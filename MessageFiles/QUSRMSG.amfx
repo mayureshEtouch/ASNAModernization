@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISPOBJ/QUSRMSG Migrated on 4/26/2017 at 3:50 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
+<!-- Message File DISPOBJ/QUSRMSG Migrated on 5/5/2017 at 5:03 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -2641,7 +2641,7 @@
 <MSG MSGID="DIS3461" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Employee type" SECLVL=" "                       />
 <MSG MSGID="DIS3464" SEVERITY="20" DATACOUNT="0" TEXT="Store Location not Found" SECLVL=" "                    />
 <MSG MSGID="DIS3465" SEVERITY="20" DATACOUNT="0" TEXT="Manager not found, Please add Manager" SECLVL=" "       />
-<MSG MSGID="DIS3509" SEVERITY="20" DATACOUNT="0" TEXT="Report generation job submitted." SECLVL=""             />
+<MSG MSGID="DIS3509" SEVERITY="20" DATACOUNT="0" TEXT="Report generated and sent to e-mail." SECLVL=""         />
 <MSG MSGID="DIS3510" SEVERITY="20" DATACOUNT="1" TEXT="Progressive Finance is not allowed for &amp;1 location" SECLVL="" TYPE1="*CHAR" LEN1="3" DEC1="0"                                                />
 <MSG MSGID="DIS3515" SEVERITY="20" DATACOUNT="2" TEXT="Invoice amount exceeds &amp;2&#37; of approved amount" SECLVL="" TYPE1="*DEC" LEN1="7" DEC1="2" TYPE2="*DEC" LEN2="7" DEC2="0"                   />
 <MSG MSGID="DIS3516" SEVERITY="20" DATACOUNT="2" TEXT="Only &amp;2 payment method is allowed for progressive customers" SECLVL="" TYPE1="*CHAR" LEN1="2" DEC1="0" TYPE2="*CHAR" LEN2="3" DEC2="0"       />
@@ -2649,6 +2649,11 @@
 <MSG MSGID="DIS3528" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1 payment method is not allowed for non-progressive customers" SECLVL="" TYPE1="*CHAR" LEN1="3" DEC1="0"                                    />
 <MSG MSGID="DIS3583" SEVERITY="20" DATACOUNT="0" TEXT="Lease ID Error" SECLVL=""                               />
 <MSG MSGID="DIS3584" SEVERITY="20" DATACOUNT="0" TEXT="Order cannot be completed for entered Lease ID" SECLVL=""                                                                                        />
+<MSG MSGID="DIS3588" SEVERITY="20" DATACOUNT="0" TEXT="Lease ID Must Be Entered" SECLVL=""                     />
+<MSG MSGID="DIS3589" SEVERITY="20" DATACOUNT="0" TEXT="Technical Issue, Please Contact IT" SECLVL=""           />
+<MSG MSGID="DIS3590" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Lease Status" SECLVL=""                         />
+<MSG MSGID="DIS3591" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Lease ID" SECLVL=""                             />
+<MSG MSGID="DIS3594" SEVERITY="20" DATACOUNT="0" TEXT="Report generation in progress, please wait..." SECLVL=""                                                                                         />
 <MSG MSGID="DIS9997" SEVERITY="20" DATACOUNT="1" TEXT="Please Contact Merchant for 1&amp;." SECLVL="" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                  />
 <MSG MSGID="DI99998" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1 way to OBS. Don't sell floor sample..." SECLVL="" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                        />
 <MSG MSGID="DI99999" SEVERITY="20" DATACOUNT="1" TEXT="SKU-OBS. Sell Flr Sample" SECLVL="" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                             />
