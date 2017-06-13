@@ -896,6 +896,9 @@ textarea {
 	margin: 0;
 	border-radius: 2px 5px 5px 2px;
 }
+.filter-search-container .button-container span.mdl-button{ 
+	height: 16px;
+}
 .filter-search-container .mdl-cell{
 	margin: 0 0 0;
 	padding: 0;
@@ -1238,8 +1241,14 @@ textarea {
  background: url(../images/icons/audit-icon.png) no-repeat;
 }
 .reinstate-icon{
- background: url(../images/icons/reinstate-icon.png) no-repeat;
+ background: url(../images/icons/reinstate-icon.png) no-repeat;}
+.submit-icon {
+                background: url(../Images/icons/submit-icon.png) no-repeat;
 }
+.sumbit-icon-disabled {
+                background: url(../Images/icons/submit-icon-disable.png) no-repeat;
+}
+
 .mdl-layout__content input, .mdl-layout__content select, .mdl-layout__content textarea, .mdl-layout__content .DdsCharField, .table-data-content-container .mdl-textfield-select-page .mdl-textfield__input {
  background: rgb(255, 255, 255);
  border: 1px solid #c5c5c5;

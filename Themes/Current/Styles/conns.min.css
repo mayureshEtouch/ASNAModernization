@@ -156,6 +156,7 @@ textarea{width:99%;border:1px solid #c5c5c5}
 .filter-search-container .button-container{margin:0;padding:0;float:right}
 .filter-search-container input{background:#fff;border:1px solid #c5c5c5;border-radius:2px;padding:1px 3px 1px 5px;font-size:12px;margin-right:0;margin-top:10px}
 .filter-search-container .button-container .mdl-button{background:url(../Images/btn_bg_big.png) repeat-x;color:#fff;height:40px;padding:12px 10px;margin:0;border-radius:2px 5px 5px 2px}
+.filter-search-container .button-container span.mdl-button{height:16px}
 .filter-search-container .mdl-cell{margin:0;padding:0}
 .filter-search-container .search-container{margin:0}
 .filter-search-container .search-container .mdl-cell{margin:0;position:relative}
@@ -252,6 +253,12 @@ textarea{width:99%;border:1px solid #c5c5c5}
 .filled-requirement-icon{background:url(../images/icons/filled-requirement-icon.png) no-repeat}
 .audit-icon{background:url(../images/icons/audit-icon.png) no-repeat}
 .reinstate-icon{background:url(../images/icons/reinstate-icon.png) no-repeat}
+.submit-icon {
+                background: url(../Images/icons/submit-icon.png) no-repeat;
+}
+.sumbit-icon-disabled {
+                background: url(../Images/icons/submit-icon-disable.png) no-repeat;
+}
 .mdl-layout__content input,.mdl-layout__content select,.mdl-layout__content textarea,.mdl-layout__content .DdsCharField,.table-data-content-container .mdl-textfield-select-page .mdl-textfield__input{background:#fff;border:1px solid #c5c5c5;border-radius:2px;color:#666;font-family:"Open Sans","OpenSansRegular","Arial",sans-serif;font-size:13px;font-weight:400;height:auto;margin-right:5px;padding:1px 3px 2px;vertical-align:top}
 .mdl-layout__content input,.mdl-layout__content textarea{text-transform:uppercase}
 .mdl-layout__content .DdsConstant,.mdl-layout__content .DdsDecField,.form-label,.summary-label{font-style:normal;font-weight:600}
