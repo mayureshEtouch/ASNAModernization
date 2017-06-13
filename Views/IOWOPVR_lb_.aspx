@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 5/5/2017 at 5:01 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 6/12/2017 at 4:24 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATRACK, file qddssrc, member IOWOPVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -123,7 +123,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 04/29/17  Time  : 01:51:57                                                                       --%>
+      <%--  Date          : 05/29/17  Time  : 06:37:25                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -298,9 +298,9 @@
               Alias="#1ZIPC" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1WM_lb_N" runat="server" style="position: absolute; left: 1px; top: 0px; width: 19px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1WM_lb_N" runat="server" style="position: absolute; left: 1px; top: 0px; width: 46px"
               CssClass="DdsDecField"
-              Length="2" 
+              Length="5" 
               Decimals="0" 
               Alias="#1WM#N" 
               Usage="Hidden" 
