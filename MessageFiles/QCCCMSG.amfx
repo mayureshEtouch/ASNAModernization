@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- Message File CCCQ1DBF/QCCCMSG Migrated on 6/16/2017 at 2:41 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
+<LegacyMsgFileContents version="1.0">
+<messages>
+<MSG MSGID="CCC0001" SEVERITY="0" DATACOUNT="0" TEXT="Is the existing customer the same person applying for credit (Y/N)?" SECLVL=""                                                                    />
+<MSG MSGID="DIS0319" SEVERITY="20" DATACOUNT="0" TEXT="SY: Calendar &amp; Date not found." SECLVL=" "          />
+<MSG MSGID="DIS0320" SEVERITY="20" DATACOUNT="0" TEXT="SY: Calendar &amp; Date already exists." SECLVL=" "     />
+<MSG MSGID="DIS0390" SEVERITY="20" DATACOUNT="6" TEXT="               From &amp;1/&amp;2/&amp;3 Through &amp;4/&amp;5/&amp;6" SECLVL=" " TYPE1="*CHAR" LEN1="2" DEC1="0" TYPE2="*CHAR" LEN2="2" DEC2="0" TYPE3="*CHAR" LEN3="2" DEC3="0" TYPE4="*CHAR" LEN4="2" DEC4="0" TYPE5="*CHAR" LEN5="2" DEC5="0" TYPE6="*CHAR" LEN6="2" DEC6="0"                                                  />
+<MSG MSGID="DIS0727" SEVERITY="20" DATACOUNT="4" TEXT="                  From &amp;1/&amp;2 Through &amp;3/&amp;4" SECLVL=" " TYPE1="*CHAR" LEN1="2" DEC1="0" TYPE2="*CHAR" LEN2="4" DEC2="0" TYPE3="*CHAR" LEN3="2" DEC3="0" TYPE4="*CHAR" LEN4="4" DEC4="0"                                    />
+<MSG MSGID="USR0068" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer not found." SECLVL=" "                     />
+<MSG MSGID="USR0069" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer already exists." SECLVL=" "                />
+<MSG MSGID="USR0070" SEVERITY="20" DATACOUNT="0" TEXT="SY: Address not found." SECLVL=" "                      />
+<MSG MSGID="USR0071" SEVERITY="20" DATACOUNT="0" TEXT="SY: Address already exists." SECLVL=" "                 />
+<MSG MSGID="USR0072" SEVERITY="20" DATACOUNT="0" TEXT="CO: Location not found." SECLVL=" "                     />
+<MSG MSGID="USR0073" SEVERITY="20" DATACOUNT="0" TEXT="CO: Location already exists." SECLVL=" "                />
+<MSG MSGID="USR0074" SEVERITY="20" DATACOUNT="0" TEXT="SY: Zip Code not found." SECLVL=" "                     />
+<MSG MSGID="USR0075" SEVERITY="20" DATACOUNT="0" TEXT="SY: Zip Code already exists." SECLVL=" "                />
+<MSG MSGID="USR0076" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer/Address not found." SECLVL=" "             />
+<MSG MSGID="USR0077" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer/Address already exists." SECLVL=" "        />
+<MSG MSGID="USR0078" SEVERITY="20" DATACOUNT="0" TEXT="CO: Company not found." SECLVL=" "                      />
+<MSG MSGID="USR0079" SEVERITY="20" DATACOUNT="0" TEXT="CO: Company already exists." SECLVL=" "                 />
+<MSG MSGID="USR0080" SEVERITY="20" DATACOUNT="0" TEXT="CO: District not found." SECLVL=" "                     />
+<MSG MSGID="USR0081" SEVERITY="20" DATACOUNT="0" TEXT="CO: District already exists." SECLVL=" "                />
+<MSG MSGID="USR0082" SEVERITY="20" DATACOUNT="0" TEXT="CO: Region not found." SECLVL=" "                       />
+<MSG MSGID="USR0083" SEVERITY="20" DATACOUNT="0" TEXT="CO: Region already exists." SECLVL=" "                  />
+<MSG MSGID="USR0084" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer Comments not found." SECLVL=" "            />
+<MSG MSGID="USR0085" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer Comments already exists." SECLVL=" "       />
+<MSG MSGID="USR0086" SEVERITY="20" DATACOUNT="0" TEXT="CO: Employee not found." SECLVL=" "                     />
+<MSG MSGID="USR0087" SEVERITY="20" DATACOUNT="0" TEXT="CO: Employee already exists." SECLVL=" "                />
+<MSG MSGID="USR0088" SEVERITY="20" DATACOUNT="0" TEXT="SY: Phone Number not found." SECLVL=" "                 />
+<MSG MSGID="USR0089" SEVERITY="20" DATACOUNT="0" TEXT="SY: Phone Number already exists." SECLVL=" "            />
+<MSG MSGID="USR0090" SEVERITY="20" DATACOUNT="0" TEXT="# Reference Fields not found." SECLVL=" "               />
+<MSG MSGID="USR0091" SEVERITY="20" DATACOUNT="0" TEXT="# Reference Fields already exists." SECLVL=" "          />
+<MSG MSGID="USR0092" SEVERITY="20" DATACOUNT="0" TEXT="SY: File for Functions not found." SECLVL=" "           />
+<MSG MSGID="USR0093" SEVERITY="20" DATACOUNT="0" TEXT="SY: File for Functions already exists." SECLVL=" "      />
+<MSG MSGID="USR0094" SEVERITY="20" DATACOUNT="0" TEXT="SY: Audit Stamp not found." SECLVL=" "                  />
+<MSG MSGID="USR0095" SEVERITY="20" DATACOUNT="0" TEXT="SY: Audit Stamp already exists." SECLVL=" "             />
+<MSG MSGID="USR0096" SEVERITY="20" DATACOUNT="0" TEXT="*Notepad not found." SECLVL=" "                         />
+<MSG MSGID="USR0097" SEVERITY="20" DATACOUNT="0" TEXT="*Notepad already exists." SECLVL=" "                    />
+<MSG MSGID="USR0098" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Reference not found." SECLVL=" "           />
+<MSG MSGID="USR0099" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Reference already exists." SECLVL=" "      />
+<MSG MSGID="USR0100" SEVERITY="20" DATACOUNT="0" TEXT="Customer Account not found." SECLVL=" "                 />
+<MSG MSGID="USR0101" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Accounts already exists." SECLVL=" "       />
+<MSG MSGID="USR0102" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer ATM Ref not found." SECLVL=" "             />
+<MSG MSGID="USR0103" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer ATM Ref already exists." SECLVL=" "        />
+<MSG MSGID="USR0104" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Insurance not found." SECLVL=" "           />
+<MSG MSGID="USR0105" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Insurance already exists." SECLVL=" "      />
+<MSG MSGID="USR0106" SEVERITY="20" DATACOUNT="0" TEXT="CR: Auto-Approval Master not found." SECLVL=" "         />
+<MSG MSGID="USR0107" SEVERITY="20" DATACOUNT="0" TEXT="CR: Auto-Approval Master already exists." SECLVL=" "    />
+<MSG MSGID="USR0108" SEVERITY="20" DATACOUNT="0" TEXT="OE: Contract Printed Data not found." SECLVL=" "        />
+<MSG MSGID="USR0109" SEVERITY="20" DATACOUNT="0" TEXT="OE: Contract Printed Data already exists." SECLVL=" "   />
+<MSG MSGID="USR0110" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Claims not found." SECLVL=" "          />
+<MSG MSGID="USR0111" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Claims already exists." SECLVL=" "     />
+<MSG MSGID="USR0112" SEVERITY="20" DATACOUNT="0" TEXT="Entry Required for Processing" SECLVL=" "               />
+<MSG MSGID="USR0115" SEVERITY="20" DATACOUNT="0" TEXT="CL: Collectors Comments not found." SECLVL=" "          />
+<MSG MSGID="USR0116" SEVERITY="20" DATACOUNT="0" TEXT="CL: Collectors Comments already exists." SECLVL=" "     />
+<MSG MSGID="USR0117" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Ins Claim Header not found." SECLVL=" "        />
+<MSG MSGID="USR0118" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Ins Claim Header already exists." SECLVL=" "   />
+<MSG MSGID="USR0119" SEVERITY="20" DATACOUNT="0" TEXT="CR: Account X-References not found." SECLVL=" "         />
+<MSG MSGID="USR0120" SEVERITY="20" DATACOUNT="0" TEXT="CR: Account X-References already exists." SECLVL=" "    />
+<MSG MSGID="USR0121" SEVERITY="20" DATACOUNT="0" TEXT="CR: Account X-Reference not found." SECLVL=" "          />
+<MSG MSGID="USR0122" SEVERITY="20" DATACOUNT="0" TEXT="CR: Account X-Reference already exists." SECLVL=" "     />
+<MSG MSGID="USR0123" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Acct X-Ref not found." SECLVL=" "            />
+<MSG MSGID="USR0124" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Acct X-Ref already exists." SECLVL=" "       />
+<MSG MSGID="USR0125" SEVERITY="20" DATACOUNT="0" TEXT="CR: Acct Not in Ins File" SECLVL=" "                    />
+<MSG MSGID="USR0126" SEVERITY="20" DATACOUNT="0" TEXT="Trans From Has No Ins Rcd" SECLVL=" "                   />
+<MSG MSGID="USR0127" SEVERITY="20" DATACOUNT="0" TEXT="Trans To Has No Ins Rcd" SECLVL=" "                     />
+<MSG MSGID="USR0128" SEVERITY="20" DATACOUNT="0" TEXT="FS: Customer Changes not found." SECLVL=" "             />
+<MSG MSGID="USR0129" SEVERITY="20" DATACOUNT="0" TEXT="FS: Customer Changes already exists." SECLVL=" "        />
+<MSG MSGID="USR0130" SEVERITY="20" DATACOUNT="0" TEXT="CR: Company not found." SECLVL=" "                      />
+<MSG MSGID="USR0131" SEVERITY="20" DATACOUNT="0" TEXT="CR: Company already exists." SECLVL=" "                 />
+<MSG MSGID="USR0132" SEVERITY="20" DATACOUNT="0" TEXT="CR: Risk Category not found." SECLVL=" "                />
+<MSG MSGID="USR0133" SEVERITY="20" DATACOUNT="0" TEXT="CR: Risk Category already exists." SECLVL=" "           />
+<MSG MSGID="USR0134" SEVERITY="20" DATACOUNT="0" TEXT="CR: Comment Codes not found." SECLVL=" "                />
+<MSG MSGID="USR0135" SEVERITY="20" DATACOUNT="0" TEXT="CR: Comment Codes already exists." SECLVL=" "           />
+<MSG MSGID="USR0136" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - DIS not found." SECLVL=" "         />
+<MSG MSGID="USR0137" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - DIS already exists." SECLVL=" "    />
+<MSG MSGID="USR0138" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - CRD not found." SECLVL=" "         />
+<MSG MSGID="USR0139" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - CRD already exists." SECLVL=" "    />
+<MSG MSGID="USR0140" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - LAW not found." SECLVL=" "         />
+<MSG MSGID="USR0141" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - LAW already exists." SECLVL=" "    />
+<MSG MSGID="USR0142" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Claim Status not found." SECLVL=" "             />
+<MSG MSGID="USR0143" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Claim Status already exists." SECLVL=" "        />
+<MSG MSGID="USR0144" SEVERITY="20" DATACOUNT="0" TEXT="Subtype not found" SECLVL=" "                           />
+<MSG MSGID="USR0145" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Trans not found." SECLVL=" "           />
+<MSG MSGID="USR0146" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Trans already exists." SECLVL=" "      />
+<MSG MSGID="USR0147" SEVERITY="20" DATACOUNT="0" TEXT="Refund Amount Required" SECLVL=" "                      />
+<MSG MSGID="USR0148" SEVERITY="20" DATACOUNT="0" TEXT="Net Refund GT Premium" SECLVL=" "                       />
+<MSG MSGID="USR0149" SEVERITY="20" DATACOUNT="0" TEXT="Ins already canceled" SECLVL=" "                        />
+<MSG MSGID="USR0150" SEVERITY="20" DATACOUNT="0" TEXT="Enter Type or Comment" SECLVL=" "                       />
+<MSG MSGID="USR0151" SEVERITY="20" DATACOUNT="0" TEXT="Not both type and comment" SECLVL=" "                   />
+<MSG MSGID="USR0152" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Extract not found." SECLVL=" "        />
+<MSG MSGID="USR0153" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Extract already exists." SECLVL=" "   />
+<MSG MSGID="USR0154" SEVERITY="20" DATACOUNT="0" TEXT="CR: FiSERV Process Ctl not found." SECLVL=" "           />
+<MSG MSGID="USR0155" SEVERITY="20" DATACOUNT="0" TEXT="CR: FiSERV Process Ctl already exists." SECLVL=" "      />
+<MSG MSGID="USR0156" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Rebates not found." SECLVL=" "         />
+<MSG MSGID="USR0157" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Rebates already exists." SECLVL=" "    />
+<MSG MSGID="USR0158" SEVERITY="20" DATACOUNT="0" TEXT="Will overwrite adjustment" SECLVL=" "                   />
+<MSG MSGID="USR0159" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Commission Extrct not found." SECLVL=" "        />
+<MSG MSGID="USR0160" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Commission Extrct already exists." SECLVL=" "   />
+<MSG MSGID="USR0161" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Type" SECLVL=" "                                />
+<MSG MSGID="USR0162" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Date" SECLVL=" "                                />
+<MSG MSGID="USR0163" SEVERITY="20" DATACOUNT="0" TEXT="Must Enter Check Number" SECLVL=" "                     />
+<MSG MSGID="USR0164" SEVERITY="20" DATACOUNT="0" TEXT="Must Enter Amount" SECLVL=" "                           />
+<MSG MSGID="USR0165" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Commission Rates not found." SECLVL=" "         />
+<MSG MSGID="USR0166" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Commission Rates already exists." SECLVL=" "    />
+<MSG MSGID="USR0167" SEVERITY="20" DATACOUNT="0" TEXT="CU: Credit Promotion Ltrs not found." SECLVL=" "        />
+<MSG MSGID="USR0168" SEVERITY="20" DATACOUNT="0" TEXT="CU: Credit Promotion Ltrs already exists." SECLVL=" "   />
+<MSG MSGID="USR0169" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header not found." SECLVL=" "                       />
+<MSG MSGID="USR0170" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header already exists." SECLVL=" "                  />
+<MSG MSGID="USR0171" SEVERITY="20" DATACOUNT="0" TEXT="CA: Details not found." SECLVL=" "                      />
+<MSG MSGID="USR0172" SEVERITY="20" DATACOUNT="0" TEXT="CA: Details already exists." SECLVL=" "                 />
+<MSG MSGID="USR0173" SEVERITY="20" DATACOUNT="0" TEXT="CA: Data Request not found." SECLVL=" "                 />
+<MSG MSGID="USR0174" SEVERITY="20" DATACOUNT="0" TEXT="CA: Data Request already exists." SECLVL=" "            />
+<MSG MSGID="USR0175" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Chgs Adt not found." SECLVL=" "              />
+<MSG MSGID="USR0176" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Chgs Adt already exists." SECLVL=" "         />
+<MSG MSGID="USR0177" SEVERITY="20" DATACOUNT="0" TEXT="CU: Credit Reference not found." SECLVL=" "             />
+<MSG MSGID="USR0178" SEVERITY="20" DATACOUNT="0" TEXT="CU: Credit Reference already exists." SECLVL=" "        />
+<MSG MSGID="USR0179" SEVERITY="20" DATACOUNT="0" TEXT="CU: Personal References not found." SECLVL=" "          />
+<MSG MSGID="USR0180" SEVERITY="20" DATACOUNT="0" TEXT="CU: Personal References already exists." SECLVL=" "     />
+<MSG MSGID="USR0181" SEVERITY="20" DATACOUNT="0" TEXT="CU: Previous Addresses not found." SECLVL=" "           />
+<MSG MSGID="USR0182" SEVERITY="20" DATACOUNT="0" TEXT="CU: Previous Addresses already exists." SECLVL=" "      />
+<MSG MSGID="USR0183" SEVERITY="20" DATACOUNT="0" TEXT="CU: Employment History not found." SECLVL=" "           />
+<MSG MSGID="USR0184" SEVERITY="20" DATACOUNT="0" TEXT="CU: Employment History already exists." SECLVL=" "      />
+<MSG MSGID="USR0185" SEVERITY="20" DATACOUNT="0" TEXT="CU: Personal Details not found." SECLVL=" "             />
+<MSG MSGID="USR0186" SEVERITY="20" DATACOUNT="0" TEXT="CU: Personal Details already exists." SECLVL=" "        />
+<MSG MSGID="USR0187" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Personal Det not found." SECLVL=" "        />
+<MSG MSGID="USR0188" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Personal Det already exists." SECLVL=" "   />
+<MSG MSGID="USR0189" SEVERITY="20" DATACOUNT="0" TEXT="CU: Occupation Codes not found." SECLVL=" "             />
+<MSG MSGID="USR0190" SEVERITY="20" DATACOUNT="0" TEXT="CU: Occupation Codes already exists." SECLVL=" "        />
+<MSG MSGID="USR0191" SEVERITY="20" DATACOUNT="0" TEXT="CA: Fraud Detail not found." SECLVL=" "                 />
+<MSG MSGID="USR0192" SEVERITY="20" DATACOUNT="0" TEXT="CA: Fraud Detail already exists." SECLVL=" "            />
+<MSG MSGID="USR0193" SEVERITY="20" DATACOUNT="0" TEXT="IN: Product Category not found." SECLVL=" "             />
+<MSG MSGID="USR0194" SEVERITY="20" DATACOUNT="0" TEXT="IN: Product Category already exists." SECLVL=" "        />
+<MSG MSGID="USR0195" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Control not found." SECLVL=" "               />
+<MSG MSGID="USR0196" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Control already exists." SECLVL=" "          />
+<MSG MSGID="USR0197" SEVERITY="20" DATACOUNT="0" TEXT="CA: Scoring Table not found." SECLVL=" "                />
+<MSG MSGID="USR0198" SEVERITY="20" DATACOUNT="0" TEXT="CA: Scoring Table already exists." SECLVL=" "           />
+<MSG MSGID="USR0199" SEVERITY="20" DATACOUNT="0" TEXT="CA: Notes not found." SECLVL=" "                        />
+<MSG MSGID="USR0200" SEVERITY="20" DATACOUNT="0" TEXT="CA: Notes already exists." SECLVL=" "                   />
+<MSG MSGID="USR0201" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Product Code" SECLVL=" "                        />
+<MSG MSGID="USR0202" SEVERITY="20" DATACOUNT="0" TEXT="Must have amt to finance" SECLVL=" "                    />
+<MSG MSGID="USR0203" SEVERITY="20" DATACOUNT="0" TEXT="Maint $ with no Value $" SECLVL=" "                     />
+<MSG MSGID="USR0204" SEVERITY="20" DATACOUNT="0" TEXT="CR: Risk Assessment not found." SECLVL=" "              />
+<MSG MSGID="USR0205" SEVERITY="20" DATACOUNT="0" TEXT="CR: Risk Assessment already exists." SECLVL=" "         />
+<MSG MSGID="USR0206" SEVERITY="20" DATACOUNT="0" TEXT="CA: Denial Codes not found." SECLVL=" "                 />
+<MSG MSGID="USR0207" SEVERITY="20" DATACOUNT="0" TEXT="CA: Denial Codes already exists." SECLVL=" "            />
+<MSG MSGID="USR0208" SEVERITY="20" DATACOUNT="0" TEXT="CR: Grader Authority not found." SECLVL=" "             />
+<MSG MSGID="USR0209" SEVERITY="20" DATACOUNT="0" TEXT="CR: Grader Authority already exists." SECLVL=" "        />
+<MSG MSGID="USR0210" SEVERITY="20" DATACOUNT="0" TEXT="CR: Queue Master not found." SECLVL=" "                 />
+<MSG MSGID="USR0211" SEVERITY="20" DATACOUNT="0" TEXT="CR: Queue Master already exists." SECLVL=" "            />
+<MSG MSGID="USR0212" SEVERITY="20" DATACOUNT="0" TEXT="User ID Not Found on System" SECLVL=" "                 />
+<MSG MSGID="USR0213" SEVERITY="20" DATACOUNT="0" TEXT="CR: Bureau Master not found." SECLVL=" "                />
+<MSG MSGID="USR0214" SEVERITY="20" DATACOUNT="0" TEXT="CR: Bureau Master already exists." SECLVL=" "           />
+<MSG MSGID="USR0215" SEVERITY="20" DATACOUNT="0" TEXT="OE: Order not found." SECLVL=" "                        />
+<MSG MSGID="USR0216" SEVERITY="20" DATACOUNT="0" TEXT="OE: Order already exists." SECLVL=" "                   />
+<MSG MSGID="USR0217" SEVERITY="20" DATACOUNT="0" TEXT="OE: Order Detail not found." SECLVL=" "                 />
+<MSG MSGID="USR0218" SEVERITY="20" DATACOUNT="0" TEXT="OE: Order Detail already exists." SECLVL=" "            />
+<MSG MSGID="USR0219" SEVERITY="20" DATACOUNT="0" TEXT="No Appl's To Be Worked" SECLVL=" "                      />
+<MSG MSGID="USR0220" SEVERITY="20" DATACOUNT="0" TEXT="Not Correct Status for Message" SECLVL=" "              />
+<MSG MSGID="USR0221" SEVERITY="20" DATACOUNT="0" TEXT="Dates Entered are in Error" SECLVL=" "                  />
+<MSG MSGID="USR0222" SEVERITY="20" DATACOUNT="1" TEXT="Bureau Request Submitted to &amp;1" SECLVL=" " TYPE1="*CHAR" LEN1="6" DEC1="0"                                                                   />
+<MSG MSGID="USR0223" SEVERITY="20" DATACOUNT="0" TEXT="Bureau Not Selected for Request" SECLVL=" "             />
+<MSG MSGID="USR0224" SEVERITY="20" DATACOUNT="0" TEXT="Is the existing customer the same person now applying for credit?" SECLVL=" "                                                                    />
+<MSG MSGID="USR0225" SEVERITY="20" DATACOUNT="0" TEXT="Application is Used" SECLVL=" "                         />
+<MSG MSGID="USR0226" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Audit not found." SECLVL=" "                 />
+<MSG MSGID="USR0227" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Audit already exists." SECLVL=" "            />
+<MSG MSGID="USR0228" SEVERITY="20" DATACOUNT="0" TEXT="Application is being Worked , Please Wait" SECLVL=" "   />
+<MSG MSGID="USR0229" SEVERITY="20" DATACOUNT="0" TEXT="Application was Declined Today" SECLVL=" "              />
+<MSG MSGID="USR0230" SEVERITY="20" DATACOUNT="0" TEXT="No Valid Customer Selected" SECLVL=" "                  />
+<MSG MSGID="USR0231" SEVERITY="20" DATACOUNT="0" TEXT="Application must be Approved to use on Invoice" SECLVL=" "                                                                                       />
+<MSG MSGID="USR0232" SEVERITY="20" DATACOUNT="0" TEXT="CA: Non-Scoring Table not found." SECLVL=" "            />
+<MSG MSGID="USR0233" SEVERITY="20" DATACOUNT="0" TEXT="CA: Non-Scoring Table already exists." SECLVL=" "       />
+<MSG MSGID="USR0234" SEVERITY="20" DATACOUNT="0" TEXT="Option Not Available" SECLVL=" "                        />
+<MSG MSGID="USR0235" SEVERITY="20" DATACOUNT="0" TEXT="Application Available for Display Only" SECLVL=" "      />
+<MSG MSGID="USR0236" SEVERITY="20" DATACOUNT="0" TEXT="Application in Work at a Store Location" SECLVL=" "     />
+<MSG MSGID="USR0237" SEVERITY="20" DATACOUNT="0" TEXT="CU: Aging Control not found." SECLVL=" "                />
+<MSG MSGID="USR0238" SEVERITY="20" DATACOUNT="0" TEXT="CU: Aging Control already exists." SECLVL=" "           />
+<MSG MSGID="USR0239" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer Letters not found." SECLVL=" "             />
+<MSG MSGID="USR0240" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer Letters already exists." SECLVL=" "        />
+<MSG MSGID="USR0241" SEVERITY="20" DATACOUNT="0" TEXT="Not Enough Authority to Work Application" SECLVL=" "    />
+<MSG MSGID="USR0242" SEVERITY="20" DATACOUNT="0" TEXT="Enter correct SSN or select another customer" SECLVL=" "                                                                                         />
+<MSG MSGID="USR0243" SEVERITY="20" DATACOUNT="0" TEXT="CA: Customer Audit not found." SECLVL=" "               />
+<MSG MSGID="USR0244" SEVERITY="20" DATACOUNT="0" TEXT="CA: Customer Audit already exists." SECLVL=" "          />
+<MSG MSGID="USR0245" SEVERITY="20" DATACOUNT="0" TEXT="Bureau Report Not Returned Yet" SECLVL=" "              />
+<MSG MSGID="USR0246" SEVERITY="20" DATACOUNT="0" TEXT="Bureau Req Not Allowed at this time" SECLVL=" "         />
+<MSG MSGID="USR0247" SEVERITY="20" DATACOUNT="0" TEXT="Bureau Request in Progress" SECLVL=" "                  />
+<MSG MSGID="USR0248" SEVERITY="20" DATACOUNT="0" TEXT="Must Have Product for Installment" SECLVL=" "           />
+<MSG MSGID="USR0249" SEVERITY="20" DATACOUNT="0" TEXT="Addressing Error, Please Correct" SECLVL=" "            />
+<MSG MSGID="USR0250" SEVERITY="20" DATACOUNT="0" TEXT="SA: Loc Dly Credit not found." SECLVL=" "               />
+<MSG MSGID="USR0251" SEVERITY="20" DATACOUNT="0" TEXT="SA: Loc Dly Credit already exists." SECLVL=" "          />
+<MSG MSGID="USR0252" SEVERITY="20" DATACOUNT="0" TEXT="CA: MTD Summary not found." SECLVL=" "                  />
+<MSG MSGID="USR0253" SEVERITY="20" DATACOUNT="0" TEXT="CA: MTD Summary already exists." SECLVL=" "             />
+<MSG MSGID="USR0254" SEVERITY="20" DATACOUNT="0" TEXT="CLRPFM DIAL02P" SECLVL="CLRPFM FILE(DISPDBF/DIAL02P)"   />
+<MSG MSGID="USR0255" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct History not found." SECLVL=" "        />
+<MSG MSGID="USR0256" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct History already exists." SECLVL=" "   />
+<MSG MSGID="USR0257" SEVERITY="20" DATACOUNT="1" TEXT="Contact FISERVE and have them resend &amp;1.  The file is corrupted.  The update process will complete once the file is received." SECLVL=" " TYPE1="*CHAR" LEN1="8" DEC1="0"                                                             />
+<MSG MSGID="USR0258" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Drv License not found." SECLVL=" "            />
+<MSG MSGID="USR0259" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Drv License already exists." SECLVL=" "       />
+<MSG MSGID="USR0260" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Soc Src Nbr not found." SECLVL=" "            />
+<MSG MSGID="USR0261" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Soc Src Nbr already exists." SECLVL=" "       />
+<MSG MSGID="USR0262" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Phone Number not found." SECLVL=" "           />
+<MSG MSGID="USR0263" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Phone Number already exists." SECLVL=" "      />
+<MSG MSGID="USR0264" SEVERITY="20" DATACOUNT="0" TEXT="CA: Addon Contracts not found." SECLVL=" "              />
+<MSG MSGID="USR0265" SEVERITY="20" DATACOUNT="0" TEXT="CA: Addon Contracts already exists." SECLVL=" "         />
+<MSG MSGID="USR0266" SEVERITY="20" DATACOUNT="0" TEXT="Override Required if not selected" SECLVL=" "           />
+<MSG MSGID="USR0267" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Addresses not found." SECLVL=" "              />
+<MSG MSGID="USR0268" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Addresses already exists." SECLVL=" "         />
+<MSG MSGID="USR0269" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Credit Cards not found." SECLVL=" "           />
+<MSG MSGID="USR0270" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Credit Cards already exists." SECLVL=" "      />
+<MSG MSGID="USR0271" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct P/D Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0272" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct P/D Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0273" SEVERITY="20" DATACOUNT="0" TEXT="CR: Conn Selected Letter not found." SECLVL=" "         />
+<MSG MSGID="USR0274" SEVERITY="20" DATACOUNT="0" TEXT="CR: Conn Selected Letter already exists." SECLVL=" "    />
+<MSG MSGID="USR0275" SEVERITY="20" DATACOUNT="1" TEXT="From date &amp;1 cannot be &gt; ending date." SECLVL=" " TYPE1="*DEC" LEN1="6" DEC1="0"                                                          />
+<MSG MSGID="USR0277" SEVERITY="20" DATACOUNT="0" TEXT="CL: Interactive Driver not found." SECLVL=" "           />
+<MSG MSGID="USR0278" SEVERITY="20" DATACOUNT="0" TEXT="CL: Interactive Driver already exists." SECLVL=" "      />
+<MSG MSGID="USR0279" SEVERITY="20" DATACOUNT="0" TEXT="Job submitted." SECLVL=" "                              />
+<MSG MSGID="USR0280" SEVERITY="20" DATACOUNT="1" TEXT="Date &amp;1 must be &lt; 15 days from current date." SECLVL=" " TYPE1="*DEC" LEN1="6" DEC1="0"                                                   />
+<MSG MSGID="USR0281" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Minimums not found." SECLVL=" "             />
+<MSG MSGID="USR0282" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Minimums already exists." SECLVL=" "        />
+<MSG MSGID="USR0283" SEVERITY="20" DATACOUNT="0" TEXT="CA: Minimum Requirements not found." SECLVL=" "         />
+<MSG MSGID="USR0284" SEVERITY="20" DATACOUNT="0" TEXT="CA: Minimum Requirements already exists." SECLVL=" "    />
+<MSG MSGID="USR0285" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Audit Extract not found." SECLVL=" "         />
+<MSG MSGID="USR0286" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Audit Extract already exists." SECLVL=" "    />
+<MSG MSGID="USR0287" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Ref Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0288" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Ref Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0289" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Opn Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0290" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Opn Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0291" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Tfr Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0292" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Tfr Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0293" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Maintanence not found." SECLVL=" "         />
+<MSG MSGID="USR0294" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Maintanence already exists." SECLVL=" "    />
+<MSG MSGID="USR0295" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1 Phone Number Invalid, Please Correct" SECLVL=" " TYPE1="*CHAR" LEN1="4" DEC1="0"                                                          />
+<MSG MSGID="USR0296" SEVERITY="20" DATACOUNT="0" TEXT="CA: Queue/Location Ovrrde not found." SECLVL=" "        />
+<MSG MSGID="USR0297" SEVERITY="20" DATACOUNT="0" TEXT="CA: Queue/Location Ovrrde already exists." SECLVL=" "   />
+<MSG MSGID="USR0298" SEVERITY="20" DATACOUNT="0" TEXT="CR: RealEDA not found." SECLVL=" "                      />
+<MSG MSGID="USR0299" SEVERITY="20" DATACOUNT="0" TEXT="CR: RealEDA already exists." SECLVL=" "                 />
+<MSG MSGID="USR0302" SEVERITY="20" DATACOUNT="0" TEXT="CR: Phone Validation Trsn not found." SECLVL=" "        />
+<MSG MSGID="USR0303" SEVERITY="20" DATACOUNT="0" TEXT="CR: Phone Validation Trsn already exists." SECLVL=" "   />
+<MSG MSGID="USR0304" SEVERITY="20" DATACOUNT="0" TEXT="CR: Phone Validation not found." SECLVL=" "             />
+<MSG MSGID="USR0305" SEVERITY="20" DATACOUNT="0" TEXT="CR: Phone Validation already exists." SECLVL=" "        />
+<MSG MSGID="USR0306" SEVERITY="20" DATACOUNT="5" TEXT="&amp;1=&amp;2 PVR &amp;3. By &amp;4 on &amp;5." SECLVL=" " TYPE1="*CHAR" LEN1="3" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="25" DEC3="0" TYPE4="*CHAR" LEN4="10" DEC4="0" TYPE5="*DEC" LEN5="6" DEC5="0"               />
+<MSG MSGID="USR0307" SEVERITY="20" DATACOUNT="0" TEXT="030" SECLVL=" "                                         />
+<MSG MSGID="USR0308" SEVERITY="20" DATACOUNT="0" TEXT="030" SECLVL=" "                                         />
+<MSG MSGID="USR0309" SEVERITY="20" DATACOUNT="1" TEXT="Phone already validated by &amp;1 phone for same application." SECLVL=" " TYPE1="*CHAR" LEN1="4" DEC1="0"                                        />
+<MSG MSGID="USR0310" SEVERITY="20" DATACOUNT="3" TEXT="&amp;1# used-A#&amp;2 date &amp;3" SECLVL=" " TYPE1="*CHAR" LEN1="4" DEC1="0" TYPE2="*DEC" LEN2="9" DEC2="0" TYPE3="*DEC" LEN3="6" DEC3="0"      />
+<MSG MSGID="USR0311" SEVERITY="20" DATACOUNT="0" TEXT="A remote host refused an attempted connect operation." SECLVL=" "                                                                                />
+<MSG MSGID="USR0312" SEVERITY="20" DATACOUNT="0" TEXT="There was no data to receive." SECLVL=" "               />
+<MSG MSGID="USR0313" SEVERITY="20" DATACOUNT="1" TEXT="Phone used on A#&amp;1" SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0"                                                                                />
+<MSG MSGID="USR0314" SEVERITY="20" DATACOUNT="7" TEXT="****PVR SUMMARY &amp;1 &amp;2 RES: &amp;3 BUS: &amp;4 REF: AC=&amp;5 RJ=&amp;6 VF=&amp;7" SECLVL=" " TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0" TYPE3="*CHAR" LEN3="3" DEC3="0" TYPE4="*CHAR" LEN4="3" DEC4="0" TYPE5="*DEC" LEN5="3" DEC5="0" TYPE6="*DEC" LEN6="3" DEC6="0" TYPE7="*DEC" LEN7="2" DEC7="0"    />
+<MSG MSGID="USR0315" SEVERITY="20" DATACOUNT="4" TEXT="REF=&amp;1 &amp;2 &amp;3 &amp;4" SECLVL=" " TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="25" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0" TYPE4="*DEC" LEN4="6" DEC4="0"                                                              />
+<MSG MSGID="USR0316" SEVERITY="20" DATACOUNT="0" TEXT="CR: Assurant Issues not found." SECLVL=" "              />
+<MSG MSGID="USR0317" SEVERITY="20" DATACOUNT="0" TEXT="CR: Assurant Issues already exists." SECLVL=" "         />
+<MSG MSGID="USR0318" SEVERITY="20" DATACOUNT="0" TEXT="CR: Assurant Cancels not found." SECLVL=" "             />
+<MSG MSGID="USR0319" SEVERITY="20" DATACOUNT="0" TEXT="CR: Assurant Cancels already exists." SECLVL=" "        />
+<MSG MSGID="USR0320" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Certif not found." SECLVL=" "          />
+<MSG MSGID="USR0321" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Certif already exists." SECLVL=" "     />
+<MSG MSGID="USR0323" SEVERITY="20" DATACOUNT="0" TEXT="Credit Account Number Required" SECLVL=" "              />
+<MSG MSGID="USR0324" SEVERITY="20" DATACOUNT="0" TEXT="Payment Amount Required" SECLVL=" "                     />
+<MSG MSGID="USR0327" SEVERITY="20" DATACOUNT="0" TEXT="Payment Option Required" SECLVL=" "                     />
+<MSG MSGID="USR0328" SEVERITY="20" DATACOUNT="0" TEXT="Approval # Required" SECLVL=" "                         />
+<MSG MSGID="USR0329" SEVERITY="20" DATACOUNT="4" TEXT="IVR-Bal Inq on &amp;1 &amp;2. Payoff$=&amp;3 ANI=&amp;4" SECLVL=" " TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0" TYPE3="*DEC" LEN3="9" DEC3="2" TYPE4="*DEC" LEN4="10" DEC4="0"                                          />
+<MSG MSGID="USR0330" SEVERITY="20" DATACOUNT="0" TEXT="Down Payment More Than Product" SECLVL=" "              />
+<MSG MSGID="USR0331" SEVERITY="20" DATACOUNT="0" TEXT="Down Payment More Than Current Invoice Total" SECLVL=" "                                                                                         />
+<MSG MSGID="USR0334" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Edits not found." SECLVL=" "           />
+<MSG MSGID="USR0335" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Ins Edits already exists." SECLVL=" "      />
+<MSG MSGID="USR0336" SEVERITY="20" DATACOUNT="0" TEXT="CA: Requirement Codes not found." SECLVL=" "            />
+<MSG MSGID="USR0337" SEVERITY="20" DATACOUNT="0" TEXT="CA: Requirement Codes already exists." SECLVL=" "       />
+<MSG MSGID="USR0338" SEVERITY="20" DATACOUNT="0" TEXT="Cannot Change Company to OFC for R/C Type Appl" SECLVL=" "                                                                                       />
+<MSG MSGID="USR0339" SEVERITY="20" DATACOUNT="0" TEXT="CA: Summary Structure not found." SECLVL=" "            />
+<MSG MSGID="USR0340" SEVERITY="20" DATACOUNT="0" TEXT="CA: Summary Structure already exists." SECLVL=" "       />
+<MSG MSGID="USR0341" SEVERITY="20" DATACOUNT="0" TEXT="No Payment Required on Account Without a Balance" SECLVL=" "                                                                                     />
+<MSG MSGID="USR0342" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Extnsn not found." SECLVL=" "         />
+<MSG MSGID="USR0343" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Extnsn already exists." SECLVL=" "    />
+<MSG MSGID="USR0344" SEVERITY="20" DATACOUNT="0" TEXT="CR: Bureau Master-Extnsn not found." SECLVL=" "         />
+<MSG MSGID="USR0345" SEVERITY="20" DATACOUNT="0" TEXT="CR: Bureau Master-Extnsn already exists." SECLVL=" "    />
+<MSG MSGID="USR0346" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Vehicle Used not found." SECLVL=" "           />
+<MSG MSGID="USR0347" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Vehicle Used already exists." SECLVL=" "      />
+<MSG MSGID="USR0348" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Checks not found." SECLVL=" "                 />
+<MSG MSGID="USR0349" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Checks already exists." SECLVL=" "            />
+<MSG MSGID="USR0350" SEVERITY="20" DATACOUNT="0" TEXT="Bank Reference # in Error" SECLVL=" "                   />
+<MSG MSGID="USR0351" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Customer Name not found." SECLVL=" "          />
+<MSG MSGID="USR0352" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Customer Name already exists." SECLVL=" "     />
+<MSG MSGID="USR0353" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Reason Codes not found." SECLVL=" "           />
+<MSG MSGID="USR0354" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Reason Codes already exists." SECLVL=" "      />
+<MSG MSGID="USR0355" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Notes not found." SECLVL=" "                  />
+<MSG MSGID="USR0356" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Notes already exists." SECLVL=" "             />
+<MSG MSGID="USR0357" SEVERITY="20" DATACOUNT="0" TEXT="License Verification Required" SECLVL=" "               />
+<MSG MSGID="USR0358" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Notification not found." SECLVL=" "           />
+<MSG MSGID="USR0359" SEVERITY="20" DATACOUNT="0" TEXT="CR: Fraud-Notification already exists." SECLVL=" "      />
+<MSG MSGID="USR0360" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Mand not found." SECLVL=" "           />
+<MSG MSGID="USR0361" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Mand already exists." SECLVL=" "      />
+<MSG MSGID="USR0362" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Man Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0363" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Man Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0364" SEVERITY="20" DATACOUNT="0" TEXT="CA: Cash Option Control not found." SECLVL=" "          />
+<MSG MSGID="USR0365" SEVERITY="20" DATACOUNT="0" TEXT="CA: Cash Option Control already exists." SECLVL=" "     />
+<MSG MSGID="USR0366" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct PreMand not found." SECLVL=" "        />
+<MSG MSGID="USR0367" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct PreMand already exists." SECLVL=" "   />
+<MSG MSGID="USR0368" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct PreMan not found." SECLVL=" "         />
+<MSG MSGID="USR0369" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct PreMan already exists." SECLVL=" "    />
+<MSG MSGID="USR0370" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal CLS Accounts not found." SECLVL=" "           />
+<MSG MSGID="USR0371" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal CLS Accounts already exists." SECLVL=" "      />
+<MSG MSGID="USR0372" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Add Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0373" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct Add Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0374" SEVERITY="20" DATACOUNT="1" TEXT="Invalid SSN &amp;1" SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0"                                                                                    />
+<MSG MSGID="USR0375" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Actions not found." SECLVL=" "                />
+<MSG MSGID="USR0376" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Actions already exists." SECLVL=" "           />
+<MSG MSGID="USR0377" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Groups not found." SECLVL=" "                 />
+<MSG MSGID="USR0378" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Groups already exists." SECLVL=" "            />
+<MSG MSGID="USR0379" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Potentials not found." SECLVL=" "             />
+<MSG MSGID="USR0380" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Potentials already exists." SECLVL=" "        />
+<MSG MSGID="USR0381" SEVERITY="20" DATACOUNT="1" TEXT="Account Being Worked by &amp;1" SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                      />
+<MSG MSGID="USR0382" SEVERITY="20" DATACOUNT="0" TEXT="Range of Score Error" SECLVL=" "                        />
+<MSG MSGID="USR0383" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Account Notes not found." SECLVL=" "          />
+<MSG MSGID="USR0384" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Account Notes already exists." SECLVL=" "     />
+<MSG MSGID="USR0385" SEVERITY="20" DATACOUNT="0" TEXT="Employer Required" SECLVL=" "                           />
+<MSG MSGID="USR0386" SEVERITY="20" DATACOUNT="0" TEXT="Empl Supr Required" SECLVL=" "                          />
+<MSG MSGID="USR0387" SEVERITY="20" DATACOUNT="0" TEXT="Payment Method Required" SECLVL=" "                     />
+<MSG MSGID="USR0388" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Potential Audit not found." SECLVL=" "        />
+<MSG MSGID="USR0389" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Potential Audit already exists." SECLVL=" "   />
+<MSG MSGID="USR0390" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Daily Summary not found." SECLVL=" "          />
+<MSG MSGID="USR0391" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Daily Summary already exists." SECLVL=" "     />
+<MSG MSGID="USR0392" SEVERITY="20" DATACOUNT="0" TEXT="Lower Seq than Cur Action - Enter to Continue" SECLVL=" "                                                                                        />
+<MSG MSGID="USR0393" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Summary Resolve not found." SECLVL=" "        />
+<MSG MSGID="USR0394" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal Summary Resolve already exists." SECLVL=" "   />
+<MSG MSGID="USR0395" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Requirements not found." SECLVL=" "         />
+<MSG MSGID="USR0396" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Requirements already exists." SECLVL=" "    />
+<MSG MSGID="USR0397" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Min Levels not found." SECLVL=" "           />
+<MSG MSGID="USR0398" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Min Levels already exists." SECLVL=" "      />
+<MSG MSGID="USR0399" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Req Applied not found." SECLVL=" "          />
+<MSG MSGID="USR0400" SEVERITY="20" DATACOUNT="0" TEXT="CA: Company Req Applied already exists." SECLVL=" "     />
+<MSG MSGID="USR0401" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Dtl Reqrmnts not found." SECLVL=" "          />
+<MSG MSGID="USR0402" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Dtl Reqrmnts already exists." SECLVL=" "     />
+<MSG MSGID="USR0403" SEVERITY="20" DATACOUNT="0" TEXT="Not All of the Requirements have been filled" SECLVL=" "                                                                                         />
+<MSG MSGID="USR0404" SEVERITY="20" DATACOUNT="0" TEXT="First pmt date must be at least 10 days in the future." SECLVL=" "                                                                               />
+<MSG MSGID="USR0405" SEVERITY="20" DATACOUNT="0" TEXT="Application In Wrong Status for Appealed" SECLVL=" "    />
+<MSG MSGID="USR0406" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct - Worthless not found." SECLVL=" "        />
+<MSG MSGID="USR0407" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct - Worthless already exists." SECLVL=" "   />
+<MSG MSGID="USR0408" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal CLS Maintenance not found." SECLVL=" "        />
+<MSG MSGID="USR0409" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal CLS Maintenance already exists." SECLVL=" "   />
+<MSG MSGID="USR0410" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal CLS Transaction not found." SECLVL=" "        />
+<MSG MSGID="USR0411" SEVERITY="20" DATACOUNT="0" TEXT="CR: Legal CLS Transaction already exists." SECLVL=" "   />
+<MSG MSGID="USR0412" SEVERITY="20" DATACOUNT="0" TEXT="CA: Appeal Decisions not found." SECLVL=" "             />
+<MSG MSGID="USR0413" SEVERITY="20" DATACOUNT="0" TEXT="CA: Appeal Decisions already exists." SECLVL=" "        />
+<MSG MSGID="USR0414" SEVERITY="20" DATACOUNT="0" TEXT="CA: Review Header not found." SECLVL=" "                />
+<MSG MSGID="USR0415" SEVERITY="20" DATACOUNT="0" TEXT="CA: Review Header already exists." SECLVL=" "           />
+<MSG MSGID="USR0416" SEVERITY="20" DATACOUNT="0" TEXT="CA: Review Details not found." SECLVL=" "               />
+<MSG MSGID="USR0417" SEVERITY="20" DATACOUNT="0" TEXT="CA: Review Details already exists." SECLVL=" "          />
+<MSG MSGID="USR0418" SEVERITY="20" DATACOUNT="0" TEXT="CA: Process Options not found." SECLVL=" "              />
+<MSG MSGID="USR0419" SEVERITY="20" DATACOUNT="0" TEXT="CA: Process Options already exists." SECLVL=" "         />
+<MSG MSGID="USR0420" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Account Trans not found." SECLVL=" "         />
+<MSG MSGID="USR0421" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Account Trans already exists." SECLVL=" "    />
+<MSG MSGID="USR0422" SEVERITY="20" DATACOUNT="0" TEXT="# Audit Stamp not found." SECLVL=" "                    />
+<MSG MSGID="USR0423" SEVERITY="20" DATACOUNT="0" TEXT="# Audit Stamp already exists." SECLVL=" "               />
+<MSG MSGID="USR0424" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Drv/ID Card #" SECLVL=" "                       />
+<MSG MSGID="USR0425" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Account Audit not found." SECLVL=" "         />
+<MSG MSGID="USR0426" SEVERITY="20" DATACOUNT="0" TEXT="CR: Credit Account Audit already exists." SECLVL=" "    />
+<MSG MSGID="USR0427" SEVERITY="20" DATACOUNT="0" TEXT="CR: Inhouse Lockbox not found." SECLVL=" "              />
+<MSG MSGID="USR0428" SEVERITY="20" DATACOUNT="0" TEXT="CR: Inhouse Lockbox already exists." SECLVL=" "         />
+<MSG MSGID="USR0429" SEVERITY="20" DATACOUNT="0" TEXT="Inhouse Lockbox not found." SECLVL=" "                  />
+<MSG MSGID="USR0430" SEVERITY="20" DATACOUNT="0" TEXT="Inhouse Lockbox already exists." SECLVL=" "             />
+<MSG MSGID="USR0431" SEVERITY="20" DATACOUNT="0" TEXT="CR: Inhouse Lockbox not found." SECLVL=" "              />
+<MSG MSGID="USR0432" SEVERITY="20" DATACOUNT="0" TEXT="CR: Inhouse Lockbox already exists." SECLVL=" "         />
+<MSG MSGID="USR0433" SEVERITY="20" DATACOUNT="0" TEXT="Posting Can't Be Completed." SECLVL=" "                 />
+<MSG MSGID="USR0434" SEVERITY="20" DATACOUNT="0" TEXT="CR: Acct ME Summ Totals not found." SECLVL=" "          />
+<MSG MSGID="USR0435" SEVERITY="20" DATACOUNT="0" TEXT="CR: Acct ME Summ Totals already exists." SECLVL=" "     />
+<MSG MSGID="USR0436" SEVERITY="20" DATACOUNT="0" TEXT="Last Batch Not Posted" SECLVL=" "                       />
+<MSG MSGID="USR0437" SEVERITY="20" DATACOUNT="0" TEXT="User Canceled Posting" SECLVL=" "                       />
+<MSG MSGID="USR0438" SEVERITY="20" DATACOUNT="1" TEXT="Total payments created &amp;1" SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="2"                                                                         />
+<MSG MSGID="USR0439" SEVERITY="20" DATACOUNT="1" TEXT="Total Distributed amount &amp;1 &gt; than original payment" SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="2"                                            />
+<MSG MSGID="USR0440" SEVERITY="20" DATACOUNT="2" TEXT="Account &amp;1-&amp;2 is closed" SECLVL=" " TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0"                                       />
+<MSG MSGID="USR0441" SEVERITY="20" DATACOUNT="2" TEXT="Balance is zero" SECLVL=" " TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0"                                                       />
+<MSG MSGID="USR0442" SEVERITY="20" DATACOUNT="2" TEXT="Amount Doesn't = NPO" SECLVL=" " TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0"                                                  />
+<MSG MSGID="USR0443" SEVERITY="20" DATACOUNT="2" TEXT="Amount &gt; Total Payment" SECLVL=" " TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0"                                             />
+<MSG MSGID="USR0444" SEVERITY="20" DATACOUNT="5" TEXT="Duplicate Payment" SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="0" TYPE3="*DEC" LEN3="2" DEC3="0" TYPE4="*DEC" LEN4="10" DEC4="0" TYPE5="*DEC" LEN5="2" DEC5="0"                                                />
+<MSG MSGID="USR0445" SEVERITY="20" DATACOUNT="0" TEXT="Check Payment Not Allowed - Has Returned Checks" SECLVL=" "                                                                                      />
+<MSG MSGID="USR0446" SEVERITY="20" DATACOUNT="0" TEXT="Check Not Accepted" SECLVL=" "                          />
+<MSG MSGID="USR0447" SEVERITY="20" DATACOUNT="0" TEXT="Credit Card Not Accepted" SECLVL=" "                    />
+<MSG MSGID="USR0448" SEVERITY="20" DATACOUNT="0" TEXT="System Error - Contact MIS" SECLVL=" "                  />
+<MSG MSGID="USR0449" SEVERITY="20" DATACOUNT="1" TEXT="Phone # &amp;1 On Employee File" SECLVL=" " TYPE1="*CHAR" LEN1="15" DEC1="0"                                                                     />
+<MSG MSGID="USR0450" SEVERITY="20" DATACOUNT="1" TEXT="Account Number Is Not A Valid Revoling Account" SECLVL=" " TYPE1="*DEC" LEN1="12" DEC1="0"                                                       />
+<MSG MSGID="USR0451" SEVERITY="20" DATACOUNT="0" TEXT="Transaction File Empty" SECLVL=" "                      />
+<MSG MSGID="USR0452" SEVERITY="20" DATACOUNT="0" TEXT="Account's Balance Is Zero. Confirm Change" SECLVL=" "   />
+<MSG MSGID="USR0453" SEVERITY="20" DATACOUNT="0" TEXT="Account Mismatch Type. Confirm Change." SECLVL=" "      />
+<MSG MSGID="USR0454" SEVERITY="20" DATACOUNT="0" TEXT="Credit Score Less Than COP Minimum" SECLVL=" "          />
+<MSG MSGID="USR0455" SEVERITY="20" DATACOUNT="0" TEXT="Payment not equal NPO" SECLVL=" "                       />
+<MSG MSGID="USR0456" SEVERITY="20" DATACOUNT="0" TEXT="Pin Number Required" SECLVL=" "                         />
+<MSG MSGID="USR0457" SEVERITY="20" DATACOUNT="0" TEXT="Cust/Acct Mismatch" SECLVL=" "                          />
+<MSG MSGID="USR0458" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct Reage Data not found." SECLVL=" "         />
+<MSG MSGID="USR0459" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct Reage Data already exists." SECLVL=" "    />
+<MSG MSGID="USR0460" SEVERITY="20" DATACOUNT="0" TEXT="Conn Credit Payment File not found." SECLVL=" "         />
+<MSG MSGID="USR0461" SEVERITY="20" DATACOUNT="0" TEXT="Conn Credit Payment File already exists." SECLVL=" "    />
+<MSG MSGID="USR0462" SEVERITY="20" DATACOUNT="0" TEXT="Application Will Be Submitted For Review" SECLVL=" "    />
+<MSG MSGID="USR0463" SEVERITY="20" DATACOUNT="0" TEXT="CA: Appeal Down &#37; Float not found." SECLVL=" "      />
+<MSG MSGID="USR0464" SEVERITY="20" DATACOUNT="0" TEXT="CA: Appeal Down &#37; Float already exists." SECLVL=" " />
+<MSG MSGID="USR0465" SEVERITY="20" DATACOUNT="0" TEXT="Down Payment not Acceptable" SECLVL=" "                 />
+<MSG MSGID="USR0466" SEVERITY="20" DATACOUNT="0" TEXT="Application Failed Bureau Auto-Approval" SECLVL=" "     />
+<MSG MSGID="USR0467" SEVERITY="20" DATACOUNT="0" TEXT="CA: Score Limits not found." SECLVL=" "                 />
+<MSG MSGID="USR0468" SEVERITY="20" DATACOUNT="0" TEXT="CA: Score Limits already exists." SECLVL=" "            />
+<MSG MSGID="USR0469" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Comm Rate JobCds not found." SECLVL=" "         />
+<MSG MSGID="USR0470" SEVERITY="20" DATACOUNT="0" TEXT="CR: Ins Comm Rate JobCds already exists." SECLVL=" "    />
+<MSG MSGID="USR0471" SEVERITY="20" DATACOUNT="0" TEXT="Paid-Off Indicator Must be Set to Ok Contract" SECLVL=" "                                                                                        />
+<MSG MSGID="USR0472" SEVERITY="20" DATACOUNT="0" TEXT="Valid Home Phone Required" SECLVL=" "                   />
+<MSG MSGID="USR0473" SEVERITY="20" DATACOUNT="0" TEXT="Valid Work Phone Required" SECLVL=" "                   />
+<MSG MSGID="USR0474" SEVERITY="20" DATACOUNT="0" TEXT="Valid Zip Code Required" SECLVL=" "                     />
+<MSG MSGID="USR0475" SEVERITY="20" DATACOUNT="0" TEXT="Valid Date of Birth Req" SECLVL=" "                     />
+<MSG MSGID="USR0476" SEVERITY="20" DATACOUNT="0" TEXT="Social Security # Req" SECLVL=" "                       />
+<MSG MSGID="USR0477" SEVERITY="20" DATACOUNT="0" TEXT="Drive Lic State Req" SECLVL=" "                         />
+<MSG MSGID="USR0478" SEVERITY="20" DATACOUNT="0" TEXT="Driver License # Req" SECLVL=" "                        />
+<MSG MSGID="USR0479" SEVERITY="20" DATACOUNT="0" TEXT="Valid Residence Tp Req" SECLVL=" "                      />
+<MSG MSGID="USR0480" SEVERITY="20" DATACOUNT="0" TEXT="Valid Time at Residense Required" SECLVL=" "            />
+<MSG MSGID="USR0481" SEVERITY="20" DATACOUNT="0" TEXT="Valid Phone Listed Name as Required" SECLVL=" "         />
+<MSG MSGID="USR0482" SEVERITY="20" DATACOUNT="0" TEXT="Valid Employed at Req" SECLVL=" "                       />
+<MSG MSGID="USR0483" SEVERITY="20" DATACOUNT="0" TEXT="Valid Employed Time Req" SECLVL=" "                     />
+<MSG MSGID="USR0484" SEVERITY="20" DATACOUNT="0" TEXT="Valid Income Required" SECLVL=" "                       />
+<MSG MSGID="USR0485" SEVERITY="20" DATACOUNT="0" TEXT="Valid Pay Freq Req" SECLVL=" "                          />
+<MSG MSGID="USR0486" SEVERITY="20" DATACOUNT="0" TEXT="Valid Ref Name Req" SECLVL=" "                          />
+<MSG MSGID="USR0487" SEVERITY="20" DATACOUNT="0" TEXT="Valid Ref Address Req" SECLVL=" "                       />
+<MSG MSGID="USR0488" SEVERITY="20" DATACOUNT="0" TEXT="Valid Ref Zip Required" SECLVL=" "                      />
+<MSG MSGID="USR0489" SEVERITY="20" DATACOUNT="0" TEXT="Valid Ref Phone # Req" SECLVL=" "                       />
+<MSG MSGID="USR0490" SEVERITY="20" DATACOUNT="0" TEXT="Valid Ref Type Req" SECLVL=" "                          />
+<MSG MSGID="USR0491" SEVERITY="20" DATACOUNT="0" TEXT="CU: Employment Address not found." SECLVL=" "           />
+<MSG MSGID="USR0492" SEVERITY="20" DATACOUNT="0" TEXT="CU: Employment Address already exists." SECLVL=" "      />
+<MSG MSGID="USR0493" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - APS not found." SECLVL=" "         />
+<MSG MSGID="USR0494" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls - APS already exists." SECLVL=" "    />
+<MSG MSGID="USR0495" SEVERITY="20" DATACOUNT="0" TEXT="Does Not Meet Minimum Age" SECLVL=" "                   />
+<MSG MSGID="USR0496" SEVERITY="20" DATACOUNT="3" TEXT="&amp;1 &amp;2 &amp;3" SECLVL=" " TYPE1="*CHAR" LEN1="25" DEC1="0" TYPE2="*CHAR" LEN2="25" DEC2="0" TYPE3="*CHAR" LEN3="25" DEC3="0"              />
+<MSG MSGID="USR0497" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 &amp;2" SECLVL=" " TYPE1="*CHAR" LEN1="25" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="0"                                                       />
+<MSG MSGID="USR0498" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 &amp;2" SECLVL=" " TYPE1="*CHAR" LEN1="25" DEC1="0" TYPE2="*CHAR" LEN2="25" DEC2="0"                                                      />
+<MSG MSGID="USR0499" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Extension not found." SECLVL=" "             />
+<MSG MSGID="USR0500" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Extension already exists." SECLVL=" "        />
+<MSG MSGID="USR0501" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Adt Trn Summ not found." SECLVL=" "          />
+<MSG MSGID="USR0502" SEVERITY="20" DATACOUNT="0" TEXT="CA: Header Adt Trn Summ already exists." SECLVL=" "     />
+<MSG MSGID="USR0503" SEVERITY="20" DATACOUNT="0" TEXT="Verify Customer and enter Y" SECLVL=" "                 />
+<MSG MSGID="USR0504" SEVERITY="20" DATACOUNT="0" TEXT="CA: External Crd Cmp Mstr not found." SECLVL=" "        />
+<MSG MSGID="USR0505" SEVERITY="20" DATACOUNT="0" TEXT="CA: External Crd Cmp Mstr already exists." SECLVL=" "   />
+<MSG MSGID="USR0506" SEVERITY="20" DATACOUNT="0" TEXT="CU: External Credit Mstr not found." SECLVL=" "         />
+<MSG MSGID="USR0507" SEVERITY="20" DATACOUNT="0" TEXT="CU: External Credit Mstr already exists." SECLVL=" "    />
+<MSG MSGID="USR0508" SEVERITY="20" DATACOUNT="0" TEXT="Zip Code Required" SECLVL=" "                           />
+<MSG MSGID="USR0509" SEVERITY="20" DATACOUNT="0" TEXT="Account Number In Error" SECLVL=" "                     />
+<MSG MSGID="USR0510" SEVERITY="20" DATACOUNT="0" TEXT="CU: External Credit Trans not found." SECLVL=" "        />
+<MSG MSGID="USR0511" SEVERITY="20" DATACOUNT="0" TEXT="CU: External Credit Trans already exists." SECLVL=" "   />
+<MSG MSGID="USR0512" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Loc Ctl not found." SECLVL=" "          />
+<MSG MSGID="USR0513" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Loc Ctl already exists." SECLVL=" "     />
+<MSG MSGID="USR0514" SEVERITY="20" DATACOUNT="0" TEXT="Merchant ID Required" SECLVL=" "                        />
+<MSG MSGID="USR0515" SEVERITY="20" DATACOUNT="0" TEXT="User ID &amp; Password Required" SECLVL=" "             />
+<MSG MSGID="USR0516" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Plan Ctl not found." SECLVL=" "         />
+<MSG MSGID="USR0517" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Plan Ctl already exists." SECLVL=" "    />
+<MSG MSGID="USR0518" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Msg Mstr not found." SECLVL=" "         />
+<MSG MSGID="USR0519" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Msg Mstr already exists." SECLVL=" "    />
+<MSG MSGID="USR0520" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Msg Info not found." SECLVL=" "         />
+<MSG MSGID="USR0521" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Crd Cmp Msg Info already exists." SECLVL=" "    />
+<MSG MSGID="USR0522" SEVERITY="20" DATACOUNT="0" TEXT="CR: Company Other Data not found." SECLVL=" "           />
+<MSG MSGID="USR0523" SEVERITY="20" DATACOUNT="0" TEXT="CR: Company Other Data already exists." SECLVL=" "      />
+<MSG MSGID="USR0524" SEVERITY="20" DATACOUNT="0" TEXT="SY: Notepads not found." SECLVL=" "                     />
+<MSG MSGID="USR0525" SEVERITY="20" DATACOUNT="0" TEXT="SY: Notepads already exists." SECLVL=" "                />
+<MSG MSGID="USR0526" SEVERITY="20" DATACOUNT="0" TEXT="CA: Income Levels not found." SECLVL=" "                />
+<MSG MSGID="USR0527" SEVERITY="20" DATACOUNT="0" TEXT="CA: Income Levels already exists." SECLVL=" "           />
+<MSG MSGID="USR0528" SEVERITY="20" DATACOUNT="0" TEXT="CA: Score Limits Extn not found." SECLVL=" "            />
+<MSG MSGID="USR0529" SEVERITY="20" DATACOUNT="0" TEXT="CA: Score Limits Extn already exists." SECLVL=" "       />
+<MSG MSGID="USR0530" SEVERITY="20" DATACOUNT="0" TEXT="Continue Answer Required" SECLVL=" "                    />
+<MSG MSGID="USR0531" SEVERITY="20" DATACOUNT="0" TEXT="Driver/ID # has Expired" SECLVL=" "                     />
+<MSG MSGID="USR0532" SEVERITY="20" DATACOUNT="0" TEXT="Credit Card has Expired" SECLVL=" "                     />
+<MSG MSGID="USR0533" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls-MIS not found." SECLVL=" "           />
+<MSG MSGID="USR0534" SEVERITY="20" DATACOUNT="0" TEXT="SY: External Calls-MIS already exists." SECLVL=" "      />
+<MSG MSGID="USR0535" SEVERITY="20" DATACOUNT="0" TEXT="Press 'Y' To Confirm Settlement Creation" SECLVL=" "    />
+<MSG MSGID="USR0536" SEVERITY="20" DATACOUNT="1" TEXT="ECCM Key Number Required" SECLVL=" " TYPE1="*CHAR" LEN1="9" DEC1="0"                                                                             />
+<MSG MSGID="USR0537" SEVERITY="20" DATACOUNT="0" TEXT="Customer Not Found" SECLVL=" "                          />
+<MSG MSGID="USR0538" SEVERITY="20" DATACOUNT="0" TEXT="No GE Customer Application on System" SECLVL=" "        />
+<MSG MSGID="USR0539" SEVERITY="20" DATACOUNT="0" TEXT="Valid Credit Bank Req" SECLVL=" "                       />
+<MSG MSGID="USR0540" SEVERITY="20" DATACOUNT="0" TEXT="Valid Crd Crd Type Req" SECLVL=" "                      />
+<MSG MSGID="USR0541" SEVERITY="20" DATACOUNT="0" TEXT="Valid Crd Crd Dates Req" SECLVL=" "                     />
+<MSG MSGID="USR0542" SEVERITY="20" DATACOUNT="0" TEXT="GE Money Account # Wrong" SECLVL=" "                    />
+<MSG MSGID="USR0543" SEVERITY="20" DATACOUNT="0" TEXT="ZIP CODE does not match" SECLVL=" "                     />
+<MSG MSGID="USR0544" SEVERITY="20" DATACOUNT="0" TEXT="All Payments for the Invoice have been settled." SECLVL=" "                                                                                      />
+<MSG MSGID="USR0545" SEVERITY="20" DATACOUNT="0" TEXT="CU: Ext Crd MTD Summary not found." SECLVL=" "          />
+<MSG MSGID="USR0546" SEVERITY="20" DATACOUNT="0" TEXT="CU: Ext Crd MTD Summary already exists." SECLVL=" "     />
+<MSG MSGID="USR0547" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct YYMM Totals not found." SECLVL=" "        />
+<MSG MSGID="USR0548" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct YYMM Totals already exists." SECLVL=" "   />
+<MSG MSGID="USR0549" SEVERITY="20" DATACOUNT="0" TEXT="CA: COP Counter Offers not found." SECLVL=" "           />
+<MSG MSGID="USR0550" SEVERITY="20" DATACOUNT="0" TEXT="CA: COP Counter Offers already exists." SECLVL=" "      />
+<MSG MSGID="USR0551" SEVERITY="20" DATACOUNT="1" TEXT="Minimum Charge of &amp;1 Required" SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="2"                                                                     />
+<MSG MSGID="USR0552" SEVERITY="20" DATACOUNT="1" TEXT="Minimum Payment of &amp;1 Required" SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="2"                                                                    />
+<MSG MSGID="USR0553" SEVERITY="20" DATACOUNT="0" TEXT="COP ID Control not found." SECLVL=" "                   />
+<MSG MSGID="USR0554" SEVERITY="20" DATACOUNT="0" TEXT="CA: COP ID Control already exists." SECLVL=" "          />
+<MSG MSGID="USR0555" SEVERITY="20" DATACOUNT="0" TEXT="Credit Amount is greater then amount settled. Can not create Settlement." SECLVL=" "                                                             />
+<MSG MSGID="USR0556" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct Reage 12MM not found." SECLVL=" "         />
+<MSG MSGID="USR0557" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct Reage 12MM already exists." SECLVL=" "    />
+<MSG MSGID="USR0558" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct CB Score not found." SECLVL=" "           />
+<MSG MSGID="USR0559" SEVERITY="20" DATACOUNT="0" TEXT="CR: Cust Acct CB Score already exists." SECLVL=" "      />
+<MSG MSGID="USR0560" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Account not found." SECLVL=" "             />
+<MSG MSGID="USR0561" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Account already exists." SECLVL=" "        />
+<MSG MSGID="USR0562" SEVERITY="20" DATACOUNT="0" TEXT="CA: Duration Control not found." SECLVL=" "             />
+<MSG MSGID="USR0563" SEVERITY="20" DATACOUNT="0" TEXT="CA: Duration Control already exists." SECLVL=" "        />
+<MSG MSGID="USR0564" SEVERITY="20" DATACOUNT="0" TEXT="Product Sales Class NF" SECLVL=" "                      />
+<MSG MSGID="USR0565" SEVERITY="20" DATACOUNT="0" TEXT="CU: Ext Credit Settlement not found." SECLVL=" "        />
+<MSG MSGID="USR0566" SEVERITY="20" DATACOUNT="0" TEXT="CU: Ext Credit Settlement already exists." SECLVL=" "   />
+<MSG MSGID="USR0567" SEVERITY="20" DATACOUNT="0" TEXT="CA: Risk/Duration Ctl not found." SECLVL=" "            />
+<MSG MSGID="USR0568" SEVERITY="20" DATACOUNT="0" TEXT="CA: Risk/Duration Ctl already exists." SECLVL=" "       />
+<MSG MSGID="USR0569" SEVERITY="20" DATACOUNT="0" TEXT="COP Mo's cannot be greater than Max Mo's" SECLVL=" "    />
+<MSG MSGID="USR0570" SEVERITY="20" DATACOUNT="0" TEXT="High Risk must be GT 5" SECLVL=" "                      />
+<MSG MSGID="USR0571" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Credit Loc XRef not found." SECLVL=" "          />
+<MSG MSGID="USR0572" SEVERITY="20" DATACOUNT="0" TEXT="CA: Ext Credit Loc XRef already exists." SECLVL=" "     />
+<MSG MSGID="USR0573" SEVERITY="20" DATACOUNT="0" TEXT="Valid Times Required" SECLVL=" "                        />
+<MSG MSGID="USR0574" SEVERITY="20" DATACOUNT="0" TEXT="CA: Daily Process Summary not found." SECLVL=" "        />
+<MSG MSGID="USR0575" SEVERITY="20" DATACOUNT="0" TEXT="CA: Daily Process Summary already exists." SECLVL=" "   />
+<MSG MSGID="USR0576" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct MDPD not found." SECLVL=" "           />
+<MSG MSGID="USR0577" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct MDPD already exists." SECLVL=" "      />
+<MSG MSGID="USR0578" SEVERITY="20" DATACOUNT="0" TEXT="ZZ: Application Sts Summ not found." SECLVL=" "         />
+<MSG MSGID="USR0579" SEVERITY="20" DATACOUNT="0" TEXT="ZZ: Application Sts Summ already exists." SECLVL=" "    />
+<MSG MSGID="USR0580" SEVERITY="20" DATACOUNT="0" TEXT="CA: Max Trm Ctl By $ not found." SECLVL=" "             />
+<MSG MSGID="USR0581" SEVERITY="20" DATACOUNT="0" TEXT="CA: Max Trm Ctl By $ already exists." SECLVL=" "        />
+<MSG MSGID="USR0582" SEVERITY="20" DATACOUNT="0" TEXT="Value Entered Incorrect" SECLVL=" "                     />
+<MSG MSGID="USR0583" SEVERITY="20" DATACOUNT="2" TEXT="Income Amount and Pay Frequencey must both be entered." SECLVL=" " TYPE1="*CHAR" LEN1="1" DEC1="0" TYPE2="*DEC" LEN2="7" DEC2="2"                />
+<MSG MSGID="USR0584" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct TDR Ext not found." SECLVL=" "        />
+<MSG MSGID="USR0585" SEVERITY="20" DATACOUNT="0" TEXT="CR: Customer Acct TDR Ext already exists." SECLVL=" "   />
+<MSG MSGID="USR0586" SEVERITY="20" DATACOUNT="0" TEXT="SY: Notes Work Area not found." SECLVL=" "              />
+<MSG MSGID="USR0587" SEVERITY="20" DATACOUNT="0" TEXT="SY: Notes Work Area already exists." SECLVL=" "         />
+<MSG MSGID="USR0588" SEVERITY="20" DATACOUNT="0" TEXT="Account Already Linked to a Different Customer" SECLVL=" "                                                                                       />
+<MSG MSGID="USR0589" SEVERITY="20" DATACOUNT="0" TEXT="Not Approving Enough Monies" SECLVL=" "                 />
+<MSG MSGID="USR0590" SEVERITY="20" DATACOUNT="0" TEXT="Number Required" SECLVL=" "                             />
+<MSG MSGID="USR0591" SEVERITY="20" DATACOUNT="0" TEXT="EMail Address Invalid" SECLVL=" "                       />
+<MSG MSGID="USR0592" SEVERITY="20" DATACOUNT="0" TEXT="CL: CustAcct Collections not found." SECLVL=" "         />
+<MSG MSGID="USR0593" SEVERITY="20" DATACOUNT="0" TEXT="CL: CustAcct Collections already exists." SECLVL=" "    />
+<MSG MSGID="USR0594" SEVERITY="20" DATACOUNT="0" TEXT="CU: Ext Crd Stlmnt Detail not found." SECLVL=" "        />
+<MSG MSGID="USR0595" SEVERITY="20" DATACOUNT="0" TEXT="CU: Ext Crd Stlmnt Detail already exists." SECLVL=" "   />
+<MSG MSGID="USR0596" SEVERITY="20" DATACOUNT="0" TEXT="CL: CustAcct Comments not found." SECLVL=" "            />
+<MSG MSGID="USR0597" SEVERITY="20" DATACOUNT="0" TEXT="CL: CustAcct Comments already exists." SECLVL=" "       />
+<MSG MSGID="USR0598" SEVERITY="20" DATACOUNT="0" TEXT="CL: SW Active Notes not found." SECLVL=" "              />
+<MSG MSGID="USR0599" SEVERITY="20" DATACOUNT="0" TEXT="CL: SW Active Notes already exists." SECLVL=" "         />
+<MSG MSGID="USR0600" SEVERITY="20" DATACOUNT="0" TEXT="CL: SW Active Closures not found." SECLVL=" "           />
+<MSG MSGID="USR0601" SEVERITY="20" DATACOUNT="0" TEXT="CL: SW Active Closures already exists." SECLVL=" "      />
+<MSG MSGID="USR0602" SEVERITY="20" DATACOUNT="0" TEXT="CL: SW Demographic Chgs not found." SECLVL=" "          />
+<MSG MSGID="USR0603" SEVERITY="20" DATACOUNT="0" TEXT="CL: SW Demographic Chgs already exists." SECLVL=" "     />
+<MSG MSGID="USR0604" SEVERITY="20" DATACOUNT="0" TEXT="Account not currently at SW-Active." SECLVL=" "         />
+<MSG MSGID="USR0605" SEVERITY="20" DATACOUNT="0" TEXT="CA: FICO Decisions not found." SECLVL=" "               />
+<MSG MSGID="USR0606" SEVERITY="20" DATACOUNT="0" TEXT="CA: FICO Decisions already exists." SECLVL=" "          />
+<MSG MSGID="USR0607" SEVERITY="20" DATACOUNT="0" TEXT="CA: FICO Decision Ctl not found." SECLVL=" "            />
+<MSG MSGID="USR0608" SEVERITY="20" DATACOUNT="0" TEXT="CA: FICO Decision Ctl already exists." SECLVL=" "       />
+<MSG MSGID="USR0609" SEVERITY="20" DATACOUNT="0" TEXT="CR: WEBPAY Account Master not found." SECLVL=" "        />
+<MSG MSGID="USR0610" SEVERITY="20" DATACOUNT="0" TEXT="CR: WEBPAY Account Master already exists." SECLVL=" "   />
+<MSG MSGID="USR0611" SEVERITY="20" DATACOUNT="0" TEXT="CR: Assurant Coverage Cde not found." SECLVL=" "        />
+<MSG MSGID="USR0612" SEVERITY="20" DATACOUNT="0" TEXT="CR: Assurant Coverage Cde already exists." SECLVL=" "   />
+<MSG MSGID="USR0613" SEVERITY="20" DATACOUNT="0" TEXT="LZ: Location Zip Assoc not found." SECLVL=" "           />
+<MSG MSGID="USR0614" SEVERITY="20" DATACOUNT="0" TEXT="LZ: Location Zip Assoc already exists." SECLVL=" "      />
+<MSG MSGID="USR0615" SEVERITY="20" DATACOUNT="9" TEXT="ZZ:COP(&amp;1) RESULT &amp;2 Res11.9 &amp;3 pvf t &amp;4  pvf M &amp;5 amj res &amp;6 amtj res &amp;7   Base &amp;8  Rev Base &amp;9" SECLVL=" " TYPE1="*DEC" LEN1="3" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="9" TYPE3="*DEC" LEN3="11" DEC3="9" TYPE4="*DEC" LEN4="11" DEC4="9" TYPE5="*DEC" LEN5="11" DEC5="9" TYPE6="*DEC" LEN6="8" DEC6="6" TYPE7="*DEC" LEN7="8" DEC7="6" TYPE8="*DEC" LEN8="10" DEC8="9" TYPE9="*DEC" LEN9="10" DEC9="9"                                                                        />
+<MSG MSGID="USR0616" SEVERITY="20" DATACOUNT="0" TEXT="CA: FICO Decision Loc/Ovr not found." SECLVL=" "        />
+<MSG MSGID="USR0617" SEVERITY="20" DATACOUNT="0" TEXT="CA: FICO Decision Loc/Ovr already exists." SECLVL=" "   />
+<MSG MSGID="USR0780" SEVERITY="20" DATACOUNT="30" TEXT="CR: ChrgOff Related Accts not found." SECLVL="" TYPE1="*CHAR" LEN1="1" DEC1="0" TYPE2="*CHAR" LEN2="1" DEC2="0" TYPE3="*CHAR" LEN3="1" DEC3="0" TYPE4="*CHAR" LEN4="1" DEC4="0" TYPE5="*CHAR" LEN5="1" DEC5="0" TYPE6="*CHAR" LEN6="1" DEC6="0" TYPE7="*CHAR" LEN7="1" DEC7="0" TYPE8="*CHAR" LEN8="1" DEC8="0" TYPE9="*CHAR" LEN9="1" DEC9="0" TYPE10="*CHAR" LEN10="1" DEC10="0" TYPE11="*CHAR" LEN11="1" DEC11="0" TYPE12="*CHAR" LEN12="1" DEC12="0" TYPE13="*CHAR" LEN13="1" DEC13="0" TYPE14="*CHAR" LEN14="1" DEC14="0" TYPE15="*CHAR" LEN15="1" DEC15="0" TYPE16="*CHAR" LEN16="1" DEC16="0" TYPE17="*CHAR" LEN17="1" DEC17="0" TYPE18="*CHAR" LEN18="1" DEC18="0" TYPE19="*CHAR" LEN19="1" DEC19="0" TYPE20="*CHAR" LEN20="1" DEC20="0" TYPE21="*CHAR" LEN21="1" DEC21="0" TYPE22="*CHAR" LEN22="1" DEC22="0" TYPE23="*CHAR" LEN23="1" DEC23="0" TYPE24="*CHAR" LEN24="1" DEC24="0" TYPE25="*CHAR" LEN25="1" DEC25="0" TYPE26="*CHAR" LEN26="1" DEC26="0" TYPE27="*CHAR" LEN27="1" DEC27="0" TYPE28="*CHAR" LEN28="1" DEC28="0" TYPE29="*CHAR" LEN29="1" DEC29="0" TYPE30="*CHAR" LEN30="1" DEC30="0"                                                     />
+<MSG MSGID="USR0781" SEVERITY="20" DATACOUNT="30" TEXT="CR: ChrgOff Related Accts already exists." SECLVL="" TYPE1="*CHAR" LEN1="1" DEC1="0" TYPE2="*CHAR" LEN2="1" DEC2="0" TYPE3="*CHAR" LEN3="1" DEC3="0" TYPE4="*CHAR" LEN4="1" DEC4="0" TYPE5="*CHAR" LEN5="1" DEC5="0" TYPE6="*CHAR" LEN6="1" DEC6="0" TYPE7="*CHAR" LEN7="1" DEC7="0" TYPE8="*CHAR" LEN8="1" DEC8="0" TYPE9="*CHAR" LEN9="1" DEC9="0" TYPE10="*CHAR" LEN10="1" DEC10="0" TYPE11="*CHAR" LEN11="1" DEC11="0" TYPE12="*CHAR" LEN12="1" DEC12="0" TYPE13="*CHAR" LEN13="1" DEC13="0" TYPE14="*CHAR" LEN14="1" DEC14="0" TYPE15="*CHAR" LEN15="1" DEC15="0" TYPE16="*CHAR" LEN16="1" DEC16="0" TYPE17="*CHAR" LEN17="1" DEC17="0" TYPE18="*CHAR" LEN18="1" DEC18="0" TYPE19="*CHAR" LEN19="1" DEC19="0" TYPE20="*CHAR" LEN20="1" DEC20="0" TYPE21="*CHAR" LEN21="1" DEC21="0" TYPE22="*CHAR" LEN22="1" DEC22="0" TYPE23="*CHAR" LEN23="1" DEC23="0" TYPE24="*CHAR" LEN24="1" DEC24="0" TYPE25="*CHAR" LEN25="1" DEC25="0" TYPE26="*CHAR" LEN26="1" DEC26="0" TYPE27="*CHAR" LEN27="1" DEC27="0" TYPE28="*CHAR" LEN28="1" DEC28="0" TYPE29="*CHAR" LEN29="1" DEC29="0" TYPE30="*CHAR" LEN30="1" DEC30="0"                                                />
+<MSG MSGID="USR0782" SEVERITY="20" DATACOUNT="0" TEXT="CR: Accounts For Cust WRK not found." SECLVL=""         />
+<MSG MSGID="USR0783" SEVERITY="20" DATACOUNT="0" TEXT="CR: Accounts For Cust WRK already exists." SECLVL=""    />
+<MSG MSGID="USR0784" SEVERITY="20" DATACOUNT="0" TEXT="CR: ChrgOff Accounts not found." SECLVL=""              />
+<MSG MSGID="USR0785" SEVERITY="20" DATACOUNT="0" TEXT="CR: ChrgOff Accounts already exists." SECLVL=""         />
+<MSG MSGID="USR0786" SEVERITY="20" DATACOUNT="2" TEXT="Full Account must be entered." SECLVL=" " TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0"                                         />
+<MSG MSGID="USR0842" SEVERITY="20" DATACOUNT="0" TEXT="Error found while attempting to create the Letters Flag." SECLVL=" "                                                                             />
+<MSG MSGID="USR0883" SEVERITY="20" DATACOUNT="0" TEXT="CR: Account Amort Schedle not found." SECLVL=""         />
+<MSG MSGID="USR0884" SEVERITY="20" DATACOUNT="0" TEXT="CR: Account Amort Schedle already exists." SECLVL=""    />
+<MSG MSGID="USR0885" SEVERITY="20" DATACOUNT="0" TEXT="CR: Acct. Amort Sch Audit not found." SECLVL=""         />
+<MSG MSGID="USR0886" SEVERITY="20" DATACOUNT="0" TEXT="CR: Acct. Amort Sch Audit already exists." SECLVL=""    />
+<MSG MSGID="USR0887" SEVERITY="20" DATACOUNT="0" TEXT="CR: Deferment Fee Schedle not found." SECLVL=""         />
+<MSG MSGID="USR0888" SEVERITY="20" DATACOUNT="0" TEXT="CR: Deferment Fee Schedle already exists." SECLVL=""    />
+<MSG MSGID="USR0889" SEVERITY="20" DATACOUNT="0" TEXT="CA: Max Term Ctl -STA/AMT not found." SECLVL=""         />
+<MSG MSGID="USR0890" SEVERITY="20" DATACOUNT="0" TEXT="CA: Max Term Ctl -STA/AMT already exists." SECLVL=""    />
+<MSG MSGID="USR0891" SEVERITY="20" DATACOUNT="0" TEXT="CR: Compliant Max Term not found." SECLVL=""            />
+<MSG MSGID="USR0892" SEVERITY="20" DATACOUNT="0" TEXT="CR: Compliant Max Term already exists." SECLVL=""       />
+<MSG MSGID="USR0976" SEVERITY="20" DATACOUNT="0" TEXT="PG: Yes Lease Credit Hdr not found." SECLVL=""          />
+<MSG MSGID="USR0977" SEVERITY="20" DATACOUNT="0" TEXT="PG: Yes Lease Credit Hdr already exists." SECLVL=""     />
+<MSG MSGID="USR0979" SEVERITY="20" DATACOUNT="2" TEXT="Either SSN benefits or Employment flag should be 'Y'" SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"               />
+<MSG MSGID="USR0980" SEVERITY="20" DATACOUNT="1" TEXT="Occupation required if employment is selected" SECLVL=" " TYPE1="*CHAR" LEN1="50" DEC1="0"                                                       />
+<MSG MSGID="USR0981" SEVERITY="20" DATACOUNT="3" TEXT="&amp;1 should be of length &amp;2" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="20" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0" TYPE3="*DEC" LEN3="9" DEC3="0"                                                                                         />
+<MSG MSGID="USR0982" SEVERITY="20" DATACOUNT="1" TEXT="Value Required" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="1" DEC1="0"                                                                                  />
+<MSG MSGID="USR0983" SEVERITY="20" DATACOUNT="1" TEXT="Please enter date within 35 days" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0"                                                                 />
+<MSG MSGID="USR0984" SEVERITY="20" DATACOUNT="1" TEXT="Date cannot be in past" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0"                                                                           />
+<MSG MSGID="USR0985" SEVERITY="20" DATACOUNT="2" TEXT="Next Pay Date should greater than last paid date" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0"                  />
+<MSG MSGID="USR0986" SEVERITY="20" DATACOUNT="1" TEXT="Enter valid home phone number" SECLVL="*BLANK" TYPE1="*DEC" LEN1="10" DEC1="0"                                                                   />
+<MSG MSGID="USR0987" SEVERITY="20" DATACOUNT="1" TEXT="Enter valid cell phone number" SECLVL="*BLANK" TYPE1="*DEC" LEN1="10" DEC1="0"                                                                   />
+<MSG MSGID="USR0990" SEVERITY="20" DATACOUNT="0" TEXT="Transaction Failed , Please try Credit Application through Chromebook'" SECLVL=" "                                                               />
+<MSG MSGID="USR0991" SEVERITY="20" DATACOUNT="1" TEXT="Valid Phone number required" SECLVL="*BLANK" TYPE1="*DEC" LEN1="10" DEC1="0"                                                                     />
+<MSG MSGID="USR0992" SEVERITY="20" DATACOUNT="1" TEXT="E-Mail Address Mandatory" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="50" DEC1="0"                                                                       />
+<MSG MSGID="USR0996" SEVERITY="20" DATACOUNT="0" TEXT="Hire Date Mandatory" SECLVL=""                          />
+<MSG MSGID="USR0997" SEVERITY="20" DATACOUNT="0" TEXT="Function key invalid" SECLVL=""                         />
+<MSG MSGID="USR0998" SEVERITY="20" DATACOUNT="1" TEXT="Hire Date cannot be future date" SECLVL="" TYPE1="*DEC" LEN1="6" DEC1="0"                                                                        />
+<MSG MSGID="USR0999" SEVERITY="20" DATACOUNT="1" TEXT="Hire Date should be less than or equal to Last Paid Date" SECLVL="" TYPE1="*DEC" LEN1="6" DEC1="0"                                               />
+<MSG MSGID="USR1000" SEVERITY="20" DATACOUNT="1" TEXT="Next Pay Date should be greater than or equal to Current Date" SECLVL="" TYPE1="*DEC" LEN1="6" DEC1="0"                                          />
+<MSG MSGID="USR1001" SEVERITY="20" DATACOUNT="2" TEXT="Last Paid Date should be less than or equal to Current Date" SECLVL="" TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0"             />
+<MSG MSGID="USR1002" SEVERITY="20" DATACOUNT="0" TEXT="Date A/C Open cannot be greater than current date" SECLVL="*BLANK"                                                                               />
+<MSG MSGID="USR1003" SEVERITY="20" DATACOUNT="2" TEXT="Home Phone or Cell Phone required" SECLVL="" TYPE1="*DEC" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="0"                                     />
+<MSG MSGID="USR1004" SEVERITY="20" DATACOUNT="0" TEXT="YES Lease not applicable for current location" SECLVL=""                                                                                         />
+<MSG MSGID="USR1005" SEVERITY="20" DATACOUNT="0" TEXT="Please try Credit Application through Chromebook" SECLVL=""                                                                                      />
+<MSG MSGID="USR1008" SEVERITY="20" DATACOUNT="0" TEXT="Account is already selected." SECLVL=" "                />
+<MSG MSGID="USR1009" SEVERITY="20" DATACOUNT="0" TEXT="Account is not selected." SECLVL=" "                    />
+<MSG MSGID="USR1010" SEVERITY="20" DATACOUNT="2" TEXT="Any one value required" SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*DEC" LEN2="9" DEC2="0"                                                 />
+<MSG MSGID="USR1011" SEVERITY="20" DATACOUNT="2" TEXT="Invalid Variable" SECLVL="" TYPE1="*CHAR" LEN1="25" DEC1="0" TYPE2="*CHAR" LEN2="9" DEC2="0"                                                     />
+</messages>
+</LegacyMsgFileContents>
