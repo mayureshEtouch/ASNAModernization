@@ -134,7 +134,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Routing Nbr:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UON_lb_new" onfocus="_09('#1UON#','10,23','#RCDDTL1');"></span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UON_lb_new" onfocus="_09('#1UON#','10,23','#RCDDTL1');" maxlength="9"></span></div>
               </div>
             </div>
             <!-- 4 col ends here -->
@@ -146,7 +146,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">A/C Nbr:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UPN_lb_new" onfocus="_09('#1UPN#','11,23','#RCDDTL1');"></span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UPN_lb_new" onfocus="_09('#1UPN#','11,23','#RCDDTL1');" maxlength="17"></span></div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -180,7 +180,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Occupation:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_DY5XT_new" onfocus="_09('#DY5XT','14,23','#RCDDTL1');"></span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_DY5XT_new" onfocus="_09('#DY5XT','14,23','#RCDDTL1');" maxlength="20"></span></div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -269,7 +269,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Credit Card Bin:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1USN_lb_new" maxlength="12" onfocus="_09('#1USN#','19,38','#RCDDTL1');"></span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1USN_lb_new" maxlength="6" onfocus="_09('#1USN#','19,38','#RCDDTL1');"></span></div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -311,9 +311,17 @@
     </div>
   </section>
 </main>
-<div id="modal1" class="simplePopup"></div>
+<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+  <div id="modal1" class="simplePopup"></div>
+  <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
 <!-- Modified HTML code ends here -->
-       <div id="Div1" style="display: none;">
+       <div id="Div1" style="display:none;">
             
       <%--  PG: PMT for Credit Extn   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1366,6 +1374,13 @@
 
         $(document).ready(function () {
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+
+            //CenPH__lb_RCDDTL1__lb_1VBXT
+            //CenPH__lb_RCDDTL1__lb_1VBXT_new
+            if ($("#CenPH__lb_RCDDTL1__lb_1VBXT").is("span")) {
+              $("#CenPH__lb_RCDDTL1__lb_1VBXT_new").replaceWith("<span class='form-text'>"+$("#CenPH__lb_RCDDTL1__lb_1VBXT").text()+"</span>")
+            }
+
             $("#CenPH__lb_RCDDTL1_V1JWDT_new").html($("#CenPH__lb_RCDDTL1_V1JWDT").html());
 
             $("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
@@ -1378,15 +1393,7 @@
                 $("#CenPH__lb_RCDDTL1_V1JWDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
 
-
-
-
-
-
-
-
-
-$("#CenPH__lb_RCDDTL1_V1JYDT_new").html($("#CenPH__lb_RCDDTL1_V1JYDT").html());
+            $("#CenPH__lb_RCDDTL1_V1JYDT_new").html($("#CenPH__lb_RCDDTL1_V1JYDT").html());
 
             $("#CenPH__lb_RCDDTL1_V1JYDT_new").val($("#CenPH__lb_RCDDTL1_V1JYDT").val());
             $("#CenPH__lb_RCDDTL1_V1JYDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
@@ -1400,7 +1407,7 @@ $("#CenPH__lb_RCDDTL1_V1JYDT_new").html($("#CenPH__lb_RCDDTL1_V1JYDT").html());
 
 
 
-$("#CenPH__lb_RCDDTL1_V1JZDT_new").html($("#CenPH__lb_RCDDTL1_V1JZDT").html());
+            $("#CenPH__lb_RCDDTL1_V1JZDT_new").html($("#CenPH__lb_RCDDTL1_V1JZDT").html());
 
             $("#CenPH__lb_RCDDTL1_V1JZDT_new").val($("#CenPH__lb_RCDDTL1_V1JZDT").val());
             $("#CenPH__lb_RCDDTL1_V1JZDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
@@ -1413,29 +1420,27 @@ $("#CenPH__lb_RCDDTL1_V1JZDT_new").html($("#CenPH__lb_RCDDTL1_V1JZDT").html());
             });
 
 
-          $("#CenPH__lb_RCDDTL1__lb_1CJID_new").change()
+            $("#CenPH__lb_RCDDTL1__lb_1CJID_new").change()
             {
                 $("#CenPH__lb_RCDDTL1__lb_1CJID").val($("#CenPH__lb_RCDDTL1__lb_1CJID_new").val());
 
             };
 
 
-$("#CenPH__lb_RCDDTL1__lb_1CLID_new").change()
+            $("#CenPH__lb_RCDDTL1__lb_1CLID_new").change()
             {
                 $("#CenPH__lb_RCDDTL1__lb_1CLID").val($("#CenPH__lb_RCDDTL1__lb_1CLID_new").val());
 
             };
 
-          
-
-$("#CenPH__lb_RCDDTL1__lb_1CRID_new").change()
+            $("#CenPH__lb_RCDDTL1__lb_1CRID_new").change()
             {
                 $("#CenPH__lb_RCDDTL1__lb_1CRID").val($("#CenPH__lb_RCDDTL1__lb_1CRID_new").val());
 
             };
 
 
-$("#CenPH__lb_RCDDTL1__lb_1CUID_new").change()
+            $("#CenPH__lb_RCDDTL1__lb_1CUID_new").change()
             {
                 $("#CenPH__lb_RCDDTL1__lb_1CUID").val($("#CenPH__lb_RCDDTL1__lb_1CUID_new").val());
 
@@ -1451,17 +1456,33 @@ $("#CenPH__lb_RCDDTL1__lb_1CUID_new").change()
                 _00('F12', event);
             });
           
-$("#next").click(function (event) {
+            $("#next").click(function (event) {
                 _00('Enter', event);
             });
-$("#CenPH__lb_RCDDTL1__lb_1UZN_lb_new,#CenPH__lb_RCDDTL1__lb_1USN_lb_new").ForceNumericOnly();
+            $("#CenPH__lb_RCDDTL1__lb_1UZN_lb_new,#CenPH__lb_RCDDTL1__lb_1USN_lb_new").ForceNumericOnly();
 
 
             $(".simplePopupClose").click(function (event) {
                
             });
 
-            
+            if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+                  /*Pop up confirm box*/
+                $(".OverlayPopupBackground").show();
+                $(".confirmation-outer-conatiner").show();
+                
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    //_00('Enter', event);
+                    _16(event,this,1,'Enter');
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    //_00('Enter', event);
+                    _16(event,this,1,'Enter');
+                });
+
+              }
         });
     </script>
     </asp:Content>
