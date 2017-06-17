@@ -70,7 +70,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--1-col button-cnt-container">
                             <div class="button-container">
-                                <span class="mdl-button mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>
+                                <span class="mdl-button mdl-button--accent" id="search">Search</span>
                             </div>
                         </div>
                     </div>
@@ -1079,18 +1079,12 @@
             "displayOnlyFields": {
                 "CenPH_DdsConstant14": "date",
                 "CenPH__lb_SFLCTL__lb__lb_TME": "time"
-               
-
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_2ITNB": "CenPH__lb_SFLCTL__lb_2ITNB",
-
-
                 "CenPH__lb_SFLCTL_V2I7DT": "CenPH__lb_SFLCTL_V2I7DT_new",
-
                 "CenPH__lb_SFLCTL__lb_CALTX": "CenPH__lb_SFLCTL__lb_CALTX_new",
                 "CenPH__lb_SFLCTL__lb_2MKCO":"CenPH__lb_SFLCTL__lb_2MKCO_new"
-                
             }
         }
 
@@ -1106,9 +1100,8 @@
                 $("#" + a[0] + "\\." + a[1]).val(value);
                 _00('Enter', event);
             }
-            
 
-             $("#CenPH__lb_SFLCTL_V2I7DT_new").html($("#CenPH__lb_SFLCTL_V2I7DT").html());
+            $("#CenPH__lb_SFLCTL_V2I7DT_new").html($("#CenPH__lb_SFLCTL_V2I7DT").html());
 
             $("#CenPH__lb_SFLCTL_V2I7DT_new").val($("#CenPH__lb_SFLCTL_V2I7DT").val());
             $("#CenPH__lb_SFLCTL_V2I7DT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
@@ -1120,7 +1113,17 @@
                 $("#CenPH__lb_SFLCTL_V2I7DT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
 
+            //$("#applicationStore tr:nth-child(1) td:nth-child(3)").text().replace(/\/+/g, '');
+            //$("#CenPH__lb_SFLCTL_V2I7DT_new").val()
+            if ($("#CenPH__lb_SFLCTL_V2I7DT_new").val().indexOf("/") < 0) {
+              $("#CenPH__lb_SFLCTL_V2I7DT_new").val($("#CenPH__lb_SFLCTL_V2I7DT_new").val().replace(/(.{2})/g,"$1/").slice(0,-1).replace(/\s+/g,'0'));
+            }
+
            $("#CenPH__lb_SFLCTL__lb_2ITNB_new,#CenPH__lb_SFLCTL__lb_2MKCO_new").ForceNumericOnly();
+
+           $('#search').on('click', function (event) {
+             _00('Enter',event);
+           });
 
            $('body').on('click', '#previous', function (event) {
              _00('F12',event);
