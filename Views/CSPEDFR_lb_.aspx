@@ -106,9 +106,9 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                         </div>
-                        <div class="mdl-cell mdl-cell--1-col mdl-cell--5-col-desktop pull-right">
+                        <!-- <div class="mdl-cell mdl-cell--1-col mdl-cell--5-col-desktop pull-right">
                             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1131,9 +1131,9 @@
           $('body').on('click', '#prompt', function (event) {
               _00('F4', event);
           });
-         $('body').on('click', '#next', function (event) {
+        /* $('body').on('click', '#next', function (event) {
               _00('Enter', event);
-          });
+          });*/
      if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
                   /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();

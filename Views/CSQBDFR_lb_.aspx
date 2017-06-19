@@ -49,20 +49,20 @@
                         <div class="mdl-cell mdl-cell--10-col search-container">
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Code</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet">
+                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet width55">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_CAGTX_new" class="mdl-textfield__input" data-tb-index="1" maxlength="4">
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col-tablet mdl-cell--1-col" style="width: 150px;"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Application No.</span> </div>
+                                <div class="mdl-cell mdl-cell--1-col-tablet mdl-cell--2-col lbl-width100"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Application No.</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2ITNB_new" class="mdl-textfield__input" data-tb-index="1" maxlength="8">
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Loc</span> </div>
+                                <div class="mdl-cell mdl-cell--1-col width45"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Loc</span> </div>
                                 <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" id="serial" style="margin-top: 12px;">
                                     <span id="loc-field1"></span>
                                     <span id="loc-field2"></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee #</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet" id="invoice">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet width85"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee #</span> </div>
+                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet width45" id="invoice">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2AJCD_new" class="mdl-textfield__input" data-tb-index="1" maxlength="5">
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                 
                 <div class="button-container">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop">
+                        <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yesLease">Yes Lease</span>
@@ -1086,13 +1086,21 @@
  text-align: right;
   }
 @media (min-width: 768px) and (max-width: 1025px) { 
- .table-data-content-container .button-container .mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button {
-  padding: 6px;
-  margin: 0 3px;
- }
  .loc-field {
   width: 150px;
  }
+ .filter-search-container .search-container .lbl-width100 {
+  width: 100px;
+}
+ .filter-search-container .search-container .width45 {
+  width: 45px;
+}
+ .filter-search-container .search-container .width55 {
+  width: 55px;
+}
+ .filter-search-container .search-container .width85 {
+  width: 85px;
+}
 }
 </style>
     </asp:Content>
