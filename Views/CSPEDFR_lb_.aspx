@@ -1168,8 +1168,8 @@
         width: 100px;
       }
 
-    @media (min-width: 768px) and (max-width: 1025px) { 
-     .filter-search-container .summary-table-title {
+    @media (min-width: 768px) and (max-width: 1023px) { 
+     .filter-search-container .summary-table-title, .table-data-content-container .mdl-textfield__input {
         font-size: 11px;
       }
       #CenPH__lb_SFLCTL__lb_2MKCO_new, #CenPH__lb_SFLCTL__lb_2ITNB_new {
@@ -1193,7 +1193,18 @@
       .filter-search-container .button-container .mdl-button {
         padding: 12px 5px;
       }
+      .date-span .calender-icon {
+        right: -16px;
+      }
     }
-      
+    @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+   .width61 {
+        width: 80px;
+      }
+  }
     </style>
     </asp:Content>

@@ -114,7 +114,7 @@
                                 
                 <div class="button-container">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop">
+                        <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yesLease">Yes Lease</span>
@@ -1085,7 +1085,7 @@
 #tblDsp tr td:nth-child(6), #tblDsp tr td:nth-child(7){
  text-align: right;
   }
-@media (min-width: 768px) and (max-width: 1025px) { 
+@media (min-width: 768px) and (max-width: 1023px) { 
  .loc-field {
   width: 150px;
  }
@@ -1100,6 +1100,15 @@
 }
  .filter-search-container .search-container .width85 {
   width: 85px;
+}
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+ .filter-search-container .search-container .lbl-width100 {
+  width: 130px;
 }
 }
 </style>
