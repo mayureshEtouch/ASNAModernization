@@ -29,7 +29,7 @@
               <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--8-col"> 
                       <!-- Title -->
-                       <span class="heading-h1">CU: PMT Customer/Name/eMail</span>
+                       <span class="heading-h1">Select by PhoneNbr/CustName/eMail</span>
                   </div>
                   <div class="mdl-cell mdl-cell--4-col pull-right"> 
                       <!-- Navigation -->
@@ -114,7 +114,7 @@
     <div class="simplePopupBackground1" style="opacity: 0.7; display: block;background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
     <div id="modal" class="simplePopup"></div> 
 
-        <div id="Div1" style="display:none;">
+       <div id="Div1" style="display: none;">
             
       <%--  CU: PMT Cust/Name/eMail   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -127,7 +127,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : ISOKKALI                                                                                         --%>
-      <%--  Date          : 06/14/17  Time  : 12:21:42                                                                       --%>
+      <%--  Date          : 06/19/17  Time  : 04:47:42                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -226,8 +226,8 @@
               VirtualRowCol="2,2" 
  />
             <mdf:DdsConstant id="DdsConstant6" runat="server" 
-              style="position: absolute; left: 235px; top: 27px;"
-              Text="CU: PMT Cust/Name/eMail" 
+              style="position: absolute; left: 190px; top: 27px;"
+              Text="Select by PhoneNbr/CustName/eMail" 
               CssClass="DdsConstant"
  />
             <mdf:DdsDecField id="_lb_RCDDTL1__lb__lb_TME" runat="server" style="position: absolute; left: 532px; top: 24px; width: 73px"

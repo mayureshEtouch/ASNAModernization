@@ -29,7 +29,7 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--8-col">
                         <!-- Title -->
-                        <span class="heading-h1">Display Shipto Order Sel</span>
+                        <span class="heading-h1">Select Shipto Customer Orders</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col pull-right">
                         <!-- Navigation -->
@@ -102,7 +102,7 @@
         </main>
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;">
+       <div id="Div1" style="display: none;">
             
       <%--  OE: DSP Shipto Ordr Sel   Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -115,7 +115,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : ISOKKALI                                                                                         --%>
-      <%--  Date          : 06/15/17  Time  : 01:13:27                                                                       --%>
+      <%--  Date          : 06/19/17  Time  : 04:47:39                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -240,9 +240,9 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant8" runat="server" 
-              style="position: absolute; left: 235px; top: 27px;"
-              Text="OE: DSP Shipto Ordr Sel" 
+            <mdf:DdsConstant id="DdsConstant7" runat="server" 
+              style="position: absolute; left: 208px; top: 27px;"
+              Text="Select ShipTo Customer Orders" 
               CssClass="DdsConstant"
  />
             <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_TME" runat="server" style="position: absolute; left: 532px; top: 24px; width: 73px"
@@ -427,7 +427,7 @@
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant7" runat="server" 
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
               style="position: absolute; left: 208px; top: 171px;"
               Text="Ordered" 
               VisibleCondition="81"

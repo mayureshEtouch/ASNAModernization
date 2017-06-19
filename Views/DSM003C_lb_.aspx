@@ -82,7 +82,7 @@
                         </a></li> -->
                         <li class="_item"><a href="#" data-menu="26" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work YesLease Application</p>
                         </a></li>
-                        <li class="_item"><a href="#" data-menu="28" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Shipto Orders</p>
+                        <li class="_item"><a href="#" data-menu="28" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Order-ShipTo Addr</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -205,7 +205,7 @@
             </div>
         </div>
     </main>
-        <div id="Div1">
+       <div id="Div1">
             
       <%-- %%TS  SD  20120320  105342  COOL1       REL-V5R4M0  5722-WDS                                                      --%>
       <%--                                                                                                                   --%>
@@ -627,7 +627,7 @@
  />
             <mdf:DdsConstant id="DdsConstant59" runat="server" 
               style="position: absolute; left: 424px; top: 339px;"
-              Text="Display Shipto Orders" 
+              Text="Display Order-ShipTo Addr" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >

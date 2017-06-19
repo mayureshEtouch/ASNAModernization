@@ -48,21 +48,21 @@
                         <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
                         <div class="mdl-cell mdl-cell--10-col search-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" style="margin-left: -1px;">Application</span> </div>
+                                <div class="mdl-cell mdl-cell--1-col width61"> <span class="summary-table-title pull-right" style="margin-left: -1px;">Application</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2ITNB_new" class="mdl-textfield__input" data-tb-index="1" maxlength="8">
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col lbl-width100"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Application Date</span> </div>
+                                <div class="mdl-cell mdl-cell--1-col lbl-width100"> <span class="summary-table-title pull-right date-lbl-mrgn">Appl Date</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col date-span">
                                     <input type="text"  id="CenPH__lb_SFLCTL_V2I7DT_new" class="mdl-textfield__input" data-tb-index="2" readonly>
                                     <i id="CenPH__lb_SFLCTL_V2I7DT_new_new" class="material-icons calender-icon page-icons editable-data"></i>
                                             <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col lbl-width100"> <span class="summary-table-title pull-right" >Customer Name</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col">
+                                <div class="mdl-cell mdl-cell--2-col width100"> <span class="summary-table-title pull-right">Customer Name</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col width128">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_CALTX_new" class="mdl-textfield__input" data-tb-index="3">
                                 </div>
-                                <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" >Lease ID</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col width61"> <span class="summary-table-title pull-right" >Lease ID</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2MKCO_new" class="mdl-textfield__input" data-tb-index="4" maxlength="7">
                                 </div>
@@ -1081,7 +1081,7 @@
                 "CenPH__lb_SFLCTL__lb__lb_TME": "time"
             },
             "inputFields": {
-                "CenPH__lb_SFLCTL__lb_2ITNB": "CenPH__lb_SFLCTL__lb_2ITNB",
+                "CenPH__lb_SFLCTL__lb_2ITNB": "CenPH__lb_SFLCTL__lb_2ITNB_new",
                 "CenPH__lb_SFLCTL_V2I7DT": "CenPH__lb_SFLCTL_V2I7DT_new",
                 "CenPH__lb_SFLCTL__lb_CALTX": "CenPH__lb_SFLCTL__lb_CALTX_new",
                 "CenPH__lb_SFLCTL__lb_2MKCO":"CenPH__lb_SFLCTL__lb_2MKCO_new"
@@ -1164,6 +1164,9 @@
         right: -10px;
         top: 12px;
       }
+      .lbl-width100 {
+        width: 100px;
+      }
 
     @media (min-width: 768px) and (max-width: 1025px) { 
      .filter-search-container .summary-table-title {
@@ -1175,9 +1178,20 @@
       .date-span {
         width: 70px;
       }
-
       .lbl-width100 {
+        width: 65px;
+      }
+      .width100 {
         width: 100px;
+      }
+      .width128 {
+        width: 128px;
+      }
+      .width61 {
+        width: 61px;
+      }
+      .filter-search-container .button-container .mdl-button {
+        padding: 12px 5px;
       }
     }
       
