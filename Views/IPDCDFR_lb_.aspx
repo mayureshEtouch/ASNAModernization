@@ -57,7 +57,7 @@
         <div class="add-item-wrapper">
             <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--12-col pull-right">
-                    <div class="icon-container">  <span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i>  </div>
+                    <div class="icon-container">  <span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon icon-txt"></i>  </div>
                 </div>
             </div>
         </div>
