@@ -148,7 +148,7 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--7-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
                                         id="help">help</span> </div>
-                                <div class="mdl-cell mdl-cell--6-col-desktop pull-right mdl-cell--1-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div>
+                                <!-- <div class="mdl-cell mdl-cell--6-col-desktop pull-right mdl-cell--1-col-tablet"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span> </div> -->
                             </div>
                         </div>
                     </div>
@@ -1288,9 +1288,9 @@
                 $('body').on('click', '#previous', function (event) {
                     _00('F12', event);
                 });
-                $('body').on('click', '#next', function (event) {
+               /* $('body').on('click', '#next', function (event) {
                     _00('Enter', event);
-                });
+                });*/
                 $('body').on('click', '#help', function (event) {
                     _00('F1', event);
                 });
