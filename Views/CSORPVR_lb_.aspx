@@ -1353,7 +1353,6 @@
                 "CenPH__lb_RCDDTL1__lb_DW5TX": "CenPH__lb_RCDDTL1__lb_DW5TX_new",
                 "CenPH__lb_RCDDTL1__lb_DPPNB": "CenPH__lb_RCDDTL1__lb_DPPNB_new",
                 "CenPH__lb_RCDDTL1__lb_DPRNB": "CenPH__lb_RCDDTL1__lb_DPRNB_new"
-               
             },
             "inputFields": {
               "CenPH__lb_RCDDTL1__lb_1VBXT":"CenPH__lb_RCDDTL1__lb_1VBXT_new",
@@ -1381,6 +1380,29 @@
               $("#CenPH__lb_RCDDTL1__lb_1VBXT_new").replaceWith("<span class='form-text'>"+$("#CenPH__lb_RCDDTL1__lb_1VBXT").text()+"</span>")
             }
 
+            //hire date
+            if ($("#CenPH__lb_RCDDTL1_V1JXDT").is("input")) {
+              $("#CenPH__lb_RCDDTL1__lb_1ITNB_new").replaceWith('<span id="CenPH_PANTX" class="date-span"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JXDT_new" readonly><i id="hiredate_new" class="material-icons calender-icon page-icons editable-data"></i><span id="hiredate" class="DdsCharField_OutputOnly"></span></span>');
+                //$("#CenPH__lb_RCDDTL1_V1JXDT").removeAttr("style"));
+
+            }
+            else {$("#CenPH__lb_RCDDTL1__lb_1ITNB_new").parent().parent().hide()}
+
+
+            $("#CenPH__lb_RCDDTL1_V1JXDT_new").html($("#CenPH__lb_RCDDTL1_V1JXDT").html());
+
+            $("#CenPH__lb_RCDDTL1_V1JXDT_new").val($("#CenPH__lb_RCDDTL1_V1JXDT").val());
+            $("#CenPH__lb_RCDDTL1_V1JXDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+
+            $("#hiredate_new").click(function () { $("#CenPH__lb_RCDDTL1_V1JXDT_new").datepicker("show"); });
+
+            $("#CenPH__lb_RCDDTL1_V1JXDT_new").on('keyup change', function () {
+                var date = $("#CenPH__lb_RCDDTL1_V1JXDT_new").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1JXDT").val(date[0] + date[1] + date[2].substr(2, 3));
+            });
+
+
+
             $("#CenPH__lb_RCDDTL1_V1JWDT_new").html($("#CenPH__lb_RCDDTL1_V1JWDT").html());
 
             $("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
@@ -1392,6 +1414,13 @@
                 var date = $("#CenPH__lb_RCDDTL1_V1JWDT_new").val().split("/");
                 $("#CenPH__lb_RCDDTL1_V1JWDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
+
+
+
+            /*<div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX" class="date-span"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JWDT_new" onfocus="_09('V1JWDT','12,23','#RCDDTL1');" readonly>
+            <i id="CenPH__lb_RCDDTL1_V1JWDT_new_new" class="material-icons calender-icon page-icons editable-data"></i>
+            <span id="reqdate" class="DdsCharField_OutputOnly"></span>*/
+
 
             $("#CenPH__lb_RCDDTL1_V1JYDT_new").html($("#CenPH__lb_RCDDTL1_V1JYDT").html());
 
