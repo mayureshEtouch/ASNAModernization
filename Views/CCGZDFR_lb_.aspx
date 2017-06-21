@@ -212,7 +212,7 @@
     <div id="modal1" class="simplePopup"></div>
     <!-- Modified HTML code ends here -->
 
-    <div id="Div1" style="display: none">
+    <div id="Div1" style="display:none;">
 
         <%--  CR: DSP Acct for Cust-Pub Display file                                                                           --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -2453,7 +2453,7 @@
 
 
                         data += '<td>' + (($(mNumberSelector3 + counterDS).length > 0) ? $(mNumberSelector3 + counterDS).html() : '&nbsp;') + '</td>';
-                        data += '<td>' + (($(mDespSelector3 + counterDS).length > 0) ? $(mDespSelector3 + counterDS).html() : '&nbsp;') + '</td>';
+                        data += '<td style="color:'+$($(mDespSelector3 + counterDS)[0]).css("color")+';text-decoration: underline">' + (($(mDespSelector3 + counterDS).length > 0) ? $(mDespSelector3 + counterDS).html() : '&nbsp;') + '</font></td>';
                         data += '<td>' + (($(companySelector3 + counterDS).length > 0) ? $(companySelector3 + counterDS).html() : '&nbsp;') + '</td>';
                         data += '<td>' + (($(locationSelector3 + counterDS).length > 0) ? $(locationSelector3 + counterDS).html() : '&nbsp;') + '</td>';
                         data += '<td>' + (($(statusSelector3 + counterDS).length > 0) ? $(statusSelector3 + counterDS).html() : '&nbsp;') + '</td>';
@@ -2473,6 +2473,8 @@
                     }
                 });
             }
+
+            //$("#CenPH__lb_SFLRCD_0").children()[20]
 
          $("#account, #txtex").ForceNumericOnly();
             $('#tblCstAcc tr td').each(function (i, col) {
