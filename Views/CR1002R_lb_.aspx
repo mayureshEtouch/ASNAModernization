@@ -2459,6 +2459,13 @@
                     _00('F7', event);
                 });
 
+                $('body').on('keyup keydown keypress', function(event) {
+                  var keycode = event.keycode || event.which;
+                    if (keycode == 113) {
+                      _00('F2', event);
+                    }
+                });
+
                 $("#CenPH_DSPFMT2_SS_lb_1_new-show").on("mousedown touchstart", function(event){
                   var ssnValue = $("#CenPH_DSPFMT2_SS_lb_1").text();
                   $("#CenPH_DSPFMT2_SS_lb_1_new").text(ssnValue);
