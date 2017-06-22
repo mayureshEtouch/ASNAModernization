@@ -1,13 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSDZETR_lb_.aspx.cs" Inherits="conns.DSDZETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
-    <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 1/19/2017 at 7:21 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+      <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
+        <%-- Migrated on 6/21/2017 at 8:18 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library asnatrack, file qddssrc, member DSDZETR# --%>
 
     </asp:Content>
 
-    <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
+      <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
         <div id="Div0">
             
             <mdf:ddsfile id="DSDZETR_lb_Control" runat="server" 
@@ -22,7 +22,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-       <div class="OverlayPopupBackground"></div>
+      <div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content">
         <section class="time-date">
             <div class="content-grid mdl-grid">
@@ -206,6 +206,22 @@
                                 </span>
                             </div>
                         </div>
+                        
+                        <div class="content-grid mdl-grid hideShow" id="employee-purchase">
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <span class="form-label">Employee Purchase:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--8-col">
+                                <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <select id="CenPH__lb_SFLCTL__lb_CARTU_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" >
+                                        <option value=" ">Please select</option>
+                                        <option value="Y">Yes</option>
+                                        <option value="N">No</option>
+                                    </select>
+                                    <span id="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" class="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" style="display: none;"></span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content-grid mdl-grid">
@@ -239,7 +255,7 @@
         </div>
     </div>
 
-        <div id="Div1" style="display:none;">
+       <div id="Div1" style="display: none;">
             
       <%--  OE: ETR Ent Ord Hdr       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -251,8 +267,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : ISOKKALI                                                                                         --%>
-      <%--  Date          : 01/10/17  Time  : 01:59:01                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 06/20/17  Time  : 03:00:01                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -264,7 +280,7 @@
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;Home 'Reset.' 30;"
             FuncKeys="F4 'Prompt.' 04;F6 'CF06.' 06;F9 'Change mode.' 09;F11 'CF11.' 11;PageDown 'Next page.' 27 : !88;"
-            SetOfInds="98 99 31 32 33 34 35 36 37 38 " 
+            SetOfInds="98 99 31 32 33 34 35 36 37 38 39 " 
             CommandKeyInd="29" 
             ClearRecords="80" 
             DisplayFields="!80" 
@@ -360,6 +376,8 @@
           <%--  Nbr: Phone Work                                                                                                  --%>
           <%--  Phone: Bus Extension.                                                                                            --%>
           <%--  Phone: Bus Extension.                                                                                            --%>
+          <%--  Flg: Employee Purchse                                                                                            --%>
+          <%--  Flg: Employee Purchse                                                                                            --%>
           <%--  Cde: Promo Letter Code                                                                                           --%>
           <%--  Cde: Promo Letter Code                                                                                           --%>
           <%--  Txt: Warr/Ins Info                                                                                               --%>
@@ -412,7 +430,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,17" 
  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 559px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -446,13 +464,13 @@
               VirtualRowCol="2,59" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 676px; top: 27px;"
               Text="ADD    " 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 676px; top: 27px;"
               Text="CHANGE " 
               VisibleCondition="!89"
@@ -719,7 +737,7 @@
               Protect="78" 
               PositionCursor="31 | !31 & !98 & !99 & !78" 
               TabIndex="1"  />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 424px; top: 75px;"
               Text="/" 
               VisibleCondition="!88"
@@ -886,7 +904,7 @@
               ValuesStyle="DropdownBoth" 
               Values="'P' 'N' 'H' 'X' 'L' ' ' 'Y' '?' " 
               TabIndex="6"  />
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 586px; top: 219px;"
               Text="eSign" 
               VisibleCondition="!88"
@@ -935,6 +953,22 @@
               Usage="OutputOnly" 
               VirtualRowCol="11,28" 
  />
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+              style="position: absolute; left: 397px; top: 243px;"
+              Text="Employee Purchase" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 586px; top: 240px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#CARTU" 
+              VisibleCondition="!88 & !( 74 & !38 )"
+              Usage="Both" 
+              VirtualRowCol="11,62" 
+              Protect="74" 
+              PositionCursor="38 & !74" 
+              TabIndex="8"  />
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 19px; top: 267px;"
               Text="Promotion Code" 
@@ -948,13 +982,13 @@
               VisibleCondition="!88"
               Usage="Both" 
               VirtualRowCol="12,17" 
-              PositionCursor="38" 
-              TabIndex="8"  />
+              PositionCursor="39" 
+              TabIndex="9"  />
             <mdf:DdsCharField id="_lb_SFLCTL__lb_CBMNA" runat="server" style="position: absolute; left: 244px; top: 264px; width: 406px"
               CssClass="DdsCharField"
               Length="45" 
               Alias="#CBMNA" 
-              VisibleCondition="!88 & !( 74 )"
+              VisibleCondition="!88 & !( 73 )"
               Usage="OutputOnly" 
               VirtualRowCol="12,27" 
  />
@@ -1125,7 +1159,7 @@
               Alias="#2AQNA" 
               Usage="Both" 
               VirtualRowCol="14,3" 
-              PositionCursor="39" 
+              PositionCursor="40" 
               TabIndex="1"  />
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
@@ -1136,13 +1170,13 @@
           >&nbsp;
           <%--  Command key text 2                                                                                               --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text=" F3=Exit   F6=eSign T&amp;Cs                                  F12=Return" 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text=" F3=Exit   F6=eSign T&amp;Cs                                   F12=Return" 
               VisibleCondition="!89"
@@ -1158,7 +1192,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1177,8 +1211,8 @@
               Usage="Both" 
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
-              TabIndex="9"  />
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
+              TabIndex="10"  />
+            <mdf:DdsConstant id="DdsConstant22" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1224,6 +1258,7 @@
         <mdf:DdsMessagePanel ID="DdsMessagePanel1" Style="position: relative" runat="server" Height="64px"></mdf:DdsMessagePanel>
     </asp:Content>
 
+
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
      <style>
         #CenPH__lb_SFLCTL__lb_1AJCD {
@@ -1262,7 +1297,7 @@
 
             $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
             //set date and time
-            setDateTime("CenPH_DdsConstant14", "CenPH__lb_SFLCTL__lb__lb_TME");
+            setDateTime("CenPH_DdsConstant15", "CenPH__lb_SFLCTL__lb__lb_TME");
             // Set customer name
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             // Set order number
@@ -1474,6 +1509,25 @@
                 setCookie("billAddress", $("[id$='lb_SFLCTL__lb_PANTX']").text() + ($("[id$='lb_SFLCTL__lb_PAOTX']").text().trim() == "" ? "" : ", " + $("[id$='lb_SFLCTL__lb_CEUTX']").text()) + ", <br>" + $("[id$='lb_SFLCTL__lb_PAQTX']").text() + ", " + $("[id$='lb_SFLCTL__lb_PADST']").text() + ", " + $("[id$='lb_SFLCTL__lb_PAPTX']").text(), 360);
             }
       
+
+if ($("#CenPH__lb_SFLCTL__lb_CARTU").length ) {
+ 
+    $(".hideShow").show();
+   $("#CenPH__lb_SFLCTL__lb_CARTU_new").val($("#CenPH__lb_SFLCTL__lb_CARTU").val());
+    $("#CenPH__lb_SFLCTL__lb_CARTU_new").change(function () {
+        $("#CenPH__lb_SFLCTL__lb_CARTU").val($("#CenPH__lb_SFLCTL__lb_CARTU_new").val());
+    });
+
+}
+else
+{
+
+     $(".hideShow").hide();
+}
+
+
+
+
       $(".simplePopupClose").click(function(event){
         var ele = $("#__focusID__").val().split('$')[1]+"_"+$("#__focusID__").val().split('$')[2]+"_new" ;
         $("#"+ele).focus();
