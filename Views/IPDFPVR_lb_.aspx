@@ -55,7 +55,7 @@
                           <span class="form-label">Employee ID:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                          <span class="form-text lease-id"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="empid" maxlength="70" value="" >
+                          <span class="form-text lease-id"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="empid" value="" maxlength="5" >
                         </span>
                       </div>
                     </div>
@@ -580,6 +580,15 @@
                 _00("F12", event);
               });
 
+               if($("#__Page_PopUp .simplePopupClose").length > 0) {
+              $(".simplePopupBackground1").show();
+              } else {
+                 $(".simplePopupBackground1").hide();
+              }
+              $("body").on("click", ".simplePopupClose", function() {
+                 $(".simplePopupBackground1").hide();
+              });
+              
               if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                   /*Pop up confirm box*/
                   $(".OverlayPopupBackground").show();

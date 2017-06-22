@@ -1526,6 +1526,10 @@ else
 }
 
 
+        if($("#CenPH__lb_SFLCTL__lb_CARTU").is("span")) {
+            console.log(32131)
+            $("#CenPH__lb_SFLCTL__lb_CARTU_new").replaceWith($("#CenPH__lb_SFLCTL__lb_CARTU").removeAttr("style"));
+        }
 
 
       $(".simplePopupClose").click(function(event){
