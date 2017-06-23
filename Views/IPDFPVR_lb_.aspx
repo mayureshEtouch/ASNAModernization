@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 6/21/2017 at 8:22 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 6/23/2017 at 10:55 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library asnatrack, file qddssrc, member IPDFPVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -38,7 +38,7 @@
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet"> 
                   <!-- Title --> 
-                  <span class="heading-h1">Employee ID for Purchase</span> </div>
+                  <span class="heading-h1">Sold to Employee ID</span> </div>
                 <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right"> 
                   <!-- Navigation --> 
                   <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">IPDFPVR</span></div>
@@ -52,7 +52,7 @@
                   <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
-                          <span class="form-label">Employee ID:</span>
+                          <span class="form-label">Enter ID:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                           <span class="form-text lease-id"><input class="mdl-textfield__input" type="text" data-tb-index="1" size="15" id="empid" value="" maxlength="5" >
@@ -104,14 +104,14 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 06/17/17  Time  : 09:01:50                                                                       --%>
+      <%--  Date          : 06/22/17  Time  : 01:57:41                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
       <%-- =========================================================================                                         --%>
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 306px; height: 120px" 
+            style="position: relative; width: 288px; height: 120px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;Home 'Reset.' 30;"
@@ -175,8 +175,8 @@
               Usage="Hidden" 
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
-              style="position: absolute; left: 82px; top: 3px;"
-              Text="Employee ID For Purchase" 
+              style="position: absolute; left: 109px; top: 3px;"
+              Text="Sold to Employee ID" 
               CssClass="DdsConstant"
  />
             <mdf:DdsDecField id="_lb_RCDDTL1__lb_1BANB" runat="server" style="position: absolute; left: 1px; top: 0px; width: 82px"
@@ -318,15 +318,15 @@
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
-              Text="Employee ID" 
+              Text="Enter ID" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1AJCD" runat="server" style="position: absolute; left: 136px; top: 72px; width: 46px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1AJCD" runat="server" style="position: absolute; left: 109px; top: 72px; width: 46px"
               CssClass="DdsCharField"
               Length="5" 
               Alias="#1AJCD" 
               Usage="Both" 
-              VirtualRowCol="4,15" 
+              VirtualRowCol="4,12" 
               PositionCursor="31 | !31 & !98 & !99" 
               TabIndex="1"  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_DAETX" runat="server" style="position: absolute; left: 19px; top: 96px; width: 226px"
