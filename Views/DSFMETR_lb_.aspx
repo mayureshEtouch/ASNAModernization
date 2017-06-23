@@ -278,7 +278,7 @@
 
 
 
-    <div id="Div1" style="display:none;">
+    <div id="Div1" style="display:none">
 
         <%--  OE: ETR Ent Ord Dtl       Edit transaction                                                                       --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -1739,6 +1739,27 @@
             _00("PgUp", event);
             copyData();
         });
+
+        
+
+        $('body').on('keyup keydown keypress', function(event) {
+          var keycode = event.keycode || event.which;
+          if (keycode == 115) {//F4 on model
+            $("#datatableValueInsert tr td:nth-child(5)").children().children().each(function( index ) {
+
+              if ($(this).is(":focus")) {
+                console.log(324324);
+                $(this).val("?");
+                setTimeout(function(){ $(this).focus(); _00("Enter", event);}, 10);
+                
+                //$($("#CenPH__lb_SFLRCD_"+index+" :hidden").children()[5]).focus();
+                //console.log($($("#CenPH__lb_SFLRCD_"+index+" :hidden").children()[5]).is(":focus"));
+                //_00("F4", event);
+              }
+            });
+          }
+        });
+
 
         // ASNA Hidden UI Table  index. Used for reference
         var tindex = 0;
