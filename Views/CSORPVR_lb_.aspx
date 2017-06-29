@@ -2,8 +2,8 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 6/15/2017 at 4:14 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library ASNATRACK, file qddssrc, member CSORPVR# --%>
+        <%-- Migrated on 6/29/2017 at 10:59 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Legacy location: library asnatrack, file qddssrc, member CSORPVR# --%>
 
     </asp:Content>
 
@@ -272,6 +272,11 @@
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1USN_lb_new" maxlength="6" onfocus="_09('#1USN#','19,38','#RCDDTL1');"></span></div>
               </div>
             </div>
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+              <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label six-digit">(First 6 digits)</span> </div>
+              </div>
+            </div>
             <!-- 4 col ends here --> 
           </div>
           <!-- content-grid mdl-grid ends here --> 
@@ -321,7 +326,7 @@
         </div>
     </div>
 <!-- Modified HTML code ends here -->
-       <div id="Div1" style="display:none;">
+      <div id="Div1" style="display: none;">
             
       <%--  PG: PMT for Credit Extn   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -333,8 +338,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Conn Credit Corp.                                                                                --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 06/15/17  Time  : 11:49:12                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 06/26/17  Time  : 13:02:49                                                                       --%>
       <%--  Copyright     : Conn Credit Corp.                                                                                --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -457,6 +462,7 @@
           <%--  Dte: Hire Date                                                                                                   --%>
           <%--  Cde: Credit Card Bin                                                                                             --%>
           <%--  Cde: Credit Card Bin                                                                                             --%>
+          <%--  Cde: Credit Card Bin                                                                                             --%>
           <%--  STS: Marketing Opt Out                                                                                           --%>
           <%--  STS: Marketing Opt Out                                                                                           --%>
           <%--  Condition: (Y/N)                                                                                                 --%>
@@ -489,7 +495,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,18" 
  />
-            <mdf:DdsConstant id="DdsConstant23" runat="server" 
+            <mdf:DdsConstant id="DdsConstant24" runat="server" 
               style="position: absolute; left: 631px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -523,7 +529,7 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant24" runat="server" 
+            <mdf:DdsConstant id="DdsConstant25" runat="server" 
               style="position: absolute; left: 712px; top: 27px;"
               Text="ENTER  " 
               CssClass="DdsConstant"
@@ -1228,6 +1234,12 @@
               PositionCursor="45" 
               Color="Red : 45 , Green : !45" 
               TabIndex="15"  />
+            <mdf:DdsConstant id="DdsConstant23" runat="server" 
+              style="position: absolute; left: 442px; top: 435px;"
+              Text="(First 6 digits)" 
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
             <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 459px;"
               Text="Participate in Marketing? . . . ." 
@@ -1253,7 +1265,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+            <mdf:DdsConstant id="DdsConstant26" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F12=Cancel" 
               CssClass="DdsConstant"
@@ -1268,7 +1280,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+            <mdf:DdsConstant id="DdsConstant27" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1288,7 +1300,7 @@
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
               TabIndex="17"  />
-            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+            <mdf:DdsConstant id="DdsConstant28" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1344,6 +1356,9 @@
         position: absolute;
         right: -10px;
       }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .six-digit{padding-top:17px;display:inline-block;}
+        }
     </style>
      <script type="text/javascript">
         var copyToAndFrom = {
