@@ -68,7 +68,7 @@
 								<div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
 									<div class="content-grid mdl-grid">
 										<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Model Number</span></div>
-										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"><input type="text" id="number" class="mdl-textfield__input"></div>
+										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"><input type="text" id="number" class="mdl-textfield__input" data-tb-index="1"></div>
 										<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Description</span></div>
 										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"><input id="description" class="mdl-textfield__input" data-tb-index="2" type="text"></div>
 										<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Vendor Number</span></div>
@@ -78,7 +78,7 @@
 										<div class="mdl-cell mdl-cell--1-col"><span class="summary-table-title pull-right" style="margin-left: -5px;">Status</span></div>
 										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet" style="padding-top:10px;"> 
 											<span class="form-text" data-upgraded=",MaterialTextfield">
-												<select id="status" name="CenPH_1FLST" style="padding: 2px 0;" data-tb-index="1">
+												<select id="status" name="CenPH_1FLST" style="padding: 2px 0;" data-tb-index="5">
 													<option selected="selected" value=" ">Please Select</option>
 													<option value="ACT">ACT</option>
 													<option value="DIS">DIS</option>
