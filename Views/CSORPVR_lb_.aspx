@@ -1400,20 +1400,28 @@
             //hire date
             if ($("#CenPH__lb_RCDDTL1_V1JXDT").is("input")) {
               $("#CenPH__lb_RCDDTL1__lb_1ITNB_new").replaceWith('<span id="CenPH_PANTX" class="date-span"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JXDT_new" readonly><i id="hiredate_new" class="material-icons calender-icon page-icons editable-data"></i><span id="hiredate" class="DdsCharField_OutputOnly"></span></span>');
-                //$("#CenPH__lb_RCDDTL1_V1JXDT").removeAttr("style"));
+                //$("#CenPH__lb_RCDDTL1_V1JXDT").removeAttr("style");
 
             }
             else {$("#CenPH__lb_RCDDTL1__lb_1ITNB_new").parent().parent().hide()}
 
             if ($("#CenPH__lb_RCDDTL1__lb_DPPNB").is("input")) {
-              $("#CenPH__lb_RCDDTL1__lb_DPPNB_new").replaceWith('<div class="mdl-cell mdl-cell--10-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_DPPNB_new" onfocus="_09("#DPPNB","7,18","#RCDDTL1"  );" maxlength="9"></span></div>');
-              $("#CenPH__lb_RCDDTL1__lb_DPPNB_new").val($("#CenPH__lb_RCDDTL1__lb_DPPNB").val())
+              $("#CenPH__lb_RCDDTL1__lb_DPPNB_new").replaceWith('<div class="mdl-cell mdl-cell--10-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_DPPNB_new" onfocus="_09("#DPPNB","7,18","#RCDDTL1"  );"></span></div>');
+                $("#CenPH__lb_RCDDTL1__lb_DPPNB_new").val($("#CenPH__lb_RCDDTL1__lb_DPPNB").val())
             }
 
             if ($("#CenPH__lb_RCDDTL1__lb_DPRNB").is("input")) {
-              $("#CenPH__lb_RCDDTL1__lb_DPRNB_new").replaceWith('<div class="mdl-cell mdl-cell--10-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_DPRNB_new" onfocus="_09("#DPPNB","7,18","#RCDDTL1"  );" maxlength="9"></span></div>');
+              $("#CenPH__lb_RCDDTL1__lb_DPRNB_new").replaceWith('<div class="mdl-cell mdl-cell--10-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_DPRNB_new" onfocus="_09("#DPPNB","7,18","#RCDDTL1"  );" ></span></div>');
                $("#CenPH__lb_RCDDTL1__lb_DPRNB_new").val($("#CenPH__lb_RCDDTL1__lb_DPRNB").val())
             }
+
+            $('body').on('keyup change', '#CenPH__lb_RCDDTL1__lb_DPPNB_new', function (event) {
+                $("#CenPH__lb_RCDDTL1__lb_DPPNB").val($("#CenPH__lb_RCDDTL1__lb_DPPNB_new").val());
+            });
+
+            $('body').on('keyup change', '#CenPH__lb_RCDDTL1__lb_DPRNB_new', function (event) {
+              $("#CenPH__lb_RCDDTL1__lb_DPRNB").val($("#CenPH__lb_RCDDTL1__lb_DPRNB_new").val());
+            });
 
             $("#CenPH__lb_RCDDTL1_V1JXDT_new").html($("#CenPH__lb_RCDDTL1_V1JXDT").html());
 
