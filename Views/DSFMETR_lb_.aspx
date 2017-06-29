@@ -252,7 +252,7 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-tablet">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous">Previous</span>
-                                <!--<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="reset">Reset all</span>-->
+                               <!--  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet pull-right">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</sapn>
@@ -278,7 +278,7 @@
 
 
 
-    <div id="Div1" style="display:none">
+    <div id="Div1" style="display:none;">
 
         <%--  OE: ETR Ent Ord Dtl       Edit transaction                                                                       --%>
         <%--  CRTDSPF                                                                                                          --%>
@@ -1643,7 +1643,10 @@
             }
             //console.log('tindex is: '+tindex);
             //tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
-            tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+            if ($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).length > 0) {
+                tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+            }
+            
             $("#datatableValueInsert tbody").find("tr").each(function (i) {
                 $(this).find("td:eq(0) span").text($("[id$='lb_SFLRCD__lb_2AUST." + (i + tindex) + "']").text());
                 $(this).find("td:eq(1) select").val($("[id$='lb_SFLRCD__lb_2AIST." + (i + tindex) + "']").val());
@@ -1669,7 +1672,8 @@
                 }
 
                 if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('input')) {
-                    $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val());
+                    //$(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val());
+                    $(this).find("td:eq(4) input").replaceWith($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").removeAttr("style"));
 
                 } else if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('span')) {
                     $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").text());
@@ -1740,25 +1744,9 @@
             copyData();
         });
 
-        
-
-        $('body').on('keyup keydown keypress', function(event) {
-          var keycode = event.keycode || event.which;
-          if (keycode == 115) {//F4 on model
-            $("#datatableValueInsert tr td:nth-child(5)").children().children().each(function( index ) {
-
-              if ($(this).is(":focus")) {
-                console.log(324324);
-                $(this).val("?");
-                setTimeout(function(){ $(this).focus(); _00("Enter", event);}, 10);
-                
-                //$($("#CenPH__lb_SFLRCD_"+index+" :hidden").children()[5]).focus();
-                //console.log($($("#CenPH__lb_SFLRCD_"+index+" :hidden").children()[5]).is(":focus"));
-                //_00("F4", event);
-              }
-            });
-          }
-        });
+        /*$('#prompt').on("click", function (event) {
+            _00("F4", event);
+        });*/
 
 
         // ASNA Hidden UI Table  index. Used for reference

@@ -69,8 +69,8 @@
 									<div class="content-grid mdl-grid">
 										<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Model Number</span></div>
 										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"><input type="text" id="number" class="mdl-textfield__input" data-tb-index="1"></div>
-										<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Description</span></div>
-										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"><input id="description" class="mdl-textfield__input" data-tb-index="2" type="text"></div>
+										<div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" style="margin-left: 25px;">Description</span></div>
+										<div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--3-col-tablet"><input id="description" class="mdl-textfield__input" data-tb-index="2" type="text" style="width: 170px;margin-left: 35px;"></div>
 										<div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Vendor Number</span></div>
 										<div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet"><input id="VendorNumber" class="mdl-textfield__input" data-tb-index="3" type="text" maxlength="7"></div>
 										<div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Prd Cat</span></div>
