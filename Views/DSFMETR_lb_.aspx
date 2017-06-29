@@ -252,7 +252,7 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-tablet">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" id="previous">Previous</span>
-                               <!--  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
+                               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col mdl-cell--1-col-tablet pull-right">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enter">Next</sapn>
@@ -1744,9 +1744,9 @@
             copyData();
         });
 
-        /*$('#prompt').on("click", function (event) {
+        $('#prompt').on("click", function (event) {
             _00("F4", event);
-        });*/
+        });
 
 
         // ASNA Hidden UI Table  index. Used for reference
