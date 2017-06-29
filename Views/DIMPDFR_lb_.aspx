@@ -23,7 +23,7 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-    
+    <div class="OverlayPopupBackground"></div>
         <main class="mdl-layout__content">
             <section class="time-date">
                 <div class="content-grid mdl-grid">
@@ -150,7 +150,15 @@
             </section>
 
         </main>
-        <div id="modal" class="simplePopup"></div>
+         <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+    <div id="modal" class="simplePopup"></div>
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+          </div>
     <div id="Div1" style="display:none;">
 
         <%--  CU: DSP Matching EMails   Display file                                                                           --%>
@@ -564,6 +572,39 @@
 			// Previous Button click trigger 
 			$('body').on('click', '#previous', function (event) {
                 _00('F12',event);
+            });
+
+            if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                $(".editable-data").show();
+                $(".ro-data").hide();
+                $(".confirmation-outer-conatiner").hide();
+                $(".OverlayPopupBackground").hide();
+            } else {
+                $(".editable-data").hide();
+                $(".ro-data").show();
+                $(".confirmation-outer-conatiner").show();
+                $(".OverlayPopupBackground").show();
+            }
+            
+            $("#yes").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
+            });
+            $("#no").click(function (event) {
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                _00('Enter', event);
+            });
+
+
+            if ($(".simplePopupClose").length > 0) {
+               
+                $(".simplePopupBackground1").show();
+            } else {
+               
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function () {
+                $(".simplePopupBackground1").hide();
             });
         });
     </script>
