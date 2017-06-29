@@ -213,7 +213,7 @@
                             </div>
                             <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <select id="CenPH__lb_SFLCTL__lb_CARTU_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" >
+                                    <select id="CenPH__lb_SFLCTL__lb_CARTU_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" data-tb-index="9">
                                         <option value=" ">Please select</option>
                                         <option value="Y">Yes</option>
                                         <option value="N">No</option>
