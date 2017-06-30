@@ -1535,6 +1535,16 @@
                   /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+
+                
+                $.each($("span[id^='CenPH__lb_RCDDTL1__lb']:not(span[id^='CenPH__lb_RCDDTL1__lb__lb'])").not("[id$='_new']"), function(i,v) {
+                    $("#"+($(v).attr("id").replace(/_\s*$/, "")+"_new")).replaceWith("<span class='form-text'>"+$(v)[0].textContent+"</span>")
+                });
+
+                $.each($("span[id^='CenPH__lb_RCDDTL1_V1J']"), function(i,v) {
+                    $("#"+($(v).attr("id")+"_new")).replaceWith("<span class='form-text'>"+$(v)[0].textContent+"</span>")
+                    $(".calender-icon").hide();
+                });
                 
                 $("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
@@ -1548,6 +1558,8 @@
                 });
 
               }
+
+
         });
     </script>
     </asp:Content>
