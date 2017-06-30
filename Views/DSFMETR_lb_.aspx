@@ -1673,7 +1673,7 @@
 
                 if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('input')) {
                     //$(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val());
-                    $(this).find("td:eq(4) input").replaceWith($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").removeAttr("style"));
+                    $(this).find("td:eq(4) input").replaceWith($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").removeAttr("style tabindex"));
 
                 } else if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('span')) {
                     $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").text());
