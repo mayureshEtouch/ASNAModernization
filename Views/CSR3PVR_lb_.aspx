@@ -50,7 +50,7 @@
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--12-col" style="padding:0">
         <p>
-          Do you want the No Interest until 2020 Available?
+          Do you want the No Interest until 2020 Available
                   <span data-upgraded=",MaterialTextfield" class="form-text">
                                     <select tabindex="6" style="width: 114px; padding: 0px 2px; margin-left: 5px;" name="CenPH__lb_RCDDTL1__lb_DQ1ST_new" id="CenPH__lb_RCDDTL1__lb_DQ1ST_new">
                                         <option value=" " selected="selected">Please select</option>
