@@ -54,11 +54,11 @@
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right">First Name</span> </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
-                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_CYRXT_new" class="mdl-textfield__input" data-tb-index="2">
+                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_CYRXT_new" class="mdl-textfield__input" data-tb-index="1">
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right">Last Name</span> </div>
                                 <div class="mdl-cell mdl-cell--2-col mdl-cell mdl-cell--1-col-tablet">
-                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_CDYXT_new" class="mdl-textfield__input" data-tb-index="3">
+                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_CDYXT_new" class="mdl-textfield__input" data-tb-index="1">
                                 </div>
                                 <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right">Approval Limit</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet">
