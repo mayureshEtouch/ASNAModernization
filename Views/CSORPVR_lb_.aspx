@@ -146,7 +146,7 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">For:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" maxlength="5" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
+                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
                   </div>
                 </div>
               </div>
@@ -226,7 +226,7 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Monthly Income:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UZN_lb_new" maxlength="10" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UZN_lb_new" maxlength="6" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span></div>
               </div>
             </div>
             <!-- 4 col ends here --> 
