@@ -877,7 +877,7 @@
 
         var copyToAndFrom = {
             "displayOnlyFields": {
-                "CenPH_DdsConstant13": "date",
+                "CenPH_DdsConstant15": "date",
                 "CenPH__lb_SFLCTL__lb__lb_TME": "time"
                
 
