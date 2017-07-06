@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 6/16/2017 at 2:29 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
+<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 7/5/2017 at 6:57 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -2716,6 +2716,8 @@
 <MSG MSGID="DIS3653" SEVERITY="0" DATACOUNT="1" TEXT="Lease ID Already Used" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                                 />
 <MSG MSGID="DIS3654" SEVERITY="20" DATACOUNT="0" TEXT="Payment not successful. Please contact Progressive for further details" SECLVL=""                                                                />
 <MSG MSGID="DIS3655" SEVERITY="0" DATACOUNT="0" TEXT="Employee Not for Purchase" SECLVL=""                     />
+<MSG MSGID="DIS3683" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1." SECLVL=" " TYPE1="*CHAR" LEN1="65" DEC1="0"    />
+<MSG MSGID="DIS3695" SEVERITY="20" DATACOUNT="1" TEXT="Initial Blanks not allowed for Lease Id" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                              />
 <MSG MSGID="USR0001" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference not found." SECLVL=" "                    />
 <MSG MSGID="USR0002" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference already exists." SECLVL=" "               />
 <MSG MSGID="USR0003" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer not found." SECLVL=" "                     />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File CCCQ1DBF/QCCCMSG Migrated on 6/29/2017 at 11:07 AM by ASNA Monarch(R) Wings version 7.0.58.0 -->
+<!-- Message File CCCQ1DBF/QCCCMSG Migrated on 7/5/2017 at 6:53 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="CCC0001" SEVERITY="0" DATACOUNT="0" TEXT="Is the existing customer the same person applying for credit (Y/N)?" SECLVL=""                                                                    />
@@ -594,5 +594,10 @@
 <MSG MSGID="USR1010" SEVERITY="20" DATACOUNT="2" TEXT="Any one value required" SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*DEC" LEN2="9" DEC2="0"                                                 />
 <MSG MSGID="USR1011" SEVERITY="20" DATACOUNT="2" TEXT="Invalid &amp;1" SECLVL="" TYPE1="*CHAR" LEN1="25" DEC1="0" TYPE2="*CHAR" LEN2="9" DEC2="0"                                                       />
 <MSG MSGID="USR1013" SEVERITY="20" DATACOUNT="0" TEXT="Cannot proceed. No account has been selected." SECLVL=" "                                                                                        />
+<MSG MSGID="USR1015" SEVERITY="20" DATACOUNT="1" TEXT="Invalid Routing Number" SECLVL="" TYPE1="*CHAR" LEN1="-1" DEC1="2"                                                                               />
+<MSG MSGID="USR1016" SEVERITY="20" DATACOUNT="0" TEXT="ABA Validation API Failed , Please Re-Try By Pressing Enter" SECLVL=""                                                                           />
+<MSG MSGID="USR1017" SEVERITY="20" DATACOUNT="0" TEXT="Customer is not valid for a direct loan refinance." SECLVL=" "                                                                                   />
+<MSG MSGID="USR1018" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 cannot be balnk" SECLVL="" TYPE1="*CHAR" LEN1="30" DEC1="0" TYPE2="*CHAR" LEN2="6" DEC2="0"                                               />
+<MSG MSGID="USR1019" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 cannot be blank" SECLVL="" TYPE1="*CHAR" LEN1="30" DEC1="0" TYPE2="*DEC" LEN2="5" DEC2="0"                                                />
 </messages>
 </LegacyMsgFileContents>

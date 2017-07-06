@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 6/29/2017 at 10:59 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 7/5/2017 at 6:37 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library asnatrack, file qddssrc, member CSORPVR# --%>
 
     </asp:Content>
@@ -22,158 +22,191 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-    <!-- Modified HTML code starts here -->
-<div class="OverlayPopupBackground"></div>
-<main class="mdl-layout__content">
-  <section class="time-date">
-    <div class="content-grid mdl-grid">
-      <div class="mdl-cell mdl-cell--8-col"> 
-        <!-- Title --> 
-        <span class="heading-h1">Create Header Details</span> </div>
-      <div class="mdl-cell mdl-cell--4-col pull-right"> 
-        <!-- Navigation --> 
-        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CSORPVR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
-    </div>
-  </section>
+      <!-- Modified HTML code starts here -->
+      <div class="OverlayPopupBackground"></div>
+      <main class="mdl-layout__content">
+        <section class="time-date">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--8-col"> 
+              <!-- Title --> 
+              <span class="heading-h1">Create Header Details</span> </div>
+            <div class="mdl-cell mdl-cell--4-col pull-right"> 
+              <!-- Navigation --> 
+              <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CSORPVR</span> <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span> <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span> </div>
+          </div>
+        </section>
   
-  <section class="table-data-content-container mrgnTp16 spacer-container-bottom">
-    <div class="table-data-wrapper">
-      <div class="table-data-maincontainer">
-        <div class="table-container table-container-search"> 
-          
-      
-          <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Customer Name:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DW5TX_new"></span></div>
+        <section class="table-data-content-container mrgnTp16 spacer-container-bottom">
+          <div class="table-data-wrapper">
+            <div class="table-data-maincontainer">
+              <div class="table-container table-container-search"> 
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid" style="padding:0"> 
+                  <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Customer Name:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DW5TX_new"></span></div>
+                    </div>
+                  </div>
+                  <!-- 4 col ends here --> 
+                </div>
+                <!-- content-grid mdl-grid ends here --> 
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid" style="padding:0"> 
+                  <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1VBXT_new" onfocus="_09('#1VBXT','6,2','#RCDDTL1');"></span></div>
+                    </div>
+                  </div>
+                  <!-- 4 col ends here --> 
+                </div>
+                <!-- content-grid mdl-grid ends here --> 
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid" style="padding:0"> 
+                  <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Home Phone:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DPPNB_new"></span> </div>
+                    </div>
+                  </div>
+                  <!-- 4 col ends here --> 
+                  <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">SSN Benefits:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                          <span class="form-text" data-upgraded=",MaterialTextfield">
+                              <select id="CenPH__lb_RCDDTL1__lb_1CJID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                                  <option selected="selected" value=" ">Please select</option>
+                                  <option value="N">No</option>
+                                  <option value="Y">Yes</option>
+                              </select>
+                              <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 4 col ends here -->  
+                </div>
+                <!-- content-grid mdl-grid ends here --> 
+                <!-- content-grid mdl-grid starts here -->
+                <div class="content-grid mdl-grid" style="padding:0"> 
+                  <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Cell Phone:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DPRNB_new"></span> </div>
+                    </div>
+                  </div>
+                  <!-- 4 col ends here --> 
+                  <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Direct Deposit:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                        <span class="form-text" data-upgraded=",MaterialTextfield">
+                            <select id="CenPH__lb_RCDDTL1__lb_1CLID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                                <option selected="selected" value=" ">Please select</option>
+                                <option value="N">No</option>
+                                <option value="Y">Yes</option>
+                            </select>
+                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                        </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 4 col ends here --> 
               </div>
-            </div>
-            <!-- 4 col ends here --> 
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-       <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1VBXT_new" onfocus="_09('#1VBXT','6,2','#RCDDTL1');"></span></div>
+              <!-- content-grid mdl-grid ends here -->
+
+              <!-- content-grid mdl-grid starts here -->
+            <div class="content-grid mdl-grid" style="padding:0"> 
+              <!-- 4 col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Residence Type (?):</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                          <select id="CenPH__lb_RCDDTL1__lb_DDGID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                              <option selected="selected" value=" ">Please select</option>
+                              <option value="Own">Own</option>
+                              <option value="Rent">Rent</option>
+                          </select>
+                          <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                      </span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <!-- 4 col ends here --> 
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-          <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Home Phone:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DPPNB_new"></span> </div>
+              <!-- 4 col ends here --> 
+              <!-- 4 col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">For:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
+                  </div>
+                </div>
               </div>
-            </div>
-            <!-- 4 col ends here --> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">SSN Benefits:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                                            <select id="CenPH__lb_RCDDTL1__lb_1CJID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
-                                                <option selected="selected" value=" ">Please select</option>
-                                                <option value="N">No</option>
-                                                <option value="Y">Yes</option>
-                                            </select>
-                                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
-                                        </span>
-                                    </div>
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label six-digit">(months)</span> </div>
+                </div>
               </div>
+              <!-- 4 col ends here --> 
             </div>
-            <!-- 4 col ends here -->  
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-      
-          <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Cell Phone:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DPRNB_new"></span> </div>
-              </div>
+            <!-- content-grid mdl-grid ends here --> 
+            <div class="content-grid mdl-grid" style="padding:0"> 
+              <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"></div>
             </div>
-            <!-- 4 col ends here --> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Direct Deposit:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                                            <select id="CenPH__lb_RCDDTL1__lb_1CLID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
-                                                <option selected="selected" value=" ">Please select</option>
-                                                <option value="N">No</option>
-                                                <option value="Y">Yes</option>
-                                            </select>
-                                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
-                                        </span>
-                                    </div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-          </div>
-          <!-- content-grid mdl-grid ends here -->
-      <div class="content-grid mdl-grid" style="padding:0"> 
-      <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"></div>
-      </div>
        
+            <!-- content-grid mdl-grid starts here -->
+            <div class="content-grid mdl-grid" style="padding:0"> 
+              <!-- 4 col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Routing Nbr:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UON_lb_new" onfocus="_09('#1UON#','10,23','#RCDDTL1');" maxlength="9"></span></div>
+                </div>
+              </div>
+              <!-- 4 col ends here -->
+            </div>
+          <!-- content-grid mdl-grid ends here --> 
+         <!-- content-grid mdl-grid starts here -->
+            <div class="content-grid mdl-grid" style="padding:0"> 
+              <!-- 4 col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">A/C Nbr:</span> </div>
+                  <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UPN_lb_new" onfocus="_09('#1UPN#','11,23','#RCDDTL1');" maxlength="17"></span></div>
+                </div>
+              </div>
+              <!-- 4 col ends here --> 
+            </div>
+          <!-- content-grid mdl-grid ends here --> 
           <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Routing Nbr:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UON_lb_new" onfocus="_09('#1UON#','10,23','#RCDDTL1');" maxlength="9"></span></div>
-              </div>
-            </div>
-            <!-- 4 col ends here -->
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-       <!-- content-grid mdl-grid starts here -->
-          <div class="content-grid mdl-grid" style="padding:0"> 
-            <!-- 4 col starts here -->
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-              <div class="content-grid mdl-grid">
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">A/C Nbr:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UPN_lb_new" onfocus="_09('#1UPN#','11,23','#RCDDTL1');" maxlength="17"></span></div>
-              </div>
-            </div>
-            <!-- 4 col ends here --> 
-          </div>
-          <!-- content-grid mdl-grid ends here --> 
-       <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Date A/C Open:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX" class="date-span"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JWDT_new" onfocus="_09('V1JWDT','12,23','#RCDDTL1');" readonly>
-<i id="CenPH__lb_RCDDTL1_V1JWDT_new_new" class="material-icons calender-icon page-icons editable-data"></i>
-                                            <span id="reqdate" class="DdsCharField_OutputOnly"></span>
-                </span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  
+                  <span id="CenPH_PANTX" class="date-span"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JWDT_new" onfocus="_09('V1JWDT','12,23','#RCDDTL1');" readonly>
+                    <i id="CenPH__lb_RCDDTL1_V1JWDT_new_new" class="material-icons calender-icon page-icons editable-data"></i>
+                    <span id="reqdate" class="DdsCharField_OutputOnly"></span>
+                  </span>
+                </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
           </div>
           <!-- content-grid mdl-grid ends here --> 
-          
-          
-      <div class="content-grid mdl-grid" style="padding:0"> 
-      <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"> </div>
-      </div>
-          
-       
+      
+          <div class="content-grid mdl-grid" style="padding:0"> 
+            <div class="mdl-cell mdl-cell--12-col" style="padding:10px 0 0; border-top: #c6c6c6 1px solid;margin: 0 15px;"> </div>
+          </div>
           <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
@@ -187,7 +220,7 @@
           </div>
           <!-- content-grid mdl-grid ends here --> 
       
-      <!-- content-grid mdl-grid starts here -->
+          <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -202,24 +235,24 @@
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Pay Frequency:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                                            <select id="CenPH__lb_RCDDTL1__lb_1CRID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
-                                                <option selected="selected" value=" ">Please select</option>
-                                                <option value="BI-WEEKLY">Bi-Weekly</option>
-                                                <option value="MONTHLY">Monthly</option>
-                                                <option value="SEMI-MONTHLY">Semi-Monthly</option>
-                                                <option value="WEEKLY">Weekly</option>
-                                            </select>
-                                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
-                                        </span>
-                                    </div>
+                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                        <select id="CenPH__lb_RCDDTL1__lb_1CRID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                            <option selected="selected" value=" ">Please select</option>
+                            <option value="BI-WEEKLY">Bi-Weekly</option>
+                            <option value="MONTHLY">Monthly</option>
+                            <option value="SEMI-MONTHLY">Semi-Monthly</option>
+                            <option value="WEEKLY">Weekly</option>
+                        </select>
+                        <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                    </span>
+                </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
           </div>
           <!-- content-grid mdl-grid ends here --> 
       
-      <!-- content-grid mdl-grid starts here -->
+          <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
@@ -280,23 +313,23 @@
             <!-- 4 col ends here --> 
           </div>
           <!-- content-grid mdl-grid ends here --> 
-       <!-- content-grid mdl-grid starts here -->
+          <!-- content-grid mdl-grid starts here -->
           <div class="content-grid mdl-grid" style="padding:0"> 
             <!-- 4 col starts here -->
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Participate in Marketing:</span> </div>
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                                            <select id="CenPH__lb_RCDDTL1__lb_1CUID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
-                                                <option selected="selected" value=" ">Please select</option>
-                                                <option value="N">No</option>
-                                                <option value="Y">Yes</option>
-                       
-                                            </select>
-                                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
-                                        </span>
-                                    </div>
+                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                        <select id="CenPH__lb_RCDDTL1__lb_1CUID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                            <option selected="selected" value=" ">Please select</option>
+                            <option value="N">No</option>
+                            <option value="Y">Yes</option>
+   
+                        </select>
+                        <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                    </span>
+                </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -304,29 +337,28 @@
           <!-- content-grid mdl-grid ends here --> 
         </div>
     
-    <div class="button-container">
-    <div class="content-grid mdl-grid">
-      <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
-            </div>
-      <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
-    </div>
-    </div>
+        <div class="button-container">
+          <div class="content-grid mdl-grid">
+            <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+                  </div>
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-</main>
-<div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
-  <div id="modal1" class="simplePopup"></div>
-  <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
-        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
-        <div class="button-container">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+    </section>
+    </main>
+      <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
+      <div id="modal1" class="simplePopup"></div>
+      <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
         </div>
-    </div>
-<!-- Modified HTML code ends here -->
-      <div id="Div1" style="display:none;">
+        <div id="Div1" style="display:none;">
             
       <%--  PG: PMT for Credit Extn   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -336,11 +368,11 @@
       <%--  Generated by CA 2E release 2E ( 1547)                                                                            --%>
       <%--  Function type : Prompt & validate record                                                                         --%>
       <%--                                                                                                                   --%>
-      <%--  Company       : Conn Credit Corp.                                                                                --%>
+      <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 06/26/17  Time  : 13:02:49                                                                       --%>
-      <%--  Copyright     : Conn Credit Corp.                                                                                --%>
+      <%--  User name     : PKUMAR                                                                                           --%>
+      <%--  Date          : 07/05/17  Time  : 03:34:38                                                                       --%>
+      <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
@@ -351,7 +383,7 @@
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;"
             FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;"
-            SetOfInds="98 99 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 " 
+            SetOfInds="98 99 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 " 
             CommandKeyInd="29" 
             CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 25"
           >&nbsp;
@@ -404,7 +436,6 @@
           <%--  Txt: Filler 1                                                                                                    --%>
           <%--  Cde: Home Phone                                                                                                  --%>
           <%--  Txt: Residence Type                                                                                              --%>
-          <%--  Nbr: Months At Address                                                                                           --%>
           <%--  Cde: Cell Phone                                                                                                  --%>
           <%--  Nbr: Filler 3                                                                                                    --%>
           <%--  Nbr: Filler 1                                                                                                    --%>
@@ -439,6 +470,12 @@
           <%--  Sts: Direct Deposit                                                                                              --%>
           <%--  Sts: Direct Deposit                                                                                              --%>
           <%--  Condition: (Y/N)                                                                                                 --%>
+          <%--  Sts: Residence Type                                                                                              --%>
+          <%--  Sts: Residence Type                                                                                              --%>
+          <%--  Condition: Res Type                                                                                              --%>
+          <%--  Nbr: Months At Address                                                                                           --%>
+          <%--  Nbr: Months At Address                                                                                           --%>
+          <%--  Nbr: Months At Address                                                                                           --%>
           <%--  *CON (Screen constant)                                                                                           --%>
           <%--  Cde: Bank Routing Nbr                                                                                            --%>
           <%--  Cde: Bank Routing Nbr                                                                                            --%>
@@ -495,12 +532,12 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,18" 
  />
-            <mdf:DdsConstant id="DdsConstant24" runat="server" 
-              style="position: absolute; left: 631px; top: 3px;"
+            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+              style="position: absolute; left: 658px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb__lb_PGM" runat="server" style="position: absolute; left: 712px; top: 0px; width: 91px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb__lb_PGM" runat="server" style="position: absolute; left: 739px; top: 0px; width: 91px"
               CssClass="DdsCharField"
               Length="10" 
               Alias="##PGM" 
@@ -515,12 +552,12 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
-              style="position: absolute; left: 280px; top: 27px;"
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+              style="position: absolute; left: 307px; top: 27px;"
               Text="Create Header Details" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb__lb_TME" runat="server" style="position: absolute; left: 631px; top: 24px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb__lb_TME" runat="server" style="position: absolute; left: 658px; top: 24px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
@@ -529,8 +566,8 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant25" runat="server" 
-              style="position: absolute; left: 712px; top: 27px;"
+            <mdf:DdsConstant id="DdsConstant28" runat="server" 
+              style="position: absolute; left: 739px; top: 27px;"
               Text="ENTER  " 
               CssClass="DdsConstant"
  />
@@ -766,13 +803,6 @@
               Alias="#1XYXT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1UNN_lb_" runat="server" style="position: absolute; left: 1px; top: 0px; width: 46px"
-              CssClass="DdsDecField"
-              Length="5" 
-              Decimals="0" 
-              Alias="#1UNN#" 
-              Usage="Hidden" 
- />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_1MJCO" runat="server" style="position: absolute; left: 1px; top: 0px; width: 127px"
               CssClass="DdsCharField"
               Length="14" 
@@ -904,154 +934,196 @@
               Usage="Hidden" 
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
-              style="position: absolute; left: 19px; top: 99px;"
+              style="position: absolute; left: 19px; top: 75px;"
               Text="Cust" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DW5TX" runat="server" style="position: absolute; left: 64px; top: 96px; width: 271px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DW5TX" runat="server" style="position: absolute; left: 64px; top: 72px; width: 271px"
               CssClass="DdsCharField"
               Length="30" 
               Alias="#DW5TX" 
               Usage="OutputOnly" 
-              VirtualRowCol="5,7" 
+              VirtualRowCol="4,7" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1VBXT" runat="server" style="position: absolute; left: 19px; top: 120px; width: 451px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1VBXT" runat="server" style="position: absolute; left: 19px; top: 96px; width: 451px"
               CssClass="DdsCharField"
               Length="50" 
               Lower="True" 
               Alias="#1VBXT" 
               Usage="Both" 
-              VirtualRowCol="6,2" 
+              VirtualRowCol="5,2" 
               Protect="79" 
               PositionCursor="31 | !31 & !98 & !99 & !79" 
               Color="Red : 31 &amp; !79 , Green : !79 &amp; !31" 
               TabIndex="1"  />
             <mdf:DdsConstant id="DdsConstant3" runat="server" 
-              style="position: absolute; left: 19px; top: 147px;"
-              Text="Home Phone  ." 
+              style="position: absolute; left: 19px; top: 123px;"
+              Text="Home Phone  . . ." 
               VisibleCondition="!78"
               Color="Blue" 
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
-              style="position: absolute; left: 19px; top: 147px;"
-              Text="Home Phone  :" 
+              style="position: absolute; left: 19px; top: 123px;"
+              Text="Home Phone  . . :" 
               VisibleCondition="78"
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DPPNB" runat="server" style="position: absolute; left: 163px; top: 144px; width: 91px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DPPNB" runat="server" style="position: absolute; left: 199px; top: 120px; width: 91px"
               CssClass="DdsDecField"
               Length="10" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#DPPNB" 
               Usage="Both" 
-              VirtualRowCol="7,18" 
+              VirtualRowCol="6,22" 
               Protect="78" 
               PositionCursor="32 | !32 & !98 & !99 & !78" 
               Color="Red : 32 &amp; !78 , Green : !78 &amp; !32" 
               EditCode="4" 
               TabIndex="2"  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
-              style="position: absolute; left: 307px; top: 147px;"
+            <mdf:DdsConstant id="DdsConstant22" runat="server" 
+              style="position: absolute; left: 370px; top: 123px;"
               Text="SSN Benefits" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CJID" runat="server" style="position: absolute; left: 478px; top: 144px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CJID" runat="server" style="position: absolute; left: 541px; top: 120px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#1CJID" 
               Usage="Both" 
-              VirtualRowCol="7,50" 
+              VirtualRowCol="6,54" 
               PositionCursor="33 | !33 & !98 & !99" 
               Color="Red : 33 , Green : !33" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
               TabIndex="3"  />
-            <mdf:DdsConstant id="DdsConstant4" runat="server" 
-              style="position: absolute; left: 19px; top: 171px;"
-              Text="Cell Phone  ." 
+            <mdf:DdsConstant id="DdsConstant5" runat="server" 
+              style="position: absolute; left: 19px; top: 147px;"
+              Text="Cell Phone  . . ." 
               VisibleCondition="!77"
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant5" runat="server" 
-              style="position: absolute; left: 19px; top: 171px;"
-              Text="Cell Phone  :" 
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
+              style="position: absolute; left: 19px; top: 147px;"
+              Text="Cell Phone  . . :" 
               VisibleCondition="77"
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DPRNB" runat="server" style="position: absolute; left: 163px; top: 168px; width: 91px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DPRNB" runat="server" style="position: absolute; left: 199px; top: 144px; width: 91px"
               CssClass="DdsDecField"
               Length="10" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#DPRNB" 
               Usage="Both" 
-              VirtualRowCol="8,18" 
+              VirtualRowCol="7,22" 
               Protect="77" 
               PositionCursor="34 & !77" 
               Color="Red : 34 &amp; !77 , Green : !77 &amp; !34" 
               EditCode="4" 
               TabIndex="4"  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
-              style="position: absolute; left: 307px; top: 171px;"
+            <mdf:DdsConstant id="DdsConstant23" runat="server" 
+              style="position: absolute; left: 370px; top: 147px;"
               Text="Direct Deposit" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CLID" runat="server" style="position: absolute; left: 478px; top: 168px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CLID" runat="server" style="position: absolute; left: 541px; top: 144px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#1CLID" 
               Usage="Both" 
-              VirtualRowCol="8,50" 
+              VirtualRowCol="7,54" 
               PositionCursor="35" 
               Color="Red : 35 , Green : !35" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
               TabIndex="5"  />
             <mdf:DdsConstant id="DdsConstant6" runat="server" 
+              style="position: absolute; left: 19px; top: 171px;"
+              Text="Residence Type (?)" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDGID" runat="server" style="position: absolute; left: 199px; top: 168px; width: 82px"
+              CssClass="DdsCharField"
+              Length="6" 
+              Lower="True" 
+              Alias="#DDGID" 
+              Usage="Both" 
+              VirtualRowCol="8,22" 
+              PositionCursor="36" 
+              Color="Red : 36 , Green : !36" 
+              ValuesStyle="DropdownBoth" 
+              Values="' ' 'Own' 'Rent' '?' " 
+              TabIndex="6"  />
+            <mdf:DdsConstant id="DdsConstant24" runat="server" 
+              style="position: absolute; left: 370px; top: 171px;"
+              Text="For . . . . ." 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1UNN_lb_" runat="server" style="position: absolute; left: 541px; top: 168px; width: 46px"
+              CssClass="DdsDecField"
+              Length="5" 
+              Decimals="0" 
+              LeftPad="Zeroes" 
+              Alias="#1UNN#" 
+              Usage="Both" 
+              VirtualRowCol="8,54" 
+              PositionCursor="37" 
+              Color="Red : 37 , Green : !37" 
+              EditCode="4" 
+              TabIndex="7"  />
+            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+              style="position: absolute; left: 649px; top: 171px;"
+              Text="(months)" 
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant7" runat="server" 
               style="position: absolute; left: 19px; top: 195px;"
               Text="==========================================================================" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant7" runat="server" 
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
               style="position: absolute; left: 19px; top: 219px;"
               Text="Routing Nbr  . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UON_lb_" runat="server" style="position: absolute; left: 208px; top: 216px; width: 82px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UON_lb_" runat="server" style="position: absolute; left: 235px; top: 216px; width: 82px"
               CssClass="DdsCharField"
               Length="9" 
               Alias="#1UON#" 
               Usage="Both" 
               VirtualRowCol="10,23" 
-              PositionCursor="36" 
-              Color="Red : 36 , Green : !36" 
-              TabIndex="6"  />
-            <mdf:DdsConstant id="DdsConstant8" runat="server" 
+              PositionCursor="38" 
+              Color="Red : 38 , Green : !38" 
+              TabIndex="8"  />
+            <mdf:DdsConstant id="DdsConstant9" runat="server" 
               style="position: absolute; left: 19px; top: 243px;"
               Text="A/C Nbr  . . . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UPN_lb_" runat="server" style="position: absolute; left: 208px; top: 240px; width: 154px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UPN_lb_" runat="server" style="position: absolute; left: 235px; top: 240px; width: 154px"
               CssClass="DdsCharField"
               Length="17" 
               Alias="#1UPN#" 
               Usage="Both" 
               VirtualRowCol="11,23" 
-              PositionCursor="37" 
-              Color="Red : 37 , Green : !37" 
-              TabIndex="7"  />
-            <mdf:DdsConstant id="DdsConstant9" runat="server" 
+              PositionCursor="39" 
+              Color="Red : 39 , Green : !39" 
+              TabIndex="9"  />
+            <mdf:DdsConstant id="DdsConstant10" runat="server" 
               style="position: absolute; left: 19px; top: 267px;"
               Text="Date A/C Open  . ." 
               Color="Blue" 
@@ -1064,47 +1136,47 @@
               Alias="#1JWDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JWDT" runat="server" style="position: absolute; left: 208px; top: 264px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JWDT" runat="server" style="position: absolute; left: 235px; top: 264px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
               Alias="V1JWDT" 
               Usage="Both" 
               VirtualRowCol="12,23" 
-              PositionCursor="38" 
-              Color="Red : 38 , Green : !38" 
+              PositionCursor="40" 
+              Color="Red : 40 , Green : !40" 
               EditWord="  /  /  " 
               Compare="GE 0" 
-              TabIndex="8"  />
-            <mdf:DdsConstant id="DdsConstant10" runat="server" 
+              TabIndex="10"  />
+            <mdf:DdsConstant id="DdsConstant11" runat="server" 
               style="position: absolute; left: 19px; top: 291px;"
               Text="==========================================================================" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant11" runat="server" 
+            <mdf:DdsConstant id="DdsConstant12" runat="server" 
               style="position: absolute; left: 19px; top: 315px;"
               Text="Occupation . . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DY5XT" runat="server" style="position: absolute; left: 208px; top: 312px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DY5XT" runat="server" style="position: absolute; left: 235px; top: 312px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Lower="True" 
               Alias="#DY5XT" 
               Usage="Both" 
               VirtualRowCol="14,23" 
-              PositionCursor="39" 
-              Color="Red : 39 , Green : !39" 
-              TabIndex="9"  />
-            <mdf:DdsConstant id="DdsConstant12" runat="server" 
+              PositionCursor="41" 
+              Color="Red : 41 , Green : !41" 
+              TabIndex="11"  />
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
               style="position: absolute; left: 19px; top: 339px;"
               Text="Monthly Income . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1UZN_lb_" runat="server" style="position: absolute; left: 208px; top: 336px; width: 55px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1UZN_lb_" runat="server" style="position: absolute; left: 235px; top: 336px; width: 55px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
@@ -1112,28 +1184,28 @@
               Alias="#1UZN#" 
               Usage="Both" 
               VirtualRowCol="15,23" 
-              PositionCursor="40" 
-              Color="Red : 40 , Green : !40" 
+              PositionCursor="42" 
+              Color="Red : 42 , Green : !42" 
               EditCode="4" 
-              TabIndex="10"  />
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
-              style="position: absolute; left: 334px; top: 339px;"
-              Text="Pay Frequency  ." 
+              TabIndex="12"  />
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+              style="position: absolute; left: 361px; top: 339px;"
+              Text="Pay Frequency (?)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CRID" runat="server" style="position: absolute; left: 559px; top: 336px; width: 208px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CRID" runat="server" style="position: absolute; left: 586px; top: 336px; width: 208px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#1CRID" 
               Usage="Both" 
               VirtualRowCol="15,56" 
-              PositionCursor="41" 
-              Color="Red : 41 , Green : !41" 
+              PositionCursor="43" 
+              Color="Red : 43 , Green : !43" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'BI-WEEKLY' 'MONTHLY' 'SEMI-MONTHLY' 'WEEKLY' '?' " 
-              TabIndex="11"  />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+              TabIndex="13"  />
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 19px; top: 363px;"
               Text="Last Paid Date . ." 
               Color="Blue" 
@@ -1146,20 +1218,20 @@
               Alias="#1JYDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JYDT" runat="server" style="position: absolute; left: 208px; top: 360px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JYDT" runat="server" style="position: absolute; left: 235px; top: 360px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
               Alias="V1JYDT" 
               Usage="Both" 
               VirtualRowCol="16,23" 
-              PositionCursor="42" 
-              Color="Red : 42 , Green : !42" 
+              PositionCursor="44" 
+              Color="Red : 44 , Green : !44" 
               EditWord="  /  /  " 
               Compare="GE 0" 
-              TabIndex="12"  />
-            <mdf:DdsConstant id="DdsConstant22" runat="server" 
-              style="position: absolute; left: 334px; top: 363px;"
+              TabIndex="14"  />
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
+              style="position: absolute; left: 361px; top: 363px;"
               Text="Next Pay Date  ." 
               Color="Blue" 
               CssClass="DdsConstant"
@@ -1171,18 +1243,18 @@
               Alias="#1JZDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JZDT" runat="server" style="position: absolute; left: 559px; top: 360px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JZDT" runat="server" style="position: absolute; left: 586px; top: 360px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
               Alias="V1JZDT" 
               Usage="Both" 
               VirtualRowCol="16,56" 
-              PositionCursor="43" 
-              Color="Red : 43 , Green : !43" 
+              PositionCursor="45" 
+              Color="Red : 45 , Green : !45" 
               EditWord="  /  /  " 
               Compare="GE 0" 
-              TabIndex="13"  />
+              TabIndex="15"  />
             <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 387px;"
               Text="Hire Date  . . . ." 
@@ -1190,7 +1262,7 @@
               Color="Blue : !76" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 19px; top: 387px;"
               Text="Hire Date  . . . :" 
               VisibleCondition="76"
@@ -1204,59 +1276,59 @@
               Alias="#1JXDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JXDT" runat="server" style="position: absolute; left: 208px; top: 384px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JXDT" runat="server" style="position: absolute; left: 235px; top: 384px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
               Alias="V1JXDT" 
-              VisibleCondition="!( 76 & !44 )"
+              VisibleCondition="!( 76 & !46 )"
               Usage="Both" 
               VirtualRowCol="17,23" 
               Protect="76" 
-              PositionCursor="44 & !76" 
-              Color="Red : 44 &amp; !76 , Green : !76 &amp; !44" 
+              PositionCursor="46 & !76" 
+              Color="Red : 46 &amp; !76 , Green : !76 &amp; !46" 
               EditWord="  /  /  " 
               Compare="GE 0" 
-              TabIndex="14"  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+              TabIndex="16"  />
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 435px;"
               Text="Credit Card Bin . . . . . . . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1USN_lb_" runat="server" style="position: absolute; left: 343px; top: 432px; width: 55px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1USN_lb_" runat="server" style="position: absolute; left: 370px; top: 432px; width: 55px"
               CssClass="DdsCharField"
               Length="6" 
               LeftPad="Zeroes" 
               Alias="#1USN#" 
               Usage="Both" 
               VirtualRowCol="19,38" 
-              PositionCursor="45" 
-              Color="Red : 45 , Green : !45" 
-              TabIndex="15"  />
-            <mdf:DdsConstant id="DdsConstant23" runat="server" 
-              style="position: absolute; left: 442px; top: 435px;"
+              PositionCursor="47" 
+              Color="Red : 47 , Green : !47" 
+              TabIndex="17"  />
+            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+              style="position: absolute; left: 469px; top: 435px;"
               Text="(First 6 digits)" 
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 19px; top: 459px;"
               Text="Participate in Marketing? . . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CUID" runat="server" style="position: absolute; left: 343px; top: 456px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CUID" runat="server" style="position: absolute; left: 370px; top: 456px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#1CUID" 
               Usage="Both" 
               VirtualRowCol="20,38" 
-              PositionCursor="46" 
-              Color="Red : 46 , Green : !46" 
+              PositionCursor="48" 
+              Color="Red : 48 , Green : !48" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
-              TabIndex="16"  />
+              TabIndex="18"  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
             style="position: relative; width: 315px; height: 24px" 
@@ -1265,7 +1337,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+            <mdf:DdsConstant id="DdsConstant29" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F12=Cancel" 
               CssClass="DdsConstant"
@@ -1280,7 +1352,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+            <mdf:DdsConstant id="DdsConstant30" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1299,8 +1371,8 @@
               Usage="Both" 
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
-              TabIndex="17"  />
-            <mdf:DdsConstant id="DdsConstant28" runat="server" 
+              TabIndex="19"  />
+            <mdf:DdsConstant id="DdsConstant31" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1347,7 +1419,8 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-    <style type="text/css">
+
+       <style type="text/css">
       .date-span {
         display: inline-block;
         position: relative;
@@ -1384,7 +1457,9 @@
                 "CenPH__lb_RCDDTL1__lb_1CRID": "CenPH__lb_RCDDTL1__lb_1CRID_new",
                 "CenPH__lb_RCDDTL1_V1JZDT":"CenPH__lb_RCDDTL1_V1JZDT_new",
                 "CenPH__lb_RCDDTL1__lb_1USN_lb_":"CenPH__lb_RCDDTL1__lb_1USN_lb_new",
-                "CenPH__lb_RCDDTL1__lb_1CUID":"CenPH__lb_RCDDTL1__lb_1CUID_new"
+                "CenPH__lb_RCDDTL1__lb_1CUID":"CenPH__lb_RCDDTL1__lb_1CUID_new",
+                "CenPH__lb_RCDDTL1__lb_DDGID":"CenPH__lb_RCDDTL1__lb_DDGID_new",
+                "CenPH__lb_RCDDTL1__lb_1UNN_lb_":"CenPH__lb_RCDDTL1__lb_1UNN_lb_new"
             }
         }
 
