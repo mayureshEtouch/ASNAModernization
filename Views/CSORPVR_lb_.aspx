@@ -146,7 +146,7 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">For:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
+                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" maxlength="5" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
                   </div>
                 </div>
               </div>
@@ -1436,7 +1436,7 @@
      <script type="text/javascript">
         var copyToAndFrom = {
             "displayOnlyFields": {
-                "CenPH_DdsConstant24": "date",
+                "CenPH_DdsConstant27": "date",
                 "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
                 "CenPH__lb_RCDDTL1__lb_DW5TX": "CenPH__lb_RCDDTL1__lb_DW5TX_new",
                 "CenPH__lb_RCDDTL1__lb_DPPNB": "CenPH__lb_RCDDTL1__lb_DPPNB_new",
@@ -1525,12 +1525,6 @@
                 var date = $("#CenPH__lb_RCDDTL1_V1JWDT_new").val().split("/");
                 $("#CenPH__lb_RCDDTL1_V1JWDT").val(date[0] + date[1] + date[2].substr(2, 3));
             });
-
-
-
-            /*<div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX" class="date-span"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JWDT_new" onfocus="_09('V1JWDT','12,23','#RCDDTL1');" readonly>
-            <i id="CenPH__lb_RCDDTL1_V1JWDT_new_new" class="material-icons calender-icon page-icons editable-data"></i>
-            <span id="reqdate" class="DdsCharField_OutputOnly"></span>*/
 
 
             $("#CenPH__lb_RCDDTL1_V1JYDT_new").html($("#CenPH__lb_RCDDTL1_V1JYDT").html());
