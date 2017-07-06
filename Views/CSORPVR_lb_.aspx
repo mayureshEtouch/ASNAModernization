@@ -146,7 +146,7 @@
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">For:</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
+                       <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1UNN_lb_new" maxlength="5" onfocus="_09('#1UZN#','15,23','#RCDDTL1');"></span>
                   </div>
                 </div>
               </div>
@@ -1468,6 +1468,13 @@
 
             //CenPH__lb_RCDDTL1__lb_1VBXT
             //CenPH__lb_RCDDTL1__lb_1VBXT_new
+            //$("#CenPH__lb_RCDDTL1__lb_1UNN_lb_new").val().replace(/\s/g, '');
+            if (/\s/.test($("#CenPH__lb_RCDDTL1__lb_1UNN_lb_new").val())) {
+                var temp = $("#CenPH__lb_RCDDTL1__lb_1UNN_lb_").val().replace(/\s/g, '');
+               $("#CenPH__lb_RCDDTL1__lb_1UNN_lb_new").val("");
+               $("#CenPH__lb_RCDDTL1__lb_1UNN_lb_new").val(temp);
+            }
+
             if ($("#CenPH__lb_RCDDTL1__lb_1VBXT").is("span")) {
               $("#CenPH__lb_RCDDTL1__lb_1VBXT_new").replaceWith("<span class='form-text'>"+$("#CenPH__lb_RCDDTL1__lb_1VBXT").text()+"</span>")
             }
