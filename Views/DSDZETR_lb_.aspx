@@ -1,9 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSDZETR_lb_.aspx.cs" Inherits="conns.DSDZETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
-      <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 6/21/2017 at 8:18 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library asnatrack, file qddssrc, member DSDZETR# --%>
+    <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
+        <%-- Migrated on 7/18/2017 at 4:58 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSDZETR# --%>
 
     </asp:Content>
 
@@ -147,12 +147,14 @@
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <select id="CenPH__lb_SFLCTL__lb_1FLST_new" name="CenPH__lb_SFLCTL__lb_1FLST_new" style="width: 174px; padding: 0 2px;">
                                         <option selected="selected" value=" ">Please select</option>
-                                        <option value="H">H - Held Delivery</option>
+                                        <!-- <option value="H">H - Held Delivery</option> -->
+                                        <option value="Y">Y - *Yes</option>
                                         <option value="L">L - Layaway</option>
+                                        <option value="X">X - Non-Delivery</option>
                                         <option value="N">N - Non-Partial Delivery</option>
                                         <option value="P">P - Partial Delivery</option>
-                                        <option value="X">X - Non-Delivery</option>
-                                        <option value="Y">Y - *Yes</option>
+                                        
+                                        
                                     </select>
                                     <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
                                 </span>
@@ -255,7 +257,7 @@
         </div>
     </div>
 
-       <div id="Div1" style="display: none;">
+       <div id="Div1" style="display:none;">
             
       <%--  OE: ETR Ent Ord Hdr       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -267,8 +269,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 06/20/17  Time  : 03:00:01                                                                       --%>
+      <%--  User name     : SBALAJI                                                                                          --%>
+      <%--  Date          : 07/17/17  Time  : 13:36:51                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -368,7 +370,7 @@
           <%--  Nbr: Phone Home                                                                                                  --%>
           <%--  Code: Delivery                                                                                                   --%>
           <%--  Code: Delivery                                                                                                   --%>
-          <%--  Condition: *ALL values                                                                                           --%>
+          <%--  Condition: Valid Sales Delivery Code                                                                             --%>
           <%--  STS: Yes/No                                                                                                      --%>
           <%--  STS: Yes/No                                                                                                      --%>
           <%--  Condition: Yes/No/Blank                                                                                          --%>
@@ -902,7 +904,7 @@
               VirtualRowCol="10,58" 
               PositionCursor="36" 
               ValuesStyle="DropdownBoth" 
-              Values="'P' 'N' 'H' 'X' 'L' ' ' 'Y' '?' " 
+              Values="' ' 'Y' 'L' 'X' 'N' 'P' '?' " 
               TabIndex="6"  />
             <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 586px; top: 219px;"
