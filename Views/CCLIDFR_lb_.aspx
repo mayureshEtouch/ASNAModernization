@@ -54,7 +54,7 @@
                     <div class="table-data-maincontainer">
                         <div style="overflow: auto;" class="table-container">
                             <div>							  
-								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="displayData" data-upgraded=",MaterialDataTable">
+								<table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="notesdata" data-upgraded=",MaterialDataTable">
 												<thead>
 													<tr>
 														<th colspan="2">Notes</th>
@@ -428,18 +428,28 @@
             
 			var dataMergeIndices = [[0], [1]];
 			
-			generateTableAndApplyInfiniteScroll("displayData", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
+			generateTableAndApplyInfiniteScroll("notesdata", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "NONE", dataMergeIndices);
 			$('body').on("click", "#next-page, #previous-page", function(event) {
-       $("#previous-page,#next-page").remove();
+        //console.log($('div[id^=CenPH__lb_SFLRCD_]:not(div[id$="End"])').length);
+
+        setTimeout(function(){
+          var rowcount = $('#__Page_PopUp div[id^=CenPH__lb_SFLRCD_]:not(div[id$="End"])').length.toString();
+            if ($("#notesdata tr").length > 5) {  
+              $("#notesdata").find("tr:eq("+rowcount+")").nextAll().hide();
+            }
+          },1000)
+          
                 setTimeout(function(){
-                    if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length === 0) {
-                        $("#displayData").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                  $("#previous-page,#next-page").remove();
+                    if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_0").length === 1) {
+                        $("#notesdata").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
                     }
                     if($("#__Page_PopUp #CenPH__lb_SFLRCD #CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
-                        $("#displayData").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                        $("#notesdata").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
                     }
-                },10)
-            });           
+                },1000)
+            });     
+            
             $('.close-icon').click(function (event) {
                 _00("F12", event);
             });
@@ -453,7 +463,7 @@
            });
 		   
 		  
-			$('#displayData tr td:nth-child(2)').each(function (i, col )
+			$('#notesdata tr td:nth-child(2)').each(function (i, col )
 				 {
 					$(col).text($(col).text().trim());
 				 });
