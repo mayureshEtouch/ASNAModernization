@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSSTETR_lb_.aspx.cs" Inherits="conns.DSSTETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 9/7/2016 at 7:28 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 7/19/2017 at 3:49 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSSTETR# --%>
 
     </asp:Content>
@@ -158,7 +158,7 @@
 					
 					  <select id="CenPH__lb_SFLCTL__lb_1FLST_new" name="CenPH__lb_SFLCTL__lb_1FLST_new" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 170px;  padding: 0 2px; margin-right:0" >
 							<option selected="selected" value=" ">Please Choose</option>
-							<option value="H">H - Held Delivery</option>
+							<!-- <option value="H">H - Held Delivery</option> -->
 							<option value="L">L - Layaway</option>
 							<option value="X">X - Non-Delivery</option>
 							<option value="N">N - Non-Partial Delivery</option>
@@ -293,7 +293,7 @@
 <!-- Modified HTML code ends here -->
 	
 	
-        <div id="Div1" style="display: none">
+        <div id="Div1" style="display:none;">
             
       <%--  OE: ETR Upd Ord Pymts     Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -305,8 +305,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : COOL21                                                                                           --%>
-      <%--  Date          : 07/25/16  Time  : 12:16:44                                                                       --%>
+      <%--  User name     : SBALAJI                                                                                          --%>
+      <%--  Date          : 07/18/17  Time  : 13:20:27                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -387,7 +387,7 @@
           <%--  Rate: Tax                                                                                                        --%>
           <%--  Code: Delivery                                                                                                   --%>
           <%--  Code: Delivery                                                                                                   --%>
-          <%--  Condition: Delivery Options Only                                                                                 --%>
+          <%--  Condition: Valid Edit Delivery Code                                                                              --%>
           <%--  *CON (Screen constant)                                                                                           --%>
           <%--  Amount: Tax.                                                                                                     --%>
           <%--  Date: Cust Reqd Del Date.                                                                                        --%>
@@ -790,7 +790,7 @@
               VirtualRowCol="8,68" 
               PositionCursor="31 | !31 & !98 & !99" 
               ValuesStyle="DropdownBoth" 
-              Values="' ' 'H' 'L' 'X' 'N' 'P' '?' " 
+              Values="' ' 'L' 'X' 'N' 'P' '?' " 
               TabIndex="1"  />
             <mdf:DdsConstant id="DdsConstant6" runat="server" 
               style="position: absolute; left: 19px; top: 195px;"
