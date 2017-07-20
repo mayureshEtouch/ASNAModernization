@@ -644,8 +644,8 @@
                 top: 40% !important;
             }
             #confirmprompt {
-               position: static !important;
-               margin-left: 30% !important;
+               /*position: static !important;*/
+               margin: 0 0 0 -15% !important;
             }
         </style>
     </asp:Content>
