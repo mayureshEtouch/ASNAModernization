@@ -270,7 +270,26 @@
         $("#CenPH_RSignon_User").on("keyup", function() {
           var name=$(this).val().toLowerCase();
 
-          if(name.length == 0){
+            if(name.length == 0){ 
+                $("#CenPH_RSignon_User").attr("required", true);
+                $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
+                $("#login").attr('disabled','disabled');
+                $("#login").css("pointer-events", "none");
+                validateInput(this);
+            }
+            else
+            {                 
+                if ($("#CenPH_RSignon_Password").val().length == 0) {
+                        $("#login").attr('disabled','disabled');
+                        $("#login").css("pointer-events", "none");
+                    }
+                    else
+                    {
+                        $('#login').removeAttr('disabled');
+                        $("#login").css("pointer-events", "auto");
+                    }
+            }
+/*          if(name.length == 0){
                 if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible'))
                 {
                     //console.log(99999)
@@ -310,7 +329,7 @@
                     $("#login").attr('disabled','disabled');
                     $("#login").css("pointer-events", "none");
                 }
-            }
+            }*/
         });
 
         $("#CenPH_RSignon_Password").on('keyup', function () {
