@@ -217,10 +217,26 @@
 					
 				$('#number1').val($('#CenPH__lb_SFLCTL__lb_2ABCD').val());
 				$('#number2').val($('#CenPH__lb_SFLCTL__lb_2AACD').val());
-							
-				var dataMergeIndices = [[0], [1], [2], [3], [4]];
-				generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
-			  $('#displayData tbody tr').prop('tabindex',''); 
+				if ($("#CenPH__lb_SFLCTL__lb_CMITX").text()=="AVAIL"){
+            $("#displayData thead tr th:eq(4)").remove();
+				   var dataMergeIndices = [[0], [1], [2], [3]];
+				   generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+			     $('#displayData tbody tr').prop('tabindex',''); 
+        }
+        else if($("#CenPH__lb_SFLCTL__lb_CMITX").text()=="MESSAGE"){
+            $("#displayData thead tr th:eq(3)").text("Message");
+            $("#displayData thead tr th:eq(4)").remove();
+            var dataMergeIndices = [[0], [1], [2],[3]];
+            generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+            $('#displayData tbody tr').prop('tabindex',''); 
+        }
+        else
+        {
+           $("#displayData thead tr th:eq(4)").remove();
+            var dataMergeIndices = [[0], [1], [2],[3],[4]];
+            generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
+            $('#displayData tbody tr').prop('tabindex',''); 
+        }
 
 		}
 		  
