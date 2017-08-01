@@ -138,6 +138,17 @@
       </div>
     </div>
   </section>
+  <section class="add-item">
+      <div class="add-item-wrapper">
+          <div class="content-grid mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col pull-right">
+                  <div class="icon-container">
+                    <span class="icon-txt display-model">Display<i class="material-icons md-15 md-light display-icon"></i>     </span>    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
   <section class="table-data-content-container spacer-container-bottom mrgnTp16" style="margin-bottom: 40px;">
     <div class="table-data-wrapper">
       <div class="table-data-maincontainer">
@@ -162,7 +173,7 @@
           <div class="button-container">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="folddrop">Fold/Drop</span> </div>
-              <div class="mdl-cell mdl-cell--1-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div>
+              <!-- <div class="mdl-cell mdl-cell--1-col mdl-cell--5-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div> -->
             </div>
           </div>
         </div>
@@ -864,7 +875,7 @@
                 _00('Enter', event);
             }
             
-            $("#next").click(function (event) {
+            $(".display-model").click(function (event) {
                 var row = $("#displayData tbody tr.selected");
                 selectCusotmer(row, "5", event);
                 //_00('enter', event);
