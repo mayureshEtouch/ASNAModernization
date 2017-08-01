@@ -118,7 +118,7 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yesLease">Yes Lease</span>
+                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yesLease">Yes Lease</span> -->
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByLease">Search By Lease</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
@@ -136,7 +136,7 @@
         </main>
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
+         <div id="Div1" style="display: none;">
             
       <%--  PG: DSP All Appl - Store  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -148,8 +148,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 07/17/17  Time  : 10:54:24                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 07/28/17  Time  : 10:19:53                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -160,7 +160,7 @@
             Alias="#SFLCTL"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;"
-            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;F7 'CF07.' 07;F8 'CF08.' 08;F9 'CF09.' 09;F11 'CF11.' 11;PageDown 'Next page.' 27 : !82;"
+            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;F8 'CF08.' 08;F10 'CF10.' 10;F11 'CF11.' 11;PageDown 'Next page.' 27 : !82;"
             SetOfInds="98 99 31 32 33 " 
             CommandKeyInd="29" 
             ClearRecords="80" 
@@ -962,7 +962,7 @@
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
-            style="position: relative; width: 648px; height: 24px" 
+            style="position: relative; width: 567px; height: 24px" 
             Alias="#CMDTXT1"
             CssClass="DdsRecord"
           >&nbsp;
@@ -970,7 +970,7 @@
           <%-- =========================================================================                                         --%>
             <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text="F3=Exit F5=Refresh F7=Yes Lease F8=Search F9= Search By Lease F11=All" 
+              Text="F3=Exit  F5=Refresh  F8=Search  F10=Search By Lease  F11=All" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
@@ -1066,14 +1066,14 @@
           $('body').on('click', '#refresh', function (event) {
               _00('F5', event);
           });
-          $('body').on('click', '#yesLease', function (event) {
+         /* $('body').on('click', '#yesLease', function (event) {
                   _00('F7', event);
-              });
+              });*/
           $('body').on('click', '#search', function (event) {
                   _00('F8', event);
               });
           $('body').on('click', '#searchByLease', function (event) {
-                  _00('F9', event);
+                  _00('F10', event);
               });
           $('body').on('click', '#all', function (event) {
                   _00('F11', event);
