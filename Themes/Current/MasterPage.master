@@ -21,6 +21,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+   <iframe  src="<%=Page.ResolveClientUrl("~/StretchSession.aspx")%>" width="0" height="0" style="display:none;"></iframe>
         <div id="wrapper" class="wrapper">
             <div id="header" class="header">
                 <div class="logo">
