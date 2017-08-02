@@ -46,7 +46,7 @@
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Location:</span> </div>
                 <div class="class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0" mdl-textfield-select-customer-phone" data-upgraded=",MaterialTextfield">
-                  <input type="text" data-tb-index="1" id="CenPH__lb_SFLCTL__lb_2AACD_new" class="mdl-textfield__input" style="float: left; width: 45px;">
+                  <input type="text" data-tb-index="1" id="CenPH__lb_SFLCTL__lb_2AACD_new" class="mdl-textfield__input" style="float: left; width: 45px;" maxlength="3">
                   <span class="form-text" id="CenPH__lb_SFLCTL__lb_CASTX_new"></span> </div>
               </div>
             </div>
@@ -65,7 +65,7 @@
               <div class="content-grid mdl-grid">
                 <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Status:</span> </div>
                 <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0">
-                  <input type="text" id="CenPH__lb_SFLCTL__lb_CW6ST_new" class="mdl-textfield__input" data-tb-index="2" maxlength="2">
+                  <input type="text" id="CenPH__lb_SFLCTL__lb_CW6ST_new" class="mdl-textfield__input" data-tb-index="1" maxlength="2">
                 </div>
               </div>
             </div>
@@ -866,8 +866,21 @@
       
             generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
 
-            $("#CenPH__lb_SFLCTL__lb_2AACD_new, #CenPH__lb_SFLCTL__lb_2XDXT_new, #CenPH__lb_SFLCTL__lb_CK2NB_new, #CenPH__lb_SFLCTL__lb_CDBN_lb_new").ForceNumericOnly();
+            $("#CenPH__lb_SFLCTL__lb_2AACD_new, #CenPH__lb_SFLCTL__lb_2XDXT_new, #CenPH__lb_SFLCTL__lb_CDBN_lb_new").ForceNumericOnly();
               $("#CenPH__lb_SFLCTL__lb_2XIXT_new").ForceAmountWithTwoDecimalValue();
+              $("#CenPH__lb_SFLCTL__lb_CK2NB_new").val($("#CenPH__lb_SFLCTL__lb_CK2NB_new").val().replace(/\s+/g, ''));
+              $("#CenPH__lb_SFLCTL__lb_CDBN_lb_new").val($("#CenPH__lb_SFLCTL__lb_CDBN_lb_new").val().replace(/\s+/g, ''));
+              $("#CenPH__lb_SFLCTL__lb_2XIXT_new").val($("#CenPH__lb_SFLCTL__lb_2XIXT_new").val().replace(/\s+/g, ''));
+
+              $('#CenPH__lb_SFLCTL__lb_CK2NB_new').bind('keypress', function (event) {
+                var regex = new RegExp("^[a-zA-Z0-9()+-]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
+                   event.preventDefault();
+                   return false;
+                }
+            });
+
              var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -889,31 +902,41 @@
               _00('F5', event);
             });
 
-            $('body').on('click', '#folddrop', function (event) {
+            function generateTableOnF8 () {
+              // _00('F8', event);
+              setTimeout(function(){ 
+                if ($("span[id^=CenPH_DdsConstant15]").length > 0) {
+                  $("#displayData th:eq(4)").after('<th>Home Phone</th>');
+                  $("#displayData th:eq(5)").after('<th>Cell Phone</th>');
+                  var dataMergeIndices = [[0], [1], [2], [3], [4], [6], [8]];
+                  generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
+                }
+                else
+                {
+                  $("#displayData th:eq(6)").remove();
+                  $("#displayData th:eq(5)").remove();
+
+                  $("#displayData tbody tr td").each(function() {
+                    $(this).eq(6).remove();
+                    $(this).eq(5).remove();
+                  });
+                  var dataMergeIndices = [[0], [1], [2], [3], [4]];
+                  generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
+                }
+
+              }, 10);
               
+            }
+
+            $('body').on('keydown', function (e) {
+              if (e.keyCode == 119) {
+                generateTableOnF8();
+              }
+            });
+
+            $('body').on('click touchstart', '#folddrop', function (event) {
               _00('F8', event);
-              if ($("#displayData th").length == 5) {
-                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
-                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
-                $("#displayData th:eq(4)").after('<th>Home Phone</th>');
-                $("#displayData th:eq(5)").after('<th>Cell Phone</th>');
-              }
-              else
-              {
-                $("#displayData th:eq(6)").remove();
-                $("#displayData th:eq(5)").remove();
-
-                $("#displayData tbody tr td").each(function() {
-                  $(this).eq(6).remove();
-                });
-                //$("#displayData tbody tr td:eq(5)").remove();
-
-                
-                $("#displayData tbody tr td:eq(6)").remove();
-                
-                var dataMergeIndices = [[0], [1], [2], [3], [4]];
-                generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
-              }
+              generateTableOnF8();
               
             });
 
