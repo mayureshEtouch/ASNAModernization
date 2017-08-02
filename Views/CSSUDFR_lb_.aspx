@@ -934,9 +934,21 @@
               }
             });
 
-            $('body').on('click touchstart', '#folddrop', function (event) {
+            $('body').on('click', '#folddrop', function (event) {
               _00('F8', event);
               generateTableOnF8();
+              
+            });
+
+            $('body').on('touchstart', '#folddrop', function (event) {
+              event.preventDefault();
+              
+              setTimeout(function(){ 
+                generateTableOnF8();
+              }, 100);
+              _00('F8', event);
+              alert($("span[id^=CenPH_DdsConstant15]").length);
+              
               
             });
 
