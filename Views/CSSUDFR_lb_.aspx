@@ -947,9 +947,6 @@
                 generateTableOnF8();
               }, 100);
               _00('F8', event);
-              alert($("span[id^=CenPH_DdsConstant15]").length);
-              
-              
             });
 
         });
