@@ -866,20 +866,20 @@
       
             generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
 
-            $("#CenPH__lb_SFLCTL__lb_2AACD_new, #CenPH__lb_SFLCTL__lb_2XDXT_new, #CenPH__lb_SFLCTL__lb_CDBN_lb_new").ForceNumericOnly();
+            $("#CenPH__lb_SFLCTL__lb_2AACD_new, #CenPH__lb_SFLCTL__lb_2XDXT_new, #CenPH__lb_SFLCTL__lb_CDBN_lb_new, CenPH__lb_SFLCTL__lb_CK2NB_new, CenPH__lb_SFLCTL__lb_CDBN_lb_new").ForceNumericOnly();
               $("#CenPH__lb_SFLCTL__lb_2XIXT_new").ForceAmountWithTwoDecimalValue();
               $("#CenPH__lb_SFLCTL__lb_CK2NB_new").val($("#CenPH__lb_SFLCTL__lb_CK2NB_new").val().replace(/\s+/g, ''));
               $("#CenPH__lb_SFLCTL__lb_CDBN_lb_new").val($("#CenPH__lb_SFLCTL__lb_CDBN_lb_new").val().replace(/\s+/g, ''));
               $("#CenPH__lb_SFLCTL__lb_2XIXT_new").val($("#CenPH__lb_SFLCTL__lb_2XIXT_new").val().replace(/\s+/g, ''));
 
-              $('#CenPH__lb_SFLCTL__lb_CK2NB_new').bind('keypress', function (event) {
+              /*$('#CenPH__lb_SFLCTL__lb_CK2NB_new').bind('keypress', function (event) {
                 var regex = new RegExp("^[a-zA-Z0-9()+-]+$");
                 var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
                 if (!regex.test(key)) {
                    event.preventDefault();
                    return false;
                 }
-            });
+            });*/
 
              var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
@@ -924,7 +924,7 @@
                   generateTableAndApplyInfiniteScroll("displayData", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
                 }
 
-              }, 10);
+              }, 100);
               
             }
 
