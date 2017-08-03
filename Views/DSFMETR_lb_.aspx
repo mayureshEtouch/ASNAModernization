@@ -1744,6 +1744,23 @@
             copyData();
         });
 
+        $('body').on("touchstart", "#next-page", function (event) {
+             event.preventDefault();
+            setTimeout(function(){
+                copyData();
+            },300);
+            _00("PgDn", event);
+            
+        });
+        $('body').on("touchstart", "#previous-page", function (event) {
+             event.preventDefault();
+             setTimeout(function(){
+                copyData();
+            },300);
+            _00("PgUp", event);
+            // copyData();
+        });
+
         $('#prompt').on("click", function (event) {
             _00("F4", event);
         });
