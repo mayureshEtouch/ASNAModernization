@@ -48,9 +48,9 @@
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--12-col" style="padding:0">
             <p id="msg1"></p>    
-            <p id="msg2"></p> 
+        <!--     <p id="msg2"></p> 
             <p id="msg3"></p> 
-            <p id="msg4"></p>           
+            <p id="msg4"></p>     -->       
           </div>
         </div>
         <div class="button-container">
@@ -417,6 +417,7 @@
             .modal-dialog-container {
                 width: 100%;
                 margin-top: 0;
+                margin-bottom: 3%;
             }
 
             .mdl-layout__content {
@@ -433,17 +434,15 @@
             #CenPH__lb_RCDDTL1 {
                   margin-top: 50%;
             }
-            .modal-dialog-container .mdl-layout__content {    margin-bottom: -7%;}
+            /*.modal-dialog-container .mdl-layout__content {    margin-bottom: -7%;}*/
         </style>
 
         <script type="text/javascript">
 
             var copyToAndFrom = {
             "displayOnlyFields": {
-               "CenPH_DdsConstant1":"msg1",
-               "CenPH_DdsConstant2":"msg2",
-               "CenPH_DdsConstant3":"msg3",
-               "CenPH_DdsConstant4":"msg4"
+               "CenPH_DdsConstant1+CenPH_DdsConstant2+CenPH_DdsConstant3+CenPH_DdsConstant4":"msg1"
+              
             },
             "inputFields": {
                
@@ -461,4 +460,5 @@
                 });
             });
         </script>
+
     </asp:Content>
