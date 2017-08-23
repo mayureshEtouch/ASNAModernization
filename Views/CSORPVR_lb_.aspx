@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/22/2017 at 1:57 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 8/23/2017 at 11:28 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CSORPVR# --%>
 
     </asp:Content>
@@ -163,21 +163,21 @@
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Pref Language (?):</span> </div>
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                     <span class="form-text" data-upgraded=",MaterialTextfield">
-                          <select id="CenPH__lb_RCDDTL1__lb_1CPID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                          <select id="CenPH__lb_RCDDTL1__lb_DDTID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
                               <option selected="selected" value=" ">Please select</option>
-                              <option value="0">0</option>
-                              <option value="1">1</option>
+                              <option value="English">English</option>
+                              <option value="Spanish">Spanish</option>
                           </select>
                           <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
                       </span>
                   </div>
                 </div>
               </div>
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+              <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                 <div class="content-grid mdl-grid">
                   <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label six-digit" id="lang"></span> </div>
                 </div>
-              </div>
+              </div> -->
               <!-- 4 col ends here --> 
             </div>
             <!-- content-grid mdl-grid ends here --> 
@@ -394,7 +394,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 08/21/17  Time  : 09:10:06                                                                       --%>
+      <%--  Date          : 08/22/17  Time  : 12:29:40                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -428,6 +428,7 @@
           <%--  TXT: Customer Last Name                                                                                          --%>
           <%--  TXT: Customer First Name                                                                                         --%>
           <%--  Sts: Self Employed                                                                                               --%>
+          <%--  Sts: Filler 1                                                                                                    --%>
           <%--  Txt: Bank Name                                                                                                   --%>
           <%--  Txt: Bank Account Type                                                                                           --%>
           <%--  STS: Have Bank Account                                                                                           --%>
@@ -498,8 +499,8 @@
           <%--  Nbr: Months At Address                                                                                           --%>
           <%--  Nbr: Months At Address                                                                                           --%>
           <%--  Nbr: Months At Address                                                                                           --%>
-          <%--  Sts: Filler 1                                                                                                    --%>
-          <%--  Sts: Filler 1                                                                                                    --%>
+          <%--  Sts: Preferred Language                                                                                          --%>
+          <%--  Sts: Preferred Language                                                                                          --%>
           <%--  Condition: Valid Values                                                                                          --%>
           <%--  # Txt: 10                                                                                                        --%>
           <%--  *CON (Screen constant)                                                                                           --%>
@@ -626,6 +627,12 @@
               CssClass="DdsCharField"
               Length="1" 
               Alias="#1CKID" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CPID" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#1CPID" 
               Usage="Hidden" 
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_1X1XT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 451px"
@@ -977,14 +984,14 @@
               PositionCursor="31 | !31 & !98 & !99 & !79" 
               Color="Red : 31 &amp; !79 , Green : !79 &amp; !31" 
               TabIndex="1"  />
-            <mdf:DdsConstant id="DdsConstant2" runat="server" 
+            <mdf:DdsConstant id="DdsConstant3" runat="server" 
               style="position: absolute; left: 19px; top: 123px;"
               Text="Home Phone  . . ." 
               VisibleCondition="!78"
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant3" runat="server" 
+            <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 123px;"
               Text="Home Phone  . . :" 
               VisibleCondition="78"
@@ -1022,14 +1029,14 @@
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
               TabIndex="3"  />
-            <mdf:DdsConstant id="DdsConstant5" runat="server" 
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
               style="position: absolute; left: 19px; top: 147px;"
               Text="Cell Phone  . . ." 
               VisibleCondition="!77"
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant4" runat="server" 
+            <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 19px; top: 147px;"
               Text="Cell Phone  . . :" 
               VisibleCondition="77"
@@ -1116,25 +1123,19 @@
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CPID" runat="server" style="position: absolute; left: 199px; top: 192px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDTID" runat="server" style="position: absolute; left: 199px; top: 192px; width: 118px"
               CssClass="DdsCharField"
-              Length="1" 
-              Alias="#1CPID" 
+              Length="10" 
+              Lower="True" 
+              Alias="#DDTID" 
               Usage="Both" 
               VirtualRowCol="9,22" 
               PositionCursor="38" 
               Color="Red : 38 , Green : !38" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
-              Values="' ' '0' '1' '?' " 
+              Values="' ' 'English' 'Spanish' '?' " 
               TabIndex="8"  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DTX10" runat="server" style="position: absolute; left: 244px; top: 192px; width: 91px"
-              CssClass="DdsCharField"
-              Length="10" 
-              Alias="#DTX10" 
-              Usage="OutputOnly" 
-              VirtualRowCol="9,24" 
- />
             <mdf:DdsConstant id="DdsConstant8" runat="server" 
               style="position: absolute; left: 19px; top: 219px;"
               Text="==========================================================================" 
@@ -1489,7 +1490,7 @@
                 "CenPH__lb_RCDDTL1__lb_DW5TX": "CenPH__lb_RCDDTL1__lb_DW5TX_new",
                 "CenPH__lb_RCDDTL1__lb_DPPNB": "CenPH__lb_RCDDTL1__lb_DPPNB_new",
                 "CenPH__lb_RCDDTL1__lb_DPRNB": "CenPH__lb_RCDDTL1__lb_DPRNB_new",
-                "CenPH__lb_RCDDTL1__lb_DTX10":"lang"
+                /*"CenPH__lb_RCDDTL1__lb_DTX10":"lang"*/
             },
             "inputFields": {
               "CenPH__lb_RCDDTL1__lb_1VBXT":"CenPH__lb_RCDDTL1__lb_1VBXT_new",
@@ -1509,7 +1510,7 @@
                 "CenPH__lb_RCDDTL1__lb_1CUID":"CenPH__lb_RCDDTL1__lb_1CUID_new",
                 "CenPH__lb_RCDDTL1__lb_DDGID":"CenPH__lb_RCDDTL1__lb_DDGID_new",
                 "CenPH__lb_RCDDTL1__lb_1UNN_lb_":"CenPH__lb_RCDDTL1__lb_1UNN_lb_new",
-                "CenPH__lb_RCDDTL1__lb_1CPID":"CenPH__lb_RCDDTL1__lb_1CPID_new"
+                "CenPH__lb_RCDDTL1__lb_DDTID":"CenPH__lb_RCDDTL1__lb_DDTID_new"
             }
         }
 
