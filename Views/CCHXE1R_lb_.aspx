@@ -246,11 +246,11 @@
                                 <span class="form-text">
                                    <select class="editable-data" id="source-of-inc" data-tb-index="5">
                                       <option value=" " selected="selected">Please Choose</option>
-                                      <option value="D">D</option>
-                                      <option value="E">E</option>
-                                      <option value="R">R</option>
-                                      <option value="S">S</option>
-                                      <option value="P">P</option>
+                                      <option value="D">D - Disability Income</option>
+                                      <option value="E">E - Employed</option>
+                                      <option value="R">R - Retired or Pension/401(k)</option>
+                                      <option value="S">S - Social Sec/Unemp Benefit</option>
+                                      <option value="P">P - Spouse/Partner</option>
                                     
                                   </select>
                                   <span style="margin: 0 5px;" id="ro-source-of-inc" class="ro-data"></span>&nbsp;&nbsp;
@@ -1729,6 +1729,7 @@
         #Div1 {padding-bottom: 100px;}
     </style>
     <script type="text/javascript">
+    //CenPH_DdsConstant43
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH__lb_RCDDTL1__lb_DALTX": "cust-name",
@@ -1837,7 +1838,7 @@
             }
 
             //Set date and time
-            $("[name='date']").text($("[id$=CenPH_DdsConstant42]").text());
+            $("[name='date']").text($("[id$=CenPH_DdsConstant43]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
             
             $('body').on('click', '#previous', function(event) {
