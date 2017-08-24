@@ -64,7 +64,7 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label-add">Customer Name:</span>
                                         <span class="form-text">
-                                        <span id="cust-name">000/000</span>
+                                        <span id="cust-name"></span>
 										</span>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">Home Phone:</span>
-                                        <span class="form-text" id="home-phone">000/ 000-000</span>
+                                        <span class="form-text" id="home-phone"></span>
                                     </div>
                                 </div>
 							</div>
@@ -82,11 +82,11 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label" style="vertical-align: top;">Customer Address:</span>
                                          <div style="display: inline-block; ">
-										<span id="cust-first-add">000/000</span>
+										<span id="cust-first-add"></span>
                                         <br>
-                                        <span id="cust-middle-add">000/000</span>
+                                        <span id="cust-middle-add"></span>
                                         <br>
-                                        <span id="cust-city-add">000/000</span>,&nbsp;<span id="cust-state-add">000/000</span>,&nbsp;<span id="cust-zipcode">000/000</span>
+                                        <span id="cust-city-add"></span>,&nbsp;<span id="cust-state-add"></span>,&nbsp;<span id="cust-zipcode"></span>
                                         <br>
                                         
                                         </div>
@@ -97,7 +97,9 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">Office Phone:</span>
-                                        <span class="form-text" id="office-phone">000/ 000-000</span>
+                                        <span class="form-text" id="office-phone"></span>
+                                        <span class="form-label" style="margin:0 20px 0 50px;">Ext:</span>
+                                        <span class="form-text" id="extensionPhone"></span>
                                     </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
@@ -141,8 +143,8 @@
                                                 <option value=" " selected="selected">Please Choose</option>
 												<option value="O">O-Own</option>
 												<option value="R">R-Rent</option>
-												<option value="L">L-Live</option>
-												
+												<!-- <option value="L">L-Live</option>
+												<option value="L">P-Live</option> -->
 											</select>
 											<span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
 											<span class="form-label">For</span>&nbsp;&nbsp;
@@ -387,7 +389,7 @@
         </div>
     
     <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;"> 
+       <div id="Div1" style="display: none;">
             
       <%--  CU: ED1 Personal Detail   Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -400,7 +402,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 08/14/17  Time  : 13:40:30                                                                       --%>
+      <%--  Date          : 08/23/17  Time  : 15:24:59                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -1339,17 +1341,20 @@
             <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 19px; top: 339px;"
               Text="Source of Income" 
-              Color="Blue" 
+              VisibleCondition="!( 77 )"
+              Color="Blue : !77" 
               CssClass="DdsConstant"
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDQID" runat="server" style="position: absolute; left: 199px; top: 336px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#DDQID" 
+              VisibleCondition="!( 77 & !47 )"
               Usage="Both" 
               VirtualRowCol="15,19" 
-              PositionCursor="47" 
-              Color="Red : 47 , Green : !47" 
+              Protect="77" 
+              PositionCursor="47 & !77" 
+              Color="Red : 47 &amp; !77 , Green : !77 &amp; !47" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'D' 'E' 'R' 'S' 'P' '?' " 
@@ -1357,20 +1362,20 @@
             <mdf:DdsConstant id="DdsConstant24" runat="server" 
               style="position: absolute; left: 280px; top: 339px;"
               Text="Employed at" 
-              VisibleCondition="!( 77 )"
-              Color="Blue : !77" 
+              VisibleCondition="!( 76 )"
+              Color="Blue : !76" 
               CssClass="DdsConstant"
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUNTX" runat="server" style="position: absolute; left: 388px; top: 336px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#DUNTX" 
-              VisibleCondition="!( 77 & !48 )"
+              VisibleCondition="!( 76 & !48 )"
               Usage="Both" 
               VirtualRowCol="15,37" 
-              Protect="77" 
-              PositionCursor="48 & !77" 
-              Color="Red : 48 &amp; !77 , Green : !77 &amp; !48" 
+              Protect="76" 
+              PositionCursor="48 & !76" 
+              Color="Red : 48 &amp; !76 , Green : !76 &amp; !48" 
               TabIndex="18"  />
             <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 363px;"
@@ -1651,7 +1656,6 @@
             style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -1740,6 +1744,7 @@
                 "CenPH__lb_RCDDTL1__lb_DAPTX": "cust-zipcode",
                 "CenPH__lb_RCDDTL1__lb_DD1NB": "home-phone",
                 "CenPH__lb_RCDDTL1__lb_DD2NB": "office-phone",
+                "CenPH__lb_RCDDTL1__lb_DAWNB":"extensionPhone",
                 "ctl00\\$CenPH\\$_lb_RCDDTL1_V1DOBD": "ro-cust-birth",
                 "CenPH__lb_RCDDTL1__lb_1DRCD": "ro-cust-lic-first",
                 "CenPH__lb_RCDDTL1__lb_DTX20":"ro-cust-lic-second",
@@ -1965,6 +1970,11 @@
                 $("#employed-at").parent().parent().css("display","block")
             }
             else{$("#employed-at").parent().parent().css("display","none")}
+
+            if($("#CenPH__lb_RCDDTL1__lb_DDQID").length > 0) {
+                $("#source-of-inc").parent().parent().css("display","block")
+            }
+            else{$("#source-of-inc").parent().parent().css("display","none")}
 
     if($(".simplePopupClose").length > 0) {
                 $(".simplePopupBackground1").show();
