@@ -1,8 +1,8 @@
- <%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSQBDFR_lb_.aspx.cs" Inherits="conns.CSQBDFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSQBDFR_lb_.aspx.cs" Inherits="Conns.CSQBDFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 7/18/2017 at 11:04 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 8/28/2017 at 6:02 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CSQBDFR# --%>
 
     </asp:Content>
@@ -118,7 +118,7 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-cell--10-col-desktop">
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>
-                        <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yesLease">Yes Lease</span> -->
+                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="applyProgress">Apply Progress</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchByLease">Search By Lease</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
@@ -136,7 +136,7 @@
         </main>
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-         <div id="Div1" style="display: none;">
+         <div id="Div1" style="display:none;">
             
       <%--  PG: DSP All Appl - Store  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -148,8 +148,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 07/28/17  Time  : 10:19:53                                                                       --%>
+      <%--  User name     : PKUMAR                                                                                           --%>
+      <%--  Date          : 08/24/17  Time  : 13:57:02                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -892,6 +892,7 @@
               VirtualRowCol="9,2" 
               PositionCursor="34" 
               Color="Red : 34 , Green : !34" 
+              CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '1' '2' " 
               TabIndex="1"  />
@@ -962,7 +963,7 @@
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
-            style="position: relative; width: 567px; height: 24px" 
+            style="position: relative; width: 621px; height: 24px" 
             Alias="#CMDTXT1"
             CssClass="DdsRecord"
           >&nbsp;
@@ -970,12 +971,12 @@
           <%-- =========================================================================                                         --%>
             <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text="F3=Exit  F5=Refresh  F8=Search  F10=Search By Lease  F11=All" 
+              Text="F3=Exit  F5=Refresh  F8=Apply Progess F10=Search By Lease  F11=All" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 9px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -990,10 +991,9 @@
           >&nbsp;
           <%-- =========================================================================                                         --%>
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -1078,9 +1078,9 @@
           $('body').on('click', '#all', function (event) {
                   _00('F11', event);
               });
-                  /*$('body').on('click', '#next', function (event) {
-                  _00('Enter', event);
-              }); */  
+          $('body').on('click', '#applyProgress', function (event) {
+              _00('F8', event);
+          });   
 
             /*$(".simplePopupClose").click(function (event) {
                 var ele = $("#__focusID__").val().split('$')[1] + "_" + $("#__focusID__").val().split('$')[2] + "_new";
