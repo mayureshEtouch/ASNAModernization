@@ -184,9 +184,9 @@
              <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col dob-width" style="margin: 0; width: 30%;"> <span class="form-label">DOB:</span> </div>
                 <div class="mdl-cell mdl-cell--8-col" style="margin:0"> <span class="form-text" data-upgraded=",MaterialTextfield">
-                  <input data-tb-index="2" class="editable-data" type="text" id="dobInputDate" name="date" size="15" readonly="true" >
+                  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JVDT_new" name="date" size="15" readonly="true" >
                         <i id="dobIconDate" class="material-icons calender-icon page-icons editable-data"></i>
-                        <span id="reqdate" class="DdsCharField_OutputOnly"></span> <span class="form-text" style="position:absolute;">(MM/DD/YYYY)</span></div>
+                        <span id="reqdate" class="DdsCharField_OutputOnly"></span> <span class="form-text" style="position:absolute;">&nbsp;&nbsp;&nbsp;&nbsp;(MM/DD/YYYY)</span></div>
 
                 </div>
             </div>
@@ -255,7 +255,14 @@
             <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
               <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Date A/C Open:</span> </div>
-                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1_V1JWDT_new" onfocus="_09('#CEOTX','6,46','#SFLCTL');" maxlength="6"></span></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <span id="CenPH_PANTX">
+
+<input data-tb-index="2" class="editable-data" type="text" id="CenPH__lb_RCDDTL1_V1JWDT_new" name="date" size="15" readonly="true" >
+                        <i id="accountOpenDate" class="material-icons calender-icon page-icons editable-data"></i>
+                        <span id="reqdate" class="DdsCharField_OutputOnly"></span>
+
+
+                </div>
               </div>
             </div>
             <!-- 4 col ends here --> 
@@ -332,7 +339,7 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Last Paid Date:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="lastPaidInputDate" name="date" size="15" readonly="true" >
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JYDT_new" name="date" size="15" readonly="true" >
                         <i id="lastPaidIconDate" class="material-icons calender-icon page-icons editable-data"></i>
                         <span id="reqdate" class="DdsCharField_OutputOnly"></span></div>
                   </div>
@@ -342,7 +349,7 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Next Pay Date:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="nextPayInputDate" name="date" size="15" readonly="true" >
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JZDT_new" name="date" size="15" readonly="true" >
                         <i id="nextPayIconDate" class="material-icons calender-icon page-icons editable-data"></i>
                         <span id="reqdate" class="DdsCharField_OutputOnly"></span></div>
                   </div>
@@ -357,7 +364,7 @@
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Hire Date:</span> </div>
-                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="hireInputDate" name="date" size="15" readonly="true" >
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JXDT_new" name="date" size="15" readonly="true" >
                         <i id="hireIconDate" class="material-icons calender-icon page-icons editable-data"></i>
                         <span id="reqdate" class="DdsCharField_OutputOnly"></span></div>
                     </div>
@@ -366,7 +373,7 @@
                   <!-- 4 col starts here -->
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Marketing:</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Participate in Marketing?</span> </div>
                       <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                         <span class="form-text" data-upgraded=",MaterialTextfield">
                             <select id="CenPH__lb_RCDDTL1__lb_1CUID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
@@ -443,7 +450,7 @@
 </main>
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1">
+       <div id="Div1" style="display: none;">
             
       <%--  PG: Apply Progressive     Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -456,7 +463,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 08/23/17  Time  : 06:21:58                                                                       --%>
+      <%--  Date          : 08/29/17  Time  : 13:05:18                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -586,13 +593,13 @@
           <%--  Condition: Pay Frequency                                                                                         --%>
           <%--  Dte: Last Pay Date                                                                                               --%>
           <%--  Dte: Last Pay Date                                                                                               --%>
+          <%--  Dte: Last Pay Date                                                                                               --%>
+          <%--  Dte: Next Pay Date                                                                                               --%>
           <%--  Dte: Next Pay Date                                                                                               --%>
           <%--  Dte: Next Pay Date                                                                                               --%>
           <%--  Dte: Hire Date                                                                                                   --%>
           <%--  Dte: Hire Date                                                                                                   --%>
-          <%--  STS: Marketing Opt Out                                                                                           --%>
-          <%--  STS: Marketing Opt Out                                                                                           --%>
-          <%--  Condition: (Y/N)                                                                                                 --%>
+          <%--  Dte: Hire Date                                                                                                   --%>
           <%--  Sts:ID Type                                                                                                      --%>
           <%--  Sts:ID Type                                                                                                      --%>
           <%--  Condition: ID Types                                                                                              --%>
@@ -600,6 +607,9 @@
           <%--  TXT: Driving License                                                                                             --%>
           <%--  Sts: Driver State                                                                                                --%>
           <%--  Sts: Driver State                                                                                                --%>
+          <%--  STS: Marketing Opt Out                                                                                           --%>
+          <%--  STS: Marketing Opt Out                                                                                           --%>
+          <%--  Condition: (Y/N)                                                                                                 --%>
           <%-- =========================================================================                                         --%>
             <mdf:DdsDecField id="_lb_RCDDTL1_ZZCSRW" runat="server" style="position: absolute; left: 1px; top: 0px; width: 28px"
               CssClass="DdsDecField"
@@ -629,7 +639,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,18" 
  />
-            <mdf:DdsConstant id="DdsConstant30" runat="server" 
+            <mdf:DdsConstant id="DdsConstant33" runat="server" 
               style="position: absolute; left: 631px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -663,7 +673,7 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant32" runat="server" 
+            <mdf:DdsConstant id="DdsConstant35" runat="server" 
               style="position: absolute; left: 739px; top: 27px;"
               Text="ENTER  " 
               CssClass="DdsConstant"
@@ -1011,7 +1021,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="4,7" 
  />
-            <mdf:DdsConstant id="DdsConstant24" runat="server" 
+            <mdf:DdsConstant id="DdsConstant23" runat="server" 
               style="position: absolute; left: 406px; top: 75px;"
               Text="S.S.N" 
               Color="Blue" 
@@ -1057,7 +1067,7 @@
               Color="Red : 33 , Green : !33" 
               EditCode="4" 
               TabIndex="3"  />
-            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+            <mdf:DdsConstant id="DdsConstant29" runat="server" 
               style="position: absolute; left: 469px; top: 123px;"
               Text="SSN Benefits (?)" 
               Color="Blue" 
@@ -1093,7 +1103,7 @@
               Color="Red : 35 , Green : !35" 
               EditCode="4" 
               TabIndex="5"  />
-            <mdf:DdsConstant id="DdsConstant28" runat="server" 
+            <mdf:DdsConstant id="DdsConstant30" runat="server" 
               style="position: absolute; left: 469px; top: 147px;"
               Text="Direct Deposit (?)" 
               Color="Blue" 
@@ -1130,7 +1140,7 @@
               ValuesStyle="DropdownBoth" 
               Values="' ' 'Own' 'Rent' '?' " 
               TabIndex="7"  />
-            <mdf:DdsConstant id="DdsConstant29" runat="server" 
+            <mdf:DdsConstant id="DdsConstant31" runat="server" 
               style="position: absolute; left: 469px; top: 171px;"
               Text="For . . . . . . ." 
               Color="Blue" 
@@ -1148,7 +1158,7 @@
               Color="Red : 38 , Green : !38" 
               EditCode="4" 
               TabIndex="8"  />
-            <mdf:DdsConstant id="DdsConstant33" runat="server" 
+            <mdf:DdsConstant id="DdsConstant36" runat="server" 
               style="position: absolute; left: 757px; top: 171px;"
               Text="(months)" 
               Color="DarkBlue" 
@@ -1179,91 +1189,91 @@
               Color="Red : 39 , Green : !39" 
               Compare="GE 0" 
               TabIndex="9"  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant22" runat="server" 
               style="position: absolute; left: 352px; top: 195px;"
               Text="(MM/DD/YYYY)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant6" runat="server" 
-              style="position: absolute; left: 19px; top: 219px;"
+            <mdf:DdsConstant id="DdsConstant32" runat="server" 
+              style="position: absolute; left: 469px; top: 195px;"
               Text="Pref Language (?)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDTID" runat="server" style="position: absolute; left: 226px; top: 216px; width: 118px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDTID" runat="server" style="position: absolute; left: 676px; top: 192px; width: 118px"
               CssClass="DdsCharField"
               Length="10" 
               Lower="True" 
               Alias="#DDTID" 
               Usage="Both" 
-              VirtualRowCol="10,22" 
+              VirtualRowCol="9,66" 
               PositionCursor="40" 
               Color="Red : 40 , Green : !40" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'English' 'Spanish' '?' " 
               TabIndex="10"  />
-            <mdf:DdsConstant id="DdsConstant7" runat="server" 
-              style="position: absolute; left: 19px; top: 243px;"
+            <mdf:DdsConstant id="DdsConstant6" runat="server" 
+              style="position: absolute; left: 19px; top: 219px;"
               Text="==========================================================================" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant8" runat="server" 
-              style="position: absolute; left: 19px; top: 267px;"
+            <mdf:DdsConstant id="DdsConstant7" runat="server" 
+              style="position: absolute; left: 19px; top: 243px;"
               Text="Routing Nbr  . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UON_lb_" runat="server" style="position: absolute; left: 262px; top: 264px; width: 82px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UON_lb_" runat="server" style="position: absolute; left: 262px; top: 240px; width: 82px"
               CssClass="DdsCharField"
               Length="9" 
               Alias="#1UON#" 
               Usage="Both" 
-              VirtualRowCol="12,23" 
+              VirtualRowCol="11,23" 
               PositionCursor="41" 
               Color="Red : 41 , Green : !41" 
               TabIndex="11"  />
-            <mdf:DdsConstant id="DdsConstant25" runat="server" 
-              style="position: absolute; left: 424px; top: 267px;"
+            <mdf:DdsConstant id="DdsConstant24" runat="server" 
+              style="position: absolute; left: 424px; top: 243px;"
               Text="Credit Card Bin" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1USN_lb_" runat="server" style="position: absolute; left: 568px; top: 264px; width: 55px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1USN_lb_" runat="server" style="position: absolute; left: 568px; top: 240px; width: 55px"
               CssClass="DdsCharField"
               Length="6" 
               LeftPad="Zeroes" 
               Alias="#1USN#" 
               Usage="Both" 
-              VirtualRowCol="12,57" 
+              VirtualRowCol="11,57" 
               PositionCursor="42" 
               Color="Red : 42 , Green : !42" 
               TabIndex="12"  />
-            <mdf:DdsConstant id="DdsConstant31" runat="server" 
-              style="position: absolute; left: 658px; top: 267px;"
+            <mdf:DdsConstant id="DdsConstant34" runat="server" 
+              style="position: absolute; left: 658px; top: 243px;"
               Text="(First 6 digits)" 
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant9" runat="server" 
-              style="position: absolute; left: 19px; top: 291px;"
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
+              style="position: absolute; left: 19px; top: 267px;"
               Text="A/C Nbr  . . . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UPN_lb_" runat="server" style="position: absolute; left: 262px; top: 288px; width: 154px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1UPN_lb_" runat="server" style="position: absolute; left: 262px; top: 264px; width: 154px"
               CssClass="DdsCharField"
               Length="17" 
               Alias="#1UPN#" 
               Usage="Both" 
-              VirtualRowCol="13,23" 
+              VirtualRowCol="12,23" 
               PositionCursor="43" 
               Color="Red : 43 , Green : !43" 
               TabIndex="13"  />
-            <mdf:DdsConstant id="DdsConstant26" runat="server" 
-              style="position: absolute; left: 424px; top: 291px;"
+            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+              style="position: absolute; left: 424px; top: 267px;"
               Text="Date A/C Open" 
               Color="Blue" 
               CssClass="DdsConstant"
@@ -1275,94 +1285,94 @@
               Alias="#1JWDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JWDT" runat="server" style="position: absolute; left: 568px; top: 288px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JWDT" runat="server" style="position: absolute; left: 568px; top: 264px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
               Alias="V1JWDT" 
               Usage="Both" 
-              VirtualRowCol="13,57" 
+              VirtualRowCol="12,57" 
               PositionCursor="44" 
               Color="Red : 44 , Green : !44" 
               EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="14"  />
-            <mdf:DdsConstant id="DdsConstant10" runat="server" 
-              style="position: absolute; left: 19px; top: 315px;"
+            <mdf:DdsConstant id="DdsConstant9" runat="server" 
+              style="position: absolute; left: 19px; top: 291px;"
               Text="==========================================================================" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant11" runat="server" 
-              style="position: absolute; left: 19px; top: 339px;"
+            <mdf:DdsConstant id="DdsConstant10" runat="server" 
+              style="position: absolute; left: 19px; top: 315px;"
               Text="Occupation . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DY5XT" runat="server" style="position: absolute; left: 190px; top: 336px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DY5XT" runat="server" style="position: absolute; left: 190px; top: 312px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Lower="True" 
               Alias="#DY5XT" 
               Usage="Both" 
-              VirtualRowCol="15,21" 
+              VirtualRowCol="14,21" 
               PositionCursor="45" 
               Color="Red : 45 , Green : !45" 
               TabIndex="15"  />
-            <mdf:DdsConstant id="DdsConstant12" runat="server" 
-              style="position: absolute; left: 19px; top: 363px;"
+            <mdf:DdsConstant id="DdsConstant11" runat="server" 
+              style="position: absolute; left: 19px; top: 339px;"
               Text="Employer Name  ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1C1XT" runat="server" style="position: absolute; left: 190px; top: 360px; width: 226px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1C1XT" runat="server" style="position: absolute; left: 190px; top: 336px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Lower="True" 
               Alias="#1C1XT" 
               Usage="Both" 
-              VirtualRowCol="16,21" 
+              VirtualRowCol="15,21" 
               PositionCursor="46" 
               Color="Red : 46 , Green : !46" 
               TabIndex="16"  />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
-              style="position: absolute; left: 19px; top: 387px;"
+            <mdf:DdsConstant id="DdsConstant12" runat="server" 
+              style="position: absolute; left: 19px; top: 363px;"
               Text="Monthly Income ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1UZN_lb_" runat="server" style="position: absolute; left: 190px; top: 384px; width: 55px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1UZN_lb_" runat="server" style="position: absolute; left: 190px; top: 360px; width: 55px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#1UZN#" 
               Usage="Both" 
-              VirtualRowCol="17,21" 
+              VirtualRowCol="16,21" 
               PositionCursor="47" 
               Color="Red : 47 , Green : !47" 
               EditCode="4" 
               TabIndex="17"  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
-              style="position: absolute; left: 397px; top: 387px;"
+            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+              style="position: absolute; left: 424px; top: 363px;"
               Text="Pay Frequency (?)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CRID" runat="server" style="position: absolute; left: 568px; top: 384px; width: 208px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CRID" runat="server" style="position: absolute; left: 595px; top: 360px; width: 208px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#1CRID" 
               Usage="Both" 
-              VirtualRowCol="17,57" 
+              VirtualRowCol="16,60" 
               PositionCursor="48" 
               Color="Red : 48 , Green : !48" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'BI-WEEKLY' 'MONTHLY' 'SEMI-MONTHLY' 'WEEKLY' '?' " 
               TabIndex="18"  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
-              style="position: absolute; left: 19px; top: 411px;"
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+              style="position: absolute; left: 19px; top: 387px;"
               Text="Last Paid Date ." 
               Color="Blue" 
               CssClass="DdsConstant"
@@ -1374,20 +1384,26 @@
               Alias="#1JYDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JYDT" runat="server" style="position: absolute; left: 190px; top: 408px; width: 73px"
-              CssClass="DdsDecField"
-              Length="6" 
-              Decimals="0" 
+            <mdf:DdsDecDateField id="_lb_RCDDTL1_V1JYDT" runat="server" style="position: absolute; left: 190px; top: 384px; width: 73px"
+              CssClass="DdsDecDateField"
+              Length="8" 
+              DateFormat="USA" 
+              DateSeparator="'/'" 
               Alias="V1JYDT" 
               Usage="Both" 
-              VirtualRowCol="18,21" 
+              VirtualRowCol="17,21" 
               PositionCursor="49" 
               Color="Red : 49 , Green : !49" 
-              EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="19"  />
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
-              style="position: absolute; left: 397px; top: 411px;"
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+              style="position: absolute; left: 343px; top: 387px;"
+              Text="(MM/DD/YY)" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+              style="position: absolute; left: 19px; top: 411px;"
               Text="Next Pay Date  ." 
               Color="Blue" 
               CssClass="DdsConstant"
@@ -1399,18 +1415,24 @@
               Alias="#1JZDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JZDT" runat="server" style="position: absolute; left: 568px; top: 408px; width: 73px"
-              CssClass="DdsDecField"
-              Length="6" 
-              Decimals="0" 
+            <mdf:DdsDecDateField id="_lb_RCDDTL1_V1JZDT" runat="server" style="position: absolute; left: 190px; top: 408px; width: 73px"
+              CssClass="DdsDecDateField"
+              Length="8" 
+              DateFormat="USA" 
+              DateSeparator="'/'" 
               Alias="V1JZDT" 
               Usage="Both" 
-              VirtualRowCol="18,57" 
+              VirtualRowCol="18,21" 
               PositionCursor="50" 
               Color="Red : 50 , Green : !50" 
-              EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="20"  />
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+              style="position: absolute; left: 343px; top: 411px;"
+              Text="(MM/DD/YY)" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
             <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 435px;"
               Text="Hire Date  . . ." 
@@ -1424,36 +1446,24 @@
               Alias="#1JXDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1_V1JXDT" runat="server" style="position: absolute; left: 190px; top: 432px; width: 73px"
-              CssClass="DdsDecField"
-              Length="6" 
-              Decimals="0" 
+            <mdf:DdsDecDateField id="_lb_RCDDTL1_V1JXDT" runat="server" style="position: absolute; left: 190px; top: 432px; width: 73px"
+              CssClass="DdsDecDateField"
+              Length="8" 
+              DateFormat="USA" 
+              DateSeparator="'/'" 
               Alias="V1JXDT" 
               Usage="Both" 
               VirtualRowCol="19,21" 
               PositionCursor="51" 
               Color="Red : 51 , Green : !51" 
-              EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="21"  />
-            <mdf:DdsConstant id="DdsConstant22" runat="server" 
-              style="position: absolute; left: 397px; top: 435px;"
-              Text="Marketing (?)  ." 
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
+              style="position: absolute; left: 343px; top: 435px;"
+              Text="(MM/DD/YY)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CUID" runat="server" style="position: absolute; left: 568px; top: 432px; width: 37px"
-              CssClass="DdsCharField"
-              Length="1" 
-              Alias="#1CUID" 
-              Usage="Both" 
-              VirtualRowCol="19,57" 
-              PositionCursor="52" 
-              Color="Red : 52 , Green : !52" 
-              CompareAllowBlanks="true" 
-              ValuesStyle="DropdownBoth" 
-              Values="' ' 'N' 'Y' '?' " 
-              TabIndex="22"  />
             <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 19px; top: 459px;"
               Text="ID Type (?)  . ." 
@@ -1466,28 +1476,28 @@
               Alias="#DDRID" 
               Usage="Both" 
               VirtualRowCol="20,21" 
-              PositionCursor="53" 
-              Color="Red : 53 , Green : !53" 
+              PositionCursor="52" 
+              Color="Red : 52 , Green : !52" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'DL' 'MI' 'AC' 'SI' 'UP' '?' " 
-              TabIndex="23"  />
-            <mdf:DdsConstant id="DdsConstant23" runat="server" 
-              style="position: absolute; left: 397px; top: 459px;"
+              TabIndex="22"  />
+            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+              style="position: absolute; left: 424px; top: 459px;"
               Text="ID Number  . . ." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1Y4XT" runat="server" style="position: absolute; left: 568px; top: 456px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1Y4XT" runat="server" style="position: absolute; left: 595px; top: 456px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Lower="True" 
               Alias="#1Y4XT" 
               Usage="Both" 
-              VirtualRowCol="20,57" 
-              PositionCursor="54" 
-              Color="Red : 54 , Green : !54" 
-              TabIndex="24"  />
+              VirtualRowCol="20,60" 
+              PositionCursor="53" 
+              Color="Red : 53 , Green : !53" 
+              TabIndex="23"  />
             <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 483px;"
               Text="ID State . . . ." 
@@ -1500,8 +1510,26 @@
               Alias="#1DRCD" 
               Usage="Both" 
               VirtualRowCol="21,21" 
+              PositionCursor="54" 
+              Color="Red : 54 , Green : !54" 
+              TabIndex="24"  />
+            <mdf:DdsConstant id="DdsConstant28" runat="server" 
+              style="position: absolute; left: 424px; top: 483px;"
+              Text="Participate in Marketing?  ." 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CUID" runat="server" style="position: absolute; left: 757px; top: 480px; width: 37px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#1CUID" 
+              Usage="Both" 
+              VirtualRowCol="21,72" 
               PositionCursor="55" 
               Color="Red : 55 , Green : !55" 
+              CompareAllowBlanks="true" 
+              ValuesStyle="DropdownBoth" 
+              Values="' ' 'N' 'Y' '?' " 
               TabIndex="25"  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
@@ -1511,7 +1539,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant34" runat="server" 
+            <mdf:DdsConstant id="DdsConstant37" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F12=Cancel" 
               CssClass="DdsConstant"
@@ -1526,7 +1554,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant35" runat="server" 
+            <mdf:DdsConstant id="DdsConstant38" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1546,7 +1574,7 @@
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
               TabIndex="26"  />
-            <mdf:DdsConstant id="DdsConstant36" runat="server" 
+            <mdf:DdsConstant id="DdsConstant39" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1585,6 +1613,7 @@
           </mdf:DdsSubfileControl >
 
         </div>
+
     </asp:Content>
 
     <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">
@@ -1601,7 +1630,7 @@
 
       var copyToAndFrom = {
         "displayOnlyFields": {
-          "CenPH_DdsConstant30":"date",
+          "CenPH_DdsConstant33":"date",
           "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
           "CenPH__lb_RCDDTL1__lb_DW5TX":"CenPH__lb_RCDDTL1__lb_DW5TX_new",
           "CenPH__lb_RCDDTL1__lb_1A4NB":"ro-CenPH__lb_RCDDTL1__lb_1A4NB_new",
@@ -1617,7 +1646,7 @@
           "CenPH__lb_RCDDTL1__lb_1UON_lb_":"CenPH__lb_RCDDTL1__lb_1UON_lb__new",
           "CenPH__lb_RCDDTL1__lb_1USN_lb_":"CenPH__lb_RCDDTL1__lb_1USN_lb__new",
           "CenPH__lb_RCDDTL1__lb_1UPN_lb_":"CenPH__lb_RCDDTL1__lb_1UPN_lb__new",
-          "CenPH__lb_RCDDTL1_V1JWDT":"CenPH__lb_RCDDTL1_V1JWDT_new",
+         
           "CenPH__lb_RCDDTL1__lb_DY5XT":"CenPH__lb_RCDDTL1__lb_DY5XT_new",
           "CenPH__lb_RCDDTL1__lb_1C1XT":"CenPH__lb_RCDDTL1__lb_1C1XT_new",
           "CenPH__lb_RCDDTL1__lb_1UZN_lb_":"CenPH__lb_RCDDTL1__lb_1UZN_lb__new",
@@ -1645,7 +1674,7 @@
           "CenPH__lb_RCDDTL1__lb_1UON_lb_":"CenPH__lb_RCDDTL1__lb_1UON_lb__new",
           "CenPH__lb_RCDDTL1__lb_1USN_lb_":"CenPH__lb_RCDDTL1__lb_1USN_lb__new",
           "CenPH__lb_RCDDTL1__lb_1UPN_lb_":"CenPH__lb_RCDDTL1__lb_1UPN_lb__new",
-          "CenPH__lb_RCDDTL1_V1JWDT":"CenPH__lb_RCDDTL1_V1JWDT_new",
+         
           "CenPH__lb_RCDDTL1__lb_DY5XT":"CenPH__lb_RCDDTL1__lb_DY5XT_new",
           "CenPH__lb_RCDDTL1__lb_1C1XT":"CenPH__lb_RCDDTL1__lb_1C1XT_new",
           "CenPH__lb_RCDDTL1__lb_1UZN_lb_":"CenPH__lb_RCDDTL1__lb_1UZN_lb__new",
@@ -1668,14 +1697,21 @@
             }
         });
 
+
+
+
         copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
         $("#CenPH__lb_RCDDTL1__lb_DPPNB_new, #CenPH__lb_RCDDTL1__lb_DPRNB_new, #CenPH__lb_RCDDTL1__lb_1A4NB_new, #CenPH__lb_RCDDTL1__lb_1UNN_lb__new, #CenPH__lb_RCDDTL1__lb_1UON_lb__new, #CenPH__lb_RCDDTL1__lb_1UPN_lb__new, #CenPH__lb_RCDDTL1__lb_1UZN_lb__new, #CenPH__lb_RCDDTL1__lb_1Y4XT_new").ForceNumericOnly();
 
         //ssn
         if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
-          console.log(2313);
           $('#ssn').replaceWith("<span id='ssn'>"+$('#CenPH__lb_RCDDTL1__lb_1A4NB').text().replace(/-/g, "")+"</span>");
+          $('#dummy-ssn').val($('#ssn').text());
+          var ssnChangd= $('#ssn').text().slice('5');
+          $('#ssn').replaceWith("<span id='ssn'>"+'*****'+ssnChangd+"</span>")
+          
+
           
         }
         setTimeout(function(){
@@ -1683,17 +1719,33 @@
           },100);
         $("#ssn-show").on("click mousedown taphold touchstart", function() {
           setTimeout(function() {
+            if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
+              var ssnValue = $("#ssn").text();
+              var dummyValue = $("#dummy-ssn").val();
+              $("#ssn").text($("#dummy-ssn").val());
+              $("#dummy-ssn").val(ssnValue);
+            }
+            else{
               var ssnValue = $("#ssn").val();
               var dummyValue = $("#dummy-ssn").val();
               $("#ssn").val($("#dummy-ssn").val());
               $("#dummy-ssn").val(ssnValue);
+            }
             },0);
         });
         $("#ssn-show").on("click mouseup dragend touchend", function() {
-            var ssnValue = $("#ssn").val();
+          if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
+            var ssnValue = $("#ssn").text();
             var dummyValue = $("#dummy-ssn").val();
-            $("#ssn").val($("#dummy-ssn").val());
+            $("#ssn").text($("#dummy-ssn").val());
             $("#dummy-ssn").val(ssnValue);
+          }
+          else{
+              var ssnValue = $("#ssn").val();
+              var dummyValue = $("#dummy-ssn").val();
+              $("#ssn").val($("#dummy-ssn").val());
+              $("#dummy-ssn").val(ssnValue);
+            }
         });
         $('.error').text($('#MsgPH_DdsMessagePanel1').text());
         $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_1A4NB').val().replace(/-/g, ""));
@@ -1712,124 +1764,76 @@
             maskUnmaskSSN("ssn", event);
         });
 
-        //CenPH__lb_RCDDTL1__lb_1A4NB
-        // $('input:text[name="-CenPH__lb_RCDDTL1__lb_1A4NB_new"]').keyup(function () {
-        //     $('input:hidden[name="dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new"]').val($(this).val());
-        // });
-        // document.onkeydown = keydown;
-        //     function keydown(evt) {
-        //         if (!evt) evt = event;
-        //         if (evt.keyCode == 13) {
-        //             if($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val().lenght > 0) {
-        //                 $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-        //                 //$("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
-        //             } else {
-        //                 if($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val()!="")
-        //                 {
-        //                     $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-        //                 }else {
-        //                     $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-        //                 }
-        //                //$("#dummy-cust-ssn").val($("#CenPH__lb_RCDDTL1__lb_1A4NB").val());
-                       
-                        
-        //                 //$("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy-sp-ssn").val());
-        //             }
-        //             if($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val().length > 0) {
-        //                 $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-        //             } else {
-        //                 $("#CenPH__lb_RCDDTL1__lb_DDUN_lb_").val($("#dummy--CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-        //             }
-        //             _00('Enter', evt);
-        //         }
-            //}
-           /*$('body').on('click', '#next', function(event) {
-                $("#CenPH__lb_RCDDTL1__lb_1A4NB").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-                _00('Enter', event);
-            });*/
-          // if ($("CenPH__lb_RCDDTL1__lb_1A4NB").is("span")) {
-          //     $("#ro-CenPH__lb_RCDDTL1__lb_1A4NB_new").text("*****"+$("#ro-CenPH__lb_RCDDTL1__lb_1A4NB_new").text().replace(/-/g, "").substr(5,9));
-          //     $("#ssn-show").hide();
-          // }
+        
 
-
-          // $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").on("change keyup mouseup paste", function(event) {
-          //       maskUnmaskSSN("CenPH__lb_RCDDTL1__lb_1A4NB_new", event);
-          //   });
-          // $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").each(function(){
-          //       $(this).val($(this).val().replace(/\D/g,''));
-          //       $(this).trigger('change');
-          //   })
-          //  $("#ssn-show").on("mousedown touchstart", function() {
-          //       setTimeout(function() {
-          //           var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
-          //           var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
-          //           $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-          //           $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
-          //       },0);
-          //   });
-          //  $("#ssn-show").on("mouseup touchend", function() {
-          //         var ssnValue = $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
-          //         var dummyValue = $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val();
-          //         $("#CenPH__lb_RCDDTL1__lb_1A4NB_new").val($("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val());
-          //         $("#dummy-CenPH__lb_RCDDTL1__lb_1A4NB_new").val(ssnValue);
-          //   });
-
-        $("#dobInputDate").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val());
-        $("#dobInputDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#dobIconDate").click(function () { $("#dobInputDate").datepicker("show"); });
-        $("#dobInputDate").on('change', function () {
-                var date = $("#dobInputDate").val().split("/");
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val());
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#dobIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").datepicker("show"); });
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").on('change', function () {
+                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").val().split("/");
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
 
 
-        $("#lastPaidInputDate").val($("#CenPH__lb_RCDDTL1_V1JYDT").val());
-        $("#lastPaidInputDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#lastPaidIconDate").click(function () { $("#lastPaidInputDate").datepicker("show"); });
-        $("#lastPaidInputDate").on('change', function () {
-                var date = $("#lastPaidInputDate").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JYDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT").val());
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#lastPaidIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").datepicker("show"); });
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").on('change', function () {
+                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
 
-        $("#nextPayInputDate").val($("#CenPH__lb_RCDDTL1_V1JZDT").val());
-        $("#nextPayInputDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#nextPayIconDate").click(function () { $("#nextPayInputDate").datepicker("show"); });
-        $("#nextPayInputDate").on('change', function () {
-                var date = $("#nextPayInputDate").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JZDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT").val());
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#nextPayIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").datepicker("show"); });
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").on('change', function () {
+                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
 
-        $("#hireInputDate").val($("#CenPH__lb_RCDDTL1_V1JXDT").val());
-        $("#hireInputDate").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#hireIconDate").click(function () { $("#hireInputDate").datepicker("show"); });
-        $("#hireInputDate").on('change', function () {
-                var date = $("#hireInputDate").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JXDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT").val());
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#hireIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").datepicker("show"); });
+        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").on('change', function () {
+                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").val().split("/");
+                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
+
+$("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
+        $("#CenPH__lb_RCDDTL1_V1JWDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#accountOpenDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JWDT_new").datepicker("show"); });
+        $("#CenPH__lb_RCDDTL1_V1JWDT_new").on('change', function () {
+                var date = $("#CenPH__lb_RCDDTL1_V1JWDT_new").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1JWDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        });
+
+
 
         var dateSelect = {
           "CenPH__lb_RCDDTL1__lb_1CJID":"CenPH__lb_RCDDTL1__lb_1CJID_new", //select
           "CenPH__lb_RCDDTL1__lb_1CLID":"CenPH__lb_RCDDTL1__lb_1CLID_new", //select
           "CenPH__lb_RCDDTL1__lb_DDGID":"CenPH__lb_RCDDTL1__lb_DDGID_new", //select
-          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT":"dobInputDate",
+          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new",
           "CenPH__lb_RCDDTL1__lb_DDTID":"CenPH__lb_RCDDTL1__lb_DDTID_new", //select
           "CenPH__lb_RCDDTL1__lb_1CRID":"CenPH__lb_RCDDTL1__lb_1CRID_new", //select
-          "CenPH__lb_RCDDTL1_V1JYDT":"lastPaidInputDate",
-          "CenPH__lb_RCDDTL1_V1JZDT":"nextPayInputDate",
-          "CenPH__lb_RCDDTL1_V1JXDT":"hireInputDate",
+          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new",
+          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new",
+          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new",
+          "CenPH__lb_RCDDTL1_V1JWDT":"CenPH__lb_RCDDTL1_V1JWDT_new",
           "CenPH__lb_RCDDTL1__lb_1CUID":"CenPH__lb_RCDDTL1__lb_1CUID_new", //select
           "CenPH__lb_RCDDTL1__lb_DDRID":"CenPH__lb_RCDDTL1__lb_DDRID_new", //select
         };
 
         $.each(dateSelect, function(i, item) {
             if ($("#"+i).is("span")) {
-              $("#"+i+"_new").replaceWith($("#"+i).removeAttr("style"));
+              console.log('ener'+ $("#"+i).text());
+              $("#"+i+"_new").replaceWith($("#"+i).text());
 
-              $("#dobInputDate").replaceWith($("#"+i).removeAttr("style"));
+             /* $("#dobInputDate").replaceWith($("#"+i).removeAttr("style"));
               $("#lastPaidInputDate").replaceWith($("#"+i).removeAttr("style"));
               $("#nextPayInputDate").replaceWith($("#"+i).removeAttr("style"));
               $("#hireInputDate").replaceWith($("#"+i).removeAttr("style"));
+              $("#CenPH__lb_RCDDTL1_V1JWDT_new").replaceWith($("#"+i).removeAttr("style"));*/
               $(".calender-icon").hide();
             }
         });
