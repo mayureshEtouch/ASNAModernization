@@ -143,8 +143,8 @@
                                                 <option value=" " selected="selected">Please Choose</option>
                                                 <option value="O">O-Own</option>
                                                 <option value="R">R-Rent</option>
-                                                <!-- <option value="L">L-Live</option>
-                                                <option value="L">P-Live</option> -->
+                                                <option value="L">L-Live</option>
+                                                <!-- <option value="L">P-Live</option> -->
                                             </select>
                                             <span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
                                             <span class="form-label">For</span>&nbsp;&nbsp;
@@ -242,8 +242,7 @@
                 <section class="form-data">
                     <div class="form-data-wrapper">
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
-
-                             <!-- <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+                         <!--    <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Source of Income:</span>
                                 <span class="form-text">
                                    <select class="editable-data" id="source-of-inc" data-tb-index="5">
@@ -257,14 +256,6 @@
                                   </select>
                                   <span style="margin: 0 5px;" id="ro-source-of-inc" class="ro-data"></span>&nbsp;&nbsp;
                               </span>
-                            </div>
-
-                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
-                                <span class="form-label clm-form-label">Employed at:</span>
-                                <span class="form-text">
-                                       <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
-                                       <span class="ro-data" id="ro-employed-at"></span>
-                                </span>
                             </div> -->
 
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
@@ -277,6 +268,15 @@
                                   </select>
                                   <span style="margin: 0 5px;" id="ro-currentlyEmp" class="ro-data"></span>&nbsp;&nbsp;
                               </span>
+                            </div>
+
+
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+                                <span class="form-label clm-form-label">Employed at:</span>
+                                <span class="form-text">
+                                       <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
+                                       <span class="ro-data" id="ro-employed-at"></span>
+                                </span>
                             </div>
 
                         <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
