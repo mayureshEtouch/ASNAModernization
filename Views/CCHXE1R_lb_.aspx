@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/16/2017 at 12:45 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 8/29/2017 at 5:54 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CCHXE1R# --%>
 
     </asp:Content>
@@ -35,8 +35,8 @@
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
                             <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CCHXE1R</span> 
-							<i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span> 
-							<i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
+                            <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date"></span> 
+                            <i class="material-icons md-15 md-light time-icon"></i><span class="date-time-txt" name="time"></span>
                         </div>
                     </div>
                 </section>
@@ -65,7 +65,7 @@
                                         <span class="form-label clm-form-label-add">Customer Name:</span>
                                         <span class="form-text">
                                         <span id="cust-name"></span>
-										</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -76,13 +76,13 @@
                                         <span class="form-text" id="home-phone"></span>
                                     </div>
                                 </div>
-							</div>
-							<div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label" style="vertical-align: top;">Customer Address:</span>
                                          <div style="display: inline-block; ">
-										<span id="cust-first-add"></span>
+                                        <span id="cust-first-add"></span>
                                         <br>
                                         <span id="cust-middle-add"></span>
                                         <br>
@@ -92,8 +92,8 @@
                                         </div>
                                     </div>
                                 </div>
-							</div>
-							<div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col" style="padding:0;margin: 0;">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-label clm-form-label">Office Phone:</span>
@@ -139,111 +139,111 @@
                                     <div class="mdl-cell mdl-cell--12-col" style="margin:0">
                                         <span class="form-text">
                                         <span class="form-label">Residence Type:</span>&nbsp;&nbsp;&nbsp;
-											<select class="editable-data" id="cust-res-type" data-tb-index="5">
+                                            <select class="editable-data" id="cust-res-type" data-tb-index="5">
                                                 <option value=" " selected="selected">Please Choose</option>
-												<option value="O">O-Own</option>
-												<option value="R">R-Rent</option>
-												<!-- <option value="L">L-Live</option>
-												<option value="L">P-Live</option> -->
-											</select>
-											<span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
-											<span class="form-label">For</span>&nbsp;&nbsp;
-											<input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="6" style="width: 50px;" data-tb-index="6"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
-											<span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
-											<input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="7" data-tb-index="7"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
-											<span class="form-label">Monthly</span>
-										</span>
+                                                <option value="O">O-Own</option>
+                                                <option value="R">R-Rent</option>
+                                                <!-- <option value="L">L-Live</option>
+                                                <option value="L">P-Live</option> -->
+                                            </select>
+                                            <span style="margin: 0 5px;" id="ro-cust-res-type" class="ro-data"></span>&nbsp;&nbsp;
+                                            <span class="form-label">For</span>&nbsp;&nbsp;
+                                            <input type="text" class="editable-data mdl-textfield__input-small" size="3" id="no-of-years" maxlength="6" style="width: 50px;" data-tb-index="6"><span id="ro-no-of-years" style="margin: 0 5px;" class="ro-data"></span>
+                                            <span class="form-label">Years with Payment of</span>&nbsp;&nbsp;
+                                            <input type="text" id="payment-of" class="editable-data mdl-textfield__input-small" size="15" maxlength="7" data-tb-index="7"><span style="margin: 0 5px;" class="ro-data" id="ro-payment-of"></span>
+                                            <span class="form-label">Monthly</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-												<div class="content-grid mdl-grid" style="margin: 10px 15px 0;">												
+                                                <div class="content-grid mdl-grid" style="margin: 10px 15px 0;">                                                
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
-															<span class="form-label clm-form-label">Phone Listed as:</span>
+                                                            <span class="form-label clm-form-label">Phone Listed as:</span>
                                         <span class="form-text">
-											<input class="editable-data" type="text" size="28" id="phone-listed-as" maxlength="24" data-tb-index="8">
-											<span class="ro-data" id="ro-phone-listed-as"></span>
-										</span>
-														</div>
+                                            <input class="editable-data" type="text" size="28" id="phone-listed-as" maxlength="24" data-tb-index="8">
+                                            <span class="ro-data" id="ro-phone-listed-as"></span>
+                                        </span>
+                                                        </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-															<span class="form-label clm-form-label">Marital Status:</span>
-										<span class="form-text">
-											<select class="editable-data" id="cust-martial-status" data-tb-index="9">
+                                                            <span class="form-label clm-form-label">Marital Status:</span>
+                                        <span class="form-text">
+                                            <select class="editable-data" id="cust-martial-status" data-tb-index="9">
                                                 <option selected="selected" value=" ">Please Choose</option>
-												<option value="M">M-Married</option>
-												<option value="S">S-Single</option>
-												
-											</select>
-											<span class="ro-data" id="ro-cust-martial-status"></span>
-										</span>
-														</div>
+                                                <option value="M">M-Married</option>
+                                                <option value="S">S-Single</option>
+                                                
+                                            </select>
+                                            <span class="ro-data" id="ro-cust-martial-status"></span>
+                                        </span>
+                                                        </div>
                         </div>
-												
-												<div class="content-grid mdl-grid" style="margin: 0 15px;">												
+                                                
+                                                <div class="content-grid mdl-grid" style="margin: 0 15px;">                                             
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
-															<span class="form-label clm-form-label">Dependents:</span>
-										<span class="form-text">
-											<input class="editable-data" id="cust-dependents" type="text" size="5" maxlength="2" data-tb-index="10">
-											<span class="ro-data" id="ro-cust-dependents"></span>
-										</span>
-														</div>
+                                                            <span class="form-label clm-form-label">Dependents:</span>
+                                        <span class="form-text">
+                                            <input class="editable-data" id="cust-dependents" type="text" size="5" maxlength="2" data-tb-index="10">
+                                            <span class="ro-data" id="ro-cust-dependents"></span>
+                                        </span>
+                                                        </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-															<span class="form-label clm-form-label">Spouse Name:</span>
-										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-name" size="17" maxlength="25" data-tb-index="11">
-											<span class="ro-data" id="ro-sp-name"></span>
-										</span>
-														</div>
+                                                            <span class="form-label clm-form-label">Spouse Name:</span>
+                                        <span class="form-text">
+                                            <input class="editable-data" type="text" id="sp-name" size="17" maxlength="25" data-tb-index="11">
+                                            <span class="ro-data" id="ro-sp-name"></span>
+                                        </span>
+                                                        </div>
                         </div>
-												
-												<div class="content-grid mdl-grid" style="margin: 0 15px;">												
+                                                
+                                                <div class="content-grid mdl-grid" style="margin: 0 15px;">                                             
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
-															<span class="form-label clm-form-label vertical-top">Birthday:</span>
-										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-birth" size="15" readonly="true" data-tb-index="12">
+                                                            <span class="form-label clm-form-label vertical-top">Birthday:</span>
+                                        <span class="form-text">
+                                            <input class="editable-data" type="text" id="sp-birth" size="15" readonly="true" data-tb-index="12">
                                             <i id="sp-reqesdate" class="material-icons calender-icon page-icons editable-data"></i>
-											<span class="ro-data vertical-top" id="ro-sp-birth"></span>
-										</span>
-														</div>
+                                            <span class="ro-data vertical-top" id="ro-sp-birth"></span>
+                                        </span>
+                                                        </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-															<span class="form-label clm-form-label">S.S.#:</span>
-										<span class="form-text">
-											<input class="editable-data" type="text" autocomplete="off" id="sp-ssn" size="15" maxlength="9" data-tb-index="13">
+                                                            <span class="form-label clm-form-label">S.S.#:</span>
+                                        <span class="form-text">
+                                            <input class="editable-data" type="text" autocomplete="off" id="sp-ssn" size="15" maxlength="9" data-tb-index="13">
                                         <span class="ssn-sp-show" id="ssn-sp-show" style="color:blue;cursor: pointer;">Show</span>
                                         <input type="hidden" id="dummy-sp-ssn" value="" class="mdl-textfield__input" placeholder="111111111" size="15" maxlength="9" >
-											<span class="ro-data" id="ro-sp-ssn"></span>
-										</span>
-														</div>
+                                            <span class="ro-data" id="ro-sp-ssn"></span>
+                                        </span>
+                                                        </div>
                         </div>
-												
-												<div class="content-grid mdl-grid" style="margin: 0 15px;">												
+                                                
+                                                <div class="content-grid mdl-grid" style="margin: 0 15px;">                                             
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
-															<span class="form-label clm-form-label">License #:</span>
-										<span class="form-text">
-											<input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2"  data-tb-index="14">
-											<span class="ro-data" id="ro-sp-lic-first"></span>
-											&nbsp;&nbsp;/&nbsp;&nbsp;
-											<input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="8" data-tb-index="15">
-											<span class="ro-data" id="ro-sp-lic-second"></span>
-										</span>
-														</div>
+                                                            <span class="form-label clm-form-label">License #:</span>
+                                        <span class="form-text">
+                                            <input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2"  data-tb-index="14">
+                                            <span class="ro-data" id="ro-sp-lic-first"></span>
+                                            &nbsp;&nbsp;/&nbsp;&nbsp;
+                                            <input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="8" data-tb-index="15">
+                                            <span class="ro-data" id="ro-sp-lic-second"></span>
+                                        </span>
+                                                        </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-															<span class="form-label clm-form-label">Spouse Monthly Income:</span>
-										<span class="form-text">
-											<input class="editable-data" type="text" id="sp-monthly-income" size="15" maxlength="10" data-tb-index="16">
-											<span class="ro-data" id="ro-sp-monthly-income"></span>
-										</span>
-														</div>
+                                                            <span class="form-label clm-form-label">Spouse Monthly Income:</span>
+                                        <span class="form-text">
+                                            <input class="editable-data" type="text" id="sp-monthly-income" size="15" maxlength="10" data-tb-index="16">
+                                            <span class="ro-data" id="ro-sp-monthly-income"></span>
+                                        </span>
+                                                        </div>
                         </div>
-												
-												
+                                                
+                                                
                     </div>
                 </section>
                 <section class="form-data">
                     <div class="form-data-wrapper">
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
 
-                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+                             <!-- <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Source of Income:</span>
                                 <span class="form-text">
                                    <select class="editable-data" id="source-of-inc" data-tb-index="5">
@@ -262,88 +262,100 @@
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Employed at:</span>
                                 <span class="form-text">
-									   <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
-									   <span class="ro-data" id="ro-employed-at"></span>
-								</span>
+                                       <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
+                                       <span class="ro-data" id="ro-employed-at"></span>
+                                </span>
+                            </div> -->
+
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+                                <span class="form-label clm-form-label" style="width: 140px;">Currently Employed ?</span>
+                                <span class="form-text">
+                                   <select class="editable-data" id="currentlyEmp" data-tb-index="5">
+                                      <option value=" " selected="selected">Please Choose</option>
+                                      <option value="N">No</option>
+                                      <option value="Y">Yes</option>
+                                  </select>
+                                  <span style="margin: 0 5px;" id="ro-currentlyEmp" class="ro-data"></span>&nbsp;&nbsp;
+                              </span>
                             </div>
 
                         <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                         <span class="form-label clm-form-label">Duration:</span>
                         <span class="form-text">
-        									<input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3" data-tb-index="18">
-        									<span class="ro-data" id="ro-employed-at-duration-years"></span>
-        									&nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
-        									<input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2" data-tb-index="19">
-        									<span class="ro-data" id="ro-employed-at-duration-months"></span>
-									           &nbsp;Months
+                                            <input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3" data-tb-index="18">
+                                            <span class="ro-data" id="ro-employed-at-duration-years"></span>
+                                            &nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2" data-tb-index="19">
+                                            <span class="ro-data" id="ro-employed-at-duration-months"></span>
+                                               &nbsp;Months
                             </span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Income:</span>
-								<span class="form-text">
-									<input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15" maxlength="7"  data-tb-index="20"> 
-									<span class="ro-data" id="ro-cust-income"></span>
-								</span>
+                                <span class="form-text">
+                                    <input type="text" id="cust-income" class="editable-data mdl-textfield__input-small" size="15" maxlength="7"  data-tb-index="20"> 
+                                    <span class="ro-data" id="ro-cust-income"></span>
+                                </span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-								<span class="form-label clm-form-label">Supervisor:</span>
-								<span class="form-text">
-									<input type="text" id="cust-supervisor" class="editable-data mdl-cell--6-col" size="30" maxlength="30" data-tb-index="21">
-									<span class="ro-data" id="ro-cust-supervisor"></span>
-								</span>
+                                <span class="form-label clm-form-label">Supervisor:</span>
+                                <span class="form-text">
+                                    <input type="text" id="cust-supervisor" class="editable-data mdl-cell--6-col" size="30" maxlength="30" data-tb-index="21">
+                                    <span class="ro-data" id="ro-cust-supervisor"></span>
+                                </span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="border-bottom: #c6c6c6 1px solid;margin: 0 15px;padding: 0 0 10px;">
                             <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Frequency:</span>
-								<span class="form-text">
-									<select class="editable-data" id="cust-frenq" data-tb-index="22">
+                                <span class="form-text">
+                                    <select class="editable-data" id="cust-frenq" data-tb-index="22">
                                         <option value=" " selected="selected">Please Choose</option>
-										<option value="H">H-Hourly</option>
-										<option value="W">W-Weekly</option>
-										<option value="B">B-Bi-weekly</option>
-										<option value="M">M-Monthly</option>
-										<option value="A">A-Annual</option>
-									</select>
-									<span class="ro-data" id="ro-cust-frenq"></span>
-								</span>
+                                        <option value="H">H-Hourly</option>
+                                        <option value="W">W-Weekly</option>
+                                        <option value="B">B-Bi-weekly</option>
+                                        <option value="M">M-Monthly</option>
+                                        <option value="A">A-Annual</option>
+                                    </select>
+                                    <span class="ro-data" id="ro-cust-frenq"></span>
+                                </span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="margin: 0 15px;padding: 10px 0 0;">
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Reference Name:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-name" class="editable-data mdl-cell--5-col" size="20" maxlength="20" data-tb-index="23">
-									<span class="ro-data" id="ro-ref-name"></span>
-								</span>
+                                    <input type="text" id="ref-name" class="editable-data mdl-cell--5-col" size="20" maxlength="20" data-tb-index="23">
+                                    <span class="ro-data" id="ro-ref-name"></span>
+                                </span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Address:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-address" class="editable-data mdl-cell--6-col" size="5" maxlength="25" data-tb-index="24">
-									<span class="ro-data" id="ro-ref-address"></span>
-								</span>
+                                    <input type="text" id="ref-address" class="editable-data mdl-cell--6-col" size="5" maxlength="25" data-tb-index="24">
+                                    <span class="ro-data" id="ro-ref-address"></span>
+                                </span>
                             </div>
                         </div>
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Zip Code:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="10" data-tb-index="25">
-									<span class="ro-data" id="ro-ref-zip-code"></span>
-								</span>
+                                    <input type="text" id="ref-zip-code" class="editable-data mdl-textfield__input-small" size="15" maxlength="10" data-tb-index="25">
+                                    <span class="ro-data" id="ro-ref-zip-code"></span>
+                                </span>
                             </div>
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Phone No:</span>
                                 <span class="form-text">
-									<input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20" maxlength="10" data-tb-index="26">
-									<span class="ro-data" id="ro-ref-phone"></span>
-								</span>
+                                    <input type="text" id="ref-phone" class="editable-data mdl-textfield__input-small" size="20" maxlength="10" data-tb-index="26">
+                                    <span class="ro-data" id="ro-ref-phone"></span>
+                                </span>
                             </div>
-						</div>
-						<div class="content-grid mdl-grid" style="margin: 0 15px;padding: 0 0 10px;">
+                        </div>
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;padding: 0 0 10px;">
                             <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Type:</span>
                                 <span class="form-text">
@@ -352,7 +364,7 @@
                                         <option value="R"> R - Relative </option>
                                         <option value="F"> F - Friend </option>
                                     </select>
-									<span class="ro-data" id="ro-ref-type"></span>
+                                    <span class="ro-data" id="ro-ref-type"></span>
                                 </span>
                             </div>
                         </div>
@@ -389,7 +401,7 @@
         </div>
     
     <!-- Modified HTML code ends here -->
-       <div id="Div1" style="display: none;">
+       <div id="Div1" style="display:none;">
             
       <%--  CU: ED1 Personal Detail   Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -402,7 +414,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 08/23/17  Time  : 15:24:59                                                                       --%>
+      <%--  Date          : 08/29/17  Time  : 05:40:48                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -599,6 +611,7 @@
           <%--  PROGRAM                                                                                                          --%>
           <%--  Dte: Audit Stamp                                                                                                 --%>
           <%--  Tme: Audit Stamp                                                                                                 --%>
+          <%--  Sts: Source of Income                                                                                            --%>
           <%--  Nbr: Employment Duration                                                                                         --%>
           <%--  Dte: of Employment                                                                                               --%>
           <%--  Cde: Occupation Code                                                                                             --%>
@@ -656,9 +669,9 @@
           <%--  Val: Spouse Income                                                                                               --%>
           <%--  Val: Spouse Income                                                                                               --%>
           <%--  *CON (Screen constant)                                                                                           --%>
-          <%--  Sts: Source of Income                                                                                            --%>
-          <%--  Sts: Source of Income                                                                                            --%>
-          <%--  Condition: Valid values                                                                                          --%>
+          <%--  Sts: Currently Employed?                                                                                         --%>
+          <%--  Sts: Currently Employed?                                                                                         --%>
+          <%--  Condition: Yes or No                                                                                             --%>
           <%--  Txt: Employer                                                                                                    --%>
           <%--  Txt: Employer                                                                                                    --%>
           <%--  Dte: # of Years                                                                                                  --%>
@@ -892,6 +905,12 @@
               Length="6" 
               Decimals="0" 
               Alias="#1ABTM" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDQID" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#DDQID" 
               Usage="Hidden" 
  />
             <mdf:DdsDecField id="_lb_RCDDTL1__lb_DEMDU" runat="server" style="position: absolute; left: 1px; top: 0px; width: 46px"
@@ -1128,7 +1147,7 @@
               Values="'O' 'R' 'L' ' ' 'P' '?' " 
               TabIndex="5"  />
             <mdf:DdsConstant id="DdsConstant22" runat="server" 
-              style="position: absolute; left: 235px; top: 195px;"
+              style="position: absolute; left: 208px; top: 195px;"
               Text="For" 
               Color="Blue" 
               CssClass="DdsConstant"
@@ -1340,39 +1359,39 @@
  />
             <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 19px; top: 339px;"
-              Text="Source of Income" 
+              Text="Currently Employed?" 
               VisibleCondition="!( 77 )"
               Color="Blue : !77" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDQID" runat="server" style="position: absolute; left: 199px; top: 336px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDWID" runat="server" style="position: absolute; left: 226px; top: 336px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
-              Alias="#DDQID" 
+              Alias="#DDWID" 
               VisibleCondition="!( 77 & !47 )"
               Usage="Both" 
-              VirtualRowCol="15,19" 
+              VirtualRowCol="15,22" 
               Protect="77" 
               PositionCursor="47 & !77" 
               Color="Red : 47 &amp; !77 , Green : !77 &amp; !47" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
-              Values="' ' 'D' 'E' 'R' 'S' 'P' '?' " 
+              Values="' ' 'N' 'Y' '?' " 
               TabIndex="17"  />
-            <mdf:DdsConstant id="DdsConstant24" runat="server" 
-              style="position: absolute; left: 280px; top: 339px;"
+            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+              style="position: absolute; left: 307px; top: 339px;"
               Text="Employed at" 
               VisibleCondition="!( 76 )"
               Color="Blue : !76" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUNTX" runat="server" style="position: absolute; left: 388px; top: 336px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUNTX" runat="server" style="position: absolute; left: 415px; top: 336px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#DUNTX" 
               VisibleCondition="!( 76 & !48 )"
               Usage="Both" 
-              VirtualRowCol="15,37" 
+              VirtualRowCol="15,40" 
               Protect="76" 
               PositionCursor="48 & !76" 
               Color="Red : 48 &amp; !76 , Green : !76 &amp; !48" 
@@ -1413,7 +1432,7 @@
               Color="Red : 50 , Green : !50" 
               EditCode="4" 
               TabIndex="20"  />
-            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+            <mdf:DdsConstant id="DdsConstant24" runat="server" 
               style="position: absolute; left: 289px; top: 363px;"
               Text="Months" 
               Color="Blue" 
@@ -1684,15 +1703,15 @@
         #main-content {
             width: 100%;
         }
-		.clm-form-label{
-			display: inline-block;
-			width: 125px;
-		}
-		.clm-form-label-add{
-			display: inline-block;
-			width: 125px;
-			float: left;
-		}
+        .clm-form-label{
+            display: inline-block;
+            width: 125px;
+        }
+        .clm-form-label-add{
+            display: inline-block;
+            width: 125px;
+            float: left;
+        }
         .ro-data  {
             display:none;
         }
@@ -1721,11 +1740,11 @@
             display: none;
             float: left;
         }
-		#cust-ssn-error {
-			margin-left: 0;
-			float: none;
-			display: inline-block;
-		}
+        #cust-ssn-error {
+            margin-left: 0;
+            float: none;
+            display: inline-block;
+        }
         .vertical-top {
             vertical-align: top;
         }
@@ -1772,7 +1791,8 @@
                 "CenPH__lb_RCDDTL1__lb_DUSTX": "ro-ref-zip-code",
                 "CenPH__lb_RCDDTL1__lb_DBXNB": "ro-ref-phone",
                 "CenPH__lb_RCDDTL1__lb_DREFT": "ro-ref-type",
-                "CenPH__lb_RCDDTL1__lb_DDQID":"ro-source-of-inc",
+                // "CenPH__lb_RCDDTL1__lb_DDQID":"ro-source-of-inc",
+                "CenPH__lb_RCDDTL1__lb_DDWID":"ro-currentlyEmp",
                 "CenPH__lb_RCDDTL1__lb_DUNTX":"ro-employed-at"
                 
             },
@@ -1804,7 +1824,8 @@
               "CenPH__lb_RCDDTL1__lb_DUSTX": "ref-zip-code",
               "CenPH__lb_RCDDTL1__lb_DBXNB": "ref-phone",
               "CenPH__lb_RCDDTL1__lb_DREFT": "ref-type",
-              "CenPH__lb_RCDDTL1__lb_DDQID":"source-of-inc",
+              // "CenPH__lb_RCDDTL1__lb_DDQID":"source-of-inc",
+              "CenPH__lb_RCDDTL1__lb_DDWID":"currentlyEmp",
               "CenPH__lb_RCDDTL1__lb_DUNTX":"employed-at"
             }
         }
@@ -1924,7 +1945,7 @@
             /*$("#payment-of,#sp-monthly-income,#cust-income").numericWithCustomDecimalPrecisions(7,2);//123.45, 1233345.00, 1.32
             $("#ref-phone").validatePhone();*///123/456-7890
             $("#sp-ssn, #cust-ssn").ForceNumericOnly();
-			$("#ro-phone-listed-as").AlphanumericOnly();
+            $("#ro-phone-listed-as").AlphanumericOnly();
             $("#phone-listed-as").AlphanumericOnly();
             $("#sp-ssn").on("change keyup mouseup paste", function(event) {
                 maskUnmaskSSN("sp-ssn", event);

@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/16/2017 at 12:55 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 8/30/2017 at 11:46 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CSTPPVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -26,8 +26,7 @@
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row"> 
             <!-- Title --> 
-             <span class="mdl-layout-title logo-icon"></span>
-            <!--<span class="mdl-layout-heading">StoreFront</span>--> 
+             <span class="mdl-layout-title logo-icon"></span> 
             <div class="mdl-layout-spacer"></div>
             <span class="close-icon"><i class="material-icons md-15 close"></i></span>
         </div>
@@ -80,7 +79,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 08/14/17  Time  : 13:40:32                                                                       --%>
+      <%--  Date          : 08/30/17  Time  : 00:16:15                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -246,19 +245,19 @@
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
-              Text="are employed. In case of any discrepancy the contract will end in NCL" 
+              Text="are employed. Income from retirement does not constitute 'employed'." 
               Color="Red" 
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant3" runat="server" 
               style="position: absolute; left: 19px; top: 99px;"
-              Text="report for non-compliance and Sales associate will lose commission for" 
+              Text="In case of discrepancy, the contract will end in NCL report for" 
               Color="Red" 
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant4" runat="server" 
               style="position: absolute; left: 19px; top: 123px;"
-              Text="sales. Press Enter to Continue." 
+              Text="non-compliance. Press 'Enter' to Continue." 
               Color="Red" 
               CssClass="DdsConstant"
  />
