@@ -1757,7 +1757,7 @@
         $('.error').text($('#MsgPH_DdsMessagePanel1').text());
         $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_1A4NB').val().replace(/-/g, ""));
         $('body').on('keyup change', '#ssn', function (event) {
-          $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($('#ssn').val());
+          $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($('#dummy-ssn').val());
         });
 
         $('body').on('click', '#next', function (event) {
