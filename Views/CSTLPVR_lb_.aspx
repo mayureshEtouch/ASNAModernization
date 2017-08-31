@@ -80,7 +80,7 @@
                   <!-- 4 col starts here -->
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                     <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--10-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1VBXT_new" onfocus="_09('#CEOTX','6,46','#SFLCTL');"></span></div>
+                      <div class="mdl-cell mdl-cell--10-col" style="margin: 0;">  <span id="CenPH_PANTX"><input class="mdl-textfield__input" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1VBXT_new" onfocus="_09('#CEOTX','6,46','#SFLCTL');" maxlength="50"></span></div>
                     </div>
                   </div>
                   <!-- 4 col ends here --> 
