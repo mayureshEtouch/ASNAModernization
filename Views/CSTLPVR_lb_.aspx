@@ -1772,14 +1772,14 @@
         });
 
         
-
+        //DOB
         $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val());
         $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
         $("#dobIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").datepicker("show"); });
         $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").on('change', function () {
                 var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").val().split("/");
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val(date[0] +"/"+ date[1] +"/"+ date[2]);
-                
+                console.log($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val());
         }); 
 
         //Last Paid Date
@@ -1788,15 +1788,15 @@
         $("#lastPaidIconDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JYDT_new").datepicker("show"); });
         $("#CenPH__lb_RCDDTL1_V1JYDT_new").on('change', function () {
                 var date = $("#CenPH__lb_RCDDTL1_V1JYDT_new").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JYDT").val(date[0] +"/"+ date[1] +"/"+ date[2]);
+                $("#CenPH__lb_RCDDTL1_V1JYDT").val(date[0] +"/"+ date[1] +"/"+ date[2].substr(2, 3));
         });
         //Next Pay Date
         $("#CenPH__lb_RCDDTL1_V1JZDT_new").val($("#CenPH__lb_RCDDTL1_V1JZDT").val());
         $("#CenPH__lb_RCDDTL1_V1JZDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
         $("#nextPayIconDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JZDT_new").datepicker("show"); });
         $("#CenPH__lb_RCDDTL1_V1JZDT_new").on('change', function () {
-                var date = $("#cCenPH__lb_RCDDTL1_V1JZDT_new").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JZDT").val(date[0] +"/"+ date[1] +"/"+ date[2]);
+                var date = $("#CenPH__lb_RCDDTL1_V1JZDT_new").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1JZDT").val(date[0] +"/"+ date[1] +"/"+ date[2].substr(2, 3));
         });
 
         //Hire Date
@@ -1805,15 +1805,16 @@
         $("#hireIconDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JXDT_new").datepicker("show"); });
         $("#CenPH__lb_RCDDTL1_V1JXDT_new").on('change', function () {
                 var date = $("#CenPH__lb_RCDDTL1_V1JXDT_new").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JXDT").val(date[0] +"/"+ date[1] +"/"+ date[2]);
+                $("#CenPH__lb_RCDDTL1_V1JXDT").val(date[0] +"/"+ date[1] +"/"+ date[2].substr(2, 3));
         });
 
-$("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
+        //  date a/c open
+        $("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
         $("#CenPH__lb_RCDDTL1_V1JWDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
         $("#accountOpenDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JWDT_new").datepicker("show"); });
         $("#CenPH__lb_RCDDTL1_V1JWDT_new").on('change', function () {
                 var date = $("#CenPH__lb_RCDDTL1_V1JWDT_new").val().split("/");
-                $("#CenPH__lb_RCDDTL1_V1JWDT").val(date[0] +"/"+ date[1] +"/"+ date[2]);
+                $("#CenPH__lb_RCDDTL1_V1JWDT").val(date[0] +"/"+ date[1] +"/"+ date[2].substr(2, 3));
         });
 
 
