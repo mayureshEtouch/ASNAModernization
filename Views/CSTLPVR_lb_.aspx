@@ -1710,6 +1710,7 @@
         copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
 
         $("#CenPH__lb_RCDDTL1__lb_DPPNB_new, #CenPH__lb_RCDDTL1__lb_DPRNB_new, #CenPH__lb_RCDDTL1__lb_1A4NB_new, #CenPH__lb_RCDDTL1__lb_1UNN_lb__new, #CenPH__lb_RCDDTL1__lb_1UON_lb__new, #CenPH__lb_RCDDTL1__lb_1UPN_lb__new, #CenPH__lb_RCDDTL1__lb_1UZN_lb__new, #CenPH__lb_RCDDTL1__lb_1Y4XT_new").ForceNumericOnly();
+        $("#CenPH__lb_RCDDTL1__lb_1DRCD_new").ForceAlphabetOnly();
 
         //ssn
         if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
