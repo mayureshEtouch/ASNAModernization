@@ -1779,7 +1779,7 @@
         $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").on('change', function () {
                 var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new").val().split("/");
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val(date[0] +"/"+ date[1] +"/"+ date[2]);
-                console.log($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val());
+                
         }); 
 
         //Last Paid Date
