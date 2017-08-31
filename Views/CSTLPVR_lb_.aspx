@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSTLPVR_lb_.aspx.cs" Inherits="Conns.CSTLPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/28/2017 at 6:05 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
@@ -339,7 +339,7 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Last Paid Date:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JYDT_new" name="date" size="15" readonly="true" >
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="CenPH__lb_RCDDTL1_V1JYDT_new" name="date" size="15" readonly="true" >
                         <i id="lastPaidIconDate" class="material-icons calender-icon page-icons editable-data"></i>
                         <span id="reqdate" class="DdsCharField_OutputOnly"></span></div>
                   </div>
@@ -349,7 +349,7 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
                   <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Next Pay Date:</span> </div>
-                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JZDT_new" name="date" size="15" readonly="true" >
+                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="CenPH__lb_RCDDTL1_V1JZDT_new" name="date" size="15" readonly="true" >
                         <i id="nextPayIconDate" class="material-icons calender-icon page-icons editable-data"></i>
                         <span id="reqdate" class="DdsCharField_OutputOnly"></span></div>
                   </div>
@@ -364,7 +364,7 @@
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Hire Date:</span> </div>
-                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="ctl00$CenPH$_lb_RCDDTL1_V1JXDT_new" name="date" size="15" readonly="true" >
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">  <input data-tb-index="2" class="editable-data" type="text" id="CenPH__lb_RCDDTL1_V1JXDT_new" name="date" size="15" readonly="true" >
                         <i id="hireIconDate" class="material-icons calender-icon page-icons editable-data"></i>
                         <span id="reqdate" class="DdsCharField_OutputOnly"></span></div>
                     </div>
@@ -449,6 +449,14 @@
   </section>
 </main>
 <div id="modal1" class="simplePopup"></div>
+ <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i>
+            <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
 <!-- Modified HTML code ends here -->
        <div id="Div1" style="display: none;">
             
@@ -463,7 +471,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 08/29/17  Time  : 13:05:18                                                                       --%>
+      <%--  Date          : 08/30/17  Time  : 08:19:55                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -659,7 +667,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
               style="position: absolute; left: 334px; top: 27px;"
               Text="Create Header Details" 
               CssClass="DdsConstant"
@@ -1384,21 +1392,21 @@
               Alias="#1JYDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecDateField id="_lb_RCDDTL1_V1JYDT" runat="server" style="position: absolute; left: 190px; top: 384px; width: 73px"
-              CssClass="DdsDecDateField"
-              Length="8" 
-              DateFormat="USA" 
-              DateSeparator="'/'" 
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JYDT" runat="server" style="position: absolute; left: 190px; top: 384px; width: 73px"
+              CssClass="DdsDecField"
+              Length="6" 
+              Decimals="0" 
               Alias="V1JYDT" 
               Usage="Both" 
               VirtualRowCol="17,21" 
               PositionCursor="49" 
               Color="Red : 49 , Green : !49" 
+              EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="19"  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
-              style="position: absolute; left: 343px; top: 387px;"
-              Text="(MM/DD/YY)" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+              style="position: absolute; left: 325px; top: 387px;"
+              Text="(MMDDYY)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
@@ -1415,21 +1423,21 @@
               Alias="#1JZDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecDateField id="_lb_RCDDTL1_V1JZDT" runat="server" style="position: absolute; left: 190px; top: 408px; width: 73px"
-              CssClass="DdsDecDateField"
-              Length="8" 
-              DateFormat="USA" 
-              DateSeparator="'/'" 
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JZDT" runat="server" style="position: absolute; left: 190px; top: 408px; width: 73px"
+              CssClass="DdsDecField"
+              Length="6" 
+              Decimals="0" 
               Alias="V1JZDT" 
               Usage="Both" 
               VirtualRowCol="18,21" 
               PositionCursor="50" 
               Color="Red : 50 , Green : !50" 
+              EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="20"  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
-              style="position: absolute; left: 343px; top: 411px;"
-              Text="(MM/DD/YY)" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+              style="position: absolute; left: 325px; top: 411px;"
+              Text="(MMDDYY)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
@@ -1446,21 +1454,21 @@
               Alias="#1JXDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecDateField id="_lb_RCDDTL1_V1JXDT" runat="server" style="position: absolute; left: 190px; top: 432px; width: 73px"
-              CssClass="DdsDecDateField"
-              Length="8" 
-              DateFormat="USA" 
-              DateSeparator="'/'" 
+            <mdf:DdsDecField id="_lb_RCDDTL1_V1JXDT" runat="server" style="position: absolute; left: 190px; top: 432px; width: 73px"
+              CssClass="DdsDecField"
+              Length="6" 
+              Decimals="0" 
               Alias="V1JXDT" 
               Usage="Both" 
               VirtualRowCol="19,21" 
               PositionCursor="51" 
               Color="Red : 51 , Green : !51" 
+              EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="21"  />
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
-              style="position: absolute; left: 343px; top: 435px;"
-              Text="(MM/DD/YY)" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+              style="position: absolute; left: 325px; top: 435px;"
+              Text="(MMDDYY)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
@@ -1613,7 +1621,6 @@
           </mdf:DdsSubfileControl >
 
         </div>
-
     </asp:Content>
 
     <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">
@@ -1774,29 +1781,30 @@
                 $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
 
-
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT").val());
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#lastPaidIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").datepicker("show"); });
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").on('change', function () {
-                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new").val().split("/");
-                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        //Last Paid Date
+        $("#CenPH__lb_RCDDTL1_V1JYDT_new").val($("#CenPH__lb_RCDDTL1_V1JYDT").val());
+        $("#CenPH__lb_RCDDTL1_V1JYDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#lastPaidIconDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JYDT_new").datepicker("show"); });
+        $("#CenPH__lb_RCDDTL1_V1JYDT_new").on('change', function () {
+                var date = $("#CenPH__lb_RCDDTL1_V1JYDT_new").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1JYDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        });
+        //Next Pay Date
+        $("#CenPH__lb_RCDDTL1_V1JZDT_new").val($("#CenPH__lb_RCDDTL1_V1JZDT").val());
+        $("#CenPH__lb_RCDDTL1_V1JZDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#nextPayIconDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JZDT_new").datepicker("show"); });
+        $("#CenPH__lb_RCDDTL1_V1JZDT_new").on('change', function () {
+                var date = $("#cCenPH__lb_RCDDTL1_V1JZDT_new").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1JZDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
 
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT").val());
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#nextPayIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").datepicker("show"); });
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").on('change', function () {
-                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new").val().split("/");
-                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT").val(date[0] + date[1] + date[2].substr(2, 3));
-        });
-
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").val($("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT").val());
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
-        $("#hireIconDate").click(function () { $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").datepicker("show"); });
-        $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").on('change', function () {
-                var date = $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new").val().split("/");
-                $("#ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT").val(date[0] + date[1] + date[2].substr(2, 3));
+        //Hire Date
+        $("#CenPH__lb_RCDDTL1_V1JXDT_new").val($("#CenPH__lb_RCDDTL1_V1JXDT").val());
+        $("#CenPH__lb_RCDDTL1_V1JXDT_new").datepicker({ changeMonth: true, changeYear: true, dateFormat: 'mm/dd/yy', minDate: new Date(1800, 1, 1), yearRange: "-100:+34" });
+        $("#hireIconDate").click(function () { $("#CenPH__lb_RCDDTL1_V1JXDT_new").datepicker("show"); });
+        $("#CenPH__lb_RCDDTL1_V1JXDT_new").on('change', function () {
+                var date = $("#CenPH__lb_RCDDTL1_V1JXDT_new").val().split("/");
+                $("#CenPH__lb_RCDDTL1_V1JXDT").val(date[0] + date[1] + date[2].substr(2, 3));
         });
 
 $("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
@@ -1813,17 +1821,17 @@ $("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
           "CenPH__lb_RCDDTL1__lb_1CJID":"CenPH__lb_RCDDTL1__lb_1CJID_new", //select
           "CenPH__lb_RCDDTL1__lb_1CLID":"CenPH__lb_RCDDTL1__lb_1CLID_new", //select
           "CenPH__lb_RCDDTL1__lb_DDGID":"CenPH__lb_RCDDTL1__lb_DDGID_new", //select
-          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new",
+          "CenPH__lb_RCDDTL1_V1JYDT":"CenPH__lb_RCDDTL1_V1JYDT_new",       //Last Paid Date
           "CenPH__lb_RCDDTL1__lb_DDTID":"CenPH__lb_RCDDTL1__lb_DDTID_new", //select
           "CenPH__lb_RCDDTL1__lb_1CRID":"CenPH__lb_RCDDTL1__lb_1CRID_new", //select
-          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JYDT_new",
-          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JZDT_new",
-          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JXDT_new",
+          "ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT":"ctl00\\$CenPH\\$_lb_RCDDTL1_V1JVDT_new", //DOB
+          "CenPH__lb_RCDDTL1_V1JZDT":"CenPH__lb_RCDDTL1_V1JZDT_new",       //Next Pay Date
+          "CenPH__lb_RCDDTL1_V1JXDT":"CenPH__lb_RCDDTL1_V1JXDT_new",       //Hire Date
           "CenPH__lb_RCDDTL1_V1JWDT":"CenPH__lb_RCDDTL1_V1JWDT_new",
           "CenPH__lb_RCDDTL1__lb_1CUID":"CenPH__lb_RCDDTL1__lb_1CUID_new", //select
           "CenPH__lb_RCDDTL1__lb_DDRID":"CenPH__lb_RCDDTL1__lb_DDRID_new", //select
         };
-
+//ctl00$CenPH$_lb_RCDDTL1_V1JVDT
         $.each(dateSelect, function(i, item) {
             if ($("#"+i).is("span")) {
               console.log('ener'+ $("#"+i).text());
@@ -1850,6 +1858,27 @@ $("#CenPH__lb_RCDDTL1_V1JWDT_new").val($("#CenPH__lb_RCDDTL1_V1JWDT").val());
          $("#next").click(function (event) {
           _00('Enter', event);
         });
+
+         if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                    $(".editable-data").show();
+                    $(".ro-data").hide();
+                    $(".confirmation-outer-conatiner").hide();
+                    $(".OverlayPopupBackground").hide();
+                } else {
+                    $(".editable-data").hide();
+                    $(".ro-data").show();
+                    $(".confirmation-outer-conatiner").show();
+                    $(".OverlayPopupBackground").show();
+                }
+                
+                $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
 
       });
     </script>
