@@ -400,11 +400,11 @@
                       <span class="form-text" data-upgraded=",MaterialTextfield">
                           <select id="CenPH__lb_RCDDTL1__lb_DDRID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
                               <option selected="selected" value=" ">Please select</option>
-                              <option value="DL">DL</option>
-                              <option value="MI">MI</option>
-                              <option value="AC">AC</option>
-                              <option value="SI">SI</option>
-                              <option value="UP">UP</option>
+                              <option value="DL">DL - Driver License</option>
+                              <option value="MI">MI - Military ID</option>
+                              <!-- <option value="AC">AC</option> -->
+                              <option value="SI">SI - State ID</option>
+                              <option value="UP">UP - US Passport</option>
                           </select>
                           <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
                       </span>
