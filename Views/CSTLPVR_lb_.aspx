@@ -402,7 +402,7 @@
                               <option selected="selected" value=" ">Please select</option>
                               <option value="DL">DL - Driver License</option>
                               <option value="MI">MI - Military ID</option>
-                              <!-- <option value="AC">AC</option> -->
+                              <option value="AC">AC - Resident Alien Card</option>
                               <option value="SI">SI - State ID</option>
                               <option value="UP">UP - US Passport</option>
                           </select>
