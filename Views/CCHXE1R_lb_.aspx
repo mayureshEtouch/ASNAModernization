@@ -2015,7 +2015,7 @@
                 $("#employed-at").show();
                 // $("#ro-currentlyEmp").text($("#CenPH_DdsConstant37").text());
             }
-            else{$("#employed-at").hide();}
+            else{$("#employed-at").parent().parent().hide();}
             if($("#ro-employedat").text() != ""){$("#employed-at").hide();}
             /*if($("#CenPH__lb_RCDDTL1__lb_DDQID").length > 0) {
                 $("#source-of-inc").parent().parent().css("display","block")
