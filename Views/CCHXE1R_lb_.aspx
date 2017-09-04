@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/29/2017 at 5:54 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 9/4/2017 at 11:58 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CCHXE1R# --%>
 
     </asp:Content>
@@ -265,32 +265,35 @@
                                       <option value=" " selected="selected">Please Choose</option>
                                       <option value="N">No</option>
                                       <option value="Y">Yes</option>
-                                  </select>
-                                  <span style="margin: 0 5px;" id="ro-currentlyEmp" class="ro-data"></span>&nbsp;&nbsp;
+                                  </select><span id="ro-employed-at" class="ro-data"></span>
                               </span>
                             </div>
+                        </div>
 
-
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
-                                <span class="form-label clm-form-label">Employed at:</span>
+                                <span class="form-label clm-form-label">Employed at . . . </span>
                                 <span class="form-text">
                                        <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
-                                       <span class="ro-data" id="ro-employed-at"></span>
-                                </span>
-                            </div>
-
-                        <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                        <span class="form-label clm-form-label">Duration:</span>
-                        <span class="form-text">
-                                            <input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3" data-tb-index="18">
-                                            <span class="ro-data" id="ro-employed-at-duration-years"></span>
-                                            &nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2" data-tb-index="19">
-                                            <span class="ro-data" id="ro-employed-at-duration-months"></span>
-                                               &nbsp;Months
-                            </span>
+                                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span id="ro-currentlyEmp" style="color:DarkBlue;"></span>
                             </div>
                         </div>
+                        
+                        <div class="content-grid mdl-grid" style="margin: 0 15px;">
+                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                            <span class="form-label clm-form-label">Duration:</span>
+                                <span class="form-text">
+                                    <input type="text" id="employed-at-duration-years" class="editable-data mdl-textfield__input-small" size="5" maxlength="3" data-tb-index="18">
+                                    <span class="ro-data" id="ro-employed-at-duration-years"></span>
+                                    &nbsp;Years&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="text" id="employed-at-duration-months" class="editable-data mdl-textfield__input-small" size="5" maxlength="2" data-tb-index="19">
+                                    <span class="ro-data" id="ro-employed-at-duration-months"></span>
+                                   &nbsp;Months
+                                </span>
+                            </div>
+                        </div>
+
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
                             <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
                                 <span class="form-label clm-form-label">Income:</span>
@@ -413,8 +416,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 08/29/17  Time  : 05:40:48                                                                       --%>
+      <%--  User name     : COOL26                                                                                           --%>
+      <%--  Date          : 09/01/17  Time  : 13:14:32                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -499,8 +502,8 @@
               VirtualRowCol="2,2" 
  />
             <mdf:DdsConstant id="DdsConstant4" runat="server" 
-              style="position: absolute; left: 217px; top: 27px;"
-              Text="CU: ED1 Personal Detail KEY SCREEN" 
+              style="position: absolute; left: 280px; top: 27px;"
+              Text="Edit Personal Details" 
               CssClass="DdsConstant"
  />
             <mdf:DdsDecField id="_lb_RCDKEY__lb__lb_TME" runat="server" style="position: absolute; left: 550px; top: 24px; width: 73px"
@@ -568,7 +571,7 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 864px; height: 504px" 
+            style="position: relative; width: 864px; height: 528px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;"
@@ -674,6 +677,7 @@
           <%--  Condition: Yes or No                                                                                             --%>
           <%--  Txt: Employer                                                                                                    --%>
           <%--  Txt: Employer                                                                                                    --%>
+          <%--  Txt: Employer                                                                                                    --%>
           <%--  Dte: # of Years                                                                                                  --%>
           <%--  Dte: # of Years                                                                                                  --%>
           <%--  Dte: # of Years                                                                                                  --%>
@@ -728,7 +732,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,18" 
  />
-            <mdf:DdsConstant id="DdsConstant43" runat="server" 
+            <mdf:DdsConstant id="DdsConstant45" runat="server" 
               style="position: absolute; left: 685px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -748,7 +752,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+            <mdf:DdsConstant id="DdsConstant27" runat="server" 
               style="position: absolute; left: 334px; top: 27px;"
               Text="Edit Personal Details" 
               CssClass="DdsConstant"
@@ -762,13 +766,13 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant47" runat="server" 
+            <mdf:DdsConstant id="DdsConstant49" runat="server" 
               style="position: absolute; left: 766px; top: 27px;"
               Text="ADD    " 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant48" runat="server" 
+            <mdf:DdsConstant id="DdsConstant50" runat="server" 
               style="position: absolute; left: 766px; top: 27px;"
               Text="CHANGE " 
               VisibleCondition="!89"
@@ -972,7 +976,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="4,7" 
  />
-            <mdf:DdsConstant id="DdsConstant36" runat="server" 
+            <mdf:DdsConstant id="DdsConstant38" runat="server" 
               style="position: absolute; left: 451px; top: 75px;"
               Text="Home Phone:" 
               Color="Blue" 
@@ -994,7 +998,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="5,7" 
  />
-            <mdf:DdsConstant id="DdsConstant33" runat="server" 
+            <mdf:DdsConstant id="DdsConstant34" runat="server" 
               style="position: absolute; left: 433px; top: 99px;"
               Text="Office Phone:" 
               Color="Blue" 
@@ -1009,7 +1013,7 @@
               VirtualRowCol="5,56" 
               EditWord="   /   -    " 
  />
-            <mdf:DdsConstant id="DdsConstant46" runat="server" 
+            <mdf:DdsConstant id="DdsConstant48" runat="server" 
               style="position: absolute; left: 757px; top: 99px;"
               Text="Ext" 
               Color="Blue" 
@@ -1031,7 +1035,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="6,7" 
  />
-            <mdf:DdsConstant id="DdsConstant31" runat="server" 
+            <mdf:DdsConstant id="DdsConstant32" runat="server" 
               style="position: absolute; left: 406px; top: 123px;"
               Text="Birthday" 
               Color="Blue" 
@@ -1057,7 +1061,7 @@
               Color="Red : 31 &amp; !79 , Green : !79 &amp; !31" 
               Compare="GE 0" 
               TabIndex="1"  />
-            <mdf:DdsConstant id="DdsConstant40" runat="server" 
+            <mdf:DdsConstant id="DdsConstant42" runat="server" 
               style="position: absolute; left: 667px; top: 123px;"
               Text="S.S.#" 
               Color="Blue" 
@@ -1096,7 +1100,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="7,31" 
  />
-            <mdf:DdsConstant id="DdsConstant34" runat="server" 
+            <mdf:DdsConstant id="DdsConstant35" runat="server" 
               style="position: absolute; left: 433px; top: 147px;"
               Text="License" 
               Color="Blue" 
@@ -1112,7 +1116,7 @@
               PositionCursor="33 & !78" 
               Color="Red : 33 &amp; !78 , Green : !78 &amp; !33" 
               TabIndex="3"  />
-            <mdf:DdsConstant id="DdsConstant38" runat="server" 
+            <mdf:DdsConstant id="DdsConstant40" runat="server" 
               style="position: absolute; left: 586px; top: 147px;"
               Text="/" 
               Color="Blue" 
@@ -1146,7 +1150,7 @@
               ValuesStyle="DropdownBoth" 
               Values="'O' 'R' 'L' ' ' 'P' '?' " 
               TabIndex="5"  />
-            <mdf:DdsConstant id="DdsConstant22" runat="server" 
+            <mdf:DdsConstant id="DdsConstant24" runat="server" 
               style="position: absolute; left: 208px; top: 195px;"
               Text="For" 
               Color="Blue" 
@@ -1164,13 +1168,13 @@
               Color="Red : 36 , Green : !36" 
               EditCode="4" 
               TabIndex="6"  />
-            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+            <mdf:DdsConstant id="DdsConstant28" runat="server" 
               style="position: absolute; left: 334px; top: 195px;"
               Text="Years" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant29" runat="server" 
+            <mdf:DdsConstant id="DdsConstant30" runat="server" 
               style="position: absolute; left: 397px; top: 195px;"
               Text="With Payment of" 
               Color="Blue" 
@@ -1188,7 +1192,7 @@
               Color="Red : 37 , Green : !37" 
               EditCode="4" 
               TabIndex="7"  />
-            <mdf:DdsConstant id="DdsConstant45" runat="server" 
+            <mdf:DdsConstant id="DdsConstant47" runat="server" 
               style="position: absolute; left: 703px; top: 195px;"
               Text="Monthly" 
               Color="Blue" 
@@ -1210,7 +1214,7 @@
               PositionCursor="38" 
               Color="Red : 38 , Green : !38" 
               TabIndex="8"  />
-            <mdf:DdsConstant id="DdsConstant35" runat="server" 
+            <mdf:DdsConstant id="DdsConstant36" runat="server" 
               style="position: absolute; left: 442px; top: 219px;"
               Text="Marital Status" 
               Color="Blue" 
@@ -1228,7 +1232,7 @@
               ValuesStyle="DropdownBoth" 
               Values="'M' 'S' ' ' '?' " 
               TabIndex="9"  />
-            <mdf:DdsConstant id="DdsConstant41" runat="server" 
+            <mdf:DdsConstant id="DdsConstant43" runat="server" 
               style="position: absolute; left: 676px; top: 219px;"
               Text="Dependents" 
               Color="Blue" 
@@ -1260,7 +1264,7 @@
               PositionCursor="41" 
               Color="Red : 41 , Green : !41" 
               TabIndex="11"  />
-            <mdf:DdsConstant id="DdsConstant32" runat="server" 
+            <mdf:DdsConstant id="DdsConstant33" runat="server" 
               style="position: absolute; left: 424px; top: 267px;"
               Text="Birthday" 
               Color="Blue" 
@@ -1285,7 +1289,7 @@
               Color="Red : 42 , Green : !42" 
               Compare="GE 0" 
               TabIndex="12"  />
-            <mdf:DdsConstant id="DdsConstant44" runat="server" 
+            <mdf:DdsConstant id="DdsConstant46" runat="server" 
               style="position: absolute; left: 685px; top: 267px;"
               Text="S.S. #" 
               Color="Blue" 
@@ -1318,7 +1322,7 @@
               PositionCursor="44" 
               Color="Red : 44 , Green : !44" 
               TabIndex="14"  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+            <mdf:DdsConstant id="DdsConstant22" runat="server" 
               style="position: absolute; left: 136px; top: 291px;"
               Text="/" 
               Color="Blue" 
@@ -1333,7 +1337,7 @@
               PositionCursor="45" 
               Color="Red : 45 , Green : !45" 
               TabIndex="15"  />
-            <mdf:DdsConstant id="DdsConstant30" runat="server" 
+            <mdf:DdsConstant id="DdsConstant31" runat="server" 
               style="position: absolute; left: 397px; top: 291px;"
               Text="Spouse Monthly Income" 
               Color="Blue" 
@@ -1378,208 +1382,222 @@
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
               TabIndex="17"  />
-            <mdf:DdsConstant id="DdsConstant25" runat="server" 
-              style="position: absolute; left: 307px; top: 339px;"
-              Text="Employed at" 
-              VisibleCondition="!( 76 )"
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+              style="position: absolute; left: 19px; top: 363px;"
+              Text="Employed at . . . ." 
+              VisibleCondition="!76"
               Color="Blue : !76" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUNTX" runat="server" style="position: absolute; left: 415px; top: 336px; width: 181px"
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+              style="position: absolute; left: 19px; top: 363px;"
+              Text="Employed at . . . :" 
+              VisibleCondition="76"
+              Color="Blue : !76" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUNTX" runat="server" style="position: absolute; left: 226px; top: 360px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#DUNTX" 
               VisibleCondition="!( 76 & !48 )"
               Usage="Both" 
-              VirtualRowCol="15,40" 
+              VirtualRowCol="16,22" 
               Protect="76" 
               PositionCursor="48 & !76" 
               Color="Red : 48 &amp; !76 , Green : !76 &amp; !48" 
               TabIndex="18"  />
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
-              style="position: absolute; left: 19px; top: 363px;"
+            <mdf:DdsConstant id="DdsConstant37" runat="server" 
+              style="position: absolute; left: 442px; top: 363px;"
+              Text="Not Retired/Not on Disability" 
+              VisibleCondition="!( 76 )"
+              Color="DarkBlue : !76" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+              style="position: absolute; left: 19px; top: 387px;"
               Text="Duration:" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DZ4NB" runat="server" style="position: absolute; left: 109px; top: 360px; width: 28px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DZ4NB" runat="server" style="position: absolute; left: 109px; top: 384px; width: 28px"
               CssClass="DdsDecField"
               Length="3" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#DZ4NB" 
               Usage="Both" 
-              VirtualRowCol="16,12" 
+              VirtualRowCol="17,12" 
               PositionCursor="49" 
               Color="Red : 49 , Green : !49" 
               EditCode="4" 
               TabIndex="19"  />
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
-              style="position: absolute; left: 145px; top: 363px;"
+            <mdf:DdsConstant id="DdsConstant23" runat="server" 
+              style="position: absolute; left: 145px; top: 387px;"
               Text="Years" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DJVN_lb_" runat="server" style="position: absolute; left: 262px; top: 360px; width: 19px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DJVN_lb_" runat="server" style="position: absolute; left: 262px; top: 384px; width: 19px"
               CssClass="DdsDecField"
               Length="2" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#DJVN#" 
               Usage="Both" 
-              VirtualRowCol="16,23" 
+              VirtualRowCol="17,23" 
               PositionCursor="50" 
               Color="Red : 50 , Green : !50" 
               EditCode="4" 
               TabIndex="20"  />
-            <mdf:DdsConstant id="DdsConstant24" runat="server" 
-              style="position: absolute; left: 289px; top: 363px;"
+            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+              style="position: absolute; left: 289px; top: 387px;"
               Text="Months" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant28" runat="server" 
-              style="position: absolute; left: 388px; top: 363px;"
+            <mdf:DdsConstant id="DdsConstant29" runat="server" 
+              style="position: absolute; left: 388px; top: 387px;"
               Text="Income" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DINC_usd_" runat="server" style="position: absolute; left: 451px; top: 360px; width: 64px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DINC_usd_" runat="server" style="position: absolute; left: 451px; top: 384px; width: 64px"
               CssClass="DdsDecField"
               Length="7" 
               Decimals="2" 
               LeftPad="Blanks" 
               Alias="#DINC$" 
               Usage="Both" 
-              VirtualRowCol="16,44" 
+              VirtualRowCol="17,44" 
               PositionCursor="51" 
               Color="Red : 51 , Green : !51" 
               EditCode="4" 
               TabIndex="21"  />
-            <mdf:DdsConstant id="DdsConstant39" runat="server" 
-              style="position: absolute; left: 586px; top: 363px;"
+            <mdf:DdsConstant id="DdsConstant41" runat="server" 
+              style="position: absolute; left: 586px; top: 387px;"
               Text="Freq" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DINCF" runat="server" style="position: absolute; left: 631px; top: 360px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DINCF" runat="server" style="position: absolute; left: 631px; top: 384px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#DINCF" 
               Usage="Both" 
-              VirtualRowCol="16,58" 
+              VirtualRowCol="17,58" 
               PositionCursor="52" 
               Color="Red : 52 , Green : !52" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="'H' 'W' 'B' 'M' ' ' 'A' 'Y' '?' " 
               TabIndex="22"  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
-              style="position: absolute; left: 19px; top: 387px;"
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+              style="position: absolute; left: 19px; top: 411px;"
               Text="Supervisor" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DWWTX" runat="server" style="position: absolute; left: 118px; top: 384px; width: 271px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DWWTX" runat="server" style="position: absolute; left: 118px; top: 408px; width: 271px"
               CssClass="DdsCharField"
               Length="30" 
               Lower="True" 
               Alias="#DWWTX" 
               Usage="Both" 
-              VirtualRowCol="17,13" 
+              VirtualRowCol="18,13" 
               PositionCursor="53" 
               Color="Red : 53 , Green : !53" 
               TabIndex="23"  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
-              style="position: absolute; left: 19px; top: 411px;"
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+              style="position: absolute; left: 19px; top: 435px;"
               Text="============================================================================" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
-              style="position: absolute; left: 19px; top: 435px;"
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+              style="position: absolute; left: 19px; top: 459px;"
               Text="Reference Name" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant23" runat="server" 
-              style="position: absolute; left: 262px; top: 435px;"
+            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+              style="position: absolute; left: 262px; top: 459px;"
               Text="Address" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant37" runat="server" 
-              style="position: absolute; left: 523px; top: 435px;"
+            <mdf:DdsConstant id="DdsConstant39" runat="server" 
+              style="position: absolute; left: 523px; top: 459px;"
               Text="Zip Code" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant42" runat="server" 
-              style="position: absolute; left: 676px; top: 435px;"
+            <mdf:DdsConstant id="DdsConstant44" runat="server" 
+              style="position: absolute; left: 676px; top: 459px;"
               Text="Phone No." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant49" runat="server" 
-              style="position: absolute; left: 793px; top: 435px;"
+            <mdf:DdsConstant id="DdsConstant51" runat="server" 
+              style="position: absolute; left: 793px; top: 459px;"
               Text="Typ" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DNMRF" runat="server" style="position: absolute; left: 19px; top: 456px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DNMRF" runat="server" style="position: absolute; left: 19px; top: 480px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#DNMRF" 
               Usage="Both" 
-              VirtualRowCol="20,2" 
+              VirtualRowCol="21,2" 
               PositionCursor="54" 
               Color="Red : 54 , Green : !54" 
               TabIndex="24"  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DANTX" runat="server" style="position: absolute; left: 262px; top: 456px; width: 226px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DANTX" runat="server" style="position: absolute; left: 262px; top: 480px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#DANTX" 
               Usage="Both" 
-              VirtualRowCol="20,23" 
+              VirtualRowCol="21,23" 
               PositionCursor="55" 
               Color="Red : 55 , Green : !55" 
               TabIndex="25"  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUSTX" runat="server" style="position: absolute; left: 523px; top: 456px; width: 91px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DUSTX" runat="server" style="position: absolute; left: 523px; top: 480px; width: 91px"
               CssClass="DdsCharField"
               Length="10" 
               Lower="True" 
               Alias="#DUSTX" 
               Usage="Both" 
-              VirtualRowCol="20,49" 
+              VirtualRowCol="21,49" 
               PositionCursor="56" 
               Color="Red : 56 , Green : !56" 
               TabIndex="26"  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DBXNB" runat="server" style="position: absolute; left: 676px; top: 456px; width: 109px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DBXNB" runat="server" style="position: absolute; left: 676px; top: 480px; width: 109px"
               CssClass="DdsDecField"
               Length="10" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#DBXNB" 
               Usage="Both" 
-              VirtualRowCol="20,60" 
+              VirtualRowCol="21,60" 
               PositionCursor="57" 
               Color="Red : 57 , Green : !57" 
               EditWord="   /   -    " 
               TabIndex="27"  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DREFT" runat="server" style="position: absolute; left: 802px; top: 456px; width: 37px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DREFT" runat="server" style="position: absolute; left: 802px; top: 480px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#DREFT" 
               Usage="Both" 
-              VirtualRowCol="20,74" 
+              VirtualRowCol="21,74" 
               PositionCursor="58" 
               Color="Red : 58 , Green : !58" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="'R' 'F' ' ' '?' " 
               TabIndex="28"  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
-              style="position: absolute; left: 19px; top: 483px;"
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
+              style="position: absolute; left: 19px; top: 507px;"
               Text="=============================================================================" 
               Color="Blue" 
               CssClass="DdsConstant"
@@ -1593,13 +1611,13 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant50" runat="server" 
+            <mdf:DdsConstant id="DdsConstant52" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F9=Change" 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant51" runat="server" 
+            <mdf:DdsConstant id="DdsConstant53" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F9=Add" 
               VisibleCondition="!89"
@@ -1614,7 +1632,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant52" runat="server" 
+            <mdf:DdsConstant id="DdsConstant54" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F7=Update Customer" 
               CssClass="DdsConstant"
@@ -1629,7 +1647,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant53" runat="server" 
+            <mdf:DdsConstant id="DdsConstant55" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1649,7 +1667,7 @@
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
               TabIndex="29"  />
-            <mdf:DdsConstant id="DdsConstant54" runat="server" 
+            <mdf:DdsConstant id="DdsConstant56" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1780,7 +1798,7 @@
                 "CenPH__lb_RCDDTL1__lb_1SPST": "ro-sp-lic-first",
                 "CenPH__lb_RCDDTL1__lb_DG6XT": "ro-sp-lic-second",
                 "CenPH__lb_RCDDTL1__lb_1SPI_usd_": "ro-sp-monthly-income",
-                "CenPH__lb_RCDDTL1__lb_DUNTX": "ro-employed-at",
+                "CenPH__lb_RCDDTL1__lb_DDWID": "ro-employed-at",
                 "CenPH__lb_RCDDTL1__lb_DZ4NB": "ro-employed-at-duration-years",
                 "CenPH__lb_RCDDTL1__lb_DJVN_lb_": "ro-employed-at-duration-months",
                 "CenPH__lb_RCDDTL1__lb_DINC_usd_": "ro-cust-income",
@@ -1792,8 +1810,8 @@
                 "CenPH__lb_RCDDTL1__lb_DBXNB": "ro-ref-phone",
                 "CenPH__lb_RCDDTL1__lb_DREFT": "ro-ref-type",
                 // "CenPH__lb_RCDDTL1__lb_DDQID":"ro-source-of-inc",
-                "CenPH__lb_RCDDTL1__lb_DDWID":"ro-currentlyEmp",
-                "CenPH__lb_RCDDTL1__lb_DUNTX":"ro-employed-at"
+                "CenPH_DdsConstant37":"ro-currentlyEmp",
+                // "CenPH__lb_RCDDTL1__lb_DUNTX":"ro-employed-at"
                 
             },
             "inputFields": {
@@ -1864,7 +1882,7 @@
             }
 
             //Set date and time
-            $("[name='date']").text($("[id$=CenPH_DdsConstant43]").text());
+            $("[name='date']").text($("[id$=CenPH_DdsConstant45]").text());
             $("[name='time']").text($("[id$=CenPH__lb_RCDDTL1__lb__lb_TME]").text());
             
             $('body').on('click', '#previous', function(event) {
@@ -1988,14 +2006,15 @@
 
             //conditional field
             if($("#CenPH__lb_RCDDTL1__lb_DUNTX").length > 0) {
-                $("#employed-at").parent().parent().css("display","block")
+                $("#employed-at").show();
+                // $("#ro-currentlyEmp").text($("#CenPH_DdsConstant37").text());
             }
-            else{$("#employed-at").parent().parent().css("display","none")}
+            else{$("#employed-at").hide();}
 
-            if($("#CenPH__lb_RCDDTL1__lb_DDQID").length > 0) {
+            /*if($("#CenPH__lb_RCDDTL1__lb_DDQID").length > 0) {
                 $("#source-of-inc").parent().parent().css("display","block")
             }
-            else{$("#source-of-inc").parent().parent().css("display","none")}
+            else{$("#source-of-inc").parent().parent().css("display","none")}*/
 
     if($(".simplePopupClose").length > 0) {
                 $(".simplePopupBackground1").show();
