@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 7/5/2017 at 6:57 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
+<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 9/4/2017 at 3:25 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -2630,7 +2630,11 @@
 <MSG MSGID="DIS3382" SEVERITY="0" DATACOUNT="0" TEXT="No Order Lines To Send" SECLVL=""                        />
 <MSG MSGID="DIS3404" SEVERITY="20" DATACOUNT="1" TEXT="The Employee ID should not be corporate sales" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="5" DEC1="0"                                                   />
 <MSG MSGID="DIS3405" SEVERITY="20" DATACOUNT="0" TEXT="Please confirm email address ." SECLVL=" "              />
+<MSG MSGID="DIS3406" SEVERITY="20" DATACOUNT="0" TEXT="RN: Transaction File not found." SECLVL=""              />
+<MSG MSGID="DIS3407" SEVERITY="20" DATACOUNT="0" TEXT="RN: Transaction File already exists." SECLVL=""         />
 <MSG MSGID="DIS3408" SEVERITY="20" DATACOUNT="2" TEXT="Requested delivery date must be greater or equal to Expected delivery date." SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0"                                                                                />
+<MSG MSGID="DIS3409" SEVERITY="20" DATACOUNT="0" TEXT="RN: Line Item File not found." SECLVL=""                />
+<MSG MSGID="DIS3410" SEVERITY="20" DATACOUNT="0" TEXT="RN: Line Item File already exists." SECLVL=""           />
 <MSG MSGID="DIS3411" SEVERITY="20" DATACOUNT="0" TEXT="Sold to details incorrect for RAC payment order" SECLVL=" "                                                                                      />
 <MSG MSGID="DIS3420" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1 way to OBS. Don't sell floor sample..." SECLVL=" " TYPE1="*CHAR" LEN1="20" DEC1="0"                                                       />
 <MSG MSGID="DIS3421" SEVERITY="20" DATACOUNT="1" TEXT="SKU-OBS. Sell Flr Sample" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                       />
@@ -2716,8 +2720,92 @@
 <MSG MSGID="DIS3653" SEVERITY="0" DATACOUNT="1" TEXT="Lease ID Already Used" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                                 />
 <MSG MSGID="DIS3654" SEVERITY="20" DATACOUNT="0" TEXT="Payment not successful. Please contact Progressive for further details" SECLVL=""                                                                />
 <MSG MSGID="DIS3655" SEVERITY="0" DATACOUNT="0" TEXT="Employee Not for Purchase" SECLVL=""                     />
+<MSG MSGID="DIS3661" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Set not found." SECLVL=" "                     />
+<MSG MSGID="DIS3662" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Set already exists." SECLVL=" "                />
+<MSG MSGID="DIS3663" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Option not found." SECLVL=" "                  />
+<MSG MSGID="DIS3664" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Option already exists." SECLVL=" "             />
+<MSG MSGID="DIS3665" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Set Option not found." SECLVL=" "              />
+<MSG MSGID="DIS3666" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Set Option already exists." SECLVL=" "         />
+<MSG MSGID="DIS3669" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu User Group not found." SECLVL=" "              />
+<MSG MSGID="DIS3670" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu User Group already exists." SECLVL=" "         />
+<MSG MSGID="DIS3671" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu User Group Dtl not found." SECLVL=" "          />
+<MSG MSGID="DIS3672" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu User Group Dtl already exists." SECLVL=" "     />
+<MSG MSGID="DIS3673" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Option Security not found." SECLVL=" "         />
+<MSG MSGID="DIS3674" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Option Security already exists." SECLVL=" "    />
+<MSG MSGID="DIS3675" SEVERITY="20" DATACOUNT="1" TEXT="Menu Option already exists." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                         />
+<MSG MSGID="DIS3678" SEVERITY="20" DATACOUNT="1" TEXT="Menu Option &amp;1 created." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                         />
+<MSG MSGID="DIS3679" SEVERITY="20" DATACOUNT="1" TEXT="Option Number &amp;1 already exists." SECLVL=" " TYPE1="*DEC" LEN1="2" DEC1="0"                                                                  />
+<MSG MSGID="DIS3680" SEVERITY="20" DATACOUNT="2" TEXT="Menu Set Option &amp;1, Option Number &amp;2 created." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="2" DEC2="0"                />
 <MSG MSGID="DIS3683" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1." SECLVL=" " TYPE1="*CHAR" LEN1="65" DEC1="0"    />
+<MSG MSGID="DIS3686" SEVERITY="20" DATACOUNT="0" TEXT="User is not setup in the User Security menu." SECLVL=" "                                                                                         />
+<MSG MSGID="DIS3687" SEVERITY="20" DATACOUNT="0" TEXT="Menu Set and Menu Number combination not found." SECLVL=" "                                                                                      />
+<MSG MSGID="DIS3688" SEVERITY="20" DATACOUNT="0" TEXT="Menu Option not found." SECLVL=" "                      />
+<MSG MSGID="DIS3689" SEVERITY="20" DATACOUNT="1" TEXT="Menu Option &amp;1 is suspended (globally)." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                         />
+<MSG MSGID="DIS3690" SEVERITY="20" DATACOUNT="1" TEXT="Menu Option &amp;1 is suspended (locally)." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                          />
+<MSG MSGID="DIS3693" SEVERITY="20" DATACOUNT="1" TEXT="Menu option &amp;1 is in use. Deletion not allowed." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                 />
+<MSG MSGID="DIS3694" SEVERITY="20" DATACOUNT="1" TEXT="Menu Set &amp;1 has Menu Options. Deletion not allowed." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                             />
 <MSG MSGID="DIS3695" SEVERITY="20" DATACOUNT="1" TEXT="Initial Blanks not allowed for Lease Id" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                              />
+<MSG MSGID="DIS3697" SEVERITY="20" DATACOUNT="1" TEXT="User ID &amp;1 not found." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                           />
+<MSG MSGID="DIS3698" SEVERITY="20" DATACOUNT="1" TEXT="User Group &amp;1 not found." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                        />
+<MSG MSGID="DIS3699" SEVERITY="20" DATACOUNT="1" TEXT="User Group &amp;1 is in use. Deletion not allowed." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                  />
+<MSG MSGID="DIS3704" SEVERITY="20" DATACOUNT="0" TEXT="User is not authorized to menu option." SECLVL=" "      />
+<MSG MSGID="DIS3705" SEVERITY="20" DATACOUNT="0" TEXT="Menu Option is suspended." SECLVL=" "                   />
+<MSG MSGID="DIS3706" SEVERITY="20" DATACOUNT="0" TEXT="Menu Option Set not found." SECLVL=" "                  />
+<MSG MSGID="DIS3707" SEVERITY="20" DATACOUNT="0" TEXT="Menu Option is inactive." SECLVL=" "                    />
+<MSG MSGID="DIS3708" SEVERITY="20" DATACOUNT="0" TEXT="Invalid option." SECLVL=" "                             />
+<MSG MSGID="DIS3713" SEVERITY="20" DATACOUNT="0" TEXT="Not authorized to re-open" SECLVL=""                    />
+<MSG MSGID="DIS3716" SEVERITY="20" DATACOUNT="0" TEXT="Submit Credit Queries (Incident IC0254558)" SECLVL="SBMJOB CMD(CALL PGM(IPHRUPC)) JOB(CREDITQRY) LOG(4 00 *SECLVL) LOGCLPGM(*YES)"               />
+<MSG MSGID="DIS3727" SEVERITY="20" DATACOUNT="0" TEXT="NvrBounc EMail Addr Vldtn not found." SECLVL=" "        />
+<MSG MSGID="DIS3728" SEVERITY="20" DATACOUNT="0" TEXT="NvrBounc EMail Addr Vldtn already exists." SECLVL=" "   />
+<MSG MSGID="DIS3731" SEVERITY="0" DATACOUNT="0" TEXT="eSign Failed : Documents Printed for Wet Signature." SECLVL=""                                                                                    />
+<MSG MSGID="DIS3732" SEVERITY="0" DATACOUNT="0" TEXT="eSign Successfull" SECLVL=""                             />
+<MSG MSGID="DIS3733" SEVERITY="0" DATACOUNT="0" TEXT="Record Already Selected" SECLVL=""                       />
+<MSG MSGID="DIS3734" SEVERITY="0" DATACOUNT="0" TEXT="Document Not Selected" SECLVL=""                         />
+<MSG MSGID="DIS3739" SEVERITY="20" DATACOUNT="0" TEXT="Collection 3rd Party Dtl not found." SECLVL=" "         />
+<MSG MSGID="DIS3740" SEVERITY="20" DATACOUNT="0" TEXT="Collection 3rd Party Dtl already exists." SECLVL=" "    />
+<MSG MSGID="DIS3741" SEVERITY="20" DATACOUNT="0" TEXT="Collection 3rd Party Hdr not found." SECLVL=" "         />
+<MSG MSGID="DIS3742" SEVERITY="20" DATACOUNT="0" TEXT="Collection 3rd Party Hdr already exists." SECLVL=" "    />
+<MSG MSGID="DIS3748" SEVERITY="20" DATACOUNT="0" TEXT="Total Value required when 'Denomination' is 'Y'." SECLVL=" "                                                                                     />
+<MSG MSGID="DIS3749" SEVERITY="20" DATACOUNT="0" TEXT="'Total Value' should be zero when 'Denomination' is 'N'." SECLVL=" "                                                                             />
+<MSG MSGID="DIS3750" SEVERITY="20" DATACOUNT="0" TEXT="Expiration Date should be blank when 'Denomination' is 'N'." SECLVL=" "                                                                          />
+<MSG MSGID="DIS3751" SEVERITY="20" DATACOUNT="0" TEXT="File Name required for Batch Upload" SECLVL="*BLANK"    />
+<MSG MSGID="DIS3753" SEVERITY="20" DATACOUNT="0" TEXT="Nbr recs not as expected" SECLVL=" "                    />
+<MSG MSGID="DIS3754" SEVERITY="20" DATACOUNT="0" TEXT="Collection Lockbox Templt not found." SECLVL=""         />
+<MSG MSGID="DIS3755" SEVERITY="20" DATACOUNT="0" TEXT="Collection Lockbox Templt already exists." SECLVL=""    />
+<MSG MSGID="DIS3756" SEVERITY="20" DATACOUNT="0" TEXT="BX Already generated" SECLVL=""                         />
+<MSG MSGID="DIS3757" SEVERITY="20" DATACOUNT="0" TEXT="'Total Value' cannot be a negative amount" SECLVL=" "   />
+<MSG MSGID="DIS3758" SEVERITY="20" DATACOUNT="0" TEXT="Number of records must be greater than zero" SECLVL=" " />
+<MSG MSGID="DIS3759" SEVERITY="20" DATACOUNT="0" TEXT="SC: Traffic KDB not found." SECLVL=""                   />
+<MSG MSGID="DIS3760" SEVERITY="20" DATACOUNT="0" TEXT="SC: Traffic KDB already exists." SECLVL=""              />
+<MSG MSGID="DIS3761" SEVERITY="20" DATACOUNT="0" TEXT="SC: Traffic Daily Count not found." SECLVL=""           />
+<MSG MSGID="DIS3762" SEVERITY="20" DATACOUNT="0" TEXT="SC: Traffic Daily Count already exists." SECLVL=""      />
+<MSG MSGID="DIS3763" SEVERITY="20" DATACOUNT="0" TEXT="Only Batches in 'Pending' status may be processed." SECLVL=" "                                                                                   />
+<MSG MSGID="DIS3764" SEVERITY="20" DATACOUNT="1" TEXT="ERROR in processing Batch: &amp;1. Status set to 'In Error'." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                        />
+<MSG MSGID="DIS3765" SEVERITY="20" DATACOUNT="0" TEXT="Denomination should be 'Y' or 'N'" SECLVL=" "           />
+<MSG MSGID="DIS3766" SEVERITY="20" DATACOUNT="0" TEXT="Collection Vendor Parm not found." SECLVL=""            />
+<MSG MSGID="DIS3767" SEVERITY="20" DATACOUNT="0" TEXT="Collection Vendor Parm already exists." SECLVL=""       />
+<MSG MSGID="DIS3768" SEVERITY="20" DATACOUNT="0" TEXT="Vendor is inactive." SECLVL=" "                         />
+<MSG MSGID="DIS3771" SEVERITY="20" DATACOUNT="0" TEXT="Number of records required for Batch Upload" SECLVL="*BLANK"                                                                                     />
+<MSG MSGID="DIS3772" SEVERITY="20" DATACOUNT="1" TEXT="Batch: &amp;1 processed successfully. Status set to 'Processed'." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                    />
+<MSG MSGID="DIS3773" SEVERITY="20" DATACOUNT="30" TEXT="Credit Payment not found." SECLVL="" TYPE1="*CHAR" LEN1="1" DEC1="0" TYPE2="*CHAR" LEN2="1" DEC2="0" TYPE3="*CHAR" LEN3="1" DEC3="0" TYPE4="*CHAR" LEN4="1" DEC4="0" TYPE5="*CHAR" LEN5="1" DEC5="0" TYPE6="*CHAR" LEN6="1" DEC6="0" TYPE7="*CHAR" LEN7="1" DEC7="0" TYPE8="*CHAR" LEN8="1" DEC8="0" TYPE9="*CHAR" LEN9="1" DEC9="0" TYPE10="*CHAR" LEN10="1" DEC10="0" TYPE11="*CHAR" LEN11="1" DEC11="0" TYPE12="*CHAR" LEN12="1" DEC12="0" TYPE13="*CHAR" LEN13="1" DEC13="0" TYPE14="*CHAR" LEN14="1" DEC14="0" TYPE15="*CHAR" LEN15="1" DEC15="0" TYPE16="*CHAR" LEN16="1" DEC16="0" TYPE17="*CHAR" LEN17="1" DEC17="0" TYPE18="*CHAR" LEN18="1" DEC18="0" TYPE19="*CHAR" LEN19="1" DEC19="0" TYPE20="*CHAR" LEN20="1" DEC20="0" TYPE21="*CHAR" LEN21="1" DEC21="0" TYPE22="*CHAR" LEN22="1" DEC22="0" TYPE23="*CHAR" LEN23="1" DEC23="0" TYPE24="*CHAR" LEN24="1" DEC24="0" TYPE25="*CHAR" LEN25="1" DEC25="0" TYPE26="*CHAR" LEN26="1" DEC26="0" TYPE27="*CHAR" LEN27="1" DEC27="0" TYPE28="*CHAR" LEN28="1" DEC28="0" TYPE29="*CHAR" LEN29="1" DEC29="0" TYPE30="*CHAR" LEN30="1" DEC30="0"                                                                />
+<MSG MSGID="DIS3774" SEVERITY="20" DATACOUNT="30" TEXT="Credit Payment already exists." SECLVL="" TYPE1="*CHAR" LEN1="1" DEC1="0" TYPE2="*CHAR" LEN2="1" DEC2="0" TYPE3="*CHAR" LEN3="1" DEC3="0" TYPE4="*CHAR" LEN4="1" DEC4="0" TYPE5="*CHAR" LEN5="1" DEC5="0" TYPE6="*CHAR" LEN6="1" DEC6="0" TYPE7="*CHAR" LEN7="1" DEC7="0" TYPE8="*CHAR" LEN8="1" DEC8="0" TYPE9="*CHAR" LEN9="1" DEC9="0" TYPE10="*CHAR" LEN10="1" DEC10="0" TYPE11="*CHAR" LEN11="1" DEC11="0" TYPE12="*CHAR" LEN12="1" DEC12="0" TYPE13="*CHAR" LEN13="1" DEC13="0" TYPE14="*CHAR" LEN14="1" DEC14="0" TYPE15="*CHAR" LEN15="1" DEC15="0" TYPE16="*CHAR" LEN16="1" DEC16="0" TYPE17="*CHAR" LEN17="1" DEC17="0" TYPE18="*CHAR" LEN18="1" DEC18="0" TYPE19="*CHAR" LEN19="1" DEC19="0" TYPE20="*CHAR" LEN20="1" DEC20="0" TYPE21="*CHAR" LEN21="1" DEC21="0" TYPE22="*CHAR" LEN22="1" DEC22="0" TYPE23="*CHAR" LEN23="1" DEC23="0" TYPE24="*CHAR" LEN24="1" DEC24="0" TYPE25="*CHAR" LEN25="1" DEC25="0" TYPE26="*CHAR" LEN26="1" DEC26="0" TYPE27="*CHAR" LEN27="1" DEC27="0" TYPE28="*CHAR" LEN28="1" DEC28="0" TYPE29="*CHAR" LEN29="1" DEC29="0" TYPE30="*CHAR" LEN30="1" DEC30="0"                                                           />
+<MSG MSGID="DIS3775" SEVERITY="20" DATACOUNT="0" TEXT="Gift Card Value required" SECLVL=" "                    />
+<MSG MSGID="DIS3776" SEVERITY="20" DATACOUNT="1" TEXT="Gift Card Batch :  &amp;1  Created" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                             />
+<MSG MSGID="DIS3777" SEVERITY="20" DATACOUNT="1" TEXT="Error in processing Batch: &amp;1. Status set to 'In Error'." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                        />
+<MSG MSGID="DIS3778" SEVERITY="20" DATACOUNT="0" TEXT="Date must be greater than current date." SECLVL=" "     />
+<MSG MSGID="DIS3779" SEVERITY="20" DATACOUNT="0" TEXT="Only Batches in 'Rejected' status may be changed" SECLVL=" "                                                                                     />
+<MSG MSGID="DIS3780" SEVERITY="20" DATACOUNT="0" TEXT="Only Batches in 'Rejected', 'InError' or 'Pending' status may be cancelled." SECLVL=" "                                                          />
+<MSG MSGID="DIS3781" SEVERITY="20" DATACOUNT="1" TEXT="Gift Card file: &amp;1 not found" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                               />
+<MSG MSGID="DIS3782" SEVERITY="20" DATACOUNT="1" TEXT="Batch: &amp;1 'Rejected'.'Actual' records not equal to number 'Expected'" SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                            />
+<MSG MSGID="DIS3783" SEVERITY="20" DATACOUNT="1" TEXT="Invalid File Name. File Name cannot start with: '&amp;1'." SECLVL=" " TYPE1="*CHAR" LEN1="1" DEC1="0"                                            />
+<MSG MSGID="DIS3784" SEVERITY="20" DATACOUNT="0" TEXT="Please complete signing ceremony to complete the order" SECLVL=" "                                                                               />
+<MSG MSGID="DIS3785" SEVERITY="20" DATACOUNT="1" TEXT="Error in copying file: &amp;1" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                  />
+<MSG MSGID="DIS3786" SEVERITY="20" DATACOUNT="1" TEXT="Go Anywhere - file: &amp;1 not found" SECLVL=" " TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                />
+<MSG MSGID="DIS3787" SEVERITY="20" DATACOUNT="1" TEXT="Text file: &amp;1 already exists" SECLVL=" " TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                    />
+<MSG MSGID="DIS3788" SEVERITY="20" DATACOUNT="0" TEXT="Please Complete Siging Ceremony in DocuSign" SECLVL=""  />
+<MSG MSGID="DIS3790" SEVERITY="20" DATACOUNT="1" TEXT="Order signed successfully. Press F3 to exit." SECLVL="*BLANK" TYPE1="*CHAR" LEN1="50" DEC1="0"                                                   />
+<MSG MSGID="DIS3791" SEVERITY="0" DATACOUNT="0" TEXT="Order voided in DocuSign" SECLVL=""                      />
+<MSG MSGID="DIS3792" SEVERITY="20" DATACOUNT="1" TEXT="Process completed. Batch ID &amp;1 created." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                         />
 <MSG MSGID="USR0001" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference not found." SECLVL=" "                    />
 <MSG MSGID="USR0002" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference already exists." SECLVL=" "               />
 <MSG MSGID="USR0003" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer not found." SECLVL=" "                     />
@@ -2754,6 +2842,16 @@
 <MSG MSGID="USR0045" SEVERITY="20" DATACOUNT="1" TEXT="Invalid Year" SECLVL=" " TYPE1="*DEC" LEN1="4" DEC1="0" />
 <MSG MSGID="USR0048" SEVERITY="20" DATACOUNT="0" TEXT="Error in date calculation - Attempt to read a date outside of the Calendar" SECLVL="You have asked for a date calculation involving the calendar file. The date supplied is not in the calendar file. Either the wrong date is being passed in or the range of the Calendar is too small. Amend the program or regenerate the Calendar for the required period."                                                            />
 <MSG MSGID="USR0049" SEVERITY="20" DATACOUNT="0" TEXT="Error - End of Calendar File reached unexpectedly" SECLVL="End of file hit before date calculation completed. Either date passed into this function is incorrect or Calendar file is too small. Amend program or generate a larger Calendar file."                                                                                 />
+<MSG MSGID="USR0344" SEVERITY="0" DATACOUNT="0" TEXT="SY: User Profile Model not found." SECLVL=""             />
+<MSG MSGID="USR0352" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Employee ID" SECLVL=""                          />
+<MSG MSGID="USR0353" SEVERITY="20" DATACOUNT="0" TEXT="User profile has been created" SECLVL=""                />
+<MSG MSGID="USR0354" SEVERITY="20" DATACOUNT="0" TEXT="Password has been changed" SECLVL=""                    />
+<MSG MSGID="USR0355" SEVERITY="20" DATACOUNT="0" TEXT="User profile has been disabled" SECLVL=""               />
+<MSG MSGID="USR0356" SEVERITY="20" DATACOUNT="0" TEXT="User profile has been enabled" SECLVL=""                />
+<MSG MSGID="USR0358" SEVERITY="20" DATACOUNT="0" TEXT="Employee Name Required" SECLVL=""                       />
+<MSG MSGID="USR0359" SEVERITY="20" DATACOUNT="0" TEXT="Value required." SECLVL=""                              />
+<MSG MSGID="USR0360" SEVERITY="0" DATACOUNT="0" TEXT="Role cannot start with'Q'" SECLVL=""                     />
+<MSG MSGID="USR0362" SEVERITY="20" DATACOUNT="1" TEXT="User profile does not exist" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                          />
 <MSG MSGID="USR0962" SEVERITY="20" DATACOUNT="0" TEXT="Cannot continue. Source file is empty." SECLVL=" "      />
 <MSG MSGID="USR0963" SEVERITY="20" DATACOUNT="0" TEXT="Update completed." SECLVL=" "                           />
 <MSG MSGID="USR0964" SEVERITY="20" DATACOUNT="3" TEXT="Member &amp;3 file &amp;1 in library &amp;2 not found." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                     />
