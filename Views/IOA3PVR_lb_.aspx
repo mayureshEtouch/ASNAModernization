@@ -60,6 +60,16 @@
                       </div>
                     </div>
                   </div>
+                  <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
+                    <div class="content-grid mdl-grid" style="padding-bottom: 0;">
+<!--                       <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet" style="margin:0">
+                        <span class="form-label"></span>
+                      </div> -->
+                      <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet" style="margin:0">eSign Status:
+                        <span class="form-text" id="status" style="font-weight: bold"></span>
+                      </div>
+                    </div>
+                  </div>
                   <!-- col ends here -->       
                 </div>
                 <!-- content-grid mdl-grid ends here  -->                            
@@ -69,7 +79,7 @@
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div> -->
 					           <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
-                      <span class="input-side-gutter-space form-label" id="esign-info" style="color:blue;"></span>
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
@@ -84,7 +94,7 @@
         </main>
         <!-- <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
         <div id="modal" class="simplePopup"></div>
- -->      <div id="Div1" style="display:none;">
+ -->     <div id="Div1" style="display: none;">
             
       <%--  ES: PMT to eSign Automate Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -96,25 +106,25 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : ISOKKALI                                                                                         --%>
-      <%--  Date          : 09/30/16  Time  : 01:50:45                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 09/01/17  Time  : 00:13:01                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
       <%-- =========================================================================                                         --%>
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 909px; height: 96px" 
+            style="position: relative; width: 909px; height: 168px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;Home 'Reset.' 30;"
-            FuncKeys="F4 'Prompt.' 04;"
+            FuncKeys="F4 'Prompt.' 04;F5 'CF05.' 05;"
             SetOfInds="98 99 " 
             CommandKeyInd="29" 
             Window="True"
             WindowUnits="CharacterPositions"
             WindowWidth="70" 
-            WindowHeight="7" 
+            WindowHeight="10" 
             CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 25"
           >&nbsp;
           <%--                                                                                                                   --%>
@@ -126,6 +136,7 @@
           <%--  Reposition cursor to where?                                                                                      --%>
           <%--  Window title                                                                                                     --%>
           <%--  # Text: 72                                                                                                       --%>
+          <%--  Envelope Rtn STATUS                                                                                              --%>
           <%--  Txt: Name                                                                                                        --%>
           <%--  Txt: Name 2                                                                                                      --%>
           <%--  Selection prompt text                                                                                            --%>
@@ -163,6 +174,10 @@
           <%--  Dte: Change Date                                                                                                 --%>
           <%--  Tme: Change Time                                                                                                 --%>
           <%--  # Text: 60                                                                                                       --%>
+          <%--  Envelope STATUS                                                                                                  --%>
+          <%--  Envelope STATUS                                                                                                  --%>
+          <%--  # Text: 10                                                                                                       --%>
+          <%--  # Text: 20                                                                                                       --%>
           <%-- =========================================================================                                         --%>
             <mdf:DdsDecField id="_lb_RCDDTL1_ZZCSRW" runat="server" style="position: absolute; left: 1px; top: 0px; width: 28px"
               CssClass="DdsDecField"
@@ -178,7 +193,7 @@
               Alias="ZZCSCL" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant1" runat="server" 
+            <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 262px; top: 3px;"
               Text="eSign Status" 
               CssClass="DdsConstant"
@@ -187,6 +202,12 @@
               CssClass="DdsCharField"
               Length="72" 
               Alias="#DIUTX" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DSETT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 451px"
+              CssClass="DdsCharField"
+              Length="50" 
+              Alias="#DSETT" 
               Usage="Hidden" 
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_DPJTX" runat="server" style="position: absolute; left: 1px; top: 0px; width: 271px"
@@ -414,13 +435,42 @@
               Alias="#1CHTM" 
               Usage="Hidden" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DEXXT" runat="server" style="position: absolute; left: 28px; top: 72px; width: 541px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DEXXT" runat="server" style="position: absolute; left: 28px; top: 48px; width: 541px"
               CssClass="DdsCharField"
               Length="60" 
               Alias="#DEXXT" 
               Usage="OutputOnly" 
-              VirtualRowCol="4,3" 
+              VirtualRowCol="3,3" 
               Color="Red : 79 , Pink : !79" 
+ />
+            <mdf:DdsConstant id="DdsConstant1" runat="server" 
+              style="position: absolute; left: 19px; top: 99px;"
+              Text="eSign Status:" 
+              VisibleCondition="!( 78 )"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DR2TT" runat="server" style="position: absolute; left: 145px; top: 96px; width: 451px"
+              CssClass="DdsCharField"
+              Length="50" 
+              Alias="#DR2TT" 
+              VisibleCondition="!( 78 )"
+              Usage="OutputOnly" 
+              VirtualRowCol="5,16" 
+              Color="Pink : !78" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DJWXT" runat="server" style="position: absolute; left: 19px; top: 144px; width: 91px"
+              CssClass="DdsCharField"
+              Length="10" 
+              Alias="#DJWXT" 
+              Usage="OutputOnly" 
+              VirtualRowCol="7,2" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DKMXT" runat="server" style="position: absolute; left: 127px; top: 144px; width: 181px"
+              CssClass="DdsCharField"
+              Length="20" 
+              Alias="#DKMXT" 
+              Usage="OutputOnly" 
+              VirtualRowCol="7,14" 
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
@@ -430,21 +480,21 @@
             Window="True"
             WindowUnits="CharacterPositions"
             WindowWidth="70" 
-            WindowHeight="7" 
+            WindowHeight="10" 
           >&nbsp;
           <%--                                                                                                                   --%>
           <%-- Window definition                                                                                                 --%>
           <%--                                                                                                                   --%>
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant2" runat="server" 
+            <mdf:DdsConstant id="DdsConstant3" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text=" " 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 36px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -461,7 +511,7 @@
             WindowLeftField="##WSC" 
             WindowWidth="70" 
             WindowTopField="##WSR" 
-            WindowHeight="7" 
+            WindowHeight="10" 
           >&nbsp;
           <%-- Window definition                                                                                                 --%>
           <%-- Window borders definition                                                                                         --%>
@@ -486,10 +536,9 @@
               VirtualRowCol="0,0" 
  />
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -526,7 +575,7 @@
               Alias="##WSCA" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant3" runat="server" 
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
               style="position: absolute; left: 712px; top: 3px;"
               Text=" " 
               VisibleCondition="*False"
@@ -598,7 +647,8 @@
             "displayOnlyFields": {
                 //"CenPH__lb_CMDTXT1": "text",
                 "CenPH__lb_RCDDTL1__lb_DEXXT":"text",
-                "CenPH__lb_MSGRCD_MSGKEY.0":"esign-info"
+                "CenPH__lb_MSGRCD_MSGKEY.0":"esign-info",
+                "CenPH__lb_RCDDTL1__lb_DR2TT":"status"
             },
             "inputFields": {
                
