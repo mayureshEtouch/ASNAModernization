@@ -275,7 +275,7 @@
                                 <span class="form-label clm-form-label">Employed at . . . </span>
                                 <span class="form-text">
                                        <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
-                                </span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span><span id="ro-employedat" class="ro-data"></span>&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span id="ro-currentlyEmp" style="color:DarkBlue;"></span>
                             </div>
                         </div>
@@ -1811,6 +1811,7 @@
                 "CenPH__lb_RCDDTL1__lb_DREFT": "ro-ref-type",
                 // "CenPH__lb_RCDDTL1__lb_DDQID":"ro-source-of-inc",
                 "CenPH_DdsConstant37":"ro-currentlyEmp",
+                "CenPH__lb_RCDDTL1__lb_DUNTX":"ro-employedat"
                 // "CenPH__lb_RCDDTL1__lb_DUNTX":"ro-employed-at"
                 
             },
@@ -1845,6 +1846,7 @@
               // "CenPH__lb_RCDDTL1__lb_DDQID":"source-of-inc",
               "CenPH__lb_RCDDTL1__lb_DDWID":"currentlyEmp",
               "CenPH__lb_RCDDTL1__lb_DUNTX":"employed-at"
+              
             }
         }
         $(document).ready(function() {
@@ -1924,11 +1926,15 @@
             } else {
               $(".editable-data").hide();
               $(".ro-data").show();
+              /*if ($("#CenPH__lb_RCDDTL1__lb_DUNTX").length > 0) {
+                $("#employed-at").hide();
+              }*/
               $(".confirmation-outer-conatiner").show();
               $(".OverlayPopupBackground").show();
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
               $("#ro-cust-ssn").text("*****"+$("#ro-cust-ssn").text().replace(/-/g, "").substr(5,9));
               $("#ssn-show").hide();
+              
             }
             
             $("#yes").click(function (event) {
@@ -2010,7 +2016,7 @@
                 // $("#ro-currentlyEmp").text($("#CenPH_DdsConstant37").text());
             }
             else{$("#employed-at").hide();}
-
+            if($("#ro-employedat").text() != ""){$("#employed-at").hide();}
             /*if($("#CenPH__lb_RCDDTL1__lb_DDQID").length > 0) {
                 $("#source-of-inc").parent().parent().css("display","block")
             }
