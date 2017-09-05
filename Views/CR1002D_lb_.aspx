@@ -616,9 +616,9 @@
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--6-col mdl-cell--7-col-desktop" id="divAdd"> 
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> -->
-                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="process">Process</span>
+                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="process">Process</span> -->
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="menu">Menu</span>
-                <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span> -->
+                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>  -->
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disMsgs">Display Messages</span>
               </div>
               <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
@@ -2326,35 +2326,34 @@ if($("#CenPH_DdsConstant62").html()!="" && $("#CenPH_DdsConstant62").html()!=und
       },0);
      });
 
-$('#divAdd').append('<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">eSign / Wet Sign</span>');
+    $('#divAdd').append('<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="revise">Revise</span> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="print">eSign / Wet Sign</span>');
 
-$( "#revise" ).on( "click", function() {
-   _00('F2', event);
-});
+    $( "#revise" ).on( "click", function() {
+       _00('F2', event);
+    });
 
-$( "#print" ).on( "click", function() {
-  _00('F7', event);
-});
+    $( "#print" ).on( "click", function() {
+      _00('F7', event);
+    });
 
 
-}
+    }
 
-/*            $("#process").click(function (event) {
-              _00('Enter', event);
-            });
+        // $("#process").click(function (event) {
+        //   _00('Enter', event);
+        // });
 
-            $("#menu").click(function (event) {
-              _00('CF3', event);
-            });
+        $("#menu").click(function (event) {
+          _00('F3', event);
+        });
 
-            $("#refresh").click(function (event) {
-              _00('CF5', event);
-            });*/
+        // $("#refresh").click(function (event) {
+        //   _00('F5', event);
+        // });
 
-            $("#disMsgs").click(function (event) {
-              _00('F6', event);
-            });
-         });
-      </script>
-
-    </asp:Content>
+        $("#disMsgs").click(function (event) {
+          _00('F6', event);
+        });
+     });
+  </script>
+</asp:Content>
