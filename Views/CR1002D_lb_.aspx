@@ -2255,25 +2255,15 @@
               _00('Enter', event);
             });
 
-            /*document.onkeydown = keydown;
-            function keydown(evt) {
-                
-                  if (!evt) evt = event;
-                      if (evt.keyCode == '13') {
-                
-                   
-                      $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
-              $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+            document.onkeydown = keydownF3;
+            function keydownF3(evt) {
+              if (evt.code == "F3") {
+                 _00('F3', event);
+                return false;
+              }
              
-              _00('Enter', event);
-                }
-            }*/
-
-
-
-
-
-
+            }
+            
             $("#previous").click(function (event) {
               _00('F3', event);
             });
