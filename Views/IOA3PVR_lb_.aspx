@@ -84,9 +84,9 @@
                     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh" style="display:none;"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right">
+                    <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
-                    </div>
+                    </div> -->
                     
                   </div>
 
