@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="IOA3PVR_lb_.aspx.cs" Inherits="conns.IOA3PVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="IOA3PVR_lb_.aspx.cs" Inherits="Conns.IOA3PVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 10/7/2016 at 12:48 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 9/6/2017 at 8:45 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member IOA3PVR# --%>
        <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -78,10 +78,13 @@
 <!--                     <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div> -->
-					           <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
-                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
+					           <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-desktop">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit"></span>
                     </div>
-                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop pull-right">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh" style="display:none;"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
                     </div>
                     
@@ -94,7 +97,7 @@
         </main>
         <!-- <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
         <div id="modal" class="simplePopup"></div>
- -->     <div id="Div1" style="display: none;">
+ -->     <div id="Div1" style="display:none;">
             
       <%--  ES: PMT to eSign Automate Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -106,8 +109,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 09/01/17  Time  : 00:13:01                                                                       --%>
+      <%--  User name     : APOTTI                                                                                           --%>
+      <%--  Date          : 09/06/17  Time  : 08:42:05                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -136,6 +139,7 @@
           <%--  Reposition cursor to where?                                                                                      --%>
           <%--  Window title                                                                                                     --%>
           <%--  # Text: 72                                                                                                       --%>
+          <%--  # Text: 10                                                                                                       --%>
           <%--  Envelope Rtn STATUS                                                                                              --%>
           <%--  Txt: Name                                                                                                        --%>
           <%--  Txt: Name 2                                                                                                      --%>
@@ -176,7 +180,7 @@
           <%--  # Text: 60                                                                                                       --%>
           <%--  Envelope STATUS                                                                                                  --%>
           <%--  Envelope STATUS                                                                                                  --%>
-          <%--  # Text: 10                                                                                                       --%>
+          <%--  # Text: 15                                                                                                       --%>
           <%--  # Text: 20                                                                                                       --%>
           <%-- =========================================================================                                         --%>
             <mdf:DdsDecField id="_lb_RCDDTL1_ZZCSRW" runat="server" style="position: absolute; left: 1px; top: 0px; width: 28px"
@@ -202,6 +206,12 @@
               CssClass="DdsCharField"
               Length="72" 
               Alias="#DIUTX" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DJWXT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 91px"
+              CssClass="DdsCharField"
+              Length="10" 
+              Alias="#DJWXT" 
               Usage="Hidden" 
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_DSETT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 451px"
@@ -458,19 +468,19 @@
               VirtualRowCol="5,16" 
               Color="Pink : !78" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DJWXT" runat="server" style="position: absolute; left: 19px; top: 144px; width: 91px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DACTX" runat="server" style="position: absolute; left: 19px; top: 144px; width: 136px"
               CssClass="DdsCharField"
-              Length="10" 
-              Alias="#DJWXT" 
+              Length="15" 
+              Alias="#DACTX" 
               Usage="OutputOnly" 
               VirtualRowCol="7,2" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DKMXT" runat="server" style="position: absolute; left: 127px; top: 144px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DKMXT" runat="server" style="position: absolute; left: 172px; top: 144px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#DKMXT" 
               Usage="OutputOnly" 
-              VirtualRowCol="7,14" 
+              VirtualRowCol="7,19" 
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
@@ -667,8 +677,19 @@
               _00("Enter", event);
             });
 
+            $("#Exit").text($("#CenPH__lb_RCDDTL1__lb_DACTX").text().split("=")[1]);
+
+            if ($("#CenPH__lb_RCDDTL1__lb_DKMXT").text().indexOf("=") > 0) {
+              $("#refresh").css("display","block");
+              $("#refresh").text($("#CenPH__lb_RCDDTL1__lb_DKMXT").text().split("=")[1]);
+            }           
+
             $('#Exit').click(function (event) {
               _00("F3", event);
+            });
+
+            $('#refresh').click(function (event) {
+              _00("F5", event);
             });
 
             $('.close-icon').click(function (event) {

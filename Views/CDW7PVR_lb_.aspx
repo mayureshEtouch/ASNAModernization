@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 9/4/2017 at 1:04 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 9/6/2017 at 8:42 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CDW7PVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -91,7 +91,7 @@
         </div>
 </div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="Display:none;">
+        <div id="Div1" style="display:none;">
             
       <%--  OE: PMT to void order     Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -104,7 +104,7 @@
       <%--  Company       : Credit Collection Model                                                                          --%>
       <%--  System        : Credit Applications                                                                              --%>
       <%--  User name     : APOTTI                                                                                           --%>
-      <%--  Date          : 08/31/17  Time  : 04:13:31                                                                       --%>
+      <%--  Date          : 09/06/17  Time  : 09:03:47                                                                       --%>
       <%--  Copyright     : Credit Collection Model                                                                          --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -668,7 +668,7 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
-            style="position: relative; width: 198px; height: 24px" 
+            style="position: relative; width: 207px; height: 24px" 
             Alias="#CMDTXT1"
             CssClass="DdsRecord"
             Window="True"
@@ -683,7 +683,7 @@
           <%-- =========================================================================                                         --%>
             <mdf:DdsConstant id="DdsConstant7" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text="F3=Exit F2=Previous" 
+              Text="F3=Exit F12=Previous" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
