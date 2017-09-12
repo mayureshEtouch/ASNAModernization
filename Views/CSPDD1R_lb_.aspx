@@ -1,9 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSPDD1R_lb_.aspx.cs" Inherits="conns.CSPDD1R_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSPDD1R_lb_.aspx.cs" Inherits="CONNS.CSPDD1R_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 7/4/2017 at 8:35 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library asnatrack, file qddssrc, member CSPDD1R# --%>
+        <%-- Migrated on 9/11/2017 at 7:18 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CSPDD1R# --%>
+
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
 
@@ -60,21 +61,8 @@
                     </div>
                   </div>
                   <!-- col ends here -->
-          
-                  <!-- col starts here -->
-                    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
-                    <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
-                            <span class="form-label">Approved Amount:</span>
-                        </div>
-                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet pull-right">
-                            <span class="form-text" id="appAmt"></span>
-                        </div>
-                    </div>
-                  </div>
-                  <!-- col ends here -->
-          
-                    <!-- col starts here -->
+                  
+                   <!-- col starts here -->
                     <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
@@ -82,6 +70,58 @@
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                             <span class="form-text" id="accStatus"></span>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+
+                  <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+                            <span class="form-label">Approved Amount:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="form-text" id="appAmt"></span>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+
+                  <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+                            <span class="form-label">Down Payment:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="form-text" id="dwnPay"></span>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+
+                  <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+                            <span class="form-label">Lease Term:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="form-text" id="leaseTerm"></span>&nbsp;&nbsp;<span class="form-text" id="terms"></span>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- col ends here -->
+
+                  <!-- col starts here -->
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
+                            <span class="form-label">Pay Frequency:</span>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                            <span class="form-text" id="payFreq"></span>
                         </div>
                     </div>
                   </div>
@@ -113,9 +153,13 @@
         
               <div class="button-container" style="padding-bottom: 5px;">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--8-col mdl-cell--9-col-desktop modal-button-container">
+                  <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop modal-button-container">
                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
                   </div>
+
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--6-col-desktop">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="dispTerm">Display Term</span>
+                    </div> 
                 </div>
               </div>
             </div>
@@ -136,8 +180,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 07/03/17  Time  : 03:19:21                                                                       --%>
+      <%--  User name     : PKUMAR                                                                                           --%>
+      <%--  Date          : 09/05/17  Time  : 13:44:33                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -242,18 +286,18 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 657px; height: 192px" 
+            style="position: relative; width: 657px; height: 264px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;"
-            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;"
+            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;F8 'CF08.' 08;"
             SetOfInds="98 99 " 
             CommandKeyInd="29" 
             EraseFormats="#RCDKEY" 
             Window="True"
             WindowUnits="CharacterPositions"
             WindowWidth="76" 
-            WindowHeight="12" 
+            WindowHeight="15" 
             CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 25"
           >&nbsp;
           <%--                                                                                                                   --%>
@@ -335,10 +379,17 @@
           <%--  Tme: Change Time                                                                                                 --%>
           <%--  Code: Lease ID                                                                                                   --%>
           <%--  Code: Lease ID                                                                                                   --%>
-          <%--  NBR: Approved Amount                                                                                             --%>
-          <%--  NBR: Approved Amount                                                                                             --%>
           <%--  STS: Lease Status                                                                                                --%>
           <%--  STS: Lease Status                                                                                                --%>
+          <%--  NBR: Approved Amount                                                                                             --%>
+          <%--  NBR: Approved Amount                                                                                             --%>
+          <%--  Initial Down Payment                                                                                             --%>
+          <%--  Initial Down Payment                                                                                             --%>
+          <%--  Lease Term Months                                                                                                --%>
+          <%--  Lease Term Months                                                                                                --%>
+          <%--  Lease Term Months                                                                                                --%>
+          <%--  Lease Pay Frequency                                                                                              --%>
+          <%--  Lease Pay Frequency                                                                                              --%>
           <%--  # Nar: 70                                                                                                        --%>
           <%--  Comments                                                                                                         --%>
           <%-- =========================================================================                                         --%>
@@ -356,7 +407,7 @@
               Alias="ZZCSCL" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant9" runat="server" 
+            <mdf:DdsConstant id="DdsConstant12" runat="server" 
               style="position: absolute; left: 226px; top: 3px;"
               Text="Credit Application Status" 
               CssClass="DdsConstant"
@@ -811,71 +862,127 @@
  />
             <mdf:DdsConstant id="DdsConstant7" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
+              Text="Account Status . :" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CVID" runat="server" style="position: absolute; left: 208px; top: 72px; width: 271px"
+              CssClass="DdsCharField"
+              Length="30" 
+              Alias="#1CVID" 
+              Usage="OutputOnly" 
+              VirtualRowCol="4,23" 
+ />
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
+              style="position: absolute; left: 19px; top: 99px;"
               Text="Approved Amount  :" 
               VisibleCondition="!( 79 )"
               Color="Blue : !79" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1U0N_lb_" runat="server" style="position: absolute; left: 208px; top: 72px; width: 82px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1U0N_lb_" runat="server" style="position: absolute; left: 208px; top: 96px; width: 82px"
               CssClass="DdsDecField"
               Length="9" 
               Decimals="2" 
               Alias="#1U0N#" 
               VisibleCondition="!( 79 )"
               Usage="OutputOnly" 
-              VirtualRowCol="4,23" 
+              VirtualRowCol="5,23" 
               EditCode="3" 
  />
-            <mdf:DdsConstant id="DdsConstant8" runat="server" 
-              style="position: absolute; left: 19px; top: 99px;"
-              Text="Account Status . :" 
-              Color="Blue" 
+            <mdf:DdsConstant id="DdsConstant9" runat="server" 
+              style="position: absolute; left: 19px; top: 123px;"
+              Text="Down Payment . . :" 
+              VisibleCondition="!( 78 )"
+              Color="Blue : !78" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_1CVID" runat="server" style="position: absolute; left: 208px; top: 96px; width: 271px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DBRV_usd_" runat="server" style="position: absolute; left: 208px; top: 120px; width: 82px"
+              CssClass="DdsDecField"
+              Length="7" 
+              Decimals="2" 
+              Alias="#DBRV$" 
+              VisibleCondition="!( 78 )"
+              Usage="OutputOnly" 
+              VirtualRowCol="6,23" 
+              EditCode="C" 
+ />
+            <mdf:DdsConstant id="DdsConstant10" runat="server" 
+              style="position: absolute; left: 19px; top: 147px;"
+              Text="Lease Term . . . :" 
+              VisibleCondition="!( 78 )"
+              Color="Blue : !78" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DV2N_lb_" runat="server" style="position: absolute; left: 208px; top: 144px; width: 55px"
+              CssClass="DdsDecField"
+              Length="6" 
+              Decimals="0" 
+              Alias="#DV2N#" 
+              VisibleCondition="!( 78 )"
+              Usage="OutputOnly" 
+              VirtualRowCol="7,23" 
+              EditCode="3" 
+ />
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+              style="position: absolute; left: 271px; top: 147px;"
+              Text="(months)" 
+              VisibleCondition="!( 78 )"
+              Color="Blue : !78" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant11" runat="server" 
+              style="position: absolute; left: 19px; top: 171px;"
+              Text="Pay Frequency  . :" 
+              VisibleCondition="!( 78 )"
+              Color="Blue : !78" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DZRXT" runat="server" style="position: absolute; left: 208px; top: 168px; width: 271px"
               CssClass="DdsCharField"
               Length="30" 
-              Alias="#1CVID" 
+              Alias="#DZRXT" 
+              VisibleCondition="!( 78 )"
               Usage="OutputOnly" 
-              VirtualRowCol="5,23" 
+              VirtualRowCol="8,23" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DNAR7" runat="server" style="position: absolute; left: 19px; top: 144px; width: 631px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DNAR7" runat="server" style="position: absolute; left: 19px; top: 216px; width: 631px"
               CssClass="DdsCharField"
               Length="70" 
               Alias="#DNAR7" 
               Usage="OutputOnly" 
-              VirtualRowCol="7,2" 
+              VirtualRowCol="10,2" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_D4HAX" runat="server" style="position: absolute; left: 19px; top: 168px; width: 631px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_D4HAX" runat="server" style="position: absolute; left: 19px; top: 240px; width: 631px"
               CssClass="DdsCharField"
               Length="70" 
               Alias="#D4HAX" 
               Usage="OutputOnly" 
-              VirtualRowCol="8,2" 
+              VirtualRowCol="11,2" 
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT2" runat="server" 
-            style="position: relative; width: 90px; height: 24px" 
+            style="position: relative; width: 243px; height: 24px" 
             Alias="#CMDTXT2"
             CssClass="DdsRecord"
             Window="True"
             WindowUnits="CharacterPositions"
             WindowWidth="76" 
-            WindowHeight="12" 
+            WindowHeight="15" 
           >&nbsp;
           <%--                                                                                                                   --%>
           <%-- Window definition                                                                                                 --%>
           <%--                                                                                                                   --%>
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant10" runat="server" 
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text="F3=Exit" 
+              Text="F3=Exit  F8=Display Term" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL1" runat="server" 
-            style="position: relative; width: 36px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL1"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -892,7 +999,7 @@
             WindowLeftField="##WSC1" 
             WindowWidth="76" 
             WindowTopField="##WSR1" 
-            WindowHeight="12" 
+            WindowHeight="15" 
           >&nbsp;
           <%-- Window definition                                                                                                 --%>
           <%-- Window borders definition                                                                                         --%>
@@ -917,10 +1024,9 @@
               VirtualRowCol="0,0" 
  />
           <mdf:DdsSubfile id="_lb_MSGRCD1" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD1"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -946,14 +1052,14 @@
           <%--                                                                                                                   --%>
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant11" runat="server" 
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F12=Exit" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 36px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -995,10 +1101,9 @@
               VirtualRowCol="0,0" 
  />
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -1035,7 +1140,7 @@
               Alias="##WSCA" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant12" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 712px; top: 3px;"
               Text=" " 
               VisibleCondition="*False"
@@ -1060,7 +1165,7 @@
           min-width: 450px !important;
           left: 47% !important;
           margin-left: -225px;
-          margin-top: 7%!important;
+          margin-top: 4%!important;
         }
 
         #__Page_PopUp > tr:first-child {
@@ -1087,10 +1192,14 @@
           var copyToAndFrom = {
             "displayOnlyFields": {
               "CenPH__lb_RCDDTL1__lb_1MKCO":"leaseId",
-              "CenPH__lb_RCDDTL1__lb_1U0N_lb_":"appAmt",
               "CenPH__lb_RCDDTL1__lb_1CVID":"accStatus",
-              "CenPH__lb_RCDDTL1__lb_DNAR7":"custMsg",
-              "CenPH__lb_RCDDTL1__lb_D4HAX":"CenPH__lb_RCDDTL1__lb_D4HAX_new"
+              "CenPH__lb_RCDDTL1__lb_1U0N_lb_":"appAmt",
+              "CenPH__lb_RCDDTL1__lb_DBRV_usd_":"dwnPay",
+              "CenPH__lb_RCDDTL1__lb_DV2N_lb_":"leaseTerm",
+              "CenPH_DdsConstant13":"terms",
+              "CenPH__lb_RCDDTL1__lb_DZRXT":"payFreq",
+              "CenPH__lb_RCDDTL1__lb_DNAR7+CenPH__lb_RCDDTL1__lb_D4HAX":"custMsg",
+              // "CenPH__lb_RCDDTL1__lb_D4HAX":"CenPH__lb_RCDDTL1__lb_D4HAX_new"
             },
             "inputFields": {
 
@@ -1109,11 +1218,21 @@
                 _00('F7', event);
             });
 
+             $('#dispTerm').on('click', function(event) {
+                _00('F8', event);
+            });
+
               $('.close-icon').on('click', function(event) {
                 _00('F12', event);
             });
 
+            // var temp = {
               
+            // }
+            // $(copyToAndFrom).each(function( index, element ) {
+            //   console.log(element.displayOnlyFields);
+            // });
+
           });
       </script>
     </asp:Content>

@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSS9PVR_lb_.aspx.cs" Inherits="conns.CSS9PVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSS9PVR_lb_.aspx.cs" Inherits="CONNS.CSS9PVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 7/31/2017 at 3:57 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 9/11/2017 at 2:34 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CSS9PVR# --%>
 
     </asp:Content>
@@ -184,6 +184,7 @@
           <div class="button-container">
             <div class="content-grid mdl-grid">
               <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="dispTerm">Dsiplay Term</span>
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancel">Cancel</span> 
               </div>             
             </div>
@@ -194,7 +195,7 @@
 </main>
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;">
+        <div id="Div1" style="display:none;">
             
       <%--  PG: DSP YL Appl Rec Dtl   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -206,8 +207,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 07/28/17  Time  : 05:17:56                                                                       --%>
+      <%--  User name     : PKUMAR                                                                                           --%>
+      <%--  Date          : 09/05/17  Time  : 12:09:59                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -218,7 +219,7 @@
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;"
-            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;"
+            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;F8 'CF08.' 08;"
             SetOfInds="98 99 " 
             CommandKeyInd="29" 
             CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 25"
@@ -654,7 +655,7 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
-            style="position: relative; width: 207px; height: 24px" 
+            style="position: relative; width: 360px; height: 24px" 
             Alias="#CMDTXT1"
             CssClass="DdsRecord"
           >&nbsp;
@@ -662,12 +663,12 @@
           <%-- =========================================================================                                         --%>
             <mdf:DdsConstant id="DdsConstant21" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text="F3=Exit   F12=Cancel" 
+              Text="F3=Exit   F8=Display Term  F12=Cancel" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 9px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -682,10 +683,9 @@
           >&nbsp;
           <%-- =========================================================================                                         --%>
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -746,9 +746,12 @@
           else{
               $("#statusDiv").show();
           }
-           
+
            $('body').on('click', '#previous', function (event) {
              _00('F3',event);
+           });
+           $('body').on('click', '#dispTerm', function (event) {
+             _00('F8',event);
            });
           $('body').on('click', '#cancel', function (event) {
               _00('F12', event);
