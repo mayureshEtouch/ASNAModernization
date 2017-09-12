@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File CCCQ1DBF/QCCCMSG Migrated on 7/5/2017 at 6:53 PM by ASNA Monarch(R) Wings version 7.0.58.0 -->
+<!-- Message File CCCQ1DBF/QCCCMSG Migrated on 9/12/2017 at 12:53 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="CCC0001" SEVERITY="0" DATACOUNT="0" TEXT="Is the existing customer the same person applying for credit (Y/N)?" SECLVL=""                                                                    />
@@ -573,7 +573,7 @@
 <MSG MSGID="USR0982" SEVERITY="20" DATACOUNT="1" TEXT="Value Required" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="1" DEC1="0"                                                                                  />
 <MSG MSGID="USR0983" SEVERITY="20" DATACOUNT="1" TEXT="Please enter date within 35 days" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0"                                                                 />
 <MSG MSGID="USR0984" SEVERITY="20" DATACOUNT="1" TEXT="Date cannot be in past" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0"                                                                           />
-<MSG MSGID="USR0985" SEVERITY="20" DATACOUNT="2" TEXT="Next Pay Date should greater than last paid date" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0"                  />
+<MSG MSGID="USR0985" SEVERITY="20" DATACOUNT="2" TEXT="Next Pay Date should be greater than last paid date" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0"               />
 <MSG MSGID="USR0986" SEVERITY="20" DATACOUNT="1" TEXT="Enter valid home phone number" SECLVL="*BLANK" TYPE1="*DEC" LEN1="10" DEC1="0"                                                                   />
 <MSG MSGID="USR0987" SEVERITY="20" DATACOUNT="1" TEXT="Enter valid cell phone number" SECLVL="*BLANK" TYPE1="*DEC" LEN1="10" DEC1="0"                                                                   />
 <MSG MSGID="USR0990" SEVERITY="20" DATACOUNT="0" TEXT="Transaction Failed , Please try Credit Application through Chromebook'" SECLVL=" "                                                               />
@@ -597,7 +597,22 @@
 <MSG MSGID="USR1015" SEVERITY="20" DATACOUNT="1" TEXT="Invalid Routing Number" SECLVL="" TYPE1="*CHAR" LEN1="-1" DEC1="2"                                                                               />
 <MSG MSGID="USR1016" SEVERITY="20" DATACOUNT="0" TEXT="ABA Validation API Failed , Please Re-Try By Pressing Enter" SECLVL=""                                                                           />
 <MSG MSGID="USR1017" SEVERITY="20" DATACOUNT="0" TEXT="Customer is not valid for a direct loan refinance." SECLVL=" "                                                                                   />
-<MSG MSGID="USR1018" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 cannot be balnk" SECLVL="" TYPE1="*CHAR" LEN1="30" DEC1="0" TYPE2="*CHAR" LEN2="6" DEC2="0"                                               />
+<MSG MSGID="USR1018" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 cannot be blank" SECLVL="" TYPE1="*CHAR" LEN1="30" DEC1="0" TYPE2="*CHAR" LEN2="6" DEC2="0"                                               />
 <MSG MSGID="USR1019" SEVERITY="20" DATACOUNT="2" TEXT="&amp;1 cannot be blank" SECLVL="" TYPE1="*CHAR" LEN1="30" DEC1="0" TYPE2="*DEC" LEN2="5" DEC2="0"                                                />
+<MSG MSGID="USR1022" SEVERITY="20" DATACOUNT="0" TEXT="Account Nbr Lower Range cannot be greater than Upper Range." SECLVL=" "                                                                          />
+<MSG MSGID="USR1023" SEVERITY="20" DATACOUNT="1" TEXT="Enter 'Y'(Yes) or 'N'(No)" SECLVL="*BLANK" TYPE1="*CHAR" LEN1="1" DEC1="0"                                                                       />
+<MSG MSGID="USR1035" SEVERITY="20" DATACOUNT="0" TEXT="PG: Request Lease Terms not found." SECLVL=""           />
+<MSG MSGID="USR1036" SEVERITY="20" DATACOUNT="0" TEXT="PG: Request Lease Terms already exists." SECLVL=""      />
+<MSG MSGID="USR1037" SEVERITY="20" DATACOUNT="0" TEXT="PG: Response Lease Terms not found." SECLVL=""          />
+<MSG MSGID="USR1038" SEVERITY="20" DATACOUNT="0" TEXT="PG: Response Lease Terms already exists." SECLVL=""     />
+<MSG MSGID="USR1039" SEVERITY="20" DATACOUNT="2" TEXT="Numeric or Special characters not allowed for &amp;1" SECLVL="" TYPE1="*CHAR" LEN1="30" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"                />
+<MSG MSGID="USR1040" SEVERITY="20" DATACOUNT="0" TEXT="Lease Term API Failed , Please Re-try" SECLVL=" "       />
+<MSG MSGID="USR1041" SEVERITY="20" DATACOUNT="0" TEXT="Function key not allowed as Lease ID is not generated" SECLVL=" "                                                                                />
+<MSG MSGID="USR1042" SEVERITY="20" DATACOUNT="1" TEXT="Hire date should be greater than Customer's DOB" SECLVL="*BLANK" TYPE1="*DEC" LEN1="6" DEC1="0"                                                  />
+<MSG MSGID="USR1043" SEVERITY="20" DATACOUNT="3" TEXT="Minimum age required is 18 to apply for Progressive" SECLVL="*BLANK" TYPE1="*DEC" LEN1="7" DEC1="0" TYPE2="*DEC" LEN2="3" DEC2="0" TYPE3="*DEC" LEN3="6" DEC3="0"                                                                         />
+<MSG MSGID="USR1044" SEVERITY="20" DATACOUNT="1" TEXT="Hire date should be greater than Customer's DOB" SECLVL="" TYPE1="*DEC" LEN1="7" DEC1="0"                                                        />
+<MSG MSGID="USR1047" SEVERITY="20" DATACOUNT="1" TEXT="Enter a valid Email Address" SECLVL="" TYPE1="*CHAR" LEN1="50" DEC1="0"                                                                          />
+<MSG MSGID="USR1048" SEVERITY="20" DATACOUNT="1" TEXT="Next Pay Date should be greater than last paid date" SECLVL="" TYPE1="*DEC" LEN1="6" DEC1="0"                                                    />
+<MSG MSGID="USR1054" SEVERITY="20" DATACOUNT="0" TEXT="Term request not applicable for this Location." SECLVL=" "                                                                                       />
 </messages>
 </LegacyMsgFileContents>
