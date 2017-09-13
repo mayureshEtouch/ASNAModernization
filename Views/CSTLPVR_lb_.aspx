@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSTLPVR_lb_.aspx.cs" Inherits="Conns.CSTLPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSTLPVR_lb_.aspx.cs" Inherits="CONNS.CSTLPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 8/28/2017 at 6:05 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 9/12/2017 at 2:32 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CSTLPVR# --%>
 
     </asp:Content>
@@ -370,23 +370,6 @@
                     </div>
                   </div>
                   <!-- 4 col ends here -->
-                  <!-- 4 col starts here -->
-                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
-                    <div class="content-grid mdl-grid">
-                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Participate in Marketing?</span> </div>
-                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
-                        <span class="form-text" data-upgraded=",MaterialTextfield">
-                            <select id="CenPH__lb_RCDDTL1__lb_1CUID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
-                                <option selected="selected" value=" ">Please select</option>
-                                <option value="Y">Yes</option>
-                                <option value="N">No</option>
-                            </select>
-                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
-                        </span>
-                    </div>
-                  </div>
-                </div>
-                <!-- 4 col ends here --> 
               </div>
               <!-- content-grid mdl-grid ends here --> 
       
@@ -432,6 +415,24 @@
               </div>
             </div>
             <!-- 4 col ends here -->
+
+             <!-- 4 col starts here -->
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                    <div class="content-grid mdl-grid">
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Participate in Marketing?</span> </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                        <span class="form-text" data-upgraded=",MaterialTextfield">
+                            <select id="CenPH__lb_RCDDTL1__lb_1CUID_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
+                                <option selected="selected" value=" ">Please select</option>
+                                <option value="Y">Yes</option>
+                                <option value="N">No</option>
+                            </select>
+                            <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                        </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 4 col ends here --> 
           </div>
           <!-- content-grid mdl-grid ends here --> 
         </div>
@@ -471,7 +472,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 08/30/17  Time  : 08:19:55                                                                       --%>
+      <%--  Date          : 09/12/17  Time  : 02:41:40                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -647,7 +648,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,18" 
  />
-            <mdf:DdsConstant id="DdsConstant33" runat="server" 
+            <mdf:DdsConstant id="DdsConstant34" runat="server" 
               style="position: absolute; left: 631px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -667,7 +668,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
+            <mdf:DdsConstant id="DdsConstant22" runat="server" 
               style="position: absolute; left: 334px; top: 27px;"
               Text="Create Header Details" 
               CssClass="DdsConstant"
@@ -681,7 +682,7 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant35" runat="server" 
+            <mdf:DdsConstant id="DdsConstant36" runat="server" 
               style="position: absolute; left: 739px; top: 27px;"
               Text="ENTER  " 
               CssClass="DdsConstant"
@@ -1029,7 +1030,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="4,7" 
  />
-            <mdf:DdsConstant id="DdsConstant23" runat="server" 
+            <mdf:DdsConstant id="DdsConstant24" runat="server" 
               style="position: absolute; left: 406px; top: 75px;"
               Text="S.S.N" 
               Color="Blue" 
@@ -1075,7 +1076,7 @@
               Color="Red : 33 , Green : !33" 
               EditCode="4" 
               TabIndex="3"  />
-            <mdf:DdsConstant id="DdsConstant29" runat="server" 
+            <mdf:DdsConstant id="DdsConstant30" runat="server" 
               style="position: absolute; left: 469px; top: 123px;"
               Text="SSN Benefits (?)" 
               Color="Blue" 
@@ -1111,7 +1112,7 @@
               Color="Red : 35 , Green : !35" 
               EditCode="4" 
               TabIndex="5"  />
-            <mdf:DdsConstant id="DdsConstant30" runat="server" 
+            <mdf:DdsConstant id="DdsConstant31" runat="server" 
               style="position: absolute; left: 469px; top: 147px;"
               Text="Direct Deposit (?)" 
               Color="Blue" 
@@ -1148,7 +1149,7 @@
               ValuesStyle="DropdownBoth" 
               Values="' ' 'Own' 'Rent' '?' " 
               TabIndex="7"  />
-            <mdf:DdsConstant id="DdsConstant31" runat="server" 
+            <mdf:DdsConstant id="DdsConstant32" runat="server" 
               style="position: absolute; left: 469px; top: 171px;"
               Text="For . . . . . . ." 
               Color="Blue" 
@@ -1166,7 +1167,7 @@
               Color="Red : 38 , Green : !38" 
               EditCode="4" 
               TabIndex="8"  />
-            <mdf:DdsConstant id="DdsConstant36" runat="server" 
+            <mdf:DdsConstant id="DdsConstant37" runat="server" 
               style="position: absolute; left: 757px; top: 171px;"
               Text="(months)" 
               Color="DarkBlue" 
@@ -1197,13 +1198,13 @@
               Color="Red : 39 , Green : !39" 
               Compare="GE 0" 
               TabIndex="9"  />
-            <mdf:DdsConstant id="DdsConstant22" runat="server" 
+            <mdf:DdsConstant id="DdsConstant23" runat="server" 
               style="position: absolute; left: 352px; top: 195px;"
               Text="(MM/DD/YYYY)" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant32" runat="server" 
+            <mdf:DdsConstant id="DdsConstant33" runat="server" 
               style="position: absolute; left: 469px; top: 195px;"
               Text="Pref Language (?)" 
               Color="Blue" 
@@ -1243,7 +1244,7 @@
               PositionCursor="41" 
               Color="Red : 41 , Green : !41" 
               TabIndex="11"  />
-            <mdf:DdsConstant id="DdsConstant24" runat="server" 
+            <mdf:DdsConstant id="DdsConstant25" runat="server" 
               style="position: absolute; left: 424px; top: 243px;"
               Text="Credit Card Bin" 
               Color="Blue" 
@@ -1259,7 +1260,7 @@
               PositionCursor="42" 
               Color="Red : 42 , Green : !42" 
               TabIndex="12"  />
-            <mdf:DdsConstant id="DdsConstant34" runat="server" 
+            <mdf:DdsConstant id="DdsConstant35" runat="server" 
               style="position: absolute; left: 658px; top: 243px;"
               Text="(First 6 digits)" 
               Color="DarkBlue" 
@@ -1280,7 +1281,7 @@
               PositionCursor="43" 
               Color="Red : 43 , Green : !43" 
               TabIndex="13"  />
-            <mdf:DdsConstant id="DdsConstant25" runat="server" 
+            <mdf:DdsConstant id="DdsConstant26" runat="server" 
               style="position: absolute; left: 424px; top: 267px;"
               Text="Date A/C Open" 
               Color="Blue" 
@@ -1361,7 +1362,7 @@
               Color="Red : 47 , Green : !47" 
               EditCode="4" 
               TabIndex="17"  />
-            <mdf:DdsConstant id="DdsConstant26" runat="server" 
+            <mdf:DdsConstant id="DdsConstant27" runat="server" 
               style="position: absolute; left: 424px; top: 363px;"
               Text="Pay Frequency (?)" 
               Color="Blue" 
@@ -1404,7 +1405,7 @@
               EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="19"  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 325px; top: 387px;"
               Text="(MMDDYY)" 
               Color="Blue" 
@@ -1435,7 +1436,7 @@
               EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="20"  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 325px; top: 411px;"
               Text="(MMDDYY)" 
               Color="Blue" 
@@ -1466,7 +1467,7 @@
               EditWord="  /  /  " 
               Compare="GE 0" 
               TabIndex="21"  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
               style="position: absolute; left: 325px; top: 435px;"
               Text="(MMDDYY)" 
               Color="Blue" 
@@ -1490,7 +1491,7 @@
               ValuesStyle="DropdownBoth" 
               Values="' ' 'DL' 'MI' 'AC' 'SI' 'UP' '?' " 
               TabIndex="22"  />
-            <mdf:DdsConstant id="DdsConstant27" runat="server" 
+            <mdf:DdsConstant id="DdsConstant28" runat="server" 
               style="position: absolute; left: 424px; top: 459px;"
               Text="ID Number  . . ." 
               Color="Blue" 
@@ -1509,7 +1510,15 @@
             <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 483px;"
               Text="ID State . . . ." 
-              Color="Blue" 
+              VisibleCondition="!79"
+              Color="Green : 79 , Blue : !79" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+              style="position: absolute; left: 19px; top: 483px;"
+              Text="ID State . . . :" 
+              VisibleCondition="79"
+              Color="Green : 79 , Blue : !79" 
               CssClass="DdsConstant"
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_1DRCD" runat="server" style="position: absolute; left: 190px; top: 480px; width: 19px"
@@ -1518,10 +1527,11 @@
               Alias="#1DRCD" 
               Usage="Both" 
               VirtualRowCol="21,21" 
-              PositionCursor="54" 
-              Color="Red : 54 , Green : !54" 
+              Protect="79" 
+              PositionCursor="54 & !79" 
+              Color="Red : 54 &amp; !79 , Green : !54" 
               TabIndex="24"  />
-            <mdf:DdsConstant id="DdsConstant28" runat="server" 
+            <mdf:DdsConstant id="DdsConstant29" runat="server" 
               style="position: absolute; left: 424px; top: 483px;"
               Text="Participate in Marketing?  ." 
               Color="Blue" 
@@ -1547,7 +1557,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant37" runat="server" 
+            <mdf:DdsConstant id="DdsConstant38" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt   F12=Cancel" 
               CssClass="DdsConstant"
@@ -1562,7 +1572,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant38" runat="server" 
+            <mdf:DdsConstant id="DdsConstant39" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1582,7 +1592,7 @@
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
               TabIndex="26"  />
-            <mdf:DdsConstant id="DdsConstant39" runat="server" 
+            <mdf:DdsConstant id="DdsConstant40" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1637,7 +1647,7 @@
 
       var copyToAndFrom = {
         "displayOnlyFields": {
-          "CenPH_DdsConstant33":"date",
+          "CenPH_DdsConstant34":"date",
           "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
           "CenPH__lb_RCDDTL1__lb_DW5TX":"CenPH__lb_RCDDTL1__lb_DW5TX_new",
           "CenPH__lb_RCDDTL1__lb_1A4NB":"ro-CenPH__lb_RCDDTL1__lb_1A4NB_new",
@@ -1849,6 +1859,9 @@
             }
         });
 
+        if ($("#CenPH__lb_RCDDTL1__lb_1DRCD").length <= 0) {
+          $("#CenPH__lb_RCDDTL1__lb_1DRCD_new").parent().parent().parent().parent().hide();
+        }
 
         $("#prompt").click(function (event) {
           _00('F4', event);
