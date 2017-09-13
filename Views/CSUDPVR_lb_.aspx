@@ -95,12 +95,12 @@
         <!-- content-grid mdl-grid ends here -->
         <div class="button-container">
           <div class="content-grid mdl-grid">
-            <div class="mdl-cell mdl-cell--5-col mdl-cell--7-col-desktop" style="margin-left: 10px;">
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop" style="margin-left: 10px;">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>             
             </div>
-            <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Cancel</span>
-            </div> -->
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop modal-button-container">
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancel">Cancel</span>
+            </div>
           </div>
         </div>
       </div>
@@ -593,6 +593,10 @@
 
             $('#Exit').click(function (event) {
               _00("F3", event);
+            });
+
+            $('#cancel').click(function (event) {
+              _00("F12", event);
             });
 
           });

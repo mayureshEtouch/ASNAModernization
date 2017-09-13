@@ -1226,12 +1226,17 @@
                 _00('F12', event);
             });
 
-            // var temp = {
-              
-            // }
-            // $(copyToAndFrom).each(function( index, element ) {
-            //   console.log(element.displayOnlyFields);
-            // });
+           if ($("#CenPH__lb_RCDDTL1__lb_DBRV_usd_").length <= 0) {
+              $("#dwnPay").parent().parent().hide()
+           }
+
+           if ($("#CenPH__lb_RCDDTL1__lb_DV2N_lb_").length <= 0) {
+              $("#leaseTerm").parent().parent().hide()
+           }
+
+           if ($("#CenPH__lb_RCDDTL1__lb_DZRXT").length <= 0) {
+              $("#payFreq").parent().parent().hide()
+           }
 
           });
       </script>
