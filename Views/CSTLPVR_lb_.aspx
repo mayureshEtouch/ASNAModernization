@@ -1847,7 +1847,6 @@
 //ctl00$CenPH$_lb_RCDDTL1_V1JVDT
         $.each(dateSelect, function(i, item) {
             if ($("#"+i).is("span")) {
-              console.log('ener'+ $("#"+i).text());
               $("#"+i+"_new").replaceWith($("#"+i).text());
 
              /* $("#dobInputDate").replaceWith($("#"+i).removeAttr("style"));
@@ -1859,7 +1858,8 @@
             }
         });
 
-        if ($("#CenPH__lb_RCDDTL1__lb_1DRCD").length <= 0) {
+        if ($("#CenPH__lb_RCDDTL1__lb_1DRCD").is("span") && $("#CenPH__lb_RCDDTL1__lb_1DRCD").text().length != -1) {
+          console.log(12313);
           $("#CenPH__lb_RCDDTL1__lb_1DRCD_new").parent().parent().parent().parent().hide();
         }
 
