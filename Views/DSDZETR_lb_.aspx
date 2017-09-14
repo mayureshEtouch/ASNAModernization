@@ -210,7 +210,7 @@
                         </div>
                         
                         <div class="content-grid mdl-grid hideShow" id="employee-purchase">
-                            <div class="mdl-cell mdl-cell--4-col">
+                         <!--    <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Employee Purchase:</span>
                             </div>
                             <div class="mdl-cell mdl-cell--8-col">
@@ -222,7 +222,7 @@
                                     </select>
                                     <span id="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" class="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" style="display: none;"></span>
                                 </span>
-                            </div>
+                            </div> -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Are you a Conn's Employee:</span>
                             </div>
@@ -270,7 +270,7 @@
         </div>
     </div>
 
-       <div id="Div1" style="display: none;">
+       <div id="Div1" style="display:none;">
             
       <%--  OE: ETR Ent Ord Hdr       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
