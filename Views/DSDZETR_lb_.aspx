@@ -1,13 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSDZETR_lb_.aspx.cs" Inherits="conns.DSDZETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSDZETR_lb_.aspx.cs" Inherits="CONNS.DSDZETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 7/18/2017 at 4:58 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
+        <%-- Migrated on 9/14/2017 at 5:01 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSDZETR# --%>
 
     </asp:Content>
 
-      <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
+    <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
         <div id="Div0">
             
             <mdf:ddsfile id="DSDZETR_lb_Control" runat="server" 
@@ -283,14 +283,14 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 09/14/17  Time  : 02:51:06                                                                       --%>
+      <%--  Date          : 09/14/17  Time  : 06:10:26                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
       <%-- =========================================================================                                         --%>
           <mdf:DdsSubfileControl id="_lb_SFLCTL" runat="server" 
-            style="position: relative; width: 774px; height: 480px" 
+            style="position: relative; width: 792px; height: 480px" 
             Alias="#SFLCTL"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;Home 'Reset.' 30;"
@@ -393,6 +393,7 @@
           <%--  Phone: Bus Extension.                                                                                            --%>
           <%--  Flg: Employee Purchse                                                                                            --%>
           <%--  Flg: Employee Purchse                                                                                            --%>
+          <%--  Condition: Yes/No                                                                                                --%>
           <%--  Cde: Promo Letter Code                                                                                           --%>
           <%--  Cde: Promo Letter Code                                                                                           --%>
           <%--  Txt: Warr/Ins Info                                                                                               --%>
@@ -864,7 +865,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="8,55" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CCXST" runat="server" style="position: absolute; left: 739px; top: 168px; width: 19px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CCXST" runat="server" style="position: absolute; left: 766px; top: 168px; width: 19px"
               CssClass="DdsCharField"
               Length="2" 
               Alias="#CCXST" 
@@ -976,7 +977,7 @@
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 694px; top: 240px; width: 10px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 694px; top: 240px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#CARTU" 
@@ -985,6 +986,9 @@
               VirtualRowCol="11,71" 
               Protect="74" 
               PositionCursor="38 & !74" 
+              CompareAllowBlanks="true" 
+              ValuesStyle="DropdownBoth" 
+              Values="' ' 'N' 'Y' '?' " 
               TabIndex="8"  />
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 19px; top: 267px;"
