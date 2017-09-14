@@ -1868,7 +1868,7 @@
         });
 
          $("#previous").click(function (event) {
-          _00('F2', event);
+          _00('F12', event);
         });
 
          $("#next").click(function (event) {
