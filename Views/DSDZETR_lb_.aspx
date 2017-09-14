@@ -210,10 +210,10 @@
                         </div>
                         
                         <div class="content-grid mdl-grid hideShow" id="employee-purchase">
-                            <div class="mdl-cell mdl-cell--4-col">
+                           <!--  <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Employee Purchase:</span>
-                            </div>
-                            <div class="mdl-cell mdl-cell--8-col">
+                            </div> -->
+                       <!--      <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <select id="CenPH__lb_SFLCTL__lb_CIYS_lb_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" data-tb-index="9">
                                         <option value=" ">Please select</option>
@@ -222,7 +222,7 @@
                                     </select>
                                     <span id="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" class="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" style="display: none;"></span>
                                 </span>
-                            </div>
+                            </div> -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Are you a Conn's Employee:</span>
                             </div>
@@ -1383,7 +1383,7 @@
             });
             $("#requestdate, #pcode").css("width", "166px");
             //Set esign
-            if ($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").length) {
+            /*if ($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").length) {
                 if ($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").is("span")) {
                     $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").text($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").text());
                     $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").hide();
@@ -1399,7 +1399,7 @@
                 });
             } else {
                 $("#esign-container").hide();
-            }
+            }*/
 
 
 //Set Conns Employee
@@ -1419,6 +1419,9 @@
                 });
 
                }
+               else {
+                $("#esign-container").hide();
+            }
 
 
             //$("#expectedDate").text($("#CenPH__lb_SFLCTL_V1AXDT").text());
