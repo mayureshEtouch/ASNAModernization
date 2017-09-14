@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSDZETR_lb_.aspx.cs" Inherits="conns.DSDZETR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 7/18/2017 at 4:58 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -215,12 +215,25 @@
                             </div>
                             <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
-                                    <select id="CenPH__lb_SFLCTL__lb_CARTU_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" data-tb-index="9">
+                                    <select id="CenPH__lb_SFLCTL__lb_CIYS_lb_new" name="CenPH__lb_SFLCTL__lb_CIYS_lb_new" style="width: 174px; padding: 0 2px;" data-tb-index="9">
                                         <option value=" ">Please select</option>
                                         <option value="Y">Yes</option>
                                         <option value="N">No</option>
                                     </select>
                                     <span id="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" class="CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro" style="display: none;"></span>
+                                </span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <span class="form-label">Are you a Conn's Employee:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--8-col">
+                                <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <select id="connsEmployee" name="CenPH__lb_SFLCTL__lb_CARTU_new" style="width: 174px; padding: 0 2px;" data-tb-index="9">
+                                        <option value=" ">Please select</option>
+                                        <option value="Y">Yes</option>
+                                        <option value="N">No</option>
+                                    </select>
+                                    <span id="connsEmployeeRo" class="CenPH__lb_SFLCTL__lb_CARTU_new_ro" style="display: none;"></span>
                                 </span>
                             </div>
                         </div>
@@ -257,7 +270,7 @@
         </div>
     </div>
 
-       <div id="Div1" style="display:none;">
+       <div id="Div1" style="display: none;">
             
       <%--  OE: ETR Ent Ord Hdr       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -269,8 +282,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : SBALAJI                                                                                          --%>
-      <%--  Date          : 07/17/17  Time  : 13:36:51                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 09/14/17  Time  : 02:51:06                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -903,8 +916,9 @@
               Usage="Both" 
               VirtualRowCol="10,58" 
               PositionCursor="36" 
+              CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
-              Values="' ' 'Y' 'L' 'X' 'N' 'P' '?' " 
+              Values="'Y' 'L' 'X' 'N' 'P' ' ' '?' " 
               TabIndex="6"  />
             <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 586px; top: 219px;"
@@ -921,6 +935,7 @@
               VirtualRowCol="10,68" 
               Protect="76" 
               PositionCursor="37 & !76" 
+              CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
               TabIndex="7"  />
@@ -957,17 +972,17 @@
  />
             <mdf:DdsConstant id="DdsConstant13" runat="server" 
               style="position: absolute; left: 397px; top: 243px;"
-              Text="Employee Purchase" 
+              Text="Are You a Conn's Employee?" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 586px; top: 240px; width: 10px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 694px; top: 240px; width: 10px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#CARTU" 
               VisibleCondition="!88 & !( 74 & !38 )"
               Usage="Both" 
-              VirtualRowCol="11,62" 
+              VirtualRowCol="11,71" 
               Protect="74" 
               PositionCursor="38 & !74" 
               TabIndex="8"  />
@@ -1221,7 +1236,7 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 9px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -1237,10 +1252,9 @@
           >&nbsp;
           <%-- =========================================================================                                         --%>
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -1386,6 +1400,27 @@
             } else {
                 $("#esign-container").hide();
             }
+
+
+//Set Conns Employee
+            if ($("#CenPH__lb_SFLCTL__lb_CARTU").length) {
+                if ($("#CenPH__lb_SFLCTL__lb_CARTU").is("span")) {
+                    $("#connsEmployeeRo").text($("#CenPH__lb_SFLCTL__lb_CARTU").text());
+                    $("#connsEmployee").hide();
+                    $("#connsEmployeeRo").show();
+                } else {
+                    $("#connsEmployee").val($("#CenPH__lb_SFLCTL__lb_CARTU").val());
+                    $("#connsEmployeeRo").hide();
+                    $("#connsEmployee").show();
+                }
+
+                $("#connsEmployee").on('change', function () {
+                    $("#CenPH__lb_SFLCTL__lb_CARTU").val($("#connsEmployee").val());
+                });
+
+               }
+
+
             //$("#expectedDate").text($("#CenPH__lb_SFLCTL_V1AXDT").text());
             var setReadOnlyView = function () {
                 $("#CenPH_1AJ").html($("#CenPH__lb_SFLCTL__lb_1AJCD").html()); // Read only
