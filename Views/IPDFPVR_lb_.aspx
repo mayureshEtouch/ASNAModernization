@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="IPDFPVR_lb_.aspx.cs" Inherits="conns.IPDFPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="IPDFPVR_lb_.aspx.cs" Inherits="CONNS.IPDFPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 6/23/2017 at 10:55 AM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library asnatrack, file qddssrc, member IPDFPVR# --%>
+        <%-- Migrated on 9/18/2017 at 3:46 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member IPDFPVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
 
@@ -72,7 +72,10 @@
               <!-- content-grid mdl-grid ends here -->
               <div class="button-container" style="padding-bottom: 5px;">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop modal-button-container pull-right">
+                  <div class="mdl-cell mdl-cell--8-col mdl-cell--7-col-desktop modal-button-container">
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancel">Cancel</span>
+                  </div>
+                  <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-desktop modal-button-container pull-right">
                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
                   </div>
                 </div>
@@ -103,8 +106,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 06/22/17  Time  : 01:57:41                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 09/17/17  Time  : 15:21:47                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -133,7 +136,6 @@
           <%-- .........................................................................                                         --%>
           <%--  Reposition cursor to where?                                                                                      --%>
           <%--  Window title                                                                                                     --%>
-          <%--  Selection prompt text                                                                                            --%>
           <%--  Number: Order                                                                                                    --%>
           <%--  Number: Version                                                                                                  --%>
           <%--  Code: Order Type                                                                                                 --%>
@@ -155,6 +157,7 @@
           <%--  # Text: 20                                                                                                       --%>
           <%--  Code: Company                                                                                                    --%>
           <%--  Code: Location                                                                                                   --%>
+          <%--  Selection prompt text                                                                                            --%>
           <%--  Employee                                                                                                         --%>
           <%--  Employee                                                                                                         --%>
           <%--  # Text: 25                                                                                                       --%>
@@ -174,7 +177,7 @@
               Alias="ZZCSCL" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant2" runat="server" 
+            <mdf:DdsConstant id="DdsConstant3" runat="server" 
               style="position: absolute; left: 109px; top: 3px;"
               Text="Sold to Employee ID" 
               CssClass="DdsConstant"
@@ -317,6 +320,12 @@
               Usage="Hidden" 
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
+              style="position: absolute; left: 19px; top: 51px;"
+              Text=" " 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
               Text="Enter ID" 
               CssClass="DdsConstant"
@@ -336,7 +345,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="5,2" 
  />
-            <mdf:DdsConstant id="DdsConstant3" runat="server" 
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
               style="position: absolute; left: 253px; top: 99px;"
               Text=" " 
               CssClass="DdsConstant"
@@ -376,7 +385,7 @@
               Usage="ProgramToSystem" 
               VirtualRowCol="0,0" 
  />
-            <mdf:DdsConstant id="DdsConstant4" runat="server" 
+            <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 28px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -396,14 +405,14 @@
               VirtualRowCol="1,12" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
               TabIndex="2"  />
-            <mdf:DdsConstant id="DdsConstant5" runat="server" 
+            <mdf:DdsConstant id="DdsConstant6" runat="server" 
               style="position: absolute; left: 127px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
-            style="position: relative; width: 36px; height: 24px" 
+            style="position: relative; width: 117px; height: 24px" 
             Alias="#CMDTXT1"
             CssClass="DdsRecord"
             Window="True"
@@ -416,14 +425,14 @@
           <%--                                                                                                                   --%>
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant6" runat="server" 
+            <mdf:DdsConstant id="DdsConstant7" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text=" " 
+              Text="F12=Cancel" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 36px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -465,10 +474,9 @@
               VirtualRowCol="0,0" 
  />
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -505,7 +513,7 @@
               Alias="##WSCA" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant7" runat="server" 
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
               style="position: absolute; left: 712px; top: 3px;"
               Text=" " 
               VisibleCondition="*False"
@@ -577,6 +585,11 @@
               });
 
                $('.close-icon').click(function (event) {
+                _00("F12", event);
+              });
+
+               
+               $('#cancel').click(function (event) {
                 _00("F12", event);
               });
 
