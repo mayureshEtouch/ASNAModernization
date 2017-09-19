@@ -23,6 +23,7 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
+    <div id="divFirst">
     <div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content">
         <section class="time-date">
@@ -315,6 +316,7 @@
                             </div>
                             <!-- 4 col ends here -->
 
+
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
@@ -324,6 +326,15 @@
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Origination Fee:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="originationFee"></span>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                         <!-- content-grid mdl-grid ends here -->
@@ -350,6 +361,15 @@
                             </div>
                             <!-- 4 col ends here -->
 
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Carryover Admin Fee:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="carryOverFee"></span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- content-grid mdl-grid ends here -->
 
@@ -375,6 +395,15 @@
                             </div>
                             <!-- 4 col ends here -->
 
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Documentation Fee:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="documentationFee"></span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <!-- content-grid mdl-grid ends here -->
 
@@ -399,6 +428,15 @@
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
+
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Carryover</br>Doc Fee:</span> </div>
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;">
+                                        <span data-upgraded=",MaterialTextfield" class="form-text" id="carryOverDocFee"></span>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                         <!-- content-grid mdl-grid ends here -->
@@ -481,11 +519,102 @@
             </div>
         </section>
     </main>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--Div2 Conditional-->
+    <div id="divSecond">
+        <div class="OverlayPopupBackground"></div>
+    <main class="mdl-layout__content">
+        <section class="time-date">
+            <div class="content-grid mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col">
+                    <!-- Title -->
+                    <span class="heading-h1">CR: DS1 Contract KEY SCREEN</span>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col pull-right">
+                    <!-- Navigation -->
+                    <i class="material-icons md-15 md-light computer-icon"></i><span class="date-time-txt">CRE6D1R</span> <i class="material-icons md-15 md-light date-icon"></i><span class="date-time-txt" name="date" id="date1"></span><i class="material-icons md-15 md-light time-icon"></i>&nbsp;<span class="date-time-txt" name="time" id="time1"></span>
+                </div>
+            </div>
+        </section>
+        <section class="progress-bar">
+            <div class="progress-bar-wrapper">
+                <ul class="progress-bar-main">
+                    <li class="progress-bar-step4 gray-bg step-width"><span class="step-title-selected">Step 1</span> <span class="step-txt-selected">Customer Selection Screen</span> </li>
+                    <li class="progress-bar-divider-first">
+                    <li class="progress-bar-step2 step-width"><span class="step-title">Step 2</span> <span class="step-txt">Enter Sales Order</span> </li>
+                    <li class="progress-bar-divider">
+                    <li class="progress-bar-step3 step-width"><span class="step-title">Step 3</span> <span class="step-txt">Enter Order Details</span> </li>
+                    <li class="progress-bar-divider">
+                    <li class="progress-bar-step4 step-width"><span class="step-title">Step 4</span> <span class="step-txt">Enter Order Warranty</span> </li>
+                    <li class="progress-bar-divider">
+                    <li class="progress-bar-step5 step-width"><span class="step-title">Step 5</span> <span class="step-txt">Enter Order Payments</span> </li>
+                </ul>
+            </div>
+        </section>
+        <section class="order-summary">
+            <div class="order-summary-wrapper">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                        <span class="summary-title">Number: Customer ID</span>
+                        <span class="summary-txt" id="name1"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+                        <span class="summary-title">Order Number</span>
+                        <span class="summary-txt" id="order1"></span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet">
+                        <span class="summary-title">Contract Number</span>
+                        <span class="summary-txt" id="contractno1"></span>
+                    </div>
+                </div>
+            </div>
+          
+        </section>
+        <section class="table-data-content-container spacer-container-bottom mrgnTp16">
+            <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                    <div class="table-container table-container-search">
+                      
+                       
+                     <div class="button-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit1" data-tb-index="4">Previous</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt1" data-tb-index="4">Prompt</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop mdl-cell--2-col-tablet pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next1" data-tb-index="9">Next</span>
+                                </div>
+                            </div>
+                        </div>    
+                      
+                    
+
+
+
+                   </div>
+                   </div>
+                </div>
+         
+        </section>
+    </main>
+
+
+    </div>
     <div id="modal1" class="simplePopup"></div>
     <span style="display: none;" id="CenPH_slash">/</span>
     <span style="display: none;" id="CenPH_hypen">-</span>
     <!-- Modified HTML code ends here -->
-     <div id="Div1" style="display:none">
+     <div id="Div1" style="display: none;">
             
       <%--  CR: DS1 Contract          Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -495,11 +624,11 @@
       <%--  Generated by CA 2E release 2E ( 1547)                                                                            --%>
       <%--  Function type : Display record(1 screen)                                                                         --%>
       <%--                                                                                                                   --%>
-      <%--  Company       : Credit Applications                                                                              --%>
+      <%--  Company       : Credit Collection Model                                                                          --%>
       <%--  System        : Credit Applications                                                                              --%>
-      <%--  User name     : MRAMJI                                                                                           --%>
-      <%--  Date          : 11/23/16  Time  : 03:43:45                                                                       --%>
-      <%--  Copyright     : Credit Applications                                                                              --%>
+      <%--  User name     : SKUMAR                                                                                           --%>
+      <%--  Date          : 09/18/17  Time  : 05:47:27                                                                       --%>
+      <%--  Copyright     : Credit Collection Model                                                                          --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
@@ -780,18 +909,26 @@
           <%--  Number: Addon Contract                                                                                           --%>
           <%--  Value: Filing Fee                                                                                                --%>
           <%--  Value: Filing Fee                                                                                                --%>
+          <%--  Nbr: Origination Fee                                                                                             --%>
+          <%--  Nbr: Origination Fee                                                                                             --%>
           <%--  Status: Life Ins                                                                                                 --%>
           <%--  Status: Life Ins                                                                                                 --%>
           <%--  Amount: Life $                                                                                                   --%>
           <%--  Amount: Life $                                                                                                   --%>
+          <%--  Administrative Fee                                                                                               --%>
+          <%--  Administrative Fee                                                                                               --%>
           <%--  Status: A/H  Ins                                                                                                 --%>
           <%--  Status: A/H  Ins                                                                                                 --%>
           <%--  Amount: A/H $                                                                                                    --%>
           <%--  Amount: A/H $                                                                                                    --%>
+          <%--  Nbr: Extra Value 3                                                                                               --%>
+          <%--  Nbr: Extra Value 3                                                                                               --%>
           <%--  Status: Prop Ins                                                                                                 --%>
           <%--  Status: Prop Ins                                                                                                 --%>
           <%--  Amount: Prop $                                                                                                   --%>
           <%--  Amount: Prop $                                                                                                   --%>
+          <%--  Nbr: Extra Value 4                                                                                               --%>
+          <%--  Nbr: Extra Value 4                                                                                               --%>
           <%--  Status: Unem Ins                                                                                                 --%>
           <%--  Status: Unem Ins                                                                                                 --%>
           <%--  Amount: Unemp $                                                                                                  --%>
@@ -835,7 +972,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,15" 
  />
-            <mdf:DdsConstant id="DdsConstant47" runat="server" 
+            <mdf:DdsConstant id="DdsConstant51" runat="server" 
               style="position: absolute; left: 550px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -869,7 +1006,7 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant52" runat="server" 
+            <mdf:DdsConstant id="DdsConstant56" runat="server" 
               style="position: absolute; left: 631px; top: 27px;"
               Text="DISPLAY" 
               CssClass="DdsConstant"
@@ -997,7 +1134,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="4,8" 
  />
-            <mdf:DdsConstant id="DdsConstant36" runat="server" 
+            <mdf:DdsConstant id="DdsConstant40" runat="server" 
               style="position: absolute; left: 352px; top: 75px;"
               Text="Order" 
               Color="Blue" 
@@ -1012,7 +1149,7 @@
               VirtualRowCol="4,45" 
               EditCode="Z" 
  />
-            <mdf:DdsConstant id="DdsConstant45" runat="server" 
+            <mdf:DdsConstant id="DdsConstant49" runat="server" 
               style="position: absolute; left: 496px; top: 75px;"
               Text="/" 
               Color="Blue" 
@@ -1085,7 +1222,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="7,27" 
  />
-            <mdf:DdsConstant id="DdsConstant38" runat="server" 
+            <mdf:DdsConstant id="DdsConstant42" runat="server" 
               style="position: absolute; left: 361px; top: 147px;"
               Text="Type:" 
               Color="Blue" 
@@ -1098,7 +1235,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="7,46" 
  />
-            <mdf:DdsConstant id="DdsConstant43" runat="server" 
+            <mdf:DdsConstant id="DdsConstant47" runat="server" 
               style="position: absolute; left: 442px; top: 147px;"
               Text="St:" 
               Color="Blue" 
@@ -1111,7 +1248,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="7,53" 
  />
-            <mdf:DdsConstant id="DdsConstant51" runat="server" 
+            <mdf:DdsConstant id="DdsConstant55" runat="server" 
               style="position: absolute; left: 577px; top: 147px;"
               Text="Mo." 
               Color="Blue" 
@@ -1192,7 +1329,7 @@
               VirtualRowCol="8,30" 
               EditWord="  /  /  " 
  />
-            <mdf:DdsConstant id="DdsConstant37" runat="server" 
+            <mdf:DdsConstant id="DdsConstant41" runat="server" 
               style="position: absolute; left: 352px; top: 171px;"
               Text="APR" 
               Color="Blue" 
@@ -1207,13 +1344,13 @@
               VirtualRowCol="8,43" 
               EditCode="1" 
  />
-            <mdf:DdsConstant id="DdsConstant44" runat="server" 
+            <mdf:DdsConstant id="DdsConstant48" runat="server" 
               style="position: absolute; left: 451px; top: 171px;"
               Text="%" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant46" runat="server" 
+            <mdf:DdsConstant id="DdsConstant50" runat="server" 
               style="position: absolute; left: 496px; top: 171px;"
               Text="Payment" 
               Color="Blue" 
@@ -1241,7 +1378,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="9,12" 
  />
-            <mdf:DdsConstant id="DdsConstant41" runat="server" 
+            <mdf:DdsConstant id="DdsConstant45" runat="server" 
               style="position: absolute; left: 397px; top: 195px;"
               Text="SS #" 
               Color="Blue" 
@@ -1254,7 +1391,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="9,49" 
  />
-            <mdf:DdsConstant id="DdsConstant48" runat="server" 
+            <mdf:DdsConstant id="DdsConstant52" runat="server" 
               style="position: absolute; left: 550px; top: 195px;"
               Text="/" 
               Color="Blue" 
@@ -1283,7 +1420,7 @@
               VirtualRowCol="10,23" 
               EditCode="1" 
  />
-            <mdf:DdsConstant id="DdsConstant39" runat="server" 
+            <mdf:DdsConstant id="DdsConstant43" runat="server" 
               style="position: absolute; left: 388px; top: 219px;"
               Text="DOB #1" 
               VisibleCondition="!( 78 )"
@@ -1307,7 +1444,7 @@
               VirtualRowCol="10,50" 
               EditWord="  /  /  " 
  />
-            <mdf:DdsConstant id="DdsConstant49" runat="server" 
+            <mdf:DdsConstant id="DdsConstant53" runat="server" 
               style="position: absolute; left: 568px; top: 219px;"
               Text="#2" 
               VisibleCondition="!( 78 )"
@@ -1346,7 +1483,7 @@
               VirtualRowCol="11,23" 
               EditCode="1" 
  />
-            <mdf:DdsConstant id="DdsConstant40" runat="server" 
+            <mdf:DdsConstant id="DdsConstant44" runat="server" 
               style="position: absolute; left: 388px; top: 243px;"
               Text="Interest Rate" 
               Color="Blue" 
@@ -1421,6 +1558,21 @@
               VirtualRowCol="14,23" 
               EditCode="1" 
  />
+            <mdf:DdsConstant id="DdsConstant36" runat="server" 
+              style="position: absolute; left: 325px; top: 315px;"
+              Text="Origination Fee" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DFRNU" runat="server" style="position: absolute; left: 505px; top: 312px; width: 100px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="2" 
+              Alias="#DFRNU" 
+              Usage="OutputOnly" 
+              VirtualRowCol="14,56" 
+              EditCode="1" 
+ />
             <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 19px; top: 339px;"
               Text="Life Ins" 
@@ -1447,6 +1599,21 @@
               Alias="#1KPVA" 
               Usage="OutputOnly" 
               VirtualRowCol="15,26" 
+              EditCode="1" 
+ />
+            <mdf:DdsConstant id="DdsConstant37" runat="server" 
+              style="position: absolute; left: 325px; top: 339px;"
+              Text="Carryover Admin Fee" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DH0NU" runat="server" style="position: absolute; left: 505px; top: 336px; width: 100px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="2" 
+              Alias="#DH0NU" 
+              Usage="OutputOnly" 
+              VirtualRowCol="15,56" 
               EditCode="1" 
  />
             <mdf:DdsConstant id="DdsConstant19" runat="server" 
@@ -1477,6 +1644,21 @@
               VirtualRowCol="16,26" 
               EditCode="1" 
  />
+            <mdf:DdsConstant id="DdsConstant38" runat="server" 
+              style="position: absolute; left: 325px; top: 363px;"
+              Text="Documentation Fee" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DFSNU" runat="server" style="position: absolute; left: 505px; top: 360px; width: 100px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="2" 
+              Alias="#DFSNU" 
+              Usage="OutputOnly" 
+              VirtualRowCol="16,56" 
+              EditCode="1" 
+ />
             <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 19px; top: 387px;"
               Text="Prop Ins" 
@@ -1503,6 +1685,21 @@
               Alias="#1KRVA" 
               Usage="OutputOnly" 
               VirtualRowCol="17,26" 
+              EditCode="1" 
+ />
+            <mdf:DdsConstant id="DdsConstant39" runat="server" 
+              style="position: absolute; left: 325px; top: 387px;"
+              Text="Carryover Doc Fee" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DFTNU" runat="server" style="position: absolute; left: 505px; top: 384px; width: 100px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="2" 
+              Alias="#DFTNU" 
+              Usage="OutputOnly" 
+              VirtualRowCol="17,56" 
               EditCode="1" 
  />
             <mdf:DdsConstant id="DdsConstant21" runat="server" 
@@ -1578,7 +1775,7 @@
               VirtualRowCol="21,23" 
               EditCode="1" 
  />
-            <mdf:DdsConstant id="DdsConstant42" runat="server" 
+            <mdf:DdsConstant id="DdsConstant46" runat="server" 
               style="position: absolute; left: 406px; top: 483px;"
               Text="Entered:" 
               Color="Blue" 
@@ -1600,7 +1797,7 @@
               VirtualRowCol="21,54" 
               EditWord="  /  /  " 
  />
-            <mdf:DdsConstant id="DdsConstant50" runat="server" 
+            <mdf:DdsConstant id="DdsConstant54" runat="server" 
               style="position: absolute; left: 568px; top: 483px;"
               Text="-" 
               Color="Blue" 
@@ -1624,7 +1821,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant53" runat="server" 
+            <mdf:DdsConstant id="DdsConstant57" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt" 
               CssClass="DdsConstant"
@@ -1638,14 +1835,14 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant54" runat="server" 
+            <mdf:DdsConstant id="DdsConstant58" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit               F12=Return" 
               CssClass="DdsConstant"
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 9px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -1660,10 +1857,9 @@
           >&nbsp;
           <%-- =========================================================================                                         --%>
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -1688,7 +1884,7 @@
         var str = "CenPH__lb_RCDDTL1__lb_1ALTX";
         var copyToAndFrom = {
             "displayOnlyFields": {
-                "CenPH_DdsConstant46": "date",
+                "CenPH_DdsConstant51": "date",
                 "CenPH__lb_RCDDTL1__lb__lb_TME": "time",
                 "CenPH__lb_RCDDTL1__lb_1ALTX": "name",
                 "CenPH__lb_RCDDTL1__lb_1BANB+CenPH_slash+CenPH__lb_RCDDTL1__lb_1ZMNB": "order",
@@ -1722,7 +1918,16 @@
                 "CenPH__lb_RCDDTL1__lb_1EEVA": "financed",
                 "CenPH__lb_RCDDTL1__lb_1KMVA": "interest1",
                 "CenPH__lb_RCDDTL1__lb_1KOVA": "total",
-                "CenPH__lb_RCDDTL1_V1AGDT+CenPH_hypen+CenPH__lb_RCDDTL1__lb_1ABTM": "earned"
+                "CenPH__lb_RCDDTL1_V1AGDT+CenPH_hypen+CenPH__lb_RCDDTL1__lb_1ABTM": "earned",
+                "CenPH__lb_RCDDTL1__lb_DFRNU":"originationFee",
+                "CenPH__lb_RCDDTL1__lb_DH0NU":"carryOverFee",
+                "CenPH__lb_RCDDTL1__lb_DFSNU":"documentationFee",
+                "CenPH__lb_RCDDTL1__lb_DFTNU":"carryOverDocFee",
+                "CenPH__lb_RCDKEY__lb_1ALNB":"name1",
+                "CenPH__lb_RCDKEY__lb_1BANB":"order1",
+                "CenPH__lb_RCDKEY__lb_1ZMNB":"contractno1",
+                "CenPH_DdsConstant6":"date1",
+                "CenPH__lb_RCDKEY__lb__lb_TME":"time1"
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_2AXTX": "modelNumber"
@@ -1740,7 +1945,18 @@
                 
                  getMaskedSSN();
             });
+if($("#CenPH_DdsConstant6").text()=="")
+{
 
+    $("#divFirst").show();
+    $("#divSecond").hide();
+}
+else
+{
+
+    $("#divSecond").show();
+    $("#divFirst").hide();
+}
             function getMaskedSSN() {
               var ssn1 = ($("#CenPH__lb_RCDDTL1__lb_DDRXT").html() == undefined ? "": (maskSSN($("#CenPH__lb_RCDDTL1__lb_DDRXT").html())));
               var ssn2 = ($("#CenPH__lb_RCDDTL1__lb_DDQXT").html() == undefined ? "": (maskSSN($("#CenPH__lb_RCDDTL1__lb_DDQXT").html())));
@@ -1771,6 +1987,15 @@
             });
             $("#next").click(function (event) {
                 _00('Enter', event);
+            });
+            $("#next1").click(function (event) {
+                _00('Enter', event);
+            });
+            $("#exit1").click(function (event) {
+                _00('F3', event);
+            });
+            $("#prompt1").click(function (event) {
+                _00('F4', event);
             });
         });
 
