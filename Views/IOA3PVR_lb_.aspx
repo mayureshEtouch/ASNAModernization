@@ -613,13 +613,13 @@
             #__Page_Hidden{
                 height: 100% !important;
             }
-            #__Page_PopUp {
+            /*#__Page_PopUp {
                 margin-left: -300px;
                 min-width: 600px !important;
                 width: 600px !important;
                 left: 60% !important;
                 top: 23%!important; 
-            }
+            }*/
 
             #__Page_PopUp > tr:first-child {
                 display: none;

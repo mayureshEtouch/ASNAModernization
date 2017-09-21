@@ -302,7 +302,7 @@
             #__Page_PopUp {
                 margin-left: -300px;
                 min-width: 500px !important;
-                width: 500px !important;
+                /*width: 500px !important;*/
                 left: 50% !important;
                 top: 16%!important; 
                 
