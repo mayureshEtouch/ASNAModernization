@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 9/4/2017 at 3:25 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
+<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 9/20/2017 at 1:23 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -2720,6 +2720,7 @@
 <MSG MSGID="DIS3653" SEVERITY="0" DATACOUNT="1" TEXT="Lease ID Already Used" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                                 />
 <MSG MSGID="DIS3654" SEVERITY="20" DATACOUNT="0" TEXT="Payment not successful. Please contact Progressive for further details" SECLVL=""                                                                />
 <MSG MSGID="DIS3655" SEVERITY="0" DATACOUNT="0" TEXT="Employee Not for Purchase" SECLVL=""                     />
+<MSG MSGID="DIS3660" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1 Function Key not allowed" SECLVL="" TYPE1="*CHAR" LEN1="5" DEC1="0"                                                                       />
 <MSG MSGID="DIS3661" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Set not found." SECLVL=" "                     />
 <MSG MSGID="DIS3662" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Set already exists." SECLVL=" "                />
 <MSG MSGID="DIS3663" SEVERITY="20" DATACOUNT="0" TEXT="SY: Menu Option not found." SECLVL=" "                  />
@@ -2806,6 +2807,10 @@
 <MSG MSGID="DIS3790" SEVERITY="20" DATACOUNT="1" TEXT="Order signed successfully. Press F3 to exit." SECLVL="*BLANK" TYPE1="*CHAR" LEN1="50" DEC1="0"                                                   />
 <MSG MSGID="DIS3791" SEVERITY="0" DATACOUNT="0" TEXT="Order voided in DocuSign" SECLVL=""                      />
 <MSG MSGID="DIS3792" SEVERITY="20" DATACOUNT="1" TEXT="Process completed. Batch ID &amp;1 created." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0"                                                         />
+<MSG MSGID="DIS3805" SEVERITY="20" DATACOUNT="0" TEXT="Order is System Cancelled. Edit cannot be performed." SECLVL=""                                                                                  />
+<MSG MSGID="DIS3808" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Account Type" SECLVL=" "                        />
+<MSG MSGID="DIS3809" SEVERITY="20" DATACOUNT="0" TEXT="Payment Amount is 0" SECLVL=" "                         />
+<MSG MSGID="DIS3810" SEVERITY="20" DATACOUNT="0" TEXT="Invalid Account Number" SECLVL=" "                      />
 <MSG MSGID="USR0001" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference not found." SECLVL=" "                    />
 <MSG MSGID="USR0002" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference already exists." SECLVL=" "               />
 <MSG MSGID="USR0003" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer not found." SECLVL=" "                     />
@@ -2851,7 +2856,11 @@
 <MSG MSGID="USR0358" SEVERITY="20" DATACOUNT="0" TEXT="Employee Name Required" SECLVL=""                       />
 <MSG MSGID="USR0359" SEVERITY="20" DATACOUNT="0" TEXT="Value required." SECLVL=""                              />
 <MSG MSGID="USR0360" SEVERITY="0" DATACOUNT="0" TEXT="Role cannot start with'Q'" SECLVL=""                     />
+<MSG MSGID="USR0361" SEVERITY="20" DATACOUNT="0" TEXT="Model profile is not active" SECLVL=""                  />
 <MSG MSGID="USR0362" SEVERITY="20" DATACOUNT="1" TEXT="User profile does not exist" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0"                                                                          />
+<MSG MSGID="USR0363" SEVERITY="20" DATACOUNT="0" TEXT="User profile already exist" SECLVL=""                   />
+<MSG MSGID="USR0364" SEVERITY="20" DATACOUNT="0" TEXT="User profile not created" SECLVL=""                     />
+<MSG MSGID="USR0365" SEVERITY="20" DATACOUNT="0" TEXT="Password not changed. Please try again." SECLVL=""      />
 <MSG MSGID="USR0962" SEVERITY="20" DATACOUNT="0" TEXT="Cannot continue. Source file is empty." SECLVL=" "      />
 <MSG MSGID="USR0963" SEVERITY="20" DATACOUNT="0" TEXT="Update completed." SECLVL=" "                           />
 <MSG MSGID="USR0964" SEVERITY="20" DATACOUNT="3" TEXT="Member &amp;3 file &amp;1 in library &amp;2 not found." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                     />
