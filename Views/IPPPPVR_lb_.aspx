@@ -49,14 +49,15 @@
         <!-- content-grid mdl-grid starts here -->
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--12-col" style="padding:0px;">
-        <span id="contentMsg12121"></span>  
+        <span id="contentMsg1"></span> 
+        <span id="contentMsg2"></span>  
           </div>   
         </div>
         <!-- content-grid mdl-grid ends here -->         
         <div class="button-container">
           <div class="content-grid mdl-grid">           
             <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop pull-right">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Submit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
             </div>
           </div>
         </div>        
@@ -68,7 +69,7 @@
   <div id="modal" class="simplePopup"></div>
 </div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;">
+       <div id="Div1" style="display: none;">
             
       <%--  OE: PMT Dsp Ord Void Cmt  Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -81,7 +82,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 09/19/17  Time  : 06:08:51                                                                       --%>
+      <%--  Date          : 09/21/17  Time  : 04:11:46                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -163,7 +164,7 @@
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
-              Text="Cancelled" 
+              Text="Cancelled. Press Enter to Exit." 
               Color="Red" 
               CssClass="DdsConstant"
  />
@@ -327,10 +328,11 @@
   <script type="text/javascript">
          
           $(document).ready(function () {
-            $("#contentMsg12121").html($("#CenPH_DdsConstant1").html());
+            $("#contentMsg1").html($("#CenPH_DdsConstant1").html());
+            $("#contentMsg2").html($("#CenPH_DdsConstant2").html());
 
              $('.close-icon').click(function (event) {
-                _00("F12", event);
+                _00("Enter", event);
               });
             
               $('#submit').click(function (event) {
