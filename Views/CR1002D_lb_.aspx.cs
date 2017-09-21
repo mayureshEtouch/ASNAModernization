@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace conns
+namespace CONNS
 {
     public partial class CR1002D_lb_Form : ASNA.Monarch.WebDspF.Page
     {

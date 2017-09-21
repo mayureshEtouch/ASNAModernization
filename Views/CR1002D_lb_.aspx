@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CR1002D_lb_.aspx.cs" Inherits="conns.CR1002D_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CR1002D_lb_.aspx.cs" Inherits="CONNS.CR1002D_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 1/25/2017 at 7:47 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
-        <%-- Legacy location: library ASNAtrack, file QDDSSRC, member CR1002D# --%>
+        <%-- Migrated on 9/20/2017 at 1:08 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CR1002D# --%>
 
     </asp:Content>
 
@@ -684,7 +684,7 @@
               Alias="FJBANB" 
               Usage="Both" 
               VirtualRowCol="10,48" 
-              ErrorMessageId="URS0011 ASMSGF0 : 81" 
+              ErrorMessageId="URS0011 ASMSGF0 : 81 , DIS3805 QUSRMSG : 26" 
               TabIndex="1"  />
             <mdf:DdsConstant id="DdsConstant6" runat="server" 
               style="position: absolute; left: 631px; top: 3px;"
