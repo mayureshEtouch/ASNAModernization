@@ -409,7 +409,7 @@
         </div>
     
 
-        <div id="Div1" style="display:none;">
+       <div id="Div1" style="display: none;">
             
       <%--  CU: ER1 Customer/Maint    Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -421,8 +421,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : U39712                                                                                           --%>
-      <%--  Date          : 08/18/17  Time  : 13:35:05                                                                       --%>
+      <%--  User name     : COOL8                                                                                            --%>
+      <%--  Date          : 09/25/17  Time  : 07:14:42                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -561,7 +561,7 @@
               TabIndex="1"  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 774px; height: 432px" 
+            style="position: relative; width: 747px; height: 432px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;Home 'Reset.' 30;"
@@ -603,7 +603,6 @@
           <%--  Name: Last.                                                                                                      --%>
           <%--  Name: Suffix.                                                                                                    --%>
           <%--  Name: Suffix.                                                                                                    --%>
-          <%--  Condition: *ALL values                                                                                           --%>
           <%--  Name: Business.                                                                                                  --%>
           <%--  Name: Business.                                                                                                  --%>
           <%--  Address: Line 1                                                                                                  --%>
@@ -675,11 +674,11 @@
               VirtualRowCol="1,17" 
  />
             <mdf:DdsConstant id="DdsConstant33" runat="server" 
-              style="position: absolute; left: 586px; top: 3px;"
+              style="position: absolute; left: 559px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb__lb_PGM" runat="server" style="position: absolute; left: 676px; top: 0px; width: 91px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb__lb_PGM" runat="server" style="position: absolute; left: 649px; top: 0px; width: 91px"
               CssClass="DdsCharField"
               Length="10" 
               Alias="##PGM" 
@@ -699,7 +698,7 @@
               Text="Edit Customer Details" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb__lb_TME" runat="server" style="position: absolute; left: 586px; top: 24px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb__lb_TME" runat="server" style="position: absolute; left: 559px; top: 24px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
@@ -709,13 +708,13 @@
               EditWord="0 :  :  " 
  />
             <mdf:DdsConstant id="DdsConstant35" runat="server" 
-              style="position: absolute; left: 676px; top: 27px;"
+              style="position: absolute; left: 649px; top: 27px;"
               Text="ADD    " 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant34" runat="server" 
-              style="position: absolute; left: 676px; top: 27px;"
+              style="position: absolute; left: 649px; top: 27px;"
               Text="CHANGE " 
               VisibleCondition="!89"
               CssClass="DdsConstant"
@@ -857,7 +856,7 @@
               Text="Suffix" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DOAA_usd_" runat="server" style="position: absolute; left: 487px; top: 144px; width: 55px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DOAA_usd_" runat="server" style="position: absolute; left: 487px; top: 144px; width: 28px"
               CssClass="DdsCharField"
               Length="3" 
               Alias="#DOAA$" 
@@ -865,9 +864,6 @@
               VirtualRowCol="7,51" 
               Protect="79" 
               PositionCursor="35 & !79" 
-              CompareAllowBlanks="true" 
-              ValuesStyle="DropdownBoth" 
-              Values="'JR.' 'SR.' 'JR' 'SR' 'II' 'III' ' ' 'IV' 'V' '?' " 
               TabIndex="6"  />
             <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 19px; top: 171px;"
@@ -903,7 +899,7 @@
               VirtualRowCol="9,27" 
               PositionCursor="37" 
               TabIndex="8"  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DP8TX" runat="server" style="position: absolute; left: 532px; top: 192px; width: 226px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DP8TX" runat="server" style="position: absolute; left: 505px; top: 192px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#DP8TX" 
@@ -939,7 +935,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="11,39" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_PADST" runat="server" style="position: absolute; left: 604px; top: 240px; width: 19px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_PADST" runat="server" style="position: absolute; left: 577px; top: 240px; width: 19px"
               CssClass="DdsCharField"
               Length="2" 
               Alias="#PADST" 
@@ -1021,7 +1017,7 @@
               Text="Extension:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DEONB" runat="server" style="position: absolute; left: 541px; top: 288px; width: 37px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_DEONB" runat="server" style="position: absolute; left: 514px; top: 288px; width: 37px"
               CssClass="DdsDecField"
               Length="4" 
               Decimals="0" 
@@ -1111,7 +1107,7 @@
               VisibleCondition="!( 74 )"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DTQST" runat="server" style="position: absolute; left: 541px; top: 384px; width: 10px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DTQST" runat="server" style="position: absolute; left: 514px; top: 384px; width: 10px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#DTQST" 
@@ -1120,12 +1116,12 @@
               VirtualRowCol="17,54" 
  />
             <mdf:DdsConstant id="DdsConstant32" runat="server" 
-              style="position: absolute; left: 559px; top: 387px;"
+              style="position: absolute; left: 532px; top: 387px;"
               Text="Tax Exempt ?" 
               VisibleCondition="!( 73 )"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DCPST" runat="server" style="position: absolute; left: 676px; top: 384px; width: 10px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DCPST" runat="server" style="position: absolute; left: 649px; top: 384px; width: 10px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#DCPST" 
@@ -1171,7 +1167,7 @@
               Text="at" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1ABTM" runat="server" style="position: absolute; left: 532px; top: 408px; width: 73px"
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1ABTM" runat="server" style="position: absolute; left: 505px; top: 408px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
@@ -1283,7 +1279,6 @@
             style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
