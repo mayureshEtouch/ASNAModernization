@@ -155,7 +155,7 @@
 							<div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
 							<span class="form-text" data-upgraded=",MaterialTextfield">
 									<!-- <select name="suffix" id="suffix" class="hide"  data-tb-index="5"></select> -->
-									<input size="18" maxlength="4" type="text" id="suffixInput" name="" class="" value=""  data-tb-index="1">
+									<input size="18" maxlength="4" type="text" id="suffixInput" name="" class="" value=""  data-tb-index="1" onfocus="_09('#DOAA$','7,51','#RCDDTL1');">
 
 								</span>
 							</div>
