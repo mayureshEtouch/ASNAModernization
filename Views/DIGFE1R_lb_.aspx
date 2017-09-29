@@ -366,7 +366,7 @@
 	
     <!-- Modified HTML code ends here -->
 </body>
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display:block;">
             
       <%--  CR: ER1 Customer/Maint(B) Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -1191,7 +1191,7 @@
 				font-size: 13px;
 			}
             #fkeys, #Div1 {
-                display: none !important;
+                display: block; !important;
             }
 
             #__Page_PopUp.edit-info {
@@ -1257,7 +1257,7 @@
             var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH__lb_RCDDTL1__lb_1ABST+CenPH__lb_RCDDTL1__lb_DDTTX": "cust-type",
-                    "CenPH__lb_RCDDTL1__lb_DDVTX+CenPH__lb_RCDDTL1__lb_DDWTX+CenPH__lb_RCDDTL1__lb_DDXTX": "cust-name",
+                    "CenPH__lb_RCDDTL1__lb_DDVTX+CenPH__lb_RCDDTL1__lb_DDWTX+CenPH__lb_RCDDTL1__lb_DDXTX+CenPH__lb_RCDDTL1__lb_DOAA_usd_": "cust-name",
                     "CenPH__lb_RCDDTL1__lb_DAQTX+CenPH__lb_RCDDTL1__lb_DADST": "cust-zipcode",
                     "CenPH__lb_RCDDTL1__lb_DBRST": "additional-add",
                     "CenPH__lb_RCDDTL1__lb_DTQST": "extra-phone",
