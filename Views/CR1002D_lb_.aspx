@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 9/20/2017 at 1:08 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 9/27/2017 at 3:27 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CR1002D# --%>
 
     </asp:Content>
@@ -520,6 +520,17 @@
                   <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">A.P.R.:</span> </div>
                   <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="apr"></span>
+                  </div>
+                </div>
+              </div>
+              <!-- col ends here -->
+
+              <!-- col starts here -->
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+                <div class="content-grid mdl-grid">
+                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Documentation Fee:</span> </div>
+                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
+                    <span data-upgraded=",MaterialTextfield" class="form-text" id="docfee"></span>
                   </div>
                 </div>
               </div>
@@ -1234,17 +1245,28 @@
             EraseFormats="*ALL" 
           >&nbsp;
           <%-- %%TS  SD  20160721  133944  GPALANI     REL-V7R1M0  5770-WDS                                                      --%>
+          <%--                                 21  3'Insurance - Life :'                                                         --%>
+          <%--            CRLF$O         7Y 2O 21 25EDTWRD('     .  ')                                                           --%>
+          <%--                                 21 39'Disability:'                                                                --%>
+          <%--            CRAH$O         7Y 2O 21 51EDTWRD('     .  ')                                                           --%>
+          <%--                                 22  8'Unemployment:'                                                              --%>
+          <%--            CRUE$O         7Y 2O 22 25EDTWRD('     .  ')                                                           --%>
+          <%--  70                                  DSPATR(RI)                                                                   --%>
+          <%--                                 22 41'Property:'                                                                  --%>
+          <%--            CRPR$O         7Y 2O 22 51EDTWRD('     .  ')                                                           --%>
+          <%--                                 22 60'on'                                                                         --%>
+          <%--            PRDS$          9Y 2O 22 63EDTWRD('       .  ')                                                         --%>
             <mdf:DdsConstant id="DdsConstant40" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="CR1002RD" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant59" runat="server" 
+            <mdf:DdsConstant id="DdsConstant60" runat="server" 
               style="position: absolute; left: 280px; top: 3px;"
               Text="Conn Credit Corporation" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant79" runat="server" 
+            <mdf:DdsConstant id="DdsConstant80" runat="server" 
               style="position: absolute; left: 739px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -1256,12 +1278,12 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant58" runat="server" 
+            <mdf:DdsConstant id="DdsConstant59" runat="server" 
               style="position: absolute; left: 262px; top: 27px;"
               Text="Time Payment Contract Print" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant80" runat="server" 
+            <mdf:DdsConstant id="DdsConstant81" runat="server" 
               style="position: absolute; left: 739px; top: 27px;"
               Text="*TIME" 
               CssClass="DdsConstant"
@@ -1305,7 +1327,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="5,53" 
  />
-            <mdf:DdsConstant id="DdsConstant75" runat="server" 
+            <mdf:DdsConstant id="DdsConstant76" runat="server" 
               style="position: absolute; left: 577px; top: 99px;"
               Text="S.S.#" 
               CssClass="DdsConstant"
@@ -1344,7 +1366,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="6,53" 
  />
-            <mdf:DdsConstant id="DdsConstant76" runat="server" 
+            <mdf:DdsConstant id="DdsConstant77" runat="server" 
               style="position: absolute; left: 577px; top: 123px;"
               Text="S.S.#" 
               CssClass="DdsConstant"
@@ -1456,7 +1478,7 @@
               VirtualRowCol="11,25" 
               EditCode="Z" 
  />
-            <mdf:DdsConstant id="DdsConstant61" runat="server" 
+            <mdf:DdsConstant id="DdsConstant62" runat="server" 
               style="position: absolute; left: 298px; top: 243px;"
               Text="State:" 
               CssClass="DdsConstant"
@@ -1482,7 +1504,7 @@
               VirtualRowCol="15,17" 
               EditWord="     .  " 
  />
-            <mdf:DdsConstant id="DdsConstant64" runat="server" 
+            <mdf:DdsConstant id="DdsConstant65" runat="server" 
               style="position: absolute; left: 298px; top: 339px;"
               Text="From Contract # " 
               CssClass="DdsConstant"
@@ -1510,7 +1532,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="17,22" 
  />
-            <mdf:DdsConstant id="DdsConstant65" runat="server" 
+            <mdf:DdsConstant id="DdsConstant66" runat="server" 
               style="position: absolute; left: 325px; top: 387px;"
               Text="Deferred Date:" 
               CssClass="DdsConstant"
@@ -1525,7 +1547,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="17,48" 
  />
-            <mdf:DdsConstant id="DdsConstant74" runat="server" 
+            <mdf:DdsConstant id="DdsConstant75" runat="server" 
               style="position: absolute; left: 568px; top: 387px;"
               Text="Final Payment" 
               CssClass="DdsConstant"
@@ -1556,7 +1578,7 @@
               EditCode="3" 
  />
 <!-- Currency symbol '$' not supported. -->
-            <mdf:DdsConstant id="DdsConstant66" runat="server" 
+            <mdf:DdsConstant id="DdsConstant67" runat="server" 
               style="position: absolute; left: 379px; top: 411px;"
               Text="Total of Payments:" 
               CssClass="DdsConstant"
@@ -1584,7 +1606,7 @@
               VirtualRowCol="19,23" 
               EditCode="3" 
  />
-            <mdf:DdsConstant id="DdsConstant67" runat="server" 
+            <mdf:DdsConstant id="DdsConstant68" runat="server" 
               style="position: absolute; left: 379px; top: 435px;"
               Text="Interest Amount  :" 
               CssClass="DdsConstant"
@@ -1612,7 +1634,7 @@
               VirtualRowCol="20,27" 
               EditWord="   .  " 
  />
-            <mdf:DdsConstant id="DdsConstant68" runat="server" 
+            <mdf:DdsConstant id="DdsConstant69" runat="server" 
               style="position: absolute; left: 379px; top: 459px;"
               Text="Interest Rate:" 
               CssClass="DdsConstant"
@@ -1642,72 +1664,86 @@
  />
             <mdf:DdsConstant id="DdsConstant55" runat="server" 
               style="position: absolute; left: 28px; top: 483px;"
-              Text="Insurance - Life :" 
+              Text="Documentation Fee:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="DSPFMT2_CRLF_usd_O" runat="server" style="position: absolute; left: 253px; top: 480px; width: 73px"
+            <mdf:DdsDecField id="DSPFMT2_CRDO_usd_O" runat="server" style="position: absolute; left: 235px; top: 480px; width: 91px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="2" 
+              Alias="CRDO$O" 
+              Usage="OutputOnly" 
+              VirtualRowCol="21,23" 
+              EditWord="       .  " 
+ />
+            <mdf:DdsConstant id="DdsConstant70" runat="server" 
+              style="position: absolute; left: 379px; top: 483px;"
+              Text="Insurance-Life:" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="DSPFMT2_CRLF_usd_O" runat="server" style="position: absolute; left: 550px; top: 480px; width: 73px"
               CssClass="DdsDecField"
               Length="7" 
               Decimals="2" 
               Alias="CRLF$O" 
               Usage="OutputOnly" 
-              VirtualRowCol="21,25" 
+              VirtualRowCol="21,55" 
               EditWord="     .  " 
  />
-            <mdf:DdsConstant id="DdsConstant69" runat="server" 
-              style="position: absolute; left: 379px; top: 483px;"
+            <mdf:DdsConstant id="DdsConstant56" runat="server" 
+              style="position: absolute; left: 28px; top: 507px;"
               Text="Disability:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="DSPFMT2_CRAH_usd_O" runat="server" style="position: absolute; left: 514px; top: 480px; width: 73px"
+            <mdf:DdsDecField id="DSPFMT2_CRAH_usd_O" runat="server" style="position: absolute; left: 136px; top: 504px; width: 73px"
               CssClass="DdsDecField"
               Length="7" 
               Decimals="2" 
               Alias="CRAH$O" 
               Usage="OutputOnly" 
-              VirtualRowCol="21,51" 
+              VirtualRowCol="22,15" 
               EditWord="     .  " 
  />
-            <mdf:DdsConstant id="DdsConstant56" runat="server" 
-              style="position: absolute; left: 73px; top: 507px;"
+            <mdf:DdsConstant id="DdsConstant58" runat="server" 
+              style="position: absolute; left: 253px; top: 507px;"
               Text="Unemployment:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="DSPFMT2_CRUE_usd_O" runat="server" style="position: absolute; left: 253px; top: 504px; width: 73px"
+            <mdf:DdsDecField id="DSPFMT2_CRUE_usd_O" runat="server" style="position: absolute; left: 379px; top: 504px; width: 73px"
               CssClass="DdsDecField"
               Length="7" 
               Decimals="2" 
               Alias="CRUE$O" 
               Usage="OutputOnly" 
-              VirtualRowCol="22,25" 
+              VirtualRowCol="22,39" 
               EditWord="     .  " 
  />
-            <mdf:DdsConstant id="DdsConstant70" runat="server" 
-              style="position: absolute; left: 397px; top: 507px;"
+            <mdf:DdsConstant id="DdsConstant74" runat="server" 
+              style="position: absolute; left: 460px; top: 507px;"
               Text="Property:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="DSPFMT2_CRPR_usd_O" runat="server" style="position: absolute; left: 514px; top: 504px; width: 73px"
+            <mdf:DdsDecField id="DSPFMT2_CRPR_usd_O" runat="server" style="position: absolute; left: 577px; top: 504px; width: 73px"
               CssClass="DdsDecField"
               Length="7" 
               Decimals="2" 
               Alias="CRPR$O" 
               Usage="OutputOnly" 
-              VirtualRowCol="22,51" 
+              VirtualRowCol="22,58" 
               EditWord="     .  " 
  />
-            <mdf:DdsConstant id="DdsConstant77" runat="server" 
-              style="position: absolute; left: 595px; top: 507px;"
+            <mdf:DdsConstant id="DdsConstant79" runat="server" 
+              style="position: absolute; left: 658px; top: 507px;"
               Text="on" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="DSPFMT2_PRDS_usd_" runat="server" style="position: absolute; left: 622px; top: 504px; width: 91px"
+            <mdf:DdsDecField id="DSPFMT2_PRDS_usd_" runat="server" style="position: absolute; left: 685px; top: 504px; width: 91px"
               CssClass="DdsDecField"
               Length="9" 
               Decimals="2" 
               Alias="PRDS$" 
               Usage="OutputOnly" 
-              VirtualRowCol="22,63" 
+              VirtualRowCol="22,70" 
               EditWord="       .  " 
  />
             <mdf:DdsConstant id="DdsConstant42" runat="server" 
@@ -1715,7 +1751,7 @@
               Text="             CF3=Menu    CF2=Revise     CF6=Display Messages     CF7=Print" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant60" runat="server" 
+            <mdf:DdsConstant id="DdsConstant61" runat="server" 
               style="position: absolute; left: 289px; top: 75px;"
               Text="Work:" 
               CssClass="DdsConstant"
@@ -1729,7 +1765,7 @@
               VirtualRowCol="4,35" 
               EditWord="   /   -    " 
  />
-            <mdf:DdsConstant id="DdsConstant62" runat="server" 
+            <mdf:DdsConstant id="DdsConstant63" runat="server" 
               style="position: absolute; left: 298px; top: 291px;"
               Text="" 
               VisibleCondition="78"
@@ -1738,7 +1774,7 @@
               MsgConLength="40" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant63" runat="server" 
+            <mdf:DdsConstant id="DdsConstant64" runat="server" 
               style="position: absolute; left: 298px; top: 315px;"
               Text="" 
               VisibleCondition="70"
@@ -1837,8 +1873,8 @@
          }
 
         var copyToAndFrom_temp2 = {
-              "CenPH_DdsConstant79":"date",
-              "CenPH_DdsConstant80":"time",
+              "CenPH_DdsConstant80":"date",
+              "CenPH_DdsConstant81":"time",
               "CenPH_DSPFMT2_CRPHNB": "homePhone",
               "CenPH_DSPFMT2_CRWRKB": "workPhone",
               "CenPH_DSPFMT2_CRAGEB":"age",
@@ -1868,6 +1904,7 @@
               "CenPH_DSPFMT2_CRFILO" : "loanOrigFee", //new field added
               "CenPH_DSPFMT2_CRINRO" : "intRate",
               "CenPH_DSPFMT2_CRAPRO" : "apr", //new field added
+              "CenPH_DSPFMT2_CRDO_usd_O":"docfee", //new field
               "CenPH_DSPFMT2_CRLF_usd_O" : "life", //select //insurance life
               "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
               "CenPH_DSPFMT2_CRUE_usd_O" : "unemployment", //select
@@ -2064,6 +2101,7 @@
               "CenPH_DSPFMT2_CRINTO" : "intAmount", //new field added
               "CenPH_DSPFMT2_CRFILO" : "loanOrigFee", //new field added
               "CenPH_DSPFMT2_CRAPRO" : "apr", //new field added
+              "CenPH_DSPFMT2_CRDO_usd_O":"docfee", //new field added
               "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
               "CenPH_DSPFMT2_PRDS_usd_" : "on" //new field
             };
@@ -2099,6 +2137,7 @@
               "CenPH_DSPFMT2_CRFILO" : "loanOrigFee", //new field added
               "CenPH_DSPFMT2_CRINRO" : "intRate",
               "CenPH_DSPFMT2_CRAPRO" : "apr", //new field added
+              "CenPH_DSPFMT2_CRDO_usd_O":"docfee", //new field added
               "CenPH_DSPFMT2_CRLF_usd_O" : "life", //select //insurance life
               "CenPH_DSPFMT2_CRAH_usd_O" : "disability", //new field
               "CenPH_DSPFMT2_CRUE_usd_O" : "unemployment", //select
@@ -2308,12 +2347,12 @@
     /* Showing ssn on click*/
 
 
-if($("#CenPH_DdsConstant62").html()!="" && $("#CenPH_DdsConstant62").html()!=undefined)
-{ 
+// if($("#CenPH_DdsConstant62").html()!="" && $("#CenPH_DdsConstant62").html()!=undefined)
+// { 
 
-  $("#purchaseAmt").append( "<span class='mrgnLft20'>"+$("#CenPH_DdsConstant62").html()+"</sapn>" );
+//   $("#purchaseAmt").append( "<span class='mrgnLft20'>"+$("#CenPH_DdsConstant62").html()+"</sapn>" );
 
-}
+// }
 
      $("#CenPH_DSPFMT1_SS_lb_2_new-show").on("mousedown taphold touchstart", function() {
       setTimeout(function() {
