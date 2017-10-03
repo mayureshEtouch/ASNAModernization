@@ -134,7 +134,7 @@
 		#__Page_PopUp #wrapper {
 		}
 		#__Page_PopUp #main-content {
-			min-height: 500px !important;
+			min-height: auto !important;
 		}
         .modal-dialog-container {
           margin: 0 auto;

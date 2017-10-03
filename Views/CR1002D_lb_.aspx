@@ -2302,6 +2302,15 @@
               }
              
             }
+
+             document.onkeydown = keydownF4;
+            function keydownF4(evt) {
+              if (evt.code == "F4") {
+                 _00('F4', event);
+                return false;
+              }
+             
+            }
             
             $("#previous").click(function (event) {
               _00('F3', event);
