@@ -2303,9 +2303,16 @@
              
             }
 
-             document.onkeydown = keydownF4;
+            document.onkeydown = keydownF4;
             function keydownF4(evt) {
               if (evt.code == "F4") {
+                var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
+                  $("#CenPH_DSPFMT1_SS_lb_1").val(dummyValue);
+                  // setTimeout(function() {
+                  //       // var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
+                        
+                  //       // $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val(ssnValue);
+                  //   }, 0);
                  _00('F4', event);
                 return false;
               }
