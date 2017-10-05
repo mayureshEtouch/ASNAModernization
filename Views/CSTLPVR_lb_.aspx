@@ -459,7 +459,7 @@
             </div>
         </div>
 <!-- Modified HTML code ends here -->
-       <div id="Div1" style="display:none;">
+      <div id="Div1" style="display: none;">
             
       <%--  PG: Apply Progressive     Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -471,8 +471,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 09/12/17  Time  : 02:41:40                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 10/04/17  Time  : 14:01:17                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -500,6 +500,7 @@
           <%--  Screen title                                                                                                     --%>
           <%--  *TIME                                                                                                            --%>
           <%--  *Program mode                                                                                                    --%>
+          <%--  Nbr: Social Security                                                                                             --%>
           <%--  Selection prompt text                                                                                            --%>
           <%--  TXT: Customer Last Name                                                                                          --%>
           <%--  TXT: Customer First Name                                                                                         --%>
@@ -555,8 +556,8 @@
           <%--  Txt: Store Name                                                                                                  --%>
           <%--  Txt: Customer Name DRV                                                                                           --%>
           <%--  Txt: Customer Name DRV                                                                                           --%>
-          <%--  Nbr: Social Security                                                                                             --%>
-          <%--  Nbr: Social Security                                                                                             --%>
+          <%--  Txt: Social Security (9)                                                                                         --%>
+          <%--  Txt: Social Security (9)                                                                                         --%>
           <%--  Txt: Email Addresses                                                                                             --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
@@ -686,6 +687,13 @@
               style="position: absolute; left: 739px; top: 27px;"
               Text="ENTER  " 
               CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1A4NB" runat="server" style="position: absolute; left: 1px; top: 0px; width: 82px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="0" 
+              Alias="#1A4NB" 
+              Usage="Hidden" 
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_1XVXT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 271px"
               CssClass="DdsCharField"
@@ -1036,17 +1044,16 @@
               Color="Blue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_RCDDTL1__lb_1A4NB" runat="server" style="position: absolute; left: 487px; top: 72px; width: 100px"
-              CssClass="DdsDecField"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DJDXT" runat="server" style="position: absolute; left: 460px; top: 72px; width: 82px"
+              CssClass="DdsCharField"
               Length="9" 
-              Decimals="0" 
-              LeftPad="Zeroes" 
-              Alias="#1A4NB" 
+              Lower="True" 
+              Alias="#DJDXT" 
               Usage="Both" 
-              VirtualRowCol="4,48" 
-              PositionCursor="31 | !31 & !98 & !99" 
-              Color="Red : 31 , Green : !31" 
-              EditWord="   -  -    " 
+              VirtualRowCol="4,45" 
+              Protect="79" 
+              PositionCursor="31 | !31 & !98 & !99 & !79" 
+              Color="Red : 31 &amp; !79 , Green : !79 &amp; !31" 
               TabIndex="1"  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_1VBXT" runat="server" style="position: absolute; left: 19px; top: 96px; width: 451px"
               CssClass="DdsCharField"
@@ -1055,7 +1062,7 @@
               Alias="#1VBXT" 
               Usage="Both" 
               VirtualRowCol="5,2" 
-              PositionCursor="32" 
+              PositionCursor="32 | !32 & !98 & !99" 
               Color="Red : 32 , Green : !32" 
               TabIndex="2"  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
@@ -1507,29 +1514,30 @@
               PositionCursor="53" 
               Color="Red : 53 , Green : !53" 
               TabIndex="23"  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
-              style="position: absolute; left: 19px; top: 483px;"
-              Text="ID State . . . ." 
-              VisibleCondition="!79"
-              Color="Green : 79 , Blue : !79" 
-              CssClass="DdsConstant"
- />
             <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 19px; top: 483px;"
+              Text="ID State . . . ." 
+              VisibleCondition="!78"
+              Color="Blue : !78" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+              style="position: absolute; left: 19px; top: 483px;"
               Text="ID State . . . :" 
-              VisibleCondition="79"
-              Color="Green : 79 , Blue : !79" 
+              VisibleCondition="78"
+              Color="Blue : !78" 
               CssClass="DdsConstant"
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_1DRCD" runat="server" style="position: absolute; left: 190px; top: 480px; width: 19px"
               CssClass="DdsCharField"
               Length="2" 
               Alias="#1DRCD" 
+              VisibleCondition="!( 78 & !54 )"
               Usage="Both" 
               VirtualRowCol="21,21" 
-              Protect="79" 
-              PositionCursor="54 & !79" 
-              Color="Red : 54 &amp; !79 , Green : !54" 
+              Protect="78" 
+              PositionCursor="54 & !78" 
+              Color="Red : 54 &amp; !78 , Green : !78 &amp; !54" 
               TabIndex="24"  />
             <mdf:DdsConstant id="DdsConstant29" runat="server" 
               style="position: absolute; left: 424px; top: 483px;"
@@ -1642,8 +1650,7 @@
     <style type="text/css">
 
     </style>
-
-    <script type="text/javascript">
+ <script type="text/javascript">
 
       var copyToAndFrom = {
         "displayOnlyFields": {
@@ -1723,8 +1730,9 @@
         $("#CenPH__lb_RCDDTL1__lb_1DRCD_new").ForceAlphabetOnly();
 
         //ssn
-        if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
-          $('#ssn').replaceWith("<span id='ssn'>"+$('#CenPH__lb_RCDDTL1__lb_1A4NB').text().replace(/-/g, "")+"</span>");
+        if ($('#CenPH__lb_RCDDTL1__lb_DJDXT').is("span")) {
+          $("#ssn-show").hide();
+          $('#ssn').replaceWith("<span id='ssn'>"+$('#CenPH__lb_RCDDTL1__lb_DJDXT').text().replace(/-/g, "")+"</span>");
           $('#dummy-ssn').val($('#ssn').text());
           var ssnChangd= $('#ssn').text().slice('5');
           $('#ssn').replaceWith("<span id='ssn'>"+'*****'+ssnChangd+"</span>")
@@ -1732,12 +1740,15 @@
 
           
         }
+        else{
+          $("#ssn-show").show();
+        }
         setTimeout(function(){
             $('#ssn').trigger('keyup');
           },100);
         $("#ssn-show").on("click mousedown taphold touchstart", function() {
           setTimeout(function() {
-            if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
+            if ($('#CenPH__lb_RCDDTL1__lb_DJDXT').is("span")) {
               var ssnValue = $("#ssn").text();
               var dummyValue = $("#dummy-ssn").val();
               $("#ssn").text($("#dummy-ssn").val());
@@ -1752,7 +1763,7 @@
             },0);
         });
         $("#ssn-show").on("click mouseup dragend touchend", function() {
-          if ($('#CenPH__lb_RCDDTL1__lb_1A4NB').is("span")) {
+          if ($('#CenPH__lb_RCDDTL1__lb_DJDXT').is("span")) {
             var ssnValue = $("#ssn").text();
             var dummyValue = $("#dummy-ssn").val();
             $("#ssn").text($("#dummy-ssn").val());
@@ -1766,13 +1777,13 @@
             }
         });
         $('.error').text($('#MsgPH_DdsMessagePanel1').text());
-        $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_1A4NB').val().replace(/-/g, ""));
+        $('#ssn').val($('#CenPH__lb_RCDDTL1__lb_DJDXT').val().replace(/-/g, ""));
         $('body').on('keyup change', '#ssn', function (event) {
-          $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($('#dummy-ssn').val());
+          $('#CenPH__lb_RCDDTL1__lb_DJDXT').val($('#dummy-ssn').val());
         });
 
         $('body').on('click', '#next', function (event) {
-            $('#CenPH__lb_RCDDTL1__lb_1A4NB').val($("#dummy-ssn").val());
+            $('#CenPH__lb_RCDDTL1__lb_DJDXT').val($("#dummy-ssn").val());
             _00("Enter", event);
         });
     
@@ -1898,4 +1909,5 @@
 
       });
     </script>
+   
     </asp:Content>
