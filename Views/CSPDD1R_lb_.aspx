@@ -92,7 +92,7 @@
                     <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col-tablet" style="padding:0">
                     <div class="content-grid mdl-grid">
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
-                            <span class="form-label">Down Payment:</span>
+                            <span class="form-label">Initial Payment:</span>
                         </div>
                         <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
                             <span class="form-text" id="dwnPay"></span>
@@ -168,7 +168,7 @@
         <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
         <div id="modal" class="simplePopup"></div>
       </div>
-        <div id="Div1" style="display:none;">
+       <div id="Div1" style="display: none;">
             
       <%--  PG: DSP Partial Crdt Resp Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -181,7 +181,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 09/05/17  Time  : 13:44:33                                                                       --%>
+      <%--  Date          : 10/05/17  Time  : 14:41:11                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -892,7 +892,7 @@
  />
             <mdf:DdsConstant id="DdsConstant9" runat="server" 
               style="position: absolute; left: 19px; top: 123px;"
-              Text="Down Payment . . :" 
+              Text="Initial Payment  :" 
               VisibleCondition="!( 78 )"
               Color="Blue : !78" 
               CssClass="DdsConstant"

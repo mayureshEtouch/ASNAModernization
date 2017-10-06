@@ -70,7 +70,7 @@
           <!-- col starts here -->
           <div class="mdl-cell mdl-cell--12-col mdl-cell mdl-cell--8-col" style="padding:0">
             <div class="content-grid mdl-grid">
-              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Initial Down Payment :</span> </div>
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" style="margin:0"> <span class="form-label">Initial Payment :</span> </div>
               <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet"> <span class="form-text" style="margin-left: -12px;" id="initDwnPay"></span> </div>
               </div>
           </div>
@@ -111,7 +111,7 @@
     <div id="modal" class="simplePopup"></div>
 </div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
+        <div id="Div1" style="display: none;">
             
       <%--  PG: PMT Get Lease Term    Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -124,7 +124,7 @@
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
       <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 09/08/17  Time  : 16:09:29                                                                       --%>
+      <%--  Date          : 10/05/17  Time  : 14:41:13                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -352,7 +352,7 @@
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
-              Text="Initial Down Payment  . . . . :" 
+              Text="Initial Payment . . . . . . . :" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
