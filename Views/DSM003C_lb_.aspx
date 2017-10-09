@@ -199,6 +199,11 @@
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
+                        <!--  <li class="_item" id="worksheet-sales-order"><a data-menu="25" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Worksheet Sales Process</p>
+                        </a></li> -->
+                         <li class="_item"><a href="javascript:void(0);" data-menu="25"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Worksheet Sales Process</p>
+
+                        </a></li>
                     </ul>
                     <!-- back-content ends here -->
                 </div>
