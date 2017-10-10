@@ -90,13 +90,13 @@
                         </div>
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop mdl-cell--5-col-tablet">
                                     
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry" onclick="_00('F12',event);">Previous</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="searchExPhn" onclick="_00('F4',event);">Prompt</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry" onclick="_00('F7',event);">Customer id card entry</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
+                                <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop mdl-cell--3-col-tablet pull-right">
                                    
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>
                                 </div>
