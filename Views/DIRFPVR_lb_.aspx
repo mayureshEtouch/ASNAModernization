@@ -53,7 +53,7 @@
                                         <div style="width: 72px;">
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--6-col">
+                                        <div class="mdl-cell mdl-cell--3-col-tablet mdl-cell--2-col">
                                             <input data-tb-index="1" type="text" id="emp" maxlength="5" class="mdl-textfield__input" data-tb-index="1">
                                         </div>                        
                                     </div>
