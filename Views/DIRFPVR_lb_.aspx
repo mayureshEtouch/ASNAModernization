@@ -22,7 +22,55 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-        <div id="Div1">
+      <!-- Modified HTML code starts here -->
+        <div class="OverlayPopupBackground"></div>
+        <main class="mdl-layout__content">
+          <section class="time-date">
+                <div class="content-grid mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <!-- Title -->
+                        <span class="heading-h1">Worksheet Entry</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <!-- Navigation -->
+                        <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIRFPVR</span>
+                        <i class="material-icons md-15 md-light date-icon"></i> <span class="date-time-txt" name="date" id="date"></span>
+                        <i class="material-icons md-15 md-light time-icon"></i> <span class="date-time-txt" name="time" id="time"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-data-content-container filter-field-container mrgnTp16">
+                <div class="table-data-wrapper">
+                    <div class="table-data-maincontainer">
+                        <div class="table-container filter-search-container">
+                            <div class="content-grid mdl-grid">
+                                <div class="mdl-cell mdl-cell--1-col filter-txt-cnt">
+                                    <span class="summary-table-title">Filter by:</span>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--10-col search-container">
+                                    <div class="content-grid mdl-grid">
+                                        <div style="width: 72px;">
+                                            <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--6-col">
+                                            <input data-tb-index="1" type="text" id="emp" maxlength="5" class="mdl-textfield__input" data-tb-index="1">
+                                        </div>                        
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--1-col button-cnt-container">
+                                    <div class="button-container">
+                                        <span class="mdl-button mdl-button--accent" id="Search">Search</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <div id="modal1" class="simplePopup"></div>
+        <div id="Div1" style="display:none;">
             
       <%--  OE: PMT Worksheet Entry   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -541,4 +589,28 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+
+      <style type="text/css"></style>
+
+      <script type="text/javascript">
+
+        var copyToAndFrom = {
+                "displayOnlyFields": {
+                  "CenPH_DdsConstant17":"date",
+                  "CenPH__lb_RCDDTL1__lb__lb_TME":"time"
+                },
+                "inputFields": {
+                  "CenPH__lb_RCDDTL1__lb_1AAXT":"emp"
+                }
+            }
+
+            $(document).ready(function () {
+                copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
+
+                $("#emp").ForceNumericOnly();
+                $("#Search").click(function (event) {
+                  _00('F6', event);
+                });
+            });
+      </script>
     </asp:Content>
