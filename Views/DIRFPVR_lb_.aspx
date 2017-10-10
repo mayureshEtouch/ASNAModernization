@@ -690,6 +690,14 @@
                 $("#exit").click(function (event) {
                   _00('F3', event);
                 });
+
+                document.onkeydown = keydownPress;
+                  function keydownPress(evt) {
+                  if (evt.code == "F9" || evt.code == "F10" || evt.code == "F11") {
+                    evt.stopPropagation();
+                    return false;
+                  }
+                }
             });
       </script>
     </asp:Content>
