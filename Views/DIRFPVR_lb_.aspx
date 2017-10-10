@@ -40,7 +40,7 @@
                 </div>
             </section>
 
-            <section class="table-data-content-container filter-field-container mrgnTp16">
+<!--             <section class="table-data-content-container filter-field-container mrgnTp16">
                 <div class="table-data-wrapper">
                     <div class="table-data-maincontainer">
                         <div class="table-container filter-search-container">
@@ -49,6 +49,8 @@
                                     <span class="summary-table-title">Filter by:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--10-col search-container">
+
+
                                     <div class="content-grid mdl-grid">
                                         <div style="width: 72px;">
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee</span>
@@ -67,7 +69,76 @@
                         </div>
                     </div>
                 </div>
+            </section> -->
+            <section class="table-data-content-container mrgnTp16">
+              <div class="table-data-wrapper">
+                <div class="table-data-maincontainer">
+                  <div class="table-container table-container-search">
+                    <!-- content-grid mdl-grid starts here -->
+                    <div class="content-grid mdl-grid" style="padding:0">
+                      <!-- 6 col starts here -->
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+                        <div class="content-grid mdl-grid">
+                          <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">District:</span> </div>
+                            <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0">
+                           <span data-upgraded=",MaterialTextfield" class="input-label-text" id="district" ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 6 col ends here -->
+                      <!-- 6 col starts here -->
+                      <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+                        <div class="content-grid mdl-grid">
+                          <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Company:</span> </div>
+                          <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0">
+                           <span data-upgraded=",MaterialTextfield" class="input-label-text" id="comp" ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 6 col ends here -->
+                      <div class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet">
+                        <div class="content-grid mdl-grid">
+                          <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Location:</span> </div>
+                          <div  class="mdl-cell mdl-cell--7-col  mdl-cell--4-col-tablet" style="margin: 0">
+                            <span data-upgraded=",MaterialTextfield" class="input-label-text" id="loc" ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- content-grid mdl-grid ends here -->
+                    <!-- content-grid mdl-grid starts here -->
+                    <div class="content-grid mdl-grid" style="padding:0">
+                      <!-- 6 col starts here -->
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
+                        <div class="content-grid mdl-grid">
+                          <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Employee:</span> </div>
+                          <div  class="mdl-cell mdl-cell--3-col  mdl-cell--3-col-tablet" style="margin: 0">
+                            <input type="text" id="emp" class="mdl-textfield__input" data-tb-index="1" maxlength="5">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 6 col ends here -->
+                    </div>
+                    <!-- content-grid mdl-grid ends here -->
+                  </div>
+                </div>
+              </div>
             </section>
+
+          <section class="table-data-content-container spacer-container-bottom">
+            <div class="table-data-wrapper">
+              <div class="table-data-maincontainer">
+                <div style="overflow: auto; height:26em;" class="table-container" id="displayIncmOrderDiv">
+                </div>
+                <div class="button-container">
+                      <div class="content-grid mdl-grid">
+                          <div class="mdl-cell mdl-cell--7-col mdl-cell--9-col-desktop"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search">Search</span> </div>
+                          <!-- <div class="mdl-cell mdl-cell--1-col mdl-cell--3-col-desktop pull-right"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span> </div> -->
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </section>
         </main>
          <div id="modal1" class="simplePopup"></div>
         <div id="Div1" style="display:none;">
@@ -597,7 +668,10 @@
         var copyToAndFrom = {
                 "displayOnlyFields": {
                   "CenPH_DdsConstant17":"date",
-                  "CenPH__lb_RCDDTL1__lb__lb_TME":"time"
+                  "CenPH__lb_RCDDTL1__lb__lb_TME":"time",
+                  "CenPH__lb_RCDDTL1__lb_1SKCD":"district",
+                  "CenPH__lb_RCDDTL1__lb_1T3CD":"comp",
+                  "CenPH__lb_RCDDTL1__lb_1T4CD":"loc"
                 },
                 "inputFields": {
                   "CenPH__lb_RCDDTL1__lb_1AAXT":"emp"
@@ -608,8 +682,13 @@
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
                 $("#emp").ForceNumericOnly();
-                $("#Search").click(function (event) {
+
+                $("#search").click(function (event) {
                   _00('F6', event);
+                });
+
+                $("#exit").click(function (event) {
+                  _00('F3', event);
                 });
             });
       </script>
