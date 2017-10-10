@@ -52,13 +52,13 @@
                                         <div class="mdl-cell mdl-cell--1-col" style="width: 72px;">
                                             <span class="summary-table-title pull-right" style="margin-left: -5px;">Status:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col" id="Location">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet" id="Location">
                                             <input type="text" id="number1" class="mdl-textfield__input" data-tb-index="1" maxlength="1">
                                         </div> 
                                         <div class="mdl-cell mdl-cell--1-col" style="width: 130px;">
                                             <span class="summary-table-title pull-right" style="padding-left: 5px;">Worksheet ID:</span>
                                         </div>
-                                        <div class="mdl-cell mdl-cell--3-col" id="filter-by-co">
+                                        <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" id="filter-by-co">
                                             <input type="text" id="worksheetNumber" class="mdl-textfield__input" data-tb-index="1" maxlength="7">
                                         </div>
                                         <div class="mdl-cell mdl-cell--1-col" style="width: 70px;"> <span class="summary-table-title pull-right" style="padding-left: 15px;">Customer :</span> </div>
