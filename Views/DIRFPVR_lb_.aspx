@@ -108,16 +108,7 @@
                     <!-- content-grid mdl-grid ends here -->
                     <!-- content-grid mdl-grid starts here -->
                     <div class="content-grid mdl-grid" style="padding:0">
-                      <!-- 6 col starts here -->
-                      <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet">
-                        <div class="content-grid mdl-grid">
-                          <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Employee:</span> </div>
-                          <div  class="mdl-cell mdl-cell--3-col  mdl-cell--3-col-tablet" style="margin: 0">
-                            <input type="text" id="emp" class="mdl-textfield__input" data-tb-index="1" maxlength="5">
-                          </div>
-                        </div>
-                      </div>
-                      <!-- 6 col ends here -->
+                     
                     </div>
                     <!-- content-grid mdl-grid ends here -->
                   </div>
@@ -129,6 +120,16 @@
             <div class="table-data-wrapper">
               <div class="table-data-maincontainer">
                 <div style="overflow: auto; height:26em;" class="table-container" id="displayIncmOrderDiv">
+                     <!-- 6 col starts here -->
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell mdl-cell--4-col-tablet" style="margin-top: 1em">
+                        <div class="content-grid mdl-grid">
+                          <div  class="mdl-cell mdl-cell--5-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">Employee:</span> </div>
+                          <div  class="mdl-cell mdl-cell--3-col  mdl-cell--2-col-tablet" style="margin: 0">
+                            <input type="text" id="emp" class="mdl-textfield__input" data-tb-index="1" maxlength="5">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 6 col ends here -->
                 </div>
                 <div class="button-container">
                       <div class="content-grid mdl-grid">
