@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="IOA3PVR_lb_.aspx.cs" Inherits="Conns.IOA3PVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="IOA3PVR_lb_.aspx.cs" Inherits="CONNS.IOA3PVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 9/6/2017 at 8:45 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 10/16/2017 at 8:09 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member IOA3PVR# --%>
        <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -56,7 +56,7 @@
                         <span class="form-label"></span>
                       </div> -->
                       <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet" style="margin:0">
-                        <span class="form-text" id="text"></span>
+                        <span class="form-text" id="text" style="color:pink"></span>
                       </div>
                     </div>
                   </div>
@@ -66,7 +66,7 @@
                         <span class="form-label"></span>
                       </div> -->
                       <div class="mdl-cell mdl-cell--9-col mdl-cell--7-col-tablet" style="margin:0">eSign Status:
-                        <span class="form-text" id="status" style="font-weight: bold"></span>
+                        <span class="form-text" id="status" style="font-weight: bold; color:pink"></span>
                       </div>
                     </div>
                   </div>
@@ -78,7 +78,7 @@
 <!--                     <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div> -->
-					           <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-desktop">
+                     <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit"></span>
                     </div>
                     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
@@ -109,8 +109,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : APOTTI                                                                                           --%>
-      <%--  Date          : 09/06/17  Time  : 08:42:05                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 10/15/17  Time  : 13:32:59                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -121,7 +121,7 @@
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;Home 'Reset.' 30;"
-            FuncKeys="F4 'Prompt.' 04;F5 'CF05.' 05;"
+            FuncKeys="F4 'Prompt.' 04;F5 'CF05.' 05;F10 'CF10.' 10;"
             SetOfInds="98 99 " 
             CommandKeyInd="29" 
             Window="True"
@@ -139,6 +139,8 @@
           <%--  Reposition cursor to where?                                                                                      --%>
           <%--  Window title                                                                                                     --%>
           <%--  # Text: 72                                                                                                       --%>
+          <%--  # Text: 20                                                                                                       --%>
+          <%--  # Text: 15                                                                                                       --%>
           <%--  # Text: 10                                                                                                       --%>
           <%--  Envelope Rtn STATUS                                                                                              --%>
           <%--  Txt: Name                                                                                                        --%>
@@ -180,8 +182,9 @@
           <%--  # Text: 60                                                                                                       --%>
           <%--  Envelope STATUS                                                                                                  --%>
           <%--  Envelope STATUS                                                                                                  --%>
-          <%--  # Text: 15                                                                                                       --%>
-          <%--  # Text: 20                                                                                                       --%>
+          <%--  # Text: 20.                                                                                                      --%>
+          <%--  # Text 23                                                                                                        --%>
+          <%--  # Text: 40 Mixed case                                                                                            --%>
           <%-- =========================================================================                                         --%>
             <mdf:DdsDecField id="_lb_RCDDTL1_ZZCSRW" runat="server" style="position: absolute; left: 1px; top: 0px; width: 28px"
               CssClass="DdsDecField"
@@ -206,6 +209,18 @@
               CssClass="DdsCharField"
               Length="72" 
               Alias="#DIUTX" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DKMXT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 181px"
+              CssClass="DdsCharField"
+              Length="20" 
+              Alias="#DKMXT" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DACTX" runat="server" style="position: absolute; left: 1px; top: 0px; width: 136px"
+              CssClass="DdsCharField"
+              Length="15" 
+              Alias="#DACTX" 
               Usage="Hidden" 
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_DJWXT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 91px"
@@ -454,33 +469,40 @@
               Color="Red : 79 , Pink : !79" 
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
-              style="position: absolute; left: 19px; top: 99px;"
+              style="position: absolute; left: 28px; top: 75px;"
               Text="eSign Status:" 
               VisibleCondition="!( 78 )"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DR2TT" runat="server" style="position: absolute; left: 145px; top: 96px; width: 451px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DR2TT" runat="server" style="position: absolute; left: 154px; top: 72px; width: 451px"
               CssClass="DdsCharField"
               Length="50" 
               Alias="#DR2TT" 
               VisibleCondition="!( 78 )"
               Usage="OutputOnly" 
-              VirtualRowCol="5,16" 
+              VirtualRowCol="4,17" 
               Color="Pink : !78" 
  />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DACTX" runat="server" style="position: absolute; left: 19px; top: 144px; width: 136px"
-              CssClass="DdsCharField"
-              Length="15" 
-              Alias="#DACTX" 
-              Usage="OutputOnly" 
-              VirtualRowCol="7,2" 
- />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DKMXT" runat="server" style="position: absolute; left: 172px; top: 144px; width: 181px"
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DJITX" runat="server" style="position: absolute; left: 28px; top: 120px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
-              Alias="#DKMXT" 
+              Alias="#DJITX" 
               Usage="OutputOnly" 
-              VirtualRowCol="7,19" 
+              VirtualRowCol="6,3" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DD6TU" runat="server" style="position: absolute; left: 226px; top: 120px; width: 208px"
+              CssClass="DdsCharField"
+              Length="23" 
+              Alias="#DD6TU" 
+              Usage="OutputOnly" 
+              VirtualRowCol="6,25" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DDXTU" runat="server" style="position: absolute; left: 28px; top: 144px; width: 361px"
+              CssClass="DdsCharField"
+              Length="40" 
+              Alias="#DDXTU" 
+              Usage="OutputOnly" 
+              VirtualRowCol="7,3" 
  />
           </mdf:DdsRecord >
           <mdf:DdsRecord id="_lb_CMDTXT1" runat="server" 
