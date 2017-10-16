@@ -78,15 +78,15 @@
 <!--                     <div class="mdl-cell mdl-cell--4-col mdl-cell--9-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit">Exit</span>
                     </div> -->
-                     <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-desktop">
+                     <div class="mdl-cell mdl-cell--3-col mdl-cell--3-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Exit"></span>
                     </div>
                     <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-desktop">
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh" style="display:none;"></span>
                     </div>
-                    <!-- <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right">
-                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit">Enter</span>
-                    </div> -->
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right">
+                      <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="complt" style="display:none;"></span>
+                    </div>
                     
                   </div>
 
@@ -635,12 +635,9 @@
             #__Page_Hidden{
                 height: 100% !important;
             }
-            /*#__Page_PopUp {
-                margin-left: -300px;
-                min-width: 600px !important;
-                width: 600px !important;
-                left: 60% !important;
-                top: 23%!important; 
+           /* #__Page_PopUp {
+                min-width: 700px !important;
+                width: 700px !important;
             }*/
 
             #__Page_PopUp > tr:first-child {
@@ -672,6 +669,14 @@
               position: static !important;
               width: 45px !important;
             }
+
+            .Page_PopUpNewClass {
+              margin-left: -300px;
+              min-width: 800px !important;
+              width: 800px !important;
+              top: 15% !important;
+              left: 43% !important;
+            }
         </style>
         <script>
 
@@ -690,6 +695,11 @@
 
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
+            setTimeout(function(){ 
+                $("#__Page_PopUp").removeAttr("style");
+                $("#__Page_PopUp").addClass("Page_PopUpNewClass");
+             }, 500);
+
             $("#esign-info").append($($(".DdsSflMsgField_OutputOnly")[0]).html());
             $('body').on('click', '.close-icon', function (event) {
                 _00('F12', event);
@@ -699,12 +709,17 @@
               _00("Enter", event);
             });
 
-            $("#Exit").text($("#CenPH__lb_RCDDTL1__lb_DACTX").text().split("=")[1]);
+            $("#Exit").text($("#CenPH__lb_RCDDTL1__lb_DJITX").text().split("=")[1]);
 
-            if ($("#CenPH__lb_RCDDTL1__lb_DKMXT").text().indexOf("=") > 0) {
+            if ($("#CenPH__lb_RCDDTL1__lb_DD6TU").text().indexOf("=") > 0) {
               $("#refresh").css("display","block");
-              $("#refresh").text($("#CenPH__lb_RCDDTL1__lb_DKMXT").text().split("=")[1]);
-            }           
+              $("#refresh").text($("#CenPH__lb_RCDDTL1__lb_DD6TU").text().split("=")[1]);
+            }   
+
+            if ($("#CenPH__lb_RCDDTL1__lb_DDXTU").text().indexOf("=") > 0) {
+              $("#complt").css("display","block");
+              $("#complt").text($("#CenPH__lb_RCDDTL1__lb_DDXTU").text().split("=")[1]);
+            }          
 
             $('#Exit').click(function (event) {
               _00("F3", event);
@@ -712,6 +727,10 @@
 
             $('#refresh').click(function (event) {
               _00("F5", event);
+            });
+
+            $('#complt').click(function (event) {
+              _00("F10", event);
             });
 
             $('.close-icon').click(function (event) {
