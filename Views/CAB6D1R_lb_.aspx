@@ -814,8 +814,8 @@
             }
               #__Page_PopUp {
                 margin-left: -350px;
-               /* min-width: auto !important;
-        width: auto !important;*/
+                min-width: 700px !important;
+        width: 700px !important;
         left: 50% !important; 
             }
 
