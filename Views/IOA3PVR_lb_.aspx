@@ -672,10 +672,10 @@
 
             .Page_PopUpNewClass {
               margin-left: -300px;
-              min-width: 800px !important;
-              width: 800px !important;
+              min-width: 1000px !important;
+              width: 1000px !important;
               top: 15% !important;
-              left: 43% !important;
+              left: 38% !important;
             }
         </style>
         <script>
@@ -709,16 +709,18 @@
               _00("Enter", event);
             });
 
-            $("#Exit").text($("#CenPH__lb_RCDDTL1__lb_DJITX").text().split("=")[1]);
+            if ($("#CenPH__lb_RCDDTL1__lb_DJITX").text().indexOf("=") > 0) {
+              $("#Exit").text('F3/F12 = '+ $("#CenPH__lb_RCDDTL1__lb_DJITX").text().split("=")[1]);
+            }else{$("#Exit").text("Exit")}
 
             if ($("#CenPH__lb_RCDDTL1__lb_DD6TU").text().indexOf("=") > 0) {
               $("#refresh").css("display","block");
-              $("#refresh").text($("#CenPH__lb_RCDDTL1__lb_DD6TU").text().split("=")[1]);
+              $("#refresh").text('F5 = '+ $("#CenPH__lb_RCDDTL1__lb_DD6TU").text().split("=")[1]);
             }   
 
             if ($("#CenPH__lb_RCDDTL1__lb_DDXTU").text().indexOf("=") > 0) {
               $("#complt").css("display","block");
-              $("#complt").text($("#CenPH__lb_RCDDTL1__lb_DDXTU").text().split("=")[1]);
+              $("#complt").text('F10 = '+ $("#CenPH__lb_RCDDTL1__lb_DDXTU").text().split("=")[1]);
             }          
 
             $('#Exit').click(function (event) {

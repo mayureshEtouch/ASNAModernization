@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 10/16/2017 at 8:38 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 10/17/2017 at 8:53 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member IPS0PVR# --%>
         <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -38,7 +38,7 @@
         <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--8-col"> 
                 <!-- Title --> 
-                <span class="heading-h1">Yes or No</span> </div>
+                <span class="heading-h1">Void Contract?</span> </div>
             <div class="mdl-cell mdl-cell--4-col pull-right"> 
                 <!-- Navigation --> 
                 <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">IPS0PVR </span></div>
@@ -96,7 +96,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 10/15/17  Time  : 13:33:00                                                                       --%>
+      <%--  Date          : 10/16/17  Time  : 11:28:35                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -143,12 +143,12 @@
               Alias="ZZCSCL" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant2" runat="server" 
-              style="position: absolute; left: 46px; top: 3px;"
-              Text="Yes or No" 
+            <mdf:DdsConstant id="DdsConstant1" runat="server" 
+              style="position: absolute; left: 28px; top: 3px;"
+              Text="Void Contract?" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant1" runat="server" 
+            <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 37px; top: 27px;"
               Text="Confirm ?" 
               CssClass="DdsConstant"
