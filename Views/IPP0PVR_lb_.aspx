@@ -2,7 +2,7 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 9/21/2017 at 6:17 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Migrated on 10/17/2017 at 1:28 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
         <%-- Legacy location: library ASNATRACK, file QDDSSRC, member IPP0PVR# --%>
 <!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
@@ -81,15 +81,15 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 09/21/17  Time  : 06:22:29                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 10/17/17  Time  : 01:46:57                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
       <%-- =========================================================================                                         --%>
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 639px; height: 96px" 
+            style="position: relative; width: 549px; height: 120px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;Home 'Reset.' 30;"
@@ -98,8 +98,8 @@
             CommandKeyInd="29" 
             Window="True"
             WindowUnits="CharacterPositions"
-            WindowWidth="76" 
-            WindowHeight="7" 
+            WindowWidth="74" 
+            WindowHeight="17" 
             CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 25"
           >&nbsp;
           <%--                                                                                                                   --%>
@@ -132,7 +132,7 @@
               Usage="Hidden" 
  />
             <mdf:DdsConstant id="DdsConstant3" runat="server" 
-              style="position: absolute; left: 280px; top: 3px;"
+              style="position: absolute; left: 271px; top: 3px;"
               Text="INFORMATION!!!" 
               CssClass="DdsConstant"
  />
@@ -157,14 +157,14 @@
               Usage="Hidden" 
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
-              style="position: absolute; left: 19px; top: 51px;"
-              Text="Order has been cancelled. Inventory has been returned and Warranties" 
+              style="position: absolute; left: 19px; top: 75px;"
+              Text="Order has been cancelled. Inventory has been returned and" 
               Color="Red" 
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
-              style="position: absolute; left: 19px; top: 75px;"
-              Text="cancelled. Press Enter to Exit." 
+              style="position: absolute; left: 19px; top: 99px;"
+              Text="Warranties cancelled. Press Enter to Exit." 
               Color="Red" 
               CssClass="DdsConstant"
  />
@@ -175,8 +175,8 @@
             CssClass="DdsRecord"
             Window="True"
             WindowUnits="CharacterPositions"
-            WindowWidth="76" 
-            WindowHeight="7" 
+            WindowWidth="74" 
+            WindowHeight="17" 
           >&nbsp;
           <%--                                                                                                                   --%>
           <%-- Window definition                                                                                                 --%>
@@ -205,9 +205,9 @@
             Window="True"
             WindowUnits="CharacterPositions"
             WindowLeftField="##WSC" 
-            WindowWidth="76" 
+            WindowWidth="74" 
             WindowTopField="##WSR" 
-            WindowHeight="7" 
+            WindowHeight="17" 
           >&nbsp;
           <%-- Window definition                                                                                                 --%>
           <%-- Window borders definition                                                                                         --%>
@@ -305,6 +305,7 @@
                 /*width: 500px !important;*/
                 left: 50% !important;
                 top: 16%!important; 
+                    height: auto!important;
                 
             }
 
