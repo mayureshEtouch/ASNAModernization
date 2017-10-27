@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSM003CS_lb_.aspx.cs" Inherits="conns.DSM003CS_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DSM003CS_lb_.aspx.cs" Inherits="conns.DSM003CS_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
@@ -42,11 +42,11 @@
                         <h2 class="_title">Work with Contracts</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Calculate Credit Contract</p>
+                        <li class="_item"><a data-menu="6" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Calculate Credit Contract</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
+                        <li class="_item"><a data-menu="7" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Enter Manual Contract</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Short GE Application</p>
+                        <li class="_item"><a data-menu="21" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Enter Short GE Application</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -70,15 +70,15 @@
                     <ul class="_list">
                         <li class="_item" id="enter-sales-order"><a data-menu="1" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Enter Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Edit Sales Order</p>
+                        <li class="_item"><a data-menu="2" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Edit Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Sales Order</p>
+                        <li class="_item"><a data-menu="3" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Sales Order</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Old Sales Orders</p>
+                        <li class="_item"><a data-menu="16" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Old Sales Orders</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Worksheet Sales Process</p>
+                        <li class="_item"><a data-menu="25" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Worksheet Sales Process</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work YesLease Application</p>
+                        <li class="_item"><a data-menu="26" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work YesLease Application</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -100,9 +100,9 @@
                         <h2 class="_title">Inventory & Delivery Schedule</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Deliveries</p>
+                        <li class="_item"><a data-menu="4" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Deliveries</p>
                         </a></a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
+                        <li class="_item"><a data-menu="5" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Delivery Zips</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Model</p>
                         </a></li>
@@ -128,14 +128,14 @@
                         <h2 class="_title">Misc. Customer Service</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Customer Credit Acct</p>
+                        <li class="_item"><a data-menu="9" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Credit Acct</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Edit Customer Email Addresses</p>
+                        <li class="_item"><a data-menu="22" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p >Edit Customer Email Addresses</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Customer Prospects
+                        <li class="_item"><a data-menu="24" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Customer Prospects
 </p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Information</p>
+                        <li class="_item"><a data-menu="8" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Information</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -161,11 +161,11 @@
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Model</p>
+                        <li class="_item"><a data-menu="11" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
+                        <li class="_item"><a data-menu="13" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Incomplete Sales</p>
+                        <li class="_item"><a data-menu="15" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Incomplete Sales</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -187,17 +187,17 @@
                         <h2 class="_title">Other Misc. Sales Menu</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Enter Pickup Completions</p>
+                        <li class="_item"><a data-menu="18" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Enter Pickup Completions</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
+                        <li class="_item"><a data-menu="29" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Sales Prospects
+                        <li class="_item"><a data-menu="23" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work Sales Prospects
 </p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Vendor Promos
+                        <li class="_item"><a data-menu="17" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Vendor Promos
 </p>
                         </a></li>
-                        <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule
+                        <li class="_item"><a data-menu="27" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule
 </p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>User Help Screen
@@ -212,7 +212,7 @@
             </div>
         </div>
     </main>
-        <div id="Div1">
+         <div id="Div1">
             
       <%-- %%TS  SD  20160707  200235  COOL23      REL-V7R1M0  5770-WDS                                                      --%>
       <%--                                                                                                                   --%>
@@ -962,7 +962,7 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_MENUSFLC" runat="server" 
-            style="position: relative; width: 9px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="MENUSFLC"
             CssClass="DdsRecord"
             ProgramQ="MENUPGMQ" 
@@ -977,10 +977,9 @@
             EraseFormats="*ALL" 
           >&nbsp;
           <mdf:DdsSubfile id="_MENUSFL" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="MENUSFL"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
             <mdf:DdsCharField id="MENUSFL_MSGKEY" runat="server" 
