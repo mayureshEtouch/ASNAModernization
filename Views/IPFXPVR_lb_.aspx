@@ -850,7 +850,7 @@
               $('#exit').click(function (event) {
                 _00("F3", event);
               });
-              $('#previous').click(function (event) {
+              $('#Previous').click(function (event) {
                 _00("F12", event);
               });
 
