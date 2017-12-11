@@ -134,7 +134,7 @@
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin:0">
                     <span class="form-label">Enter Request Reason:</span>
                   </div>
-                  <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0 -38px">
+                  <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet tablet-mrgleft" style="margin:0 0 0 -17px">
                     <span class="form-text">
                       <input class="mdl-textfield__input" type="text" maxlength="65" data-tb-index="1" size="15" id="CenPH__lb_RCDDTL1__lb_DUJTX_new">
                     </span>
