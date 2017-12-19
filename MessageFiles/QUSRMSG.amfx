@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 11/27/2017 at 12:18 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
+<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 12/19/2017 at 12:53 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -2832,19 +2832,19 @@
 <MSG MSGID="DIS3847" SEVERITY="20" DATACOUNT="0" TEXT="                                                                                ." SECLVL=" "                                                    />
 <MSG MSGID="DIS3864" SEVERITY="20" DATACOUNT="0" TEXT="OE: Payment AOK Error not found." SECLVL=""             />
 <MSG MSGID="DIS3865" SEVERITY="20" DATACOUNT="0" TEXT="OE: Payment AOK Error already exists." SECLVL=""        />
-<MSG MSGID="DIS3868" SEVERITY="20" DATACOUNT="0" TEXT="One or more items are not delivered" SECLVL=" "         />
-<MSG MSGID="DIS3869" SEVERITY="20" DATACOUNT="0" TEXT="SSN did not match in Application and Contract" SECLVL=" "                                                                                        />
-<MSG MSGID="DIS3870" SEVERITY="20" DATACOUNT="2" TEXT="DOB did not match in Application (&amp;2) and Contract (&amp;1)" SECLVL="*Blank" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"                                                                                        />
-<MSG MSGID="DIS3871" SEVERITY="20" DATACOUNT="0" TEXT="Multiple Contracts exist for the Order" SECLVL=" "      />
-<MSG MSGID="DIS3872" SEVERITY="20" DATACOUNT="0" TEXT="Add-on Amount exist for the Contract/Application" SECLVL=" "                                                                                     />
-<MSG MSGID="DIS3873" SEVERITY="20" DATACOUNT="0" TEXT="Customer Ineligible for Unemployment Insurance" SECLVL=" "                                                                                       />
+<MSG MSGID="DIS3868" SEVERITY="20" DATACOUNT="0" TEXT="One or more items are not delivered." SECLVL=" "        />
+<MSG MSGID="DIS3869" SEVERITY="20" DATACOUNT="2" TEXT="SSN did not match in Application (&amp;1) and Contract (&amp;2)." SECLVL="*BLANK" TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="0" />
+<MSG MSGID="DIS3870" SEVERITY="20" DATACOUNT="2" TEXT="DOB did not match in Application (&amp;2) and Contract (&amp;1)." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"   />
+<MSG MSGID="DIS3871" SEVERITY="20" DATACOUNT="0" TEXT="Multiple Contracts exist for the Order." SECLVL=" "     />
+<MSG MSGID="DIS3872" SEVERITY="20" DATACOUNT="0" TEXT="Add-on Amount exist for the Contract/Application." SECLVL=" "                                                                                    />
+<MSG MSGID="DIS3873" SEVERITY="20" DATACOUNT="0" TEXT="Customer Ineligible for Unemployment Insurance." SECLVL=" "                                                                                      />
 <MSG MSGID="DIS3874" SEVERITY="20" DATACOUNT="1" TEXT="Call back date cannot be past date" SECLVL=" " TYPE1="*DEC" LEN1="6" DEC1="0"                                                                    />
-<MSG MSGID="DIS3875" SEVERITY="20" DATACOUNT="0" TEXT="Purchase amount is different in Application and Contract" SECLVL=" "                                                                             />
+<MSG MSGID="DIS3875" SEVERITY="20" DATACOUNT="2" TEXT="Purchase amount is different in Application (&amp;1) and Contract (2)." SECLVL="*BLANK" TYPE1="*DEC" LEN1="9" DEC1="2" TYPE2="*DEC" LEN2="9" DEC2="2"                                                                                     />
 <MSG MSGID="DIS3876" SEVERITY="20" DATACOUNT="1" TEXT="Call back time cannot be past time" SECLVL=" " TYPE1="*DEC" LEN1="6" DEC1="0"                                                                    />
 <MSG MSGID="DIS3877" SEVERITY="20" DATACOUNT="1" TEXT="Order# &amp;1 is currently locked" SECLVL="" TYPE1="*DEC" LEN1="9" DEC1="0"                                                                      />
 <MSG MSGID="DIS3878" SEVERITY="20" DATACOUNT="2" TEXT="Call back date should not exceed &amp;1 days from application creation" SECLVL="" TYPE1="*DEC" LEN1="5" DEC1="0" TYPE2="*DEC" LEN2="6" DEC2="0"  />
-<MSG MSGID="DIS3879" SEVERITY="20" DATACOUNT="0" TEXT="Down payment is different in Application and Contract" SECLVL=" "                                                                                />
-<MSG MSGID="DIS3880" SEVERITY="20" DATACOUNT="2" TEXT="Credit exist (&amp;1) that exceeds 50&#37; of financed payment amount (&amp;2)" SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="2" TYPE2="*DEC" LEN2="9" DEC2="2"                                                                                  />
+<MSG MSGID="DIS3879" SEVERITY="20" DATACOUNT="2" TEXT="Down payment is different in Application (&amp;1) and Contract (2)." SECLVL="*BLANK" TYPE1="*DEC" LEN1="9" DEC1="2" TYPE2="*DEC" LEN2="9" DEC2="2"                                                                                        />
+<MSG MSGID="DIS3880" SEVERITY="20" DATACOUNT="2" TEXT="Credit payment amount &amp;1 exceeds 50&#37; of Financed payment amount of &amp;2." SECLVL=" " TYPE1="*DEC" LEN1="7" DEC1="2" TYPE2="*DEC" LEN2="9" DEC2="2"                                                                              />
 <MSG MSGID="DIS3881" SEVERITY="20" DATACOUNT="1" TEXT="First payment date must be at least &amp;1 days from the current date." SECLVL=" " TYPE1="*DEC" LEN1="3" DEC1="0"                                />
 <MSG MSGID="DIS3882" SEVERITY="20" DATACOUNT="0" TEXT="Option: 1=Work  5=Display  7=Review Auto AOK" SECLVL=" "                                                                                         />
 <MSG MSGID="DIS3883" SEVERITY="20" DATACOUNT="0" TEXT="Option: 1=Work  5=Display" SECLVL=" "                   />
@@ -2852,6 +2852,14 @@
 <MSG MSGID="DIS3885" SEVERITY="20" DATACOUNT="0" TEXT="Order not locked" SECLVL=""                             />
 <MSG MSGID="DIS3888" SEVERITY="20" DATACOUNT="1" TEXT="Option not allowed as errors exist." SECLVL="" TYPE1="*CHAR" LEN1="1" DEC1="0"                                                                   />
 <MSG MSGID="DIS3913" SEVERITY="20" DATACOUNT="3" TEXT="Invoice &amp;2 Greater that Lease Approved &amp;3" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="9" DEC2="2" TYPE3="*DEC" LEN3="9" DEC3="2"                                                                               />
+<MSG MSGID="DIS3916" SEVERITY="20" DATACOUNT="0" TEXT="Wet Signed Contract requires further review." SECLVL=" "                                                                                         />
+<MSG MSGID="DIS3917" SEVERITY="20" DATACOUNT="2" TEXT="First Payment Date is changed from &amp;1 to &amp;2." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"               />
+<MSG MSGID="DIS3920" SEVERITY="20" DATACOUNT="0" TEXT="Unemployment Insurance selected requires further review." SECLVL=" "                                                                             />
+<MSG MSGID="DIS3929" SEVERITY="20" DATACOUNT="0" TEXT="Signing ceremony not completed successfully in eSign." SECLVL=" "                                                                                />
+<MSG MSGID="DIS3930" SEVERITY="20" DATACOUNT="2" TEXT="First Payment Date of &amp;1 must be at least 10 days from the current date of &amp;2." SECLVL="*BLANK" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"                                                                 />
+<MSG MSGID="DIS3931" SEVERITY="20" DATACOUNT="0" TEXT="Bundle Item Added. Press Enter to proceed" SECLVL=" "   />
+<MSG MSGID="DIS3936" SEVERITY="0" DATACOUNT="0" TEXT="Order signed successfully. Press F10 to complete order" SECLVL=""                                                                                 />
+<MSG MSGID="DIS3943" SEVERITY="20" DATACOUNT="0" TEXT="Bundle not part of the Order , Cannot be deleted" SECLVL=" "                                                                                     />
 <MSG MSGID="USR0001" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference not found." SECLVL=" "                    />
 <MSG MSGID="USR0002" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference already exists." SECLVL=" "               />
 <MSG MSGID="USR0003" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer not found." SECLVL=" "                     />
