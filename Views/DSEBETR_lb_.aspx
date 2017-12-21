@@ -1322,7 +1322,8 @@
                     //$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
                 });
 
-
+                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
 
             } else {
                 //$("#exp-date-label,#exp-date-val").hide();

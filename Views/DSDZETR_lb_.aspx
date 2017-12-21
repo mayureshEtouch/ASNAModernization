@@ -1506,7 +1506,10 @@
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode,.ro-data").show();
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+
                 generateSpecialInstructionsSection();
+                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _00('Enter', event);
             } else {
                 $(".confirmation-outer-conatiner").hide();
                 $(".OverlayPopupBackground").hide();

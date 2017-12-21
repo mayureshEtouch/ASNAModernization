@@ -1983,8 +1983,8 @@
 
             var yesbutton = $("#yes");
             var nobutton = $("#no");
-
-
+            $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
+            _00('Enter', event);
 
             yesbutton.click(function () {
                 $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
