@@ -1983,6 +1983,7 @@
 
             var yesbutton = $("#yes");
             var nobutton = $("#no");
+            $("#yes").attr('disabled', 'disabled');
             $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
             _00('Enter', event);
 

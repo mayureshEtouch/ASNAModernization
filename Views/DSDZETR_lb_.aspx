@@ -1508,6 +1508,7 @@
                 $(".confirmation-outer-conatiner").show();
 
                 generateSpecialInstructionsSection();
+                $("#yes").attr('disabled', 'disabled');
                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
             } else {

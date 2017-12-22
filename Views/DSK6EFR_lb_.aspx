@@ -868,6 +868,7 @@
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
+                $("#yes").attr('disabled', 'disabled');
                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     _00('Enter', event);
                 $("#yes").click(function (event) {
