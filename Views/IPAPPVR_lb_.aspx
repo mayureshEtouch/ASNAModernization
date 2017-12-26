@@ -74,10 +74,10 @@
         <div class="button-container">
           <div class="content-grid mdl-grid">
             <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop">
-            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+            <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Void Contract</span>
             </div>
             <div class="mdl-cell mdl-cell--1-col mdl-cell--6-col-desktop pull-right">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Complete Order</span>
             </div>
           </div>
         </div>
@@ -85,7 +85,16 @@
     </section>
     
     </main>
-</div>
+      <div class="simplePopupBackground1" style="display: none; opacity: 0.7; background: #000;position: absolute;      height: 100%;      width: 100%;      top: 0;      left: 0;z-index: 3;"></div>
+    <div id="promptErrorMsg" class="simplePopup"></div>
+     
+    <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+        <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+        <div class="button-container">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+        </div>
+    </div>
 <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             
@@ -626,7 +635,7 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-    <style>
+   <style>
             #fkeys, #showDiagnostics, #footer {
                 display: none;
             }
@@ -705,7 +714,7 @@
             });
             
             $('#next').click(function (event) {
-              _00("Enter", event);
+              _00("F10", event);
             });
 
             
@@ -713,7 +722,15 @@
             $('#exit').click(function (event) {
               _00("F3", event);
             });
+            /*if($("#CenPH__lb_RCDDTL1__lb_DR2TT").text()=='Failed'){
 
+              $("#next").attr('disabled','disabled');
+            }
+            else
+            {
+              $("#next").removeAttr("disabled");   
+
+            }*/
            
 
             if($("#__Page_PopUp .simplePopupClose").length > 0) {
@@ -724,6 +741,24 @@
               $("body").on("click", ".simplePopupClose", function() {
                  $(".simplePopupBackground1").hide();
               });
+
+              if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0){
+                  /*Pop up confirm box*/
+                  $(".OverlayPopupBackground").show();
+                  $(".confirmation-outer-conatiner").show();
+                  
+                  $("#yes").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                      //_00('Enter', event);
+                      _16(event,this,1,'Enter');
+                  });
+                  $("#no").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                      //_00('Enter', event);
+                      _16(event,this,1,'Enter');
+                  });
+
+                }
           });
         </script>
     </asp:Content>
