@@ -722,15 +722,17 @@
             $('#exit').click(function (event) {
               _00("F3", event);
             });
-            /*if($("#CenPH__lb_RCDDTL1__lb_DR2TT").text()=='Failed'){
+            if($("#CenPH__lb_RCDDTL1__lb_DR2TT").text()=='Failed'){
 
-              $("#next").attr('disabled','disabled');
+              $("#next").css("display", "none");
+              $("#exit").text("Exit");
             }
             else
             {
-              $("#next").removeAttr("disabled");   
+             $("#next").css("display", "block"); 
+             $("#exit").text("Void Contract");
 
-            }*/
+            }
            
 
             if($("#__Page_PopUp .simplePopupClose").length > 0) {
