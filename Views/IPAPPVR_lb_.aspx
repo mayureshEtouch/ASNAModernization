@@ -78,6 +78,7 @@
             </div>
             <div class="mdl-cell mdl-cell--1-col mdl-cell--6-col-desktop pull-right">
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Complete Order</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh" style="visibility: hidden;"></span>
             </div>
           </div>
         </div>
@@ -95,6 +96,8 @@
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
         </div>
     </div>
+
+     
 <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             
@@ -655,6 +658,8 @@
 
             #__Page_PopUp .DdsInlinePopUpTitle {
                 height: 0;
+                
+                
             }
 
             .simplePopup {
@@ -688,7 +693,8 @@
             }
         </style>
          <script>
-
+         
+        
           var copyToAndFrom = {
             "displayOnlyFields": {
                 //"CenPH__lb_CMDTXT1": "text",
@@ -699,14 +705,15 @@
                
             }
           }
+          
           $(document).ready(function () {
-
+           /* _00("Enter", event);*/
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
             setTimeout(function(){ 
                 $("#__Page_PopUp").removeAttr("style");
                 $("#__Page_PopUp").addClass("Page_PopUpNewClass");
-             }, 500);
+             }, 200);
 
             
             $('body').on('click', '.close-icon', function (event) {
@@ -717,7 +724,8 @@
               _00("F10", event);
             });
 
-            
+           
+
 
             $('#exit').click(function (event) {
               _00("F3", event);
@@ -731,6 +739,22 @@
             {
              $("#next").css("display", "block"); 
              $("#exit").text("Void Contract");
+
+            
+             if(localStorage.getItem("someVarName")==undefined){
+              var someVarName = 1 ;
+              localStorage.setItem("someVarName", someVarName);
+              setTimeout(function(){ 
+              _00("Enter", event);
+              }, 200);
+
+            }
+            else{
+              localStorage.removeItem("someVarName");
+              
+              
+            }
+
 
             }
            
