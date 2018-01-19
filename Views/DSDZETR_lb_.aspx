@@ -1516,10 +1516,10 @@
                 $(".OverlayPopupBackground").hide();
                 generateSpecialInstructionsSection();
             }
-            $("#yes").click(function (event) {
+          /*  $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
-            });
+            });*/
             $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode,.ro-data").hide();

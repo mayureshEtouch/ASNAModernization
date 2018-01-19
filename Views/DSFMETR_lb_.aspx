@@ -1987,13 +1987,13 @@
             $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
             _00('Enter', event);
 
-            yesbutton.click(function () {
+         /*   yesbutton.click(function () {
                 $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("Y");
                 // Show New Confirm / Review UI Table 
                 $("#datatableValue").show();
                 $(".OverlayPopupBackground").hide();
                 $("#confirmprompt").hide();
-            });
+            });*/
 
             nobutton.click(function (event) {
                 $('div#CenPH__lb_CONFIRM>input[id=CenPH__lb_CONFIRM_V_lb_CFCD]').val("N");

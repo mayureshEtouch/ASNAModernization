@@ -428,13 +428,16 @@
 					$(".modal-dialog-container").css('opacity','.8');
 					$("#confirmprompt").show();
 					$(".modal-dialog-container1").show();
+          $("#yes").attr('disabled', 'disabled');
+          $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+          _00('Enter', event);
 					
                 }
                 
-                $("#yes").click(function (event) {
+               /* $("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     _00('Enter', event);
-                });
+                });*/
                 $("#no").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                     _00('Enter', event);

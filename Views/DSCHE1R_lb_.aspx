@@ -1106,12 +1106,14 @@
                     console.log("confirm v1");
                     $(".OverlayPopupBackground").show();
                     $(".confirmation-outer-conatiner").show();
-
-                    $("#yes").click(function (event) {
+                    $("#yes").attr('disabled', 'disabled');
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _16(event,this,1,'Enter');
+                    /*$("#yes").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                         //_16(event, this, 1, 'Enter');
                        // $(".OverlayPopupBackground").show()
-                    });
+                    });*/
                     $("#no").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                         //_16(event, this, 1, 'Enter');
@@ -1185,11 +1187,13 @@
                     console.log("confirm v2");
                     $(".OverlayPopupBackground").show();
                     $(".confirmation-outer-conatiner").show();
-
-                    $("#yes").click(function (event) {
+                    $("#yes").attr('disabled', 'disabled');
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _16(event,this,1,'Enter');
+                   /* $("#yes").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                         _16(event, this, 1, 'Enter');
-                    });
+                    });*/
                     $("#no").click(function (event) {
                         $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                         _16(event, this, 1, 'Enter');

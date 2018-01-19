@@ -77,7 +77,7 @@
             <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Void Contract</span>
             </div>
             <div class="mdl-cell mdl-cell--1-col mdl-cell--6-col-desktop pull-right">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Complete Order</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">F10 = Complete Order</span>
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh" style="visibility: hidden;"></span>
             </div>
           </div>
@@ -661,21 +661,26 @@
                 
                 
             }
-
+          
+            
             .simplePopup {
                 left: 160px!important;
-                top: 90px!important;
+                top: 64px!important;
             }
+            .content_newClass {    
+                margin-bottom: -5px !important;
+                      }
 
             .modal-dialog-container {
                 width: 100%;
                 margin-top: 0;
-                margin-bottom: 5px;
+                margin-bottom: 0px !important;
+                padding-bottom: 10px;
             }
 
             .mdl-layout__content {
                 height: auto !important;
-                overflow: hidden !important;
+                overflow: hidden !important;                
             }
             #form1 {
                 margin-top: -20px;
@@ -691,9 +696,18 @@
               top: 15% !important;
               left: 60% !important;
             }
+
         </style>
          <script>
-         
+              (function () {
+            setInterval(function () {
+                ASNA.Page.PushKey('Enter');
+            },10000)
+        })();
+
+
+
+
         
           var copyToAndFrom = {
             "displayOnlyFields": {
@@ -713,6 +727,11 @@
             setTimeout(function(){ 
                 $("#__Page_PopUp").removeAttr("style");
                 $("#__Page_PopUp").addClass("Page_PopUpNewClass");
+             }, 200);
+
+            setTimeout(function(){ 
+                $("#content").removeAttr("style");
+                $("#content").addClass("content_newClass");
              }, 200);
 
             
@@ -738,22 +757,22 @@
             else
             {
              $("#next").css("display", "block"); 
-             $("#exit").text("Void Contract");
+             $("#exit").text("F3/F12 = Void Contract");
 
             
+                 
+
              if(localStorage.getItem("someVarName")==undefined){
-              var someVarName = 1 ;
+             /* var someVarName = 1 ;
               localStorage.setItem("someVarName", someVarName);
               setTimeout(function(){ 
               _00("Enter", event);
-              }, 200);
+              }, 200);*/
 
             }
             else{
-              localStorage.removeItem("someVarName");
-              
-              
-            }
+              /*localStorage.removeItem("someVarName");*/
+              }
 
 
             }
@@ -772,12 +791,14 @@
                   /*Pop up confirm box*/
                   $(".OverlayPopupBackground").show();
                   $(".confirmation-outer-conatiner").show();
-                  
-                  $("#yes").click(function (event) {
+                  $("#yes").attr('disabled', 'disabled');
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  _16(event,this,1,'Enter');
+                  /*$("#yes").click(function (event) {
                       $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                       //_00('Enter', event);
                       _16(event,this,1,'Enter');
-                  });
+                  });*/
                   $("#no").click(function (event) {
                       $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                       //_00('Enter', event);

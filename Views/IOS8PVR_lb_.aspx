@@ -621,12 +621,14 @@ width: 100% !important;
                   /*Pop up confirm box*/
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
-                
-                $("#yes").click(function (event) {
+                $("#yes").attr('disabled', 'disabled');
+                $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                _16(event,this,1,'Enter');
+                /*$("#yes").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     //_00('Enter', event);
                     _16(event,this,1,'Enter');
-                });
+                });*/
                 $("#no").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                     //_00('Enter', event);

@@ -1934,13 +1934,15 @@
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
               $("#ro-cust-ssn").text("*****"+$("#ro-cust-ssn").text().replace(/-/g, "").substr(5,9));
               $("#ssn-show").hide();
-              
+              $("#yes").attr('disabled', 'disabled');
+              $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+               _00('Enter', event);
             }
             
-            $("#yes").click(function (event) {
+           /* $("#yes").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
-            });
+            });*/
             $("#no").click(function (event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                 _00('Enter', event);

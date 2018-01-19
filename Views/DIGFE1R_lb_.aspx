@@ -1331,17 +1331,7 @@
 					 }
                 }
 
-                //Set page details
-                if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
-                  $(".confirmation-outer-conatiner").hide();
                
-                } else {
-                  $(".confirmation-outer-conatiner").show();
-				  $(".close-icon").hide();
-                  $(".order-summary,.form-data,.time-date").hide();
-                  
-                       
-                }
                 
 				 if($(".simplePopupClose").length > 0) {
                  $(".simplePopupBackground1").show();
@@ -1355,14 +1345,8 @@
                $("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceNumericOnly();
 				$("#state").text($("[id$=CenPH__lb_RCDDTL1__lb_DAQTX]").text());
 				$("#city").text($("[id$=CenPH__lb_RCDDTL1__lb_DADST]").text());
-                $("#yes").click(function (event) {
-                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-                    _00('Enter', event);
-                });
-                $("#no").click(function (event) {
-                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
-                    _00('Enter', event);
-                });
+               
+                
 
                 //Handle all button clicks
                 $('body').on('click', '#addresses', function(event) {
@@ -1385,6 +1369,27 @@
 				$("#home-phone,#cell-phone").ForceNumericOnly();
 				//$("#extension, #work-phone").ForceNumericOnly();
 				//$("#cust-zipcode").ForceNumericWithQuestionMarkOnly();
+                 //Set page details
+                if($("#CenPH__lb_CONFIRM_V_lb_CFCD").length == 0) {
+                  $(".confirmation-outer-conatiner").hide();
+               
+                } else {
+                  $(".confirmation-outer-conatiner").show();
+                  $(".close-icon").hide();
+                  $(".order-summary,.form-data,.time-date").hide();
+                  $("#yes").attr('disabled', 'disabled');
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  _00('Enter', event);
+                       
+                }
+                /* $("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });*/
+                $("#no").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                    _00('Enter', event);
+                });
             });
         </script>
     </asp:Content>

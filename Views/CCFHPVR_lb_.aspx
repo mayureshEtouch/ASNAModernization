@@ -587,13 +587,17 @@
                     $("#second-view").hide();
                     $("#first-view").show();
                 } else {
+
                     $("#second-view").show();
                     $("#first-view").hide();
-                }
-                $("#yes").click(function (event) {
+                    $("#yes").attr('disabled', 'disabled');
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                     _00('Enter', event);
-                });
+                }
+                /*$("#yes").click(function (event) {
+                    $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                    _00('Enter', event);
+                });*/
                 $("#no").click(function (event) {
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                     _00('Enter', event);

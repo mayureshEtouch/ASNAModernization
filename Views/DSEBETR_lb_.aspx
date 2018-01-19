@@ -1321,9 +1321,9 @@
                     $("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\." + i).text() == "4" ? "Cancel" : "Active");
                     //$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).css({ 'margin-right': '0', 'width': 'auto', 'margin-top': '3px' });
                 });
-                $("#yes").attr('disabled', 'disabled');
+              /*  $("#yes").attr('disabled', 'disabled');
                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-                _00('Enter', event);
+                _00('Enter', event);*/
 
             } else {
                 //$("#exp-date-label,#exp-date-val").hide();
