@@ -1055,6 +1055,10 @@ textarea {
 .help-icon {
 	background: url(../Images/icons/ic_help_red_24dp_1x-02.png) no-repeat;
 }
+.intellicheck-icon{
+ background: url(../images/icons/intellicheck-icon.png) no-repeat;
+}
+
 .close {
 	background: url(../Images/icons/ic_close_white_24dp_1x.png) no-repeat;
 	cursor: pointer;

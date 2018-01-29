@@ -7,7 +7,7 @@
 
     </asp:Content>
 
-    <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
+   <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
         <div id="Div0">
             
             <mdf:ddsfile id="CSSUDFR_lb_Control" runat="server" 
@@ -144,6 +144,7 @@
               <div class="mdl-cell mdl-cell--12-col pull-right">
                   <div class="icon-container">
                     <span class="icon-txt display-model">Display<i class="material-icons md-15 md-light display-icon"></i>     </span>    
+                    <span class="icon-txt intellicheck-model">Intelicheck <i class="material-icons md-15 md-light intellicheck-icon"></i>     </span>   
                   </div>
               </div>
           </div>
@@ -183,7 +184,7 @@
 </main>
 <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
+     <div id="Div1" style="display: none;">
             
       <%--  PG: DSP YL Appl dtls      Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -195,8 +196,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 07/28/17  Time  : 05:17:54                                                                       --%>
+      <%--  User name     : BPALANIS                                                                                         --%>
+      <%--  Date          : 01/24/18  Time  : 15:26:37                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -207,7 +208,7 @@
             Alias="#SFLCTL"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;"
-            FuncKeys="F4 'Prompt.' 04;F5 'CF05.' 05;F8 'Fold/Drop' *None , *None;PageDown 'Next page.' 27 : !82;"
+            FuncKeys="F4 'Prompt.' 04;F5 'CF05.' 05;F8 'Fold/Drop' *None;PageDown 'Next page.' 27 : !82;"
             SetOfInds="98 99 31 32 33 34 35 36 37 38 " 
             CommandKeyInd="29" 
             ClearRecords="80" 
@@ -481,7 +482,7 @@
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 195px;"
-              Text="5=Display" 
+              Text="5=Display I=Intellicheck" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
@@ -718,8 +719,9 @@
               VirtualRowCol="12,2" 
               PositionCursor="39" 
               Color="Red : 39 , Green : !39" 
+              CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
-              Values="' ' '5' " 
+              Values="' ' '5' 'I' " 
               TabIndex="1"  />
             <mdf:DdsCharField id="_lb_SFLRCD__lb_1XDXT" runat="server" style="position: absolute; left: 73px; top: 0px; width: 91px"
               CssClass="DdsCharField"
@@ -800,7 +802,7 @@
  />
           </mdf:DdsRecord >
           <mdf:DdsSubfileControl id="_lb_MSGCTL" runat="server" 
-            style="position: relative; width: 9px; height: 48px" 
+            style="position: relative; width: 693px; height: 48px" 
             Alias="#MSGCTL"
             CssClass="DdsRecord"
             ProgramQ="##PGM" 
@@ -815,10 +817,9 @@
           >&nbsp;
           <%-- =========================================================================                                         --%>
           <mdf:DdsSubfile id="_lb_MSGRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 0px; width: 9px; height: 24px" 
+            style="position: absolute; left: 0px; top: 0px; width: 693px; height: 24px" 
             Alias="#MSGRCD"
             CssClass="DdsSubfileRecord"
-            UseSubfilePaging="True" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
           <%-- =========================================================================                                         --%>
@@ -891,6 +892,11 @@
             $(".display-model").click(function (event) {
                 var row = $("#displayData tbody tr.selected");
                 selectCusotmer(row, "5", event);
+                //_00('enter', event);
+            });
+            $(".intellicheck-model").click(function (event) {
+                var row = $("#displayData tbody tr.selected");
+                selectCusotmer(row, "I", event);
                 //_00('enter', event);
             });
 

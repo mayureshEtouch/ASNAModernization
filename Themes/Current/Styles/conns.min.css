@@ -187,6 +187,7 @@ textarea{width:99%;border:1px solid #c5c5c5}
 .time-icon{background:url(../Images/icons/ic_access_time_black_24dp_1x.png) no-repeat;margin-right:3px}
 .change-icon{background:url(../Images/icons/ic_border_color_black_24dp_1x.png) no-repeat}
 .display-icon{background:url(../Images/icons/ic_description_black_24dp_1x.png) no-repeat}
+.intellicheck-icon{background: url(../images/icons/intellicheck-icon.png) no-repeat}
 .change-icon-disabled{background:url(../Images/icons/ic_border_color_black_24dp_1x-disable.png) no-repeat}
 .display-icon-disabled{background:url(../Images/icons/ic_description_black_24dp_1x-disable.png) no-repeat}
 .calender-icon{background:url(../Images/icons/calender.png) no-repeat;cursor:pointer;position:relative;right:26px;top:4px}
