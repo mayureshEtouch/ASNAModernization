@@ -219,7 +219,7 @@
 
                 $("#yes").attr('disabled', 'disabled');
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-                _16(event,this,1,'Enter');
+               _00('Enter', event);
 
               }
 

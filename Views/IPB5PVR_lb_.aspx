@@ -143,7 +143,7 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--7-col" style="margin: 0;"> <span class="form-label">ID Check Status:</span> </div>
                                     <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> 
-                    <span class="form-text" data-upgraded=",MaterialTextfield">
+                                      <span class="form-text" data-upgraded=",MaterialTextfield">
                                             <select id="CenPH__lb_RCDDTL1__lb_DFFIN_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
                                                 <option selected="selected" value=" ">Please select</option>
                                                 <option value="A">A</option>
@@ -151,12 +151,11 @@
                                                
                                             </select>
                                             <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
-                                        </span> </div>
-
-<div class="mdl-cell mdl-cell--5-col divHide1" style="margin: 0;"> 
-                    <span class="form-text" data-upgraded=",MaterialTextfield">
-                                          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1E4IN_new"></span>&nbsp;&nbsp;&nbsp; <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DE6TU_new"></span>
-                                        </span> </div>
+                                        </span>
+                                        <span class="form-text divHide1" data-upgraded=",MaterialTextfield">
+                                          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1E4IN_new"></span>&nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DE6TU_new"></span>
+                                        </span>
+                                      </div>
 
 
 
