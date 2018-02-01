@@ -98,7 +98,7 @@
               <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Previous">Previous</span>             
             </div>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right modal-button-container">
-              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
+              <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
             </div>
           </div>
         </div>
@@ -107,6 +107,14 @@
   </main>
   <div class="simplePopupBackground1" style="display:none; opacity: 0.7; background: #000;position: absolute;height: 100%; width: 100%; top: 0; left: 0;z-index: 3;"></div>
   <div id="modal" class="simplePopup"></div>
+  <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+            <i class="material-icons md-15 md-light help-icon"></i>
+            <span class="confirmation-text">Do you want to continue</span>
+            <div class="button-container">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
+            </div>
+        </div>
 </div>
 </div>
 <!-- Modified HTML code ends here -->
@@ -847,8 +855,8 @@
           $(document).ready(function () {
               copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
-              $('#exit').click(function (event) {
-                _00("F3", event);
+              $('#next').click(function (event) {
+                _00("Enter", event);
               });
               $('#Previous').click(function (event) {
                 _00("F12", event);
@@ -857,6 +865,26 @@
               $('.close-icon').click(function (event) {
               _00("F12", event);
             });
+
+              if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                  /*Pop up confirm box*/
+                  $(".OverlayPopupBackground").show();
+                  $(".confirmation-outer-conatiner").show();
+                  $("#yes").attr('disabled', 'disabled');
+                  setTimeout(function(){
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  _00('Enter', event);
+                  }, 1000);
+                /*  $("#yes").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
+                      _16(event, this, 1, 'Enter');
+                  });*/
+                  $("#no").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_VZCFCD").val("N");
+                      _16(event, this, 1, 'Enter');
+                  });
+                  $("#confirmmsg").parent().parent().hide();
+              }
               
           });
         </script>
