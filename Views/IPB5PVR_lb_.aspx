@@ -180,7 +180,7 @@
                         <!-- content-grid mdl-grid ends here -->
 
             <!-- content-grid mdl-grid starts here -->
-                        <div class="content-grid mdl-grid" style="padding:0">
+                        <div class="content-grid mdl-grid DivReson" style="padding:0">
                             <!-- 4 col starts here -->
                             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                 <div class="content-grid mdl-grid">
@@ -206,7 +206,7 @@
             <!-- content-grid mdl-grid starts here -->
               <div class="content-grid mdl-grid" style="padding:0"> 
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet DivScanTimeStamp">
                 <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Scan Timestamp:</span> </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1_V1WDDT_new"></span>&nbsp;&nbsp;&nbsp;<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1D4TM_new"></span> </div>
@@ -214,7 +214,7 @@
               </div>
               <!-- 4 col ends here --> 
               <!-- 4 col starts here -->
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet DivIntellCustomer">
                 <div class="content-grid mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Intellicheck Customer:</span> </div>
                 <div class="mdl-cell mdl-cell--5-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1FHTU_new"></span> </div>
@@ -225,7 +225,7 @@
               <!-- content-grid mdl-grid ends here --> 
             
             <!-- content-grid mdl-grid starts here -->
-              <div class="content-grid mdl-grid" style="padding:0"> 
+              <div class="content-grid mdl-grid DivIntellNumber" style="padding:0"> 
               
                <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
@@ -1093,7 +1093,44 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
           $('body').on('click', '#prompt', function (event) {
               _00('F4', event);
             });
-        
+        if($("#CenPH_DdsConstant12").length > 0){
+            $(".DivReson").show();
+        }
+        else{
+            $(".DivReson").hide();
+        }
+
+        if($("#CenPH_DdsConstant10").length > 0){
+            $(".idcheckStatusDiv").show();
+        }
+        else{
+            $(".idcheckStatusDiv").hide();
+        }
+
+
+        if($("#CenPH_DdsConstant14").length > 0){
+            $(".DivScanTimeStamp").show();
+        }
+        else{
+            $(".DivScanTimeStamp").hide();
+        }
+
+        if($("#CenPH_DdsConstant15").length > 0){
+            
+            $(".DivIntellCustomer").show();
+        }
+        else{
+            
+            $(".DivIntellCustomer").hide();
+        }
+
+        if($("#CenPH_DdsConstant16").length > 0){
+            $(".DivIntellNumber").show();
+        }
+        else{
+            $(".DivIntellNumber").hide();
+        }
+
 
 
            
