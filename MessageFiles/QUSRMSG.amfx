@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 12/19/2017 at 12:53 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
+<!-- Message File DISQ1OBJ/QUSRMSG Migrated on 2/1/2018 at 12:24 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -2592,6 +2592,7 @@
 <MSG MSGID="DIS3176" SEVERITY="20" DATACOUNT="0" TEXT="Error in Paper print" SECLVL=" "                        />
 <MSG MSGID="DIS3177" SEVERITY="20" DATACOUNT="0" TEXT="Error in DocuSign Interface. Please Paper print." SECLVL=" "                                                                                     />
 <MSG MSGID="DIS3192" SEVERITY="20" DATACOUNT="0" TEXT="eSign process already initiated, please check in DocuSign." SECLVL=" "                                                                           />
+<MSG MSGID="DIS3196" SEVERITY="20" DATACOUNT="0" TEXT="eSign successful" SECLVL=""                             />
 <MSG MSGID="DIS3197" SEVERITY="20" DATACOUNT="0" TEXT="After Paper print, eSign cannot be initiated" SECLVL=" "                                                                                         />
 <MSG MSGID="DIS3230" SEVERITY="20" DATACOUNT="0" TEXT="IN: Bundle not found." SECLVL=" "                       />
 <MSG MSGID="DIS3231" SEVERITY="20" DATACOUNT="0" TEXT="IN: Bundle already exists." SECLVL=" "                  />
@@ -2851,15 +2852,50 @@
 <MSG MSGID="DIS3884" SEVERITY="20" DATACOUNT="0" TEXT="Order released for edit" SECLVL=""                      />
 <MSG MSGID="DIS3885" SEVERITY="20" DATACOUNT="0" TEXT="Order not locked" SECLVL=""                             />
 <MSG MSGID="DIS3888" SEVERITY="20" DATACOUNT="1" TEXT="Option not allowed as errors exist." SECLVL="" TYPE1="*CHAR" LEN1="1" DEC1="0"                                                                   />
-<MSG MSGID="DIS3913" SEVERITY="20" DATACOUNT="3" TEXT="Invoice &amp;2 Greater that Lease Approved &amp;3" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="9" DEC2="2" TYPE3="*DEC" LEN3="9" DEC3="2"                                                                               />
+<MSG MSGID="DIS3899" SEVERITY="20" DATACOUNT="0" TEXT="CO: Vendor Dly Accr Sales not found." SECLVL=" "        />
+<MSG MSGID="DIS3900" SEVERITY="20" DATACOUNT="0" TEXT="CO: Vendor Dly Accr Sales already exists." SECLVL=" "   />
+<MSG MSGID="DIS3901" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Sls Hist-Dtl not found." SECLVL=" "        />
+<MSG MSGID="DIS3902" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Sls Hist-Dtl already exists." SECLVL=" "   />
+<MSG MSGID="DIS3903" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Sls Summ not found." SECLVL=" "            />
+<MSG MSGID="DIS3904" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Sls Summ already exists." SECLVL=" "       />
+<MSG MSGID="DIS3905" SEVERITY="20" DATACOUNT="0" TEXT="CO: Vendor Dly Accr Purch not found." SECLVL=" "        />
+<MSG MSGID="DIS3906" SEVERITY="20" DATACOUNT="0" TEXT="CO: Vendor Dly Accr Purch already exists." SECLVL=" "   />
+<MSG MSGID="DIS3907" SEVERITY="20" DATACOUNT="0" TEXT="CO: Vendor Net Down Pct not found." SECLVL=" "          />
+<MSG MSGID="DIS3908" SEVERITY="20" DATACOUNT="0" TEXT="CO: Vendor Net Down Pct already exists." SECLVL=" "     />
+<MSG MSGID="DIS3909" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Pur Summ not found." SECLVL=" "            />
+<MSG MSGID="DIS3910" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Pur Summ already exists." SECLVL=" "       />
+<MSG MSGID="DIS3911" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Pur Hist-Dtl not found." SECLVL=" "        />
+<MSG MSGID="DIS3912" SEVERITY="20" DATACOUNT="0" TEXT="CO: Dly Accr Pur Hist-Dtl already exists." SECLVL=" "   />
+<MSG MSGID="DIS3913" SEVERITY="20" DATACOUNT="3" TEXT="Invoice amount $&amp;2 is greater than approved lease amount $&amp;3" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="9" DEC2="2" TYPE3="*DEC" LEN3="9" DEC3="2"                                                            />
 <MSG MSGID="DIS3916" SEVERITY="20" DATACOUNT="0" TEXT="Wet Signed Contract requires further review." SECLVL=" "                                                                                         />
 <MSG MSGID="DIS3917" SEVERITY="20" DATACOUNT="2" TEXT="First Payment Date is changed from &amp;1 to &amp;2." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"               />
 <MSG MSGID="DIS3920" SEVERITY="20" DATACOUNT="0" TEXT="Unemployment Insurance selected requires further review." SECLVL=" "                                                                             />
 <MSG MSGID="DIS3929" SEVERITY="20" DATACOUNT="0" TEXT="Signing ceremony not completed successfully in eSign." SECLVL=" "                                                                                />
 <MSG MSGID="DIS3930" SEVERITY="20" DATACOUNT="2" TEXT="First Payment Date of &amp;1 must be at least 10 days from the current date of &amp;2." SECLVL="*BLANK" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0"                                                                 />
 <MSG MSGID="DIS3931" SEVERITY="20" DATACOUNT="0" TEXT="Bundle Item Added. Press Enter to proceed" SECLVL=" "   />
+<MSG MSGID="DIS3932" SEVERITY="20" DATACOUNT="0" TEXT="OE: Worksheet Item Pckage not found." SECLVL=" "        />
+<MSG MSGID="DIS3933" SEVERITY="20" DATACOUNT="0" TEXT="OE: Worksheet Item Pckage already exists." SECLVL=" "   />
+<MSG MSGID="DIS3934" SEVERITY="20" DATACOUNT="0" TEXT="OE: Order Detail Package not found." SECLVL=" "         />
+<MSG MSGID="DIS3935" SEVERITY="20" DATACOUNT="0" TEXT="OE: Order Detail Package already exists." SECLVL=" "    />
 <MSG MSGID="DIS3936" SEVERITY="0" DATACOUNT="0" TEXT="Order signed successfully. Press F10 to complete order" SECLVL=""                                                                                 />
-<MSG MSGID="DIS3943" SEVERITY="20" DATACOUNT="0" TEXT="Bundle not part of the Order , Cannot be deleted" SECLVL=" "                                                                                     />
+<MSG MSGID="DIS3937" SEVERITY="20" DATACOUNT="0" TEXT="OE: Intellicheck Request not found." SECLVL=" "         />
+<MSG MSGID="DIS3938" SEVERITY="20" DATACOUNT="0" TEXT="OE: Intellicheck Request already exists." SECLVL=" "    />
+<MSG MSGID="DIS3939" SEVERITY="20" DATACOUNT="0" TEXT="OE: Intellicheck ID not found." SECLVL=" "              />
+<MSG MSGID="DIS3940" SEVERITY="20" DATACOUNT="0" TEXT="OE: Intellicheck ID already exists." SECLVL=" "         />
+<MSG MSGID="DIS3941" SEVERITY="20" DATACOUNT="0" TEXT="OE: Intellicheck Trans not found." SECLVL=" "           />
+<MSG MSGID="DIS3942" SEVERITY="20" DATACOUNT="0" TEXT="OE: Intellicheck Trans already exists." SECLVL=" "      />
+<MSG MSGID="DIS3943" SEVERITY="20" DATACOUNT="0" TEXT="Item not part of the Order , Cannot be deleted" SECLVL=" "                                                                                       />
+<MSG MSGID="DIS3945" SEVERITY="20" DATACOUNT="0" TEXT="ID Expired, select different ID and ENTER to initiate next scan" SECLVL=" "                                                                      />
+<MSG MSGID="DIS3946" SEVERITY="20" DATACOUNT="0" TEXT="System failure, manually validate ID and select status &amp; reason code" SECLVL=" "                                                             />
+<MSG MSGID="DIS3948" SEVERITY="20" DATACOUNT="2" TEXT="Feature ID not turned ON for the location &amp;1/&amp;2." SECLVL="" TYPE1="*CHAR" LEN1="3" DEC1="0" TYPE2="*CHAR" LEN2="3" DEC2="0"              />
+<MSG MSGID="DIS3949" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck ID scan failed, cannot complete order" SECLVL=" "                                                                                   />
+<MSG MSGID="DIS3950" SEVERITY="20" DATACOUNT="0" TEXT="ID already Validated &amp; Expired. Select different ID type and press ENTER" SECLVL=" "                                                         />
+<MSG MSGID="DIS3954" SEVERITY="20" DATACOUNT="0" TEXT="Press ENTER to proceed" SECLVL=" "                      />
+<MSG MSGID="DIS3955" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck validation in progress" SECLVL=" "         />
+<MSG MSGID="DIS3956" SEVERITY="20" DATACOUNT="0" TEXT="Prompt on 'ID Type' field to select ID and press ENTER to initiate scan" SECLVL=" "                                                              />
+<MSG MSGID="DIS3960" SEVERITY="20" DATACOUNT="0" TEXT="Previous request timed-out, press ENTER to reinitiate new scan request" SECLVL=" "                                                               />
+<MSG MSGID="DIS3961" SEVERITY="20" DATACOUNT="0" TEXT="Previous day request abandoned, press ENTER to reinitiate new scan request" SECLVL=" "                                                           />
+<MSG MSGID="DIS3962" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck scan already queued, login to Uplist to scan ID" SECLVL=" "                                                                         />
 <MSG MSGID="USR0001" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference not found." SECLVL=" "                    />
 <MSG MSGID="USR0002" SEVERITY="20" DATACOUNT="0" TEXT="##: Reference already exists." SECLVL=" "               />
 <MSG MSGID="USR0003" SEVERITY="20" DATACOUNT="0" TEXT="CU: Customer not found." SECLVL=" "                     />
@@ -2914,5 +2950,8 @@
 <MSG MSGID="USR0963" SEVERITY="20" DATACOUNT="0" TEXT="Update completed." SECLVL=" "                           />
 <MSG MSGID="USR0964" SEVERITY="20" DATACOUNT="3" TEXT="Member &amp;3 file &amp;1 in library &amp;2 not found." SECLVL=" " TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                     />
 <MSG MSGID="USR0965" SEVERITY="20" DATACOUNT="3" TEXT="Display Physical File Member" SECLVL="DSPPFM FILE(&amp;2/&amp;1) MBR(&amp;3)" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                          />
+<MSG MSGID="USR1093" SEVERITY="20" DATACOUNT="1" TEXT="Intellicheck applicable only for Approved applications" SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0"                                                />
+<MSG MSGID="USR1095" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck applicable only for approved applications" SECLVL=" "                                                                               />
+<MSG MSGID="USR1098" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck feature not active for this location" SECLVL=" "                                                                                    />
 </messages>
 </LegacyMsgFileContents>
