@@ -1093,7 +1093,7 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
           $('body').on('click', '#prompt', function (event) {
               _00('F4', event);
             });
-        if($("#CenPH_DdsConstant12").length > 0){
+        /*if($("#CenPH_DdsConstant12").length > 0){
             $(".DivReson").show();
         }
         else{
@@ -1105,30 +1105,42 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
         }
         else{
             $(".idcheckStatusDiv").hide();
-        }
+        }*/
 
 
         if($("#CenPH_DdsConstant14").length > 0){
             $(".DivScanTimeStamp").show();
+            $(".idcheckStatusDiv").show();
+            $(".DivReson").show();
         }
         else{
             $(".DivScanTimeStamp").hide();
+            $(".idcheckStatusDiv").hide();
+            $(".DivReson").hide();
         }
 
         if($("#CenPH_DdsConstant15").length > 0){
             
             $(".DivIntellCustomer").show();
+            $(".idcheckStatusDiv").show();
+            $(".DivReson").show();
         }
         else{
             
             $(".DivIntellCustomer").hide();
+             $(".idcheckStatusDiv").hide();
+            $(".DivReson").hide();
         }
 
         if($("#CenPH_DdsConstant16").length > 0){
             $(".DivIntellNumber").show();
+             $(".idcheckStatusDiv").show();
+            $(".DivReson").show();
         }
         else{
             $(".DivIntellNumber").hide();
+             $(".idcheckStatusDiv").hide();
+            $(".DivReson").hide();
         }
 
 
