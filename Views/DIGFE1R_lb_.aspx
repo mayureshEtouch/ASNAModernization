@@ -366,7 +366,7 @@
 	
     <!-- Modified HTML code ends here -->
 </body>
-        <div id="Div1" style="display:block;">
+        <div id="Div1" style="display:none;">
             
       <%--  CR: ER1 Customer/Maint(B) Edit record(1 screen)                                                                  --%>
       <%--  CRTDSPF                                                                                                          --%>
