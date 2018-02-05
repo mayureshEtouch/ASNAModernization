@@ -146,8 +146,8 @@
                                       <span class="form-text" data-upgraded=",MaterialTextfield">
                                             <select id="CenPH__lb_RCDDTL1__lb_DFFIN_new" name="CenPH_1FLST" style="width: 150px; padding: 0 2px;" data-tb-index="1">
                                                 <option selected="selected" value=" ">Please select</option>
-                                                <option value="A">A</option>
-                                                <option value="F">F</option>
+                                                <option value="A">Approved</option>
+                                                <option value="F">Failed</option>
                                                
                                             </select>
                                             <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
@@ -1117,38 +1117,50 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
         }*/
 
 
+
+        if($("#CenPH_DdsConstant10").length > 0){
+            
+            $(".idcheckStatusDiv").show();
+           
+        }
+        else{
+            
+            $(".idcheckStatusDiv").hide();
+            
+        }
+
         if($("#CenPH_DdsConstant14").length > 0){
             $(".DivScanTimeStamp").show();
-            $(".idcheckStatusDiv").show();
+           
             $(".DivReson").show();
         }
         else{
             $(".DivScanTimeStamp").hide();
-            $(".idcheckStatusDiv").hide();
+            
             $(".DivReson").hide();
         }
 
         if($("#CenPH_DdsConstant15").length > 0){
             
             $(".DivIntellCustomer").show();
-            $(".idcheckStatusDiv").show();
+            
             $(".DivReson").show();
         }
         else{
             
             $(".DivIntellCustomer").hide();
-             $(".idcheckStatusDiv").hide();
+             
             $(".DivReson").hide();
         }
 
         if($("#CenPH_DdsConstant16").length > 0){
             $(".DivIntellNumber").show();
-             $(".idcheckStatusDiv").show();
+             
             $(".DivReson").show();
         }
         else{
             $(".DivIntellNumber").hide();
-             $(".idcheckStatusDiv").hide();
+             
             $(".DivReson").hide();
         }
         if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
