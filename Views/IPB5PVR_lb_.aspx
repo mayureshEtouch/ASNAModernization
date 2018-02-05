@@ -191,7 +191,7 @@
                                                 <option selected="selected" value=" ">Please select</option>
                                                 <option value="Black Light verified">Black Light verified</option>
                                                 <option value="Manual Intellicheck">Manual Intellicheck</option>
-                                                <option value="Fail-Invalid/No ID">Fail-Invalid/No ID</option>
+                                                <!-- <option value="Fail-Invalid/No ID">Fail-Invalid/No ID</option> -->
                                                
                                             </select>
                                             <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
@@ -247,9 +247,9 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="cancel">Previous</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                                 </div>
-                               <!--  <div class="mdl-cell mdl-cell--5-col-desktop pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">next</span>
-                                </div> -->
+                                <div class="mdl-cell mdl-cell--5-col-desktop pull-right">
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" event-data="Enter">next</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,16 @@
         </section>
 
     </main>
-    <div id="modal1" class="simplePopup"></div>
+    <!-- <div id="modal1" class="simplePopup"></div> -->
+     <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
+              <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
+              <div class="button-container">
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="yes">yes</span>
+                  <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</span>
+              </div>
+          </div>
+            
+    <div id="error" style="color: red;margin-left:20px; font-weight: bold;" class="mdl-cell mdl-cell--6-col"></div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             
@@ -1142,9 +1151,28 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
              $(".idcheckStatusDiv").hide();
             $(".DivReson").hide();
         }
+        if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
+                  /*Pop up confirm box*/
+                  $(".OverlayPopupBackground").show();
+                  $(".confirmation-outer-conatiner").show();
+                 /* $("#yes").attr('disabled', 'disabled');
+                  $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                  _00('Enter', event);*/
+                  $("#yes").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+                      _00('Enter', event);  
+                  });
+                  $("#no").click(function (event) {
+                      $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+                      _00('Enter', event);
+                  });
+                  $("#confirmmsg").parent().parent().hide();
+              }
 
-
-
+              if($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text()!=""){
+                $(".simplePopupBackground1").hide();
+                $("#error").text($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text());
+              }
            
 
 

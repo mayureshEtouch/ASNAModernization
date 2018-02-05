@@ -23,7 +23,7 @@
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
     <!-- Modified HTML code starts here -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header modal-dialog-container">
+<div class="modal-dialog-container">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row"> 
             <!-- Title --> 
