@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSORPVR_lb_.aspx.cs" Inherits="Conns.CSORPVR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/23/2017 at 11:28 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
@@ -7,7 +7,7 @@
 
     </asp:Content>
 
-    <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
+   <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
         <div id="Div0">
             
             <mdf:ddsfile id="CSORPVR_lb_Control" runat="server" 
@@ -381,7 +381,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>
-        <div id="Div1" style="display:none;">
+        <div id="Div1">
             
       <%--  PG: PMT for Credit Extn   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -502,7 +502,6 @@
           <%--  Sts: Preferred Language                                                                                          --%>
           <%--  Sts: Preferred Language                                                                                          --%>
           <%--  Condition: Valid Values                                                                                          --%>
-          <%--  # Txt: 10                                                                                                        --%>
           <%--  *CON (Screen constant)                                                                                           --%>
           <%--  Cde: Bank Routing Nbr                                                                                            --%>
           <%--  Cde: Bank Routing Nbr                                                                                            --%>

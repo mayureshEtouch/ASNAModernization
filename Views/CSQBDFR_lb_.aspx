@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CSQBDFR_lb_.aspx.cs" Inherits="Conns.CSQBDFR_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 9/1/2017 at 11:03 AM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
@@ -136,7 +136,7 @@
         </main>
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-         <div id="Div1" style="display:none;">
+           <div id="Div1">
             
       <%--  PG: DSP All Appl - Store  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

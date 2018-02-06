@@ -1100,6 +1100,7 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
             });
 
           $('body').on('click', '#prompt', function (event) {
+                _09('#1FAIN','12,28','#RCDDTL1');
               _00('F4', event);
             });
         /*if($("#CenPH_DdsConstant12").length > 0){
