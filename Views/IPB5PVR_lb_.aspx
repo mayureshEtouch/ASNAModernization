@@ -240,6 +240,7 @@
             
 
 
+    <div id="error" style="color: red;margin-left:20px; font-weight: bold;" class="mdl-cell mdl-cell--6-col"></div>
 
                         <div class="button-container">
                             <div class="content-grid mdl-grid">
@@ -253,8 +254,10 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </section>
 
     </main>
@@ -267,7 +270,6 @@
               </div>
           </div>
             
-    <div id="error" style="color: red;margin-left:20px; font-weight: bold;" class="mdl-cell mdl-cell--6-col"></div>
     <!-- Modified HTML code ends here -->
         <div id="Div1" style="display: none;">
             
@@ -1056,13 +1058,13 @@
            if($("#CenPH__lb_RCDDTL1__lb_1FAIN").is('input'))
            {
 
-$("#CenPH__lb_RCDDTL1__lb_1FAIN_text").hide();
-$("#CenPH__lb_RCDDTL1__lb_1FAIN_new").show();
+            $("#CenPH__lb_RCDDTL1__lb_1FAIN_text").hide();
+            $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").show();
            }
            else
            {
-$("#CenPH__lb_RCDDTL1__lb_1FAIN_text").show();
-$("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
+            $("#CenPH__lb_RCDDTL1__lb_1FAIN_text").show();
+            $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
            }
          if($('#CenPH__lb_RCDDTL1__lb_DFFIN').length ){
               $("#CenPH__lb_RCDDTL1__lb_DFFIN_new").show();
@@ -1100,7 +1102,7 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
             });
 
           $('body').on('click', '#prompt', function (event) {
-                _09('#1FAIN','12,28','#RCDDTL1');
+            _09('#1FAIN','12,28','#RCDDTL1');
               _00('F4', event);
             });
         /*if($("#CenPH_DdsConstant12").length > 0){
@@ -1186,9 +1188,15 @@ $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").hide();
                 $(".simplePopupBackground1").hide();
                 $("#error").text($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text());
               }
-           
 
 
         });
       </script>
+      <style type="text/css">
+           @media only screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+            .table-data-wrapper {
+                margin-bottom: 50px !important; 
+            }
+        }
+      </style>
     </asp:Content>
