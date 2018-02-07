@@ -136,7 +136,7 @@
         </main>
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-           <div id="Div1">
+           <div id="Div1" style="display: none;">
             
       <%--  PG: DSP All Appl - Store  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>

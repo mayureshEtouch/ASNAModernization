@@ -381,7 +381,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
             </div>
         </div>
-        <div id="Div1">
+        <div id="Div1" style="display: none;">
             
       <%--  PG: PMT for Credit Extn   Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
