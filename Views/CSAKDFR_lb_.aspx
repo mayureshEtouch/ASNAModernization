@@ -46,17 +46,17 @@
                 <div class="table-container filter-search-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
-                        <div class="mdl-cell mdl-cell--10-col search-container">
+                        <div class="mdl-cell mdl-cell--10-col mdl-cell--6-col-tablet search-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--2-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Application</span> </div>
+                                <div class="mdl-cell mdl-cell--1-col lblWidth90"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Application</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2ITNB_new" class="mdl-textfield__input" data-tb-index="1" maxlength="9">
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col lbl-width140"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span> </div>
-                                <div class="mdl-cell mdl-cell--3-col" style="margin-top: 12px;">
+                                <div class="mdl-cell mdl-cell--2-col lblWidth80"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Location</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col lblWidth170" style="margin-top: 12px;">
                                     <span class="summary-table-text" style="margin-left: -5px;" id="CenPH__lb_SFLCTL__lb_2AACD_new"></span> 
                                 </div>
-                                <div class="mdl-cell mdl-cell--2-col lbl-width140"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee Number</span> </div>
+                                <div class="mdl-cell mdl-cell--2-col lblWidth120"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee Number</span> </div>
                                 <div class="mdl-cell mdl-cell--1-col">
                                     <input type="text"  id="CenPH__lb_SFLCTL__lb_2AJCD_new" class="mdl-textfield__input" data-tb-index="3" maxlength="5">
                                 </div>                                
@@ -1063,4 +1063,23 @@
 
         });
       </script>
+      <style type="text/css">        
+        @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .lblWidth90 {
+      width: 90px;
+    }
+    .lblWidth120 {
+      width: 120px;
+    }
+    .lblWidth80 {
+      width: 80px;
+    }
+    .lblWidth170 {
+      width: 170px;
+    }
+  }
+      </style>
     </asp:Content>

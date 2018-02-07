@@ -662,7 +662,7 @@
             $(".OverlayPopupBackground").show();
             $(".confirmation-outer-conatiner").show();
             $("#yes").attr('disabled', 'disabled');
-            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+            $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
             _00('Enter', event);
            /* $("#yes").click(function (event) {
              $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
