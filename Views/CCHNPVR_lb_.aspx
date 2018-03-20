@@ -230,7 +230,7 @@
                                     <div class="mdl-cell mdl-cell--4-col" style="">
                                         <span data-upgraded=",MaterialTextfield" class="form-label" id="lbl_with_payment_of">With Payment of
                                         </span><br>
-										<span data-upgraded=",MaterialTextfield" class="form-label" id="CenPH__lb_RCDDTL1__lb_DTX30_new" style="color:red">
+										<span data-upgraded=",MaterialTextfield" class="form-label blink" id="CenPH__lb_RCDDTL1__lb_DTX30_new" style="color:red">
                                         </span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--2-col">
@@ -376,14 +376,20 @@
         .table-data-content-container .mdl-data-table td {
             padding: 3px 10px;
         }
+		@-webkit-keyframes blinker {
+		from {opacity: 1.0;}
+		to {opacity: 0.0;}
+		}
+		.blink{
+		text-decoration: blink;
+		-webkit-animation-name: blinker;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-timing-function:ease-in-out;
+		-webkit-animation-direction: alternate;
+		}
     </style>
     <script type="text/javascript">
-	(function () {
-            setInterval(function () {
-                ASNA.Page.PushKey('Enter');
-            },10000)
-        })();
-	
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH_DdsConstant17": "date",
