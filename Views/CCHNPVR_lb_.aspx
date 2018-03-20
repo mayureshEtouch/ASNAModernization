@@ -378,6 +378,12 @@
         }
     </style>
     <script type="text/javascript">
+	(function () {
+            setInterval(function () {
+                ASNA.Page.PushKey('Enter');
+            },10000)
+        })();
+	
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH_DdsConstant17": "date",
