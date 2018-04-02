@@ -1089,7 +1089,7 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").show();
 $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new").show();
 $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
            }
-         if($('#CenPH__lb_RCDDTL1__lb_DFFIN').length ){
+         if($('#CenPH__lb_RCDDTL1__lb_DFFIN').length > 0){
               $("#CenPH__lb_RCDDTL1__lb_DFFIN_new").show();
               $(".divHide1").hide();
          }
@@ -1105,15 +1105,15 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
               }
          }
 
-         if($('#CenPH__lb_RCDDTL1__lb_DGTNA').length ){
+         if($('#CenPH__lb_RCDDTL1__lb_DGTNA').length > 0){
           $("#CenPH__lb_RCDDTL1__lb_DGTNA_new").show();
           
          }
          else{
               $("#CenPH__lb_RCDDTL1__lb_DGTNA_new").hide();
          }
-         if($('#CenPH_DdsConstant10').length >0){
-          $(".idcheckStatusDiv").show();
+         if($('#CenPH_DdsConstant11').length >0){
+          $(".idcheckStatusDiv").hide();
          }
          else
          {
@@ -1128,19 +1128,14 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
             _09('#1FAIN','12,28','#RCDDTL1');
               _00('F4', event);
             });
-        /*if($("#CenPH_DdsConstant12").length > 0){
-            $(".DivReson").show();
-        }
-        else{
-            $(".DivReson").hide();
-        }
+        /*
 
         if($("#CenPH_DdsConstant10").length > 0){
             $(".idcheckStatusDiv").show();
         }
         else{
             $(".idcheckStatusDiv").hide();
-        }*/
+        }
 
 
 
@@ -1153,7 +1148,7 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
             
             $(".idcheckStatusDiv").hide();
             
-        }
+        }*/
 
         if($("#CenPH_DdsConstant14").length > 0){
             $(".DivScanTimeStamp").show();
@@ -1189,6 +1184,14 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
              
             $(".DivReson").hide();
         }
+		
+		if($("#CenPH_DdsConstant12").length > 0){
+            $(".DivReson").show();
+        }
+        else{
+            $(".DivReson").hide();
+        }
+		
         if ($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
                   /*Pop up confirm box*/
                   $(".OverlayPopupBackground").show();

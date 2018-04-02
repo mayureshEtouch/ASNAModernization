@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- Message File DISPOBJ/QUSRMSG Migrated on 2/2/2018 at 3:09 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
+<!-- Message File DISPOBJ/QUSRMSG Migrated on 3/30/2018 at 7:00 PM by ASNA Monarch(R) Wings version 8.0.40.0 -->
 <LegacyMsgFileContents version="1.0">
 <messages>
 <MSG MSGID="DIS0029" SEVERITY="20" DATACOUNT="0" TEXT="Dlvry Zone Not Found" SECLVL=" "                        />
@@ -3825,12 +3825,31 @@
 <MSG MSGID="DIS3949" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck ID scan failed, cannot complete order." SECLVL=" "                                                                                  />
 <MSG MSGID="DIS3953" SEVERITY="20" DATACOUNT="2" TEXT="Simple Automation process not turned ON for the location &amp;1/&amp;2." SECLVL="" TYPE1="*CHAR" LEN1="3" DEC1="0" TYPE2="*CHAR" LEN2="3" DEC2="0"                                                                                        />
 <MSG MSGID="DIS3954" SEVERITY="20" DATACOUNT="0" TEXT="Press ENTER to proceed." SECLVL=" "                     />
-<MSG MSGID="DIS3955" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck validation in progress." SECLVL=" "        />
-<MSG MSGID="DIS3956" SEVERITY="20" DATACOUNT="0" TEXT="Prompt on 'ID Type' field to select ID and press ENTER to initiate scan." SECLVL=" "                                                             />
+<MSG MSGID="DIS3955" SEVERITY="20" DATACOUNT="0" TEXT="Scan initiated, complete scan in Uplist, then press ENTER on this screen." SECLVL=" "                                                            />
+<MSG MSGID="DIS3956" SEVERITY="20" DATACOUNT="0" TEXT="Prompt to select Emp ID,then ID Type and press ENTER to initiate scan." SECLVL=" "                                                               />
 <MSG MSGID="DIS3958" SEVERITY="20" DATACOUNT="3" TEXT="Invoice &amp;1 is &amp;3 AOK'd on &amp;2." SECLVL="" TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*CHAR" LEN2="10" DEC2="0" TYPE3="*CHAR" LEN3="10" DEC3="0"                                                                                     />
 <MSG MSGID="DIS3960" SEVERITY="20" DATACOUNT="0" TEXT="Previous request timed-out, press ENTER to reinitiate new scan request." SECLVL=" "                                                              />
 <MSG MSGID="DIS3961" SEVERITY="20" DATACOUNT="0" TEXT="Previous day request abandoned, press ENTER to reinitiate new scan request." SECLVL=" "                                                          />
 <MSG MSGID="DIS3962" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck scan already queued, login to Uplist to scan ID." SECLVL=" "                                                                        />
+<MSG MSGID="DIS3967" SEVERITY="20" DATACOUNT="1" TEXT="Invalid ID Type. Press F4 on ID Type field to select valid ID." SECLVL=" " TYPE1="*CHAR" LEN1="2" DEC1="0"                                       />
+<MSG MSGID="DIS3970" SEVERITY="20" DATACOUNT="1" TEXT="Emp ID not valid for Intellicheck scan, enter different Emp ID." SECLVL=" " TYPE1="*CHAR" LEN1="5" DEC1="0"                                      />
+<MSG MSGID="DIS3974" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck bypassed, manually validate ID and select status &amp; reason code." SECLVL=" "                                                     />
+<MSG MSGID="DIS3977" SEVERITY="20" DATACOUNT="1" TEXT="Emp ID is required to complete the request." SECLVL=" " TYPE1="*CHAR" LEN1="5" DEC1="0"                                                          />
+<MSG MSGID="DIS3978" SEVERITY="20" DATACOUNT="1" TEXT="Invalid Emp ID." SECLVL=" " TYPE1="*CHAR" LEN1="5" DEC1="0"                                                                                      />
+<MSG MSGID="DIS3979" SEVERITY="20" DATACOUNT="1" TEXT="Associate not enabled in eSign system." SECLVL=" " TYPE1="*CHAR" LEN1="5" DEC1="0"                                                               />
+<MSG MSGID="DIS3984" SEVERITY="20" DATACOUNT="1" TEXT="No scan request initiated for this application." SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0"                                                       />
+<MSG MSGID="DIS3985" SEVERITY="20" DATACOUNT="2" TEXT="Scan request already completed by Emp ID &amp;2." SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*CHAR" LEN2="5" DEC2="0"                      />
+<MSG MSGID="DIS3986" SEVERITY="20" DATACOUNT="2" TEXT="Scan response received for Emp ID &amp;2. Press ENTER on Employee's Screen." SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*CHAR" LEN2="5" DEC2="0"                                                                                    />
+<MSG MSGID="DIS3987" SEVERITY="20" DATACOUNT="2" TEXT="No scan request pending for application. Press ENTER on Employee's screen." SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*CHAR" LEN2="5" DEC2="0"                                                                                     />
+<MSG MSGID="DIS3988" SEVERITY="20" DATACOUNT="0" TEXT="Intellicheck pending request found, enter Reason &amp; press F10 to Override." SECLVL=" "                                                        />
+<MSG MSGID="DIS3989" SEVERITY="20" DATACOUNT="0" TEXT="Press F10 to Override." SECLVL=" "                      />
+<MSG MSGID="DIS3991" SEVERITY="20" DATACOUNT="1" TEXT="Exception occurred, contact support_esign1@conns.com" SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0"                                                  />
+<MSG MSGID="DIS3992" SEVERITY="20" DATACOUNT="2" TEXT="Override successful,proceed with manual verification for Emp ID &amp;2." SECLVL=" " TYPE1="*DEC" LEN1="9" DEC1="0" TYPE2="*CHAR" LEN2="5" DEC2="0"                                                                                        />
+<MSG MSGID="DIS3993" SEVERITY="20" DATACOUNT="5" TEXT="Invalid &amp;1 phone number" SECLVL="" TYPE1="*CHAR" LEN1="10" DEC1="0" TYPE2="*DEC" LEN2="10" DEC2="0" TYPE3="*DEC" LEN3="3" DEC3="0" TYPE4="*DEC" LEN4="3" DEC4="0" TYPE5="*DEC" LEN5="4" DEC5="0"                                      />
+<MSG MSGID="DIS3997" SEVERITY="20" DATACOUNT="1" TEXT="Please enter a reason to override." SECLVL=" " TYPE1="*CHAR" LEN1="50" DEC1="0"                                                                  />
+<MSG MSGID="DIS4041" SEVERITY="20" DATACOUNT="1" TEXT="Emp ID not in Uplist, enter different Emp ID for ID scan." SECLVL=" " TYPE1="*CHAR" LEN1="5" DEC1="0"                                            />
+<MSG MSGID="DIS4042" SEVERITY="20" DATACOUNT="0" TEXT="Contact support_esign1 for user activation." SECLVL=" " />
+<MSG MSGID="DIS4043" SEVERITY="20" DATACOUNT="0" TEXT="Negative Payment Amount" SECLVL=" "                     />
 <MSG MSGID="DIS9997" SEVERITY="20" DATACOUNT="1" TEXT="Please Contact Merchant for 1&amp;." SECLVL="" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                  />
 <MSG MSGID="DI99998" SEVERITY="20" DATACOUNT="1" TEXT="&amp;1 way to OBS. Don't sell floor sample..." SECLVL="" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                        />
 <MSG MSGID="DI99999" SEVERITY="20" DATACOUNT="1" TEXT="SKU-OBS. Sell Flr Sample" SECLVL="" TYPE1="*CHAR" LEN1="20" DEC1="0"                                                                             />
