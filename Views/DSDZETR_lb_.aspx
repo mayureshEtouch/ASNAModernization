@@ -282,8 +282,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : NMADHAN                                                                                          --%>
-      <%--  Date          : 09/14/17  Time  : 06:10:26                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 04/12/18  Time  : 02:50:15                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -931,7 +931,7 @@
               CssClass="DdsCharField"
               Length="1" 
               Alias="#CIYS#" 
-              VisibleCondition="!88 & !( 76 & !37 )"
+              VisibleCondition="!88"
               Usage="Both" 
               VirtualRowCol="10,68" 
               Protect="76" 
