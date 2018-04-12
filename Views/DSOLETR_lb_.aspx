@@ -410,7 +410,7 @@
                 });
             });
           </script>
-          <div id="Div1" style="display:none">
+          <div id="Div1" style="display:none;">
             
       <%--  OE: ETR Upd Ord Hdr       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -423,7 +423,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : KARRAJ                                                                                           --%>
-      <%--  Date          : 04/05/18  Time  : 09:24:57                                                                       --%>
+      <%--  Date          : 04/12/18  Time  : 04:47:16                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -1026,7 +1026,8 @@
               VisibleCondition="!88"
               Usage="Both" 
               VirtualRowCol="12,50" 
-              PositionCursor="32 | !32 & !98 & !99" 
+              Protect="77" 
+              PositionCursor="32 | !32 & !98 & !99 & !77" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="'Y' 'N' ' ' 'F' 'S' 'M' 'I' 'D' 'W' 'U' 'R' 'C' 'O' 'B' 'V' 'X' 'E' '1' 'H' 'A' 'L' 'P' 'T' '3' '2' '0' '4' '$' '5' '*' 'G' '@' '?' " 
@@ -1058,7 +1059,7 @@
               Length="4" 
               Decimals="0" 
               Alias="#CEONB" 
-              VisibleCondition="!88 & !( 77 )"
+              VisibleCondition="!88 & !( 76 )"
               Usage="OutputOnly" 
               VirtualRowCol="13,28" 
  />
@@ -1242,7 +1243,7 @@
               Alias="#2AQNA" 
               Usage="Both" 
               VirtualRowCol="16,2" 
-              PositionCursor="33" 
+              PositionCursor="33 | !33 & !98 & !99" 
               TabIndex="1"  />
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
