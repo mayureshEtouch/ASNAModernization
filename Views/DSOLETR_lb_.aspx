@@ -252,7 +252,7 @@
           <script type="text/javascript">
             var copyToAndFrom = {
               "displayOnlyFields": {
-                "CenPH_DdsConstant14": "date",
+                "CenPH_DdsConstant15": "date",
                 "CenPH__lb_SFLCTL__lb__lb_TME": "time",
                 "CenPH__lb_SFLCTL__lb_1BANB": "CenPH__lb_SFLCTL__lb_1BANB_new",
                 "CenPH__lb_SFLCTL__lb_1EXNB": "CenPH__lb_SFLCTL__lb_1EXNB_new",
