@@ -316,6 +316,15 @@
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
+							
+							<!-- 4 col starts here -->
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Military Sts:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DFRSS_new"></span></div>
+                                </div>
+                            </div>
+                            <!-- 4 col ends here -->
 
                         </div>
                         <!-- content-grid mdl-grid ends here -->
@@ -662,7 +671,7 @@
     <span style="display: none;" id="CenPH_slash">/</span>
     <span style="display: none;" id="CenPH_hypen">-</span>
     <!-- Modified HTML code ends here -->
-    <div id="Div1" style="display: none;">
+    <div id="Div1" style="display:none;">
             
       <%--  CR: DS1 Contract          Display record(1 screen)                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -675,7 +684,7 @@
       <%--  Company       : Credit Collection Model                                                                          --%>
       <%--  System        : Credit Applications                                                                              --%>
       <%--  User name     : SKUMAR                                                                                           --%>
-      <%--  Date          : 01/31/18  Time  : 11:27:56                                                                       --%>
+      <%--  Date          : 03/22/18  Time  : 09:04:02                                                                       --%>
       <%--  Copyright     : Credit Collection Model                                                                          --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -956,6 +965,8 @@
           <%--  Amount: Added on                                                                                                 --%>
           <%--  Number: Addon Contract                                                                                           --%>
           <%--  Number: Addon Contract                                                                                           --%>
+          <%--  Sts: Extra status 4                                                                                              --%>
+          <%--  Sts: Extra status 4                                                                                              --%>
           <%--  Value: Filing Fee                                                                                                --%>
           <%--  Value: Filing Fee                                                                                                --%>
           <%--  Sts: Extra status 2                                                                                              --%>
@@ -1025,7 +1036,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,15" 
  />
-            <mdf:DdsConstant id="DdsConstant54" runat="server" 
+            <mdf:DdsConstant id="DdsConstant55" runat="server" 
               style="position: absolute; left: 550px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -1059,7 +1070,7 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant59" runat="server" 
+            <mdf:DdsConstant id="DdsConstant60" runat="server" 
               style="position: absolute; left: 631px; top: 27px;"
               Text="DISPLAY" 
               CssClass="DdsConstant"
@@ -1294,7 +1305,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="7,53" 
  />
-            <mdf:DdsConstant id="DdsConstant58" runat="server" 
+            <mdf:DdsConstant id="DdsConstant59" runat="server" 
               style="position: absolute; left: 577px; top: 147px;"
               Text="Mo." 
               Color="Blue" 
@@ -1437,7 +1448,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="9,49" 
  />
-            <mdf:DdsConstant id="DdsConstant55" runat="server" 
+            <mdf:DdsConstant id="DdsConstant56" runat="server" 
               style="position: absolute; left: 550px; top: 195px;"
               Text="/" 
               Color="Blue" 
@@ -1490,7 +1501,7 @@
               VirtualRowCol="10,51" 
               EditWord="  /  /  " 
  />
-            <mdf:DdsConstant id="DdsConstant56" runat="server" 
+            <mdf:DdsConstant id="DdsConstant57" runat="server" 
               style="position: absolute; left: 568px; top: 219px;"
               Text="#2" 
               VisibleCondition="!( 78 )"
@@ -1603,6 +1614,19 @@
               Usage="OutputOnly" 
               VirtualRowCol="13,45" 
               EditCode="3" 
+ />
+            <mdf:DdsConstant id="DdsConstant54" runat="server" 
+              style="position: absolute; left: 532px; top: 291px;"
+              Text="Military Sts" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DFRSS" runat="server" style="position: absolute; left: 649px; top: 288px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#DFRSS" 
+              Usage="OutputOnly" 
+              VirtualRowCol="13,72" 
  />
             <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 315px;"
@@ -1886,7 +1910,7 @@
               VirtualRowCol="21,54" 
               EditWord="  /  /  " 
  />
-            <mdf:DdsConstant id="DdsConstant57" runat="server" 
+            <mdf:DdsConstant id="DdsConstant58" runat="server" 
               style="position: absolute; left: 568px; top: 483px;"
               Text="-" 
               Color="Blue" 
@@ -1910,7 +1934,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant60" runat="server" 
+            <mdf:DdsConstant id="DdsConstant61" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit   F4=Prompt" 
               CssClass="DdsConstant"
@@ -1924,7 +1948,7 @@
           >&nbsp;
           <%--  Command key text                                                                                                 --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant61" runat="server" 
+            <mdf:DdsConstant id="DdsConstant62" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit               F12=Return" 
               CssClass="DdsConstant"
@@ -2020,7 +2044,8 @@
                 "CenPH__lb_RCDDTL1__lb_DFJNU":"interstRate1",
                 "CenPH__lb_RCDDTL1__lb_DFNNU":"adminFeeIntrest",
                 "CenPH_DdsConstant6":"date1",
-                "CenPH__lb_RCDKEY__lb__lb_TME":"time1"
+                "CenPH__lb_RCDKEY__lb__lb_TME":"time1",
+				"CenPH__lb_RCDDTL1__lb_DFRSS":"CenPH__lb_RCDDTL1__lb_DFRSS_new"
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_2AXTX": "modelNumber"
