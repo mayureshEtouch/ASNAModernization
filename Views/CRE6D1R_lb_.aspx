@@ -321,7 +321,7 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span class="form-label">Military Sts:</span> </div>
-                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DFRSS_new"></span></div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin: 0;"><span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DFQSS_new"></span></div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -684,7 +684,7 @@
       <%--  Company       : Credit Collection Model                                                                          --%>
       <%--  System        : Credit Applications                                                                              --%>
       <%--  User name     : SKUMAR                                                                                           --%>
-      <%--  Date          : 03/22/18  Time  : 09:04:02                                                                       --%>
+      <%--  Date          : 04/17/18  Time  : 02:50:10                                                                       --%>
       <%--  Copyright     : Credit Collection Model                                                                          --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -902,6 +902,7 @@
           <%--  Number: SS #2                                                                                                    --%>
           <%--  Nbr: Payments                                                                                                    --%>
           <%--  Value: SMA                                                                                                       --%>
+          <%--  Sts: Extra status 4                                                                                              --%>
           <%--  Refund: Interest                                                                                                 --%>
           <%--  Refund: Life $                                                                                                   --%>
           <%--  Refund: A/H $                                                                                                    --%>
@@ -957,6 +958,8 @@
           <%--  Amount: Down Payment                                                                                             --%>
           <%--  Nbr: Interest Rate                                                                                               --%>
           <%--  Nbr: Interest Rate                                                                                               --%>
+          <%--  Sts: Extra status 3                                                                                              --%>
+          <%--  Sts: Extra status 3                                                                                              --%>
           <%--  Amount: Sale Price                                                                                               --%>
           <%--  Amount: Sale Price                                                                                               --%>
           <%--  Nbr: Extra Value 2                                                                                               --%>
@@ -965,8 +968,6 @@
           <%--  Amount: Added on                                                                                                 --%>
           <%--  Number: Addon Contract                                                                                           --%>
           <%--  Number: Addon Contract                                                                                           --%>
-          <%--  Sts: Extra status 4                                                                                              --%>
-          <%--  Sts: Extra status 4                                                                                              --%>
           <%--  Value: Filing Fee                                                                                                --%>
           <%--  Value: Filing Fee                                                                                                --%>
           <%--  Sts: Extra status 2                                                                                              --%>
@@ -1129,6 +1130,12 @@
               Length="7" 
               Decimals="2" 
               Alias="#1LIVA" 
+              Usage="Hidden" 
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DFRSS" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#DFRSS" 
               Usage="Hidden" 
  />
             <mdf:DdsDecField id="_lb_RCDDTL1__lb_1K1VA" runat="server" style="position: absolute; left: 1px; top: 0px; width: 64px"
@@ -1555,6 +1562,19 @@
               VirtualRowCol="11,50" 
               EditCode="3" 
  />
+            <mdf:DdsConstant id="DdsConstant54" runat="server" 
+              style="position: absolute; left: 514px; top: 243px;"
+              Text="Military Status" 
+              Color="Blue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DFQSS" runat="server" style="position: absolute; left: 658px; top: 240px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#DFQSS" 
+              Usage="OutputOnly" 
+              VirtualRowCol="11,73" 
+ />
             <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 19px; top: 267px;"
               Text="Sale Price . . . :" 
@@ -1614,19 +1634,6 @@
               Usage="OutputOnly" 
               VirtualRowCol="13,45" 
               EditCode="3" 
- />
-            <mdf:DdsConstant id="DdsConstant54" runat="server" 
-              style="position: absolute; left: 532px; top: 291px;"
-              Text="Military Sts" 
-              Color="Blue" 
-              CssClass="DdsConstant"
- />
-            <mdf:DdsCharField id="_lb_RCDDTL1__lb_DFRSS" runat="server" style="position: absolute; left: 649px; top: 288px; width: 10px"
-              CssClass="DdsCharField"
-              Length="1" 
-              Alias="#DFRSS" 
-              Usage="OutputOnly" 
-              VirtualRowCol="13,72" 
  />
             <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 315px;"
@@ -2045,7 +2052,7 @@
                 "CenPH__lb_RCDDTL1__lb_DFNNU":"adminFeeIntrest",
                 "CenPH_DdsConstant6":"date1",
                 "CenPH__lb_RCDKEY__lb__lb_TME":"time1",
-				"CenPH__lb_RCDDTL1__lb_DFRSS":"CenPH__lb_RCDDTL1__lb_DFRSS_new"
+				"CenPH__lb_RCDDTL1__lb_DFQSS":"CenPH__lb_RCDDTL1__lb_DFQSS_new"
             },
             "inputFields": {
                 "CenPH__lb_SFLCTL__lb_2AXTX": "modelNumber"
