@@ -181,7 +181,7 @@
                       <!-- 6 col ends here -->      
 
 					  <!-- 6 col starts here -->
-                      <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                     <!-- <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
                         <div class="content-grid mdl-grid">
                           <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">eSign:</span> </div>
                           <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> 
@@ -192,7 +192,7 @@
                                     </select>
 						  <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CIYS_lb_ro" style="display:none;"></span> </div>
                         </div>
-                      </div>
+                      </div>-->
                       <!-- 6 col ends here -->
 					  
                     </div>
@@ -259,7 +259,7 @@
                 "CenPH__lb_SFLCTL__lb_1A0TX": "CenPH__lb_SFLCTL__lb_1A0TX_new",
                 "CenPH__lb_SFLCTL_V1AIDT": "CenPH__lb_SFLCTL_V1AIDT_new",
                 "CenPH__lb_SFLCTL__lb_1AACD": "CenPH__lb_SFLCTL__lb_1AACD_new",
-				"CenPH__lb_SFLCTL__lb_CIYS_lb_": "CenPH__lb_SFLCTL__lb_CIYS_lb__new",
+				//"CenPH__lb_SFLCTL__lb_CIYS_lb_": "CenPH__lb_SFLCTL__lb_CIYS_lb__new",
                 "CenPH__lb_SFLCTL__lb_CHPH_lb_": "CenPH__lb_SFLCTL__lb_CHPH_lb__new",
                 "CenPH__lb_SFLCTL__lb_CWPH_lb_": "CenPH__lb_SFLCTL__lb_CWPH_lb__new",
                 "CenPH__lb_SFLCTL__lb_CEONB": "CenPH__lb_SFLCTL__lb_CEONB_new", //Work Ext.
@@ -277,7 +277,7 @@
                 "CenPH__lb_SFLCTL__lb_CEWTX": "CenPH__lb_SFLCTL__lb_CEWTX_new",// Pin
 				"CenPH__lb_SFLCTL__lb_PAOTX":"CenPH__lb_SFLCTL__lb_PAOTX_new",
 				"CenPH__lb_SFLCTL__lb_CEUTX":"CenPH__lb_SFLCTL__lb_CEUTX_new",
-				"CenPH__lb_SFLCTL__lb_CIYS_lb_":"CenPH__lb_SFLCTL__lb_CIYS_lb_ro"
+				//"CenPH__lb_SFLCTL__lb_CIYS_lb_":"CenPH__lb_SFLCTL__lb_CIYS_lb_ro"
               },
               "inputFields": {
                 "CenPH__lb_SFLCTL__lb_1AJCD": "CenPH__lb_SFLCTL__lb_1AJCD_new"
@@ -395,7 +395,7 @@
                   $("#CenPH__lb_SFLCTL__lb_1AJCD_new_readonly").val($("#CenPH__lb_SFLCTL__lb_1AJCD").html()).show()
                 }
               }
-			  if ($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").is("span")) {
+			/* if ($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").is("span")) {
 			  $("#CenPH__lb_SFLCTL__lb_CIYS_lb_ro").show();
 			  $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").hide();
 			  }
@@ -403,11 +403,11 @@
 			  {
 			  $("#CenPH__lb_SFLCTL__lb_CIYS_lb_ro").hide();
 			  $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").show();
-			  }
+			  } 
 			  $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val());
 				$("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").on('change', function () {
                     $("#CenPH__lb_SFLCTL__lb_CIYS_lb_").val($("#CenPH__lb_SFLCTL__lb_CIYS_lb_new").val());
-                });
+                });*/
             });
           </script>
           <div id="Div1" style="display:none;">
@@ -422,8 +422,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : KARRAJ                                                                                           --%>
-      <%--  Date          : 04/12/18  Time  : 04:47:16                                                                       --%>
+      <%--  User name     : PKUMAR                                                                                           --%>
+      <%--  Date          : 04/13/18  Time  : 14:43:26                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -435,7 +435,7 @@
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;Home 'Reset.' 30;"
             FuncKeys="F4 'Prompt.' 04;PageDown 'Next page.' 27 : !88;"
-            SetOfInds="98 99 31 32 " 
+            SetOfInds="98 99 31 " 
             CommandKeyInd="29" 
             ClearRecords="80" 
             DisplayFields="!80" 
@@ -518,9 +518,6 @@
           <%--  Address: State.                                                                                                  --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
-          <%--  STS: Yes/No                                                                                                      --%>
-          <%--  STS: Yes/No                                                                                                      --%>
-          <%--  Condition: *ALL values                                                                                           --%>
           <%--  Nbr: Phone Work                                                                                                  --%>
           <%--  Nbr: Phone Work                                                                                                  --%>
           <%--  Phone: Bus Extension.                                                                                            --%>
@@ -577,12 +574,12 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,17" 
  />
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
-              style="position: absolute; left: 559px; top: 3px;"
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+              style="position: absolute; left: 532px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb__lb_PGM" runat="server" style="position: absolute; left: 649px; top: 0px; width: 91px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb__lb_PGM" runat="server" style="position: absolute; left: 622px; top: 0px; width: 91px"
               CssClass="DdsCharField"
               Length="10" 
               Alias="##PGM" 
@@ -602,7 +599,7 @@
               Text="Update Order Header Data" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_TME" runat="server" style="position: absolute; left: 559px; top: 24px; width: 73px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_TME" runat="server" style="position: absolute; left: 532px; top: 24px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
@@ -611,8 +608,8 @@
               VirtualRowCol="2,59" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
-              style="position: absolute; left: 649px; top: 27px;"
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+              style="position: absolute; left: 622px; top: 27px;"
               Text="CHANGE " 
               CssClass="DdsConstant"
  />
@@ -981,7 +978,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="11,44" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEVTX" runat="server" style="position: absolute; left: 523px; top: 240px; width: 181px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEVTX" runat="server" style="position: absolute; left: 496px; top: 240px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#CEVTX" 
@@ -989,7 +986,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="11,55" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CCXST" runat="server" style="position: absolute; left: 712px; top: 240px; width: 19px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CCXST" runat="server" style="position: absolute; left: 685px; top: 240px; width: 19px"
               CssClass="DdsCharField"
               Length="2" 
               Alias="#CCXST" 
@@ -1013,25 +1010,6 @@
               VirtualRowCol="12,13" 
               EditWord="   /   -    " 
  />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
-              style="position: absolute; left: 397px; top: 267px;"
-              Text="eSign" 
-              VisibleCondition="!88"
-              CssClass="DdsConstant"
- />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIYS_lb_" runat="server" style="position: absolute; left: 451px; top: 264px; width: 37px"
-              CssClass="DdsCharField"
-              Length="1" 
-              Alias="#CIYS#" 
-              VisibleCondition="!88"
-              Usage="Both" 
-              VirtualRowCol="12,50" 
-              Protect="77" 
-              PositionCursor="32 | !32 & !98 & !99 & !77" 
-              CompareAllowBlanks="true" 
-              ValuesStyle="DropdownBoth" 
-              Values="'Y' 'N' ' ' 'F' 'S' 'M' 'I' 'D' 'W' 'U' 'R' 'C' 'O' 'B' 'V' 'X' 'E' '1' 'H' 'A' 'L' 'P' 'T' '3' '2' '0' '4' '$' '5' '*' 'G' '@' '?' " 
-              TabIndex="2"  />
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 19px; top: 291px;"
               Text="Work Phone" 
@@ -1059,17 +1037,17 @@
               Length="4" 
               Decimals="0" 
               Alias="#CEONB" 
-              VisibleCondition="!88 & !( 76 )"
+              VisibleCondition="!88 & !( 77 )"
               Usage="OutputOnly" 
               VirtualRowCol="13,28" 
  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
               style="position: absolute; left: 397px; top: 291px;"
               Text="Location . . . :" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_1AACD" runat="server" style="position: absolute; left: 595px; top: 288px; width: 28px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_1AACD" runat="server" style="position: absolute; left: 568px; top: 288px; width: 28px"
               CssClass="DdsCharField"
               Length="3" 
               Alias="#1AACD" 
@@ -1243,7 +1221,7 @@
               Alias="#2AQNA" 
               Usage="Both" 
               VirtualRowCol="16,2" 
-              PositionCursor="33 | !33 & !98 & !99" 
+              PositionCursor="32 | !32 & !98 & !99" 
               TabIndex="1"  />
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
@@ -1255,12 +1233,12 @@
           <%--  Command key text                                                                                                 --%>
           <%--  Command key text 2                                                                                               --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit                                                            F12=Return" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 27px;"
               Text=" " 
               CssClass="DdsConstant"
@@ -1275,7 +1253,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1294,8 +1272,8 @@
               Usage="Both" 
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
-              TabIndex="3"  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+              TabIndex="2"  />
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
