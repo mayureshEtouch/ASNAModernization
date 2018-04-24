@@ -111,7 +111,7 @@
         <!--<section class="copyright">
             <div class="copyright-container">Copyright &copy; 2015 Conn's. All rights reserved.</div>
         </section>-->
-        <div id="Div1">
+        <div id="Div1" style="display:none;">
             
       <%--  CU: PMT Customer/Activity Prompt & validate record                                                               --%>
       <%--  CRTDSPF                                                                                                          --%>
