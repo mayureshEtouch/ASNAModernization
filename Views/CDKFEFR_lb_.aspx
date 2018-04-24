@@ -661,14 +661,14 @@
             /*Pop up confirm box*/
             $(".OverlayPopupBackground").show();
             $(".confirmation-outer-conatiner").show();
-            $("#yes").attr('disabled', 'disabled');
-            $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
-            _00('Enter', event);
-           /* $("#yes").click(function (event) {
+           // $("#yes").attr('disabled', 'disabled');
+           //// $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
+            //_00('Enter', event);
+            $("#yes").click(function (event) {
              $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
              _00('Enter', event);
              //_16(event,this,1,'Enter');
-             });*/
+             });
             $("#no").click(function (event) {
              $("#CenPH__lb_CONFIRM_VZCFCD").val("N");
              _00('Enter', event);
