@@ -135,9 +135,17 @@
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">Date Stamp:</span>
                                 </div>
-                                <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet" style="margin:0">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="date-stamp"></span>
                                 </div>
+								<div class="manual-contract mdl-cell mdl-cell--6-col" style="margin:0">
+								<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                    <span class="form-label">Manual Contract:</span>
+                                </div>
+								<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet">
+                                    <span class="form-text" id="CenPH__lb_SFLCTL__lb_CIEIN_new"></span>
+                                </div> 
+								</div>
                             </div>
                               <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet" style="margin:0">
@@ -149,7 +157,7 @@
 								 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-label">eSign(V1):</span>
                                 </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
+								<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="CenPH__lb_SFLCTL__lb_CIHTU_new"></span>
                                 </div> 
                             </div>
@@ -212,7 +220,7 @@
 <br/><br/> -->
     <div id="modal" class="simplePopup"></div>
     
-        <div id="Div1" style="display:none">
+        <div id="Div1" style="display:none;">
             
       <%--  OE: DTR Dsp Ord Hdr       Display transactions                                                                   --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -224,8 +232,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : APOTTI                                                                                           --%>
-      <%--  Date          : 03/14/18  Time  : 06:57:42                                                                       --%>
+      <%--  User name     : ISOKKALI                                                                                         --%>
+      <%--  Date          : 05/07/18  Time  : 04:40:08                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -308,6 +316,8 @@
           <%--  Date: Original Order                                                                                             --%>
           <%--  Date: Stamp                                                                                                      --%>
           <%--  Date: Stamp                                                                                                      --%>
+          <%--  Manual Contract ?                                                                                                --%>
+          <%--  Manual Contract ?                                                                                                --%>
           <%--  Name: Customer                                                                                                   --%>
           <%--  Address: Attention                                                                                               --%>
           <%--  Address: Attention                                                                                               --%>
@@ -370,7 +380,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,17" 
  />
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 532px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -404,7 +414,7 @@
               VirtualRowCol="2,59" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 622px; top: 27px;"
               Text="DISPLAY" 
               CssClass="DdsConstant"
@@ -619,7 +629,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="4,47" 
  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 613px; top: 75px;"
               Text="Store" 
               VisibleCondition="!88"
@@ -708,6 +718,20 @@
               Usage="OutputOnly" 
               VirtualRowCol="6,45" 
               EditWord="  /  /  " 
+ />
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+              style="position: absolute; left: 496px; top: 123px;"
+              Text="Manual Contract :" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIEIN" runat="server" style="position: absolute; left: 658px; top: 120px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#CIEIN" 
+              VisibleCondition="!88 & !( 78 )"
+              Usage="OutputOnly" 
+              VirtualRowCol="6,73" 
  />
             <mdf:DdsCharField id="_lb_SFLCTL__lb_PALTX" runat="server" style="position: absolute; left: 19px; top: 168px; width: 271px"
               CssClass="DdsCharField"
@@ -841,7 +865,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="12,63" 
  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 586px; top: 267px;"
               Text="eSign(V1):" 
               VisibleCondition="!88"
@@ -882,7 +906,7 @@
               Length="4" 
               Decimals="0" 
               Alias="#CEONB" 
-              VisibleCondition="!88 & !( 78 )"
+              VisibleCondition="!88 & !( 77 )"
               Usage="OutputOnly" 
               VirtualRowCol="13,28" 
  />
@@ -904,7 +928,7 @@
               Length="6" 
               Decimals="0" 
               Alias="V2AXDT" 
-              VisibleCondition="!88 & !( 77 )"
+              VisibleCondition="!88 & !( 76 )"
               Usage="OutputOnly" 
               VirtualRowCol="13,64" 
               EditWord="  /  /  " 
@@ -1068,12 +1092,12 @@
           <%--  Command key text                                                                                                 --%>
           <%--  Command key text 2                                                                                               --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Return to menu  F5=Whse Comments   F6=Reprint Invoice   F12=Previous screen" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
               style="position: absolute; left: 19px; top: 27px;"
               Text=" " 
               CssClass="DdsConstant"
@@ -1111,6 +1135,7 @@
           </mdf:DdsSubfileControl >
 
         </div>
+        </div>
     </asp:Content>
 
     <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">
@@ -1122,17 +1147,24 @@
       $(document).ready(function() {
       
           /*setDateTime(dateFieldId,timeFieldId)*/
-          setDateTime('CenPH_DdsConstant15','CenPH__lb_SFLCTL__lb__lb_TME');
+          setDateTime('CenPH_DdsConstant16','CenPH__lb_SFLCTL__lb__lb_TME');
 
-          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL_V2AXDT','#CenPH__lb_SFLCTL__lb_2AACD','#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAOTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEUTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX','#CenPH__lb_SFLCTL__lb_CIHTU'];
-          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#expected-del-date','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-2-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-2-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5','#CenPH__lb_SFLCTL__lb_CIHTU_new'];
+          var old_fields = ['#CenPH__lb_SFLCTL__lb_2BANB','#CenPH__lb_SFLCTL__lb_2A0TX','#CenPH__lb_SFLCTL__lb_CHPH_lb_','#CenPH__lb_SFLCTL__lb_CWPH_lb_','#CenPH__lb_SFLCTL__lb_2EXNB','#CenPH__lb_SFLCTL__lb_2AJCD','#CenPH__lb_SFLCTL_V2AGDT','#CenPH__lb_SFLCTL_V2AIDT','#CenPH__lb_SFLCTL__lb_2FLST','#CenPH__lb_SFLCTL_V2AXDT','#CenPH__lb_SFLCTL__lb_2AACD','#CenPH__lb_SFLCTL__lb_PALTX','#CenPH__lb_SFLCTL__lb_PANTX','#CenPH__lb_SFLCTL__lb_PAOTX','#CenPH__lb_SFLCTL__lb_PAQTX','#CenPH__lb_SFLCTL__lb_PADST','#CenPH__lb_SFLCTL__lb_PAPTX','#CenPH__lb_SFLCTL__lb_PBDTX','#CenPH__lb_SFLCTL__lb_CETTX','#CenPH__lb_SFLCTL__lb_CEUTX','#CenPH__lb_SFLCTL__lb_CEVTX','#CenPH__lb_SFLCTL__lb_CCXST','#CenPH__lb_SFLCTL__lb_CEWTX','#CenPH__lb_SFLCTL__lb_CIHTU','#CenPH__lb_SFLCTL__lb_CIEIN'];
+          var new_fields = ['#order-id','#employee-name','#home-phone','#work-phone','#version-number','#employee-id','#date-stamp','#order-date','#delivery-code','#expected-del-date','#store-code','#billing-addr-1','#billing-addr-2','#billing-addr-2-2','#billing-addr-3','#billing-addr-4','#billing-addr-5','#shipping-addr-1','#shipping-addr-2','#shipping-addr-2-2','#shipping-addr-3','#shipping-addr-4','#shipping-addr-5','#CenPH__lb_SFLCTL__lb_CIHTU_new', '#CenPH__lb_SFLCTL__lb_CIEIN_new'];
           for (var i = 0; i < old_fields.length; i++) {
             $(new_fields[i]).text($.trim($(old_fields[i]).text()));
           };
 
           //Special instructions section
 		  
-		 
+		 if($("#CenPH__lb_SFLCTL__lb_CIEIN").length > 0)
+		 {
+			$(".manual-contract").show();
+		 }
+		 else
+		 {
+			$(".manual-contract").hide();
+		 }
           
           function generateSpecialInstructionsSection() {
               //Create copyToAndFrom JSON object for special instructions
@@ -1219,6 +1251,14 @@
         #special-instructions span {
             display: block !important;
         }
+	.manual-contract .mdl-cell {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		}
+		.manual-contract .form-text {
+		margin-left: 5px;
+		}
 		
     </style>
     </asp:Content>
