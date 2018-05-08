@@ -2,8 +2,8 @@
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 9/14/2017 at 5:01 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
-        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSDZETR# --%>
+        <%-- Migrated on 5/2/2018 at 12:27 PM by ASNA Monarch(R) Wings version 8.0.40.0 --%>
+        <%-- Legacy location: library asnatrack, file QDDSSRC, member DSDZETR# --%>
 
     </asp:Content>
 
@@ -22,7 +22,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
-      <div class="OverlayPopupBackground"></div>
+	<div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content">
         <section class="time-date">
             <div class="content-grid mdl-grid">
@@ -95,10 +95,10 @@
                 <div class="content-grid mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--3-col">
+                            <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Employee #:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--9-col">
+                            <div class="mdl-cell mdl-cell--8-col">
                                 <span class="form-text" data-upgraded=",MaterialTextfield" id="employee-info">
                                     <%--<input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD">--%>
                                    
@@ -107,11 +107,27 @@
                                 </span>
                             </div>
                         </div>
+						<div class="content-grid mdl-grid hideShowCond">
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <span class="form-label">Ship To same as Sold To?:</span>
+                            </div>
+                            <div class="mdl-cell mdl-cell--8-col">
+                                <span class="form-text" data-upgraded=",MaterialTextfield">
+                                    <select id="CenPH__lb_SFLCTL__lb_CZVS_lb_new" name="CenPH__lb_SFLCTL__lb_CZVS_lb_new" style="width: 174px; padding: 0 2px;">
+                                        <option selected="selected" value=" ">Please select</option>
+                                        <option value="Y">Y - Yes</option>
+                                        <option value="N">N - No</option>
+                                    </select>
+                                    <span id="CenPH_1F" class="DdsCharField_OutputOnly"></span>
+                                </span>
+                            </div>
+                        </div>
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--3-col">
+							
+                            <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Shipping Address:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--9-col">
+                            <div class="mdl-cell mdl-cell--8-col">
                                 <div class="form-text shipping-add" data-upgraded=",MaterialTextfield" id="shipping-add">
                                     <input type="text" class="full-input" id="CenPH_PBDTX" name="CenPH_PBDTX" maxlength="25">
                                     <span id="CenPH_PB" class="DdsCharField_OutputOnly"></span>
@@ -125,10 +141,10 @@
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--3-col">
+                            <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Zip Code:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--9-col">
+                            <div class="mdl-cell mdl-cell--8-col">
                                 <div class="form-text shipping-add" data-upgraded=",MaterialTextfield" id="zipcode">
                                     <input type="text" id="CenPH_CEWTX" name="CenPH_CEWTX" maxlength="10">
                                     <span id="CenPH_CEW" class="DdsCharField_OutputOnly"></span>
@@ -270,7 +286,7 @@
         </div>
     </div>
 
-       <div id="Div1" style="display:none;">
+       <div id="Div1" style="display: none;">
             
       <%--  OE: ETR Ent Ord Hdr       Edit transaction                                                                       --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -282,20 +298,20 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 04/12/18  Time  : 02:50:15                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 04/30/18  Time  : 06:33:13                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
       <%-- =========================================================================                                         --%>
           <mdf:DdsSubfileControl id="_lb_SFLCTL" runat="server" 
-            style="position: relative; width: 792px; height: 480px" 
+            style="position: relative; width: 774px; height: 504px" 
             Alias="#SFLCTL"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;Home 'Reset.' 30;"
             FuncKeys="F4 'Prompt.' 04;F6 'CF06.' 06;F9 'Change mode.' 09;F11 'CF11.' 11;PageDown 'Next page.' 27 : !88;"
-            SetOfInds="98 99 31 32 33 34 35 36 37 38 39 " 
+            SetOfInds="98 99 31 32 33 34 35 36 37 38 39 40 " 
             CommandKeyInd="29" 
             ClearRecords="80" 
             DisplayFields="!80" 
@@ -364,6 +380,9 @@
           <%--  Employee                                                                                                         --%>
           <%--  Employee                                                                                                         --%>
           <%--  Name: Employee                                                                                                   --%>
+          <%--  # Yes/No(*Blank)                                                                                                 --%>
+          <%--  # Yes/No(*Blank)                                                                                                 --%>
+          <%--  Condition: Yes/No                                                                                                --%>
           <%--  Name: Customer                                                                                                   --%>
           <%--  Address: Attention                                                                                               --%>
           <%--  Address: Attention                                                                                               --%>
@@ -374,9 +393,9 @@
           <%--  Address: City                                                                                                    --%>
           <%--  Address: State                                                                                                   --%>
           <%--  Address: Zip Code                                                                                                --%>
-          <%--  Address: Zip Code.                                                                                               --%>
           <%--  Address: City.                                                                                                   --%>
           <%--  Address: State.                                                                                                  --%>
+          <%--  Address: Zip Code.                                                                                               --%>
           <%--  Txt: EMail Address                                                                                               --%>
           <%--  Txt: EMail Address                                                                                               --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
@@ -446,8 +465,8 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,17" 
  />
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
-              style="position: absolute; left: 559px; top: 3px;"
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+              style="position: absolute; left: 532px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
  />
@@ -471,7 +490,7 @@
               Text="Enter Sales Order Header" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_TME" runat="server" style="position: absolute; left: 559px; top: 24px; width: 73px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_TME" runat="server" style="position: absolute; left: 532px; top: 24px; width: 73px"
               CssClass="DdsDecField"
               Length="6" 
               Decimals="0" 
@@ -480,13 +499,13 @@
               VirtualRowCol="2,59" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 676px; top: 27px;"
               Text="ADD    " 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 676px; top: 27px;"
               Text="CHANGE " 
               VisibleCondition="!89"
@@ -709,37 +728,37 @@
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
               style="position: absolute; left: 19px; top: 75px;"
-              Text="Order #" 
+              Text="Order #:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb_1BANB" runat="server" style="position: absolute; left: 91px; top: 72px; width: 82px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb_1BANB" runat="server" style="position: absolute; left: 100px; top: 72px; width: 82px"
               CssClass="DdsDecField"
               Length="9" 
               Decimals="0" 
               Alias="#1BANB" 
               Usage="OutputOnly" 
-              VirtualRowCol="4,10" 
+              VirtualRowCol="4,11" 
               EditCode="Z" 
  />
             <mdf:DdsConstant id="DdsConstant7" runat="server" 
-              style="position: absolute; left: 181px; top: 75px;"
-              Text="Ver#" 
+              style="position: absolute; left: 190px; top: 75px;"
+              Text="Ver:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb_1EXNB" runat="server" style="position: absolute; left: 226px; top: 72px; width: 28px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb_1EXNB" runat="server" style="position: absolute; left: 235px; top: 72px; width: 28px"
               CssClass="DdsDecField"
               Length="3" 
               Decimals="0" 
               Alias="#1EXNB" 
               VisibleCondition="!88 & !( 79 )"
               Usage="OutputOnly" 
-              VirtualRowCol="4,25" 
+              VirtualRowCol="4,26" 
               EditCode="Z" 
  />
             <mdf:DdsConstant id="DdsConstant10" runat="server" 
-              style="position: absolute; left: 271px; top: 75px;"
-              Text="Employee" 
+              style="position: absolute; left: 280px; top: 75px;"
+              Text="Employee:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
@@ -753,7 +772,7 @@
               Protect="78" 
               PositionCursor="31 | !31 & !98 & !99 & !78" 
               TabIndex="1"  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 424px; top: 75px;"
               Text="/" 
               VisibleCondition="!88"
@@ -767,221 +786,194 @@
               Usage="OutputOnly" 
               VirtualRowCol="4,49" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PALTX" runat="server" style="position: absolute; left: 19px; top: 96px; width: 271px"
+            <mdf:DdsConstant id="DdsConstant11" runat="server" 
+              style="position: absolute; left: 325px; top: 99px;"
+              Text="Ship To same as Sold To?" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CZVS_lb_" runat="server" style="position: absolute; left: 577px; top: 96px; width: 37px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#CZVS#" 
+              VisibleCondition="!88 & !( 77 & !32 )"
+              Usage="Both" 
+              VirtualRowCol="5,61" 
+              Protect="77" 
+              PositionCursor="32 | !32 & !98 & !99 & !77" 
+              CompareAllowBlanks="true" 
+              ValuesStyle="DropdownBoth" 
+              Values="' ' 'N' 'Y' '?' " 
+              TabIndex="2"  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PALTX" runat="server" style="position: absolute; left: 19px; top: 120px; width: 271px"
               CssClass="DdsCharField"
               Length="30" 
               Alias="#PALTX" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="5,2" 
+              VirtualRowCol="6,2" 
  />
-            <mdf:DdsConstant id="DdsConstant11" runat="server" 
-              style="position: absolute; left: 325px; top: 99px;"
-              Text="Ship to" 
+            <mdf:DdsConstant id="DdsConstant12" runat="server" 
+              style="position: absolute; left: 325px; top: 123px;"
+              Text="Ship To:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PBDTX" runat="server" style="position: absolute; left: 397px; top: 96px; width: 226px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PBDTX" runat="server" style="position: absolute; left: 406px; top: 120px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#PBDTX" 
               VisibleCondition="!88"
               Usage="Both" 
-              VirtualRowCol="5,44" 
-              PositionCursor="32 | !32 & !98 & !99" 
-              TabIndex="2"  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PANTX" runat="server" style="position: absolute; left: 19px; top: 120px; width: 226px"
+              VirtualRowCol="6,45" 
+              Protect="76" 
+              PositionCursor="33 | !33 & !98 & !99 & !76" 
+              TabIndex="3"  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PANTX" runat="server" style="position: absolute; left: 19px; top: 144px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#PANTX" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="6,2" 
+              VirtualRowCol="7,2" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CETTX" runat="server" style="position: absolute; left: 397px; top: 120px; width: 226px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CETTX" runat="server" style="position: absolute; left: 406px; top: 144px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#CETTX" 
               VisibleCondition="!88"
               Usage="Both" 
-              VirtualRowCol="6,44" 
-              PositionCursor="33" 
-              TabIndex="3"  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PAOTX" runat="server" style="position: absolute; left: 19px; top: 144px; width: 226px"
+              VirtualRowCol="7,45" 
+              Protect="76" 
+              PositionCursor="34 | !34 & !98 & !99 & !76" 
+              TabIndex="4"  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PAOTX" runat="server" style="position: absolute; left: 19px; top: 168px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#PAOTX" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="7,2" 
+              VirtualRowCol="8,2" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEUTX" runat="server" style="position: absolute; left: 397px; top: 144px; width: 226px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEUTX" runat="server" style="position: absolute; left: 406px; top: 168px; width: 226px"
               CssClass="DdsCharField"
               Length="25" 
               Alias="#CEUTX" 
               VisibleCondition="!88"
               Usage="Both" 
-              VirtualRowCol="7,44" 
-              PositionCursor="34" 
-              TabIndex="4"  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PAQTX" runat="server" style="position: absolute; left: 19px; top: 168px; width: 181px"
+              VirtualRowCol="8,45" 
+              Protect="76" 
+              PositionCursor="35 | !35 & !98 & !99 & !76" 
+              TabIndex="5"  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PAQTX" runat="server" style="position: absolute; left: 19px; top: 192px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#PAQTX" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="8,2" 
+              VirtualRowCol="9,2" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PADST" runat="server" style="position: absolute; left: 208px; top: 168px; width: 19px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PADST" runat="server" style="position: absolute; left: 208px; top: 192px; width: 19px"
               CssClass="DdsCharField"
               Length="2" 
               Alias="#PADST" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="8,23" 
+              VirtualRowCol="9,23" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_PAPTX" runat="server" style="position: absolute; left: 235px; top: 168px; width: 91px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_PAPTX" runat="server" style="position: absolute; left: 235px; top: 192px; width: 91px"
               CssClass="DdsCharField"
               Length="10" 
               Alias="#PAPTX" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="8,26" 
+              VirtualRowCol="9,26" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEWTX" runat="server" style="position: absolute; left: 397px; top: 168px; width: 91px"
-              CssClass="DdsCharField"
-              Length="10" 
-              Alias="#CEWTX" 
-              VisibleCondition="!88"
-              Usage="Both" 
-              VirtualRowCol="8,44" 
-              PositionCursor="35" 
-              TabIndex="5"  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEVTX" runat="server" style="position: absolute; left: 496px; top: 168px; width: 181px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEVTX" runat="server" style="position: absolute; left: 406px; top: 192px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#CEVTX" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="8,55" 
+              VirtualRowCol="9,45" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CCXST" runat="server" style="position: absolute; left: 766px; top: 168px; width: 19px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CCXST" runat="server" style="position: absolute; left: 649px; top: 192px; width: 19px"
               CssClass="DdsCharField"
               Length="2" 
               Alias="#CCXST" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="8,76" 
+              VirtualRowCol="9,66" 
  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CEWTX" runat="server" style="position: absolute; left: 676px; top: 192px; width: 91px"
+              CssClass="DdsCharField"
+              Length="10" 
+              Alias="#CEWTX" 
+              VisibleCondition="!88"
+              Usage="Both" 
+              VirtualRowCol="9,69" 
+              Protect="76" 
+              PositionCursor="36 | !36 & !98 & !99 & !76" 
+              TabIndex="6"  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
-              style="position: absolute; left: 19px; top: 195px;"
-              Text="EMail" 
+              style="position: absolute; left: 19px; top: 219px;"
+              Text="Email Addr:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CBWNA" runat="server" style="position: absolute; left: 73px; top: 192px; width: 541px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CBWNA" runat="server" style="position: absolute; left: 127px; top: 216px; width: 541px"
               CssClass="DdsCharField"
               Length="60" 
               Alias="#CBWNA" 
-              VisibleCondition="!88 & !( 77 )"
+              VisibleCondition="!88 & !( 75 )"
               Usage="OutputOnly" 
-              VirtualRowCol="9,8" 
+              VirtualRowCol="10,14" 
  />
             <mdf:DdsConstant id="DdsConstant3" runat="server" 
-              style="position: absolute; left: 19px; top: 219px;"
-              Text="Home Phone" 
+              style="position: absolute; left: 19px; top: 243px;"
+              Text="Home Phone:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb_CHPH_lb_" runat="server" style="position: absolute; left: 118px; top: 216px; width: 109px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb_CHPH_lb_" runat="server" style="position: absolute; left: 127px; top: 240px; width: 109px"
               CssClass="DdsDecField"
               Length="10" 
               Decimals="0" 
               Alias="#CHPH#" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="10,13" 
+              VirtualRowCol="11,14" 
               EditWord="   /   -    " 
  />
-            <mdf:DdsConstant id="DdsConstant12" runat="server" 
-              style="position: absolute; left: 397px; top: 219px;"
-              Text="Delivery Code" 
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+              style="position: absolute; left: 406px; top: 243px;"
+              Text="Delivery Code:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_1FLST" runat="server" style="position: absolute; left: 523px; top: 216px; width: 37px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_1FLST" runat="server" style="position: absolute; left: 541px; top: 240px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#1FLST" 
               VisibleCondition="!88"
               Usage="Both" 
-              VirtualRowCol="10,58" 
-              PositionCursor="36" 
+              VirtualRowCol="11,60" 
+              PositionCursor="37 | !37 & !98 & !99" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="'Y' 'L' 'X' 'N' 'P' ' ' '?' " 
-              TabIndex="6"  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
-              style="position: absolute; left: 586px; top: 219px;"
-              Text="eSign" 
+              TabIndex="7"  />
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+              style="position: absolute; left: 631px; top: 243px;"
+              Text="eSign?" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIYS_lb_" runat="server" style="position: absolute; left: 640px; top: 216px; width: 37px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIYS_lb_" runat="server" style="position: absolute; left: 694px; top: 240px; width: 37px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#CIYS#" 
               VisibleCondition="!88"
-              Usage="Both" 
-              VirtualRowCol="10,68" 
-              Protect="76" 
-              PositionCursor="37 & !76" 
-              CompareAllowBlanks="true" 
-              ValuesStyle="DropdownBoth" 
-              Values="' ' 'N' 'Y' '?' " 
-              TabIndex="7"  />
-            <mdf:DdsConstant id="DdsConstant4" runat="server" 
-              style="position: absolute; left: 19px; top: 243px;"
-              Text="Work Phone" 
-              VisibleCondition="!88"
-              CssClass="DdsConstant"
- />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb_CWPH_lb_" runat="server" style="position: absolute; left: 118px; top: 240px; width: 109px"
-              CssClass="DdsDecField"
-              Length="10" 
-              Decimals="0" 
-              Alias="#CWPH#" 
-              VisibleCondition="!88"
-              Usage="OutputOnly" 
-              VirtualRowCol="11,13" 
-              EditWord="   /   -    " 
- />
-            <mdf:DdsConstant id="DdsConstant9" runat="server" 
-              style="position: absolute; left: 235px; top: 243px;"
-              Text="/" 
-              VisibleCondition="!88"
-              CssClass="DdsConstant"
- />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb_CEONB" runat="server" style="position: absolute; left: 253px; top: 240px; width: 37px"
-              CssClass="DdsDecField"
-              Length="4" 
-              Decimals="0" 
-              Alias="#CEONB" 
-              VisibleCondition="!88 & !( 75 )"
-              Usage="OutputOnly" 
-              VirtualRowCol="11,28" 
- />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
-              style="position: absolute; left: 397px; top: 243px;"
-              Text="Are You a Conn's Employee?" 
-              VisibleCondition="!88"
-              CssClass="DdsConstant"
- />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 694px; top: 240px; width: 37px"
-              CssClass="DdsCharField"
-              Length="1" 
-              Alias="#CARTU" 
-              VisibleCondition="!88 & !( 74 & !38 )"
               Usage="Both" 
               VirtualRowCol="11,71" 
               Protect="74" 
@@ -990,45 +982,95 @@
               ValuesStyle="DropdownBoth" 
               Values="' ' 'N' 'Y' '?' " 
               TabIndex="8"  />
-            <mdf:DdsConstant id="DdsConstant5" runat="server" 
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
               style="position: absolute; left: 19px; top: 267px;"
-              Text="Promotion Code" 
+              Text="Work Phone:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CNNCD" runat="server" style="position: absolute; left: 154px; top: 264px; width: 73px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb_CWPH_lb_" runat="server" style="position: absolute; left: 127px; top: 264px; width: 109px"
+              CssClass="DdsDecField"
+              Length="10" 
+              Decimals="0" 
+              Alias="#CWPH#" 
+              VisibleCondition="!88"
+              Usage="OutputOnly" 
+              VirtualRowCol="12,14" 
+              EditWord="   /   -    " 
+ />
+            <mdf:DdsConstant id="DdsConstant9" runat="server" 
+              style="position: absolute; left: 244px; top: 267px;"
+              Text="/" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="_lb_SFLCTL__lb_CEONB" runat="server" style="position: absolute; left: 262px; top: 264px; width: 37px"
+              CssClass="DdsDecField"
+              Length="4" 
+              Decimals="0" 
+              Alias="#CEONB" 
+              VisibleCondition="!88 & !( 73 )"
+              Usage="OutputOnly" 
+              VirtualRowCol="12,29" 
+ />
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+              style="position: absolute; left: 406px; top: 267px;"
+              Text="Are You a Conn's Employee?" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CARTU" runat="server" style="position: absolute; left: 730px; top: 264px; width: 37px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#CARTU" 
+              VisibleCondition="!88 & !( 72 & !39 )"
+              Usage="Both" 
+              VirtualRowCol="12,72" 
+              Protect="72" 
+              PositionCursor="39 & !72" 
+              CompareAllowBlanks="true" 
+              ValuesStyle="DropdownBoth" 
+              Values="' ' 'N' 'Y' '?' " 
+              TabIndex="9"  />
+            <mdf:DdsConstant id="DdsConstant5" runat="server" 
+              style="position: absolute; left: 19px; top: 291px;"
+              Text="Promotion Code:" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CNNCD" runat="server" style="position: absolute; left: 163px; top: 288px; width: 73px"
               CssClass="DdsCharField"
               Length="8" 
               Alias="#CNNCD" 
               VisibleCondition="!88"
               Usage="Both" 
-              VirtualRowCol="12,17" 
-              PositionCursor="39" 
-              TabIndex="9"  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CBMNA" runat="server" style="position: absolute; left: 244px; top: 264px; width: 406px"
+              VirtualRowCol="13,18" 
+              PositionCursor="40" 
+              TabIndex="10"  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CBMNA" runat="server" style="position: absolute; left: 253px; top: 288px; width: 406px"
               CssClass="DdsCharField"
               Length="45" 
               Alias="#CBMNA" 
-              VisibleCondition="!88 & !( 73 )"
+              VisibleCondition="!88 & !( 71 )"
               Usage="OutputOnly" 
-              VirtualRowCol="12,27" 
+              VirtualRowCol="13,28" 
  />
             <mdf:DdsConstant id="DdsConstant6" runat="server" 
-              style="position: absolute; left: 28px; top: 291px;"
+              style="position: absolute; left: 19px; top: 315px;"
               Text="Special instructions" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
           <mdf:DdsSubfile id="_lb_SFLRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 312px; width: 612px; height: 24px" 
+            style="position: absolute; left: 0px; top: 336px; width: 612px; height: 24px" 
             Alias="#SFLRCD"
             CssClass="DdsSubfileRecord"
             SetOffInd="98" 
             NextChanged="84" 
             UseSubfilePaging="True" 
-            VirtualRowCol="14,3" 
-            VirtualWidth="65" 
+            VirtualRowCol="15,2" 
+            VirtualWidth="66" 
             VirtualRowsPerRecord="1" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
@@ -1174,13 +1216,13 @@
               Alias="#2AZNB" 
               Usage="Hidden" 
  />
-            <mdf:DdsCharField id="_lb_SFLRCD__lb_2AQNA" runat="server" style="position: absolute; left: 28px; top: 0px; width: 541px"
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_2AQNA" runat="server" style="position: absolute; left: 19px; top: 0px; width: 541px"
               CssClass="DdsCharField"
               Length="60" 
               Alias="#2AQNA" 
               Usage="Both" 
-              VirtualRowCol="14,3" 
-              PositionCursor="40" 
+              VirtualRowCol="15,2" 
+              PositionCursor="41" 
               TabIndex="1"  />
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
@@ -1191,13 +1233,13 @@
           >&nbsp;
           <%--  Command key text 2                                                                                               --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text=" F3=Exit   F6=eSign T&amp;Cs                                  F12=Return" 
               VisibleCondition="89"
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant20" runat="server" 
+            <mdf:DdsConstant id="DdsConstant21" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text=" F3=Exit   F6=eSign T&amp;Cs                                   F12=Return" 
               VisibleCondition="!89"
@@ -1213,7 +1255,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant21" runat="server" 
+            <mdf:DdsConstant id="DdsConstant22" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1232,8 +1274,8 @@
               Usage="Both" 
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
-              TabIndex="10"  />
-            <mdf:DdsConstant id="DdsConstant22" runat="server" 
+              TabIndex="11"  />
+            <mdf:DdsConstant id="DdsConstant23" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
@@ -1278,9 +1320,8 @@
         <mdf:DdsMessagePanel ID="DdsMessagePanel1" Style="position: relative" runat="server" Height="64px"></mdf:DdsMessagePanel>
     </asp:Content>
 
-
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
-     <style>
+	<style>
         #CenPH__lb_SFLCTL__lb_1AJCD {
             position: static !important;
         }
@@ -1315,9 +1356,9 @@
             var ext = $("#CenPH__lb_SFLCTL__lb_CEONB").html() == undefined ? "" : "&nbsp;/&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CEONB").html();
             var secAddr = $("#CenPH__lb_SFLCTL__lb_PAOTX").html() == undefined ? "" : ($("#CenPH__lb_SFLCTL__lb_PAOTX").text().trim() == "" ? "" : " " + $("#CenPH__lb_SFLCTL__lb_PAOTX").html() + "&nbsp;,");
 
-            $("#CenPH_1AJ,#CenPH_PB,#CenPH_CE,#CenPH_CEU,#CenPH_CEW,#CenPH_1F,#reqdate,#promocode").hide();
+            $("#CenPH_1AJ,#CenPH_1F,#reqdate,#promocode").hide();
             //set date and time
-            setDateTime("CenPH_DdsConstant15", "CenPH__lb_SFLCTL__lb__lb_TME");
+            setDateTime("CenPH_DdsConstant16", "CenPH__lb_SFLCTL__lb__lb_TME");
             // Set customer name
             $("#CenPH_PALTX").html($("#CenPH__lb_SFLCTL__lb_PALTX").html());
             // Set order number
@@ -1343,13 +1384,13 @@
             });
             $("#CenPH_1A0TX").text($("#CenPH__lb_SFLCTL__lb_1A0TX").text());
             // Set the selected customer details from original input boxes to modernized input boxes
-            $("#CenPH_PBDTX").val($("#CenPH__lb_SFLCTL__lb_PBDTX").val());
+            $("#CenPH_PBDTX").val($("#CenPH__lb_SFLCTL__lb_PBDTX").html());
 
-            $("#CenPH_CETTX").val($("#CenPH__lb_SFLCTL__lb_CETTX").val());
+            $("#CenPH_CETTX").val($("#CenPH__lb_SFLCTL__lb_CETTX").html());
 
-            $("#CenPH_CEUTX").val($("#CenPH__lb_SFLCTL__lb_CEUTX").val());
+            $("#CenPH_CEUTX").val($("#CenPH__lb_SFLCTL__lb_CEUTX").html().replace(/&nbsp;/g, ""));
 
-            $("#CenPH_CEWTX").val($("#CenPH__lb_SFLCTL__lb_CEWTX").val());
+            $("#CenPH_CEWTX").val($("#CenPH__lb_SFLCTL__lb_CEWTX").html());
 
             $("#CenPH_CEVTX").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CEVTX").html()); // Read only 
             $("#CenPH_CCXST").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CCXST").html()); // Read only
@@ -1370,6 +1411,21 @@
             $("#CenPH__lb_SFLCTL__lb_1FLST_new").val($("#CenPH__lb_SFLCTL__lb_1FLST").val());
             $("#CenPH__lb_SFLCTL__lb_1FLST_new").on('change', function () {
                 $("#CenPH__lb_SFLCTL__lb_1FLST").val($("#CenPH__lb_SFLCTL__lb_1FLST_new").val());
+            });
+			
+			
+			if($("#CenPH__lb_SFLCTL__lb_CZVS_lb_").length > 0)
+			{
+			 $(".hideShowCond").show();
+			}
+			else
+			{
+			$(".hideShowCond").hide();
+			}
+			// Set the Ship To same as Sold To value to original select box and vice versa
+            $("#CenPH__lb_SFLCTL__lb_CZVS_lb_new").val($("#CenPH__lb_SFLCTL__lb_CZVS_lb_").val());
+            $("#CenPH__lb_SFLCTL__lb_CZVS_lb_new").on('change', function () {
+                $("#CenPH__lb_SFLCTL__lb_CZVS_lb_").val($("#CenPH__lb_SFLCTL__lb_CZVS_lb_new").val());
             });
             // Set promotional code value
             //CenPH__lb_SFLCTL__lb_CNNCD
@@ -1403,6 +1459,31 @@
                 });
             } else {
                 $("#esign-container").hide();
+            }
+
+			
+			//Shipping Address span 
+			if ($("#CenPH__lb_SFLCTL__lb_PBDTX").length) {
+                if ($("#CenPH__lb_SFLCTL__lb_PBDTX").is("span")) {
+                    $("#CenPH_PB").text($("#CenPH__lb_SFLCTL__lb_PBDTX").text());
+					$("#CenPH_CE").text($("#CenPH__lb_SFLCTL__lb_CETTX").text());
+					$("#CenPH_CEU").text($("#CenPH__lb_SFLCTL__lb_CEUTX").text());
+					$("#CenPH_CEW").text($("#CenPH__lb_SFLCTL__lb_CEWTX").text());
+                    $("#CenPH_PBDTX, #CenPH_CETTX, #CenPH_CEUTX, #CenPH_CEWTX").hide();
+                    $("#CenPH__lb_SFLCTL__lb_CIYS_lb_new_ro").show();
+                } else {
+                    $("#CenPH_PBDTX").val($("#CenPH__lb_SFLCTL__lb_PBDTX").val());
+					$("#CenPH_CETTX").val($("#CenPH__lb_SFLCTL__lb_CETTX").val());
+					$("#CenPH_CEUTX").val($("#CenPH__lb_SFLCTL__lb_CEUTX").val());
+					$("#CenPH_CEWTX").val($("#CenPH__lb_SFLCTL__lb_CEWTX").val());
+                    $("#CenPH_PB, #CenPH_CE, #CenPH_CEU, #CenPH_CEW").hide();
+                }
+
+                $("#CenPH__lb_SFLCTL__lb_CZVS_lb_new").on('change', function () {
+                    $("#CenPH__lb_SFLCTL__lb_CZVS_lb_").val($("#CenPH__lb_SFLCTL__lb_CZVS_lb_new").val());
+                });
+            } else {
+                $("#hideShowCond").hide();
             }
 
 
