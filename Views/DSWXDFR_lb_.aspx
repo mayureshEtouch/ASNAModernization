@@ -795,7 +795,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             //Set date and time
-            $("[name='date']").text($("[id$=CenPH_DdsConstant10]").text());
+            $("[name='date']").text($("[id$=CenPH_DdsConstant11]").text());
             $("[name='time']").text($("[id$=CenPH__lb_SFLCTL__lb__lb_TME]").text());
             // Search box
             $("#number").val($("#CenPH__lb_SFLCTL__lb_2AXTX").val());
