@@ -521,5 +521,8 @@
                 $("#location-entry").hide();
             }
         });
+		$(window).load(function() {
+			_00("Enter", event);
+		});
     </script>
 </asp:Content>
