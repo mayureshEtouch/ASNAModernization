@@ -696,10 +696,19 @@
               top: 15% !important;
               left: 60% !important;
             }
+			@media (min-width:768px)and (max-width: 1024px) {
+				.Page_PopUpNewClass {
+					margin-left: -30%;
+					min-width: 55% !important;
+					width: 55% !important;
+					top: 15% !important;
+					left: 53% !important;
+				}
+			}
 
         </style>
          <script>
-              (function () {
+            (function () {
             setInterval(function () {
                 ASNA.Page.PushKey('Enter');
             },10000)
