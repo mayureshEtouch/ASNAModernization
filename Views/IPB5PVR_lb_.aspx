@@ -126,7 +126,16 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">ID Type:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> 
-                    <span id="CenPH_PANTX"><input class="lbl-width50" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new" onfocus="_09('#1FAIN','12,28','#RCDDTL1');" maxlength="2"></span>
+                    <span id="CenPH_PANTX">
+					<!--<input class="lbl-width50" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new" onfocus="_09('#1FAIN','12,28','#RCDDTL1');" maxlength="2">-->
+					<select class="lbl-width100" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new">
+					<option value="" selected>Please Choose</option>
+					<option value="CI">Continuous-Approval Call CG</option>
+					<option value="DL">Driving License</option>
+					<option value="MI">Military ID Card</option>
+					<option value="SI">State ID Card</option>
+					</select>
+					</span>
                      <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1FAIN_text"></span>
                     <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DE4TU_new"></span> 
                   </div>
@@ -1059,7 +1068,7 @@
             generateTableAndApplyInfiniteScroll("tblreviewIntellicheck", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
 
           $("#CenPH__lb_SFLCTL__lb_2ITNB_new").ForceNumericOnly();
-$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").ForceNumericOnly();
+		  $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").ForceNumericOnly();
              var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
                 a = selectId.split(".");
@@ -1068,7 +1077,7 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").ForceNumericOnly();
             }
            if($("#CenPH__lb_RCDDTL1__lb_1FAIN").is('input'))
            {
-
+			
             $("#CenPH__lb_RCDDTL1__lb_1FAIN_text").hide();
             $("#CenPH__lb_RCDDTL1__lb_1FAIN_new").show();
            }
