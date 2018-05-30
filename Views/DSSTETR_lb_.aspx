@@ -1615,9 +1615,9 @@
                 $(".OverlayPopupBackground").show();
                 $(".confirmation-outer-conatiner").show();
 				$("#CenPH__lb_SFLCTL__lb_1FLST_new").hide();
-				$("#yes").attr('disabled', 'disabled');
-          $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
-          _00('Enter', event);
+				//$("#yes").attr('disabled', 'disabled');
+          //$("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+          //_00('Enter', event);
 				$('[id^="CenPH__lb_SFLRCD__lb_2SEL\\."]').each(function(i){
 					$("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text($("#CenPH__lb_SFLRCD__lb_2SEL\\."+i).text()=="4"?"Cancel":"Active");
           
@@ -1632,10 +1632,10 @@
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
-            /*$("#yes").click(function(event) {
+            $("#yes").click(function(event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                 _00('Enter', event);
-            });*/
+            });
             $("#no").click(function(event) {
                 $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
 				$("#CenPH__lb_SFLCTL__lb_1FLST_new").show();

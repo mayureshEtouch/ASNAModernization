@@ -179,7 +179,17 @@
                         </div>
                       </div>
                       <!-- 6 col ends here -->      
-
+						 <!-- 6 col starts here -->
+                      <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                        <div class="content-grid mdl-grid">
+                          <div  class="mdl-cell mdl-cell--4-col  mdl-cell--4-col-tablet" style="margin: 0"> <span class="form-label">eSign:</span> </div>
+                          <div  class="mdl-cell mdl-cell--8-col  mdl-cell--4-col-tablet" style="margin: 0"> 
+                          <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_SFLCTL__lb_CIYS_lb_new"></span>
+                          
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 6 col ends here --> 
 					  <!-- 6 col starts here -->
                      <!-- <div class="mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
                         <div class="content-grid mdl-grid">
@@ -277,6 +287,7 @@
                 "CenPH__lb_SFLCTL__lb_CEWTX": "CenPH__lb_SFLCTL__lb_CEWTX_new",// Pin
 				"CenPH__lb_SFLCTL__lb_PAOTX":"CenPH__lb_SFLCTL__lb_PAOTX_new",
 				"CenPH__lb_SFLCTL__lb_CEUTX":"CenPH__lb_SFLCTL__lb_CEUTX_new",
+				"CenPH__lb_SFLCTL__lb_CIYS_lb_":"CenPH__lb_SFLCTL__lb_CIYS_lb_new"
 				//"CenPH__lb_SFLCTL__lb_CIYS_lb_":"CenPH__lb_SFLCTL__lb_CIYS_lb_ro"
               },
               "inputFields": {
@@ -422,8 +433,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 04/13/18  Time  : 14:43:26                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 05/24/18  Time  : 08:19:10                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -518,6 +529,8 @@
           <%--  Address: State.                                                                                                  --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
           <%--  Nbr: Phone Home                                                                                                  --%>
+          <%--  STS: Yes/No                                                                                                      --%>
+          <%--  STS: Yes/No                                                                                                      --%>
           <%--  Nbr: Phone Work                                                                                                  --%>
           <%--  Nbr: Phone Work                                                                                                  --%>
           <%--  Phone: Bus Extension.                                                                                            --%>
@@ -574,7 +587,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,17" 
  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
               style="position: absolute; left: 532px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -608,7 +621,7 @@
               VirtualRowCol="2,59" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 622px; top: 27px;"
               Text="CHANGE " 
               CssClass="DdsConstant"
@@ -1010,6 +1023,20 @@
               VirtualRowCol="12,13" 
               EditWord="   /   -    " 
  />
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+              style="position: absolute; left: 397px; top: 267px;"
+              Text="eSign" 
+              VisibleCondition="!88"
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIYS_lb_" runat="server" style="position: absolute; left: 451px; top: 264px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#CIYS#" 
+              VisibleCondition="!88 & !( 77 )"
+              Usage="OutputOnly" 
+              VirtualRowCol="12,50" 
+ />
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 19px; top: 291px;"
               Text="Work Phone" 
@@ -1037,11 +1064,11 @@
               Length="4" 
               Decimals="0" 
               Alias="#CEONB" 
-              VisibleCondition="!88 & !( 77 )"
+              VisibleCondition="!88 & !( 76 )"
               Usage="OutputOnly" 
               VirtualRowCol="13,28" 
  />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
               style="position: absolute; left: 397px; top: 291px;"
               Text="Location . . . :" 
               VisibleCondition="!88"
@@ -1233,12 +1260,12 @@
           <%--  Command key text                                                                                                 --%>
           <%--  Command key text 2                                                                                               --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="F3=Exit                                                            F12=Return" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
               style="position: absolute; left: 19px; top: 27px;"
               Text=" " 
               CssClass="DdsConstant"
@@ -1253,7 +1280,7 @@
             Protect="*True" 
           >&nbsp;
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 577px; top: 3px;"
               Text="CONFIRM:" 
               CssClass="DdsConstant"
@@ -1273,7 +1300,7 @@
               VirtualRowCol="24,73" 
               ErrorMessageId="Y2U0014 Y2USRMSG : 96" 
               TabIndex="2"  />
-            <mdf:DdsConstant id="DdsConstant19" runat="server" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 676px; top: 3px;"
               Text="(Y/N)" 
               CssClass="DdsConstant"
