@@ -125,7 +125,7 @@
                                         <tr class="exchange-prod-row selected" data-selectid="CenPH__lb_RCDDTL1__lb_DI2TX">
                                             <td id="CenPH__lb_RCDDTL1__lb_1AUST_new"></td>
                                             <td class="editable-field">
-                                                <select name="" style="width: 50px;" id="CenPH__lb_RCDDTL1__lb_1AIST_new">
+                                                <select name="" class="del-status" id="CenPH__lb_RCDDTL1__lb_1AIST_new">
                                                     <option selected="selected" value=" ">   </option>
                                                     <option value="EX">EX - Warehouse to pickup</option>
                                                     <option value="RT">RT - Returned to store</option>
@@ -153,7 +153,7 @@
                                         <tr class="exchange-prod-row" data-selectid="CenPH__lb_RCDDTL1__lb_DI3TX">
                                             <td id="CenPH__lb_RCDDTL1__lb_DC4ST_new"></td>
                                             <td class="editable-field">
-                                                <select name="" style="width: 50px;" id="CenPH__lb_RCDDTL1__lb_DC5ST_new" class="editable-field">
+                                                <select name="" id="CenPH__lb_RCDDTL1__lb_DC5ST_new" class="editable-field del-status">
                                                     <option selected="selected" value=" ">   </option>
                                                     <option value="PU">PU - Customer pickup</option>
                                                     <option value="TK">TK - Taken from store</option>

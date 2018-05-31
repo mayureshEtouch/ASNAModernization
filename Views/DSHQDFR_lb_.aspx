@@ -107,11 +107,11 @@
                     </div>
                     <div class="button-container">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--6-col-desktop">
+                            <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--2-col-tablet">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" event-data="F12">Previous</span>
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit" event-data="F3">Exit</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--6-col-desktop pull-right">
+                            <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet pull-right">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F7" id="">Select Completed Order</span>
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F8" id="">Progressive Order</span>
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
@@ -130,7 +130,14 @@
         #orders tbody > tr:hover {
           cursor: pointer;
         }
-
+		@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+		.button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+		padding: 6px 10px;
+		}
+}
         </style>
             <script type="text/javascript">
             var copyToAndFrom = {

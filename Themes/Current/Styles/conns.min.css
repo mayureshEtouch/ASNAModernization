@@ -296,7 +296,7 @@ textarea{width:99%;border:1px solid #c5c5c5}
 tr.selected{background-color:#d8d8d8!important}
 .mdl-checkbox.is-checked .mdl-checkbox__box-outline{border:2px solid #e32527}
 .status{font-size:12px}
-.del-status{width:48px;white-space:nowrap}
+.del-status{width:50px;white-space:nowrap}
 .order-detail-table-data .button-container .mdl-grid,.table-data-content-container .button-container .mdl-grid{padding:0}
 .order-detail-table-data .button-container .mdl-cell,.table-data-content-container .button-container .mdl-cell{margin:0 8px 3px}
 .copyright{bottom:0;position:fixed;width:100%;z-index:1}

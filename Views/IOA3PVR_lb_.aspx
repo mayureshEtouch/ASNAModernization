@@ -672,10 +672,11 @@
 
             .Page_PopUpNewClass {
               margin-left: -300px;
-              min-width: 1000px !important;
-              width: 1000px !important;
+              min-width: 600px !important;
+              width: 600px !important;
               top: 15% !important;
-              left: 38% !important;
+              left: 50% !important;
+			  background-color: transparent;
             }
         </style>
         <script>

@@ -1429,7 +1429,7 @@ tr.selected {
 	font-size: 12px;
 }
 .del-status {
-	width: 48px;
+	width: 50px;
 	white-space: nowrap;
 }
 .order-detail-table-data .button-container .mdl-grid, .table-data-content-container .button-container .mdl-grid {

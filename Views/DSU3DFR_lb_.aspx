@@ -136,12 +136,12 @@
                         </div>
 						<div class="button-container">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop">
+                                    <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop">
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous" data-upgraded=",MaterialButton,MaterialRipple">Previous<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">Exit</span>
                                     </div>
 
-                                    <div class="mdl-cell mdl-cell--3-col mdl-cell--6-col-desktop pull-right">
+                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--6-col-desktop pull-right">
                                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" event-data="F8" id="">Progressive Order</span>
                                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next" data-upgraded=",MaterialButton,MaterialRipple">Next<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></span>
                                         <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Prompt</span> -->
