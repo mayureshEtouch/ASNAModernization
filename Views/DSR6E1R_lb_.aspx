@@ -1111,7 +1111,7 @@
                   $(".confirmation-outer-conatiner").hide();
                   $(".OverlayPopupBackground").hide();
               }
-              /*$("#yes").click(function (event) {
+             /* $("#yes").click(function (event) {
                   $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
                   _00('Enter', event);
               });*/

@@ -671,9 +671,10 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("body").css({ "background-color": "#FFFFFF" });
+			  $("#CenPH__lb_RCDDTL1__lb_DI2TX").val("1");
               $("#time").html("&nbsp;" + $("#time").html());
               $("body").css({ "background-color": "#FFFFFF" });
-              $('body').on('click', '#canceldetail tbody tr', function () {
+				$('body').on('click touchstart', '#canceldetail tbody tr', function () {
                 $("#canceldetail tbody tr:even").css("background-color", "#fff");
                 $("#canceldetail tbody tr:odd").css("background-color", "#f9f9f9");
                 $(this).css({ "background-color": "#d8d8d8" });
@@ -690,7 +691,7 @@
                 }
             });
 
-              $(document).on('hover','#canceldetail tr', function() {
+            $(document).on('hover','#canceldetail tr', function() {
                      $(this).css("cursor","pointer");
               });
               var tr="<tr>";
@@ -702,7 +703,7 @@
               $("#canceldetail tbody tr").dblclick(function (event) {
                  _00("Enter", event);
               });
-
+				
               $('#Submit').click(function (event) {
                 _00("Enter", event);
               });
