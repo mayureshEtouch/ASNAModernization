@@ -1342,7 +1342,21 @@
             });
             //Handle next button click event
             $("#nextPage").on("click", function (event) {
-                _00("Enter", event);
+				var counterPrompt = 0
+				$("input[id^='CenPH__lb_SFLRCD__lb_RNICD']").each(function() {
+					if ($(this).val() == "?"){
+						counterPrompt=counterPrompt+1;
+						console.log('ID '+this.id);
+						$(this).focus();
+						_07(this.id,'#RNICD','17,5','#SFLRCD','#SFLRCD');
+						 _00('F4', event);
+						 
+					}
+				});
+				if(counterPrompt==0){
+						console.log("Counte Prompt else "+ counterPrompt);
+						_00("Enter", event);
+				}
             });
             //F12 event
             $("#exitPage").on("click", function (event) {
