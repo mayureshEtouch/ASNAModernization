@@ -130,7 +130,7 @@
 					<!--<input class="lbl-width50" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new" onfocus="_09('#1FAIN','12,28','#RCDDTL1');" maxlength="2">-->
 					<select class="lbl-width100" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new">
 					<option value="" selected>Please Choose</option>
-					<option value="CI">Continuous-Approval Call CG</option>
+					<option value="CI">Non Scannable ID - Call CG</option>
 					<option value="DL">Driving License</option>
 					<option value="MI">Military ID Card</option>
 					<option value="SI">State ID Card</option>
