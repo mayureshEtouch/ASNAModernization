@@ -194,16 +194,25 @@
                         </a></li>
                         <li class="_item"><a data-menu="29" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
                         </a></li>
-                        <li class="_item"><a data-menu="23" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work Sales Prospects</p>
+                        <li class="_item"><a data-menu="23" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work Sales Process</p>
                         </a></li>
-                        <li class="_item"><a data-menu="17" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Vendor Promos</p>
+                        <!-- <li class="_item"><a data-menu="17" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Vendor Promos</p>
                         </a></li>
                         <li class="_item"><a data-menu="27" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>User Help Screen</p>
                         </a></li>
                         <li class="_item"><a href="#"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Ads</p>
-                        </a></li>                        
+                        </a></li> -->
+						<li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=b57c1b58-ea08-4a83-93e6-1d666b93fb9a" target="_blank" ><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Supporting Documents Form</p>
+
+                        </a></li>
+						<li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=7db90d0c-83f0-42fa-9b7e-e21e0848acfb" target="_blank" ><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Personal Property Insurance Form</p>
+
+                        </a></li>
+						<li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8435b610-f36b-4041-a840-3f9ad80c667c" target="_blank" ><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Power of Attorney Certification</p>
+
+                        </a></li>
                     </ul>
                     <!-- back-content ends here -->
                 </div>

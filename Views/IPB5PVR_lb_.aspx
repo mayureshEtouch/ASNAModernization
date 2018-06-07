@@ -126,19 +126,19 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">ID Type:</span> </div>
                                     <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> 
-                    <span id="CenPH_PANTX">
-					<!--<input class="lbl-width50" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new" onfocus="_09('#1FAIN','12,28','#RCDDTL1');" maxlength="2">-->
-					<select class="lbl-width100" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new">
-					<option value="" selected>Please Choose</option>
-					<option value="CI">Non Scannable ID - Call CG</option>
-					<option value="DL">Driving License</option>
-					<option value="MI">Military ID Card</option>
-					<option value="SI">State ID Card</option>
-					</select>
-					</span>
-                     <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1FAIN_text"></span>
-                    <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DE4TU_new"></span> 
-                  </div>
+										<span id="CenPH_PANTX">
+										<!--<input class="lbl-width50" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new" onfocus="_09('#1FAIN','12,28','#RCDDTL1');" maxlength="2">-->
+										<select class="lbl-width100" type="text" data-tb-index="1"  id="CenPH__lb_RCDDTL1__lb_1FAIN_new">
+										<option value="" selected>Please Choose</option>
+										<option value="CI">Non Scannable ID - Call CG</option>
+										<option value="DL">Driving License</option>
+										<option value="MI">Military ID Card</option>
+										<option value="SI">State ID Card</option>
+										</select>
+										</span>
+									 <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_1FAIN_text"></span>
+									<span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH__lb_RCDDTL1__lb_DE4TU_new"></span> 
+								  </div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -169,6 +169,17 @@
 
 
 
+                                </div>
+                            </div>
+                            <!-- 4 col ends here -->
+							
+							 <!-- 4 col starts here -->
+							 <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                                <div class="content-grid mdl-grid">
+                                    <div class="mdl-cell mdl-cell--6-col" style="margin: 0;"> </div>
+                                    <div class="mdl-cell mdl-cell--6-col button-container" style="margin: 0;"> 
+										<a  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" disabled="disabled" id="docuSignAnchor" style="color: #fff;" target="_blank">Send Photo ID to CG</a> 
+									</div>
                                 </div>
                             </div>
                             <!-- 4 col ends here -->
@@ -1223,7 +1234,17 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
                 $(".simplePopupBackground1").hide();
                 $("#error").text($("#CenPH__lb_MSGRCD_MSGKEY\\.0").text());
               }
-
+			$("#CenPH__lb_RCDDTL1__lb_1FAIN_new").change(function() {
+				var item=$(this);
+				if(item.val()=='CI'){
+					$("#docuSignAnchor").removeAttr('disabled');
+					$("#docuSignAnchor").attr('href','https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=b57c1b58-ea08-4a83-93e6-1d666b93fb9a');
+				}
+				else{
+					$("#docuSignAnchor").attr('disabled','disabled');
+					$("#docuSignAnchor").removeAttr('href');
+				}
+			});
 
         });
       </script>
@@ -1231,7 +1252,18 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
            @media only screen and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
             .table-data-wrapper {
                 margin-bottom: 50px !important; 
-            }
-        }
+				}				
+			}
+			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+			.lbl-width50 {
+				width: 120px;
+			}
+			}
+			.button-container a.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+				margin: 0 5px 0 2px;
+			}		
+			#docuSignAnchor:visited, #docuSignAnchor:link{
+				color: #f7f7f7 !important;
+			}			
       </style>
     </asp:Content>
