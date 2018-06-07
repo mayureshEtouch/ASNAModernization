@@ -195,7 +195,7 @@ height: 70px;
 .material-icons.square-icon {
 border:solid 2px #e32527;
 height:10px;
-margin:10px 0 0 5px;
+margin:6px 0 0 5px;
 width:10px
 }
 
@@ -205,7 +205,7 @@ margin:0 15px 15px
 
 .mdl-layout__content ._title {
 font-size:25px;
-line-height:30px;
+line-height:28px;
 margin:15px 5px 15px 10px
 }
 
@@ -219,8 +219,10 @@ border-bottom:none
 
 ._item a p {
 display:inline-block;
-margin:5px 0 5px 10px;
-vertical-align:top
+margin:3px 0 3px 10px;
+vertical-align:top;
+line-height: 22px;
+font-size:12px;
 }
 
 
@@ -231,8 +233,10 @@ margin-top:0
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
 ._item a p {
-margin:5px 0 5px 7px;
-font-size:12px
+margin:3px 0 3px 7px;
+font-size:12px;
+line-height: 22px;
+width: 85%;
 }
 }
 
