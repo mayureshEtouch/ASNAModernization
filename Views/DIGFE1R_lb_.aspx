@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="DIGFE1R_lb_.aspx.cs" Inherits="Conns.DIGFE1R_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
-<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=12.0.49.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
+<%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 8/20/2017 at 6:37 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
@@ -352,7 +352,7 @@
     </main>
 
 
-             <div id="modal" class="simplePopup" ></div>
+             <div id="modal1" class="simplePopup" ></div>
             <div id="confirmprompt" class="confirmation-outer-conatiner" style="z-index: 2; display: none;">
               <i class="material-icons md-15 md-light help-icon"></i> <span class="confirmation-text">Do you want to continue</span>
               <div class="button-container">
@@ -1333,14 +1333,14 @@
 
                
                 
-				 if($(".simplePopupClose").length > 0) {
-                 $(".simplePopupBackground1").show();
-			   } else {
-				   $(".simplePopupBackground1").hide();
-			   }
-			   $("body").on("click", ".simplePopupClose", function() {
-				   $(".simplePopupBackground1").hide();
-			   });
+				 if($("#__Page_PopUp .simplePopupClose").length > 0) {
+					$(".simplePopupBackground1").show();
+				} else {
+					$(".simplePopupBackground1").hide();
+				}
+				$("body").on("click", ".simplePopupClose", function() {
+					$(".simplePopupBackground1").hide();
+				});
 			   
                $("#CenPH__lb_RCDKEY__lb_1ALNB_new").ForceNumericOnly();
 				$("#state").text($("[id$=CenPH__lb_RCDDTL1__lb_DAQTX]").text());

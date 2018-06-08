@@ -98,6 +98,7 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
+									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
@@ -863,6 +864,13 @@
             });
             $('body').on('click', '#next', function (event) {
                 _00('Enter', event);
+            });
+			$('body').on('click', '#prompt', function (event) {
+				$("input[id^='CenPH__lb_SFLRCD__lb_RGPTX']").each(function() {
+					$(this).val('?');
+					_07(this.id,'#RGPTX','10,55','#SFLRCD','#SFLRCD');
+					_00('Enter', event);
+			    });
             });
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {

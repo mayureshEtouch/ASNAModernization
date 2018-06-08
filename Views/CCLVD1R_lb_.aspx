@@ -94,10 +94,11 @@
                     </div> -->
                     <div class="button-container" style="padding: 0">
                         <div class="content-grid mdl-grid" style="padding-bottom: 5px">
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-left" style="padding-bottom: 0">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet pull-left" style="padding-bottom: 0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span>
+								<a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="hrefAnchor" href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=7db90d0c-83f0-42fa-9b7e-e21e0848acfb" target="_blank">Send Property Insurance to CG</a>
                             </div>
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop pull-right" style="padding-bottom: 0">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right" style="padding-bottom: 0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ok">ok</span>
                             </div>
                         </div>
@@ -987,5 +988,11 @@
         .DdsInlinePopUpTitle {
             height: 0px !important;
         }
+		#docuSignAnchor:visited, #docuSignAnchor:link{
+			color: #f7f7f7 !important;
+		}
+		a.mdl-button--raised:focus:not(:active){
+			box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+		}
     </style>
 </asp:Content>
