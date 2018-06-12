@@ -98,7 +98,7 @@
                             <div class="content-grid mdl-grid">
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--7-col-desktop">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span>
-									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span>
+									<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">Prompt</span> -->
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="next">Next</span>
@@ -736,6 +736,22 @@
 		padding: 6px 10px 6px;
 		line-height:normal;
 	}
+	#warranty-term-list .button-container {
+		display: inline-block;
+		margin: -3px 5px 0;
+		padding: 0;
+	}
+	#warranty-term-list .button-container .mdl-button--accent.mdl-button--accent.mdl-button--raised, #warranty-term-list .button-container .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+		padding: 5px 12px;
+	}
+	@media only screen 
+	and (min-device-width: 768px) 
+	and (max-device-width: 1024px) 
+	and (-webkit-min-device-pixel-ratio: 1) {
+		#warranty-term-list th:nth-child(4) {
+			width: 25%;
+		}
+	}	
 	</style>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -758,6 +774,7 @@
                     srNumberSelector = "#CenPH__lb_SFLRCD__lb_1A8TX\\.",
                     mwExpDateSelector = "#CenPH__lb_SFLRCD_VRBADT\\.",
                     wTermSelector = "#CenPH__lb_SFLRCD__lb_RGPTX\\.",
+					 wTermSelectorBtn = "btn_CenPH__lb_SFLRCD__lb_RGPTX.",
                     wPriceSelector = "#CenPH__lb_SFLRCD__lb_1AIPR\\.",
                     ewExpDateSelector = "#CenPH__lb_SFLRCD_VRA9DT\\.";
               
@@ -765,7 +782,7 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
                         if ($(wTermSelector + count).attr("value") == "" || ($(wTermSelector + count).attr("value") && $(wTermSelector + count).attr("value").length > 0)) {
-                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '>';
+                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '> <span class="button-container"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="' + (wTermSelectorBtn + count) + '">Prompt</span></span>';
                         } else {
                             termBox = $(wTermSelector + count).html();
                         }
@@ -872,6 +889,22 @@
 					_00('Enter', event);
 			    });
             });
+			
+			//Handling Prompt Button Start
+			$('body').on('click touchstart', 'span[id^="btn_CenPH__lb_SFLRCD__lb_RGPTX"]', function (event) {
+				var idPrompt = this.id; 
+				idPrompt=idPrompt.replace('btn_','');
+				idPrompt=idPrompt.replace('.','\\.');
+				//idPrompt="'#"+idPrompt+"'";
+				console.log(idPrompt);
+				$("#" + idPrompt).val('?');
+				_07(idPrompt,'#RGPTX','10,55','#SFLRCD','#SFLRCD');
+				_00('Enter', event);
+			    
+            });
+			//Handling Prompt Button End
+			
+			
             // Handle the confirm prompt
             if ($("#CenPH__lb_CONFIRM_V_lb_CFCD").length > 0) {
                 $(".OverlayPopupBackground").show();
@@ -895,5 +928,3 @@
         $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>
 </asp:Content>
-
-

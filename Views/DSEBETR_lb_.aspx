@@ -166,11 +166,11 @@
                         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="payment-method">
                             <thead>
                                 <tr>
-                                    <th width="20%">Payment Method</th>
+                                    <th width="25%">Payment Method</th>
                                     <th width="20%">Amount ($)</th>
                                     <th width="20%">Reference</th>
                                     <th width="20%">Approval Code</th>
-                                    <th width="20%">Status</th>
+                                    <th width="15%">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1180,7 +1180,7 @@
         }
 
         #CenPH__lb_SFLRCD > div input, #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
-            width: 12% !important;
+            width: 12%;
             display: table-cell;
             float: left;
             padding: 1px 3px 2px !important;
@@ -1188,7 +1188,9 @@
             margin-left: 10px;
             margin-right: 0;
         }
-
+		#CenPH__lb_SFLRCD > div input {
+			margin-right: 7px !important;
+		}
         #CenPH__lb_SFLRCD .DdsCharField_OutputOnly, #CenPH__lb_SFLRCD .DdsDecField_OutputOnly {
             padding: 1px 4px 2px !important;
         }
@@ -1212,7 +1214,14 @@
             float: right;
             width: 16% !important;
         }
-
+		
+		#enterPayment select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD.'] {
+			position: absolute !important;
+			left: 22px;
+		}
+		#CenPH__lb_SFLRCD input[id^="CenPH__lb_SFLRCD__lb_2ATVA"] + .blank-space {
+			margin-left: 0;
+		}
         .DdsDecField_OutputOnly, .DdsCharField_OutputOnly {
             margin-left: 10px;
             float: left;
@@ -1231,10 +1240,16 @@
             font-weight: normal !important;
         }
 
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
             #orderPayment {
                 height: 920px;
             }
+			#enterPayment select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD.'] {
+				width: 150px !important;
+			}
+			#CenPH__lb_SFLRCD > div input {
+				margin-right: 6px !important;
+			}
         }
     </style>
     <script>
@@ -1406,12 +1421,25 @@
                 var mainWidth = $("#payment-method th:first-child").width();
                 var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
                 var blankWidth = mainWidth - inputWidth + 2;
-                $("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right", blankWidth);
-                $("div[id^='CenPH__lb_SFLRCD_']").children('.payment, .amount, .reference, .approval-code').css("margin-right", blankWidth);
+				var firstColumn = $("#payment-method th:first-child").outerWidth();
+				var amountWidth = $("#payment-method thead th:nth-child(2)").width();
+				var refWidth = $("#payment-method thead th:nth-child(3)").width()
+				var aprovalWidth = $("#payment-method thead th:nth-child(4)").width()
+				
+				
+                //$("div[id^='CenPH__lb_SFLRCD_']").children('input').css("margin-right", blankWidth);
+                $("div[id^='CenPH__lb_SFLRCD_']").children('.amount, .reference, .approval-code').css("margin-right", "7px");
+				
+				$("div[id^='CenPH__lb_SFLRCD_'] .blank-space:first-of-type").css("marginLeft", firstColumn);
+				$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("width",amountWidth-5);
+				$('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').css("width",refWidth-5);
+				$('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').css("width",aprovalWidth-5);
+				
             }
 			
 			function dealycodeInst(keycode) {
 					var inpe = jQuery.Event("keydown");
+					console.log(inpe);
 					inpe.which = keycode;
 					
 					try{
@@ -1419,6 +1447,7 @@
 						renderPage(true);
 					}
 					catch(e){
+						
 						renderPage(true);
 					}
 				}
@@ -1441,21 +1470,103 @@
             $('body').on('keyup keydown', function (event) {
                 var keycode = event.keycode || event.which;
                 if (keycode === 33) {
+					console.log("prev body")
                     renderPage(true);
                 } else if (keycode === 34) {
                     renderPage(true);
                 }
                 return;
             });
-            $('body').on("click touchstart touchend", "#sp-next-page", function (event) {
+            $('body').on("click", "#sp-next-page", function (event) {
+			
                setTimeout(function () { dealycodeInst(34); }, 1000);
+			    setTimeout(function () {  
+					getPaymentDropDown();
+			   }, 1000);
+			   
             });
-            $('body').on("click touchstart touchend", "#sp-previous-page", function (event) {
-                setTimeout(function () { dealycodeInst(33); }, 1000);
+            $('body').on("click", "#sp-previous-page", function (event) {
+				
+                setTimeout(function () { 
+					dealycodeInst(33);
+					console.log("prev button")
+									
+				}, 1000);
+				 setTimeout(function () { 
+					getPaymentDropDown();
+				
+				}, 1000);
+				
+				
             });
             $(window).resize(function () {
-                renderPage(false);
+			
+					 renderPage(false);
+				
+				
+               
             })
+			function getPaymentDropDown(){
+				$("div[id^='CenPH__lb_SFLRCD_']").each(function (i) {
+					var divThisID= this.id;
+					var thisID;
+					//$("#"+ divThisID).append('<select id='+thisID+'><option value="CS">CS</option></select>');
+					//$("input[id^='CenPH__lb_SFLRCD__lb_RNICD']").each(function(i){
+					var repthisID =	$('#'+divThisID+' input').eq(0).attr("id");
+					thisID=repthisID.replace('.','\\.');
+					$("#"+ thisID).prop("type","hidden");
+					//});
+					//console.log(divThisID);
+					var selectID="ddl_"+repthisID;
+					$("#"+ divThisID).append('<select class="DdsCharField payment"  id='+selectID+'>\
+					<option selected value="">Please choose</option>\
+					<option  value="IL">IL - CONN\'S INSTALLMENT</option>\
+					<option  value="IY">IY - IL 12MO CSH OPT</option>\
+					<option  value="CS">CS - CASH ENTRY</option>\
+					<option  value="GE">GE - GENERAL ELECTRIC</option>\
+					<option  value="BC">BC - BANK CONVERSION</option>\
+					<option  value="CB">CB - CREDIT BUILDERS</option>\
+					<option  value="CK">CK - CHECK PAYMENT</option>\
+					<option  value="CM">CM - CREDIT MEMO</option>\
+					<option  value="DI">DI - DISCOVER CARD</option>\
+					<option  value="DP">DP - DEFERED PAYMENT</option>\
+					<option  value="EN">EN - TRS</option>\
+					<option  value="GC">GC - GIFT CERTIFICATE</option>\
+					<option  value="HL">HL - TRS </option>\
+					<option  value="IC">IC - INSTANT CREDIT</option>\
+					<option  value="IP">IP - INSURANCE PMT</option>\
+					<option  value="I3">I3 - IL 3 MO CSH OPT</option>\
+					<option  value="I6">I6 - IL 6 MO CSH OPT</option>\
+					<option  value="MC">MC - MASTERCARD</option>\
+					<option  value="OF">OF - OPPORTUNITY FINANCE</option>\
+					<option  value="OY">OY - OFC 12MO CSH OPT</option>\
+					<option  value="O6">O6 - OFC 6 MO CSH OPT</option>\
+					<option  value="RF">RF- REFUND PMT</option>\
+					<option  value="SC">SC - SERVICE CONTRACTS</option>\
+					<option  value="SF">SF - RESTOCKING FEE</option>\
+					<option  value="TD">TD - THIRTY DAY DELAY</option>\
+					<option  value="TE">TE - TAX EXEMPT PMT</option>\
+					<option  value="UN">UN - UNAPPLIED IL PYMT</option>\
+					<option  value="VS">VS - VISA CARD</option>\
+					<option  value="18">18 - 18 MONTH CASH OPTION</option>\
+					<option  value="2Y">2Y - 24 MONTH CASH OPTION</option>\
+					<option  value="30">30 - 30 MONTH CASH OPTION</option></select>');
+					selectID=selectID.replace('.','\\.')				
+					$("#"+ selectID).css("margin",'3px 0 0 10px',"important");
+				});
+			
+			}
+			
+				getPaymentDropDown();
+			
+			$("select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD']").change(function() {
+				var ddlID=this.id;
+				ddlID=ddlID.replace('ddl_','');
+				ddlID=ddlID.replace('.','\\.');
+				$('#'+ddlID).val($(this).val());
+				console.log(ddlID);
+			});
+			
         });
     </script>
 </asp:Content>
