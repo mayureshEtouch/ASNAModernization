@@ -1558,6 +1558,16 @@
 			}
 			
 				getPaymentDropDown();
+				
+				$("input[id^='CenPH__lb_SFLRCD__lb_RNICD']").each(function (i) {
+					var thisIDHidden = this.id;
+					thisIDHidden= thisIDHidden.replace('.','\\.');
+					var dropDownID="ddl_"+thisIDHidden;
+					if($("#"+thisIDHidden).val()){
+						$("#"+dropDownID).val($("#"+thisIDHidden).val());
+					}
+					
+				});
 			
 			$("select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD']").change(function() {
 				var ddlID=this.id;

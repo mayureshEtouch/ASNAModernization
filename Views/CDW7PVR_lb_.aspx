@@ -820,6 +820,9 @@
             }
 
             #Div1{    margin-top: 61%;}
+			#main-content {
+				min-height: 320px !important;
+			}
        </style>
 
         <script type="text/javascript">

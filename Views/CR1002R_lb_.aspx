@@ -847,6 +847,15 @@
                 </div>
               </div>
               <!-- 4 col ends here --> 
+			  
+			  <!-- 4 col starts here -->
+              <div class="mdl-cell mdl-cell--4-col">
+                <div class="content-grid mdl-grid">
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span class="form-label">Interest Rate:</span> </div>
+                  <div  class="mdl-cell mdl-cell--6-col" style="margin: 0;"> <span data-upgraded=",MaterialTextfield" class="form-text" id="CenPH_DSPFMT2_CRINRO_new"></span></div>
+                </div>
+              </div>
+              <!--4 col ends here --> 
               
               <!-- 4 col starts here -->
               <div class="mdl-cell mdl-cell--4-col">
@@ -940,14 +949,15 @@
   <div id="modal" class="simplePopup"></div>
   
   <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display:none;">
-    <%-- %%TS  SD  20000505  122847  COOL3       REL-V4R2M0  5769-PW1                                                      --%>
-    <%-- ===============================================================                                                   --%>
-    <%--   PROGRAM : CR1002R#        WRITTEN  05/04/89                                                                     --%>
-    <%--      CALCULATE AND PRINT CREDIT CONTRACTS                                                                         --%>
-    <%-- ===============================================================                                                   --%>
-    <%-- %%EC                                                                                                              --%>
-    <mdf:DdsRecord id="_DSPFMT0" runat="server" 
+         <div id="Div1" style="display:none;">
+            
+      <%-- %%TS  SD  20180522  022004  APOTTI      REL-V7R1M0  5770-WDS                                                      --%>
+      <%-- ===============================================================                                                   --%>
+      <%--   PROGRAM : CR1002R#        WRITTEN  05/04/89                                                                     --%>
+      <%--      CALCULATE AND PRINT CREDIT CONTRACTS                                                                         --%>
+      <%-- ===============================================================                                                   --%>
+      <%-- %%EC                                                                                                              --%>
+          <mdf:DdsRecord id="_DSPFMT0" runat="server" 
             style="position: relative; width: 729px; height: 552px" 
             Alias="DSPFMT0"
             CssClass="DdsRecord"
@@ -1510,6 +1520,8 @@
             EraseFormats="*ALL" 
           >&nbsp;
           <%-- %%TS  SD  20000505  122847  COOL3       REL-V4R2M0  5769-PW1                                                      --%>
+          <%--                                 20 39'A.P.R.           :'                                                         --%>
+          <%--            CRAPRO         5Y 2O 20 62EDTWRD('   .  ')                                                             --%>
             <mdf:DdsConstant id="DdsConstant40" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
               Text="CR1002RI" 
@@ -1520,7 +1532,7 @@
               Text="Conn Credit Corporation" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant78" runat="server" 
+            <mdf:DdsConstant id="DdsConstant79" runat="server" 
               style="position: absolute; left: 739px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -1537,7 +1549,7 @@
               Text="Time Payment Contract Print" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant79" runat="server" 
+            <mdf:DdsConstant id="DdsConstant80" runat="server" 
               style="position: absolute; left: 739px; top: 27px;"
               Text="*TIME" 
               CssClass="DdsConstant"
@@ -1890,16 +1902,30 @@
  />
             <mdf:DdsConstant id="DdsConstant68" runat="server" 
               style="position: absolute; left: 379px; top: 459px;"
-              Text="A.P.R.           :" 
+              Text="Interest Rate:" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsDecField id="DSPFMT2_CRAPRO" runat="server" style="position: absolute; left: 613px; top: 456px; width: 55px"
+            <mdf:DdsDecField id="DSPFMT2_CRINRO" runat="server" style="position: absolute; left: 541px; top: 456px; width: 55px"
+              CssClass="DdsDecField"
+              Length="5" 
+              Decimals="2" 
+              Alias="CRINRO" 
+              Usage="OutputOnly" 
+              VirtualRowCol="20,54" 
+              EditWord="   .  " 
+ />
+            <mdf:DdsConstant id="DdsConstant78" runat="server" 
+              style="position: absolute; left: 631px; top: 459px;"
+              Text="A.P.R.:" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsDecField id="DSPFMT2_CRAPRO" runat="server" style="position: absolute; left: 730px; top: 456px; width: 55px"
               CssClass="DdsDecField"
               Length="5" 
               Decimals="2" 
               Alias="CRAPRO" 
               Usage="OutputOnly" 
-              VirtualRowCol="20,62" 
+              VirtualRowCol="20,72" 
               EditWord="   .  " 
  />
             <mdf:DdsConstant id="DdsConstant55" runat="server" 
@@ -2009,8 +2035,9 @@
               MsgConLength="40" 
               CssClass="DdsConstant"
  />
-    </mdf:DdsRecord >
-  </div>
+          </mdf:DdsRecord >
+
+        </div>
 </asp:Content>
 <asp:Content ID="FileContent3" runat="server" ContentPlaceHolderID="MsgPH">
   <mdf:DdsMessagePanel ID="DdsMessagePanel1" Style="position: relative" runat="server" Height="64px"></mdf:DdsMessagePanel>
@@ -2154,7 +2181,8 @@
                 "CenPH_DSPFMT2_CRUE_usd_O": "CenPH_DSPFMT2_CRUE_usd_O_new",
                 "CenPH_DSPFMT2_CRPR_usd_O": "CenPH_DSPFMT2_CRPR_usd_O_new",
                 "CenPH_DSPFMT2_PRDS_usd_": "ctl00\\$CenPH\\$DSPFMT2_CRLPYO_new",
-                "ctl00\\$CenPH\\$DSPFMT2_CRLPYO": "CenPH_DSPFMT2_PRDS_usd_new"
+                "ctl00\\$CenPH\\$DSPFMT2_CRLPYO": "CenPH_DSPFMT2_PRDS_usd_new",
+				"CenPH_DSPFMT2_CRINRO":"CenPH_DSPFMT2_CRINRO_new"
 
             },
             "inputFields": {

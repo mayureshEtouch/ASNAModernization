@@ -44,10 +44,10 @@
                     <ul class="_list">
                         <li class="_item"><a href="javascript:void(0);"  data-menu="6"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Calculate Credit Contract</p>
                         </a></li>
-                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
+                      <!--    <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Short GE Application</p>
-                        </a></li>
+                        </a></li> -->
                     </ul>
                     <!-- back-content ends here -->
                 </div>
@@ -106,14 +106,14 @@
                     <ul class="_list">
                         <li class="_item"><a href="#" data-menu="4" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Deliveries</p>
                         </a></a></li>
-                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
-                        </a></li>
+                      <!--  <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
+                        </a></li>-->
                         <li class="_item"><a data-menu="11" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Model</p>
                         </a></li>
                         <li class="_item"><a data-menu="13" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
                         </a></li>
-                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
-                        </a></li> 
+                        <!--   <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
+                        </a></li> -->
                     </ul>
                     <!-- back-content ends here -->
                 </div>
@@ -134,14 +134,14 @@
                         <h2 class="_title">Misc. Customer Service</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                          <!-- <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
-                        </a></li>
+                        </a></li>-->
                         <li class="_item"><a href="javascript:void(0);"  data-menu="8"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Information</p>
                         </a></li>
                     </ul>
@@ -164,14 +164,14 @@
                         <h2 class="_title">Incomplete Orders</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                      <!--  <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
-                        </a></li>
+                        </a></li>-->
                         <li class="_item" ><a href="javascript:void(0);" data-menu="15"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Incomplete Sales</p>
                         </a></li>
                     </ul>
@@ -200,8 +200,8 @@
                         <li class="_item"><a href="javascript:void(0);" data-menu="19"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Work Intellicheck Scan</p>
 
                         </a></li>
-                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
-                        </a></li>
+                       <!--  <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
+                        </a></li> -->
                         <!--  <li class="_item" id="worksheet-sales-order"><a data-menu="25" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Worksheet Sales Process</p>
                         </a></li> -->
                          <li class="_item"><a href="javascript:void(0);" data-menu="25"><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Worksheet Sales Process</p>
