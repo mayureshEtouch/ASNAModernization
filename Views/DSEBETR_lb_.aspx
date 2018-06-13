@@ -116,8 +116,8 @@
                         <span class="form-label">Requested Delivery Date:</span>
                     </div>
                     <div class="mdl-cell mdl-cell--2-col">
-                        <span class="form-text pull-right" data-upgraded=",MaterialTextfield">
-                            <input class="editable-data" type="text" id="requestdate" name="date" size="15" readonly="true">
+                        <span class="form-text pull-right" data-upgraded=",MaterialTextfield" style="position: relative">
+                            <input class="editable-data" type="text" id="requestdate" name="date" size="14" readonly="true">
                             <i id="requestcal" class="material-icons calender-icon page-icons editable-data"></i>
                             <span id="reqdate" class="DdsCharField_OutputOnly"></span>
                         </span>
@@ -1117,6 +1117,10 @@
             padding: 6px 10px 6px;
             line-height: normal;
         }
+		.calender-icon {
+			position: absolute;
+			right: 5px;
+		}
 
         .mdl-layout__content .DdsDecField {
             font-weight: normal;
@@ -1248,9 +1252,18 @@
 				width: 150px !important;
 			}
 			#CenPH__lb_SFLRCD > div input {
-				margin-right: 6px !important;
+				margin-right: 7px !important;
 			}
         }
+		
+		@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) 
+		and (orientation : landscape) { 
+			#CenPH__lb_SFLRCD > div input {
+				margin-right: 7px !important;
+			}
+		}
     </style>
     <script>
         $(document).ready(function () {
@@ -1421,7 +1434,7 @@
                 var mainWidth = $("#payment-method th:first-child").width();
                 var inputWidth = $("[id^='CenPH__lb_SFLRCD__lb_RNICD']").width();
                 var blankWidth = mainWidth - inputWidth + 2;
-				var firstColumn = $("#payment-method th:first-child").outerWidth();
+				var firstColumn = $("#payment-method th:first-child").innerWidth();
 				var amountWidth = $("#payment-method thead th:nth-child(2)").width();
 				var refWidth = $("#payment-method thead th:nth-child(3)").width()
 				var aprovalWidth = $("#payment-method thead th:nth-child(4)").width()

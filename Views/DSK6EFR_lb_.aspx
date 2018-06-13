@@ -782,7 +782,7 @@
                     if ($(this).attr('id') !== 'CenPH__lb_SFLRCD__End') {
                         var termBox = '';
                         if ($(wTermSelector + count).attr("value") == "" || ($(wTermSelector + count).attr("value") && $(wTermSelector + count).attr("value").length > 0)) {
-                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '> <span class="button-container"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="' + (wTermSelectorBtn + count) + '">Prompt</span></span>';
+                            termBox = '<input data-term="' + (wTermSelector + count) + '" class="term-input" type="text" minlength="3" maxlength="3" value=' + $(wTermSelector + count).val() + '> <span class="button-container"><span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="' + (wTermSelectorBtn + count) + '">Select</span></span>';
                         } else {
                             termBox = $(wTermSelector + count).html();
                         }
