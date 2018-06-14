@@ -155,7 +155,7 @@
                                     <span class="form-text" id="delivery-code"></span>
                                 </div>
 								 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet" style="margin:0">
-                                    <span class="form-label">eSign(V1):</span>
+                                    <span class="form-label">eSign:</span>
                                 </div>
 								<div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet" style="margin:0">
                                     <span class="form-text" id="CenPH__lb_SFLCTL__lb_CIHTU_new"></span>
@@ -232,8 +232,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
-      <%--  User name     : ISOKKALI                                                                                         --%>
-      <%--  Date          : 05/07/18  Time  : 04:40:08                                                                       --%>
+      <%--  User name     : SGOPAL                                                                                           --%>
+      <%--  Date          : 06/14/18  Time  : 02:50:44                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -867,17 +867,17 @@
  />
             <mdf:DdsConstant id="DdsConstant17" runat="server" 
               style="position: absolute; left: 586px; top: 267px;"
-              Text="eSign(V1):" 
+              Text="eSign:" 
               VisibleCondition="!88"
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIHTU" runat="server" style="position: absolute; left: 685px; top: 264px; width: 10px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CIHTU" runat="server" style="position: absolute; left: 649px; top: 264px; width: 10px"
               CssClass="DdsCharField"
               Length="1" 
               Alias="#CIHTU" 
               VisibleCondition="!88"
               Usage="OutputOnly" 
-              VirtualRowCol="12,76" 
+              VirtualRowCol="12,72" 
  />
             <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 19px; top: 291px;"
@@ -1134,7 +1134,6 @@
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
 
-        </div>
         </div>
     </asp:Content>
 
