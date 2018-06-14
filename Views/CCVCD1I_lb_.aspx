@@ -35,10 +35,10 @@
             <main class="mdl-layout__content">
                 <section class="time-date">
                     <div class="content-grid mdl-grid">
-                        <div class="mdl-cell mdl-cell--8-col">
+                        <div class="mdl-cell mdl-cell--9-col">
                             <!-- Title -->
                             <span class="heading-h1">Display Application Status</span> </div>
-                        <div class="mdl-cell mdl-cell--4-col pull-right">
+                        <div class="mdl-cell mdl-cell--3-col pull-right">
                             <!-- Navigation -->
                             <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CCVCD1I</span></div>
                     </div>
@@ -48,24 +48,24 @@
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--12-col mdl-cell-brd" style="padding:0">
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Application:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Application:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ITNB_new"></span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Status:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1K0ST_new"></span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Status:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1K0ST_new"></span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Application Type:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AHCO_new"></span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Application Type:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AHCO_new"></span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Salesman:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AJCD_new"></span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Salesman:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="margin:0"> <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1AJCD_new"></span> </div>
                                 </div>
                                 <div class="content-grid mdl-grid">
-                                    <div class="mdl-cell mdl-cell--3-col" style="margin:0"> <span class="form-label">Location:</span> </div>
-                                    <div class="mdl-cell mdl-cell--5-col mdl-cell--9-col-desktop" style="margin:0" > <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABCD_new"></span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col" style="margin:0"> <span class="form-label">Location:</span> </div>
+                                    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop" style="margin:0" > <span class="form-text" id="CenPH__lb_RCDDTL1__lb_1ABCD_new"></span> </div>
                                 </div>
                             </div>
                         </div>
@@ -1059,9 +1059,6 @@
 
         </script>
         <style>
-            #__Page_Hidden{
-                height: 800px !important;
-            }
             #__Page_PopUp {
                 min-width: 450px !important;
                 width: 50% !important;

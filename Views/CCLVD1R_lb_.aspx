@@ -94,11 +94,11 @@
                     </div> -->
                     <div class="button-container" style="padding: 0">
                         <div class="content-grid mdl-grid" style="padding-bottom: 5px">
-                            <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet pull-left" style="padding-bottom: 0">
+                            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet pull-left" style="padding-bottom: 0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="exit">exit</span>
 								<a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="hrefAnchor" href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=7db90d0c-83f0-42fa-9b7e-e21e0848acfb" target="_blank">Send Property Insurance to CG</a>
                             </div>
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet pull-right" style="padding-bottom: 0">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet pull-right" style="padding-bottom: 0">
                                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ok">ok</span>
                             </div>
                         </div>
@@ -996,7 +996,7 @@
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 			.button-container .mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
-				padding: 6px 13px;
+				padding: 6px 8px;
 			}
 		}
     </style>

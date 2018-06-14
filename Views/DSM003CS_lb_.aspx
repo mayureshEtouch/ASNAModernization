@@ -42,7 +42,7 @@
                         <h2 class="_title">Work with Contracts</h2>
                     </div>
                     <ul class="_list">
-                        <li class="_item"><a data-menu="6" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Calculate Credit Contract</p>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a data-menu="6" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Calculate Credit Contract</p>
                         </a></li>
                       <!--   <li class="_item"><a data-menu="7" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Enter Manual Contract</p>
                         </a></li>
@@ -78,7 +78,7 @@
                         </a></li>
                         <li class="_item"><a data-menu="25" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Worksheet Sales Process</p>
                         </a></li>
-                        <li class="_item"><a data-menu="26" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work YesLease Application</p>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a data-menu="26" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Work YesLease Application</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -106,7 +106,7 @@
                         </a></li> -->
                         <li class="_item"><a href="#" data-menu="11"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Model</p>
                         </a></li>
-                        <li class="_item"><a href="#" data-menu="13"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="#" data-menu="13"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -135,7 +135,7 @@
                         <li class="_item"><a data-menu="24" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Work Customer Prospects
 </p>
                         </a></li>-->
-                        <li class="_item"><a data-menu="8" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Information</p>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a data-menu="8" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Customer Information</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -165,7 +165,7 @@
                         </a></li>
                         <li class="_item"><a data-menu="13" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Inventory By Category</p>
                         </a></li> -->
-                        <li class="_item"><a data-menu="15" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Incomplete Sales</p>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a data-menu="15" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Display Incomplete Sales</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -210,7 +210,7 @@
 						<li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=7db90d0c-83f0-42fa-9b7e-e21e0848acfb" target="_blank" ><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Personal Property Insurance Form</p>
 
                         </a></li>
-						<li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8435b610-f36b-4041-a840-3f9ad80c667c" target="_blank" ><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Power of Attorney Certification</p>
+						<li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8435b610-f36b-4041-a840-3f9ad80c667c" target="_blank" ><i class="material-icons md-icons-sub-menu E-icon square-icon"></i><p class="bold">Power of Attorney Certification</p>
 
                         </a></li>
                     </ul>
