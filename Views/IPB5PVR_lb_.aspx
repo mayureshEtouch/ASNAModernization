@@ -1246,6 +1246,23 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
 					$("#docuSignAnchor").removeAttr('href');
 				}
 			});
+			var userName4IPB5PVR = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html() || $("#CenPH_MENUFMT_ZUSER").html() || " ";
+			console.log(userName4IPB5PVR);
+			if(userName4IPB5PVR){
+				var employeeIDExtracted = userName4IPB5PVR.replace( /^\D+/g, '');
+				console.log(employeeIDExtracted);
+				if(employeeIDExtracted){
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val(employeeIDExtracted);
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', true);
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").addClass("input-disabled");
+				}
+				else
+				{
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val("");
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', false);
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").removeClass("input-disabled");
+				}
+			}
 
         });
       </script>
@@ -1265,6 +1282,12 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
 			}		
 			#docuSignAnchor:visited, #docuSignAnchor:link{
 				color: #f7f7f7 !important;
+			}
+			.input-disabled{
+				background-color:#EBEBE4 !important;
+				border:1px solid #ABADB3 !important;
+				padding:2px 1px !important;
+				color:rgb(84, 84, 84) !important;
 			}			
       </style>
     </asp:Content>

@@ -1343,6 +1343,12 @@
         #ui-datepicker-div {
             z-index: 1000 !important;
         }
+		.input-disabled{
+		background-color:#EBEBE4 !important;
+		border:1px solid #ABADB3 !important;
+		padding:2px 1px !important;
+		color:rgb(84, 84, 84) !important;
+		}
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
@@ -1672,6 +1678,23 @@ else
             });
             $("#CenPH__lb_SFLCTL__lb_1AJCD").ForceNumericWithQuestionMarkOnly();
             $("#CenPH_PANTX").append("&nbsp;");
+			var userName4DSDZETR = $("#CenPH__lb_SFLCTL__lb__lb_USR").html() || $("#CenPH__lb_RCDDTL1__lb__lb_USR").html() || $("#CenPH_MENUFMT_ZUSER").html() || " ";
+			console.log(userName4DSDZETR);
+			if(userName4DSDZETR){
+				var employeeIDExtracted = userName4DSDZETR.replace( /^\D+/g, '');
+				console.log(employeeIDExtracted);
+				if(employeeIDExtracted){
+					$("#CenPH__lb_SFLCTL__lb_1AJCD").val(employeeIDExtracted);
+					$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('readonly', true);
+					$("#CenPH__lb_SFLCTL__lb_1AJCD").addClass("input-disabled");
+				}
+				else
+				{
+					$("#CenPH__lb_SFLCTL__lb_1AJCD").val("");
+					$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('readonly', false);
+					$("#CenPH__lb_SFLCTL__lb_1AJCD").removeClass("input-disabled");
+				}
+			}
         });
     </script>
     </asp:Content>
