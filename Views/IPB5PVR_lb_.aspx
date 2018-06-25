@@ -1253,14 +1253,15 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
 				console.log(employeeIDExtracted);
 				if(employeeIDExtracted){
 					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val(employeeIDExtracted);
-					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', true);
-					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").addClass("input-disabled");
+					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_").val($("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val());
+				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', true);
+					//$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").addClass("input-disabled");
 				}
 				else
 				{
 					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val("");
-					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', false);
-					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").removeClass("input-disabled");
+				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', false);
+				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").removeClass("input-disabled");
 				}
 			}
 

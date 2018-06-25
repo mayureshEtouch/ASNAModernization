@@ -1685,14 +1685,14 @@ else
 				console.log(employeeIDExtracted);
 				if(employeeIDExtracted){
 					$("#CenPH__lb_SFLCTL__lb_1AJCD").val(employeeIDExtracted);
-					$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('readonly', true);
-					$("#CenPH__lb_SFLCTL__lb_1AJCD").addClass("input-disabled");
+				//	$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('readonly', true);
+				//	$("#CenPH__lb_SFLCTL__lb_1AJCD").addClass("input-disabled");
 				}
 				else
 				{
 					$("#CenPH__lb_SFLCTL__lb_1AJCD").val("");
-					$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('readonly', false);
-					$("#CenPH__lb_SFLCTL__lb_1AJCD").removeClass("input-disabled");
+				//	$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('readonly', false);
+				//	$("#CenPH__lb_SFLCTL__lb_1AJCD").removeClass("input-disabled");
 				}
 			}
         });
