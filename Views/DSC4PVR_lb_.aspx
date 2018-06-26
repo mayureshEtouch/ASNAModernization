@@ -434,7 +434,15 @@
             $("#CenPH__lb_RCDDTL1__lb_PBMNB").appendTo("#search-by-phone");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").appendTo("#search-by-phone");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").addClass("mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop");
+			//$("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr('type', 'tel');
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr('pattern', '[0-9]*');
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr('maxlength', '3');
+			//$("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr('oninput', 'javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);');
 			
+			
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB").attr('tabindex','1' );
+			$("#CenPH__lb_RCDDTL1__lb_PAXNB").attr('tabindex','3' );
+			$("#CenPH__lb_RCDDTL1__lb_PBMNB").attr('tabindex','2' );
             //Set email to original email text field
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").appendTo("#search-by-email");
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input").css("text-transform", "lowercase");
