@@ -49,10 +49,11 @@
         <!-- content-grid mdl-grid starts here -->
         <div class="content-grid mdl-grid">
           <div class="mdl-cell mdl-cell--12-col" style="padding:0">
-				<p class="text-red" id="CenPH_DdsConstant2_new">
-					</p>	
+				<p class="text-red" id="" style="margin-left:15px;">Adding this Cash Option account on to new contract will void the Cash Option-a Void <br/>
+				Authorization Letter must be signed.
+					</p>
                     
-                    <p class="text-red" id="CenPH_DdsConstant4_new"></p>
+                   
                    
           </div>   
         </div>
@@ -735,6 +736,10 @@
             left: 59% !important;
             top: 23%!important; 
         }
+		.logo p {
+        display: inline-block;
+		vertical-align: top;
+		}
       </style>
 	<script type="text/javascript">
 	var copyToAndFrom = {
