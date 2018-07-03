@@ -14,7 +14,7 @@ var setHomePage = function() {
             $(".card").flip({
                 axis: 'x',
                 trigger: 'click',
-                speed: 700
+                speed: 350
             });
         });
     } else {
@@ -39,7 +39,7 @@ var setHomePageWidth = function() {
             $(".card").flip({
                 axis: 'x',
                 trigger: 'click',
-                speed: 700
+                speed: 350
             });
         });
        

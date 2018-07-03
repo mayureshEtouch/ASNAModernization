@@ -38,6 +38,7 @@ li a{text-decoration:none}
 .misc-sales-menu-icon{background-position:-70px 0;width:68px;height:70px}
 .material-icons.square-icon{border:solid 2px #e32527;height:10px;margin:6px 0 0 5px;width:10px}
 ._list{margin:0 15px 15px}
+._item a{display:block;}
 .mdl-layout__content ._title{font-size:25px;line-height:28px;margin:15px 5px 15px 10px}
 ._item{border-bottom:1px solid #c5c5c5}
 ._item:last-child{border-bottom:none}

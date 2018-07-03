@@ -213,6 +213,11 @@ margin:15px 5px 15px 10px
 border-bottom:1px solid #c5c5c5
 }
 
+._item a{
+display:block;
+width:100%;
+}
+
 ._item:last-child {
 border-bottom:none
 }
