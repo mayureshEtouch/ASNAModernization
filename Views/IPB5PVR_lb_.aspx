@@ -1259,7 +1259,7 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
 				}
 				else
 				{
-					$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val("");
+				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").val("");
 				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('readonly', false);
 				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").removeClass("input-disabled");
 				}
