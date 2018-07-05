@@ -1246,7 +1246,7 @@
 
         @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
             #orderPayment {
-                height: 920px;
+                /*height: 920px;*/
             }
 			#enterPayment select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD.'] {
 				width: 150px !important;

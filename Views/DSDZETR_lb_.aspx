@@ -93,12 +93,12 @@
         <section class="form-data">
             <div class="form-data-wrapper" style="margin-bottom: 50px; padding-bottom: 0;">
                 <div class="content-grid mdl-grid">
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet">
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                 <span class="form-label">Employee #:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--8-col">
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                 <span class="form-text" data-upgraded=",MaterialTextfield" id="employee-info">
                                     <%--<input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD">--%>
                                    
@@ -108,10 +108,10 @@
                             </div>
                         </div>
 						<div class="content-grid mdl-grid hideShowCond">
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                 <span class="form-label">Ship To same as Sold To?:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--8-col">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <select id="CenPH__lb_SFLCTL__lb_CZVS_lb_new" name="CenPH__lb_SFLCTL__lb_CZVS_lb_new" style="width: 174px; padding: 0 2px;">
                                         <option selected="selected" value=" ">Please select</option>
@@ -141,10 +141,10 @@
                             </div>
                         </div>
                         <div class="content-grid mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
                                 <span class="form-label">Zip Code:</span>
                             </div>
-                            <div class="mdl-cell mdl-cell--8-col">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet">
                                 <div class="form-text shipping-add" data-upgraded=",MaterialTextfield" id="zipcode">
                                     <input type="text" id="CenPH_CEWTX" name="CenPH_CEWTX" maxlength="10">
                                     <span id="CenPH_CEW" class="DdsCharField_OutputOnly"></span>
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet">
                         <div class="content-grid mdl-grid">
                             <div class="mdl-cell mdl-cell--4-col">
                                 <span class="form-label">Delivery Code:</span>
