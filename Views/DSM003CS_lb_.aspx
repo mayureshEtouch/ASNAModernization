@@ -142,7 +142,7 @@
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>-->
-                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);"  data-menu="8"><p class="bold">Display Customer Information</p>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);"  data-menu="8"><p class="bold">Display Customer Info</p>
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->

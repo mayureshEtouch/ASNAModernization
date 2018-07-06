@@ -44,8 +44,8 @@ li a{text-decoration:none}
 ._item:last-child{border-bottom:none}
 ._item a p{display:inline-block;margin:3px 0 3px 10px;vertical-align:top;font-size:12px;line-height:22px}
 .homepage-copyright-container{margin-top:0}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-._item a p{margin:3px 0 3px 7px;font-size:12px;line-height:22px;width:85%}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+._item a p{margin:3px 0 3px 7px;font-size:13px !important;line-height:24px !important;width:85%;}
 }
 @media only screen and (max-width : 1200px) {
 .homepage-content .mdl-cell--4-col-desktop.mdl-cell--4-col-desktop{width:calc(33.3333%)}
@@ -59,7 +59,7 @@ li a{text-decoration:none}
 .progress-bar .step-txt,.progress-bar .step-txt-selected{font-size:11px}
 .block-heading,._title{font-size:16px;line-height:30px}
 ._title{font-weight:700}
-._list{margin:0 8px 8px!important}
+._list{margin:0 8px 8px 2px!important; padding-left: 1em;}
 }
 @media only screen and (max-width : 767px) {
 .progress-bar .step-width{width:14%}
