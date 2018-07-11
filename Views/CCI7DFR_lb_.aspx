@@ -87,7 +87,7 @@
                 <span id="invoice"><span class="icon-txt">Enter Invoice</span><i class="material-icons md-15 md-light enter-invoice-icon"></i></span>
                 <span id="work"><span class="icon-txt">Work</span><i class="material-icons md-15 md-light work-icon"></i></span>
                 <span id="display"><span class="icon-txt">Display</span><i class="material-icons md-15 md-light display-icon"></i></span>
-                <span id="sbmrac"><span class="icon-txt" id="sbmrac">SbmToRAC</span><i class="material-icons md-15 md-light sbm-to-rac-icon"></i></span>
+                <span id="sbmrac"><span class="icon-txt" id="sbmrac">SbmToProgressive</span><i class="material-icons md-15 md-light sbm-to-rac-icon"></i></span>
                 <span id="notes"><span class="icon-txt">Notes</span><i class="material-icons md-15 md-light notes-icon"></i></span>
                 <span id="decision"><span class="icon-txt">Decision</span><i class="material-icons md-15 md-light decision-icon"></i></span>
                 <span id="appeal"><span class="icon-txt">Appeal</span><i class="material-icons md-15 md-light appeal-icon"></i></span>
@@ -129,7 +129,7 @@
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">refresh</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="Search">Search</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="enterQuote">Enter Quote</span>
-                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="GEApps">GE Apps</span>
+                        <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="GEApps">SYNCHRONY APPS</span>
                         <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="all">All</span>
                         </div>
                          <div class="mdl-cell mdl-cell--1-col mdl-cell--2-col-desktop pull-right">

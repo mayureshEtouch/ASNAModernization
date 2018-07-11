@@ -46,26 +46,52 @@
                 <div class="table-container filter-search-container">
                     <div class="content-grid mdl-grid">
                         <div class="mdl-cell mdl-cell--1-col filter-txt-cnt"> <span class="summary-table-title">Filter by:</span> </div>
-                        <div class="mdl-cell mdl-cell--10-col search-container">
+                        <div class="mdl-cell mdl-cell--12-col search-container">
                             <div class="content-grid mdl-grid">
-                                <div class="mdl-cell mdl-cell--1-col"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Code</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet width55">
-                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_CAGTX_new" class="mdl-textfield__input" data-tb-index="1" maxlength="4">
-                                </div>
-                                <div class="mdl-cell mdl-cell--1-col-tablet mdl-cell--2-col lbl-width100"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Application No.</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet">
-                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2ITNB_new" class="mdl-textfield__input" data-tb-index="1" maxlength="8">
-                                </div>
-                                <div class="mdl-cell mdl-cell--1-col width45"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Loc</span> </div>
-                                <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet" id="serial" style="margin-top: 12px;">
-                                    <span id="loc-field1"></span>
-                                    <span id="loc-field2"></span>
-                                </div>
-                                <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-tablet width85"> <span class="summary-table-title pull-right" style="margin-left: -5px;">Employee #</span> </div>
-                                <div class="mdl-cell mdl-cell--1-col mdl-cell mdl-cell--1-col-tablet width45" id="invoice">
-                                    <input type="text"  id="CenPH__lb_SFLCTL__lb_2AJCD_new" class="mdl-textfield__input" data-tb-index="1" maxlength="5">
-                                </div>
+							<div style="float:left">
+								
+									<div style="float:left"> <span class="summary-table-title pull-right">Code</span> </div>
+									<div style="float:left;">
+										<input type="text" style="width: 33px;"  id="CenPH__lb_SFLCTL__lb_CAGTX_new" class="mdl-textfield__input" data-tb-index="1" maxlength="4">
+									</div>
+									<div style="clear:both"></div>
+								
+							</div>
+							<div style="float:left">
+								
+									<div style="float:left"> <span class="summary-table-title pull-right">App No.</span> </div>
+									<div style="float:left; width: 60px;">
+										<input type="text"  id="CenPH__lb_SFLCTL__lb_2ITNB_new" class="mdl-textfield__input" data-tb-index="1" maxlength="8">
+									</div>
+								
+							</div>	
+							<div style="float:left">
+								
+									<div style="float:left; width: 31px;" class="loc-label"> <span class="summary-table-title pull-right">Loc</span> </div>
+									<div style="float:left; margin-top: 12px;" class="loc-content-area" id="serial">
+										<span id="loc-field1"></span>
+										<span id="loc-field2"></span>
+									</div>
+								
+							</div>	
+							<div style="float:left">
+								
+									<div style="float:left"> <span class="summary-table-title pull-right">Emp #</span> </div>
+									<div style="float:left; width: 40px;" id="invoice">
+										<input type="text"  id="CenPH__lb_SFLCTL__lb_2AJCD_new" class="mdl-textfield__input" data-tb-index="1" maxlength="5">
+									</div>
+								
+							</div>	
+							<div style="float:left">	
+								
+									<div style="float:left; margin-left:10px"> <span class="summary-table-title pull-right">Prgs Sts</span> </div>
+									<div style="float:left; width: 40px;" id="prgs">
+										<input type="text"  id="CenPH__lb_SFLCTL__lb_CW6ST_new" class="mdl-textfield__input" data-tb-index="1" maxlength="2">
+									</div>
+									</div>
+								
                             </div>
+							<div style="clear:both"></div>
                         </div>
                         <div class="mdl-cell mdl-cell--1-col button-cnt-container">
                             <div class="button-container">
@@ -102,9 +128,10 @@
                             <th>Appl No</th>
                             <th>Date</th>
                             <th>Customer Name</th>
-                            <th>Empl#</th>
-                            <th>Product $</th>
-                            <th>Approved $</th>                       
+                            <th>Emp No</th>
+                            <th>Approved $</th>
+                            <th>Prgsv Sts</th> 
+							<th>App Used?</th>							
                           </tr>
                         </thead>
                         <tbody>
@@ -136,7 +163,7 @@
         </main>
  <div id="modal1" class="simplePopup"></div>
 <!-- Modified HTML code ends here -->
-           <div id="Div1" style="display: none;">
+          <div id="Div1" style="display:none;">
             
       <%--  PG: DSP All Appl - Store  Display file                                                                           --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -148,8 +175,8 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Application Model                                                                         --%>
       <%--  System        : Conn Credit Corp.                                                                                --%>
-      <%--  User name     : PKUMAR                                                                                           --%>
-      <%--  Date          : 08/31/17  Time  : 23:02:57                                                                       --%>
+      <%--  User name     : NMADHAN                                                                                          --%>
+      <%--  Date          : 07/10/18  Time  : 01:11:50                                                                       --%>
       <%--  Copyright     : Credit Application Model                                                                         --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -160,14 +187,14 @@
             Alias="#SFLCTL"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Help 'Help.' 25;"
-            FuncKeys="F4 'Prompt.' 04;F5 'Reset.' 05;F8 'CF08.' 08;F9 'CF09.' 09;F10 'CF10.' 10;F11 'CF11.' 11;PageDown 'Next page.' 27 : !82;"
-            SetOfInds="98 99 31 32 33 " 
+            FuncKeys="F4 'Prompt.' 04;F5 'CF05.' 05;F8 'CF08.' 08;F9 'CF09.' 09;F10 'CF10.' 10;F11 'CF11.' 11;PageDown 'Next page.' 27 : !82;"
+            SetOfInds="98 99 31 32 33 34 " 
             CommandKeyInd="29" 
             ClearRecords="80" 
             DisplayFields="!80" 
             DisplayRecords="!25 & !80 & 81" 
-            SubfilePage="12" 
-            SubfileSize="13" 
+            SubfilePage="11" 
+            SubfileSize="12" 
             ShowRecordField="##SFRC" 
             SubFileEnd="!80 & 81 & 82"
             SubFileEndTextOn="Bottom"
@@ -175,7 +202,7 @@
             CueCurrentRecord="true" 
             ClickSetsCurrentRecord="true" 
             VerticalScrollBar="true" 
-            CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 25"
+            CursorLocation="'ZZCSRW,ZZCSCL' : 04 | 94 | 25"
           >&nbsp;
           <%--  Command keys............................................................                                         --%>
           <%--  SETOFFS.................................................................                                         --%>
@@ -199,16 +226,21 @@
           <%--  Location                                                                                                         --%>
           <%--  Dsc: Location                                                                                                    --%>
           <%--  Cde: Employee                                                                                                    --%>
+          <%--  Sts: Entry Type                                                                                                  --%>
           <%--  Selection prompt text                                                                                            --%>
           <%--  Selection text                                                                                                   --%>
+          <%--  # Text: 4                                                                                                        --%>
+          <%--  Sts: Entry Type                                                                                                  --%>
+          <%--  USR Yes/N=Blank                                                                                                  --%>
           <%--  Subfile selector                                                                                                 --%>
           <%--  # Text: 4                                                                                                        --%>
           <%--  Nbr: Application                                                                                                 --%>
           <%--  Dte: Audit Stamp                                                                                                 --%>
           <%--  Txt: Customer Name                                                                                               --%>
           <%--  Cde: Employee                                                                                                    --%>
-          <%--  Vlu: Invoice Total                                                                                               --%>
           <%--  Vlu: Limit Overridden                                                                                            --%>
+          <%--  Sts: Entry Type                                                                                                  --%>
+          <%--  USR Yes/N=Blank                                                                                                  --%>
           <%-- =========================================================================                                         --%>
             <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_SFRC" runat="server" style="position: absolute; left: 1px; top: 0px; width: 37px"
               CssClass="DdsDecField"
@@ -245,7 +277,7 @@
               Usage="OutputOnly" 
               VirtualRowCol="1,18" 
  />
-            <mdf:DdsConstant id="DdsConstant12" runat="server" 
+            <mdf:DdsConstant id="DdsConstant13" runat="server" 
               style="position: absolute; left: 550px; top: 3px;"
               Text="*DATE" 
               CssClass="DdsConstant"
@@ -265,9 +297,9 @@
               Usage="OutputOnly" 
               VirtualRowCol="2,2" 
  />
-            <mdf:DdsConstant id="DdsConstant8" runat="server" 
-              style="position: absolute; left: 280px; top: 27px;"
-              Text="DSP All Appl - Store" 
+            <mdf:DdsConstant id="DdsConstant9" runat="server" 
+              style="position: absolute; left: 226px; top: 27px;"
+              Text="Display all Applications - Store" 
               CssClass="DdsConstant"
  />
             <mdf:DdsDecField id="_lb_SFLCTL__lb__lb_TME" runat="server" style="position: absolute; left: 550px; top: 24px; width: 73px"
@@ -279,7 +311,7 @@
               VirtualRowCol="2,61" 
               EditWord="0 :  :  " 
  />
-            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+            <mdf:DdsConstant id="DdsConstant16" runat="server" 
               style="position: absolute; left: 631px; top: 27px;"
               Text="DISPLAY" 
               CssClass="DdsConstant"
@@ -308,133 +340,170 @@
               Alias="#2ACCD" 
               Usage="Hidden" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CAGTX" runat="server" style="position: absolute; left: 46px; top: 72px; width: 37px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CAGTX" runat="server" style="position: absolute; left: 37px; top: 72px; width: 37px"
               CssClass="DdsCharField"
               Length="4" 
               Alias="#CAGTX" 
               Usage="Both" 
-              VirtualRowCol="4,5" 
+              VirtualRowCol="4,4" 
               PositionCursor="31 | !31 & !98 & !99" 
               Color="Red : 31 , Green : !31" 
               TabIndex="1"  />
-            <mdf:DdsDecField id="_lb_SFLCTL__lb_2ITNB" runat="server" style="position: absolute; left: 91px; top: 72px; width: 82px"
+            <mdf:DdsDecField id="_lb_SFLCTL__lb_2ITNB" runat="server" style="position: absolute; left: 82px; top: 72px; width: 82px"
               CssClass="DdsDecField"
               Length="9" 
               Decimals="0" 
               LeftPad="Zeroes" 
               Alias="#2ITNB" 
               Usage="Both" 
-              VirtualRowCol="4,10" 
+              VirtualRowCol="4,9" 
               PositionCursor="32" 
               Color="Red : 32 , Green : !32" 
               EditCode="Z" 
               TabIndex="2"  />
-            <mdf:DdsConstant id="DdsConstant6" runat="server" 
-              style="position: absolute; left: 181px; top: 75px;"
+            <mdf:DdsConstant id="DdsConstant7" runat="server" 
+              style="position: absolute; left: 172px; top: 75px;"
               Text="Loc" 
-              Color="Blue" 
+              Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_2AACD" runat="server" style="position: absolute; left: 217px; top: 72px; width: 28px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_2AACD" runat="server" style="position: absolute; left: 208px; top: 72px; width: 28px"
               CssClass="DdsCharField"
               Length="3" 
               Alias="#2AACD" 
               Usage="OutputOnly" 
-              VirtualRowCol="4,24" 
+              VirtualRowCol="4,23" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_CASTX" runat="server" style="position: absolute; left: 253px; top: 72px; width: 181px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CASTX" runat="server" style="position: absolute; left: 244px; top: 72px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#CASTX" 
               Usage="OutputOnly" 
-              VirtualRowCol="4,28" 
+              VirtualRowCol="4,27" 
  />
-            <mdf:DdsCharField id="_lb_SFLCTL__lb_2AJCD" runat="server" style="position: absolute; left: 469px; top: 72px; width: 46px"
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_2AJCD" runat="server" style="position: absolute; left: 460px; top: 72px; width: 46px"
               CssClass="DdsCharField"
               Length="5" 
               Alias="#2AJCD" 
               Usage="Both" 
-              VirtualRowCol="4,52" 
+              VirtualRowCol="4,51" 
               PositionCursor="33" 
               Color="Red : 33 , Green : !33" 
               TabIndex="3"  />
+            <mdf:DdsCharField id="_lb_SFLCTL__lb_CW6ST" runat="server" style="position: absolute; left: 622px; top: 72px; width: 19px"
+              CssClass="DdsCharField"
+              Length="2" 
+              Alias="#CW6ST" 
+              Usage="Both" 
+              VirtualRowCol="4,69" 
+              PositionCursor="34" 
+              Color="Red : 34 , Green : !34" 
+              TabIndex="4"  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
               style="position: absolute; left: 19px; top: 123px;"
-              Text="Option: 1=Submit To YesLease 2=Notes" 
+              Text="Type options, press Enter." 
               Color="Blue" 
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 19px; top: 147px;"
-              Text=" " 
+              Text="1=Submit To YesLease   2=Notes" 
               Color="Blue" 
               CssClass="DdsConstant"
  />
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
+              style="position: absolute; left: 37px; top: 171px;"
+              Text="CC" 
+              VisibleCondition="81"
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant14" runat="server" 
+              style="position: absolute; left: 613px; top: 171px;"
+              Text="Prgsv" 
+              VisibleCondition="81"
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant17" runat="server" 
+              style="position: absolute; left: 667px; top: 171px;"
+              Text=" App" 
+              VisibleCondition="81"
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
             <mdf:DdsConstant id="DdsConstant3" runat="server" 
-              style="position: absolute; left: 19px; top: 171px;"
+              style="position: absolute; left: 19px; top: 195px;"
               Text="?" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant4" runat="server" 
-              style="position: absolute; left: 46px; top: 171px;"
-              Text="Code" 
+            <mdf:DdsConstant id="DdsConstant5" runat="server" 
+              style="position: absolute; left: 37px; top: 195px;"
+              Text="Sts" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant5" runat="server" 
-              style="position: absolute; left: 109px; top: 171px;"
+            <mdf:DdsConstant id="DdsConstant6" runat="server" 
+              style="position: absolute; left: 100px; top: 195px;"
               Text="Appl No" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant7" runat="server" 
-              style="position: absolute; left: 208px; top: 171px;"
+            <mdf:DdsConstant id="DdsConstant8" runat="server" 
+              style="position: absolute; left: 199px; top: 195px;"
               Text="Date" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant9" runat="server" 
-              style="position: absolute; left: 280px; top: 171px;"
+            <mdf:DdsConstant id="DdsConstant10" runat="server" 
+              style="position: absolute; left: 271px; top: 195px;"
               Text="Customer Name" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant10" runat="server" 
-              style="position: absolute; left: 469px; top: 171px;"
-              Text="Empl#" 
-              VisibleCondition="81"
-              Color="DarkBlue" 
-              CssClass="DdsConstant"
- />
             <mdf:DdsConstant id="DdsConstant11" runat="server" 
-              style="position: absolute; left: 532px; top: 171px;"
-              Text="Product $" 
+              style="position: absolute; left: 460px; top: 195px;"
+              Text="EmpNo" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant13" runat="server" 
-              style="position: absolute; left: 622px; top: 171px;"
+            <mdf:DdsConstant id="DdsConstant12" runat="server" 
+              style="position: absolute; left: 514px; top: 195px;"
               Text="Approved $" 
               VisibleCondition="81"
               Color="DarkBlue" 
               CssClass="DdsConstant"
  />
+            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+              style="position: absolute; left: 613px; top: 195px;"
+              Text=" Sts" 
+              VisibleCondition="81"
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
+            <mdf:DdsConstant id="DdsConstant18" runat="server" 
+              style="position: absolute; left: 667px; top: 195px;"
+              Text="Used?" 
+              VisibleCondition="81"
+              Color="DarkBlue" 
+              CssClass="DdsConstant"
+ />
           <mdf:DdsSubfile id="_lb_SFLRCD" runat="server" 
-            style="position: absolute; left: 0px; top: 192px; width: 765px; height: 24px" 
+            style="position: absolute; left: 0px; top: 216px; width: 756px; height: 24px" 
             Alias="#SFLRCD"
             CssClass="DdsSubfileRecord"
             SetOffInd="98" 
             NextChanged="84" 
             UseSubfilePaging="True" 
-            VirtualRowCol="9,2" 
-            VirtualWidth="77" 
+            VirtualRowCol="10,2" 
+            VirtualWidth="76" 
             VirtualRowsPerRecord="1" 
             RowsCssClasses="DefaultRow AlternateRow"
           >&nbsp;
@@ -490,6 +559,7 @@
           <%--  Cde: Company                                                                                                     --%>
           <%--  Cde: Queue ID                                                                                                    --%>
           <%--  Location                                                                                                         --%>
+          <%--  Vlu: Invoice Total                                                                                               --%>
           <%--  Vlu: Product                                                                                                     --%>
           <%--  Cde: Sales Promotion                                                                                             --%>
           <%--  Vlu: To Cal Down                                                                                                 --%>
@@ -503,8 +573,9 @@
           <%--  Dte: Audit Stamp                                                                                                 --%>
           <%--  Txt: Customer Name                                                                                               --%>
           <%--  Cde: Employee                                                                                                    --%>
-          <%--  Vlu: Invoice Total                                                                                               --%>
           <%--  Vlu: Limit Overridden                                                                                            --%>
+          <%--  Sts: Entry Type                                                                                                  --%>
+          <%--  USR Yes/N=Blank                                                                                                  --%>
           <%-- =========================================================================                                         --%>
             <mdf:DdsCharField id="_lb_SFLRCD__lb_1K0ST" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
               CssClass="DdsCharField"
@@ -838,6 +909,13 @@
               Alias="#1AACD" 
               Usage="Hidden" 
  />
+            <mdf:DdsDecField id="_lb_SFLRCD__lb_1G3VA" runat="server" style="position: absolute; left: 1px; top: 0px; width: 82px"
+              CssClass="DdsDecField"
+              Length="9" 
+              Decimals="2" 
+              Alias="#1G3VA" 
+              Usage="Hidden" 
+ />
             <mdf:DdsDecField id="_lb_SFLRCD__lb_1GFVA" runat="server" style="position: absolute; left: 1px; top: 0px; width: 82px"
               CssClass="DdsDecField"
               Length="9" 
@@ -889,27 +967,27 @@
               Length="1" 
               Alias="#1SEL" 
               Usage="Both" 
-              VirtualRowCol="9,2" 
-              PositionCursor="34" 
-              Color="Red : 34 , Green : !34" 
+              VirtualRowCol="10,2" 
+              PositionCursor="35" 
+              Color="Red : 35 , Green : !35" 
               CompareAllowBlanks="true" 
               ValuesStyle="DropdownBoth" 
               Values="' ' '1' '2' " 
               TabIndex="1"  />
-            <mdf:DdsCharField id="_lb_SFLRCD__lb_RAGTX" runat="server" style="position: absolute; left: 73px; top: 0px; width: 37px"
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_RAGTX" runat="server" style="position: absolute; left: 64px; top: 0px; width: 37px"
               CssClass="DdsCharField"
               Length="4" 
               Alias="#RAGTX" 
               Usage="OutputOnly" 
-              VirtualRowCol="9,5" 
+              VirtualRowCol="10,4" 
  />
-            <mdf:DdsDecField id="_lb_SFLRCD__lb_1ITNB" runat="server" style="position: absolute; left: 118px; top: 0px; width: 82px"
+            <mdf:DdsDecField id="_lb_SFLRCD__lb_1ITNB" runat="server" style="position: absolute; left: 109px; top: 0px; width: 82px"
               CssClass="DdsDecField"
               Length="9" 
               Decimals="0" 
               Alias="#1ITNB" 
               Usage="OutputOnly" 
-              VirtualRowCol="9,10" 
+              VirtualRowCol="10,9" 
               EditCode="Z" 
  />
             <mdf:DdsDecField id="_lb_SFLRCD__lb_1AGDT" runat="server" style="position: absolute; left: 1px; top: 0px; width: 64px"
@@ -919,46 +997,53 @@
               Alias="#1AGDT" 
               Usage="Hidden" 
  />
-            <mdf:DdsDecDateField id="_lb_SFLRCD_V1AGDT" runat="server" style="position: absolute; left: 208px; top: 0px; width: 73px"
+            <mdf:DdsDecDateField id="_lb_SFLRCD_V1AGDT" runat="server" style="position: absolute; left: 199px; top: 0px; width: 73px"
               CssClass="DdsDecDateField"
               Length="8" 
               DateFormat="USA" 
               DateSeparator="'/'" 
               Alias="V1AGDT" 
               Usage="OutputOnly" 
-              VirtualRowCol="9,20" 
+              VirtualRowCol="10,19" 
  />
-            <mdf:DdsCharField id="_lb_SFLRCD__lb_RALTX" runat="server" style="position: absolute; left: 334px; top: 0px; width: 181px"
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_RALTX" runat="server" style="position: absolute; left: 325px; top: 0px; width: 181px"
               CssClass="DdsCharField"
               Length="20" 
               Alias="#RALTX" 
               Usage="OutputOnly" 
-              VirtualRowCol="9,31" 
+              VirtualRowCol="10,30" 
  />
-            <mdf:DdsCharField id="_lb_SFLRCD__lb_1AJCD" runat="server" style="position: absolute; left: 523px; top: 0px; width: 46px"
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_1AJCD" runat="server" style="position: absolute; left: 514px; top: 0px; width: 46px"
               CssClass="DdsCharField"
               Length="5" 
               Alias="#1AJCD" 
               Usage="OutputOnly" 
-              VirtualRowCol="9,52" 
+              VirtualRowCol="10,51" 
  />
-            <mdf:DdsDecField id="_lb_SFLRCD__lb_1G3VA" runat="server" style="position: absolute; left: 577px; top: 0px; width: 82px"
-              CssClass="DdsDecField"
-              Length="9" 
-              Decimals="2" 
-              Alias="#1G3VA" 
-              Usage="OutputOnly" 
-              VirtualRowCol="9,58" 
-              EditCode="4" 
- />
-            <mdf:DdsDecField id="_lb_SFLRCD__lb_1IONB" runat="server" style="position: absolute; left: 676px; top: 0px; width: 82px"
+            <mdf:DdsDecField id="_lb_SFLRCD__lb_1IONB" runat="server" style="position: absolute; left: 568px; top: 0px; width: 82px"
               CssClass="DdsDecField"
               Length="9" 
               Decimals="2" 
               Alias="#1IONB" 
               Usage="OutputOnly" 
-              VirtualRowCol="9,69" 
+              VirtualRowCol="10,57" 
               EditCode="4" 
+ />
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_RW6ST" runat="server" style="position: absolute; left: 676px; top: 0px; width: 19px"
+              CssClass="DdsCharField"
+              Length="2" 
+              Alias="#RW6ST" 
+              Usage="OutputOnly" 
+              VirtualRowCol="10,69" 
+              Color="Green" 
+ />
+            <mdf:DdsCharField id="_lb_SFLRCD__lb_RGCID" runat="server" style="position: absolute; left: 739px; top: 0px; width: 10px"
+              CssClass="DdsCharField"
+              Length="1" 
+              Alias="#RGCID" 
+              Usage="OutputOnly" 
+              VirtualRowCol="10,76" 
+              Color="Green" 
  />
           </mdf:DdsSubfile >
           </mdf:DdsSubfileControl >
@@ -970,12 +1055,12 @@
           <%--  Command key text                                                                                                 --%>
           <%--  Command key text 2                                                                                               --%>
           <%-- =========================================================================                                         --%>
-            <mdf:DdsConstant id="DdsConstant15" runat="server" 
+            <mdf:DdsConstant id="DdsConstant19" runat="server" 
               style="position: absolute; left: 19px; top: 3px;"
-              Text="F3=Exit  F5=Refresh  F8=Search  F9=Apply Progressive  F10=Search By Lease" 
+              Text="F3=Exit  F5=Refresh  F8=Search  F9=Apply Progressive  F10=Search by Lease" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant16" runat="server" 
+            <mdf:DdsConstant id="DdsConstant20" runat="server" 
               style="position: absolute; left: 19px; top: 27px;"
               Text="F11=All" 
               CssClass="DdsConstant"
@@ -1036,7 +1121,8 @@
 
                 "CenPH__lb_SFLCTL__lb_2ITNB": "CenPH__lb_SFLCTL__lb_2ITNB_new",
 
-                "CenPH__lb_SFLCTL__lb_2AJCD": "CenPH__lb_SFLCTL__lb_2AJCD_new"
+                "CenPH__lb_SFLCTL__lb_2AJCD": "CenPH__lb_SFLCTL__lb_2AJCD_new",
+				"CenPH__lb_SFLCTL__lb_CW6ST":"CenPH__lb_SFLCTL__lb_CW6ST_new"
                 
             }
         }
@@ -1045,7 +1131,7 @@
              $('body').css({ "background-color": "white" });
                 copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
                 // Search by Customer data table record mapping
-                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6]];
+                var dataMergeIndices = [[0], [1], [2], [3], [4], [5], [6],[7]];
                 generateTableAndApplyInfiniteScroll("tblDsp", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
                  var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');
@@ -1115,6 +1201,9 @@
   width: 85px;
 }
 }
+.loc-label{
+	margin-left: 10px;
+}
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
@@ -1123,6 +1212,14 @@
  .filter-search-container .search-container .lbl-width100 {
   width: 130px;
 }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.loc-content-area {
+		width:96px;
+	}
+	
 }
 </style>
     </asp:Content>
