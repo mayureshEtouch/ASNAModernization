@@ -84,7 +84,7 @@
 							</div>	
 							<div style="float:left">	
 								
-									<div style="float:left; margin-left:10px"> <span class="summary-table-title pull-right">Prgs Sts</span> </div>
+									<div style="float:left; margin-left:10px"> <span class="summary-table-title pull-right">Prgsv Sts</span> </div>
 									<div style="float:left; width: 40px;" id="prgs">
 										<input type="text"  id="CenPH__lb_SFLCTL__lb_CW6ST_new" class="mdl-textfield__input" data-tb-index="1" maxlength="2">
 									</div>
@@ -124,7 +124,7 @@
                 <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="tblDsp" data-upgraded=",MaterialDataTable">
                  <thead>
                           <tr>
-                            <th>Code</th>
+                            <th>CC Sts</th>
                             <th>Appl No</th>
                             <th>Date</th>
                             <th>Customer Name</th>
