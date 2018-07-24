@@ -163,9 +163,9 @@
                                 <span class="form-text" data-upgraded=",MaterialTextfield">
                                     <select id="CenPH__lb_SFLCTL__lb_1FLST_new" name="CenPH__lb_SFLCTL__lb_1FLST_new" style="width: 174px; padding: 0 2px;">
                                         <option selected="selected" value=" ">Please select</option>
-                                        <!-- <option value="H">H - Held Delivery</option> -->
+                                        <!-- <option value="H">H - Held Delivery</option> 
                                         <option value="Y">Y - *Yes</option>
-                                        <option value="L">L - Layaway</option>
+                                        <option value="L">L - Layaway</option> -->
                                         <option value="X">X - Non-Delivery</option>
                                         <option value="N">N - Non-Partial Delivery</option>
                                         <option value="P">P - Partial Delivery</option>

@@ -96,7 +96,7 @@
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="customerIdCardEntry" onclick="_00('F7',event);">Customer id card entry</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="createCustomer" onclick="_00('F6',event);">Create Customer</span>
+                                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="createCustomer" onclick="_00('F6',event);">Create Customer / Search by SSN#</span>
                                     <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="search" onclick="_00('Enter',event);">Search</span>
                                 </div>
                             </div>
@@ -445,6 +445,8 @@
 			$("#CenPH__lb_RCDDTL1__lb_PBMNB").attr('tabindex','2' );
             //Set email to original email text field
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").appendTo("#search-by-email");
+			$("#CenPH__lb_RCDDTL1__lb_DB5NA").attr("disabled", "disabled");
+			$('#CenPH__lb_RCDDTL1__lb_DB5NA').css('background-color' , '#DEDEDE');			
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input").css("text-transform", "lowercase");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("maxlength", "3");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
@@ -482,6 +484,11 @@
 }
 #CenPH__lb_RCDDTL1__lb_1ALTX, #CenPH__lb_RCDDTL1__lb_DB5NA {
 	width:100% !important;
+}
+#createCustomer{
+ font-size: 11px !important;
+ height: 20px !important;
+ background-color: #cc0000 !important;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
