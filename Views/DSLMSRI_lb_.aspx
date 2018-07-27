@@ -726,6 +726,7 @@
            
 
            $("#worksheetNumber").ForceNumericOnly();
+		   $("#worksheetNumber").attr('pattern', '[0-9]*');
            $('body').on('click', '#previous', function (event) {
              _00('F3',event);
            });
