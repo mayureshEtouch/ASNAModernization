@@ -24,6 +24,7 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+	<div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content homepage-content">
         <div class="content-grid mdl-grid" style="height:100%;">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
@@ -222,6 +223,9 @@
             </div>
         </div>
     </main>
+	<div id="modal" class="simplePopup" style="display: block; position: absolute;">
+		<div class="simplePopupClose">X</div><br>
+	</div>
        <div id="Div1">
             
       <%-- %%TS  SD  20120320  105342  COOL1       REL-V5R4M0  5722-WDS                                                      --%>
@@ -1056,7 +1060,7 @@
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
      <style>
         #Div1, #fkeys, #diagnostics, #footer, [id$='_DSLOADD2']{
-            display: none;
+            display: block;
         }
        .DdsRecord {
           display: none;
@@ -1072,11 +1076,28 @@
         .bold {
             font-weight: bold;
         }
+		.simplePopup {
+		top: 50%;
+		left: 50%;
+		margin-top: -28px;
+		margin-left: -250px
+		}
+		@media (max-width: 1024px){
+			.simplePopup {
+			top: 50%;
+			left: 50%;
+			margin-top: -28px;
+			margin-left: -148px
+			}
+		}
+		
+		
     </style>
 
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/homepage.js")%>"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+		
             //Set date and time
             /*$("#form1").height($('body').height() - $('.copyright').height());
             $(window).resize(function () {
@@ -1099,6 +1120,21 @@
                  }
                  
             });
+			if ($('#CenPH_MENUFMT_ERRORS').length > 0) {
+				console.log('hello');
+				$(".OverlayPopupBackground").show();
+				$("#modal").css('display','block');
+				$('.simplePopupClose').after($('#CenPH_MENUFMT_ERRORS').html());
+			}		
+			else{
+				$(".OverlayPopupBackground").hide();
+				$("#modal").css('display','none');
+			}
+			$(".simplePopupClose").on("click", function () {
+				$(".OverlayPopupBackground").hide();
+				$("#modal").css('display','none');
+            });
+			
         });
     </script>
     </asp:Content>

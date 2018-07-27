@@ -222,6 +222,9 @@
             </div>
         </div>
     </main>
+	<div id="modal" class="simplePopup" style="display: block; position: absolute;">
+		<div class="simplePopupClose">X</div><br>
+	</div>
          <div id="Div1">
             
       <%-- %%TS  SD  20160707  200235  COOL23      REL-V7R1M0  5770-WDS                                                      --%>
@@ -1052,6 +1055,20 @@
         .bold {
             font-weight: bold;
         }
+		.simplePopup {
+		top: 50%;
+		left: 50%;
+		margin-top: -28px;
+		margin-left: -250px
+		}
+		@media (max-width: 1024px){
+			.simplePopup {
+			top: 50%;
+			left: 50%;
+			margin-top: -28px;
+			margin-left: -148px
+			}
+		}
     </style>
 
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/homepage.js")%>"></script>
@@ -1078,6 +1095,20 @@
                     _00("Enter", event);
                  }
                  
+            });
+			if ($('#CenPH_MENUFMT_ERRORS').length > 0) {
+				console.log('hello');
+				$(".OverlayPopupBackground").show();
+				$("#modal").css('display','block');
+				$('.simplePopupClose').after($('#CenPH_MENUFMT_ERRORS').html());
+			}		
+			else{
+				$(".OverlayPopupBackground").hide();
+				$("#modal").css('display','none');
+			}
+			$(".simplePopupClose").on("click", function () {
+				$(".OverlayPopupBackground").hide();
+				$("#modal").css('display','none');
             });
         });
     </script>
