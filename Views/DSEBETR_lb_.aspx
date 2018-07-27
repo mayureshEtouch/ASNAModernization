@@ -1407,6 +1407,8 @@
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').ForceNumericMaxlength();
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').css("text-align", "right");
             $('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').addClass("amount");
+			$('[id^="CenPH__lb_SFLRCD__lb_2ATVA"]').attr('pattern', '[0-9]*');
+			
             $('[id^="CenPH__lb_SFLRCD__lb_RNICD"]').addClass("payment");
             $('[id^="CenPH__lb_SFLRCD__lb_2A9TX"]').addClass("reference");
             $('[id^="CenPH__lb_SFLRCD__lb_2BATX"]').addClass("approval-code");
@@ -1531,41 +1533,57 @@
 					//});
 					//console.log(divThisID);
 					var selectID="ddl_"+repthisID;
-					$("#"+ divThisID).append('<select class="DdsCharField payment"  id='+selectID+'>\
-					<option selected value="">Please choose</option>\
-					<option  value="IL">IL - CONN\'S INSTALLMENT</option>\
-					<option  value="IY">IY - IL 12MO CSH OPT</option>\
-					<option  value="CS">CS - CASH ENTRY</option>\
-					<option  value="GE">GE - GENERAL ELECTRIC</option>\
-					<option  value="BC">BC - BANK CONVERSION</option>\
-					<option  value="CB">CB - CREDIT BUILDERS</option>\
-					<option  value="CK">CK - CHECK PAYMENT</option>\
-					<option  value="CM">CM - CREDIT MEMO</option>\
-					<option  value="DI">DI - DISCOVER CARD</option>\
-					<option  value="DP">DP - DEFERED PAYMENT</option>\
-					<option  value="EN">EN - TRS</option>\
-					<option  value="GC">GC - GIFT CERTIFICATE</option>\
-					<option  value="HL">HL - TRS </option>\
-					<option  value="IC">IC - INSTANT CREDIT</option>\
-					<option  value="IP">IP - INSURANCE PMT</option>\
-					<option  value="I3">I3 - IL 3 MO CSH OPT</option>\
-					<option  value="I6">I6 - IL 6 MO CSH OPT</option>\
-					<option  value="MC">MC - MASTERCARD</option>\
-					<option  value="OF">OF - OPPORTUNITY FINANCE</option>\
-					<option  value="OY">OY - OFC 12MO CSH OPT</option>\
-					<option  value="O6">O6 - OFC 6 MO CSH OPT</option>\
-					<option  value="RF">RF- REFUND PMT</option>\
-					<option  value="SC">SC - SERVICE CONTRACTS</option>\
-					<option  value="SF">SF - RESTOCKING FEE</option>\
-					<option  value="TD">TD - THIRTY DAY DELAY</option>\
-					<option  value="TE">TE - TAX EXEMPT PMT</option>\
-					<option  value="UN">UN - UNAPPLIED IL PYMT</option>\
-					<option  value="VS">VS - VISA CARD</option>\
-					<option  value="18">18 - 18 MONTH CASH OPTION</option>\
-					<option  value="2Y">2Y - 24 MONTH CASH OPTION</option>\
-					<option  value="30">30 - 30 MONTH CASH OPTION</option></select>');
-					selectID=selectID.replace('.','\\.')				
-					$("#"+ selectID).css("margin",'3px 0 0 10px',"important");
+					if($('#CenPH__lb_SFLCTL__lb_1ALTX').text()=='PROGRESSIVE LEASING'){
+						$("#"+ divThisID).append('<select class="DdsCharField payment"  id='+selectID+'>\
+						<option selected value="">Please choose</option>\
+						<option  value="EN">EN - PROGRESSIVE</option>\
+						<option  value="MC">MC - MASTER CARD</option>\
+						<option  value="VS">VS - VISA</option>\
+						<option  value="DI">DI - DINNERS</option>\
+						<option  value="CS">CS - CASH ENTRY</option>\</select>');
+						selectID=selectID.replace('.','\\.')				
+						$("#"+ selectID).css("margin",'3px 0 0 10px',"important");
+						
+					}
+					else{
+					
+						$("#"+ divThisID).append('<select class="DdsCharField payment"  id='+selectID+'>\
+						<option selected value="">Please choose</option>\
+						<option  value="IL">IL - CONN\'S INSTALLMENT</option>\
+						<option  value="IY">IY - IL 12MO CSH OPT</option>\
+						<option  value="CS">CS - CASH ENTRY</option>\
+						<option  value="GE">GE - SYNCHRONY</option>\
+						<option  value="EN">EN - PROGRESSIVE</option>\
+						<option  value="BC">BC - BANK CONVERSION</option>\
+						<option  value="CB">CB - CREDIT BUILDERS</option>\
+						<option  value="CK">CK - CHECK PAYMENT</option>\
+						<option  value="CM">CM - CREDIT MEMO</option>\
+						<option  value="DI">DI - DISCOVER CARD</option>\
+						<option  value="DP">DP - DEFERED PAYMENT</option>\
+						<option  value="GC">GC - GIFT CERTIFICATE</option>\
+						<option  value="HL">HL - TRS </option>\
+						<option  value="IC">IC - INSTANT CREDIT</option>\
+						<option  value="IP">IP - INSURANCE PMT</option>\
+						<option  value="I3">I3 - IL 3 MO CSH OPT</option>\
+						<option  value="I6">I6 - IL 6 MO CSH OPT</option>\
+						<option  value="MC">MC - MASTERCARD</option>\
+						<option  value="OF">OF - OPPORTUNITY FINANCE</option>\
+						<option  value="OY">OY - OFC 12MO CSH OPT</option>\
+						<option  value="O6">O6 - OFC 6 MO CSH OPT</option>\
+						<option  value="RF">RF- REFUND PMT</option>\
+						<option  value="SC">SC - SERVICE CONTRACTS</option>\
+						<option  value="SF">SF - RESTOCKING FEE</option>\
+						<option  value="TD">TD - THIRTY DAY DELAY</option>\
+						<option  value="TE">TE - TAX EXEMPT PMT</option>\
+						<option  value="UN">UN - UNAPPLIED IL PYMT</option>\
+						<option  value="VS">VS - VISA CARD</option>\
+						<option  value="18">18 - 18 MONTH CASH OPTION</option>\
+						<option  value="2Y">2Y - 24 MONTH CASH OPTION</option>\
+						<option  value="30">30 - 30 MONTH CASH OPTION</option></select>');
+						selectID=selectID.replace('.','\\.')				
+						$("#"+ selectID).css("margin",'3px 0 0 10px',"important");
+						
+					}
 				});
 			
 			}

@@ -151,7 +151,7 @@
       $("#CenPH__lb_RCDDTL1__lb_DAVNB_new").ForceNumericOnly();
       $("#CenPH__lb_RCDDTL1__lb_DBMNB_new").ForceNumericOnly();
       $("#CenPH__lb_RCDDTL1__lb_DAXNB_new").ForceNumericOnly();
-      
+      $("#CenPH__lb_RCDDTL1__lb_DAVNB_new, #CenPH__lb_RCDDTL1__lb_DBMNB_new, #CenPH__lb_RCDDTL1__lb_DAXNB_new").attr('pattern', '[0-9]*');
       
       });
 </script>

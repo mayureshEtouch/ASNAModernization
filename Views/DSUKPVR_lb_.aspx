@@ -480,6 +480,7 @@
 
             copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
             $("#orderNo").ForceNumericOnly();
+			$("#orderNo").attr('pattern', '[0-9]*');
             $("#next").click(function (event) {
                 _00('Enter', event);
             });

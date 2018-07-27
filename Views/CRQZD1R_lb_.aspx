@@ -433,14 +433,14 @@
            $(".OverlayPopupBackground").show();
            $(".confirmation-outer-conatiner").show();
            $("#yes").attr('disabled', 'disabled');
-           $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
+           $("#CenPH__lb_CONFIRM_VZCFCD").val("Y");
            _00('Enter', event);
-           /*$("#yes").click(function (event) {
+         /* $("#yes").click(function (event) {
             $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("Y");
             _16(event,this,1,'Enter');
            });*/
            $("#no").click(function (event) {
-            $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
+            $("#CenPH__lb_CONFIRM_VZCFCD").val("N");
             _16(event,this,1,'Enter');
            });
 

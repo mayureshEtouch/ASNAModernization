@@ -462,6 +462,7 @@
             $("#CenPH__lb_RCDDTL1__lb_PBMNB").appendTo("#search-by-phone");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").appendTo("#search-by-phone");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PBMNB").addClass("mdl-textfield__input mdl-cell--2-col mdl-cell--2-col-desktop");
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB").attr('pattern', '[0-9]*');
             //Set email to original email text field
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").appendTo("#search-by-email");
             $("#CenPH__lb_RCDDTL1__lb_DB5NA").addClass("mdl-textfield__input").css("text-transform", "lowercase");
@@ -469,6 +470,8 @@
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
             //Only numbers validation
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB").ForceNumericOnly();
+			$("#CenPH__lb_RCDDTL1__lb_DB5NA").attr("disabled", "disabled");
+			$('#CenPH__lb_RCDDTL1__lb_DB5NA').css('background-color' , '#DEDEDE');
       
       $("form input[type=text]").on('input',function () {
         var tab = $(this).attr("tabindex");

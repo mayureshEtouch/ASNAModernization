@@ -472,7 +472,9 @@
             $("#CenPH__lb_RCDDTL1__lb_PBMNB_new").ForceNumericOnly();
             $("#CenPH__lb_RCDDTL1__lb_PAXNB_new").ForceNumericOnly();
             $("#CenPH__lb_RCDDTL1__lb_1ALTX_new").focus();
-
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB_new,#CenPH__lb_RCDDTL1__lb_PBMNB_new,#CenPH__lb_RCDDTL1__lb_PAXNB_new").attr('pattern', '[0-9]*');
+			$("#CenPH__lb_RCDDTL1__lb_DB5NA_new").attr("disabled", "disabled");
+			$('#CenPH__lb_RCDDTL1__lb_DB5NA_new').css('background-color' , '#DEDEDE');
              $("#search").click(function (event) {
                  _00('Enter', event);
             });

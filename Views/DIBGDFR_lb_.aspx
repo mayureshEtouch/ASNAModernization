@@ -776,6 +776,7 @@
             });*/
 			
 			 $("#loc").ForceNumericOnly();
+			 $("#loc").attr('pattern', '[0-9]*');
 			 
 			 $("#refresh").click(function (event) {
                 _00('F5', event);

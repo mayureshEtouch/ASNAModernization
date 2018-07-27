@@ -1150,8 +1150,9 @@
                 selectCusotmer(row, "2", event);
                 //_00('enter', event);
             });
-
+			
            $("#CenPH__lb_SFLCTL__lb_2ITNB_new,#CenPH__lb_SFLCTL__lb_2AJCD_new").ForceNumericOnly();
+		   $("#CenPH__lb_SFLCTL__lb_2ITNB_new,#CenPH__lb_SFLCTL__lb_2AJCD_new").attr('pattern', '[0-9]*');
            $('body').on('click', '#previous', function (event) {
              _00('F3',event);
            });

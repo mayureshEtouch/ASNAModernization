@@ -1019,6 +1019,7 @@
             generateTableAndApplyInfiniteScroll("tblreviewIntellicheck", "CenPH__lb_SFLRCD", "NONE", "none", dataMergeIndices);
 
           $("#CenPH__lb_SFLCTL__lb_2ITNB_new, #CenPH__lb_SFLCTL__lb_2AJCD_new").ForceNumericOnly();
+		  $("#CenPH__lb_SFLCTL__lb_2ITNB_new, #CenPH__lb_SFLCTL__lb_2AJCD_new").attr('pattern', '[0-9]*');
 
              var selectCusotmer = function (row, value, event) {
                 var selectId = $(row).data('selectid');

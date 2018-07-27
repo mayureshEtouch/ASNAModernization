@@ -505,10 +505,12 @@
               $('body').css({ "background-color": "white" });
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#time").html("&nbsp;" + $("#time").html());
+			  $("#CenPH__lb_RCDDTL1__lb_PAVNB_new,#CenPH__lb_RCDDTL1__lb_PBMNB_new,#CenPH__lb_RCDDTL1__lb_PAXNB_new,#CenPH__lb_RCDDTL1__lb_PBANB_new").attr('pattern', '[0-9]*');
               $("#CenPH__lb_RCDDTL1__lb_PAVNB_new").ForceNumericOnly();
               $("#CenPH__lb_RCDDTL1__lb_PBMNB_new").ForceNumericOnly();
               $("#CenPH__lb_RCDDTL1__lb_PAXNB_new").ForceNumericOnly();
               $("#CenPH__lb_RCDDTL1__lb_PBANB_new").ForceNumericOnly();
+			  
               $("#search").click(function (event) {
                      _00('Enter', event);
                 });

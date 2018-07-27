@@ -103,7 +103,7 @@
                                     <%--<input type="text" id="CenPH_1AJCD" name="CenPH_1AJCD">--%>
                                    
                                     <span id="CenPH_1A0TX" class="DdsCharField_OutputOnly"></span>
-                                    <input type="hidden" id="empid" name="empid">
+                                    <input type="hidden" id="empid" name="empid" pattern="[0-9]*">
                                 </span>
                             </div>
                         </div>
@@ -1383,8 +1383,8 @@
             $("#CenPH_CWPH_lb_").html("&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CWPH_lb_").html() + "" + ext);
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
-
-
+			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('pattern', '[0-9]*');
+			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('maxlength', '5');
             $('body').on('click', '.emp-code', function (event) {
                 _00('Enter', event);
             });

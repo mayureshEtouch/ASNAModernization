@@ -482,6 +482,8 @@
             $("#CenPH__lb_RCDDTL1__lb_PEAN_lb_").addClass("mdl-textfield__input").css("text-transform", "lowercase");
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB").attr("maxlength", "3");
             $("#CenPH__lb_RCDDTL1__lb_PAXNB").attr("maxlength", "4");
+			$("#CenPH__lb_RCDDTL1__lb_PEAN_lb_").attr("maxlength", "9");
+			$("#CenPH__lb_RCDDTL1__lb_PAVNB, #CenPH__lb_RCDDTL1__lb_PBMNB, #CenPH__lb_RCDDTL1__lb_PAXNB, #CenPH__lb_RCDDTL1__lb_PEAN_lb_").attr('pattern', '[0-9]*');
             //Only numbers validation
             $("#CenPH__lb_RCDDTL1__lb_PAVNB,#CenPH__lb_RCDDTL1__lb_PBMNB,#CenPH__lb_RCDDTL1__lb_PAXNB,#CenPH__lb_RCDDTL1__lb_PEAN_lb_").ForceNumericOnly();
       

@@ -683,7 +683,7 @@
                 copyData(copyToAndFrom, "keyup keydown change blur mouseup mousedown");
 
                 $("#emp").ForceNumericOnly();
-
+				$("#emp").attr('pattern', '[0-9]*');
                 $("#search").click(function (event) {
                   _00('F6', event);
                 });

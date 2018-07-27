@@ -1264,6 +1264,8 @@ $("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").hide();
 				//	$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").removeClass("input-disabled");
 				}
 			}
+			$("#CenPH__lb_RCDDTL1__lb_1Z7C_lb_new_text").attr('pattern', '[0-9]*');
+			
 
         });
       </script>

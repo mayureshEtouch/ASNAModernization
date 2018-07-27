@@ -299,6 +299,7 @@
 
               copyData(copyToAndFrom, "keyup keydown change mouseup mousedown click blur");
               $("#CenPH__lb_SFLCTL__lb_1AJCD_new").ForceNumericOnly();
+			  $("#CenPH__lb_SFLCTL__lb_1AJCD_new").attr('pattern', '[0-9]*');
               function generateSpecialInstructionsSection() {
                   //Create copyToAndFrom JSON object for special instructions
                   var copyToAndFrom = {
