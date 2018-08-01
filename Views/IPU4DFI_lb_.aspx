@@ -39,7 +39,7 @@
                             <span class="heading-h1">Select Printer</span> </div>
                         <div class="mdl-cell mdl-cell--4-col pull-right">
                             <!-- Navigation -->
-                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">DIO3DFR</span></div>
+                            <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">IPU4DFI</span></div>
                     </div>
                 </section>
                 <section class="order-summary" style="margin-top: 16px;">
