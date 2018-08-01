@@ -924,6 +924,8 @@
                 $(".OverlayPopupBackground").hide();
                 $(".confirmation-outer-conatiner").hide();
             }
+			
+			$(".term-input").attr('pattern', '[0-9]*');
         }); // document ready end
         $(".error-message").text($("[id*='CenPH__lb_MSGRCD_MSGKEY.0'], #MsgPH_DdsMessagePanel1").text());
     </script>

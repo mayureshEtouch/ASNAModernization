@@ -1384,6 +1384,7 @@
             // Set the selected salesperson id
             $("#CenPH__lb_SFLCTL__lb_1AJCD").prependTo($("#employee-info"));
 			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('pattern', '[0-9]*');
+			$("#CenPH_CEWTX").attr('pattern', '[0-9]*');
 			$("#CenPH__lb_SFLCTL__lb_1AJCD").attr('maxlength', '5');
             $('body').on('click', '.emp-code', function (event) {
                 _00('Enter', event);

@@ -453,7 +453,7 @@
           }
          // $("#cphone").replace(/\D/g, "");
 		  $("#hphone1,#bphone1,#bphone2,#bphone3,#hphone2,#hphone3,#cphone,#extn").ForceNumericOnly();
-		  
+		  $("#zcode,#bphone1,#bphone2,#bphone3,#extn,#hphone1,#hphone2,#hphone3,#cphone").attr('pattern', '[0-9]*');
 		 // TabIndex of Input fields
 		 setTimeout(function(){
 			$("#type").attr("tabindex","1");
@@ -487,6 +487,10 @@
 					
 				}
 			});
+			
+			
+			
+			
       });
     </script>
         <div id="Div1" style="display: none;">

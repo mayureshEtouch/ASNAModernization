@@ -893,7 +893,7 @@
           generateTableAndApplyInfiniteScroll("displayIncmOrderDiv", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);
           $("#slman").ForceNumericOnly();
           $("#displayIncmOrder tbody tr").removeAttr("tabindex");
-          
+          $("#slman").attr('pattern', '[0-9]*');
           
           $("#displayIncmOrder tbody tr").each(function(i){
             $(this).attr("tabindex",parseInt(i+3));

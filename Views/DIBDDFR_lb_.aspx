@@ -193,6 +193,7 @@
           copyData(copyToAndFrom, "change keyup keydown click mouseup mousedown");
           $("#telephone").val($("#telephone").val().replace(/\D/g,''));
           $("#telephone").ForceNumericOnly();
+		  $("#telephone").attr('pattern', '[0-9]*');
           $("#phoneType").ForceAlphabetOnly();
           var dataMergeIndices = [[0], [1], [2], [3, ",", "&nbsp;", 7, ",", "&nbsp;", 8, ",", "&nbsp;", 9],[4],[6]];
           generateTableAndApplyInfiniteScroll("customers", "CenPH__lb_SFLRCD", "NONE", "next", dataMergeIndices);

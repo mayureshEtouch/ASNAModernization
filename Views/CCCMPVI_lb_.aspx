@@ -179,6 +179,7 @@
         $("#ssn").on("change keyup mouseup paste touchend", function(event) {
             maskUnmaskSSN("ssn", event);
         });
+		$("#ssn").attr('pattern', '[0-9]*');
 		
 		        
       });

@@ -1790,6 +1790,8 @@
 				$("#ctl00\\$FKeyPH\\$DSSTETR_lb_Control_F4").click(function (event) {
                    _00('F4',event);
                 });
+				
+				$(".amount").attr('pattern', '[0-9]*');
             });
 			
             

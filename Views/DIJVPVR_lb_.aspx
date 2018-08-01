@@ -135,7 +135,8 @@
         }
         $("body").on("click", ".simplePopupClose", function() {
            $(".simplePopupBackground1").hide();
-        });    
+        });
+		$("#card_number").attr('pattern', '[0-9]*');
       });
     </script>
         <div id="Div1" style="display:none;">

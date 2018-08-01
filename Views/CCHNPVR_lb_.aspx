@@ -485,10 +485,12 @@
             $('[id^="value_3"]').NumericWithCurencyUptoTwoDecimal();
             $('[id^="value_4"]').NumericWithCurencyUptoTwoDecimal();
 			$('#employee_id').ForceNumericOnly();
-			$("#employee_id,#credit_account,#balance,#down_payment").attr('pattern', '[0-9]*');
+			$("#employee_id,#credit_account,#balance,#down_payment,#months").attr('pattern', '[0-9]*');
 			$("#quantity_1,#quantity_2,#quantity_3,#quantity_4").attr('pattern', '[0-9]*');
 			$("#value_1,#value_2,#value_3,#value_4").attr('pattern', '[0-9]*');
 			$("#maint_1,#maint_2,#maint_3,#maint_4").attr('pattern', '[0-9]*');
+			$("#cat_1,#cat_2,#cat_3,#cat_4").attr('pattern', '[0-9]*');
+			$("#insurance,#cl,#prop,#u_emp").attr('pattern', '[0-9]*');
             /*
             Performing F4 action on original fields when user does F4 on Moder UI fields.
             input fields obj must be supplied to doF4Action function and also f4 class should be there for modern UI fields.
