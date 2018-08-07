@@ -1475,6 +1475,8 @@
 			
 		}
 	 });
+	 
+	 $("#zcode,#bphone1,#bphone2,#bphone3,#extn,#hphone1,#hphone2,#hphone3,#cphone").attr('pattern', '[0-9]*');
   });
 </script>
     </asp:Content>

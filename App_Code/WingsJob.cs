@@ -5,6 +5,7 @@ using AVRRuntime = ASNA.VisualRPG.Runtime;
 using ASNA.DataGate.Client;
 using ASNA.DataGate.DataLink;
 using ASNA.DataGate.Common;
+using System.Text.RegularExpressions;
 
 namespace WingsLogic
 {
@@ -97,7 +98,7 @@ namespace WingsLogic
             }
            //myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.MonarchWeb, AVRRuntime.OpenAccessDspF.Wings );
              myDatabase = new AVRRuntime.Database( "", AVRRuntime.VirtualTerminal.None, AVRRuntime.OpenAccessDspF.Wings );
-            //myDatabase.TerminalDeviceName = "SA112TC139";
+            myDatabase.TerminalDeviceName = "SA10ESALES";
 
             while( true )
             {
@@ -109,18 +110,36 @@ namespace WingsLogic
                 myDatabase.Port = logonInfo.Port;
 
                 //Select Terminal ID based on the User profile.
-                if(myDatabase.User == "ESALESQA") {
+				if(myDatabase.User.Contains("CHR"))
+				{
+					logonInfo.Message = "Username not in eSales format";
+					break;
+					
+				}
+                /*if (myDatabase.User == "ESALESQA")
+                {
                     myDatabase.TerminalDeviceName = "SA112TC139";
-                } else if(myDatabase.User == "GUIQA") {
-                    myDatabase.TerminalDeviceName = "SA40TC144";
-                } else {
-                    myDatabase.TerminalDeviceName = "SA73TC0142";
                 }
+                else if (myDatabase.User == "GUIQA")
+                {
+                    myDatabase.TerminalDeviceName = "SA40TC144";
+                }
+                else
+                {
+                    myDatabase.TerminalDeviceName = "SA73TC0142";
+                }*/
 
                 try
                 {
                     myDatabase.Open();
                     break;
+                     /*Regex rgx = new Regex(@"^DISSLS[0-9]+U$", RegexOptions.IgnoreCase);
+                    if(rgx.IsMatch(myDatabase.User)) {
+                        myDatabase.Open();
+                        break;    
+                    } else {
+                        logonInfo.Message = "Username not in eSales format";
+                    }*/
                 }
                 catch( dgException dgEx )
                 {

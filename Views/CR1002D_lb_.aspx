@@ -2218,6 +2218,7 @@
 
             $("#CenPH_DSPFMT1_ADDON_usd_").ForceCurrencyWithTwoDecimal();
             $("#CenPH_DSPFMT1_ADDON_usd_").attr('maxlength','7');
+			$("#CenPH_DSPFMT1_SS_lb_2_new,#CenPH_DSPFMT1_SS_lb_1_new,#CenPH_DSPFMT1_CRMTHB,#CenPH_DSPFMT1_FRCNTC,#CenPH_DSPFMT1_ADDON_usd_,#CenPH_DSPFMT1_SS_lb_1,#CenPH_DSPFMT1_SS_lb_2,#addOnAmt,#frmContNum,#months").attr('pattern', '[0-9]*');
 
             if($('#CenPH__lb_CONFIRM_V_lb_CFCD').length > 0) {
               /*Pop up confirm box*/

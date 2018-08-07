@@ -22,6 +22,18 @@
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.flip.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/tooltips.js")%>"></script>
+	<script src="https://unpkg.com/scandit-sdk"></script>
+	<script>
+	var locationURL = window.location.href;
+	
+	if(!locationURL.endsWith("DSFMETR_lb_.aspx"))
+	{
+		localStorage.clear();
+		//localStorage.removeItem("Third");
+		//localStorage.removeItem("Fourth");
+		//localStorage.removeItem("Fifth");
+	}
+	</script>
     <link rel="stylesheet" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery-ui.min.css")%>">
 
 

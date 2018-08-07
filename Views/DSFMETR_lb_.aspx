@@ -5,6 +5,7 @@
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
     <%-- Migrated on 8/19/2016 at 7:47 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
     <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSFMETR# --%>
+	
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +23,139 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+<!-- Barcode Scaning Code Start here-->
+
+<div id="BarcodeScaning" style="display:none;">
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span> 
+      <!--<span class="mdl-layout-heading">StoreFront</span>-->
+      <div class="mdl-layout-spacer"></div>
+      <span class="close-icon" id="CloseScan"><i class="material-icons md-15 close"></i></span> </div>
+  </header>
+<input type="hidden" id="productBoxID" value="">
+<div id="scandit-barcode-picker"></div>
+    <div id="scandit-barcode-result">No codes scanned yet</div>
+    <!-- Button to continue scanning after a barcode was scanned -->
+    <div class="button-container">
+		<button id="continue-scanning-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="continueScanning()">Re Scan</button>
+		
+	</div>
+    <script>
+
+        // Helper function called when the "Continue Scanning" button is clicked
+		let picker;
+		// Configure the library and activate it with a license key
+        const licenseKey = "AW2bEz7mIJhtQ22NkjKgfdgmeEXoDWijQ1Cn9yli+ObwYAlYDH3XMtVKkc8eewI/EBWfTwUg79eGUV1qmggmvT1TD0G/KrPZmSs25YsYuHGsBpRyrDkSt+A9XeO7JYcHfl8hayZoyChUCITKlucLRDEJx+qtfbINJ1LWbegG6NaqicU9Fi1FrFk+wyT6f4Tt23PLPq5cupWzz0bBPLbfoC5Q9Myz3TTUa34Yikf/65a+8kdlVhUo6w5J4XAUfNrDfcXOpFXRgA/UFMyh082R9U/yUvcnq9KwixByH6O4ZgC26eozDOGQ9Kyz50tgnTvt4D0hvhhMhlbAoYPODY5qVDreSH5Djg2G/2Vucs8E9FteqkJZVQEIS1yg8PjR+DDR1UHY7lMWa4azExjuC5zcDAvH5s3pLagoGN8ckzJ8aRrcn2an2wxhRvCVfQUeSa4owtTju4T9WJogDMPCWjTk+AqXh2PcC5BtqLEwBMfDaTaPkyByBVspmTLzhwUtV9vM+6h5nwmHQXS//DIrRxa0Peo2dngZOhG2k/pB56xizea8YOIZ3yz3XxnuygjqgaQzUSHZ5/lLFxjk1rwy2Kh0/hVfCn1X628HRwPaW9FivuBg69x0Qca3J6CfQo53V2Yp1fWeZ6ioux/KpPVUalyVQFAwVqrVca6rGj4HCsLUi1evxwyCRm+LyRSYzV6tKQDbU+5J7xy8dYx11aDz6xxOI+9K7T5Scbm03/WJLIy3hJl3M5Yh0XjJczTGO99RJynogFn2+1k3zhXodXKmjeKsFJk1DOSBrksmrS/1GRpbTFqgl5u22WZ1W3TiKgE=";
+        // const engineLocation = "build"; // the folder containing the engine
+        // or, if using a CDN,
+        const engineLocation = "https://unpkg.com/scandit-sdk/build"
+        ScanditSDK.configure(licenseKey, { engineLocation: engineLocation });
+        const scannerContainer = document.getElementById("scandit-barcode-picker");
+        const resultContainer = document.getElementById("scandit-barcode-result");
+        const continueButton = document.getElementById("continue-scanning-button");
+        function continueScanning() {
+            if (picker) {
+                continueButton.disabled = true;
+                // Resume scanning
+                picker.resumeScanning();
+			}
+        }
+		
+       function ScaningBar(){ 
+        continueButton.disabled = true;
+        continueButton.hidden = true;
+        
+        // Create & start the picker
+        ScanditSDK.BarcodePicker.create(scannerContainer, {
+                playSoundOnScan: true,
+                vibrateOnScan: true
+            })
+            .then(barcodePicker => {
+                picker = barcodePicker;
+                // Create the settings object to be applied to the scanner
+                const scanSettings = new ScanditSDK.ScanSettings({
+                    enabledSymbologies: ["ean8", "ean13", "upca", "upce", "code128", "code39", "code93",
+                        "itf"
+                    ],
+                    codeDuplicateFilter: 1000
+                });
+                picker.applyScanSettings(scanSettings);
+                // If a barcode is scanned, show it to the user and pause scanning
+                // (scanning is resumed when the user clicks "Continue Scanning")
+                picker.onScan(scanResult => {
+                    continueButton.hidden = false;
+                    continueButton.disabled = false;
+					
+                    picker.pauseScanning();
+                    resultContainer.innerHTML = scanResult.barcodes.reduce((string, barcode) =>
+                        string +
+                        `${ScanditSDK.Barcode.Symbology.toHumanizedName(barcode.symbology)}: ${barcode.data}<br>`,
+                        '');
+						//Fill Model Number inside text field.
+						var scanedID = $("#scandit-barcode-result").text();
+						
+						scanedID = scanedID.substring(scanedID.indexOf(":") + 1);
+						var specialchar=$("#productBoxID").val();
+						specialchar = specialchar.replace('.','\\.');
+						$("#CenPH__"+specialchar).val(scanedID.replace(' ',''));
+						
+						//Fill Serial Number inside Text;
+						if($("#productBoxID").val().indexOf('2A8TX') > -1)
+						{ 
+							var serialIndex = $("#productBoxID").val().split('.');
+							var i =0;
+							while(i<= serialIndex[1]){
+								for(var j =0;j<=2;j++){
+									
+									if(i== serialIndex[1])
+									{
+										console.log("Inside IF");
+										console.log("value of i= "+i+" value of serialIndex= " + serialIndex[1]);
+										$("#datatableValueInsert > tbody  > tr:eq("+j+") > td:eq(6)").find("input").val(scanedID.replace(' ',''));
+									}
+									i++;
+								}
+							
+							}
+						}
+						
+						
+                });
+                picker.onScanError(error => {
+                   // alert();
+					console.log(error.message);
+					
+					
+                });
+                picker.resumeScanning();
+            })
+            .catch(error => {
+                //alert(error);
+				//alert(error.message);
+				if((error.message=='Permission denied') || (error.message=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.')){
+					errorMessage=error.message;
+					console.log('errorMessage inside catch ' + errorMessage);
+					$(".OverlayPopupBackground").hide();
+					$("#BarcodeScaning").hide();
+					setTimeout(function(){
+					alert('Please provide camera access to use barcode scanning'); 
+					}, 0);
+				}
+            });
+			
+			}
+    </script>
+
+	
+	
+</div>
+<!-- Barcode Scaning Code Ends here-->
+
+
+
+
     <div class="OverlayPopupBackground"></div>
     <!-- Modified HTML code starts here -->
 
@@ -31,6 +165,7 @@
                 <div class="mdl-cell mdl-cell--8-col">
                     <!-- Title -->
                     <span class="heading-h1">Enter Order Details</span>
+					
                 </div>
                 <div class="mdl-cell mdl-cell--4-col pull-right">
                     <!-- Navigation -->
@@ -116,19 +251,19 @@
                                         <br />
                                         Location</th>
                                     <th style="width: 4%">Quantity</th>
-                                    <th style="width: 14%">Model
+                                    <th style="width: 10%">Model
                                         <br />
                                         Number</th>
-                                    <th style="width: 12%">Model
+                                    <th style="width: 10%">Model
                                         <br />
                                         Name</th>
-                                    <th style="width: 8%">Serial
+                                    <th style="width: 17%">Serial
                                         <br />
                                         Number</th>
                                     <th style="width: 6%">Installation
                                         <br />
                                         Code</th>
-                                    <th style="width: 9%">Instructions</th>
+                                    <th style="width: 6%">Instructions</th>
                                     <th style="width: 3%">Level</th>
                                     <th style="width: 3%">Warranty</th>
                                     <th style="width: 3%">Credit</th>
@@ -142,12 +277,13 @@
                                         <br />
                                         Price ($)</th>
                                     <th style="width: 7%">Status</th>
+									
                                 </tr>
                             </thead>
 
                         </table>
 
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValue">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValue" >
                             <thead>
                                 <tr>
                                     <th style="width: 2%">&nbsp;</th>
@@ -161,16 +297,16 @@
                                     <th style="width: 15%">Model
                                         <br />
                                         Number</th>
-                                    <th style="width: 9%">Model
+                                    <th style="width: 7%">Model
                                         <br />
                                         Name</th>
-                                    <th style="width: 8%">Serial
+                                    <th style="width: 14%">Serial
                                         <br />
                                         Number</th>
                                     <th style="width: 6%">Installation
                                         <br />
                                         Code</th>
-                                    <th style="width: 10%">Instructions</th>
+                                    <th style="width: 6%">Instructions</th>
                                     <th style="width: 3%">Level</th>
                                     <th style="width: 3%">Warranty</th>
                                     <th style="width: 3%">Credit</th>
@@ -184,6 +320,7 @@
                                         <br />
                                         Price</th>
                                     <th style="width: 6%">Status</th>
+									
                                 </tr>
                             </thead>
                             <tbody>
@@ -1578,8 +1715,89 @@
             padding-top: 3px;
             font-size: 11px;
         }
+		td.button-container .mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
+			margin: 0 3px;
+		}
+		#BarcodeScaning {
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 3vh;
+            font-family: 'Open Sans', sans-serif;
+			position: absolute;
+            width: 600px;
+            height: auto;
+			z-index: 5 !important;
+			background: #fff;
+			margin-left: -300px;
+			left: 50%;
+        }
+        #scandit-barcode-picker {
+            max-height: 70vh;
+        }
+        #scandit-barcode-result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 100%;
+        }
+        button,
+        button:active,
+        button[disabled]:hover {
+            --webkit-appearance: none;
+            border: none;
+            border-radius: none;
+            outline: none;
+            font-size: 0.7em;
+            padding: 0.4em 0.6em;
+            margin: 20px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            background: #2ec0cc;
+            color: white;
+        }
+        button:hover {
+            background: #30d0d8;
+        }
+        button[disabled] {
+            opacity: 0.4;
+        }
+        #continue-scanning-button {
+            margin-bottom: 20px;
+        }
+		
+		.scan-model {
+			background: url('../Themes/Current/Images/icons/ScanBarcode_icon16x13.png') no-repeat;
+			width: 17px;
+			height: 14px;
+			position: absolute;
+			right: 17px;
+			top: 12px;
+			cursor: pointer;
+		}
+		.mdl-layout__content input.serial-number {
+			height: 20px;
+		}
+		#datatableValueInsert tr > td:nth-child(7) .scan-model {
+			right: 15px;
+		}
+		#datatableValueInsert tr > td:nth-child(5) div {
+			padding: 0;
+		}
+		.order-detail-table-data .mdl-data-table th, .order-detail-table-data .mdl-data-table td {
+			padding: 7px 6px 3px;
+		}
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+			#datatableValueInsert tr > td:nth-child(7) .mdl-textfield {
+				width: 120px;
+			}
+		}
     </style>
     <script type="text/javascript">
+	
         function getCookie(cname) {
             var name = cname + "=";
             var ca = document.cookie.split(';');
@@ -1731,13 +1949,16 @@
 
         // Table code starts here
         $(document).ready(function (e) {
+		
             if ($("#datatableValueInsert").find("tbody").children().length == 0) {
-                //console.log("creating new table");
+                
                 createNewBody();
             }
             copyData();
             $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
             $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
+			$('.from-loc').attr('pattern', '[0-9]*');
+			
         });
 
         function showTableBody() {
@@ -1758,9 +1979,9 @@
 
                 $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input from-loc" type="text" maxlength="3" style="text-align: right" > </div></td>').appendTo(row);
                 $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;"  maxlength="3"></div></td>').appendTo(row);
-                $('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input model-number" type="text" style="text-align: left;" maxlength="20" name="model" ></div></td>').appendTo(row);
+                $('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input model-number" type="text" style="text-align: left;" maxlength="20" name="model" ></div> <span class="scan-model"></span></td>').appendTo(row);
                 $(' <td><span></span></td>').appendTo(row);
-                $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" maxlength="20"></div></td>').appendTo(row);
+                $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" maxlength="20"></div> <span class="scan-model"></span></td>').appendTo(row);
 
                 $('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input installation-codes" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
                 $('<td><span></span></td>').appendTo(row);
@@ -1771,6 +1992,7 @@
                 $('<td><span></span></td>').appendTo(row);
                 $('<td><span></span></td>').appendTo(row);
                 $('<td class="status"> <select> <option>Active</option><option>Cancel</option> </select></td>').appendTo(row);
+				//$('<td class="scan button-container"> <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Scan</sapn></td>').appendTo(row);
             }
         }
 
@@ -1783,20 +2005,23 @@
         }, 100)
 
         function copyData() {
+		
             //var tindex=0;
             if ($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id") != undefined) {
                 tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             }
-            //console.log('tindex is: '+tindex);
+            
             //tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             if ($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).length > 0) {
                 tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             }
             
             $("#datatableValueInsert tbody").find("tr").each(function (i) {
+			
                 $(this).find("td:eq(0) span").text($("[id$='lb_SFLRCD__lb_2AUST." + (i + tindex) + "']").text());
                 $(this).find("td:eq(1) select").val($("[id$='lb_SFLRCD__lb_2AIST." + (i + tindex) + "']").val());
-
+				$(this).find("td:eq(4) span").attr('id',this.id + 'btn_lb_SFLRCD__lb_2AXTXB.' + (i + tindex));
+				$(this).find("td:eq(6) span").attr('id',this.id + 'btn_lb_SFLRCD__lb_2A8TXB.' + (i + tindex));
                 if ($("[id$='lb_SFLRCD__lb_2AACD." + (i + tindex) + "']").is('input')) {
                     $(this).find("td:eq(2) input").val($("[id$='lb_SFLRCD__lb_2AACD." + (i + tindex) + "']").val());
 
@@ -1818,10 +2043,14 @@
                 }
 
                 if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('input')) {
-                    //$(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val());
+                  //  $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val());
+					$(this).find("td:eq(4) input").attr('id','CenPH__lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
+					$(this).find("td:eq(4) input").attr('name','ctl00$CenPH$_lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
                     $(this).find("td:eq(4) input").replaceWith($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").removeAttr("style tabindex"));
 
                 } else if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('span')) {
+					$(this).find("td:eq(4) input").attr('id','CenPH__lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
+					$(this).find("td:eq(4) input").attr('name','ctl00$CenPH$_lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
                     $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").text());
                     $(this).find("td:eq(4) input").prop("readonly", true);
                     $(this).find("td:eq(4) input").css("border", "none");
@@ -1857,6 +2086,8 @@
                 $(this).find("td:eq(8) span").text($("[id$='lb_SFLRCD__lb_RGLTX." + (i + tindex) + "']").text());
                 $(this).find("td:eq(9) span").text($("[id$='lb_SFLRCD__lb_RCWST." + (i + tindex) + "']").text());
                 $(this).find("td:eq(3) input").ForceNumericOnly();
+				$(this).find("td:eq(3) input").attr('pattern', '[0-9]*');
+				$(this).find("td:eq(3) input").css("border-color", "rgb(197, 197, 197)");
                 $(this).find("td:eq(2) input").ForceNumericWithQuestionMarkOnly();
                 if ($(this).find("td:eq(1) select").val() == "DL") {
                     $(this).find("td:eq(7) input").prop('disabled', false);
@@ -1878,33 +2109,182 @@
                     after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
             }
             $(".table-container").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+			
+			
+			
+			//Filling missing table value Start
+			$("input[id^='CenPH__lb_SFLRCD__lb_2AXTX']").each(function(){
+				var modelID = this.id;
+				modelID = modelID.substring(modelID.indexOf(".") + 1);
+				if(localStorage.getItem(modelID)!=null){
+					$("#CenPH__lb_SFLRCD__lb_2AXTX\\."+modelID).val(localStorage.getItem(modelID));
+				}
+			});
+			
+			//Filling missing table value End
 
         }
+		
+		//Barcode Scanning Code Starts
+		var currentURL = window.location.href;
+		var errorMessage ='Test';
+		$(document).ready(function (e) {
+			console.log(currentURL);
+			if(currentURL.startsWith('http://')){
+				//$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").css('background', 'transparent');
+				$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
+				$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
+		
+			}
+			else{
+				$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").addClass("scan-model");
+				$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").addClass("scan-model");
+			}
+			
+			
+			
+        });
+		
+		//Start - Set value into LocalStorage for missing table value.
+		$("input[id^='CenPH__lb_SFLRCD__lb_2AXTX']").bind('input', function () {
+		  
+          var stt = $(this).val();
+          var thisID = this.id;
+		  var thisIDNumber =   thisID.substring(thisID.indexOf(".") + 1);
+		  if(thisIDNumber >= 3)
+		  {
+			localStorage.setItem(thisIDNumber, stt);
+		 // var idAfterSpecialCharRemoved= thisID;
+			//			idAfterSpecialCharRemoved = idAfterSpecialCharRemoved.replace('.','\\.');
+		  //$(idAfterSpecialCharRemoved).val(sessionStorage.getItem(thisID));
+		  }        
+       });
+	   //End - Set value into LocalStorage for missing table value.
+	   
+	   //This is for Model Number
+		var countPresent = 0; //This variable is use to counter Scan function run once in on load.
+		
+		$(document).on("click", "span[id^='btn_lb_SFLRCD__lb_2AXTXB']", function () {
+			
+			if(currentURL.startsWith("https://")){
+				var idbtn = this.id.replace('B','');
+				idbtn = idbtn.replace('btn_','');
+				//window.open("ScanditSimpleSample.aspx?id="+encodeURIComponent(idbtn), "_blank", "height=400, width=550, status=yes, toolbar=no, menubar=no, location=no,addressbar=no");
+				barcodeOpening(idbtn);
+				//$(".OverlayPopupBackground").show();
+				if(countPresent==0)
+				{	
+					countPresent=countPresent+1;
+					ScaningBar();
+				}
+				//document.write('Hello2 '+ errorMessage);
+				
+				if((errorMessage=='Permission denied') || (errorMessage=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.'))
+				{
+				
+					setTimeout(function(){ 
+					$(".OverlayPopupBackground").hide();
+					$("#BarcodeScaning").hide()
+					}, 0);
+					
+					alert('Please provide camera access to use barcode scanning');
+				}
+				else
+				{
+					$(".OverlayPopupBackground").show();
+					$("#BarcodeScaning").show();
+				}
+				
+			}
+		});
+		
+		//This is for Serial Number
+		$(document).on("click", "span[id^='btn_lb_SFLRCD__lb_2A8TXB']", function () {
+			if(currentURL.startsWith("https://"))
+			{
+				var idbtn = this.id.replace('B','');
+				idbtn = idbtn.replace('btn_','');
+				//window.open("ScanditSimpleSample.aspx?id="+encodeURIComponent(idbtn), "_blank", "height=400, width=550, status=yes, toolbar=no, menubar=no, location=no,addressbar=no");
+				barcodeOpening(idbtn);
+				//$(".OverlayPopupBackground").show();
+				if(countPresent==0)
+				{	
+					
+					countPresent=countPresent+1;
+					ScaningBar();
+				}
+				
+				if((errorMessage=='Permission denied') || (errorMessage=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.'))
+				{
+					setTimeout(function(){ 
+					$(".OverlayPopupBackground").hide();
+					$("#BarcodeScaning").hide()
+					}, 0);
+					
+					
+					alert('Please provide camera access to use barcode scanning'); 
+					
+				}
+				else
+				{
+					$(".OverlayPopupBackground").show();
+					$("#BarcodeScaning").show();
+				}
+				
+			}
+		});
+		
+		
+		$("body").on("click","#CloseScan", function(event){
+		$("#BarcodeScaning").hide();
+		$(".OverlayPopupBackground").hide();
+		$("#scandit-barcode-result").text("");
+		continueScanning();
 
+		});
+		
+		function barcodeOpening(id){
+		//var  productTextBoxID = id;
+		$("#productBoxID").val(id);
+		$("#BarcodeScaning").show();
+		}
+		//Barcode Scaning Code End here
+		
+		
         $('body').on("click", "#next-page", function (event) {
-            _00("PgDn", event);
-            copyData();
+		//event.preventDefault();
+          // setTimeout(function(){
+                //copyData();
+            //},300);
+			
+			_00("PgDn", event);
+			copyData();
         });
         $('body').on("click", "#previous-page", function (event) {
-            _00("PgUp", event);
-            copyData();
+		//event.preventDefault();
+          //  setTimeout(function(){
+                //copyData();
+            //},300);
+			
+			_00("PgUp", event);
+			copyData();
         });
 
         $('body').on("touchstart", "#next-page", function (event) {
-             event.preventDefault();
-            setTimeout(function(){
-                copyData();
-            },300);
+           //  event.preventDefault();
+            //setTimeout(function(){
+               // copyData();
+            //},300);
             _00("PgDn", event);
-            
+            copyData();
         });
         $('body').on("touchstart", "#previous-page", function (event) {
-             event.preventDefault();
-             setTimeout(function(){
-                copyData();
-            },300);
+            // event.preventDefault();
+             //setTimeout(function(){
+                //copyData();
+            //},300);
             _00("PgUp", event);
-            // copyData();
+             copyData();
         });
 
         $('#prompt').on("click", function (event) {
@@ -1955,6 +2335,7 @@
                     $("[id$='lb_SFLRCD__lb_2A8TX." + (i + tindex) + "']").val($(this).find("td:eq(6) input").val());
                     $("[id$='lb_SFLRCD__lb_RCWST." + (i + tindex) + "']").text($(this).find("td:eq(8) input").val());
                     $("[id$='lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val($(this).find("td:eq(15) select").val() == "Active" ? " " : 4);
+					//$("[id$='btn_lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val($(this).find("td:eq(16) span").val());
                     $("[id$='lb_SFLRCD__lb_2AMVA." + (i + tindex) + "']").val($(this).find("td:eq(12) input").val());
                     if ($(this).find("td:eq(1) select").val() == "DL") {
                         //$(this).find("td:eq(7) input").prop('disabled', false);

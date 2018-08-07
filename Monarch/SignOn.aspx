@@ -163,7 +163,7 @@
 
                 </mdf:DdsRecord>
                 <div class="button-container" style="margin-right: 0px; margin-top: -55px;">
-                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" onclick="_00('Enter', event);" id="login" >Login</span>
+                    <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  id="login" >Login</span>
                 </div>
             </div>
         </main>
@@ -186,13 +186,22 @@
             display: none;
         }
     </style>
+	<script type="text/javascript">
+    //Stop Form Submission of Enter Key Press
+    function stopRKey(evt) {
+        var evt = (evt) ? evt : ((event) ? event : null);
+        var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+        if ((evt.keyCode == 13) && (node.type == "text")) { return false; }
+    }
+    document.onkeypress = stopRKey;
+</script>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + "; " + expires;
-            console.log(cvalue);
+            
         }
         // To show Billing & Shipping address in Order Detail page
             if (typeof (Storage) !== "undefined") {
@@ -223,8 +232,12 @@
             
             //Display error popup for backend messages
             if ($("#CenPH_RSignon_Message").text().length > 1) {
+				if($('#CenPH_RSignon_Message').text()=='Current library ASNAQ1OBJ not found' ||$('#CenPH_RSignon_Message').text()=='Current library ASNAPOBJ not found'){
+					$("#CenPH_RSignon_Message").text('Not Allowed eSales Access');
+				}
                 $('#modal').html($("#CenPH_RSignon_Message").text());
                 $('#modal').simplePopup();
+				$('#login').attr('disabled','disabled');
             }
             //Set dynamic height for the form conatiner
             $("#form1").height($('body').height() - $('.copyright').height());
@@ -256,8 +269,12 @@
                 //$("#login").css("pointer-events", "none");
                 //validateInput(this);
             }
+			$("body").on("click", "#login", function() {
+                  _00('Enter', event);
+              });
+			
         });
-        
+      
         $(document).keyup(function (event) {
            //console.log(33333);
            $("#CenPH_RSignon_User").css({ "position": "relative", "left": "35px", "top": "20px" });
@@ -265,30 +282,58 @@
             $("#CenPH_DdsConstant1").css({ "position": "relative", "left": "0px", "top": "20px" });
             $("#CenPH_DdsConstant2").css({ "position": "relative", "left": "0px", "top": "40px" });
         });
-
+	
+		
         var numericReg = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
         $("#CenPH_RSignon_User").on("keyup", function() {
           var name=$(this).val().toLowerCase();
 
             if(name.length == 0){ 
+				if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible'))
+                {
+                    //console.log(99999)
+                    $("#CenPH_RSignon_User-formaterror").remove();
+                }
                 $("#CenPH_RSignon_User").attr("required", true);
                 $('#CenPH_RSignon_User').attr('data-msg-required', 'Username is required');
                 $("#login").attr('disabled','disabled');
                 $("#login").css("pointer-events", "none");
+				$("#CenPH_RSignon_User").after('<label id="CenPH_RSignon_User-formaterror" class="error" style="display:none;"></label>');
                 validateInput(this);
             }
             else
-            {                 
-                if ($("#CenPH_RSignon_Password").val().length == 0) {
+            {   
+				var patt = new RegExp(/^CHR/i);
+				var res = patt.test(name);
+				if (!res) {
+                    //console.log(11111111);
+                    if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible')) {
+                        $("#CenPH_RSignon_User-formaterror").remove();
+                    }
+                    if ($("#CenPH_RSignon_Password").val().length == 0) {
+                        //console.log(1);
                         $("#login").attr('disabled','disabled');
                         $("#login").css("pointer-events", "none");
                     }
                     else
                     {
+                        //console.log(2)
                         $('#login').removeAttr('disabled');
                         $("#login").css("pointer-events", "auto");
                     }
+                }
+                else
+                {
+                    //console.log(222222);
+                    if ($("#CenPH_RSignon_User-formaterror").length <=0) {
+                        $("#CenPH_RSignon_User").after('<label id="CenPH_RSignon_User-formaterror" class="error" style="display:block;">Not Allowed eSales Access</label>');
+                    }                  
+                    $("#login").attr('disabled','disabled');
+                    $("#login").css("pointer-events", "none");
+                }
             }
+			
+			
 /*          if(name.length == 0){
                 if ($("#CenPH_RSignon_User-formaterror").length >= 1 || !$("#CenPH_RSignon_User-formaterror").is(':visible'))
                 {
@@ -331,7 +376,7 @@
                 }
             }*/
         });
-
+	
         $("#CenPH_RSignon_Password").on('keyup', function () {
             var pwd=$("#CenPH_RSignon_Password").val();
             if(pwd.length == 0){
@@ -359,7 +404,10 @@
                     $("#login").css("pointer-events", "auto");
                 }
             }
+			
         });
+		 
+
     </script>
     <style type="text/css">
         #CenPH_RSignon_User-formaterror {

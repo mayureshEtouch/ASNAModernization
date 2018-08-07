@@ -182,6 +182,9 @@
                 //var row = $("#products tbody tr.selected");
                 //selectCusotmer(row, "", event);
              });
+			 
+			 
+			 $("#product_category").attr('pattern', '[0-9]*');
            });
            </script>  
     <!-- Modified HTML code ends here -->
