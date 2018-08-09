@@ -345,6 +345,7 @@
                     _00("Enter", event);
                 });
                 $("#CenPH__lb_RCDDTL1__lb_1ZMCD_new").ForceNumericOnly();
+				$("#CenPH__lb_RCDDTL1__lb_1ZMCD_new").attr('pattern', '[0-9]*');
                 //Error message
                 if($(".simplePopupClose").length > 0) {
                     $(".simplePopupBackground1").show();
