@@ -1797,7 +1797,7 @@
 		}
     </style>
     <script type="text/javascript">
-	
+	var locationJSON = ['149'];
         function getCookie(cname) {
             var name = cname + "=";
             var ca = document.cookie.split(';');
@@ -2129,20 +2129,23 @@
 		var currentURL = window.location.href;
 		var errorMessage ='Test';
 		$(document).ready(function (e) {
-			console.log(currentURL);
-			if(currentURL.startsWith('http://')){
-				//$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").css('background', 'transparent');
-				$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
-				$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
-		
+			var localLocation = localStorage.getItem("locationStore");
+			for(var i = 0; i < locationJSON.length; i++){
+				 if(localStorage.getItem("locationStore") == locationJSON[i]){
+                    if(currentURL.startsWith('http://')){
+						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
+						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
+					}
+					else{
+						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").addClass("scan-model");
+						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").addClass("scan-model");
+					}
+				 }
+				 else{
+					$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
+					$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
+				 }
 			}
-			else{
-				$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").addClass("scan-model");
-				$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").addClass("scan-model");
-			}
-			
-			
-			
         });
 		
 		//Start - Set value into LocalStorage for missing table value.

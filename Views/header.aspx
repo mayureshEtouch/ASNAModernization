@@ -28,7 +28,10 @@
 	
 	if(!locationURL.endsWith("DSFMETR_lb_.aspx"))
 	{
+		var myItem = localStorage.getItem("locationStore");
 		localStorage.clear();
+		localStorage.setItem("locationStore",myItem);
+		//localStorage.clear();
 		//localStorage.removeItem("Third");
 		//localStorage.removeItem("Fourth");
 		//localStorage.removeItem("Fifth");

@@ -49,7 +49,7 @@
 					<div class="content-grid mdl-grid">
 						<div class="mdl-cell mdl-cell--12-col">
 							<span class="summary-title">Category</span>
-							<span class="summary-txt" id="install-category">00017 Temp. # for store 30</span>
+							<span class="summary-txt" id="install-category"></span>
 						</div>
 
 
@@ -508,7 +508,95 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
-    <style>
+    
+    <script type="text/javascript">
+	$(document).ready(function(){
+		$('#CenPH__lb_SFLRCD__lb_1SEL\\.0 option:nth-child(2)').val('');
+		$('#CenPH__lb_SFLRCD__lb_1SEL\\.0 option:nth-child(2)').text('');
+		
+		$("#CenPH__lb_SFLRCD__lb_1SEL\\.0 option:selected").each(function(){
+			$(this).removeAttr("selected");
+			
+		});
+		
+		
+		// Set category text
+            $("#install-category").html($("#CenPH__lb_SFLCTL__lb_2AXCD").html());
+			var dataMergeIndices = [[0], [1], [2],[3]];
+          // var dataMergeIndices =  [[0], [1], [2]];
+                generateDataTable("installations", "table#__Page_PopUp #CenPH__lb_SFLRCD", "next", dataMergeIndices, false);
+           // generateTableAndApplyInfiniteScroll("installations", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "submit-installation"); // Table ID, Div ID to copy records from
+            
+            $('body').on("click", "#next-page, #previous-page", function(event) {
+			 $("#previous-page,#next-page").remove();
+                setTimeout(function(){
+                    if($("#CenPH__lb_SFLRCD_0").length === 0) {
+                        $("#installations").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                    if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
+                        $("#installations").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+                    }
+                    if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
+                        $('#eof-indicator').remove();
+                        $("#installations").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                    }
+                },10)
+            });
+
+			$('.close-icon').click(function (event) {
+                _00("F12",event);
+                //$("#submit-installation").trigger('click');
+            });
+			var selectRecord = function (row, value, event) {
+                var selectId = $(row).data('selectid');
+                a = selectId.split(".");
+                $("#" + a[0] + "\\." + a[1]).val(value);
+                _00('Enter', event);
+            }
+			$('#submit-installation').click(function (event) {
+				 
+                  var row = $("#installations tbody tr.selected");
+				  if(row.data('selectid')=='CenPH__lb_SFLRCD__lb_1SEL.0'){
+					$('#CenPH__lb_SFLRCD__lb_1SEL\\.0 option:nth-child(2)').val('1');
+					$('#CenPH__lb_SFLRCD__lb_1SEL\\.0 option:nth-child(2)').text('1');
+				  }
+                  selectRecord(row, "1", event);
+				
+                //$("#submit-installation").trigger('click');
+            });
+			$('#installations tbody tr').dblclick(function () {
+                return false; // does both event.stopPropogation as well as event.preventDefault
+            });
+			$('#installations tr td:last-child').each(function(i){
+				oldData = $(this).html();
+				newData = oldData.replace(/&nbsp;/g,"");
+				$(this).html(newData);
+			});
+			
+			$('#installations tr td:last-child').css("text-align", "right");
+            if($(".simplePopupClose").length > 0) {
+                $(".simplePopupBackground1").show();
+            } else {
+                $(".simplePopupBackground1").hide();
+            }
+            $("body").on("click", ".simplePopupClose", function() {
+                $(".simplePopupBackground1").hide();
+            });
+			
+			
+		
+
+
+
+
+
+		
+    });
+	     
+       
+	   
+    </script>
+	<style>
         #__Page_Hidden{
             height: 100% !important;
         }
@@ -549,46 +637,5 @@ width: 100% !important;
                 top: 40% !important;
               }
     </style>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Set category text
-            $("#install-category").html($("#CenPH__lb_SFLCTL__lb_2AXCD").html());
-            generateTableAndApplyInfiniteScroll("installations", "__Page_PopUp #CenPH__lb_SFLRCD", "NONE", "submit-installation"); // Table ID, Div ID to copy records from
-            
-            $('body').on("click", "#next-page, #previous-page", function(event) {
-			 $("#previous-page,#next-page").remove();
-                setTimeout(function(){
-                    if($("#CenPH__lb_SFLRCD_0").length === 0) {
-                        $("#installations").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
-                    }
-                    if($("#CenPH__lb_SFLRCD_End").html().indexOf("More") !== -1) {
-                        $("#installations").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
-                    }
-                    if($("#CenPH__lb_SFLRCD_0").length === 1 && $("#CenPH__lb_SFLRCD_End").html() === "Bottom") {
-                        $('#eof-indicator').remove();
-                        $("#installations").after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
-                    }
-                },10)
-            });
-
-			$('.close-icon').click(function (event) {
-                _00("F12",event);
-                //$("#submit-installation").trigger('click');
-            });
-			$('#installations tr td:last-child').each(function(i){
-				oldData = $(this).html();
-				newData = oldData.replace(/&nbsp;/g,"");
-				$(this).html(newData);
-			});
-			$('#installations tr td:last-child').css("text-align", "right");
-            if($(".simplePopupClose").length > 0) {
-                $(".simplePopupBackground1").show();
-            } else {
-                $(".simplePopupBackground1").hide();
-            }
-            $("body").on("click", ".simplePopupClose", function() {
-                $(".simplePopupBackground1").hide();
-            });
-		});
-    </script>
+	
 </asp:Content>

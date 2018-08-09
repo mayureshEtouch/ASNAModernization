@@ -520,6 +520,7 @@
             } else {
                 $("#location-entry").hide();
             }
+			localStorage.setItem("locationStore", $("#CenPH_DSLOADD2_LOCN").text());
         });
 		$(window).load(function() {
 			_00("Enter", event);
