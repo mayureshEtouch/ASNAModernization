@@ -155,6 +155,7 @@
         });
 	        
 		$("#ssn").ForceNumericOnly();
+		$("#ssn").attr('pattern', '[0-9]*');
         $("#ssn").on("change keyup mouseup paste", function(event) {
             maskUnmaskSSN("ssn", event);
         });

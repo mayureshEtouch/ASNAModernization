@@ -22,11 +22,13 @@
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery-ui.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.flip.min.js")%>"></script>
     <script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/tooltips.js")%>"></script>
-	<script src="https://unpkg.com/scandit-sdk"></script>
+	<script type="text/javascript" src="<%=ResolveClientUrl("~/Themes/Current/Script/jquery.mCustomScrollbar.concat.min.js")%>"></script>
+	<link rel="stylesheet" type="text/css" href="<%=ResolveClientUrl("~/Themes/Current/Styles/jquery.mCustomScrollbar.css")%>"/>
+	<!--script src="https://unpkg.com/scandit-sdk"></script>-->
 	<script>
 	var locationURL = window.location.href;
 	
-	if(!locationURL.endsWith("DSFMETR_lb_.aspx"))
+	if(!locationURL.endsWith("DSFMETR_lb_.aspx") && !locationURL.endsWith("DSWXDFR_lb_.aspx") && !locationURL.endsWith("DSB7SRR_lb_.aspx"))
 	{
 		var myItem = localStorage.getItem("locationStore");
 		localStorage.clear();

@@ -832,6 +832,7 @@
 
 
 $("#VendorNumber,#prdCat").ForceNumericOnly();
+$("#VendorNumber,#prdCat").attr('pattern', '[0-9]*');
             generateTableAndApplyInfiniteScroll("customerName", "CenPH__lb_SFLRCD", "RATXT", "submit-button"); // Table ID, Div ID to copy records from and ignore span
 
         });

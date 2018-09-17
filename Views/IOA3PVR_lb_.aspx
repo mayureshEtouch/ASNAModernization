@@ -85,6 +85,7 @@
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh" style="display:none;"></span>
                     </div>
                     <div class="mdl-cell mdl-cell--3-col mdl-cell--5-col-desktop pull-right">
+					
                       <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="complt" style="display:none;"></span>
                     </div>
                     
@@ -727,6 +728,9 @@
             $('#Exit').click(function (event) {
               _00("F3", event);
             });
+			
+			
+			
 
             $('#refresh').click(function (event) {
               _00("F5", event);

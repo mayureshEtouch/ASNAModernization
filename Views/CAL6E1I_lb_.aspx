@@ -986,6 +986,7 @@
                 });
                 //validations
                 $("#CenPH__lb_RCDDTL1__lb_1L0N_lb_new,#CenPH__lb_RCDDTL1__lb_DMOTH_new,#CenPH__lb_RCDDTL1__lb_DYRS2_new").ForceNumericOnly();
+				$("#CenPH__lb_RCDDTL1__lb_1L0N_lb_new,#CenPH__lb_RCDDTL1__lb_DMOTH_new,#CenPH__lb_RCDDTL1__lb_DYRS2_new,#CenPH__lb_RCDDTL1__lb_DTX20_new").attr('pattern', '[0-9]*');
                 //Error message
                 if($("#__Page_PopUp .simplePopupClose").length > 0) {
                     $(".simplePopupBackground1").show();

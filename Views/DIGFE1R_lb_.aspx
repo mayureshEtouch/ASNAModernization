@@ -1390,6 +1390,7 @@
                     $("#CenPH__lb_CONFIRM_V_lb_CFCD").val("N");
                     _00('Enter', event);
                 });
+				$("#cust-zipcode,#home-phone,#work-phone,#extension,#cell-phone,#CenPH__lb_RCDKEY__lb_1ALNB_new").attr('pattern', '[0-9]*');
             });
         </script>
     </asp:Content>

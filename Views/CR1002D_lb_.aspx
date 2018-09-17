@@ -630,6 +630,7 @@
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="process">Process</span> -->
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="menu">Menu</span>
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>  -->
+				<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">+Add-on</span>
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disMsgs">Display Messages</span>
               </div>
               <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
@@ -2389,6 +2390,9 @@
     $( "#revise" ).on( "click", function() {
        _00('F2', event);
     });
+	
+	
+	
 
     $( "#print" ).on( "click", function() {
       _00('F7', event);
@@ -2408,7 +2412,9 @@
         // $("#refresh").click(function (event) {
         //   _00('F5', event);
         // });
-
+		$( "#prompt" ).on( "click", function() {
+			_00('F4', event);
+		});
         $("#disMsgs").click(function (event) {
           _00('F6', event);
         });

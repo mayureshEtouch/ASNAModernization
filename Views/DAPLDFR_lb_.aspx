@@ -4,7 +4,7 @@
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
         <%-- Migrated on 4/18/2016 at 3:40 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
         <%-- Legacy location: library asnaDSRC, file QDDSSRC, member DAPLDFR# --%>
-
+		<script src="https://unpkg.com/scandit-sdk"></script>
     </asp:Content>
 
     <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +22,183 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+	<!-- Barcode Scaning Code Start here-->
+<div style="text-align: center;display:none;" id="divLoader">
+		<img src="../Themes/Current/Images/loadingScan.gif" alt="" />
+</div>
+<div id="BarcodeScaning" style="display:none;">
+
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span> 
+      <!--<span class="mdl-layout-heading">StoreFront</span>-->
+      <div class="mdl-layout-spacer"></div>
+	  <div style="color:white; position: absolute; left: 50%; margin-left: -70px; font-size: 14px;">Window closes in <span style="color:white;" id="timer">00:30</span> Secs!</div>
+      <span class="close-icon" id="CloseScan"><i class="material-icons md-15 close"></i></span> </div>
+  </header>
+<input type="hidden" id="productBoxID" value="">
+<div id="scandit-barcode-picker"></div>
+    <div id="scandit-barcode-result">No codes scanned yet</div>
+    <!-- Button to continue scanning after a barcode was scanned -->
+    <div class="button-container">
+		<button id="continue-scanning-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="continueScanning()">Re Scan</button>
+		
+	</div>
+	
+	<script>
+		//Variable use for timer
+		var timer;
+		var minutes; 
+		var seconds;
+		var thirtySeconds = 30 * 1,
+        display = document.querySelector('#timer');
+		var myVar; 
+		
+		//Variable to check is scanner ready.
+		var  isScannerReady = 0;
+        // Helper function called when the "Continue Scanning" button is clicked
+		let picker;
+		// Configure the library and activate it with a license key
+        const licenseKey = "Afe7INKBRpKYPHgW9zB1SSwGXJXGAYLqUmrWsr5wP1h+czdwTUk2AcVB0RY3SQD55TYJ5j5MClMQbY13+0BWUtRnXJknN6gHWwSGU+Yg39GzNT6CPBHZ38BcBOAETrXqeijKGsQ15NBbBwid/W6VxN76pNOYlidYUvh3dKeU2OlIuxyNC7h0lN/Z/XyU5cgXSmdLEEP2VLCtytPO9fRCq1u17NSfcLGLz3Ey3E79lXOq2CvidL+CNGz7yoowk7H6ruJdf0AwVtKgJ6rSHFHrokeUNXBEkff1m/9gKQe6dOkvxva46C/12aJrk/EMLzi6lwaRZhdqybiwc+9vai6YvIlb9dL3Q5oRjEIRlCfOHGhFE4HSAelx3Tx29lE1XViaZyIs0vrplAQCbMAaAu94FsjSdCbTKkzVbc7wBjcMkE+3KMNHj/6QWQz7gfocFmifQO18MCjzlB0Hga9zMgYJyT+4mKmSkf/sBm3QUeHXF68u/+KBotm7g55v9i8n5JlXUKAPG9KaDGlpIsNR4p0rEQ7Hl9h8isje2b0XlHkBZ3nGTNr8FxiuBEUq7zR4gRS5STot9S9ac8lA6NQYuTAylbWwH76G8i5l+bkCSfs7ALDrBoKwpNHVP30WiPJD3HfqAb8lRfYeqGomhqMzevZEgSbHqNcfkZb7+8v6Tv2tzJA4PXV8+m9ON4s5fId6TYcBF6reEOpZqE7n9BhJVG5nuJA0C+N7/HThI5mIIxp2Y441TMln3g6L/F9ALsHpx4BfTu0y8AOnPpefQU0XwIp7BBLoh48EzH0hHMzmYXZWXTI1rTYx78zS+9mq";
+       // const engineLocation = "scandit-sdk//build"; // the folder containing the engine
+        // or, if using a CDN,
+        const engineLocation = "https://unpkg.com/scandit-sdk/build"
+        ScanditSDK.configure(licenseKey, { engineLocation: engineLocation });
+        const scannerContainer = document.getElementById("scandit-barcode-picker");
+        const resultContainer = document.getElementById("scandit-barcode-result");
+        const continueButton = document.getElementById("continue-scanning-button");
+        //Resume Scanning
+		function continueScanning() {
+            if (picker) {
+                continueButton.disabled = true;
+                picker.resumeScanning();
+			}
+        }
+		function setIntervalTimer(duration){
+			minutes = parseInt(timer / 60, 10)
+			seconds = parseInt(timer % 60, 10);
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+			display.textContent = minutes + ":" + seconds;
+			if (--timer < 0) {
+				timer = duration;
+				closeScanning();
+			}
+		
+		}
+		//Timer Codes Starts here.
+		function startTimer(duration, display) {
+			timer = duration, minutes, seconds;
+			 myVar = setInterval(setIntervalTimer,1000,duration);
+		}
+		//Timer codes Ends here.
+		
+		
+		
+		//Pause Scanning
+		function pauseScanning(){
+			picker.pauseScanning();
+		}
+		
+		//Pause Scanning and hide overlay with scanning window. 
+		function closeScanning(){
+			picker.pauseScanning();		
+			$(".OverlayPopupBackground").hide();
+			$("#BarcodeScaning").hide();
+			$("#scandit-barcode-result").text("");
+			clearInterval(myVar);
+			$("#timer").text('00:30');
+		}
+		
+		//Check is scanner ready
+		function checkScanner(){
+			
+			$("#BarcodeScaning").show();
+			$("#divLoader").hide();
+			startTimer(thirtySeconds, display);
+		}
+		
+       function ScaningBar(){ 
+        continueButton.disabled = true;
+        continueButton.hidden = true;
+        
+        // Create & start the picker
+        ScanditSDK.BarcodePicker.create(scannerContainer, {
+                playSoundOnScan: true,
+                vibrateOnScan: true
+            })
+            .then(barcodePicker => {
+                picker = barcodePicker;
+                // Create the settings object to be applied to the scanner
+                const scanSettings = new ScanditSDK.ScanSettings({
+                    enabledSymbologies: ["ean8", "ean13", "upca", "upce", "code128", "code39", "code93",
+                        "itf"
+                    ],
+                    codeDuplicateFilter: 1000
+                });
+				
+				scanSettings.getSymbologySettings("upca").enableExtensions("remove_leading_zero");
+                picker.applyScanSettings(scanSettings);
+                // If a barcode is scanned, show it to the user and pause scanning
+                // (scanning is resumed when the user clicks "Continue Scanning")
+                picker.onScan(scanResult => {
+                    continueButton.hidden = false;
+                    continueButton.disabled = false;
+					
+                    picker.pauseScanning();
+                    resultContainer.innerHTML = scanResult.barcodes.reduce((string, barcode) =>
+                        string +
+                        `${ScanditSDK.Barcode.Symbology.toHumanizedName(barcode.symbology)}: ${barcode.data}<br>`,
+                        '');
+						//Fill Model Number inside text field.
+						var scanedID = $("#scandit-barcode-result").text();
+						
+						scanedID = scanedID.substring(scanedID.indexOf(":") + 1);
+					
+					
+						if($("#scandit-barcode-result").text()!=""){
+							$("#number1").val(scanedID.replace(' ',''));
+							$("#CenPH__lb_SFLCTL__lb_2AXTX").val(scanedID.replace(' ',''));
+							closeScanning();
+							
+						}
+						
+                });
+				
+				picker.onReady(() => {
+						if(picker.isReady()){
+							isScannerReady = isScannerReady + 1; 
+							checkScanner();
+						}
+				});
+				
+                picker.onScanError(error => {
+					console.log(error.message);
+                });
+            })
+            .catch(error => {
+				if((error.message=='Permission denied') || (error.message=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.')){
+					errorMessage=error.message;
+					console.log('errorMessage inside catch ' + errorMessage);
+					$("#BarcodeScaning").hide();
+					$(".OverlayPopupBackground").hide();
+					setTimeout(function(){
+					alert('Please provide camera access to use barcode scanning'); 
+					}, 0);
+				}
+            });
+			
+			}
+			
+			
+    </script>
+	</div>
+	<!-- Barcode Scaning Code End here -->
+	
+	
+	
+	
         <!-- Modified HTML code starts here -->
 <div class="OverlayPopupBackground"></div>
         <main class="mdl-layout__content">
@@ -48,12 +225,13 @@
                                     <span class="summary-table-title">Filter by:</span>
                                 </div>
                                 <div class="mdl-cell mdl-cell--10-col search-container">
-                                    <div class="content-grid mdl-grid">
+                                    <div class="content-grid mdl-grid" style="padding-right:30px;">
                                         <div class="mdl-cell mdl-cell--2-col">
                                             <span class="summary-table-title pull-right">Model Number</span>
                                         </div>
                                         <div class="mdl-cell mdl-cell--6-col mdl-cell--10-col-desktop" id="filter-by-product-category">
                                             <input type="text" id="number1" class="mdl-textfield__input" maxlength="20">
+											<span class="scan-model" id="scanBtn"></span>
                                         </div>                        
                                     </div>
                                 </div>
@@ -587,7 +765,79 @@
     </asp:Content>
 
     <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server" >
+	<style>
+	#BarcodeScaning {
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 3vh;
+            font-family: 'Open Sans', sans-serif;
+			position: absolute;
+            width: 600px;
+            height: auto;
+			z-index: 5 !important;
+			background: #fff;
+			margin-left: -300px;
+			left: 50%;
+        }
+        #scandit-barcode-picker {
+            max-height: 70vh;
+        }
+        #scandit-barcode-result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 100%;
+        }
+		 #continue-scanning-button {
+            margin-bottom: 20px;
+        }
+		
+		/*.scan-model {
+			background: url(../Themes/Current/Images/icons/ScanBarcode_icon16x13.png) no-repeat 1px 12px;
+			width: 18px;
+			height: 33px;
+			position: absolute;
+			right: 5px;
+			top: 0;
+			cursor: pointer;
+		}*/
+		.scan-model {
+			background: url(../Themes/Current/Images/icons/ScanBarcode_icon16x13.png) no-repeat 1px 12px;
+			width: 20px;
+			height: 38px;
+			position: absolute;
+			right: -40px;
+			top: 1px;
+			cursor: pointer;
+			background-size: contain;
+		}
+		#divLoader{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+			position: absolute;
+			 top: 50%; 
+			 margin-top: -32px; 
+			z-index: 5 !important;
+			left: 50%;
+			margin-left: -32px;
+		
+		
+		}
+		@media (min-width: 840px){
+			#filter-by-product-category {
+				width: calc(83.3333333333% - 26px);
+			}
+		}
+	
+	</style>
         <script type="text/javascript">
+		var locationJSON = ['149','143','001','004','112','073','144','213','078','114','221'];
             var copyToAndFrom = {
                 "displayOnlyFields": {
                     "CenPH_DdsConstant10": "date",
@@ -656,6 +906,74 @@
                 $("#next").click(function (event) {
                     _00('Enter', event);
                 });
+				
+				var currentURL = window.location.href;
+				var errorMessage ='Test';
+				var checker = 0;
+				var localLocation = localStorage.getItem("locationStore");
+				for(var i = 0; i < locationJSON.length; i++){
+					if(localStorage.getItem("locationStore") == locationJSON[i]){
+						if(currentURL.startsWith('http://')){
+							$("#scanBtn").removeClass("scan-model");
+						
+						}
+						else{
+							$("#scanBtn").addClass("scan-model");
+							checker = checker + 1;
+						}
+					}
+					else{
+						if(checker == 0){
+							$("#scanBtn").removeClass("scan-model");
+						}
+					}
+				}
+				
+				var countPresent = 0; //This variable is use to counter Scan function run once in on load.
+				$(document).on("click", "#scanBtn", function () {
+					if(currentURL.startsWith("https://")){
+						
+						$("#divLoader").show();
+						if(isScannerReady > 0)
+						{
+							checkScanner();
+							picker.resumeScanning();
+						}
+						if(countPresent==0)
+						{	
+							countPresent=countPresent+1;
+							ScaningBar();
+						}
+						if((errorMessage=='Permission denied') || (errorMessage=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.'))
+						{
+				
+							setTimeout(function(){ 
+							$(".OverlayPopupBackground").hide();
+							$("#BarcodeScaning").hide()
+							}, 0);
+					
+						alert('Please provide camera access to use barcode scanning');
+						}
+						else
+						{
+							$(".OverlayPopupBackground").show();
+					
+						}
+				
+				
+					}
+				});
+				
+				$("body").on("click","#CloseScan", function(event){
+					closeScanning();
+				});
+		
+				function barcodeOpening(){
+					
+					$("#BarcodeScaning").show();
+				}
+				$("#continue-scanning-button").hide();
+			
             });
         </script>
 

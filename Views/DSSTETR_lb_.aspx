@@ -159,7 +159,7 @@
 					  <select id="CenPH__lb_SFLCTL__lb_1FLST_new" name="CenPH__lb_SFLCTL__lb_1FLST_new" onfocus="_09('#1FLST','8,68','#SFLCTL');" style="width: 170px;  padding: 0 2px; margin-right:0" >
 							<option selected="selected" value=" ">Please Choose</option>
 							<!-- <option value="H">H - Held Delivery</option> -->
-							<option value="L">L - Layaway</option>
+							<!--<option value="L">L - Layaway</option>-->
 							<option value="X">X - Non-Delivery</option>
 							<option value="N">N - Non-Partial Delivery</option>
 							<option value="P">P - Partial Delivery</option>

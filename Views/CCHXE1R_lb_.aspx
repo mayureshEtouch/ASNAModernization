@@ -115,7 +115,10 @@
                                 <div class="content-grid mdl-grid">
                                     <div class="mdl-cell mdl-cell--12-col" style="margin: 0;">
                                         <span class="form-label clm-form-label">License #:</span>
-                                        <span class="form-text"><input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2" data-tb-index="2"><span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="8" data-tb-index="3"><span id="ro-cust-lic-second" class="ro-data"></span></span>
+                                        <span class="form-text">
+										<input type="text" class="editable-data mdl-textfield__input-small" size="5" id="cust-lic-first" maxlength="2" data-tb-index="1" onkeyup="movetoNext(this, 'cust-lic-second')">
+										<span id="ro-cust-lic-first" class="ro-data"></span>&nbsp;&nbsp;/&nbsp;&nbsp;
+										<input type="text" class="mdl-textfield__input-small editable-data" size="19" id="cust-lic-second" maxlength="20" data-tb-index="2"><span id="ro-cust-lic-second" class="ro-data"></span></span>
                                     </div>
                                 </div>
                             </div>
@@ -223,7 +226,7 @@
                                             <input type="text" id="sp-lic-first" class="mdl-textfield__input-small editable-data" size="5" maxlength="2"  data-tb-index="14">
                                             <span class="ro-data" id="ro-sp-lic-first"></span>
                                             &nbsp;&nbsp;/&nbsp;&nbsp;
-                                            <input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="8" data-tb-index="15">
+                                            <input type="text" id="sp-lic-second" class="mdl-textfield__input-small editable-data" size="19" maxlength="20" data-tb-index="15">
                                             <span class="ro-data" id="ro-sp-lic-second"></span>
                                         </span>
                                                         </div>
@@ -1771,6 +1774,11 @@
     </style>
     <script type="text/javascript">
     //CenPH_DdsConstant43
+	function movetoNext(current, nextFieldID) {  
+				if (current.value.length >= current.maxLength) {  
+					document.getElementById(nextFieldID).focus();  
+				}  
+			}	
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH__lb_RCDDTL1__lb_DALTX": "cust-name",
@@ -1854,7 +1862,7 @@
             $('input:text[name="cust-ssn"]').keyup(function () {
                 $('input:hidden[name="dummy-cust-ssn"]').val($(this).val());
             });
-
+			$("#cust-lic-first").focus();
             document.onkeydown = keydown;
             function keydown(evt) {
                 if (!evt) evt = event;
@@ -2045,13 +2053,15 @@
              Space issue in Supervisor name
               */
              $("#cust-supervisor").val($("#CenPH__lb_RCDDTL1__lb_DWWTX").val());
-             
+             $("#sp-ssn,#cust-ssn,#payment-of,#phone-listed-as,#sp-monthly-income,#employed-at-duration-years,#employed-at-duration-months,#cust-income,#cust-dependents,#ro-ref-zip-code,#ro-ref-phone,#no-of-years").attr('pattern', '[0-9]*');
 
              //if($("#ctl00$CenPH$_lb_RCDDTL1_V1DOBD").text().trim()         
              /*$("#cust-ssn, #sp-ssn").on("blur focus",function(){
                 $("#cust-ssn-error").hide();
                 $("#sp-ssn-error").hide();
              })*/
+			
+			
         });
     </script>
 </asp:Content>

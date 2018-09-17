@@ -5,6 +5,7 @@
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
     <%-- Migrated on 8/19/2016 at 9:25 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
     <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CCHNPVR# --%>
+	<script src="https://unpkg.com/scandit-sdk"></script>
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -22,6 +23,194 @@
 
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
+<!-- Barcode Scaning Code Start here-->
+<div style="text-align: center;display:none;" id="divLoader">
+		<img src="../Themes/Current/Images/loadingScan.gif" alt="" />
+</div>
+<div id="BarcodeScaning" style="display:none;">
+
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row"> 
+      <!-- Title --> 
+      <span class="mdl-layout-title logo-icon"></span> 
+      <!--<span class="mdl-layout-heading">StoreFront</span>-->
+      <div class="mdl-layout-spacer"></div>
+	  <div style="color:white; position: absolute; left: 50%; margin-left: -70px; font-size: 14px;">Window closes in <span style="color:white;" id="timer">00:30</span> Secs!</div>
+      <span class="close-icon" id="CloseScan"><i class="material-icons md-15 close"></i></span> </div>
+  </header>
+<input type="hidden" id="productBoxID" value="">
+<div id="scandit-barcode-picker"></div>
+    <div id="scandit-barcode-result">No codes scanned yet</div>
+    <!-- Button to continue scanning after a barcode was scanned -->
+    <div class="button-container">
+		<button id="continue-scanning-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="continueScanning()">Re Scan</button>
+		
+	</div>
+	
+	<script>
+		//Variable use for timer
+		var timer;
+		var minutes; 
+		var seconds;
+		var thirtySeconds = 30 * 1,
+        display = document.querySelector('#timer');
+		var myVar; 
+		
+		//Variable to check is scanner ready.
+		var  isScannerReady = 0;
+        // Helper function called when the "Continue Scanning" button is clicked
+		let picker;
+		// Configure the library and activate it with a license key
+        const licenseKey = "Afe7INKBRpKYPHgW9zB1SSwGXJXGAYLqUmrWsr5wP1h+czdwTUk2AcVB0RY3SQD55TYJ5j5MClMQbY13+0BWUtRnXJknN6gHWwSGU+Yg39GzNT6CPBHZ38BcBOAETrXqeijKGsQ15NBbBwid/W6VxN76pNOYlidYUvh3dKeU2OlIuxyNC7h0lN/Z/XyU5cgXSmdLEEP2VLCtytPO9fRCq1u17NSfcLGLz3Ey3E79lXOq2CvidL+CNGz7yoowk7H6ruJdf0AwVtKgJ6rSHFHrokeUNXBEkff1m/9gKQe6dOkvxva46C/12aJrk/EMLzi6lwaRZhdqybiwc+9vai6YvIlb9dL3Q5oRjEIRlCfOHGhFE4HSAelx3Tx29lE1XViaZyIs0vrplAQCbMAaAu94FsjSdCbTKkzVbc7wBjcMkE+3KMNHj/6QWQz7gfocFmifQO18MCjzlB0Hga9zMgYJyT+4mKmSkf/sBm3QUeHXF68u/+KBotm7g55v9i8n5JlXUKAPG9KaDGlpIsNR4p0rEQ7Hl9h8isje2b0XlHkBZ3nGTNr8FxiuBEUq7zR4gRS5STot9S9ac8lA6NQYuTAylbWwH76G8i5l+bkCSfs7ALDrBoKwpNHVP30WiPJD3HfqAb8lRfYeqGomhqMzevZEgSbHqNcfkZb7+8v6Tv2tzJA4PXV8+m9ON4s5fId6TYcBF6reEOpZqE7n9BhJVG5nuJA0C+N7/HThI5mIIxp2Y441TMln3g6L/F9ALsHpx4BfTu0y8AOnPpefQU0XwIp7BBLoh48EzH0hHMzmYXZWXTI1rTYx78zS+9mq";
+       // const engineLocation = "scandit-sdk//build"; // the folder containing the engine
+        // or, if using a CDN,
+        const engineLocation = "https://unpkg.com/scandit-sdk/build"
+        ScanditSDK.configure(licenseKey, { engineLocation: engineLocation });
+        const scannerContainer = document.getElementById("scandit-barcode-picker");
+        const resultContainer = document.getElementById("scandit-barcode-result");
+        const continueButton = document.getElementById("continue-scanning-button");
+        //Resume Scanning
+		function continueScanning() {
+            if (picker) {
+                continueButton.disabled = true;
+                picker.resumeScanning();
+			}
+        }
+		function setIntervalTimer(duration){
+			minutes = parseInt(timer / 60, 10)
+			seconds = parseInt(timer % 60, 10);
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+			display.textContent = minutes + ":" + seconds;
+			if (--timer < 0) {
+				timer = duration;
+				closeScanning();
+			}
+		
+		}
+		//Timer Codes Starts here.
+		function startTimer(duration, display) {
+			timer = duration, minutes, seconds;
+			 myVar = setInterval(setIntervalTimer,1000,duration);
+		}
+		//Timer codes Ends here.
+		
+		
+		
+		//Pause Scanning
+		function pauseScanning(){
+			picker.pauseScanning();
+		}
+		
+		//Pause Scanning and hide overlay with scanning window. 
+		function closeScanning(){
+			picker.pauseScanning();		
+			$(".OverlayPopupBackground").hide();
+			$("#BarcodeScaning").hide();
+			$("#scandit-barcode-result").text("");
+			clearInterval(myVar);
+			$("#timer").text('00:30');
+		}
+		
+		//Check is scanner ready
+		function checkScanner(idbtn){
+			$("#productBoxID").val(idbtn);
+			$("#BarcodeScaning").show();
+			$("#divLoader").hide();
+			startTimer(thirtySeconds, display);
+		}
+		
+       function ScaningBar(idbtn){ 
+        continueButton.disabled = true;
+        continueButton.hidden = true;
+        
+        // Create & start the picker
+        ScanditSDK.BarcodePicker.create(scannerContainer, {
+                playSoundOnScan: true,
+                vibrateOnScan: true
+            })
+            .then(barcodePicker => {
+                picker = barcodePicker;
+                // Create the settings object to be applied to the scanner
+                const scanSettings = new ScanditSDK.ScanSettings({
+                    enabledSymbologies: ["ean8", "ean13", "upca", "upce", "code128", "code39", "code93",
+                        "itf"
+                    ],
+                    codeDuplicateFilter: 1000
+                });
+				
+				scanSettings.getSymbologySettings("upca").enableExtensions("remove_leading_zero");
+                picker.applyScanSettings(scanSettings);
+                // If a barcode is scanned, show it to the user and pause scanning
+                // (scanning is resumed when the user clicks "Continue Scanning")
+                picker.onScan(scanResult => {
+                    continueButton.hidden = false;
+                    continueButton.disabled = false;
+					
+                    picker.pauseScanning();
+                    resultContainer.innerHTML = scanResult.barcodes.reduce((string, barcode) =>
+                        string +
+                        `${ScanditSDK.Barcode.Symbology.toHumanizedName(barcode.symbology)}: ${barcode.data}<br>`,
+                        '');
+						//Fill Model Number inside text field.
+						var scanedID = $("#scandit-barcode-result").text();
+						
+						scanedID = scanedID.substring(scanedID.indexOf(":") + 1);
+						var specialchar=$("#productBoxID").val();
+						
+						if($("#scandit-barcode-result").text()!=""){
+							$("#"+specialchar).val(scanedID.replace(' ',''));
+							if(specialchar == 'mod_no_1'){
+								console.log(specialchar);
+								$("#CenPH__lb_RCDDTL1__lb_DA6TX").val(scanedID.replace(' ',''));
+							}
+							if(specialchar == 'mod_no_2'){
+								$("#CenPH__lb_RCDDTL1__lb_DUPTX").val(scanedID.replace(' ',''));
+							}
+							if(specialchar == 'mod_no_3'){
+								$("#CenPH__lb_RCDDTL1__lb_DUQTX").val(scanedID.replace(' ',''));
+							}
+							if(specialchar == 'mod_no_4'){
+								$("#CenPH__lb_RCDDTL1__lb_DURTX").val(scanedID.replace(' ',''));
+							}
+							closeScanning();						
+						}
+						
+                });
+				
+				picker.onReady(() => {
+						if(picker.isReady()){
+							isScannerReady = isScannerReady + 1; 
+							checkScanner(idbtn);
+						}
+				});
+				
+                picker.onScanError(error => {
+					console.log(error.message);
+                });
+            })
+            .catch(error => {
+				if((error.message=='Permission denied') || (error.message=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.')){
+					errorMessage=error.message;
+					console.log('errorMessage inside catch ' + errorMessage);
+					$("#BarcodeScaning").hide();
+					$(".OverlayPopupBackground").hide();
+					setTimeout(function(){
+					alert('Please provide camera access to use barcode scanning'); 
+					}, 0);
+				}
+            });
+			
+			}
+			
+			
+    </script>
+	</div>
+	<!-- Barcode Scaning Code End here -->
+
+
+
+
     <!-- Modified HTML code starts here -->
     <div class="OverlayPopupBackground"></div>
     <main class="mdl-layout__content">
@@ -286,32 +475,37 @@
                             <table cellspacing="0" cellpadding="0" border="0" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp navigateable is-upgraded" id="" data-upgraded=",MaterialDataTable">
                                 <thead>
                                     <tr>
-                                        <th width="6%" colspan="2">Category OR Model Number</th>
-                                        <th width="6%">Quantity</th>
-                                        <th>Value $</th>
-                                        <th>Maint $</th>
-                                        <th>Total $</th>
+                                        <th width="25%" colspan="2">Category OR Model Number</th>
+                                        <th width="15%">Quantity</th>
+                                        <th width="25%">Value $</th>
+                                        <th width="25%">Maint $</th>
+                                        <th width="10%" style="white-space: nowrap;">Total $</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td width="5%">
                                             <input type="text" id="cat_1" maxlength="3" size="2" value="" class="f4" onfocus="_09('#1PRDC','16,4','#RCDDTL1');" data-tb-index="12" /></td>
-                                        <td>
-                                            <input type="text" id="mod_no_1" maxlength="20" value="" class="f4" onfocus="_09('#DA6TX','16,8','#RCDDTL1');" data-tb-index="13" /></td>
-                                        <td class="">
+                                        <td width="20%">
+                                            <input type="text" id="mod_no_1" maxlength="20" value="" class="f4 mode-no-input" onfocus="_09('#DA6TX','16,8','#RCDDTL1');" data-tb-index="13" />
+											<span class="scan-model" id="scanBtn_1"></span>
+											
+											</td>
+                                        <td  width="15%" class="">
                                             <input maxlength="3" size="2" type="text" onfocus="_09('#1PRDQ','16,29','#RCDDTL1');" id="quantity_1" value="" data-tb-index="14" /></td>
-                                        <td class="">
+                                        <td width="25%"class="">
                                             <input maxlength="9" type="text" id="value_1" onfocus="_09('#1GFVA','16,33','#RCDDTL1');" value="" data-tb-index="15" /></td>
-                                        <td class="">
+                                        <td width="25%" class="">
                                             <input maxlength="9" type="text" id="maint_1" onfocus="_09('#1PRDM','16,44','#RCDDTL1');" value="" data-tb-index="16" /></td>
-                                        <td class="pull-right"><span id="total_1"></span></td>
+                                        <td width="10%" class="pull-right"><span id="total_1"></span></td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <input type="text" id="cat_2" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAWCO','17,4','#RCDDTL1');" data-tb-index="17" /></td>
                                         <td>
-                                            <input type="text" id="mod_no_2" maxlength="20" value="" class="f4" onfocus="_09('#DUPTX','17,8','#RCDDTL1');" data-tb-index="18" /></td>
+                                            <input type="text" id="mod_no_2" maxlength="20" value="" class="f4  mode-no-input" onfocus="_09('#DUPTX','17,8','#RCDDTL1');" data-tb-index="18" />
+											<span class="scan-model" id="scanBtn_2"></span>
+											</td>
                                         <td class="">
                                             <input maxlength="3" size="2" onfocus="_09('#DI2NB','17,29','#RCDDTL1');" type="text" id="quantity_2" value="" data-tb-index="19" /></td>
                                         <td class="">
@@ -324,7 +518,9 @@
                                         <td>
                                             <input type="text" id="cat_3" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAXCO','18,4','#RCDDTL1');" data-tb-index="22" /></td>
                                         <td>
-                                            <input type="text" id="mod_no_3" maxlength="20" value="" class="f4" onfocus="_09('#DUQTX','18,8','#RCDDTL1');" data-tb-index="23" /></td>
+                                            <input type="text" id="mod_no_3" maxlength="20" value="" class="f4 mode-no-input" onfocus="_09('#DUQTX','18,8','#RCDDTL1');" data-tb-index="23" />
+											<span class="scan-model" id="scanBtn_3"></span>
+											</td>
                                         <td class="">
                                             <input maxlength="3" onfocus="_09('#DI3NB','18,29','#RCDDTL1');" size="2" type="text" id="quantity_3" value="" data-tb-index="24" /></td>
                                         <td class="">
@@ -337,7 +533,9 @@
                                         <td>
                                             <input type="text" id="cat_4" maxlength="3" size="2" value="" class="f4" onfocus="_09('#DAYCO','19,4','#RCDDTL1');" data-tb-index="27" /></td>
                                         <td>
-                                            <input type="text" id="mod_no_4" maxlength="20" value="" class="f4" onfocus="_09('#DURTX','19,8','#RCDDTL1');" data-tb-index="28" /></td>
+                                            <input type="text" id="mod_no_4" maxlength="20" value="" class="f4 mode-no-input" onfocus="_09('#DURTX','19,8','#RCDDTL1');" data-tb-index="28" />
+											<span class="scan-model" id="scanBtn_4"></span>
+											</td>
                                         <td class="">
                                             <input maxlength="3" onfocus="_09('#DI4NB','19,29','#RCDDTL1');" size="2" type="text" id="quantity_4" value="" data-tb-index="29" /></td>
                                         <td class="">
@@ -388,8 +586,80 @@
 		-webkit-animation-timing-function:ease-in-out;
 		-webkit-animation-direction: alternate;
 		}
+		.mdl-layout__content input.mode-no-input{
+			
+			margin-right: 10px;
+		}
+		
     </style>
+	
+	<style>
+	#BarcodeScaning {
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 3vh;
+            font-family: 'Open Sans', sans-serif;
+			position: absolute;
+            width: 600px;
+            height: auto;
+			z-index: 5 !important;
+			background: #fff;
+			margin-left: -300px;
+			left: 50%;
+        }
+        #scandit-barcode-picker {
+            max-height: 70vh;
+        }
+        #scandit-barcode-result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 100%;
+        }
+		 #continue-scanning-button {
+            margin-bottom: 20px;
+        }
+		
+		.scan-model {
+			background: url(../Themes/Current/Images/icons/ScanBarcode_icon16x13.png) no-repeat 1px 12px;
+			width: 18px;
+			height: 33px;
+			position: absolute;
+			cursor: pointer;
+			left: 170px;
+			top: -4px;
+		}
+		#divLoader{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+			position: absolute;
+			 top: 50%; 
+			 margin-top: -32px; 
+			z-index: 5 !important;
+			left: 50%;
+			margin-left: -32px;
+			
+		
+		
+		}
+		.mdl-layout__content input.mode-no-input{
+			width: 144px;
+		}
+		@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+			.table-data-content-container .mdl-data-table td:nth-child(2) {
+				padding: 3px 20px 3px 10px;
+    }
+}
+	
+	</style>
     <script type="text/javascript">
+		var locationJSON = ['149','143','001','004','112','073','144','213','078','114','221'];
         var copyToAndFrom = {
             "displayOnlyFields": {
                 "CenPH_DdsConstant17": "date",
@@ -496,6 +766,75 @@
             input fields obj must be supplied to doF4Action function and also f4 class should be there for modern UI fields.
              */
             //doF4Action(copyToAndFrom.inputFields);
+			var currentURL = window.location.href;
+				var errorMessage ='Test';
+				var checker = 0;
+				var localLocation = localStorage.getItem("locationStore");
+				for(var i = 0; i < locationJSON.length; i++){
+					if(localStorage.getItem("locationStore") == locationJSON[i]){
+						if(currentURL.startsWith('http://')){
+							$("span[id^='scanBtn_']").removeClass("scan-model");
+						
+						}
+						else{
+							$("span[id^='scanBtn_']").addClass("scan-model");
+							checker = checker + 1;
+						}
+					}
+					else{
+						if(checker == 0){
+							$("span[id^='scanBtn_']").removeClass("scan-model");
+						}
+					}
+				}
+				
+				var countPresent = 0; //This variable is use to counter Scan function run once in on load.
+				$(document).on("click", "span[id^='scanBtn_']", function () {
+					if(currentURL.startsWith("https://")){
+						var idbtn = this.id.replace('scanBtn_','mod_no_');
+						console.log(idbtn);
+						$("#divLoader").show();
+						if(isScannerReady > 0)
+						{
+							checkScanner(idbtn);
+							picker.resumeScanning();
+						}
+						if(countPresent==0)
+						{	
+							countPresent=countPresent+1;
+							ScaningBar(idbtn);
+						}
+						if((errorMessage=='Permission denied') || (errorMessage=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.'))
+						{
+				
+							setTimeout(function(){ 
+							$(".OverlayPopupBackground").hide();
+							$("#BarcodeScaning").hide()
+							}, 0);
+					
+							alert('Please provide camera access to use barcode scanning');
+						}
+						else
+						{
+							$(".OverlayPopupBackground").show();
+					
+						}
+				
+				
+					}
+				});
+				
+
+		
+				$("body").on("click","#CloseScan", function(event){
+					closeScanning();
+				});
+		
+				function barcodeOpening(id){
+					$("#productBoxID").val(id);
+					$("#BarcodeScaning").show();
+				}
+				$("#continue-scanning-button").hide();
         });
 
     </script>

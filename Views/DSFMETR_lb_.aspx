@@ -5,7 +5,7 @@
 <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server">
     <%-- Migrated on 8/19/2016 at 7:47 PM by ASNA Monarch(R) Wings version 7.0.58.0 --%>
     <%-- Legacy location: library ASNATRACK, file QDDSSRC, member DSFMETR# --%>
-	
+	<script src="https://unpkg.com/scandit-sdk"></script>
 </asp:Content>
 
 <asp:Content ID="FileContent1" runat="server" ContentPlaceHolderID="FKeyPH">
@@ -24,14 +24,18 @@
 
 <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
 <!-- Barcode Scaning Code Start here-->
-
+<div style="text-align: center;display:none;" id="divLoader">
+		<img src="../Themes/Current/Images/loadingScan.gif" alt="" />
+</div>
 <div id="BarcodeScaning" style="display:none;">
+
 <header class="mdl-layout__header">
     <div class="mdl-layout__header-row"> 
       <!-- Title --> 
       <span class="mdl-layout-title logo-icon"></span> 
       <!--<span class="mdl-layout-heading">StoreFront</span>-->
       <div class="mdl-layout-spacer"></div>
+	  <div style="color:white; position: absolute; left: 50%; margin-left: -70px; font-size: 14px;">Window closes in <span style="color:white;" id="timer">00:30</span> Secs!</div>
       <span class="close-icon" id="CloseScan"><i class="material-icons md-15 close"></i></span> </div>
   </header>
 <input type="hidden" id="productBoxID" value="">
@@ -43,27 +47,79 @@
 		
 	</div>
     <script>
-
+		//Variable use for timer
+		var timer;
+		var minutes; 
+		var seconds;
+		var thirtySeconds = 30 * 1,
+        display = document.querySelector('#timer');
+		var myVar; 
+		
+		//Variable to check is scanner ready.
+		var  isScannerReady = 0;
         // Helper function called when the "Continue Scanning" button is clicked
 		let picker;
 		// Configure the library and activate it with a license key
-        const licenseKey = "AW2bEz7mIJhtQ22NkjKgfdgmeEXoDWijQ1Cn9yli+ObwYAlYDH3XMtVKkc8eewI/EBWfTwUg79eGUV1qmggmvT1TD0G/KrPZmSs25YsYuHGsBpRyrDkSt+A9XeO7JYcHfl8hayZoyChUCITKlucLRDEJx+qtfbINJ1LWbegG6NaqicU9Fi1FrFk+wyT6f4Tt23PLPq5cupWzz0bBPLbfoC5Q9Myz3TTUa34Yikf/65a+8kdlVhUo6w5J4XAUfNrDfcXOpFXRgA/UFMyh082R9U/yUvcnq9KwixByH6O4ZgC26eozDOGQ9Kyz50tgnTvt4D0hvhhMhlbAoYPODY5qVDreSH5Djg2G/2Vucs8E9FteqkJZVQEIS1yg8PjR+DDR1UHY7lMWa4azExjuC5zcDAvH5s3pLagoGN8ckzJ8aRrcn2an2wxhRvCVfQUeSa4owtTju4T9WJogDMPCWjTk+AqXh2PcC5BtqLEwBMfDaTaPkyByBVspmTLzhwUtV9vM+6h5nwmHQXS//DIrRxa0Peo2dngZOhG2k/pB56xizea8YOIZ3yz3XxnuygjqgaQzUSHZ5/lLFxjk1rwy2Kh0/hVfCn1X628HRwPaW9FivuBg69x0Qca3J6CfQo53V2Yp1fWeZ6ioux/KpPVUalyVQFAwVqrVca6rGj4HCsLUi1evxwyCRm+LyRSYzV6tKQDbU+5J7xy8dYx11aDz6xxOI+9K7T5Scbm03/WJLIy3hJl3M5Yh0XjJczTGO99RJynogFn2+1k3zhXodXKmjeKsFJk1DOSBrksmrS/1GRpbTFqgl5u22WZ1W3TiKgE=";
-        // const engineLocation = "build"; // the folder containing the engine
+        const licenseKey = "Afe7INKBRpKYPHgW9zB1SSwGXJXGAYLqUmrWsr5wP1h+czdwTUk2AcVB0RY3SQD55TYJ5j5MClMQbY13+0BWUtRnXJknN6gHWwSGU+Yg39GzNT6CPBHZ38BcBOAETrXqeijKGsQ15NBbBwid/W6VxN76pNOYlidYUvh3dKeU2OlIuxyNC7h0lN/Z/XyU5cgXSmdLEEP2VLCtytPO9fRCq1u17NSfcLGLz3Ey3E79lXOq2CvidL+CNGz7yoowk7H6ruJdf0AwVtKgJ6rSHFHrokeUNXBEkff1m/9gKQe6dOkvxva46C/12aJrk/EMLzi6lwaRZhdqybiwc+9vai6YvIlb9dL3Q5oRjEIRlCfOHGhFE4HSAelx3Tx29lE1XViaZyIs0vrplAQCbMAaAu94FsjSdCbTKkzVbc7wBjcMkE+3KMNHj/6QWQz7gfocFmifQO18MCjzlB0Hga9zMgYJyT+4mKmSkf/sBm3QUeHXF68u/+KBotm7g55v9i8n5JlXUKAPG9KaDGlpIsNR4p0rEQ7Hl9h8isje2b0XlHkBZ3nGTNr8FxiuBEUq7zR4gRS5STot9S9ac8lA6NQYuTAylbWwH76G8i5l+bkCSfs7ALDrBoKwpNHVP30WiPJD3HfqAb8lRfYeqGomhqMzevZEgSbHqNcfkZb7+8v6Tv2tzJA4PXV8+m9ON4s5fId6TYcBF6reEOpZqE7n9BhJVG5nuJA0C+N7/HThI5mIIxp2Y441TMln3g6L/F9ALsHpx4BfTu0y8AOnPpefQU0XwIp7BBLoh48EzH0hHMzmYXZWXTI1rTYx78zS+9mq";
+       // const engineLocation = "scandit-sdk//build"; // the folder containing the engine
         // or, if using a CDN,
         const engineLocation = "https://unpkg.com/scandit-sdk/build"
         ScanditSDK.configure(licenseKey, { engineLocation: engineLocation });
         const scannerContainer = document.getElementById("scandit-barcode-picker");
         const resultContainer = document.getElementById("scandit-barcode-result");
         const continueButton = document.getElementById("continue-scanning-button");
-        function continueScanning() {
+        //Resume Scanning
+		function continueScanning() {
             if (picker) {
                 continueButton.disabled = true;
-                // Resume scanning
                 picker.resumeScanning();
 			}
         }
+		function setIntervalTimer(duration){
+			minutes = parseInt(timer / 60, 10)
+			seconds = parseInt(timer % 60, 10);
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+			display.textContent = minutes + ":" + seconds;
+			if (--timer < 0) {
+				timer = duration;
+				closeScanning();
+			}
 		
-       function ScaningBar(){ 
+		}
+		//Timer Codes Starts here.
+		function startTimer(duration, display) {
+			timer = duration, minutes, seconds;
+			 myVar = setInterval(setIntervalTimer,1000,duration);
+		}
+		//Timer codes Ends here.
+		
+		
+		
+		//Pause Scanning
+		function pauseScanning(){
+			picker.pauseScanning();
+		}
+		
+		//Pause Scanning and hide overlay with scanning window. 
+		function closeScanning(){
+			picker.pauseScanning();		
+			$(".OverlayPopupBackground").hide();
+			$("#BarcodeScaning").hide();
+			$("#scandit-barcode-result").text("");
+			clearInterval(myVar);
+			$("#timer").text('00:30');
+		}
+		
+		//Check is scanner ready
+		function checkScanner(idbtn){
+			$("#productBoxID").val(idbtn);
+			$("#BarcodeScaning").show();
+			$("#divLoader").hide();
+			startTimer(thirtySeconds, display);
+		}
+		
+       function ScaningBar(idbtn){ 
         continueButton.disabled = true;
         continueButton.hidden = true;
         
@@ -81,6 +137,8 @@
                     ],
                     codeDuplicateFilter: 1000
                 });
+				
+				scanSettings.getSymbologySettings("upca").enableExtensions("remove_leading_zero");
                 picker.applyScanSettings(scanSettings);
                 // If a barcode is scanned, show it to the user and pause scanning
                 // (scanning is resumed when the user clicks "Continue Scanning")
@@ -100,7 +158,11 @@
 						var specialchar=$("#productBoxID").val();
 						specialchar = specialchar.replace('.','\\.');
 						$("#CenPH__"+specialchar).val(scanedID.replace(' ',''));
-						
+						if($("#scandit-barcode-result").text()!=""){
+							var thisIDNumber =   $("#productBoxID").val().substring($("#productBoxID").val().indexOf(".") + 1);
+							localStorage.setItem(thisIDNumber, scanedID.replace(' ',''));
+							closeScanning();						
+						}
 						//Fill Serial Number inside Text;
 						if($("#productBoxID").val().indexOf('2A8TX') > -1)
 						{ 
@@ -111,34 +173,35 @@
 									
 									if(i== serialIndex[1])
 									{
-										console.log("Inside IF");
-										console.log("value of i= "+i+" value of serialIndex= " + serialIndex[1]);
 										$("#datatableValueInsert > tbody  > tr:eq("+j+") > td:eq(6)").find("input").val(scanedID.replace(' ',''));
+										if($("#scandit-barcode-result").text()!=""){
+											closeScanning();
+										}
 									}
 									i++;
 								}
 							
 							}
 						}
-						
-						
                 });
+				
+				picker.onReady(() => {
+						if(picker.isReady()){
+							isScannerReady = isScannerReady + 1; 
+							checkScanner(idbtn);
+						}
+				});
+				
                 picker.onScanError(error => {
-                   // alert();
 					console.log(error.message);
-					
-					
                 });
-                picker.resumeScanning();
             })
             .catch(error => {
-                //alert(error);
-				//alert(error.message);
 				if((error.message=='Permission denied') || (error.message=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.')){
 					errorMessage=error.message;
 					console.log('errorMessage inside catch ' + errorMessage);
-					$(".OverlayPopupBackground").hide();
 					$("#BarcodeScaning").hide();
+					$(".OverlayPopupBackground").hide();
 					setTimeout(function(){
 					alert('Please provide camera access to use barcode scanning'); 
 					}, 0);
@@ -146,14 +209,14 @@
             });
 			
 			}
+			
+			
     </script>
 
 	
 	
 </div>
 <!-- Barcode Scaning Code Ends here-->
-
-
 
 
     <div class="OverlayPopupBackground"></div>
@@ -226,21 +289,31 @@
 
         <section class="add-item">
             <div class="content-grid mdl-grid">
-                <div class="add-item-wrapper mdl-cell mdl-cell--7-col">
+                <div class="add-item-wrapper mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet">
                     <span class="add-icon">
                         <img src="../Themes/Current/Images/add-btn.png"></span>
                     <span class="add-item-title" data-code="34">ADD ORDER ITEMS</span>
 
                 </div>
+				<div class="arrow-container mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet"></div>
             </div>
         </section>
-
+<script>
+			(function($){
+				$(window).on("load",function(){
+					$(".table-content").mCustomScrollbar({
+						axis:"x"
+					});
+					$.mCustomScrollbar.defaults.theme="light-2";
+				});
+			})(jQuery);
+		</script>
         <section class="order-detail-table-data">
             <div class="table-data-wrapper">
                 <div class="table-data-maincontainer">
-                    <div class="table-container" style="margin-bottom: 10px;">
+                  <div class="table-container table-content" data-mcs-theme="dark" style="margin-bottom: 10px;">
 
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValueInsert">
+                       <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="datatableValueInsert" >
                             <thead>
                                 <tr>
                                     <th style="width: 2%">&nbsp;</th>
@@ -251,33 +324,33 @@
                                         <br />
                                         Location</th>
                                     <th style="width: 4%">Quantity</th>
-                                    <th style="width: 10%">Model
+                                    <th style="width: 10%;  padding-right: 18px;">Model
                                         <br />
                                         Number</th>
-                                    <th style="width: 10%">Model
+                                    <th style="width: 19%;">Model
                                         <br />
                                         Name</th>
-                                    <th style="width: 17%">Serial
+                                    <th style="width: 17%;  padding-right: 18px;">Serial
                                         <br />
                                         Number</th>
-                                    <th style="width: 6%">Installation
+                                    <th style="width: 6%">Install
                                         <br />
                                         Code</th>
                                     <th style="width: 6%">Instructions</th>
                                     <th style="width: 3%">Level</th>
                                     <th style="width: 3%">Warranty</th>
                                     <th style="width: 3%">Credit</th>
-                                    <th style="width: 7%">Actual
+                                    <th style="width: 5%">Actual
                                         <br />
                                         Price ($)</th>
-                                    <th style="width: 7%">Extended
+                                    <th style="width: 4%">Extend
                                         <br />
                                         Price ($)</th>
-                                    <th style="width: 5%">Installation
+                                    <th style="width: 4%">Install
                                         <br />
                                         Price ($)</th>
-                                    <th style="width: 7%">Status</th>
-									
+                                    <th style="width: 4%">Status</th>
+         
                                 </tr>
                             </thead>
 
@@ -290,20 +363,20 @@
                                     <th style="width: 6%">Delivery
                                         <br />
                                         Status</th>
-                                    <th style="width: 10%">From
+                                    <th style="width: 10%;">From
                                         <br />
                                         Location</th>
                                     <th style="width: 4%">Quantity</th>
-                                    <th style="width: 15%">Model
+                                    <th style="width: 15%;  padding-right: 18px;">Model
                                         <br />
                                         Number</th>
-                                    <th style="width: 7%">Model
+                                    <th style="width: 19%;">Model
                                         <br />
                                         Name</th>
-                                    <th style="width: 14%">Serial
+                                    <th style="width: 14%;  padding-right: 18px;">Serial
                                         <br />
                                         Number</th>
-                                    <th style="width: 6%">Installation
+                                    <th style="width: 6%">Install
                                         <br />
                                         Code</th>
                                     <th style="width: 6%">Instructions</th>
@@ -312,15 +385,15 @@
                                     <th style="width: 3%">Credit</th>
                                     <th style="width: 5%">Actual
                                         <br />
-                                        Price</th>
-                                    <th style="width: 5%">Extended
+                                        Price ($)</th>
+                                    <th style="width: 4%">Extend
                                         <br />
-                                        Price</th>
-                                    <th style="width: 5%">Installation
+                                        Price ($)</th>
+                                    <th style="width: 4%">Install
                                         <br />
-                                        Price</th>
-                                    <th style="width: 6%">Status</th>
-									
+                                        Price ($)</th>
+                                    <th style="width: 4%">Status</th>
+         
                                 </tr>
                             </thead>
                             <tbody>
@@ -415,7 +488,6 @@
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="no">no</button>
         </div>
     </div>
-
 
 
     <div id="Div1" style="display: none;">
@@ -1706,6 +1778,12 @@
 
 <asp:Content ContentPlaceHolderID="PageScriptPH" runat="server">
     <style>
+		select[disabled='disabled']{
+   -webkit-text-fill-color: rgba(0, 0, 0, .6); 
+   -webkit-opacity: .6; 
+   color: rgba(0, 0, 0,.6); 
+   background: #D3D3D3 !important;
+}
         #datatableValueInsert tbody tr td:nth-child(11), #datatableValueInsert tbody tr td:nth-child(12), #datatableValueInsert tbody tr td:nth-child(13) {
             text-align: right;
         }
@@ -1715,6 +1793,9 @@
             padding-top: 3px;
             font-size: 11px;
         }
+		.order-detail-table-data {
+			margin-bottom: 35px;
+		}
 		td.button-container .mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
 			margin: 0 3px;
 		}
@@ -1770,19 +1851,19 @@
         }
 		
 		.scan-model {
-			background: url('../Themes/Current/Images/icons/ScanBarcode_icon16x13.png') no-repeat;
-			width: 17px;
-			height: 14px;
+			background: url(../Themes/Current/Images/icons/ScanBarcode_icon16x13.png) no-repeat 1px 12px;
+			width: 18px;
+			height: 33px;
 			position: absolute;
-			right: 17px;
-			top: 12px;
+			right: 5px;
+			top: 0;
 			cursor: pointer;
 		}
 		.mdl-layout__content input.serial-number {
 			height: 20px;
 		}
 		#datatableValueInsert tr > td:nth-child(7) .scan-model {
-			right: 15px;
+			right: 5px;
 		}
 		#datatableValueInsert tr > td:nth-child(5) div {
 			padding: 0;
@@ -1790,14 +1871,49 @@
 		.order-detail-table-data .mdl-data-table th, .order-detail-table-data .mdl-data-table td {
 			padding: 7px 6px 3px;
 		}
+		.prev-item-icon {
+		background: url(../Themes/Current/Images/arrow-previous.png) no-repeat 0 0;
+		display: inline-block;
+    height: 28px;
+    width: 130px;
+		}
+		.next-item-icon {
+		background: url(../Themes/Current/Images/arrow-next.png) no-repeat 0 0;
+		display: inline-block;
+    height: 28px;
+    width: 103px;
+		}
+		.arrow-container {
+		text-align: right;
+		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 			#datatableValueInsert tr > td:nth-child(7) .mdl-textfield {
 				width: 120px;
 			}
+			#datatableValueInsert{
+				width: 1308px;
+			}
+
+		}
+		
+		#divLoader{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+			position: absolute;
+			 top: 50%; 
+			 margin-top: -32px; 
+			z-index: 5 !important;
+			left: 50%;
+			margin-left: -32px;
+		
+		
 		}
     </style>
     <script type="text/javascript">
-	var locationJSON = ['149'];
+		var locationJSON = ['149','143','001','004','112','073','144','213','078','114','221'];
+		var focusCheck ="";
         function getCookie(cname) {
             var name = cname + "=";
             var ca = document.cookie.split(';');
@@ -1880,6 +1996,7 @@
         // Model Number Modal screen
 
         $(".model-number").on("keyup change", function () {
+		
             var keydnIndex = $(this).parents("tr").index();
             var el = $(".model-number")[keydnIndex];
             $("[id='CenPH__lb_SFLRCD__lb_2AXTX." + $("[id^='CenPH__lb_SFLRCD__lb_2AXTX']").eq(keydnIndex).attr('id').split('.')[1] + "']").val($(el).val());
@@ -1912,19 +2029,81 @@
             $("[id='CenPH__lb_SFLRCD__lb_2AACD." + targT + "']").trigger(inpe);
         }
 
-
+		
         // Installation code field
-
-        $('body').on('change keyup keydown', '.installation-codes', function (e) {
+		function installinputsID() {
+			var installID = [];
+			$("div[id^='CenPH__lb_SFLRCD_']").each(function(){
+			  //var idi = this.id.split('.');
+				var idi = $(this).find('input')
+				
+				if(idi[3] == undefined){
+					
+					installID.push("");
+				}
+				else{
+					var idnumber =  idi[3].id.split('.');
+					installID.push(idnumber[1]);
+				}
+			 
+			});
+			return installID;              
+		}
+        $('body').on('change keydown keyup', '.installation-codes', function (e) {	
             if (e.which != 115) {
+				var installCodeinput = installinputsID();
+				
                 var keydnIndex = $(this).parents("tr").index();
-
+			
                 var el = $(".installation-codes")[keydnIndex];
+				
                 if ($("[id^='CenPH__lb_SFLRCD__lb_2AECD']") != 'undefined') {
-
-                    //if($("[id^='CenPH__lb_SFLRCD__lb_2AECD']").length > 0){
-                    $("[id='CenPH__lb_SFLRCD__lb_2AECD\\." + $("[id^='CenPH__lb_SFLRCD__lb_2AECD']").eq(keydnIndex).attr('id').split('.')[1] + "']").val($(el).val());
-                    //}
+					//var i = 0;
+					//if(installCodeinput.length == 1){
+						
+						//while(i<= installCodeinput){
+								//for(var j =0;j<=2;j++){
+									//if(i== installCodeinput)
+									//{	
+										//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput).val($(el).val());
+										
+									//}
+									//else
+									//{
+										
+									//}
+									//i++;
+								//}
+							
+							//};
+					//}
+					//if(installCodeinput.length == 2)
+					//{	
+					
+					//}
+					//if(installCodeinput.length == 3)
+					//{	
+						//if(keydnIndex==0){
+							//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[0]).val($(el).val());
+						//}
+						//if(keydnIndex==1){
+							//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[1]).val($(el).val());
+						//}
+						//if(keydnIndex==2){
+							//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[2]).val($(el).val());
+						//}
+					//}
+					//el="";
+					if(keydnIndex == 0){
+						$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[0]).val($(el).val());
+					}
+					if(keydnIndex == 1){
+						$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[1]).val($(el).val());
+					
+					}
+					if(keydnIndex == 2){
+						$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[2]).val($(el).val());
+					}
                 }
 
             } else {
@@ -1949,23 +2128,37 @@
 
         // Table code starts here
         $(document).ready(function (e) {
-		
+
             if ($("#datatableValueInsert").find("tbody").children().length == 0) {
                 
                 createNewBody();
             }
             copyData();
+			
             $("#datatableValueInsert tbody tr:even").css("background-color", "#fff");
             $("#datatableValueInsert tbody tr:odd").css("background-color", "#f9f9f9");
 			$('.from-loc').attr('pattern', '[0-9]*');
 			
+			setTimeout(function(){ 
+					CounterStatusSelect();
+					}, 500);
+			
+			$("input[id^='CenPH__lb_SFLRCD__lb_2AXTX']").on("focus", function(){
+				focusCheck = this.id;
+				
+				var modelPrompt= this.id.replace('.','\\.')
+				_07($("#"+modelPrompt),'#2AXTX','10,21','#SFLRCD','#SFLRCD');
+				//_00('Enter', event);	
+				});
         });
 
         function showTableBody() {
             $("#datatableValueInsert tbody").remove();
             createNewBody();
         }
-
+		
+		
+		
         function createNewBody() {
             var body = $('<tbody></tbody>').attr({
                 id: tindex
@@ -1979,9 +2172,9 @@
 
                 $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input from-loc" type="text" maxlength="3" style="text-align: right" > </div></td>').appendTo(row);
                 $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input" type="text" style="text-align: right;"  maxlength="3"></div></td>').appendTo(row);
-                $('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input model-number" type="text" style="text-align: left;" maxlength="20" name="model" ></div> <span class="scan-model"></span></td>').appendTo(row);
+                $('<td style="padding-right: 28px"><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input model-number" type="text" style="text-align: left;" maxlength="20" name="model" ></div> <span class="scan-model"></span></td>').appendTo(row);
                 $(' <td><span></span></td>').appendTo(row);
-                $('<td> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" maxlength="20"></div> <span class="scan-model"></span></td>').appendTo(row);
+                $('<td style="padding-right: 28px"> <div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input serial-number" type="text" maxlength="20"></div> <span class="scan-model"></span></td>').appendTo(row);
 
                 $('<td><div class="mdl-textfield mdl-js-textfield"><input class="mdl-textfield__input installation-codes" type="text" style="text-align: right;" disabled="disabled" maxlength="3"></div></td>').appendTo(row);
                 $('<td><span></span></td>').appendTo(row);
@@ -2009,11 +2202,13 @@
             //var tindex=0;
             if ($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id") != undefined) {
                 tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+				
             }
             
             //tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
             if ($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).length > 0) {
                 tindex = parseInt($("[id*='lb_SFLRCD__lb_2AIST.']").eq(0).attr("id").split("T.")[1]);
+				
             }
             
             $("#datatableValueInsert tbody").find("tr").each(function (i) {
@@ -2043,12 +2238,14 @@
                 }
 
                 if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('input')) {
+				
                   //  $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").val());
 					$(this).find("td:eq(4) input").attr('id','CenPH__lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
 					$(this).find("td:eq(4) input").attr('name','ctl00$CenPH$_lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
                     $(this).find("td:eq(4) input").replaceWith($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").removeAttr("style tabindex"));
 
                 } else if ($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").is('span')) {
+				
 					$(this).find("td:eq(4) input").attr('id','CenPH__lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
 					$(this).find("td:eq(4) input").attr('name','ctl00$CenPH$_lb_SFLRCD__lb_2AXTX.'+ (i + tindex));
                     $(this).find("td:eq(4) input").val($("[id$='lb_SFLRCD__lb_2AXTX." + (i + tindex) + "']").text());
@@ -2068,6 +2265,9 @@
                     $(this).find("td:eq(6) input").css("border", "none");
 
                 }
+				 $(this).find("td:eq(15) select").attr('disabled',false);
+				//$(this).find("td:eq(15) select").css('background-color' , 'transparent');
+		
                 $("[id$='lb_SFLRCD__lb_2SEL." + (i + tindex) + "']").val() == "4" ? $(this).find("td:eq(15) select").val("Cancel") : $(this).find("td:eq(15) select").val("Active");
                 /* If actual price field is input or span type */
                 if ($("[id$='lb_SFLRCD__lb_2AMVA." + (i + tindex) + "']").is('input')) {
@@ -2105,10 +2305,10 @@
             $("#previous-page,#next-page").remove();
 
             if ($("#CenPH__lb_SFLRCD_0").length === 0) {
-                $(".table-container").
-                    after("<a href='javascript:void(0);' id='previous-page' style='float: right;margin-right: 25px;' class='prev-icon'></a>");
+                $(".arrow-container").
+                    append("<a href='javascript:void(0);' id='previous-page' style='margin-right: 25px;' class='prev-item-icon'></a>");
             }
-            $(".table-container").after("<a href='javascript:void(0);' id='next-page' style='float: right;margin-right: 15px;' class='next-icon'></a>");
+            $(".arrow-container").append("<a href='javascript:void(0);' id='next-page' style='margin-right: 15px;' class='next-item-icon'></a>");
 			
 			
 			
@@ -2116,8 +2316,10 @@
 			$("input[id^='CenPH__lb_SFLRCD__lb_2AXTX']").each(function(){
 				var modelID = this.id;
 				modelID = modelID.substring(modelID.indexOf(".") + 1);
+				
 				if(localStorage.getItem(modelID)!=null){
 					$("#CenPH__lb_SFLRCD__lb_2AXTX\\."+modelID).val(localStorage.getItem(modelID));
+					
 				}
 			});
 			
@@ -2128,6 +2330,7 @@
 		//Barcode Scanning Code Starts
 		var currentURL = window.location.href;
 		var errorMessage ='Test';
+		var checker = 0;
 		$(document).ready(function (e) {
 			var localLocation = localStorage.getItem("locationStore");
 			for(var i = 0; i < locationJSON.length; i++){
@@ -2139,49 +2342,61 @@
 					else{
 						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").addClass("scan-model");
 						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").addClass("scan-model");
+						checker = checker + 1;
 					}
 				 }
 				 else{
-					$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
-					$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
+					if(checker == 0){
+						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
+						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
+					}
 				 }
 			}
-        });
+			//Start - Set value into LocalStorage for missing table value.
 		
-		//Start - Set value into LocalStorage for missing table value.
-		$("input[id^='CenPH__lb_SFLRCD__lb_2AXTX']").bind('input', function () {
-		  
-          var stt = $(this).val();
-          var thisID = this.id;
-		  var thisIDNumber =   thisID.substring(thisID.indexOf(".") + 1);
-		  if(thisIDNumber >= 3)
-		  {
-			localStorage.setItem(thisIDNumber, stt);
-		 // var idAfterSpecialCharRemoved= thisID;
-			//			idAfterSpecialCharRemoved = idAfterSpecialCharRemoved.replace('.','\\.');
-		  //$(idAfterSpecialCharRemoved).val(sessionStorage.getItem(thisID));
-		  }        
+		$("#continue-scanning-button").hide();
+		$(document).on("change keyup", "input[id^='CenPH__lb_SFLRCD__lb_2AXTX']", function(event) {
+			var stt = $(this).val();
+			
+			var thisID = this.id;
+			var thisIDNumber =   thisID.substring(thisID.indexOf(".") + 1);
+			if(stt!='?' && stt!='??')
+			{
+				localStorage.setItem(thisIDNumber, stt);
+			} 
+			
+			
+			if(stt == '?')
+			{
+				localStorage.removeItem(thisIDNumber);
+			} 
+			
        });
 	   //End - Set value into LocalStorage for missing table value.
+			
+			
+			
+        });
+		
+		
 	   
 	   //This is for Model Number
 		var countPresent = 0; //This variable is use to counter Scan function run once in on load.
-		
 		$(document).on("click", "span[id^='btn_lb_SFLRCD__lb_2AXTXB']", function () {
-			
 			if(currentURL.startsWith("https://")){
 				var idbtn = this.id.replace('B','');
 				idbtn = idbtn.replace('btn_','');
-				//window.open("ScanditSimpleSample.aspx?id="+encodeURIComponent(idbtn), "_blank", "height=400, width=550, status=yes, toolbar=no, menubar=no, location=no,addressbar=no");
-				barcodeOpening(idbtn);
-				//$(".OverlayPopupBackground").show();
+				$("#divLoader").show();
+				if(isScannerReady > 0)
+				{
+					checkScanner(idbtn);
+					picker.resumeScanning();
+				}
 				if(countPresent==0)
 				{	
 					countPresent=countPresent+1;
-					ScaningBar();
+					ScaningBar(idbtn);
 				}
-				//document.write('Hello2 '+ errorMessage);
-				
 				if((errorMessage=='Permission denied') || (errorMessage=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.'))
 				{
 				
@@ -2195,8 +2410,9 @@
 				else
 				{
 					$(".OverlayPopupBackground").show();
-					$("#BarcodeScaning").show();
+					//$("#BarcodeScaning").show();
 				}
+				
 				
 			}
 		});
@@ -2208,20 +2424,25 @@
 				var idbtn = this.id.replace('B','');
 				idbtn = idbtn.replace('btn_','');
 				//window.open("ScanditSimpleSample.aspx?id="+encodeURIComponent(idbtn), "_blank", "height=400, width=550, status=yes, toolbar=no, menubar=no, location=no,addressbar=no");
-				barcodeOpening(idbtn);
-				//$(".OverlayPopupBackground").show();
+				$("#divLoader").show();
+				if(isScannerReady > 0)
+				{
+					checkScanner(idbtn);
+					picker.resumeScanning();
+				}
 				if(countPresent==0)
 				{	
-					
 					countPresent=countPresent+1;
-					ScaningBar();
+					ScaningBar(idbtn);
 				}
 				
 				if((errorMessage=='Permission denied') || (errorMessage=='The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.'))
 				{
-					setTimeout(function(){ 
-					$(".OverlayPopupBackground").hide();
-					$("#BarcodeScaning").hide()
+					setTimeout(function(){
+						$("#BarcodeScaning").hide();					
+						$(".OverlayPopupBackground").hide();
+						
+						
 					}, 0);
 					
 					
@@ -2231,18 +2452,20 @@
 				else
 				{
 					$(".OverlayPopupBackground").show();
-					$("#BarcodeScaning").show();
+					//$("#BarcodeScaning").show();
 				}
+				
 				
 			}
 		});
 		
 		
 		$("body").on("click","#CloseScan", function(event){
-		$("#BarcodeScaning").hide();
-		$(".OverlayPopupBackground").hide();
-		$("#scandit-barcode-result").text("");
-		continueScanning();
+			//$("#BarcodeScaning").hide();
+			//$(".OverlayPopupBackground").hide();
+			//$("#scandit-barcode-result").text("");
+			//pauseScanning();
+			closeScanning();
 
 		});
 		
@@ -2255,43 +2478,36 @@
 		
 		
         $('body').on("click", "#next-page", function (event) {
-		//event.preventDefault();
-          // setTimeout(function(){
-                //copyData();
-            //},300);
-			
+		
 			_00("PgDn", event);
-			copyData();
-        });
-        $('body').on("click", "#previous-page", function (event) {
-		//event.preventDefault();
-          //  setTimeout(function(){
-                //copyData();
-            //},300);
+			 setTimeout(function(){
+                copyData();
+            },200);
 			
+			setTimeout(function(){ 
+					CounterStatusSelect();
+					}, 500);
+        });
+
+        $('body').on("click", "#previous-page", function (event) {
+		
 			_00("PgUp", event);
-			copyData();
+			 setTimeout(function(){
+                copyData();
+            },200);
+			
+			setTimeout(function(){ 
+					CounterStatusSelect();
+					}, 500);
         });
-
-        $('body').on("touchstart", "#next-page", function (event) {
-           //  event.preventDefault();
-            //setTimeout(function(){
-               // copyData();
-            //},300);
-            _00("PgDn", event);
-            copyData();
-        });
-        $('body').on("touchstart", "#previous-page", function (event) {
-            // event.preventDefault();
-             //setTimeout(function(){
-                //copyData();
-            //},300);
-            _00("PgUp", event);
-             copyData();
-        });
-
+		
         $('#prompt').on("click", function (event) {
-            _00("F4", event);
+			var thisIDNumberP =   focusCheck.substring(focusCheck.indexOf(".") + 1);
+			localStorage.removeItem(thisIDNumberP);
+			focusCheck=focusCheck.replace('.','\\.');
+				$("#" + focusCheck).val('?');
+				
+				_00("Enter", event);
         });
 
         $('#exit').on("click", function (event) {
@@ -2316,6 +2532,7 @@
             if (e.which == 33 || e.which == 34) {
                 showTableBody();
                 copyData();
+				e.stopImmediatePropagation();
             }
         });
 
@@ -2328,6 +2545,7 @@
             // Show New Edit UI Table
             $("#datatableValueInsert").show();
             $('body').on("change blur keydown", $("input, select"), function () {
+			
                 $("#datatableValueInsert tbody").find("tr").each(function (i) {
                     $("[id$='lb_SFLRCD__lb_2AUST." + (i + tindex) + "']").val($(this).find("td:eq(0) span").val());
                     $("[id$='lb_SFLRCD__lb_2AIST." + (i + tindex) + "']").val($(this).find("td:eq(1) select").val());
@@ -2354,6 +2572,7 @@
             });
             if ($("#datatableValueInsert").is(":visible")) {
                 copyData();
+				
             }
             // Following code updates data from ASNA Hidden UI Table to Confirm / Review UI Tabl
         }
@@ -2423,6 +2642,49 @@
 
 
         }
+		
+		//Status Dropdown should be disabled or not
+			function CounterStatusSelect() {
+				$("div[id^='CenPH__lb_SFLRCD_']").each(function(){
+					var statusSelect = this.id;
+					if($("#"+statusSelect).find('select').attr('id') !=undefined){
+						if($("#"+statusSelect).find('select').attr('id').includes("CenPH__lb_SFLRCD__lb_2AIST")){
+							var trID = $("#"+statusSelect).find('select').attr('id').split('.');
+							var i =0;
+							while(i<= trID[1]){
+								for(var j =0;j<=2;j++){
+									if(i== trID[1])
+									{	
+										console.log('Inside If');
+										//$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').attr('disabled',true);
+										$("#datatableValueInsert > tbody  > tr:eq("+j+") > td:eq(15)").find("select").attr('disabled',true);
+										console.log('Inside If 2');
+										//$("#datatableValueInsert > tbody  > tr:eq("+j+") > td:eq(15)").find("select").css('background-color' , '#A9A9A9');
+										
+									}
+									else
+									{
+										console.log('Inside first else')
+										//$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').attr('disabled',false);
+										//$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').css('background-color' , 'transparent');
+									}
+									i++;
+								}
+							
+							};
+							
+						}
+						else{
+							console.log('Inside else');
+							$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').attr('disabled',false);
+							$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').css('background-color' , 'transparent');
+						}
+					}
+				});
+			}
+			
+			//
+			
 
 
     </script>

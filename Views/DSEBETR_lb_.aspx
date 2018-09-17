@@ -1497,20 +1497,28 @@
                setTimeout(function () { dealycodeInst(34); }, 1000);
 			    setTimeout(function () {  
 					getPaymentDropDown();
+					
 			   }, 1000);
+			    setTimeout(function () {  
+					varValue();
+					
+			   }, 1000);
+			   
 			   
             });
             $('body').on("click", "#sp-previous-page", function (event) {
 				
                 setTimeout(function () { 
 					dealycodeInst(33);
-					console.log("prev button")
-									
 				}, 1000);
 				 setTimeout(function () { 
 					getPaymentDropDown();
-				
+					
 				}, 1000);
+				setTimeout(function () {  
+					varValue();
+					
+			   }, 1000);
 				
 				
             });
@@ -1590,23 +1598,42 @@
 			
 				getPaymentDropDown();
 				
-				$("input[id^='CenPH__lb_SFLRCD__lb_RNICD']").each(function (i) {
-					var thisIDHidden = this.id;
-					thisIDHidden= thisIDHidden.replace('.','\\.');
-					var dropDownID="ddl_"+thisIDHidden;
-					if($("#"+thisIDHidden).val()){
-						$("#"+dropDownID).val($("#"+thisIDHidden).val());
-					}
-					
-				});
 			
-			$("select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD']").change(function() {
+			//$("select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD']").change(function() {
+			$(document).on('change', "select[id^='ddl_CenPH__lb_SFLRCD__lb_RNICD']", function(event) {
+				console.log('Hello');
 				var ddlID=this.id;
+				console.log(ddlID.replace(/[^\d]/g, ''));
 				ddlID=ddlID.replace('ddl_','');
 				ddlID=ddlID.replace('.','\\.');
+				console.log("Value "+$(this).val());
+				if($(this).val()!=""){
+				console.log("wd");
+				$("#CenPH__lb_SFLRCD__lb_RNICD\\."+ddlID.replace(/[^\d]/g, '')).val($(this).val());
+				}
+				else
+				{
+					console.log("sdd");
+					$("#CenPH__lb_SFLRCD__lb_RNICD\\."+ddlID.replace(/[^\d]/g, '')).val('');
+					console.log("Value of blank "+$("#CenPH__lb_SFLRCD__lb_RNICD\\."+ddlID.replace(/[^\d]/g, '')).val())
+				}
+				
 				$('#'+ddlID).val($(this).val());
-				console.log(ddlID);
 			});
+			
+			
+			varValue();
+			function varValue(){
+					$("input[id^='CenPH__lb_SFLRCD__lb_RNICD']").each(function (i) {
+						var thisIDHidden = this.id;
+						thisIDHidden= thisIDHidden.replace('.','\\.');
+						var dropDownID="ddl_"+thisIDHidden;
+						if($("#"+thisIDHidden).val()){
+							$("#"+dropDownID).val($("#"+thisIDHidden).val());
+						}
+					
+					});
+				}
 			
         });
     </script>

@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CECXPVI_lb_.aspx.cs" Inherits="CONNS.CECXPVI_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="CECXPVI_lb_.aspx.cs" Inherits="Conns.CECXPVI_lb_Form"  MasterPageFile="~/Themes/Current/MasterPage.master" %>
 <%@ Register  TagPrefix="mdf" Assembly="ASNA.Monarch.WebDspF, Version=14.0.36.0, Culture=neutral, PublicKeyToken=71de708db13b26d3" Namespace="ASNA.Monarch.WebDspF" %>
 
     <asp:Content ContentPlaceHolderID="HeaderPH" runat="Server" >
-        <%-- Migrated on 7/2/2018 at 4:39 PM by ASNA Monarch(R) Wings version 8.0.35.0 --%>
-        <%-- Legacy location: library ASNATRACK, file QDDSSRC, member CECXPVI# --%>
+        <%-- Migrated on 9/14/2018 at 10:25 PM by ASNA Monarch(R) Wings version 8.0.35.0 --%>
+        <%-- Legacy location: library asnatrack, file qddssrc, member CECXPVI# --%>
 		<!-- #Include virtual="~/Views/PopupHeader.aspx" -->
     </asp:Content>
 
@@ -38,7 +38,7 @@
       <div class="content-grid mdl-grid">
         <div class="mdl-cell mdl-cell--9-col"> 
           <!-- Title --> 
-          <span class="heading-h1">Warning</span> </div>
+          <span class="heading-h1">Void Cash Option</span> </div>
         <div class="mdl-cell mdl-cell--3-col pull-right"> 
           <!-- Navigation --> 
           <i class="material-icons md-15 md-light computer-icon"></i> <span class="date-time-txt">CECXPVI</span></div>
@@ -118,15 +118,15 @@
       <%--                                                                                                                   --%>
       <%--  Company       : Credit Collection Model                                                                          --%>
       <%--  System        : Credit Applications                                                                              --%>
-      <%--  User name     : APOTTI                                                                                           --%>
-      <%--  Date          : 03/29/18  Time  : 07:13:14                                                                       --%>
+      <%--  User name     : COOL5                                                                                            --%>
+      <%--  Date          : 09/06/18  Time  : 13:13:36                                                                       --%>
       <%--  Copyright     : Credit Collection Model                                                                          --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
       <%-- ================================================================                                                  --%>
       <%-- =========================================================================                                         --%>
           <mdf:DdsRecord id="_lb_RCDDTL1" runat="server" 
-            style="position: relative; width: 513px; height: 168px" 
+            style="position: relative; width: 531px; height: 168px" 
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;"
@@ -204,9 +204,9 @@
               Alias="ZZCSCL" 
               Usage="Hidden" 
  />
-            <mdf:DdsConstant id="DdsConstant5" runat="server" 
-              style="position: absolute; left: 226px; top: 3px;"
-              Text="WARNING !!" 
+            <mdf:DdsConstant id="DdsConstant4" runat="server" 
+              style="position: absolute; left: 199px; top: 3px;"
+              Text="Void Cash Option" 
               CssClass="DdsConstant"
  />
             <mdf:DdsCharField id="_lb_RCDDTL1__lb_PCPSS" runat="server" style="position: absolute; left: 1px; top: 0px; width: 10px"
@@ -424,19 +424,19 @@
  />
             <mdf:DdsConstant id="DdsConstant2" runat="server" 
               style="position: absolute; left: 37px; top: 51px;"
-              Text="Adding this Cash Option account on to new contract" 
+              Text="Adding this Cash Option Account on to new contract" 
               Color="Green" 
               CssClass="DdsConstant"
  />
             <mdf:DdsConstant id="DdsConstant1" runat="server" 
               style="position: absolute; left: 28px; top: 75px;"
-              Text="will void the Cash Option-a Void Authorization Letter" 
+              Text="will void the Cash Option.  A Void Authorization Letter" 
               Color="Green" 
               CssClass="DdsConstant"
  />
-            <mdf:DdsConstant id="DdsConstant4" runat="server" 
+            <mdf:DdsConstant id="DdsConstant5" runat="server" 
               style="position: absolute; left: 199px; top: 99px;"
-              Text="must be signed" 
+              Text="must be signed." 
               Color="Green" 
               CssClass="DdsConstant"
  />
