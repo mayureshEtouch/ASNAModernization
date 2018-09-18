@@ -381,13 +381,24 @@
               </div>
               <!-- col ends here -->
               <!-- col starts here -->
-              <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+              <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet">
                 <div class="content-grid mdl-grid">
-                  <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet" style="margin: 0;"> <span class="form-label">Add-on Amount:</span> </div>
-                  <div class="mdl-cell mdl-cell--5-col  mdl-cell--3-col-tablet" style="margin:0;"> 
+                  <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet" style="margin: 0;"> 
+					<span class="form-label">Add-on Amount:</span> 
+				  </div>
+                  <div class="mdl-cell mdl-cell--4-col  mdl-cell--2-col-tablet" style="margin:0;"> 
                         <!-- <span data-upgraded=",MaterialTextfield" class="form-text"><input class="mdl-textfield__input" style="width: 110px; display:inline-block" data-tb-index="1" size="10" type="text" id="addOnAmt"></span>  -->
-                        <span data-upgraded=",MaterialTextfield" class="form-text" id="addOnAmt"></span>
+                        <span data-upgraded=",MaterialTextfield" class="form-text add-on-text" id="addOnAmt"></span>
                       </div>
+					  <!-- btn-->
+					  <div class="button-container add-on-btn-container">
+						<div class="content-grid mdl-grid">
+							<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet" id="divAdd">
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">+Add-on</span>
+							</div>
+							</div>
+							</div>
+					  <!-- btn-->
                 </div>
               </div>
               <!-- col ends here -->
@@ -629,8 +640,8 @@
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="previous">Previous</span> -->
                 <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="process">Process</span> -->
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="menu">Menu</span>
-                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span>  -->
-				<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">+Add-on</span>
+                <!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="refresh">Refresh</span> 
+				<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">+Add-on</span> -->
                 <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="disMsgs">Display Messages</span>
               </div>
               <div class="mdl-cell mdl-cell--2-col mdl-cell--5-col-desktop pull-right">
@@ -1816,16 +1827,44 @@
 			position: absolute;
 			right: 3px;
 		}
+		.form-data-wrapper .button-container.add-on-btn-container .mdl-cell, .button-container.add-on-btn-container .mdl-cell {
+    		padding: 0 !important;
+			margin-top: -5px;
+		}
+		
 		@media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
+  and (orientation : portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
 			.calender-icon {
 				position: relative;
 				top: -19px;
 				right: -100px;
 			}
+			#CenPH_DSPFMT1_ADDON_usd_{
+			width: 110px !important;
 		}
+		.button-container.add-on-btn-container {
+			margin-left: 44px;
+		}
+		.button-container.add-on-btn-container .mdl-button--accent.mdl-button--accent.mdl-button--raised{
+		    padding: 6px 10px 6px 10px;
+		}
+		}
+		
+		@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	#CenPH_DSPFMT1_ADDON_usd_{
+			width: 92px !important;
+		}
+		.button-container.add-on-btn-container {
+			margin-left: 0px;
+		}
+  }
 
     #purchaseAmt span {color: red;}
       </style>
@@ -2006,6 +2045,14 @@
             }
 
          $(document).ready(function() {
+			//if($("#next").s)
+			if($("#next").is(":visible")){
+				$("#prompt").show();
+			}
+			else
+			{
+				$("#prompt").hide();
+			}
               var spSSN = $("#CenPH_DSPFMT1_SS_lb_2").is("input") ? $("#CenPH_DSPFMT1_SS_lb_2").val().replace(/-/g,"") : $("#CenPH_DSPFMT1_SS_lb_2").val();
               var dummySSN= $("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val();
             $("#CenPH_DSPFMT1_SS_lb_2_new").val(spSSN);
@@ -2331,6 +2378,7 @@
   if(!$('#CenPH_DSPFMT1_SS_lb_1').is('input:text') ) {
     
       $('#next').hide();
+	  $("#prompt").hide();
       $("#CenPH_DSPFMT1_SS_lb_1_new").hide();
       $("#CenPH_DSPFMT1_SS_lb_2_new").hide();
     //CenPH_DSPFMT1_SS_lb_2_new

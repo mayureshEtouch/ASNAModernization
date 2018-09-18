@@ -2330,11 +2330,11 @@
 		//Barcode Scanning Code Starts
 		var currentURL = window.location.href;
 		var errorMessage ='Test';
-		var checker = 0;
+		//var checker = 0;
 		$(document).ready(function (e) {
 			var localLocation = localStorage.getItem("locationStore");
-			for(var i = 0; i < locationJSON.length; i++){
-				 if(localStorage.getItem("locationStore") == locationJSON[i]){
+			//for(var i = 0; i < locationJSON.length; i++){
+				 //if(localStorage.getItem("locationStore") == locationJSON[i]){
                     if(currentURL.startsWith('http://')){
 						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
 						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
@@ -2342,16 +2342,16 @@
 					else{
 						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").addClass("scan-model");
 						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").addClass("scan-model");
-						checker = checker + 1;
+						//checker = checker + 1;
 					}
-				 }
-				 else{
-					if(checker == 0){
-						$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
-						$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
-					}
-				 }
-			}
+				// }
+				 //else{
+					//if(checker == 0){
+						//$("span[id^='btn_lb_SFLRCD__lb_2AXTXB']").removeClass("scan-model");
+						//$("span[id^='btn_lb_SFLRCD__lb_2A8TXB']").removeClass("scan-model");
+					//}
+				 //}
+			//}
 			//Start - Set value into LocalStorage for missing table value.
 		
 		$("#continue-scanning-button").hide();

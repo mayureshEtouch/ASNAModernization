@@ -274,7 +274,7 @@
                         </div>
 
                         <div class="content-grid mdl-grid" style="margin: 0 15px;">
-                            <div class="mdl-cell mdl-cell--6-col" style="margin: 0 0;">
+                            <div class="mdl-cell mdl-cell--7-col" style="margin: 0 0;">
                                 <span class="form-label clm-form-label">Employed at . . . </span>
                                 <span class="form-text">
                                        <input type="text" id="employed-at" class="editable-data mdl-textfield__input_small" maxlength="20" data-tb-index="17">
@@ -2053,7 +2053,7 @@
              Space issue in Supervisor name
               */
              $("#cust-supervisor").val($("#CenPH__lb_RCDDTL1__lb_DWWTX").val());
-             $("#sp-ssn,#cust-ssn,#payment-of,#phone-listed-as,#sp-monthly-income,#employed-at-duration-years,#employed-at-duration-months,#cust-income,#cust-dependents,#ro-ref-zip-code,#ro-ref-phone,#no-of-years").attr('pattern', '[0-9]*');
+             $("#sp-ssn,#cust-ssn,#payment-of,#phone-listed-as,#sp-monthly-income,#employed-at-duration-years,#employed-at-duration-months,#cust-income,#cust-dependents,#ro-ref-zip-code,#ro-ref-phone,#no-of-years,#ref-zip-code,#ref-phone").attr('pattern', '[0-9]*');
 
              //if($("#ctl00$CenPH$_lb_RCDDTL1_V1DOBD").text().trim()         
              /*$("#cust-ssn, #sp-ssn").on("blur focus",function(){
