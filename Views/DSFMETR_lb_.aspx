@@ -2011,6 +2011,7 @@
                 var el = $(".from-loc")[keydnIndex];
                 $("[id='CenPH__lb_SFLRCD__lb_2AACD." + $("[id^='CenPH__lb_SFLRCD__lb_2AACD']").eq(keydnIndex).attr('id').split('.')[1] + "']").val($(el).val());
             } else {
+				
                 var keydnIndex = $(this).parents("tr").index();
 
                 setTimeout(function () { dealycode(keydnIndex); }, 1000);
@@ -2058,42 +2059,7 @@
                 var el = $(".installation-codes")[keydnIndex];
 				
                 if ($("[id^='CenPH__lb_SFLRCD__lb_2AECD']") != 'undefined') {
-					//var i = 0;
-					//if(installCodeinput.length == 1){
-						
-						//while(i<= installCodeinput){
-								//for(var j =0;j<=2;j++){
-									//if(i== installCodeinput)
-									//{	
-										//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput).val($(el).val());
-										
-									//}
-									//else
-									//{
-										
-									//}
-									//i++;
-								//}
-							
-							//};
-					//}
-					//if(installCodeinput.length == 2)
-					//{	
-					
-					//}
-					//if(installCodeinput.length == 3)
-					//{	
-						//if(keydnIndex==0){
-							//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[0]).val($(el).val());
-						//}
-						//if(keydnIndex==1){
-							//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[1]).val($(el).val());
-						//}
-						//if(keydnIndex==2){
-							//$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[2]).val($(el).val());
-						//}
-					//}
-					//el="";
+
 					if(keydnIndex == 0){
 						$("#CenPH__lb_SFLRCD__lb_2AECD\\."+installCodeinput[0]).val($(el).val());
 					}
@@ -2357,16 +2323,16 @@
 		$("#continue-scanning-button").hide();
 		$(document).on("change keyup", "input[id^='CenPH__lb_SFLRCD__lb_2AXTX']", function(event) {
 			var stt = $(this).val();
-			
+			var keyF4 = event.which;
 			var thisID = this.id;
 			var thisIDNumber =   thisID.substring(thisID.indexOf(".") + 1);
-			if(stt!='?' && stt!='??')
-			{
+			if(stt!='?' && stt!='??' && keyF4!=115)
+			{	
 				localStorage.setItem(thisIDNumber, stt);
 			} 
 			
 			
-			if(stt == '?')
+			if(stt == '?' && keyF4!=115)
 			{
 				localStorage.removeItem(thisIDNumber);
 			} 
@@ -2655,16 +2621,16 @@
 								for(var j =0;j<=2;j++){
 									if(i== trID[1])
 									{	
-										console.log('Inside If');
+										
 										//$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').attr('disabled',true);
 										$("#datatableValueInsert > tbody  > tr:eq("+j+") > td:eq(15)").find("select").attr('disabled',true);
-										console.log('Inside If 2');
+										
 										//$("#datatableValueInsert > tbody  > tr:eq("+j+") > td:eq(15)").find("select").css('background-color' , '#A9A9A9');
 										
 									}
 									else
 									{
-										console.log('Inside first else')
+										
 										//$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').attr('disabled',false);
 										//$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').css('background-color' , 'transparent');
 									}
@@ -2675,7 +2641,7 @@
 							
 						}
 						else{
-							console.log('Inside else');
+							
 							$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').attr('disabled',false);
 							$('#datatableValueInsert tbody tr:eq('+j+') td:eq(15) select').css('background-color' , 'transparent');
 						}

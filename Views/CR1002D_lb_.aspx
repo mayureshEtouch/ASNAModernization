@@ -391,10 +391,10 @@
                         <span data-upgraded=",MaterialTextfield" class="form-text add-on-text" id="addOnAmt"></span>
                       </div>
 					  <!-- btn-->
-					  <div class="button-container add-on-btn-container">
+					  <div class="button-container add-on-btn-container" style="padding-bottom:0;">
 						<div class="content-grid mdl-grid">
-							<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet" id="divAdd">
-								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt">+Add-on</span>
+							<div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-desktop mdl-cell--12-col-tablet" id="divAdd1">
+								<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="prompt" style="white-space:nowrap">+Add-on</span>
 							</div>
 							</div>
 							</div>
@@ -1883,7 +1883,7 @@
               "CenPH_DSPFMT1_CRWRKB": "workPhone",
               //"ctl00\\$CenPH\\$DSPFMT1_DOB_lb_1B": "dob", //date
               "CenPH_DSPFMT1_CRAGEB":"age",
-              "CenPH_DSPFMT1_SS_lb_1": "CenPH_DSPFMT1_SS_lb_1_new",
+             "CenPH_DSPFMT1_SS_lb_1": "CenPH_DSPFMT1_SS_lb_1_new",
               "CenPH_DSPFMT1_CRNMEB":"name",
               "CenPH_DSPFMT1_CRAD1B": "address", 
               "CenPH_DSPFMT1_CRAD2B": "address_2", 
@@ -2303,6 +2303,7 @@
                 });
 
                 $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mousedown touchstart", function() {
+				
                     setTimeout(function() {
                         var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
                         var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
@@ -2311,6 +2312,7 @@
                     }, 0);
                 });
                 $("#CenPH_DSPFMT1_SS_lb_1_new-show").on("mouseup touchend", function() {
+					
                     var ssnValue = $("#CenPH_DSPFMT1_SS_lb_1_new").val();
                     var dummyValue = $("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val();
                     $("#CenPH_DSPFMT1_SS_lb_1_new").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
@@ -2336,12 +2338,12 @@
                
              
                 $('input:text[name="CenPH_DSPFMT1_SS_lb_1"]').val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
-                //console.log($('#dummy-CenPH_DSPFMT1_SS_lb_1_new').val());
+                
             });
             $("#next").click(function (event) {
               $("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
               $("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
-              console.log( $("#CenPH_DSPFMT1_SS_lb_1").val());
+             
               _00('Enter', event);
             });
 
@@ -2461,11 +2463,33 @@
         //   _00('F5', event);
         // });
 		$( "#prompt" ).on( "click", function() {
+			if($("#CenPH_DSPFMT1_SS_lb_1").is('input')){
+				if($("#CenPH_DSPFMT1_SS_lb_1").val()!=""){
+					if($("#CenPH_DSPFMT1_SS_lb_1").val().indexOf('*')!=-1){
+						if($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val()!="")
+						{
+							$("#CenPH_DSPFMT1_SS_lb_1").val($("#dummy-CenPH_DSPFMT1_SS_lb_1_new").val());
+						}
+					}
+				}
+			}
+			
+			if($("#CenPH_DSPFMT1_SS_lb_2").is('input')){
+				if($("#CenPH_DSPFMT1_SS_lb_2").val()!=""){
+					if($("#CenPH_DSPFMT1_SS_lb_2").val().indexOf('*')!=-1){
+						if($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val()!="")
+						{
+							$("#CenPH_DSPFMT1_SS_lb_2").val($("#dummy-CenPH_DSPFMT1_SS_lb_2_new").val());
+						}
+					}
+				}
+			}
 			_00('F4', event);
 		});
         $("#disMsgs").click(function (event) {
           _00('F6', event);
         });
+		
      });
   </script>
 </asp:Content>

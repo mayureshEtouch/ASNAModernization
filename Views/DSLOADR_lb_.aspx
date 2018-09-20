@@ -135,7 +135,7 @@
 									<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('F6',event);">Messages</span> -->
 								</div>
 								<div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-desktop pull-right">
-									<span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);">Next</span>
+									<!-- <span class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="_00('Enter', event);">Next</span>-->
 								</div>
 							</div>
 						</div>
