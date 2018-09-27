@@ -99,7 +99,7 @@
 
      
 <!-- Modified HTML code ends here -->
-        <div id="Div1" style="display: none;">
+      <div id="Div1" style="display;none;">
             
       <%--  PMT to eSign Auto ref Prompt & validate record                                                                   --%>
       <%--  CRTDSPF                                                                                                          --%>
@@ -112,7 +112,7 @@
       <%--  Company       : DIS Development Model                                                                            --%>
       <%--  System        : DIS Development Model                                                                            --%>
       <%--  User name     : SGOPAL                                                                                           --%>
-      <%--  Date          : 12/11/17  Time  : 02:26:38                                                                       --%>
+      <%--  Date          : 09/18/18  Time  : 05:05:46                                                                       --%>
       <%--  Copyright     : DIS Development Model                                                                            --%>
       <%-- ================================================================                                                  --%>
       <%--  Maintenance   :                                                                                                  --%>
@@ -123,7 +123,7 @@
             Alias="#RCDDTL1"
             CssClass="DdsRecord"
             AttnKeys="F3 'Exit.' 03;F12 'Exit.' 12;Clear 'CLEAR.' 26;Help 'Help.' 25;Home 'Reset.' 30;"
-            FuncKeys="F4 'Prompt.' 04;F10 'CF10.' 10;"
+            FuncKeys="F4 'Prompt.' 04;F8 'CF08.' 08;F10 'CF10.' 10;"
             SetOfInds="98 99 " 
             CommandKeyInd="29" 
             Window="True"
