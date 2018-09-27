@@ -99,7 +99,7 @@
 
      
 <!-- Modified HTML code ends here -->
-      <div id="Div1" style="display;none;">
+      <div id="Div1" style="display:none;">
             
       <%--  PMT to eSign Auto ref Prompt & validate record                                                                   --%>
       <%--  CRTDSPF                                                                                                          --%>

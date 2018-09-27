@@ -1349,6 +1349,12 @@
 		padding:2px 1px !important;
 		color:rgb(84, 84, 84) !important;
 		}
+		.hideClass{
+			display: none !important;
+			}
+			.showClass{
+				display: inline-block !important;
+			}
     </style>
     <script type="text/javascript">
         function setCookie(cname, cvalue, exdays) {
@@ -1357,6 +1363,70 @@
             var expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + "; " + expires;
         }
+		
+		$(window).load(function(){
+        // $("input[type='text']:visible").css({"margin-right":"2px"});
+        // $("input[type='text']:visible").wrap('<span style="cursor:pointer; position:relative;"></span>');
+        // $("input[type='text']:visible").after("<span style='display:none; position:absolute;top:2px; right:0; font-size:16px;' class='closespan baseline-close'><i style='font-size:16px;' class='material-icons'>close</i></span>");
+        // $(".closespan").on("click",function(){
+        //     $(this).prev().val("");
+        //     //$(this).css({"display":"none"});
+        //     $(this).addClass("hideClass");
+        // });
+        //$("input[type='text']:visible").css("padding-right","10px");
+        $(document).on("keyup focus change","input[type='text']:visible",function(){
+           // console.log('key');
+           var textIndex = $("input[type='text']:visible").index(this);
+           console.log($(this).val()+' '+textIndex)
+            if( $(this).val() != ""){
+                $(".clrInput:eq("+textIndex+")").removeClass("hideClass").addClass("showClass");
+            }
+            else{
+                $(".clrInput:eq("+textIndex+")").addClass("hideClass").removeClass("showClass");
+            }
+        });
+        //$("input[type='text']:visible").after("<input type='button' class='closespan' alt='clear'/>")
+        $('input[type=text]:visible').each(function(){
+            var $this = $(this);
+            //console.log( $this.offset().left);
+            if($(this).attr("style") && $(this).attr("style").split("text-align: right").length > 1)
+            $('<div class="clrInput"/>').css({
+                position:'absolute',
+                left: $this.offset().left + 3, //10 for extra spacing from edge
+                top: $this.offset().top + 3,
+                width: $this.height(),
+                height: $this.height(),
+                "z-index": 3,
+                "cursor": "pointer",
+                "display":"none",
+				 "font-size": "10px",
+                "font-weight" : "bold"
+            }).text(' X ').data('inputEQ', $this.index()).appendTo('body');
+            else
+            $('<div class="clrInput"/>').css({
+                position:'absolute',
+                left: $this.offset().left + $this.width() -7, //10 for extra spacing from edge
+                top: $this.offset().top + 2,
+                width: $this.height(),
+                height: $this.height(),
+                "z-index": 3,
+                "cursor": "pointer",
+                "display":"none",
+				 "font-size": "10px",
+                "font-weight" : "bold"
+            }).text(' X ').data('inputEQ', $this.index()).appendTo('body');
+            });
+             $(document).on('click', '.clrInput', function(){
+                 //console.log($(this).index(this));
+                 var index= $('.clrInput').index(this);
+                 //console.log(index);
+                 $('input[type=text]:visible').eq(index).val("");
+				 $('input[type=text]:visible').eq(index).trigger('change');
+                 $(this).removeClass("showClass").addClass("hideClass");
+                 //console.log($(this).attr("class"))
+              });
+    });
+		
         $(document).ready(function () {
             //Hide all read only mode elements
             var ext = $("#CenPH__lb_SFLCTL__lb_CEONB").html() == undefined ? "" : "&nbsp;/&nbsp;" + $("#CenPH__lb_SFLCTL__lb_CEONB").html();
