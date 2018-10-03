@@ -24,14 +24,14 @@
 
 
     <asp:Content ID="FileContent2" runat="server" ContentPlaceHolderID="CenPH">
- <main class="mdl-layout__content homepage-content">
+  <main class="mdl-layout__content homepage-content">
         <div class="content-grid mdl-grid" style="height:100%;">
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
                 <!-- front-content starts here -->
                 <div class="front contracts-bg">
                     <div class="front-content">
                         <div class="icon-block"><span class="contracts-icon"></span></div>
-                        <p class="block-heading">Work with Contracts</p>
+                        <p class="block-heading">Credit Applications</p>
                     </div>
                     <!-- front-content ends here -->
                 </div>
@@ -39,10 +39,16 @@
                 <div class="back">
                     <div class="icon-title-container">
                         <div class="contracts-icon-hover"></div>
-                        <h2 class="_title">Work with Contracts</h2>
+                        <h2 class="_title">Credit Applications</h2>
                     </div>
                     <ul class="_list">
                         <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);"  data-menu="6"><p class="bold">Calculate Credit Contract</p>
+                        </a></li>
+                        <li class="_item"><a data-menu="20" href="javascript:void(0);"><p class="bold">Work Credit Applications</p>
+                        </a></li>
+                        <li class="_item"><a href="#" data-menu="26" href="javascript:void(0);"><p class="bold">Work YesLease Application</p>
+                        </a></li>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);"  data-menu="8"><p class="bold">Display Customer Info</p>
                         </a></li>
                       <!--    <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Enter Manual Contract</p>
                         </a></li>
@@ -57,7 +63,7 @@
                 <div class="front sales-order-bg">
                     <div class="front-content">
             <div class="icon-block"><span class="sales-order-icon"></span></div>
-                        <p class="block-heading">Work with Sales Order</p>
+                        <p class="block-heading">Sales Orders</p>
                     </div>
                     <!-- front-content ends here -->
                 </div>
@@ -65,7 +71,7 @@
                 <div class="back">
                     <div class="icon-title-container">
                         <div class="sales-order-icon-hover"></div>
-                        <h2 class="_title">Work with Sales Order</h2>
+                        <h2 class="_title">Sales Orders</h2>
                     </div>
                     <ul class="_list">
                         <li class="_item" id="enter-sales-order"><a data-menu="1" href="javascript:void(0);"><p class="bold">Enter Sales Order</p>
@@ -74,15 +80,23 @@
                         </a></li>
                         <li class="_item"><a data-menu="3" href="javascript:void(0);"><p class="bold">Display Sales Order</p>
                         </a></li>
-                        <li class="_item"><a data-menu="20" href="javascript:void(0);"><p class="bold">Work Credit Applications</p>
-                        </a></li>
+                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);" data-menu="15"><p class="bold">Display Incomplete Sales</p>
+                        </a></li> 
+                        <!-- <li class="_item"><a data-menu="20" href="javascript:void(0);"><p class="bold">Work Credit Applications</p>
+                        </a></li> -->
                         <!-- <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Old Sales Orders</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Worksheet Sales Process</p>
                         </a></li> -->
-                        <li class="_item"><a href="#" data-menu="26" href="javascript:void(0);"><p class="bold">Work YesLease Application</p>
+                        <!-- <li class="_item"><a href="#" data-menu="26" href="javascript:void(0);"><p class="bold">Work YesLease Application</p>
                         </a></li>
                         <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="#" data-menu="28" href="javascript:void(0);"><p class="bold">Display Order-ShipTo Addr</p>
+                        </a></li> -->
+                        <li class="_item"><a href="javascript:void(0);" data-menu="25"><p class="bold">Worksheet Sales Process</p>
+
+                        </a></li>
+                        <li class="_item"><a href="javascript:void(0);" data-menu="19"><p class="bold">Work Intellicheck Scan</p>
+
                         </a></li>
                     </ul>
                     <!-- back-content ends here -->
@@ -112,48 +126,51 @@
                         </a></li>
                         <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a data-menu="13" href="javascript:void(0);"><p class="bold">Display Inventory By Category</p>
                         </a></li>
+                        <li class="_item"><a href="javascript:void(0);" data-menu="18"><p class="bold">Enter Pickup Completions</p>
+
+                        </a></li>
                         <!--   <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Model Receiving Schedule</p>
                         </a></li> -->
                     </ul>
                     <!-- back-content ends here -->
                 </div>
             </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card" style="background-color: #e32527;">
                 <!-- front-content starts here -->
-                <div class="front misc-cust-serv-bg">
+                <!--<div class="front misc-cust-serv-bg">
                     <div class="front-content">
             <div class="icon-block"><span class="misc-cust-serv-icon"></span></div>
                         <p class="block-heading">Misc. Customer Service</p>
                     </div>
-                    <!-- front-content ends here -->
-                </div>
+                     front-content ends here 
+                </div>-->
                 <!-- back-content starts here -->
-                <div class="back">
+               <!-- <div class="back">
                     <div class="icon-title-container">
                         <div class="misc-cust-serv-icon-hover"></div>
                         <h2 class="_title">Misc. Customer Service</h2>
                     </div>
                     <ul class="_list">
-                          <!-- <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
+                           <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Model</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
-                        </a></li>-->
+                        </a></li>
                         <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);"  data-menu="8"><p class="bold">Display Customer Info</p>
                         </a></li>
                     </ul>
-                    <!-- back-content ends here -->
-                </div>
+                    
+                </div> -->
             </div>
             <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
                 <!-- front-content starts here -->
                 <div class="front incomplete-orders-bg">
                     <div class="front-content">
             <div class="icon-block"><span class="incomplete-orders-icon"></span></div>
-                        <p class="block-heading">Incomplete Orders</p>
+                        <p class="block-heading">Credit Granting Functions</p>
                     </div>
                     <!-- front-content ends here -->
                 </div>
@@ -161,9 +178,18 @@
                 <div class="back">
                     <div class="icon-title-container">
                         <div class="incomplete-orders-icon-hover"></div>
-                        <h2 class="_title">Incomplete Orders</h2>
+                        <h2 class="_title">Credit Granting Functions</h2>
                     </div>
                     <ul class="_list">
+                        <li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=b57c1b58-ea08-4a83-93e6-1d666b93fb9a" target="_blank" ><p class="bold">Supporting Docs</p>
+
+                        </a></li>
+                        <li class="_item"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=7db90d0c-83f0-42fa-9b7e-e21e0848acfb" target="_blank" ><p class="bold">Personal Property Ins</p>
+
+                        </a></li>
+						<li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8435b610-f36b-4041-a840-3f9ad80c667c" target="_blank" ><p class="bold">Power of Attorney</p>
+
+                        </a></li>
                       <!--  <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Deliveries</p>
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Delivery Zips</p>
@@ -172,23 +198,23 @@
                         </a></li>
                         <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Inventory By Category</p>
                         </a></li>-->
-                        <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);" data-menu="15"><p class="bold">Display Incomplete Sales</p>
-                        </a></li>
+                        <!-- <li class="_item" style="border-bottom: 1px solid #c5c5c5;"><a href="javascript:void(0);" data-menu="15"><p class="bold">Display Incomplete Sales</p>
+                        </a></li> -->
                     </ul>
                     <!-- back-content ends here -->
                 </div>
             </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--6-col-phone card" style="background-color: #e32527;">
                 <!-- front-content starts here -->
-                <div class="front othr-misc-sales-menu-bg">
+                <!--<div class="front othr-misc-sales-menu-bg">
                     <div class="front-content">
             <div class="icon-block"><span class="misc-sales-menu-icon"></span></div>
                         <p class="block-heading">Other Misc. Sales Menu</p>
                     </div>  
-                    <!-- front-content ends here -->
-                </div>
+                     front-content ends here 
+                </div>-->
                 <!-- back-content starts here -->
-                <div class="back">
+               <!--  <div class="back">
                     <div class="icon-title-container">
                         <div class="misc-sales-menu-icon-hover"></div>
                         <h2 class="_title">Other Misc. Sales Menu</h2>
@@ -200,10 +226,10 @@
                         <li class="_item"><a href="javascript:void(0);" data-menu="19"><p class="bold">Work Intellicheck Scan</p>
 
                         </a></li>
-                       <!--  <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
-                        </a></li> -->
-                        <!--  <li class="_item" id="worksheet-sales-order"><a data-menu="25" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Worksheet Sales Process</p>
-                        </a></li> -->
+                        <li class="_item"><a href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p>Display Incomplete Payments</p>
+                        </a></li> 
+                         <li class="_item" id="worksheet-sales-order"><a data-menu="25" href="javascript:void(0);"><i class="material-icons md-icons-sub-menu square-icon"></i><p class="bold">Worksheet Sales Process</p>
+                        </a></li> 
                          <li class="_item"><a href="javascript:void(0);" data-menu="25"><p class="bold">Worksheet Sales Process</p>
 
                         </a></li>
@@ -217,8 +243,8 @@
 
                         </a></li>
                     </ul>
-                    <!-- back-content ends here -->
-                </div>
+                   
+                </div>-->
             </div>
         </div>
     </main>
